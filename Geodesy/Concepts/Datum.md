@@ -103,12 +103,8 @@ To convert coordinates from a local datum to WGS84/ITRF:
 3. **Direct datum points** — use the defining stations of the local datum.
 
 ### Example: SAD69 → WGS84 (Epicentre Helmert)
-
-$$ T_x = +66.87 \;\text{m},\; T_y = -4.37 \;\text{m},\; T_z = +38.52 \;\text{m}\omega_x = \omega_y = \omega_z = 0,\quad s = -0.27\;\text{ppm}$ $
-
-For a point in Jakarta ( $\varphi = -6.2°$):
-
-$ $\Delta X \approx 66.87,\; \Delta Y \approx -4.37,\; \Delta Z \approx 38.52\;\text{m} $$**Residuals** after the 7‑parameter fit may reach 5–10 m across Indonesia.
+$$
+T_x = +66.87 \;\text{m},\; T_y = -4.37 \;\text{m},\; T_z = +38.52 \;\text{m}\omega_x = \omega_y = \omega_z = 0,\quad s = -0.27\;\text{ppm}$ $For a point in Jakarta ($\varphi = -6.2°$):$ $\Delta X \approx 66.87,\; \Delta Y \approx -4.37,\; \Delta Z \approx 38.52\;\text{m} $$**Residuals** after the 7‑parameter fit may reach 5–10 m across Indonesia.
 
 ---
 
@@ -118,7 +114,7 @@ $ $\Delta X \approx 66.87,\; \Delta Y \approx -4.37,\; \Delta Z \approx 38.52\;\
 |----------|------------|----------|
 | Overlay old map on GNSS point | Offsets 10–100 m | Use published datum transformation parameters |
 | Building coordinates in WGS84 vs UTM | Same datum, different projection | Apply projection formulas (see [[Map Projection]]) |
-| GNSS‑derived orthometric heights | $ h = H + N$; need datum‑consistent geoid model | Use IGS/WGS84 geoid undulation |
+| GNSS‑derived orthometric heights | $h = H + N$; need datum‑consistent geoid model | Use IGS/WGS84 geoid undulation |
 | Historical land titles | Referenced to Batavia or ID74 | Apply Helmert conversion |
 
 ---

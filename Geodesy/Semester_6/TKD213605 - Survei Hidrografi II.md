@@ -20,32 +20,16 @@ Advanced hydrographic surveying expands upon the fundamentals of hydrography I (
 A multibeam echosounder (MBES) transmits a扇面 (fan-shaped) beam pattern across the seabed, creating a swath of depth soundings:
 
 **Beam geometry:**
-
-$$\alpha_n = -\alpha_{\max} + n \cdot \Delta\alphaheta_n = \alpha_n + hi
-
-$ $
-
-where:
--$\alpha_n $= angle from nadir (swath perpendicular)
--$\Delta\alpha $= beam width (typically 0.5°–1°)
--$ hi $= roll angle
--$ n $= beam number (0 = nadir)
+$$
+\alpha_n = -\alpha_{\max} + n \cdot \Delta\alphaheta_n = \alpha_n + hi$ $where:
+-$\alpha_n$= angle from nadir (swath perpendicular)
+-$\Delta\alpha$= beam width (typically 0.5°–1°)
+-$hi$= roll angle
+-$n$= beam number (0 = nadir)
 
 **Swath width:*
-*
-
-$ $  W = 2 d \cdot an(\alpha_{\max}) $ $
-
-**Number of beams:*
-*
-
-$ $
-
-N_{ext{beams}} = \frac{2\alpha_{\max}}{\Delta\alpha} + 1 $ $ For a typical MBES with $\alpha_{\max} = 60°$ and $\Delta\alpha = 1°$:
-
-$ $  N = 121 ext{ beams per swath}
-
-$ $ 2.2 MBES Frequency vs. Depth Range
+*$ $W = 2 d \cdot an(\alpha_{\max})$ $**Number of beams:*
+*$ $N_{ext{beams}} = \frac{2\alpha_{\max}}{\Delta\alpha} + 1 $ $For a typical MBES with$ \alpha_{\max} = 60°$and$ \Delta\alpha = 1°$:$ $N = 121 ext{ beams per swath}$ $ 2.2 MBES Frequency vs. Depth Range
 
 | Frequency | Depth Range | Beam Angle | Resolution |
 |-----------|-------------|------------|------------|
@@ -55,9 +39,7 @@ $ $ 2.2 MBES Frequency vs. Depth Range
 
 ### 2.3 Motion Compensation
 
-The MBES measures along the acoustic beam, requiring compensation for vessel motion
-
-$ $## 2.2 MBES Frequency vs. Depth Range
+The MBES measures along the acoustic beam, requiring compensation for vessel motion$ $## 2.2 MBES Frequency vs. Depth Range
 
 | Frequency | Depth Range | Beam Angle | Resolution |
 |-----------|-------------|------------|------------|
@@ -67,9 +49,7 @@ $ $## 2.2 MBES Frequency vs. Depth Range
 
 ### 2.3 Motion Compensation
 
-The MBES measures along the acoustic beam, requiring compensation for vessel motion\vec{r}_{ext{corrected}} = \vec{r}_{ext{raw}} - R_z(si) \cdot R_y(heta) \cdot R_x(hi) \cdot \vec{r}_{ext{transducer}}$ $
-
-# ## 2.2 MBES Frequency vs. Depth Range
+The MBES measures along the acoustic beam, requiring compensation for vessel motion\vec{r}_{ext{corrected}} = \vec{r}_{ext{raw}} - R_z(si) \cdot R_y(heta) \cdot R_x(hi) \cdot \vec{r}_{ext{transducer}}$ $# ## 2.2 MBES Frequency vs. Depth Range
 
 | Frequency | Depth Range | Beam Angle | Resolution |
 |-----------|-------------|------------|------------|
@@ -79,7 +59,7 @@ The MBES measures along the acoustic beam, requiring compensation for vessel mot
 
 ### 2.3 Motion Compensation
 
-The MBES measures along the acoustic beam, requiring compensation for vessel motion\vec{r}_{ext{corrected}} = \vec{r}_{ext{raw}} - R_z(si) \cdot R_y(heta) \cdot R_x(hi) \cdot \vec{r}_{ext{transducer}}Where $ R_x(hi), R_y(heta), R_z(si) $ are rotation matrices for **roll, pitch, yaw** angles compensated by the **MRU (Motion Reference Unit)**.
+The MBES measures along the acoustic beam, requiring compensation for vessel motion\vec{r}_{ext{corrected}} = \vec{r}_{ext{raw}} - R_z(si) \cdot R_y(heta) \cdot R_x(hi) \cdot \vec{r}_{ext{transducer}}Where $R_x(hi), R_y(heta), R_z(si)$ are rotation matrices for **roll, pitch, yaw** angles compensated by the **MRU (Motion Reference Unit)**.
 
 ### 2.4 Patch Test
 
@@ -87,12 +67,12 @@ A vessel patch test calibrates 6 parameters:
 
 | Parameter | Symbol | Description |
 |-----------|--------|-------------|
-| Roll error | $\deltahi $ | MRU roll bias |
-| Pitch error | $\deltaheta $ | MRU pitch bias |
-| Yaw error | $\deltasi $ | MRU heading bias |
-| Delay | $\delta t $ | Time lag (transducer to MRU) |
-| X-offset | $\delta x $ | Transducer horizontal position |
-| Z-offset | $\delta z $ | Transducer vertical position |
+| Roll error | $\deltahi$| MRU roll bias |
+| Pitch error | $\deltaheta$| MRU pitch bias |
+| Yaw error | $\deltasi$| MRU heading bias |
+| Delay | $\delta t$ | Time lag (transducer to MRU) |
+| X-offset | $\delta x$ | Transducer horizontal position |
+| Z-offset | $\delta z$ | Transducer vertical position |
 
 Patch test procedure:
 1. Sail in straight lines (N-S, E-W)
@@ -106,11 +86,7 @@ Patch test procedure:
 
 ### 3.1 Operating Principle
 
-Side-scan sonar (SSS) maps the **acoustic seafloor reflectivity** (backscatter), providing imagery of the seabed that complements bathymetric data
-
-$ $  R = \frac{P_r}{P_t} \cdot \left(\frac{c}{2}\right)^{2\cdot r}$ $
-
-where $ R $ is reflectivity,$ P_r $= received power,$ P_t $= transmitted power,$  r $= slant range.
+Side-scan sonar (SSS) maps the **acoustic seafloor reflectivity** (backscatter), providing imagery of the seabed that complements bathymetric data$ $R = \frac{P_r}{P_t} \cdot \left(\frac{c}{2}\right)^{2\cdot r}$ $where$ R$is reflectivity, $ P_r $= received power, $P_t $= transmitted power, $r$= slant range.
 
 ### 3.2 System Configuration
 
@@ -147,34 +123,24 @@ where $ R $ is reflectivity,$ P_r $= received power,$ P_t $= transmitted power,$
 
 ### 4.1 Harmonic Analysis
 
-Tides can be decomposed into harmonic constituents
-
-$ $\eta(t) = Z_0 + \sum_{i=1}^{N} R_i \cos(\omega_i t - hi_i) + \epsilon(t)
-
-$ $
-
-where:
--$\eta(t) $= water surface elevation at time $  t $-$ Z_0 $= mean water level
--$ R_i $= amplitude of constituent $  i $-$\omega_i $= angular frequency of constituent $  i $-$ hi_i $= phase lag
--$\epsilon(t) $= residual
+Tides can be decomposed into harmonic constituents$ $\eta(t) = Z_0 + \sum_{i=1}^{N} R_i \cos(\omega_i t - hi_i) + \epsilon(t)$ $where:
+-$\eta(t)$= water surface elevation at time $t$-$Z_0$= mean water level
+-$R_i$= amplitude of constituent $i$-$\omega_i$= angular frequency of constituent $i$-$hi_i$= phase lag
+-$\epsilon(t)$= residual
 
 ### 4.2 Major Tidal Constituents
 
 | Constituent | Period | Amplitude | Description |
 |-------------|--------|-----------|-------------|
-| $ M_2 $ | ~12.42 h | Largest | Lunar semidiurnal |
-| $ S_2 $ | ~12.00 h | ~0.5 ×$ M_2 $ | Solar semidiurnal |
-| $ N_2 $ | ~12.66 h | Reduced | Lunar elliptic |
-| $ K_1 $ | ~23.93 h | Diurnal | Lunar-solar |
-| $ O_1 $ | ~25.82 h | Diurnal | Lunar diurnal |
+| $M_2$ | ~12.42 h | Largest | Lunar semidiurnal |
+| $S_2$ | ~12.00 h | ~0.5 ×$M_2$ | Solar semidiurnal |
+| $N_2$ | ~12.66 h | Reduced | Lunar elliptic |
+| $K_1$ | ~23.93 h | Diurnal | Lunar-solar |
+| $O_1$ | ~25.82 h | Diurnal | Lunar diurnal |
 
 ### 4.3 Tide Prediction
 
-For a given epoch $ t $:
-
-$ $\eta(t) = Z_0 + \sum_{i=1}^{N} R_i \cos(\omega_i t - hi_i)
-
-$ $**Chart datum** typically corresponds to **Lowest Astronomical Tide (LAT)** — the lowest predictable tidal level.
+For a given epoch $t$:$ $\eta(t) = Z_0 + \sum_{i=1}^{N} R_i \cos(\omega_i t - hi_i)$ $**Chart datum** typically corresponds to **Lowest Astronomical Tide (LAT)** — the lowest predictable tidal level.
 
 ### 4.4 Indonesian Tidal Regimes
 
@@ -186,13 +152,7 @@ $ $**Chart datum** typically corresponds to **Lowest Astronomical Tide (LAT)** �
 | Arafura Sea | Mixed | Complex |
 
 ### 4.5 Tide Correction for Sounding
-s
-
-$ $
-
-d_{CD} = d_{ext{observed}} - (ext{HT} - ext{RT}) $ $
-
-where:
+s$ $d_{CD} = d_{ext{observed}} - (ext{HT} - ext{RT}) $ $where:
 
 - HT = Heel Tide (correction for vessel movement)
 
@@ -216,13 +176,7 @@ where:
 
 - **IHO S-4** (now S-23) defines standard chart datum practices
 
-- **Squat** effect for vessel depth correction
-
-$ $\Delta d = \frac{v^2}{2g}(C_B - C_B^2)
-
-$ $
-
-where $ v $= vessel speed,$  g $= gravity,$ C_B $= block coefficient.
+- **Squat** effect for vessel depth correction$ $\Delta d = \frac{v^2}{2g}(C_B - C_B^2)$ $where$ v$= vessel speed, $g$= gravity, $C_B $= block coefficient.
 
 ---
 
@@ -255,11 +209,7 @@ Raw depth (time stamp → UTC)
 ### 6.3 Quality Indicators
 
 **Standard Deviation of Depth Error (SDE):*
-*
-
-$ $ ext{SDE} = \sqrt{\frac{1}{n}\sum_{i=1}^n (z_{obs,i} - z_{grid,i})^2} $ $
-
-**IHO S-44 requirements:**
+*$ $ ext{SDE} = \sqrt{\frac{1}{n}\sum_{i=1}^n (z_{obs,i} - z_{grid,i})^2} $ $**IHO S-44 requirements:**
 | Order | SDE |
 |-------|-----|
 | Order 1 | ≤ 0.25 m |
@@ -350,13 +300,7 @@ The Indonesian hydrographic fleet uses:
 ### 9.2 Satellite Bathymetry
 
 - **Satellite-derived bathymetry (SDB):*
-*
-
-$ $ 
-
-d \approx f(\lambda_{green}, \lambda_{nearext{-}IR}) $ $
-
-Green light penetrates water to ~30 m depth; near-IR reflects from surface.
+*$ $d \approx f(\lambda_{green}, \lambda_{nearext{-}IR}) $ $Green light penetrates water to ~30 m depth; near-IR reflects from surface.
 
 - **Satellite data:** Sentinel-2 (10 m), WorldView (3.7 m)
 
@@ -368,11 +312,7 @@ Green light penetrates water to ~30 m depth; near-IR reflects from surface.
 
 ### 9.3 LiDAR Bathymetry (LIDAR/LIDARB)
 
-Airborne LiDAR with green laser penetrates water surface
-
-$ $ z_{bottom} = z_{surface} - \frac{c}{2} \cdot t_{water}$ $
-
-- **Depth penetration:** 0–50 m (clear water)
+Airborne LiDAR with green laser penetrates water surface$ $ z_{bottom} = z_{surface} - \frac{c}{2} \cdot t_{water}$ $- **Depth penetration:** 0–50 m (clear water)
 
 - **Accuracy:** ±15–30 cm
 
@@ -386,12 +326,12 @@ $ $ z_{bottom} = z_{surface} - \frac{c}{2} \cdot t_{water}$ $
 
 | Concept | Formula |
 |---------|---------|
-| Swath width | $ W = 2d \cdot an(\alpha_{\max}) $ |
-| Number of beams | $ N = \frac{2\alpha_{\max}}{\Delta\alpha} + 1 $ |
-| Tide prediction | $\eta(t) = Z_0 + \sum R_i \cos(\omega_i t - hi_i) $ |
-| Heel correction | $ d_{corr} = d / \cosheta $ |
-| SDE | $ ext{SDE} = \sqrt{\frac{1}{n}\sum(z_{obs}-z_{grid})^2} $ |
-| Backscatter (relative) | $ R = \frac{P_r}{P_t} \cdot \left(\frac{c}{2}\right)^{2r}$ |
+| Swath width | $W = 2d \cdot an(\alpha_{\max})$ |
+| Number of beams | $ N = \frac{2\alpha_{\max}}{\Delta\alpha} + 1 $|
+| Tide prediction |$\eta(t) = Z_0 + \sum R_i \cos(\omega_i t - hi_i) $|
+| Heel correction |$ d_{corr} = d / \cosheta $|
+| SDE |$ ext{SDE} = \sqrt{\frac{1}{n}\sum(z_{obs}-z_{grid})^2} $|
+| Backscatter (relative) |$ R = \frac{P_r}{P_t} \cdot \left(\frac{c}{2}\right)^{2r}$ |
 
 ---
 

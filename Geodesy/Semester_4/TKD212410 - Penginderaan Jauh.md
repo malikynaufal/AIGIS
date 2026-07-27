@@ -52,10 +52,8 @@ Penginderaan Jauh mempelajari pengukuran sifat fisik objek di permukaan bumi dar
 - **Geometric correction**: rectification, orthorectification
 
 - **Band ratio**: NDVI, NDWI, NDBI
-
-$$ NDVI = \frac{NIR - Red}{NIR + Red}NDWI = \frac{Green - NIR}{Green + NIR}$$
-
-# ## 6. Aplikasi
+$$
+NDVI = \frac{NIR - Red}{NIR + Red}NDWI = \frac{Green - NIR}{Green + NIR}$$# ## 6. Aplikasi
 
 - **Land cover classification**: supervised / unsupervised
 

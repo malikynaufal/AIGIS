@@ -42,7 +42,7 @@ graph TD
 1. Start with the **Curriculum Guide** → [[Curriculum/Curriculum]] to see the full roadmap.
 2. Follow the **Study Plan** → [[Study Plan]] for weekly structure.
 3. Pick a **Concept Cluster** below to dive into theory.
-4. Use **[[Math Concepts Index]]** to find any concept instantly.
+4. Use **[[Mathematics MOC]]** to find any concept instantly.
 5. Practice problems from each `Study Pack` in `_Study Packs/`.
 6. Ask AIGIS on Telegram: *"explain eigenvalues like a tutor"*, *"derive the Fourier transform"*.
 
@@ -62,7 +62,7 @@ Curated bibliography of open-access textbooks (free and legal).
 
 ```mermaid
 graph LR
- A[[Limits Continuity]] --> B[[Derivatives]]
+ A[[Limits and Continuity]] --> B[[Derivatives]]
  B --> C[[Applications of Derivatives]]
  A --> D[[Integrals]]
  D --> E[[Sequences and Series]]
@@ -75,7 +75,7 @@ graph LR
 
 | Concept | Applications | Geodesy Link |
 |---------|-------------|-------------|
-| [[Limits Continuity]] | Foundation for all calculus | Convergence in iteration |
+| [[Limits and Continuity]] | Foundation for all calculus | Convergence in iteration |
 | [[Derivatives]] | Slope, rate, optimization | Gradient of terrain |
 | [[Integrals]] | Area, volume, work | Volume of Earth features |
 | [[Multivariable Calculus]] | Gradient, curl, divergence | Coordinate transformations |
@@ -98,13 +98,13 @@ graph LR
 graph TD
  PF[[Probability Foundations]] --> PD[[Probability Distributions]]
  PF --> HT[[Hypothesis Testing]]
- PD --> SE[[Sampling Estimation]]
+ PD --> SE[[Sampling  Estimation]]
  PD --> ST[[Stochastic Processes]]
  SE --> LS[[Least Squares Adjustment]]
  HT --> ANOVA[[ANOVA]]
  HT --> CS[[ChiSquare]]
- HT --> RG[[Regression Least Squares]]
- PF --> BS[[Bayesian Statistics]]
+ HT --> RG[[Regression  Least Squares]]
+ PF --> BS[[Mathematics/Pilihan/MGM214713 - Statistika Bayesian]]
 ```
 
 ### 4. DIFFERENTIAL EQUATIONS
@@ -176,7 +176,7 @@ graph TD
 | Pack | Courses Covered |
 |------|----------------|
 | [[Calculus for Engineers]] | All calculus (calc I, II, III, vector calc) |
-| [[Linear Algebra for Surveying]] | Matrix methods, least squares |
+| [[Mathematics/_Study Packs/Numerical Linear Algebra]] | Matrix methods, least squares |
 | [[Statistics and Probability]] | Probability, statistics, inference |
 | [[Differential Equations]] | ODEs, PDEs, applications |
 | [[Numerical Methods]] | Root-finding, integration, ODE solvers |
@@ -236,6 +236,6 @@ $$
 ---
 
 **Quick Jump:**
-[[Limits Continuity]] · [[Derivatives]] · [[Applications of Derivatives]] · [[Integrals]] · [[Multivariable Calculus]] · [[Linear Algebra Fundamentals]] · [[Probability Foundations]] · [[Probability Distributions]] · [[Differential Equations]] · [[Numerical Methods]] · [[Optimization Theory]] · [[Graph Theory]] · [[Complex Analysis]] · [[Real Analysis]] · [[Fourier Analysis]] · [[Abstract Algebra]] · [[Topology]] · [[Stochastic Processes]] · [[Metric Spaces]] · [[Number Theory]] · [[Least Squares Adjustment]] · [[Error Propagation]] · [[Taylor Series]] · [[Sequences and Series]] · [[LU Decomposition]] · [[QR Factorization]] · [[Cholesky Decomposition]] · [[Bisection Method]] · [[Newton-Raphson Method]] · [[Descriptive Statistics]] · [[Hypothesis Testing]] · [[Sampling Estimation]] · [[ANOVA]] · [[ChiSquare]] · [[Regression Least Squares]]
+[[Limits and Continuity]] · [[Derivatives]] · [[Applications of Derivatives]] · [[Integrals]] · [[Multivariable Calculus]] · [[Linear Algebra Fundamentals]] · [[Probability Foundations]] · [[Probability Distributions]] · [[Differential Equations]] · [[Numerical Methods]] · [[Optimization Theory]] · [[Graph Theory]] · [[Complex Analysis]] · [[Real Analysis]] · [[Fourier Analysis]] · [[Abstract Algebra]] · [[Topology]] · [[Stochastic Processes]] · [[Metric Spaces]] · [[Number Theory]] · [[Least Squares Adjustment]] · [[Error Propagation]] · [[Taylor Series]] · [[Sequences and Series]] · [[LU Decomposition]] · [[QR Factorization]] · [[Cholesky Decomposition]] · [[Bisection Method]] · [[Newton-Raphson Method]] · [[Descriptive Statistics]] · [[Hypothesis Testing]] · [[Sampling  Estimation]] · [[ANOVA]] · [[ChiSquare]] · [[Regression  Least Squares]]
 
 ➡️ [[AIGIS Hub]] · [[Physics MOC]] · [[Geodesy MOC]]

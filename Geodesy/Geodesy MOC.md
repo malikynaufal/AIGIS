@@ -31,7 +31,7 @@ mindmap
  📅 [[Geodesy/Study Plan.md|Study Plans]]
 
  Coordinate Systems
- 📏 [[Concepts/Coordinate Reference Systems]]
+ 📏 [[Concepts/Geodetic Coordinates]]
  🎯 [[Concepts/Geodetic Coordinates]]
  🧭 [[Concepts/Local ENU NEU]]
  🌐 [[Curriculum/Semester 3|Semester 3]]
@@ -52,8 +52,8 @@ mindmap
  Applications
  🗺️ [[Concepts/Map Projection]]
  🧪 [[Concepts/Photogrammetry]]
- 🏙️ [[Concepts/Cadastral Survey]]
- 🌊 [[Concepts/Hydrographic Survey]]
+ 🏙️ [[Concepts/Cadastral Surveying]]
+ 🌊 [[Concepts/Hydrographic Surveying]]
 
  Geophysics
  🌡️ [[Concepts/Gravity Field]]
@@ -130,7 +130,7 @@ flowchart LR
 | Least Squares | [[Geodesy/Concepts/Least Squares Adjustment]] | [[Mathematics/Concepts/Least Squares Adjustment]] |
 | Matrix Factorization | [[Geodesy/Concepts/Helmert Transformation]] | [[Mathematics/Concepts/LU Decomposition]] |
 | Error Analysis | [[Geodesy/Concepts/Error Propagation]] | [[Mathematics/Concepts/Error Propagation]] |
-| Statistics | [[Geodesy/Concepts/Statistical Testing]] | [[Mathematics/Concepts/ChiSquare]] |
+| Statistics | [[Concepts/ChiSquare]] | [[Mathematics/Concepts/ChiSquare]] |
 
 ### 3. Practical Applications
 
@@ -138,8 +138,8 @@ flowchart LR
 |-------------|------|----------------|
 | GNSS Surveying | [[Geodesy/Concepts/GNSS]] | [[Physics/Concepts/Electromagnetism & Signal Propagation]] |
 | Map Projections | [[Geodesy/Concepts/Map Projection]] | [[Physics/Concepts/Optics & Atmospheric Refraction]] |
-| Cadastral Survey | [[Geodesy/Concepts/Cadastral Survey]] | [[Physics/Concepts/Quantum Mechanics]] |
-| Hydrographic | [[Geodesy/Concepts/Hydrographic Survey]] | [[Physics/Concepts/Hydrodynamics]] |
+| Cadastral Survey | [[Concepts/Cadastral Surveying]] | [[Physics/Concepts/Quantum_Mechanics]] |
+| Hydrographic | [[Concepts/Hydrographic Surveying]] | [[Physics/Concepts/Fluid_Mechanics]] |
 
 ---
 

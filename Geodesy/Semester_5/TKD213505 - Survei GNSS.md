@@ -34,28 +34,20 @@ GNSS (Global Navigation Satellite System) surveying is the process of using sate
 ### 2.2 Ionosphere-Free Linear Combination
 
 The ionosphere-free (IF) combination removes first-order ionospheric delay:
-
-$$\Phi_{IF} = \frac{f_1^2 \cdot \Phi_1 - f_2^2 \cdot \Phi_2}{f_1^2 - f_2^2} $ $
-
-where $ f_1 = 1575.42 $ MHz (L1) and $ f_2 = 1227.60 $ MHz (L2).
+$$
+\Phi_{IF} = \frac{f_1^2 \cdot \Phi_1 - f_2^2 \cdot \Phi_2}{f_1^2 - f_2^2} $ $where$ f_1 = 1575.42 $ MHz (L1) and$ f_2 = 1227.60 $ MHz (L2).
 
 ### 2.3 Carrier Phase Observable
 
-The carrier phase measurement is
-
-$ $\Phi_i = \rho + c(dt - dT) + \lambda_i N_i - I_i + T_i + \epsilon_i
-
-$ $
-
-where:
--$\rho $= geometric range (distance satellite–receiver)
--$ c $= speed of light
--$ dt $= satellite clock error
--$ dT $= receiver clock error
--$\lambda_i $= wavelength of frequency $  i $-$ N_i $= integer ambiguity
--$ I_i $= ionospheric delay (negative for phase)
--$ T_i $= tropospheric delay
--$\epsilon_i $= multipath and noise
+The carrier phase measurement is$ $\Phi_i = \rho + c(dt - dT) + \lambda_i N_i - I_i + T_i + \epsilon_i$ $where:
+-$\rho$= geometric range (distance satellite–receiver)
+-$c$= speed of light
+-$dt$= satellite clock error
+-$dT$= receiver clock error
+-$\lambda_i$= wavelength of frequency $i$-$N_i$= integer ambiguity
+-$I_i$= ionospheric delay (negative for phase)
+-$T_i$= tropospheric delay
+-$\epsilon_i$= multipath and noise
 
 ---
 
@@ -94,13 +86,7 @@ For double-differenced baseline processing:
 
 For RTK: typically ≤ 5 minutes per point
 
-### 3.4 Dilution of Precision (DOP)
-
-$ $ ext{PDOP} = \sqrt{\sigma_x^2 + \sigma_y^2 + \sigma_z^2} \; / \; \sigma_0ext{HDOP} = \sqrt{\sigma_x^2 + \sigma_y^2} \; / \; \sigma_0ext{VDOP} = \sigma_z \; / \; \sigma_0ext{TDOP} = \sigma_t \; / \; \sigma_0
-
-$ $
-
-where $\sigma_0 $ is the standard deviation of the unit-weight pseudorange.
+### 3.4 Dilution of Precision (DOP)$ $ ext{PDOP} = \sqrt{\sigma_x^2 + \sigma_y^2 + \sigma_z^2} \; / \; \sigma_0ext{HDOP} = \sqrt{\sigma_x^2 + \sigma_y^2} \; / \; \sigma_0ext{VDOP} = \sigma_z \; / \; \sigma_0ext{TDOP} = \sigma_t \; / \; \sigma_0$ $where$ \sigma_0 $ is the standard deviation of the unit-weight pseudorange.
 
 ---
 
@@ -233,46 +219,26 @@ Tools: **TEQC (Trimble)** or **gpsqc (RTKLIB)** for quality checks.
 
 ### 6.1 Differential GNSS (DGNSS)
 
-For pseudorange-based differential positioning
-
-$ $\Delta \rho_{BR} = \rho_B - \rho_R = \Delta X_{BR} + c \cdot \Delta dt + \Delta T + \Delta I + \epsilon
-
-$ $
-
-The common errors (satellite clock, ephemeris, ionosphere, troposphere) are eliminated or strongly reduced when the base–rover baseline is short (< 10 km).
+For pseudorange-based differential positioning$ $\Delta \rho_{BR} = \rho_B - \rho_R = \Delta X_{BR} + c \cdot \Delta dt + \Delta T + \Delta I + \epsilon$ $The common errors (satellite clock, ephemeris, ionosphere, troposphere) are eliminated or strongly reduced when the base–rover baseline is short (< 10 km).
 
 ### 6.2 Double-Differenced Solution
 
-The double-difference observation eliminates both receiver and satellite clock errors
-
-$ $\nabla \Delta \Phi_{12}^{ij} = \nabla \Delta \rho_{12}^{ij} + \lambda \cdot \nabla \Delta N_{12}^{ij} + \nabla \Delta \epsilon_{12}^{ij} $ $
-
-where:
--$\nabla \Delta \Phi_{12}^{ij} $= double-differenced phase
--$\nabla \Delta \rho_{12}^{ij} $= double-differenced geometric range
--$\nabla \Delta N_{12}^{ij} $= double-differenced integer ambiguity
--$\nabla \Delta \epsilon_{12}^{ij} $= double-differenced residual error
+The double-difference observation eliminates both receiver and satellite clock errors$ $\nabla \Delta \Phi_{12}^{ij} = \nabla \Delta \rho_{12}^{ij} + \lambda \cdot \nabla \Delta N_{12}^{ij} + \nabla \Delta \epsilon_{12}^{ij} $ $where:
+-$\nabla \Delta \Phi_{12}^{ij}$= double-differenced phase
+-$\nabla \Delta \rho_{12}^{ij}$= double-differenced geometric range
+-$\nabla \Delta N_{12}^{ij}$= double-differenced integer ambiguity
+-$\nabla \Delta \epsilon_{12}^{ij}$= double-differenced residual error
 
 ### 6.3 Ambiguity Resolutio
-n
+n$ $\hat{N} = \frac{\Phi - \rho}{\lambda}$ $- **Float solution:**$N$ estimated as real numbers
 
-$ $\hat{N} = \frac{\Phi - \rho}{\lambda} $ $
+- **Fixed solution:**$N$ fixed to integers (LAMBDA method)
 
-- **Float solution:**$ N $ estimated as real numbers
-
-- **Fixed solution:**$ N $ fixed to integers (LAMBDA method)
-
-- **Ratio test:**$\frac{ext{best}}{ext{2nd best}} > 3.0 $ for reliable fixing
+- **Ratio test:**$\frac{ext{best}}{ext{2nd best}} > 3.0$ for reliable fixing
 
 #### LAMBDA Method (Least-squares AMBiguity Decorrelation Adjustment)
 
-The LAMBDA method transforms the ambiguity space to improve search efficiency
-
-$ $\hat{Z} = Z \cdot \hat{N}, \quad Q_{\hat{Z}} = Z \cdot Q_{\hat{N}} \cdot Z^T
-
-$ $
-
-where $ Z $ is an integer-decorrelating transformation matrix.
+The LAMBDA method transforms the ambiguity space to improve search efficiency$ $\hat{Z} = Z \cdot \hat{N}, \quad Q_{\hat{Z}} = Z \cdot Q_{\hat{N}} \cdot Z^T$ $where$ Z$ is an integer-decorrelating transformation matrix.
 
 ---
 
@@ -351,11 +317,11 @@ The National Geodetic Control Network (SKRGI = *Seksi Kerangka Referensi Geodesi
 
 | Formula | Description |
 |---------|-------------|
-| $\Phi_i = \rho + c(dt - dT) + \lambda_i N_i - I_i + T_i + \epsilon_i $ | Phase observation equation |
-| $\Phi_{IF} = \frac{f_1^2 \Phi_1 - f_2^2 \Phi_2}{f_1^2 - f_2^2} $ | Ionosphere-free combination |
-| $\nabla \Delta \Phi_{12}^{ij} = \nabla \Delta \rho_{12}^{ij} + \lambda \nabla \Delta N_{12}^{ij} $ | Double-differenced phase |
-| $ h = H + N $ | Height equation |
-| $ ext{PDOP} = \sqrt{\frac{\sigma_x^2 + \sigma_y^2 + \sigma_z^2}{\sigma_0^2}} $ | Position DOP |
+| $\Phi_i = \rho + c(dt - dT) + \lambda_i N_i - I_i + T_i + \epsilon_i $| Phase observation equation |
+|$\Phi_{IF} = \frac{f_1^2 \Phi_1 - f_2^2 \Phi_2}{f_1^2 - f_2^2} $| Ionosphere-free combination |
+|$\nabla \Delta \Phi_{12}^{ij} = \nabla \Delta \rho_{12}^{ij} + \lambda \nabla \Delta N_{12}^{ij} $| Double-differenced phase |
+|$ h = H + N $| Height equation |
+|$ ext{PDOP} = \sqrt{\frac{\sigma_x^2 + \sigma_y^2 + \sigma_z^2}{\sigma_0^2}} $ | Position DOP |
 
 ---
 

@@ -30,10 +30,8 @@ Semester 6 focuses on research methodology and applied geospatial analysis — c
 - Network design (class order, geometry, observation plan)
 - [[Least Squares Adjustment]] for network adjustment
 - Error ellipse computation:
-
-$$ E_p = \sigma_0^2 \cdot Q_{\hat{X}\hat{X}}$$
-
-- Quality control criteria
+$$
+E_p = \sigma_0^2 \cdot Q_{\hat{X}\hat{X}}$$- Quality control criteria
 - Vertical control network
 
 ### TKD213608 — Analisis Geospasial (Geospatial Analysis)

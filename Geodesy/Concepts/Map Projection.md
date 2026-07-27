@@ -15,23 +15,21 @@ updated: 2026-07-27
 ## Fundamental Concepts
 
 ### The Projection Problem
-
-$$(x, y) = f(\phi, \lambda) \quad \text{and} \quad (\phi, \lambda) = g(x, y) $ $
-
-**Tissot's Indicatrix** — the infinitesimal ellipse showing distortion:
+$$
+(x, y) = f(\phi, \lambda) \quad \text{and} \quad (\phi, \lambda) = g(x, y) $ $**Tissot's Indicatrix** — the infinitesimal ellipse showing distortion:
 
 | No Distortion | Equal-Area | Conformal | Equidistant |
 |--------------|------------|-----------|-------------|
-| Circle ( $ a=b=1 $) | Area same globally | Shape preserved locally | Scale along one direction constant |
+| Circle ( $a=b=1$) | Area same globally | Shape preserved locally | Scale along one direction constant |
 
 ### Distortion Parameters
 
 | Parameter | Symbol | Meaning |
 |-----------|--------|---------|
-| Scale factor (north-south) | $ m $ | $  h = \frac{d s_\text{map}}{d s_\text{ellipsoid}} $ (meridian) |
-| Scale factor (east-west) | $ n $ | $  k = \frac{d s_\text{map}}{d s_\text{ellipsoid}} $ (parallel) |
-| Maximum angular distortion | $\omega $|$\sin(\omega/2) = \frac{|h-n|}{h+n} $ |
-| Area scale | $ S $ | $  S = h \cdot n \cdot \sin\theta $ (or $  h \cdot n $ for conformal) |
+| Scale factor (north-south) | $m$|$h = \frac{d s_\text{map}}{d s_\text{ellipsoid}} $ (meridian) |
+| Scale factor (east-west) | $n$|$k = \frac{d s_\text{map}}{d s_\text{ellipsoid}} $ (parallel) |
+| Maximum angular distortion | $\omega$|$\sin(\omega/2) = \frac{|h-n|}{h+n}$|
+| Area scale | $S$|$S = h \cdot n \cdot \sin\theta $(or$ h \cdot n $ for conformal) |
 
 ---
 
@@ -58,19 +56,11 @@ $$(x, y) = f(\phi, \lambda) \quad \text{and} \quad (\phi, \lambda) = g(x, y) $ $
 
 ## Key Projections in Detail
 
-### Mercator (Regular Cylindrical Conformal)
-
-$ $ 
-
-x = R\lambday = R \ln\left[\tan\left(\frac{\pi}{4} + \frac{\phi}{2}\right)\right
+### Mercator (Regular Cylindrical Conformal)$ $x = R\lambday = R \ln\left[\tan\left(\frac{\pi}{4} + \frac{\phi}{2}\right)\right
 ]
-
-$$**Inverse:** $ $
-
-\lambda = \frac{x}{R}\phi = 2\arctan(e^{y/R}) - \frac{\pi}{2
+$$**Inverse:**$ $\lambda = \frac{x}{R}\phi = 2\arctan(e^{y/R}) - \frac{\pi}{2
 }
-
-$$ **Scale factor:** $ $  m = \frac{1}{\cos\phi} = \sec\phi $$ **Distortion:** Scale increases toward poles (infinite at poles). Used for navigation (straight lines are loxodromes).
+$$**Scale factor:**$ $m = \frac{1}{\cos\phi} = \sec\phi$$ **Distortion:** Scale increases toward poles (infinite at poles). Used for navigation (straight lines are loxodromes).
 
 ### Universal Transverse Mercator (UTM)
 
@@ -83,37 +73,21 @@ $$ **Scale factor:** $ $  m = \frac{1}{\cos\phi} = \sec\phi $$ **Distortion:** S
 | Zone 50 | 117°E (Sulawesi) |
 | Zone 51 | 123°E (east Indonesia) |
 
-**Scale factor (central meridian):**$ k_0 = 0.9996 $**Easting formula:*
-*
-
-$ $  E = 500{,}000 + [k_0 \text{(}N + \text{...})]$$
-
-False easting = 500,000 m (to avoid negative coordinates)
+**Scale factor (central meridian):**$k_0 = 0.9996$**Easting formula:*
+*$ $E = 500{,}000 + [k_0 \text{(}N + \text{...})]$$False easting = 500,000 m (to avoid negative coordinates)
 False northing = 0 m (northern hemisphere), 10,000,000 m (southern)
 
 **Scale variation:*
-*
-
-$ $  k = k_0\left(1 + \frac{\lambda'^2}{2}\cos^2\phi\right)$$
-
-where $\lambda'$ is the longitude difference from central meridian. Maximum scale error ~0.1% at zone edges.
+*$ $k = k_0\left(1 + \frac{\lambda'^2}{2}\cos^2\phi\right)$$where$ \lambda'$ is the longitude difference from central meridian. Maximum scale error ~0.1% at zone edges.
 
 ### Lambert Conformal Conic (LCC)
 
-Used for Indonesia's large meridional extent:
-
-$ $  n = \frac{\ln(\cos\phi_1/\cos\phi_2)}{\ln[\tan(\pi/4+\phi_2/2)/\tan(\pi/4+\phi_1/2)]}F = \frac{\cos\phi_1 \tan^n(\pi/4+\phi_1/2)}{n}r = F / \tan^n(\pi/4+\phi/2)$$
-
-$\phi_1, \phi_2 $= standard parallels where scale is exact.
+Used for Indonesia's large meridional extent:$ $n = \frac{\ln(\cos\phi_1/\cos\phi_2)}{\ln[\tan(\pi/4+\phi_2/2)/\tan(\pi/4+\phi_1/2)]}F = \frac{\cos\phi_1 \tan^n(\pi/4+\phi_1/2)}{n}r = F / \tan^n(\pi/4+\phi/2)$$$\phi_1, \phi_2$= standard parallels where scale is exact.
 
 ### Stereographic (Azimuthal Conformal)
 
 **Used for:** Polar regions, GNSS satellite orbits visualization
-.
-
-$ $  k = \frac{2}{1 + \sin\phi_0\sin\phi + \cos\phi_0\cos\phi\cos\Delta\lambda}$$
-
----
+.$ $k = \frac{2}{1 + \sin\phi_0\sin\phi + \cos\phi_0\cos\phi\cos\Delta\lambda}$$---
 
 ## In Geodesy Context
 
@@ -134,9 +108,9 @@ $ $  k = \frac{2}{1 + \sin\phi_0\sin\phi + \cos\phi_0\cos\phi\cos\Delta\lambda}$
 
 ### Coordinate Conversion Steps
 
-1. **Geodetic**$ (\phi, \lambda, h) $ on reference ellipsoid (e.g., WGS84)
-2. **Geocentric**$ (X, Y, Z) $ ECEF
-3. **Projected**$ (E, N) $ UTM or other projection
+1. **Geodetic**$(\phi, \lambda, h)$ on reference ellipsoid (e.g., WGS84)
+2. **Geocentric**$(X, Y, Z)$ ECEF
+3. **Projected**$(E, N)$ UTM or other projection
 
 Accuracy check: Convert back and compare; closure error should be < 1 mm.
 
@@ -146,11 +120,11 @@ Accuracy check: Convert back and compare; closure error should be < 1 mm.
 
 | Equation | Name | Use |
 |----------|------|-----|
-| $ x = R\lambda $, $  y = R\ln\tan(\pi/4+\phi/2) $ | Mercator forward | Navigation |
-| $ m = 1/\cos\phi $ | Mercator scale | Distortion at latitude |
-| $ k_0 = 0.9996 $ | UTM scale factor | Central meridian |
-| $ k = k_0(1+\lambda'^2\cos^2\phi/2) $ | UTM scale variation | Scale at distance |
-| $ S = h\cdot n $ | Area scale | Distortion type |
+| $x = R\lambda$, $y = R\ln\tan(\pi/4+\phi/2)$| Mercator forward | Navigation |
+| $ m = 1/\cos\phi$ | Mercator scale | Distortion at latitude |
+| $k_0 = 0.9996$ | UTM scale factor | Central meridian |
+| $k = k_0(1+\lambda'^2\cos^2\phi/2)$ | UTM scale variation | Scale at distance |
+| $S = h\cdot n$ | Area scale | Distortion type |
 
 ---
 
@@ -175,8 +149,8 @@ Accuracy check: Convert back and compare; closure error should be < 1 mm.
 ## Study Problems
 
 1. **Recall:** Why is there a false easting of 500,000 m in UTM?
-2. **Application:** A point in Jakarta has coordinates $ (\phi, \lambda) = (-6.1745°, 106.8227°) $. Which UTM zone? Compute the UTM easting and northing (WGS84). What is the scale factor at this point?
-3. **Derivation:** Show that Mercator is conformal by computing the scale factors $ h $ and $  k $ and showing $  h = k $.
+2. **Application:** A point in Jakarta has coordinates $(\phi, \lambda) = (-6.1745°, 106.8227°)$. Which UTM zone? Compute the UTM easting and northing (WGS84). What is the scale factor at this point?
+3. **Derivation:** Show that Mercator is conformal by computing the scale factors $h$ and$ k$and showing$ h = k $.
 4. **Real-world:** If you measure a distance in UTM at the zone edge (maximum scale error 0.1%), what is the difference between the measured UTM distance and true ellipsoidal distance over 1 km?
 
 ---
@@ -187,7 +161,7 @@ Accuracy check: Convert back and compare; closure error should be < 1 mm.
 2. **Confusing UTM northings in southern hemisphere:** Always subtract from 10,000,000 m south of equator.
 3. **Treating UTM distances as ellipsoidal:** The scale factor applies — correct first.
 4. **Using the wrong ellipsoid:** WGS84, GRS80, Bessel all give different projected coordinates.
-5. **Ignoring central meridian scale factor:** $ k_0 = 0.9996$ means scale at central meridian is 0.9996, not 1.0.
+5. **Ignoring central meridian scale factor:** $k_0 = 0.9996$ means scale at central meridian is 0.9996, not 1.0.
 
 ---
 

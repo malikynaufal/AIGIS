@@ -30,30 +30,16 @@ Proses pengumpulan data meliputi:
 Preprocessing diperlukan untuk mempersiapkan data analisis:
 
 #### 1. Radiometric Correction
-
 $$
-
 L_{corrected} = \frac{L_{sensor} - L_{min}}{L_{max} - L_{min}} imes (Digital Number_{max} - Digital Number_{min}
-)
-
-$ $ 2. Geometric Correction $ $
-
-# 2. Geometric Correction
+)$ $2. Geometric Correction$ $# 2. Geometric Correction
 
 ### # 2. Geometric Correction
 
 \begin{bmatrix} X_{ground} \\ Y_{ground} \end{bmatrix} = \begin{bmatrix} a_1 & a_2 \\ b_1 & b_2 \end{bmatrix} \begin{bmatrix} X_{pixel} \\ Y_{pixel} \end{bmatrix} + \begin{bmatrix} a_3 \\ b_3 \end{bmatrix
-}
+}$ $3. Atmospheric Correction$ $# 3. Atmospheric Correction
 
-$ $ 3. Atmospheric Correction $ $
-
-# 3. Atmospheric Correction
-
-### # 3. Atmospheric CorrectionL_{atm\_corrected} = L_{sensor} - L_{path}
-
-$ $
-
-Klasifikasi Citra
+### # 3. Atmospheric CorrectionL_{atm\_corrected} = L_{sensor} - L_{path}$ $Klasifikasi Citra
 Klasifikasi mengelompokkan piksel berdasarkan karakteristik spektral:
 
 1. **Supervised Classification**
@@ -67,9 +53,7 @@ Klasifikasi mengelompokkan piksel berdasarkan karakteristik spektral:
  - ISODATA (Iterative Self-Organizing Data Analysis Technique)
 
 ### Accuracy Assessment
-Evaluasi akurasi menggunakan confusion matrix:
-
-$ $## Klasifikasi Citra
+Evaluasi akurasi menggunakan confusion matrix:$ $## Klasifikasi Citra
 Klasifikasi mengelompokkan piksel berdasarkan karakteristik spektral:
 
 1. **Supervised Classification**
@@ -89,9 +73,7 @@ ext{Overall Accuracy} &= \frac{ext{Sum of Diagonal Elements}}{ext{Total Samples}
 ext{User Accuracy} &= \frac{ext{Correctly Classified Pixels per Class}}{ext{Total Pixels Classified per Class}} imes 100\%
 \end{aligned}\begin{aligned}
 ext{Producer Accuracy} &= \frac{ext{Correctly Classified Pixels per Class}}{ext{Total Reference Pixels per Class}} imes 100\%
-\end{aligned}$$
-
-# ## Klasifikasi Citra
+\end{aligned}$$# ## Klasifikasi Citra
 Klasifikasi mengelompokkan piksel berdasarkan karakteristik spektral:
 
 1. **Supervised Classification**

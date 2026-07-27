@@ -25,13 +25,9 @@ Application of [[GIS]], [[Remote Sensing]], and geodetic monitoring to natural d
 | Recovery | Reconstruction planning | Multi-temporal analysis |
 
 ### 2. Risk Assessment
-
 $$
-
 \text{Risk} = \text{Hazard} \times \text{Vulnerability} \times \text{Exposure}
-
 $$
-
 # ## 3. Hazard Types
 
 | Hazard | Geodetic Monitoring | Example (Indonesia) |

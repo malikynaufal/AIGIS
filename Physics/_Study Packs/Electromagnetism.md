@@ -29,7 +29,8 @@ $$ \begin{aligned}
 \oint_S \vec{B}\cdot d\vec{A} &= 0
 \oint_C \vec{E}\cdot d\vec{l} &= -\frac{d\Phi_B}{dt}
 \oint_C \vec{B}\cdot d\vec{l} &= \mu_0 I_{\text{enc}} + \mu_0\epsilon_0\frac{d\Phi_E}{dt}
-\end{aligned} $ $
+\end{aligned}
+$
 
 ---
 

@@ -27,10 +27,7 @@ updated: 2026-07-27
 ## Spectral Indices
 
 ### NDVI — Normalized Difference Vegetation Index
-
-$$ NDVI = \frac{NIR - Red}{NIR + Red}$ $
-
-| NDVI Value | Land Cover |
+$$NDVI = \frac{NIR - Red}{NIR + Red}$ $| NDVI Value | Land Cover |
 |------------|------------|
 | < 0.1 | Water, bare soil |
 | 0.1–0.3 | Sparse vegetation |
@@ -39,17 +36,12 @@ $$ NDVI = \frac{NIR - Red}{NIR + Red}$ $
 | > 0.7 | Very dense (forest) |
 
 ### NDWI — Normalized Difference Water Index
-
-$$
-
-NDWI = \frac{Green - NIR}{Green + NIR}$ $
-
-### Other Indices
+$$NDWI = \frac{Green - NIR}{Green + NIR}$ $### Other Indices
 
 | Index | Formula | Use |
 |-------|---------|-----|
-| SAVI | $\frac{NIR-Red}{NIR+Red+L}(1+L) $, $ L=0.5 $ | Soil-adjusted vegetation |
-| MNDWI | $\frac{Green-SWIR}{Green+SWIR} $ | Modified water index |
+| SAVI | $\frac{NIR-Red}{NIR+Red+L}(1+L)$, $L=0.5$ | Soil-adjusted vegetation |
+| MNDWI | $\frac{Green-SWIR}{Green+SWIR}$| Modified water index |
 | BSI | $\frac{(SWIR+Red)-(NIR+Blue)}{(SWIR+Red)+(NIR+Blue)} $ | Bare soil index |
 
 ## Sensor Platforms
@@ -76,16 +68,10 @@ NDWI = \frac{Green - NIR}{Green + NIR}$ $
 
 ## Active Remote Sensing
 
-### SAR (Synthetic Aperture Radar)
-
-$ $\text{Resolution}_{range} = \frac{c}{2B} = \frac{c}{2f_{chirp}}
-
+### SAR (Synthetic Aperture Radar)$ $\text{Resolution}_{range} = \frac{c}{2B} = \frac{c}{2f_{chirp}}
 $$
-
 $ $\text{Resolution}_{azimuth} = \frac{D_{antenna}}{2}
-
 $$
-
 | SAR Band | Wavelength | Penetration | Use |
 |----------|------------|-------------|-----|
 | X-band | 3 cm | Vegetation canopy | Urban, snow |
@@ -93,12 +79,8 @@ $$
 | L-band | 23 cm | Dense vegetation | Forest, agriculture |
 | P-band | 70 cm | Full canopy | Subsurface |
 
-### LiDAR (Light Detection and Ranging)
-
-$ $\text{Range} = \frac{c \cdot \Delta t}{2}
-
+### LiDAR (Light Detection and Ranging)$ $\text{Range} = \frac{c \cdot \Delta t}{2}
 $$
-
 | LiDAR Type | Range | Points/sec | Application |
 |------------|-------|------------|-------------|
 | Airborne | 500–3000 m | 100k–2M | Topographic mapping |
@@ -123,7 +105,7 @@ $$
 
 ## Study Problems
 
-1. Compute NDVI given $ NIR = 0.35 $ and $ Red = 0.08$.
+1. Compute NDVI given $NIR = 0.35$ and $Red = 0.08$.
 2. Explain the difference between multispectral and hyperspectral sensors.
 3. Why is L-band SAR better than X-band for forest monitoring?
 4. Calculate the range resolution of a SAR with bandwidth 150 MHz.

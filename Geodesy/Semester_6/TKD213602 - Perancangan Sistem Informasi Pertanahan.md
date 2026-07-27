@@ -672,8 +672,8 @@ Key performance indicators (KPIs) for LIS monitoring:
 |-----|---------|--------|
 | **Registration Coverage** | $\frac{ext{Registered Parcels}}{ext{Total Land Parcels}}imes 100 $ | >85% (2025) |
 | **Certificate Processing Time** | $\frac{ext{Processing Days}}{ext{Number of Certificates}} $ | <5 days |
-| **Dispute Resolution Time** | $\frac{ext{Resolution Days}}{ext{Dispute Cases}} $ | <30 days |
-| **Data Quality Score** | $ 1 - \frac{ext{Errors}}{ext{Total Records}} $ | >95% |
+| **Dispute Resolution Time** | $\frac{ext{Resolution Days}}{ext{Dispute Cases}} $| <30 days |
+| **Data Quality Score** |$ 1 - \frac{ext{Errors}}{ext{Total Records}} $ | >95% |
 | **User Satisfaction** | NPS (Net Promoter Score) | >70 |
 
 ### 10.2 Reporting Functions
@@ -868,10 +868,10 @@ class SystemMonitor:
 | Concept | Formula |
 |---------|---------|
 | LADM Core Packages | Party, Role, RRR, SpatialUnit, BAUnit, SpatialSource |
-| Percentage Calculations | $\frac{ext{Part}}{ext{Whole}} imes 100 $ |
-| Certificate Validity | $ ext{Expiry} = ext{Issue Date} + ext{Years} imes 365 $ |
-| Area Unit Conversion | $ 1 ext{ha} = 10,000 ext{m}^2 $ |
-| API Request Rate | $\frac{ext{Requests}}{ext{Time Window}} $ |
+| Percentage Calculations | $\frac{ext{Part}}{ext{Whole}} imes 100$|
+| Certificate Validity | $ ext{Expiry} = ext{Issue Date} + ext{Years} imes 365 $|
+| Area Unit Conversion |$ 1 ext{ha} = 10,000 ext{m}^2 $|
+| API Request Rate |$\frac{ext{Requests}}{ext{Time Window}} $ |
 
 ---
 

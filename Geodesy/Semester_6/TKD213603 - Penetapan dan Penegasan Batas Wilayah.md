@@ -371,20 +371,10 @@ class BoundarySurveyor:
 ### 10.1 Boundary Traverse Calculations
 
 **Angular closure error:**
-
 $$
-
 f_ext{angular} = \sum\beta - (2n-4)imes90
-°
-
-$ $**Linear closure:**$ $
-
-f_ext{linear} = \sqrt{f_x^2+f_y^2
-}
-
-$ $**Relative precision:**$ $ ext{RP} = \frac{f_ext{linear}}{ext{perimeter}}
-
-$ $ 10.2 GPS Coordinate Transformations
+°$ $**Linear closure:**$ $f_ext{linear} = \sqrt{f_x^2+f_y^2
+}$ $**Relative precision:**$ $ ext{RP} = \frac{f_ext{linear}}{ext{perimeter}}$ $ 10.2 GPS Coordinate Transformations
 
 **UTM conversion:**
 ```python
@@ -397,27 +387,7 @@ def utm_to_latlon(easting, northing, zone, north, a=6378137, e=0.0818191908):
 ### 10.3 Area Calculations
 
 **Trapezoid rule:*
-*
-
-$ $## 10.2 GPS Coordinate Transformations
-
-**UTM conversion:**
-```python
-def utm_to_latlon(easting, northing, zone, north, a=6378137, e=0.0818191908):
- # Transverse Mercator projection inverse
- # Implementation using Bowring's method
- pass
-```
-
-### 10.3 Area Calculations
-
-**Trapezoid rule:*
-*
-
-A = \frac{1}{2} \sum_{i=1}^{n} x_i y_{i+1} - x_{i+1} y_
-i $ $
-
-# ## 10.2 GPS Coordinate Transformations
+*$ $## 10.2 GPS Coordinate Transformations
 
 **UTM conversion:**
 ```python
@@ -433,11 +403,23 @@ def utm_to_latlon(easting, northing, zone, north, a=6378137, e=0.0818191908):
 *
 
 A = \frac{1}{2} \sum_{i=1}^{n} x_i y_{i+1} - x_{i+1} y_
-i**Trigonometric method:**$ $ 
+i $ $# ## 10.2 GPS Coordinate Transformations
 
-A = \frac{1}{2} \sum d_i \sin\alpha_i $$
+**UTM conversion:**
+```python
+def utm_to_latlon(easting, northing, zone, north, a=6378137, e=0.0818191908):
+ # Transverse Mercator projection inverse
+ # Implementation using Bowring's method
+ pass
+```
 
----
+### 10.3 Area Calculations
+
+**Trapezoid rule:*
+*
+
+A = \frac{1}{2} \sum_{i=1}^{n} x_i y_{i+1} - x_{i+1} y_
+i**Trigonometric method:**$ $A = \frac{1}{2} \sum d_i \sin\alpha_i$$---
 
 ## 11. Future Developments
 

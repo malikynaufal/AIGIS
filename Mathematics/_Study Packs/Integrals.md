@@ -89,8 +89,8 @@ This connects the antiderivative to the definite integral and provides the pract
 | $\frac{1}{\sqrt{1-x^2}} $|$\arcsin x + C $ |
 | $\frac{1}{1+x^2} $|$\arctan x + C $ |
 | $\frac{1}{x\sqrt{x^2-1}} $|$\operatorname{arcsec}\|x\| + C $ |
-| $\sinh x $|$\cosh x + C $ |
-| $\cosh x $|$\sinh x + C $ |
+| $\sin \h x $|$\cos \h x + C $ |
+| $\cos \h x $|$\sin \h x + C $ |
 
 ---
 

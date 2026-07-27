@@ -118,12 +118,8 @@ A cadastral survey is the process of identifying and mapping land boundaries for
 ### 4.3 Area Calculation Methods
 
 - **Koordinat (Trapezoidal Rule):**
-
 $$
-
-A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i y_{i+1} - x_{i+1} y_i) \right|$$
-
-- **Measured Distances:** Using traverse or intersection methods
+A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i y_{i+1} - x_{i+1} y_i) \right|$$- **Measured Distances:** Using traverse or intersection methods
 
 ### 4.4 Position Determination Methods
 

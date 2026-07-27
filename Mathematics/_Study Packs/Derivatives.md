@@ -93,8 +93,8 @@ $ $\frac{dz}{dt} = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f
 | $\arcsin x $|$\frac{1}{\sqrt{1-x^2}} $ | |
 | $\arccos x $|$\frac{-1}{\sqrt{1-x^2}} $ | |
 | $\arctan x $|$\frac{1}{1+x^2} $ | |
-| $\sinh x $|$\cosh x $ | Hyperbolic |
-| $\cosh x $|$\sinh x $ | Hyperbolic |
+| $\sin \h x $|$\cos \h x $ | Hyperbolic |
+| $\cos \h x $|$\sin \h x $ | Hyperbolic |
 
 ---
 

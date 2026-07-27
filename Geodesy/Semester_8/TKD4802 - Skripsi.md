@@ -55,10 +55,8 @@ Setelah menyelesaikan skripsi ini, mahasiswa mampu:
 - **Pengolahan Data**: Pemrosesan spasial (QGIS, ArcGIS, Python, SNAP, ENVI)
 
 - **Analisis Statistik**: Pengujian hipotesis, pemodelan spasial, akurasi
- - Uji normalitas: $H_0 $: data berdistribusi normal (Shapiro-Wilk, $  p > 0.05 $)
- - RMSE: $ RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i - y_i)^2} $- Overall Accuracy: $ OA = \frac{\sum_{i=1}^{k}p_{ii}}{n} $- Kappa Coefficient: $\kappa = \frac{p_o - p_e}{1 - p_e} $
-
-- **Pembahasan (Bab 4)**: Interpretasi hasil, perbandingan dengan penelitian terdahulu
+ - Uji normalitas: $H_0$: data berdistribusi normal (Shapiro-Wilk, $p > 0.05$)
+ - RMSE: $ RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i - y_i)^2} $- Overall Accuracy:$OA = \frac{\sum_{i=1}^{k}p_{ii}}{n} $- Kappa Coefficient:$\kappa = \frac{p_o - p_e}{1 - p_e} $- **Pembahasan (Bab 4)**: Interpretasi hasil, perbandingan dengan penelitian terdahulu
 
 - **Bab 5**: Kesimpulan dan rekomendasi
 

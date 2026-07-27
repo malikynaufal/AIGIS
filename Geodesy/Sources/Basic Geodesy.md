@@ -27,8 +27,8 @@ updated: 2026-07-27
 | 8 | Data Adjustment | TKD211203 | Hitung Perataan |
 
 ## Key Formulas
-- $h = H + N $ — Height relationship
-- $ e^2 = 2f - f^2 $ — Eccentricity
+- $h = H + N$— Height relationship
+- $ e^2 = 2f - f^2$— Eccentricity
 - $ N = a/\sqrt{1-e^2\sin^2\varphi}$ — Prime vertical radius
 - Bowring iteration for ECEF → Geodetic
 

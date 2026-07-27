@@ -13,23 +13,12 @@ updated: 2026-07-27
 
 ## Measurement Principle
 
-EDM measures the **phase difference** between a transmitted and received signal. The wavelength $\lambda $ is determined by the carrier frequency $  f $:
-
-$ $\lambda = \frac{c}{f}
-
-$$
-
-where $ c $ is the speed of light in vacuum ( $ 299\,792\,458 $ m/s).
+EDM measures the **phase difference** between a transmitted and received signal. The wavelength $\lambda$ is determined by the carrier frequency $f$:$ $\lambda = \frac{c}{f}$$where$ c$is the speed of light in vacuum ($ 299\,792\,458 $ m/s).
 
 ### Phase Measurement
 
-The measured phase difference $\Delta\phi $ is: $ $\Delta\phi = \frac{2\pi s}{\lambda} \mod 2\pi
-
-$$
-
-where $ s $ is the slope distance. The **fractional distance** is: $ $ s_{frac} = \frac{\Delta\phi}{2\pi} \cdot \lambda $$
-
-# ## Carrier Frequencies
+The measured phase difference $\Delta\phi$ is: $ $\Delta\phi = \frac{2\pi s}{\lambda} \mod 2\pi
+$$where$ s$ is the slope distance. The **fractional distance** is: $ $ s_{frac} = \frac{\Delta\phi}{2\pi} \cdot \lambda $$# ## Carrier Frequencies
 
 | Band | Frequency | Wavelength | Medium | Typical Range |
 |------|-----------|------------|--------|---------------|
@@ -43,55 +32,31 @@ where $ s $ is the slope distance. The **fractional distance** is: $ $ s_{frac} 
 
 ### Index of Refraction
 
-The speed of light in air is reduced by the refractive index $ n $:
+The speed of light in air is reduced by the refractive index $n$:$ $v = \frac{c}{n}$$$ $n - 1 = \frac{P}{\rho R T} \cdot \left(\alpha + \frac{\beta}{\lambda^2}\right)$$where$ P$is atmospheric pressure, $\rho $is air density, $R$ is the gas constant, $T$ is temperature, and$ \alpha $, $\beta $ are empirical constants.
 
-$ $  v = \frac{c}{n}$$
+### Edlén's Formula (Simplified)$ $ (n - 1) \times 10^6 = \frac{8342.13}{\lambda^2} \cdot \frac{P_{dry}}{T} + \frac{29025.5}{\lambda^2} \cdot \frac{P_{wet}}{T} \cdot \frac{e_w}{e_s}$$where:
+-$\lambda $is in micrometers
+-$ P_{dry} $= dry atmospheric pressure (hPa)
+-$ P_{wet} $= water vapor pressure (hPa)
+-$T$= temperature (K)
+-$ e_w $= water vapor pressure
+-$ e_s $ = saturation vapor pressure
 
-$ $  n - 1 = \frac{P}{\rho R T} \cdot \left(\alpha + \frac{\beta}{\lambda^2}\right)$$
+### Temperature Correction$ $\Delta s_T = s \cdot \alpha_T \cdot (T - T_0)
+$$where$ \alpha_T \approx 0.00003 $ /°C for K-band instruments.
 
-where $ P $ is atmospheric pressure,$\rho $ is air density,$  R $ is the gas constant,$  T $ is temperature, and $\alpha $, $\beta $ are empirical constants.
-
-### Edlén's Formula (Simplified)
-
-$ $ (n - 1) \times 10^6 = \frac{8342.13}{\lambda^2} \cdot \frac{P_{dry}}{T} + \frac{29025.5}{\lambda^2} \cdot \frac{P_{wet}}{T} \cdot \frac{e_w}{e_s}$$
-
-where:
-- $\lambda $ is in micrometers
-- $ P_{dry} $ = dry atmospheric pressure (hPa)
-- $ P_{wet} $ = water vapor pressure (hPa)
-- $ T $ = temperature (K)
-- $ e_w $ = water vapor pressure
-- $ e_s $ = saturation vapor pressure
-
-### Temperature Correction
-
-$ $\Delta s_T = s \cdot \alpha_T \cdot (T - T_0)
-
-$$
-
-where $\alpha_T \approx 0.00003 $ /°C for K-band instruments.
-
-### Pressure Correction
-
-$ $\Delta s_P = s \cdot \alpha_P \cdot (P - P_0)
-
-$$
-
-where $\alpha_P \approx 0.00027 $ /hPa for K-band.
+### Pressure Correction$ $\Delta s_P = s \cdot \alpha_P \cdot (P - P_0)
+$$where$ \alpha_P \approx 0.00027 $ /hPa for K-band.
 
 ## Combined Atmospheric Correction
 
-For K-band EDM (most common):
-
-$ $\Delta s_{atm} = s \cdot \left[ k_1 \cdot (P - 1013.25) - k_2 \cdot (T - 20) + k_3 \cdot (e - 7.5) \right]
-
+For K-band EDM (most common):$ $\Delta s_{atm} = s \cdot \left[ k_1 \cdot (P - 1013.25) - k_2 \cdot (T - 20) + k_3 \cdot (e - 7.5) \right]
 $$
-
 | Coefficient | K-band | I-band | L-band |
 |-------------|--------|--------|--------|
-| $ k_1 $ (pressure) | 0.27 ppm/hPa | 0.00 ppm/hPa | 0.00 ppm/hPa |
-| $ k_2 $ (temperature) | 0.03 ppm/°C | 0.36 ppm/°C | 0.00 ppm/°C |
-| $ k_3 $ (humidity) | 0.00 ppm/% | 0.00 ppm/% | 0.00 ppm/% |
+| $k_1$ (pressure) | 0.27 ppm/hPa | 0.00 ppm/hPa | 0.00 ppm/hPa |
+| $k_2$ (temperature) | 0.03 ppm/°C | 0.36 ppm/°C | 0.00 ppm/°C |
+| $k_3$ (humidity) | 0.00 ppm/% | 0.00 ppm/% | 0.00 ppm/% |
 
 ## Instrument Specifications
 
@@ -118,23 +83,11 @@ $$
 
 ## Slope to Horizontal Reduction
 
-### Horizontal Distance
+### Horizontal Distance$ $D_h = D_s \cdot \cos\theta$$where$ D_s $ is the slope distance and$ \theta $ is the zenith angle.
 
-$ $ D_h = D_s \cdot \cos\theta $$
+### Combined with Curvature and Refraction$ $ D_h = D_s \cdot \cos\theta \cdot \left(1 + \frac{D_s}{2R}\right)$$where$ R = 6\,371\,000 $m is Earth's mean radius.
 
-where $ D_s $ is the slope distance and $\theta $ is the zenith angle.
-
-### Combined with Curvature and Refraction
-
-$ $ D_h = D_s \cdot \cos\theta \cdot \left(1 + \frac{D_s}{2R}\right)$$
-
-where $ R = 6\,371\,000 $  m is Earth's mean radius.
-
-### Orthometric Correction (for long sights)
-
-$ $ D_{ortho} = D_h \cdot \left(1 - \frac{H}{R}\right)$$
-
-where $ H $ is the [[Orthometric Height]].
+### Orthometric Correction (for long sights)$ $ D_{ortho} = D_h \cdot \left(1 - \frac{H}{R}\right)$$where$ H$ is the [[Orthometric Height]].
 
 ## Measurement Geometry
 
@@ -173,10 +126,10 @@ flowchart LR
 
 ## Study Problems
 
-1. Given $ D_s = 1500.000 $ m, $\theta = 95°$, compute $ D_h $.
+1. Given $D_s = 1500.000$ m, $\theta = 95°$, compute$ D_h $.
 2. If temperature is 30°C and pressure is 1000 hPa, compute the EDM correction for K-band.
 3. Explain why EDM accuracy degrades with longer distances.
-4. Compute the combined atmospheric correction for $ s = 2 $ km, $  T = 25°C $, $  P = 1010$ hPa.
+4. Compute the combined atmospheric correction for $s = 2$ km, $T = 25°C$, $P = 1010$ hPa.
 
 ## Common Mistakes
 

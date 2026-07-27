@@ -49,12 +49,9 @@ identity = gpd.overlay(gdf1, gdf2, how='identity')
 ```
 
 #### Raster Overlay (Map Algebra)
+$$C = f(A, B)$ $where$ f$can be:
 
-$$ C = f(A, B) $ $
-
-where $ f $ can be:
-
-- **Arithmetic:**$ A + B $, $  A - B $, $  A imes B $, $  A / B $- **Logical:**$  A ext{ AND } B $, $  A ext{ OR } B $, $ ext{NOT } A $- **Relational:**$  A > B $, $  A == B $, $  A < B $```python
+- **Arithmetic:**$ A + B$, $A - B$, $A imes B$, $A / B$- **Logical:**$A ext{ AND } B$, $A ext{ OR } B$, $ext{NOT } A$- **Relational:**$A > B$, $A == B$, $A < B$```python
 import rasterio
 from rasterio.enums import Resampling
 
@@ -97,11 +94,7 @@ buffer = gdf.buffer(500).dissolve()
 
 Interpolation estimates values at unmeasured locations from measured points.
 
-#### Inverse Distance Weighting (IDW)
-
-$ $
-
-z_0 = \frac{\sum_{i=1}^{n} w_i z_i}{\sum_{i=1}^{n} w_i},
+#### Inverse Distance Weighting (IDW)$ $z_0 = \frac{\sum_{i=1}^{n} w_i z_i}{\sum_{i=1}^{n} w_i},
 
 ```python
 from scipy.interpolate import griddata
@@ -122,13 +115,7 @@ grid = griddata(points, values, (xi, yi), method='linear') # 'nearest', 'cubic'
 
 #### Kriging (Geostatistical)
 
-Uses variogram to model spatial autocorrelation
-
-$ $\gamma(h) = \frac{1}{2N(h)} \sum_{i=1}^{N(h)} [z(x_i) - z(x_i + h)]^2
-
-$ $
-
-```python
+Uses variogram to model spatial autocorrelation$ $\gamma(h) = \frac{1}{2N(h)} \sum_{i=1}^{N(h)} [z(x_i) - z(x_i + h)]^2$ $```python
 from pykrige.ok import OrdinaryKriging
 
 OK = OrdinaryKriging(
@@ -204,22 +191,16 @@ acc = grid.accumulation(flowdir)
 
 #### Quadrat Analysis
 
-Tests for complete spatial randomness (CSR)
-
-$ $\chi^2 = \sum_{i=1}^{q} \frac{(O_i - E)^2}{E} $ $
-
-where $ O_i $= observed points in quadrat $  i $,$  E = n/q $= expected.
+Tests for complete spatial randomness (CSR)$ $\chi^2 = \sum_{i=1}^{q} \frac{(O_i - E)^2}{E} $ $where$ O_i $= observed points in quadrat$ i$, $E = n/q $= expected.
 
 #### Nearest Neighbor Analysis
 
 **Clark-Evans index:*
-*
-
-$ $  R = \frac{\bar{r}_{obs}}{\bar{r}_{exp}} = \frac{\frac{1}{n}\sum r_i}{0.5\sqrt{A/n}}$ $|$  R $ Value | Pattern |
+*$ $R = \frac{\bar{r}_{obs}}{\bar{r}_{exp}} = \frac{\frac{1}{n}\sum r_i}{0.5\sqrt{A/n}}$ $|$R$ Value | Pattern |
 |-----------|---------|
-| $ R \approx 1 $ | Random |
-| $ R < 1 $ | Clustered |
-| $ R > 1 $ | Regular/Dispersed |
+| $R \approx 1$ | Random |
+| $R < 1$ | Clustered |
+| $R > 1$ | Regular/Dispersed |
 
 ```python
 from pointpats import PointPattern
@@ -232,11 +213,7 @@ R = r_obs / r_exp
 ```
 
 #### Ripley's K Functio
-n
-
-$ $ K(d) = \frac{A}{n^2} \sum_{i \neq j} \frac{I(d_{ij} \leq d)}{w_{ij}}$ $
-
-```python
+n$ $ K(d) = \frac{A}{n^2} \sum_{i \neq j} \frac{I(d_{ij} \leq d)}{w_{ij}}$ $```python
 from pointpats import K_function
 
 k = K_function(pp, distances=[100, 200, 500, 1000])
@@ -245,11 +222,7 @@ k = K_function(pp, distances=[100, 200, 500, 1000])
 ### 3.2 Spatial Autocorrelation
 
 #### Global Moran's
-I
-
-$ $ 
-
-I = \frac{n}{S_0} \frac{\sum_i \sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2}$ $ where $ S_0 = \sum_i \sum_j w_{ij} $.
+I$ $I = \frac{n}{S_0} \frac{\sum_i \sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2}$ $where$ S_0 = \sum_i \sum_j w_{ij} $.
 
 ```python
 from esda.moran import Moran
@@ -270,38 +243,20 @@ gdf['quadrant'] = lisa.q # 1=HH, 2=LH, 3=LL, 4=HL
 gdf['significant'] = lisa.p_sim < 0.05
 ```
 
-#### Geary's C
-
-$ $  C = \frac{(n-1)}{2S_0} \frac{\sum_i \sum_j w_{ij}(x_i - x_j)^2}{\sum_i (x_i - \bar{x})^2}
-
-$ $ 3.3 Spatial Regression
+#### Geary's C$ $C = \frac{(n-1)}{2S_0} \frac{\sum_i \sum_j w_{ij}(x_i - x_j)^2}{\sum_i (x_i - \bar{x})^2}$ $ 3.3 Spatial Regression
 
 **OLS (Ordinary Least Squares):*
-*
-
-$ $## 3.3 Spatial Regression
+*$ $## 3.3 Spatial Regression
 
 **OLS (Ordinary Least Squares):*
-*y = X\beta + \epsilon $ $
-
-# ## 3.3 Spatial Regression
+*y = X\beta + \epsilon $ $# ## 3.3 Spatial Regression
 
 **OLS (Ordinary Least Squares):*
 *y = X\beta + \epsilon
 
 **Spatial Lag Model (SAR):*
-*
-
-$ $ 
-
-y = \rho W y + X\beta + \epsilon $ $
-
-**Spatial Error Model (SEM):*
-*
-
-$ $  y = X\beta + \epsilon, \quad \epsilon = \lambda W \epsilon + u $ $
-
-```python
+*$ $y = \rho W y + X\beta + \epsilon$ $**Spatial Error Model (SEM):*
+*$ $y = X\beta + \epsilon, \quad \epsilon = \lambda W \epsilon + u $ $```python
 from spreg import ML_Lag, ML_Error
 
 # Spatial lag
@@ -381,10 +336,10 @@ from rsgislib.imageutils import viewshed
 
 | Derivative | Formula | Unit |
 |------------|---------|------|
-| **Slope** | $\alpha = \arctan\sqrt{(artial z/artial x)^2 + (artial z/artial y)^2} $ | degrees/% |
-| **Aspect** | $ heta = \arctan2(-artial z/artial x, artial z/artial y) $ | 0–360° |
-| **Curvature (profile)** | $ k_p = \frac{z_{xx}z_x^2 + 2z_{xy}z_xz_y + z_{yy}z_y^2}{(z_x^2 + z_y^2)^{3/2}} $ | 1/m |
-| **Curvature (plan)** | $ k_{pl} = \frac{z_{xx}z_y^2 - 2z_{xy}z_xz_y + z_{yy}z_x^2}{(z_x^2 + z_y^2)^{3/2}} $ | 1/m |
+| **Slope** | $\alpha = \arctan\sqrt{(artial z/artial x)^2 + (artial z/artial y)^2} $| degrees/% |
+| **Aspect** |$ heta = \arctan2(-artial z/artial x, artial z/artial y) $| 0–360° |
+| **Curvature (profile)** |$ k_p = \frac{z_{xx}z_x^2 + 2z_{xy}z_xz_y + z_{yy}z_y^2}{(z_x^2 + z_y^2)^{3/2}} $| 1/m |
+| **Curvature (plan)** |$ k_{pl} = \frac{z_{xx}z_y^2 - 2z_{xy}z_xz_y + z_{yy}z_x^2}{(z_x^2 + z_y^2)^{3/2}} $ | 1/m |
 
 ```python
 from scipy.ndimage import sobel
@@ -409,7 +364,7 @@ aspect = (aspect + 360) % 360
 
 - **SPI** (Stream Power Index) — erosion potential
 
-- **TWI** (Topographic Wetness Index) —$\ln(a / an\beta) $---
+- **TWI** (Topographic Wetness Index) —$\ln(a / an\beta)$---
 
 ## 6. Indonesian Spatial Analysis Applications
 
@@ -424,11 +379,7 @@ aspect = (aspect + 360) % 360
 
 ### 6.2 Land Suitability Analysis
 
-Multi-criteria evaluation (MCE) using **AHP** (Analytic Hierarchy Process)
-
-$ $  S = \sum_{i=1}^{n} w_i \cdot x_i $ $
-
-where $ w_i $ are weights from pairwise comparison matrix.
+Multi-criteria evaluation (MCE) using **AHP** (Analytic Hierarchy Process)$ $S = \sum_{i=1}^{n} w_i \cdot x_i$ $where$ w_i $ are weights from pairwise comparison matrix.
 
 ### 6.3 Watershed Management
 
@@ -458,12 +409,12 @@ where $ w_i $ are weights from pairwise comparison matrix.
 
 | Concept | Formula |
 |---------|---------|
-| IDW | $ z_0 = \frac{\sum w_i z_i}{\sum w_i} $ |
-| Variogram | $\gamma(h) = \frac{1}{2N}\sum(z_i - z_{i+h})^2 $ |
-| Moran's I | $ I = \frac{n}{S_0}\frac{\sum w_{ij}(x_i-\bar{x})(x_j-\bar{x})}{\sum(x_i-\bar{x})^2} $ |
-| Nearest neighbor | $ R = \frac{\bar{r}_{obs}}{0.5\sqrt{A/n}} $ |
-| Slope | $\alpha = \arctan\sqrt{(artial z/artial x)^2 + (artial z/artial y)^2} $ |
-| TWI | $\ln(a / an\beta)$ |
+| IDW | $z_0 = \frac{\sum w_i z_i}{\sum w_i}$ |
+| Variogram | $\gamma(h) = \frac{1}{2N}\sum(z_i - z_{i+h})^2 $|
+| Moran's I |$ I = \frac{n}{S_0}\frac{\sum w_{ij}(x_i-\bar{x})(x_j-\bar{x})}{\sum(x_i-\bar{x})^2} $|
+| Nearest neighbor |$ R = \frac{\bar{r}_{obs}}{0.5\sqrt{A/n}} $|
+| Slope |$\alpha = \arctan\sqrt{(artial z/artial x)^2 + (artial z/artial y)^2} $|
+| TWI |$\ln(a / an\beta)$ |
 
 ---
 

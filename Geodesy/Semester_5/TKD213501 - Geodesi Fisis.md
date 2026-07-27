@@ -12,23 +12,17 @@ Geodesi Fisis mempelajari gravitasi Bumi, permukaan equipotensial (geoid), dan k
 
 ### 1. Gravitasi dan Potensi Bumi
 
-- **Gravitasi potensial** $W = U + T $:
-
-$ $ W(\mathbf{r}) = \frac{GM}{r} + \frac{1}{2}J_2\frac{GMa^2}{r^3}(1-3\sin^2\varphi) + ext{harmonic terms} + T(\mathbf{r}) $ $-$  U $= normal potential (ellipsoid)
--$ T $= disturbing potential (anomalous)
+- **Gravitasi potensial** $W = U + T$:$ $ W(\mathbf{r}) = \frac{GM}{r} + \frac{1}{2}J_2\frac{GMa^2}{r^3}(1-3\sin^2\varphi) + ext{harmonic terms} + T(\mathbf{r}) $ $-$U$= normal potential (ellipsoid)
+-$T$= disturbing potential (anomalous)
 
 ### 2. Gravity Anomalies
 
-- **Free-air anomaly**: $\Delta g_{FA} = g_{ext{obs}} + 0.3086h - \gamma $- **Bouguer anomaly**: $\Delta g_B = \Delta g_{FA} - 2i G\rho h $- **Topographic correction**: reduction for terrain
+- **Free-air anomaly**: $\Delta g_{FA} = g_{ext{obs}} + 0.3086h - \gamma $- **Bouguer anomaly**:$\Delta g_B = \Delta g_{FA} - 2i G\rho h $- **Topographic correction**: reduction for terrain
 
 - **Isostatic anomaly**: $\Delta g_I = \Delta g_B + \delta g_{ext{compensation}} $### 3. Stokes' Integra
-l
+l$ $N = \frac{R}{4i\gamma}\iint_{\sigma} S(si)\Delta g(\varphi',\lambda')\,d\sigma $ $- Dirjenjikan langsung dari anomali gravitasi → geoid undulation
 
-$ $  N = \frac{R}{4i\gamma}\iint_{\sigma} S(si)\Delta g(\varphi',\lambda')\,d\sigma $ $
-
-- Dirjenjikan langsung dari anomali gravitasi → geoid undulation
-
-- Stokes kernel $ S(si)$: fungsi integral yang berat
+- Stokes kernel $S(si)$: fungsi integral yang berat
 
 ### 4. Molodensky's Theory
 

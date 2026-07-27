@@ -52,7 +52,7 @@ updated: 2026-07-13
 
 ## 📥 Capture & Learn
 
-- Drop NotebookLM answers / your notes in `_Inbox/` (or a subject `_Inbox/`) with a `target:` line or a `[[Concept]]` style link → I file it.
+- Drop NotebookLM answers / your notes in `_Inbox/` (or a subject `_Inbox/`) with a `target:` line or a `[[Geodesy Fundamentals]]` style link → I file it.
 
 - Ask me: *"study pack on Least Squares Adjustment"*, *"quiz me on Geoid"*, *"research papers on PPP"*, *"explain eigenvalues like a genius tutor"*.
 

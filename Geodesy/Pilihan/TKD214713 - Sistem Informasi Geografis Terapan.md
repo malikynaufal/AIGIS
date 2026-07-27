@@ -16,14 +16,7 @@ Advanced [[GIS]] applications for spatial analysis, decision support systems, an
 ## Key Topics
 
 ### 1. Multi-Criteria Evaluation (MCE)
-
-$$
-
-S_j = \sum_{i=1}^{n} w_i \cdot x_{ij}
-
-$ $
-
-where $ w_i $ = criterion weight, $ x_{ij}$ = standardized score.
+$$S_j = \sum_{i=1}^{n} w_i \cdot x_{ij}$ $where$ w_i $ = criterion weight, $x_{ij}$ = standardized score.
 
 ### 2. Network Analysis
 

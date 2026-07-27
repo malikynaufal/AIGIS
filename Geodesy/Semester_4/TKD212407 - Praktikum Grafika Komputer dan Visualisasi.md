@@ -106,17 +106,13 @@ function createTerrainFromDem(demData) {
 ### Integrasi Data Geospasial
 
 #### Menghubungkan Citra dengan Koordinat
-
-$$\begin{aligned}
+$$
+\begin{aligned}
 X_{gis} &= X_{origin} + col imes pixel\_size \\
 Y_{gis} &= Y_{origin} - row imes pixel\_size
-\end{aligned}
+\end{aligned}$ $#### Coordinate Transformation Example
 
-$ $
-
-#### Coordinate Transformation Example
-
-Konversi dari koordinat piksel ke koordinat dunia menggunakan persamaan di atas, dengan $ pixel\_size $.
+Konversi dari koordinat piksel ke koordinat dunia menggunakan persamaan di atas, dengan $pixel\_size$.
 ```python
 
 # Proses transformasi koordinat untuk visualisasi

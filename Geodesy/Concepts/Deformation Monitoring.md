@@ -40,16 +40,8 @@ updated: 2026-07-27
 ## Mathematical Models
 
 ### Linear Displacement Model
-
-$$\mathbf{r}(t) = \mathbf{r}_0 + \mathbf{v} \cdot t
-
-$ $### Seasonal + Linear Model $$\mathbf{r}(t) = \mathbf{r}_0 + \mathbf{v} \cdot t + \mathbf{A}_1 \sin(2\pi t) + \mathbf{A}_2 \cos(2\pi t)
-
-$ $### Reference Frame for Deformation $$\Delta \mathbf{r} = \mathbf{r}_{target}(t) - \mathbf{r}_{ref}(t) - \mathbf{T}_{plate}(t)
-
-$ $
-
-where $\mathbf{r}_{ref} $ are stable reference stations and $\mathbf{T}_{plate} $ is the tectonic model.
+$$
+\mathbf{r}(t) = \mathbf{r}_0 + \mathbf{v} \cdot t$ $### Seasonal + Linear Model$$\mathbf{r}(t) = \mathbf{r}_0 + \mathbf{v} \cdot t + \mathbf{A}_1 \sin(2\pi t) + \mathbf{A}_2 \cos(2\pi t)$ $### Reference Frame for Deformation$$\Delta \mathbf{r} = \mathbf{r}_{target}(t) - \mathbf{r}_{ref}(t) - \mathbf{T}_{plate}(t)$ $where$ \mathbf{r}_{ref} $are stable reference stations and$ \mathbf{T}_{plate} $ is the tectonic model.
 
 ## In [[Geodesy]] Context
 
@@ -75,17 +67,9 @@ where $\mathbf{r}_{ref} $ are stable reference stations and $\mathbf{T}_{plate} 
 
 ## Statistical Analysis
 
-### Velocity Estimation
-
-$ $\hat{v} = \frac{\sum_{i=1}^{n} (t_i - \bar{t})(r_i - \bar{r})}{\sum_{i=1}^{n} (t_i - \bar{t})^2}
-
-$$
-
-# ## Confidence Interval $ $\hat{v} \pm t_{\alpha/2, n-2} \cdot \frac{s_v}{\sqrt{n}}
-
-$$
-
-where $ s_v$ is the standard error of the velocity.
+### Velocity Estimation$ $\hat{v} = \frac{\sum_{i=1}^{n} (t_i - \bar{t})(r_i - \bar{r})}{\sum_{i=1}^{n} (t_i - \bar{t})^2}
+$$# ## Confidence Interval$ $\hat{v} \pm t_{\alpha/2, n-2} \cdot \frac{s_v}{\sqrt{n}}
+$$where$ s_v$ is the standard error of the velocity.
 
 ## Study Problems
 

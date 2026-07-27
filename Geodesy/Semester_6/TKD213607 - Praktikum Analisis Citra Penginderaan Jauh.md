@@ -38,8 +38,8 @@ Eksplorasi antarmuka dan data:
 Transformasi data mentah ke data siap analisis:
 
 - Kalibrasi digital number (DN) ke Top of Atmosphere (TOA) reflectance:
-
-$$\rho_{TOA} = \frac{i \cdot L_\lambda \cdot d^2}{ESUN_\lambda \cdot \cosheta_s} $ $- Koreksi atmosferik SNAP (Sen2Cor) untuk Sentinel-2
+$$
+\rho_{TOA} = \frac{i \cdot L_\lambda \cdot d^2}{ESUN_\lambda \cdot \cosheta_s} $ $- Koreksi atmosferik SNAP (Sen2Cor) untuk Sentinel-2
 
 - Koreksi geometrik menggunakan Ground Control Points (GCP)
 
@@ -50,34 +50,20 @@ $$\rho_{TOA} = \frac{i \cdot L_\lambda \cdot d^2}{ESUN_\lambda \cdot \cosheta_s}
 ### Modul 3: Indeks Spektral
 Menghitung dan menginterpretasikan indeks dari citra:
 
-- NDVI untuk pemetaan vegetasi
+- NDVI untuk pemetaan vegetasi$ $NDVI = \frac{Band5 - Band4}{Band5 + Band4} \quad (ext{Landsat 8}) $ $- NDWI untuk deteksi badan air
 
-$ $
-
-NDVI = \frac{Band5 - Band4}{Band5 + Band4} \quad (ext{Landsat 8}) $ $
-
-- NDWI untuk deteksi badan air
-
-- SAVI (Soil Adjusted Vegetation Index) untuk lahan terbuka
-
-$ $ SAVI = \frac{(NIR - Red)(1 + L)}{NIR + Red + L} $ $
-
-- EVI untuk koreksi atmosferik setengah
+- SAVI (Soil Adjusted Vegetation Index) untuk lahan terbuka$ $ SAVI = \frac{(NIR - Red)(1 + L)}{NIR + Red + L} $ $- EVI untuk koreksi atmosferik setengah
 
 - Color slicing dan thresholding untuk pemisahan kelas
 
-- Tugas: membuat peta NDVI Pulau Bali dengan threshold $ NDVI < 0.2 $ lahan terbuka,$ 0.2 < NDVI < 0.6 $ vegetasi jarang,$ NDVI > 0.6 $ vegetasi lebat
+- Tugas: membuat peta NDVI Pulau Bali dengan threshold $NDVI < 0.2$ lahan terbuka, $0.2 < NDVI < 0.6$ vegetasi jarang, $NDVI > 0.6$ vegetasi lebat
 
 ### Modul 4: Klasifikasi Terbimbing (Supervised)
 Teknik klasifikasi piksel berbasis training sample:
 
 - Pengambilan training sample menggunakan Region of Interest (ROI) dengan minimal 50 piksel per kelas
 
-- Klasifikasi Maximum Likelihood
-
-$ $ p(\omega_i|x) = \frac{p(x|\omega_i)P(\omega_i)}{p(x)}$ $
-
-- Support Vector Machine (SVM) dengan kernel RBF
+- Klasifikasi Maximum Likelihood$ $ p(\omega_i|x) = \frac{p(x|\omega_i)P(\omega_i)}{p(x)}$ $- Support Vector Machine (SVM) dengan kernel RBF
 
 - Random Forest dengan 100 trees
 
@@ -108,11 +94,7 @@ Validasi hasil klasifikasi:
 
 - Metrik akurasi:
  - **Overall Accuracy**: proporsi benar
- - **Kappa Coefficient**:
-
-$ $\hat{\kappa} = \frac{N\sum_{i=1}^{r}x_{ii} - \sum_{i=1}^{r}(x_{i+} \cdot x_{+i})}{N^2 - \sum_{i=1}^{r}(x_{i+} \cdot x_{+i})} $$
-
- - **User's Accuracy**: probabilitas piksel kelas A di lapangan sesuai peta
+ - **Kappa Coefficient**:$ $\hat{\kappa} = \frac{N\sum_{i=1}^{r}x_{ii} - \sum_{i=1}^{r}(x_{i+} \cdot x_{+i})}{N^2 - \sum_{i=1}^{r}(x_{i+} \cdot x_{+i})} $$- **User's Accuracy**: probabilitas piksel kelas A di lapangan sesuai peta
  - **Producer's Accuracy**: probabilitas piksel terklasifikasi benar
 
 - ROC curve dan area under curve (AUC) untuk model klasifikasi

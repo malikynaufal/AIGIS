@@ -22,10 +22,8 @@ Cadastral system design and management for land rights registration and land inf
 - **Multi-purpose Cadastre:** Land + tax + planning
 
 ### 2. Land Registration Process
-
-$$ \text{Application} \rightarrow \text{Document Check} \rightarrow \text{Survey} \rightarrow \text{Boundary Agreement} \rightarrow \text{Approval} \rightarrow \text{Registration} $$
-
-# ## 3. Indonesia's Complete Cadastre
+$$
+\text{Application} \rightarrow \text{Document Check} \rightarrow \text{Survey} \rightarrow \text{Boundary Agreement} \rightarrow \text{Approval} \rightarrow \text{Registration} $$# ## 3. Indonesia's Complete Cadastre
 
 - 126M parcels total
 - ~50M registered (2025)

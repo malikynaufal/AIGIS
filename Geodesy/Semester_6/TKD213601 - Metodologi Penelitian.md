@@ -41,9 +41,9 @@ Teknik merumuskan masalah penelitian yang terstruktur:
 
 - Pembuatan pertanyaan penelitian yang F.O.C.U.S (Focused, Original, Clear, Understandable, Significant)
 
-- Hipotesis nol ( $H_0 $) dan hipotesis alternatif ( $ H_1 $)
+- Hipotesis nol ( $H_0$) dan hipotesis alternatif ( $H_1$)
 
-- Konsep signifikansi statistik: tingkat $\alpha = 0.05 $ dan nilai-$  p $- Kerangka konseptual dan diagram alir penelitian
+- Konsep signifikansi statistik: tingkat $\alpha = 0.05$ dan nilai-$p$- Kerangka konseptual dan diagram alir penelitian
 
 - Batasan ruang dan waktu penelitian geospatial
 
@@ -84,15 +84,11 @@ Teknik kuantitatif dan kualitatif untuk analisis data:
 
 - Uji normalitas: Shapiro-Wilk, Kolmogorov-Smirnov
 
-- Uji hipotesis: $ t $-test, ANOVA, Friedman test
+- Uji hipotesis: $t$-test, ANOVA, Friedman test
 
-- Regresi linear dan regresi spasial: $ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \varepsilon $- Analisis autokorelasi spasial: Indeks Moran's $  I $, Geary's $  C $- Geostatistik: kriging, semivariogram, dan interpolasi spasial
+- Regresi linear dan regresi spasial: $ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \varepsilon $- Analisis autokorelasi spasial: Indeks Moran's $I$, Geary's$ C$- Geostatistik: kriging, semivariogram, dan interpolasi spasial
 
-- Validasi model: RMSE, MAE,$ R^2 $
-
-$ $ RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i - y_i)^2}I = \frac{n}{S_0}\frac{\sum_i\sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2}$$
-
-# ## Modul 6: Penulisan Ilmiah
+- Validasi model: RMSE, MAE, $R^2$$ $ RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i - y_i)^2}I = \frac{n}{S_0}\frac{\sum_i\sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2}$$# ## Modul 6: Penulisan Ilmiah
 Komposisi karya tulis ilmiah yang terstandar:
 
 - Struktur IMRaD (Introduction, Methods, Results, and Discussion)

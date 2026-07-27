@@ -12,15 +12,13 @@ Mata kuliah ini mempelajari sistem koordinat geodetik, ellipsoid referensi, datu
 
 ### 1. Sistem Koordinat
 
-**Geodetik** $(\varphi, \lambda, h) $:
-
-$ $  X = (N+h)\cos\varphi\cos\lambdaY = (N+h)\cos\varphi\sin\lambdaZ = (N(1-e^2)+h)\sin\varphi $ $**Geosentrik Kartesian (ECEF)**$ (X,Y,Z) $:
+**Geodetik** $(\varphi, \lambda, h)$:$ $X = (N+h)\cos\varphi\cos\lambdaY = (N+h)\cos\varphi\sin\lambdaZ = (N(1-e^2)+h)\sin\varphi $ $**Geosentrik Kartesian (ECEF)**$(X,Y,Z)$:
 
 - Dihitung dari ellipsoid referensi
 
 - Tersedia dari pengukuran GNSS
 
-**Lokal ENU** $ (E, N, U) $:
+**Lokal ENU** $(E, N, U)$:
 
 - Rotasi dari ECEF ke local tangent plane
 
@@ -46,9 +44,7 @@ $ $  X = (N+h)\cos\varphi\cos\lambdaY = (N+h)\cos\varphi\sin\lambdaZ = (N(1-e^2)
 
 ### 4. Transformasi Koordinat
 
-- **Transformasi Helmert 7-parameter**: $ X_T = s\cdot R\cdot X_S + T$
-
-- **Grid-based shifts**: NTv2, NADCON
+- **Transformasi Helmert 7-parameter**: $X_T = s\cdot R\cdot X_S + T$- **Grid-based shifts**: NTv2, NADCON
 
 - **Transformasi epoch**: konversi antar epoch ITRF
 

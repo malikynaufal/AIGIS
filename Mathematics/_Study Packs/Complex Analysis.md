@@ -106,7 +106,7 @@ $ $ e^z = e^{x+iy} = e^x(\cos y + i\sin y)$$
 Properties:
 -$ e^{z_1+z_2} = e^{z_1}e^{z_2} $-$|e^z| = e^x $-$\overline{e^z} = e^{\overline{z}} $- Periodic: $ e^{z+2\pi i} = e^z $### 4.2 Trigonometric Functions
 
-$ $\sin z = \frac{e^{iz} - e^{-iz}}{2i}, \\quad \cos z = \frac{e^{iz} + e^{-iz}}{2}\sinh z = \frac{e^{z} - e^{-z}}{2}, \\quad \cosh z = \frac{e^{z} + e^{-z}}{2
+$ $\sin z = \frac{e^{iz} - e^{-iz}}{2i}, \\quad \cos z = \frac{e^{iz} + e^{-iz}}{2}\sin \h z = \frac{e^{z} - e^{-z}}{2}, \\quad \cos \h z = \frac{e^{z} + e^{-z}}{2
 }
 
 $$

@@ -38,17 +38,17 @@ Eksplorasi dan pengelolaan data vektor serta raster:
 ### Modul 2: Analisis Overlay
 Operasi spasial gabungan beberapa layer:
 
-- **Intersect** ( $A \cap B $): potongan spasial dua layer
+- **Intersect** ( $A \cap B$): potongan spasial dua layer
 
-- **Union** ( $ A \cup B $): penggabungan spasial
+- **Union** ( $A \cup B$): penggabungan spasial
 
-- **Symmetrical Difference** ( $ A \Delta B $): selisih spasial
+- **Symmetrical Difference** ( $A \Delta B$): selisih spasial
 
 - **Clip** (potong layer dengan polygon batas area)
 
 - **Erase**: menghapus bagian overlay dari layer utama
 
-- Buffer zone: penghalusan jarak dari garis/point ( $ d $ meter dari simpul)
+- Buffer zone: penghalusan jarak dari garis/point ( $d$ meter dari simpul)
 
 - Proximity analysis: jarak terdekat ke titik layanan
 
@@ -57,13 +57,9 @@ Operasi spasial gabungan beberapa layer:
 ### Modul 3: Analisis Jaringan (Network Analysis)
 Optimasi rute dan aksesibilitas menggunakan topologi jaringan:
 
-- **Shortest Path Analysis**: algoritma Dijkstra pada jaringan jalan
+- **Shortest Path Analysis**: algoritma Dijkstra pada jaringan jalan$ $ d(v) = \min_{(u,v) \in E}[d(u) + w(u,v)] $ $- **Service Area**: waktu tempuh (isochrone) dari titik layanan
 
-$ $ d(v) = \min_{(u,v) \in E}[d(u) + w(u,v)] $ $
-
-- **Service Area**: waktu tempuh (isochrone) dari titik layanan
-
-- **Traveling Salesman Problem (TSP)**: optimasi rute pengiriman ke $ n $ titik
+- **Traveling Salesman Problem (TSP)**: optimasi rute pengiriman ke $n$ titik
 
 - **Facility Location**: optimal placement lokasi layanan baru
 
@@ -93,17 +89,9 @@ Otomasi analisis spasial dengan model alur kerja:
 ### Modul 5: Interpolasi Spasial
 Membangun surface kontinu dari data titik diskrit:
 
-- **Inverse Distance Weighting (IDW)**
-
-$ $\hat{Z}(x_0) = \frac{\sum_{i=1}^{n}\frac{Z(x_i)}{d(x_0, x_i)^p}}{\sum_{i=1}^{n}\frac{1}{d(x_0, x_i)^p}
-}
-
-$ $- **Ordinary Kriging**: model semivariogram dan prediksi terbaik tidak bias:
-
-$ $\gamma(h) = \frac{1}{2N(h)}\sum_{i=1}^{N(h)}[Z(x_i) - Z(x_i+h)]^2
-
+- **Inverse Distance Weighting (IDW)**$ $\hat{Z}(x_0) = \frac{\sum_{i=1}^{n}\frac{Z(x_i)}{d(x_0, x_i)^p}}{\sum_{i=1}^{n}\frac{1}{d(x_0, x_i)^p}
+}$ $- **Ordinary Kriging**: model semivariogram dan prediksi terbaik tidak bias:$ $\gamma(h) = \frac{1}{2N(h)}\sum_{i=1}^{N(h)}[Z(x_i) - Z(x_i+h)]^2
 $$
-
 - **Spline** dan **Natural Neighbour** untuk permukaan halus
 
 - Analisis residual dan validasi silang (leave-one-out)

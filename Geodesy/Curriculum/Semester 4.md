@@ -28,10 +28,8 @@ Semester 4 covers specialized advanced techniques: digital photogrammetry, compu
 ### TKD212408 — Survei Rekayasa (Engineering Survey)
 - Construction surveying techniques
 - Layout of horizontal and vertical curves:
-
- $$ x = R\sin\theta, \quad y = R(1-\cos\theta) \quad \text{(horizontal curve)} $ $ $ $  y = \frac{x^2}{2R} \quad \text{(vertical curve: parabola)}$$
-
-- Tunnel and bridge surveying
+$$
+x = R\sin\theta, \quad y = R(1-\cos\theta) \quad \text{(horizontal curve)} $ $ $ $y = \frac{x^2}{2R} \quad \text{(vertical curve: parabola)}$$- Tunnel and bridge surveying
 - Machine control and grade surveying
 - [[Survei Rekayasa]] — see course file
 

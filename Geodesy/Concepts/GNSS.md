@@ -37,28 +37,15 @@ updated: 2026-07-27
 ## GNSS Positioning Principles
 
 ### Basic Pseudorange
-
-$$\rho = c \cdot (t_{rx} - t_{tx}) = ||\mathbf{r}_{sat}(t) - \mathbf{r}_{rx}|| + c\Delta t
-
-$ $**Resolving for 4 unknowns**$ (x, y, z, \delta t) $ requires ≥ 4 satellites
-
-$ $\begin{bmatrix} \rho_1 \\ \rho_2 \\ \rho_3 \\ \rho_4 \end{bmatrix} \xrightarrow{\text{least squares}} \begin{bmatrix} x_{rx} \\ y_{rx} \\ z_{rx} \\ \delta t_{rx} \end{bmatrix} $$
-
-# ## Observation Equations
+$$
+\rho = c \cdot (t_{rx} - t_{tx}) = ||\mathbf{r}_{sat}(t) - \mathbf{r}_{rx}|| + c\Delta t$ $**Resolving for 4 unknowns**$(x, y, z, \delta t)$ requires ≥ 4 satellites
+$$
+\begin{bmatrix} \rho_1 \\ \rho_2 \\ \rho_3 \\ \rho_4 \end{bmatrix} \xrightarrow{\text{least squares}} \begin{bmatrix} x_{rx} \\ y_{rx} \\ z_{rx} \\ \delta t_{rx} \end{bmatrix} $$# ## Observation Equations
 
 **Code (pseudorange):*
-*
-
-$ $ P_i = \rho + c(dt_r - dt_s) + d_{iono} + d_{trop} + \varepsilon_P $$
-
-**Carrier phase:*
-*
-
-$ $\Phi_i = \frac{\rho}{\lambda} + N_i + \frac{c}{\lambda}(dt_r - dt_s) - \frac{d_{iono}}{\lambda} + \frac{d_{trop}}{\lambda} + \varepsilon_\Phi
-
-$$
-
-where $\rho = ||\mathbf{r}_r - \mathbf{r}_s|| $= geometric range,$  N $ = integer ambiguity.
+*$ $ P_i = \rho + c(dt_r - dt_s) + d_{iono} + d_{trop} + \varepsilon_P $$**Carrier phase:*
+*$ $\Phi_i = \frac{\rho}{\lambda} + N_i + \frac{c}{\lambda}(dt_r - dt_s) - \frac{d_{iono}}{\lambda} + \frac{d_{trop}}{\lambda} + \varepsilon_\Phi
+$$where$ \rho = ||\mathbf{r}_r - \mathbf{r}_s|| $= geometric range, $N$ = integer ambiguity.
 
 ### Error Sources
 
@@ -93,20 +80,12 @@ where $\rho = ||\mathbf{r}_r - \mathbf{r}_s|| $= geometric range,$  N $ = intege
 
 ### DGNSS (Differential GNSS)
 
-Base station transmits corrections to rover
-
-$ $\rho_{corr} = \rho_{rover} + \Delta\rho_{base} $$
-
-**Accuracy:** 0.5–3 m (sub-meter with carrier smoothing)
+Base station transmits corrections to rover$ $\rho_{corr} = \rho_{rover} + \Delta\rho_{base} $$**Accuracy:** 0.5–3 m (sub-meter with carrier smoothing)
 
 ### RTK (Real-Time Kinematic)
 
-Float solution: estimate $ N \in \mathbb{R} $ Fixed solution: resolve $  N \in \mathbb{Z} $ (LAMBDA method
-)
-
-$ $\hat{N}_{float} \xrightarrow{\text{LAMBDA}} \hat{N}_{fixed} $$
-
-**Accuracy:** 1–2 cm + 2 ppm (horizontal)
+Float solution: estimate $N \in \mathbb{R}$ Fixed solution: resolve $N \in \mathbb{Z}$(LAMBDA method
+)$ $\hat{N}_{float} \xrightarrow{\text{LAMBDA}} \hat{N}_{fixed} $$**Accuracy:** 1–2 cm + 2 ppm (horizontal)
 
 ### Network RTK (CORS)
 
@@ -127,7 +106,7 @@ Multiple reference stations model spatially-correlated errors:
 | Combination | Formula | Purpose |
 |-------------|---------|---------|
 | **Ionosphere-free (L3)** | $\frac{f_1^2 P_1 - f_2^2 P_2}{f_1^2 - f_2^2} $ | Eliminates ~99.9% ionosphere |
-| **Geometry-free (L4)** | $ P_1 - P_2 $ | Ionosphere measurement |
+| **Geometry-free (L4)** | $P_1 - P_2$ | Ionosphere measurement |
 | **Wide-lane (WL)** | $\frac{f_1 \Phi_1 - f_2 \Phi_2}{f_1 - f_2} $ | Widens ambiguity resolution |
 | **Narrow-lane (NL)** | $\frac{f_1 \Phi_1 + f_2 \Phi_2}{f_1 + f_2} $ | Reduces noise |
 
@@ -135,7 +114,7 @@ Multiple reference stations model spatially-correlated errors:
 
 | Difference | Form | Value |
 |------------|------|-------|
-| Single-diff (receivers) | $\Delta\Phi_{ij} = \Phi_i - \Phi_j $ | Removes satellite clock |
+| Single-diff (receivers) | $\Delta\Phi_{ij} = \Phi_i - \Phi_j$ | Removes satellite clock |
 | Double-diff (receivers & sats) | $\nabla\Delta\Phi_{ij}^{pq} = \Phi_i^p - \Phi_j^p - \Phi_i^q + \Phi_j^q $ | Removes receiver clocks |
 | Triple-diff (epochs) | $\delta\nabla\Delta\Phi_{ij}^{pq} = \nabla\Delta\Phi(t_2) - \nabla\Delta\Phi(t_1) $ | Removes ambiguities (detects cycle slips) |
 
@@ -173,12 +152,12 @@ Multiple reference stations model spatially-correlated errors:
 
 | Equation | Name | Use |
 |----------|------|-----|
-| $\rho = ||\mathbf{r}_r - \mathbf{r}_s|| + c\Delta t $ | Pseudorange | Basic ranging |
-| $ P = \rho + cdt + d_{iono} + d_{trop} + \varepsilon $ | Code equation | Observation model |
-| $\Phi = \rho/\lambda + N + \dots $ | Phase equation | Precision positioning |
-| $ P_{IF} = (f_1^2 P_1 - f_2^2 P_2)/(f_1^2 - f_2^2) $ | Ionosphere-free | PPP processing |
-| $\nabla\Delta\Phi_{12}^{34} $ | Double difference | RTK processing |
-| $\rho = c \cdot \Delta t $ | Time-of-flight | Range from timing |
+| $\rho = ||\mathbf{r}_r - \mathbf{r}_s|| + c\Delta t $| Pseudorange | Basic ranging |
+|$ P = \rho + cdt + d_{iono} + d_{trop} + \varepsilon $| Code equation | Observation model |
+|$\Phi = \rho/\lambda + N + \dots $ | Phase equation | Precision positioning |
+| $ P_{IF} = (f_1^2 P_1 - f_2^2 P_2)/(f_1^2 - f_2^2) $| Ionosphere-free | PPP processing |
+|$\nabla\Delta\Phi_{12}^{34} $ | Double difference | RTK processing |
+| $\rho = c \cdot \Delta t$ | Time-of-flight | Range from timing |
 
 ---
 
@@ -205,7 +184,7 @@ Multiple reference stations model spatially-correlated errors:
 ## Study Problems
 
 1. **Recall:** Why must ≥ 4 satellites be visible for 3D positioning? (Hint: count unknowns.)
-2. **Application:** A GPS-SPP receiver gets $\rho_1 = 20589423.5 $ m,$\rho_2 = 21045987.2 $ m,$\rho_3 = 20765432.1 $ m,$\rho_4 = 21234567.8 $ m. The satellite positions (ECEF) are given. Form the design matrix and compute the receiver position (simplified: skip clock term for this problem).
+2. **Application:** A GPS-SPP receiver gets $\rho_1 = 20589423.5$ m, $\rho_2 = 21045987.2$ m, $\rho_3 = 20765432.1$ m, $\rho_4 = 21234567.8$ m. The satellite positions (ECEF) are given. Form the design matrix and compute the receiver position (simplified: skip clock term for this problem).
 3. **Derivation:** Show that in double-differencing, the receiver clock term cancels.
 4. **Real-world:** In CORS network, a rover is 50 km from the nearest reference station. Estimate the residual ionospheric and tropospheric errors after differential correction.
 
@@ -213,7 +192,7 @@ Multiple reference stations model spatially-correlated errors:
 
 ## Common Mistakes
 
-1. **Forgetting the integer nature of ambiguities:**$ N$ is integer — rounding the float solution is NOT the same as LAMBDA.
+1. **Forgetting the integer nature of ambiguities:**$N$ is integer — rounding the float solution is NOT the same as LAMBDA.
 2. **Ignoring satellite geometry:** PDOP of 20 is very different from PDOP of 2.
 3. **Confusing code and phase:** Code = meters, phase = cycles (needs conversion).
 4. **Not accounting for antenna phase center variations:** They change with elevation and azimuth.

@@ -49,9 +49,7 @@ Semester 1 establishes the mathematical and scientific foundation required for a
 
 ## Key Formulas (Preview)
 
-- Distance: $D = S \cos\theta $- Height difference: $\Delta h = D \tan\alpha + i - v $- Coordinate conversion: $ (x, y, z) = (N\cos\varphi\cos\lambda, N\cos\varphi\sin\lambda, (1-e^2)N\sin\varphi)$
-
-## Required Background
+- Distance: $D = S \cos\theta$- Height difference: $\Delta h = D \tan\alpha + i - v$- Coordinate conversion: $ (x, y, z) = (N\cos\varphi\cos\lambda, N\cos\varphi\sin\lambda, (1-e^2)N\sin\varphi)$## Required Background
 - [x] SMA Mathematics (trigonometry, algebra)
 - [x] Basic physics (vectors, coordinate systems)
 
