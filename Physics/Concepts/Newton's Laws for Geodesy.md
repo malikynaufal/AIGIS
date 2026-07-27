@@ -156,10 +156,11 @@ $$ m\frac{d^2\vec{r}}{dt^2} = -\frac{GMm}{r^3}\vec{r} + \vec{F}_{\text{perturb}}
 ### Earth's Gravity Field
 From Newton's laws + potential theory:
 
-$$
+$$ U(\vec{r}) = \frac{GM}{r} \quad \text{(spherical)} $$
 
-U(\vec{r}) = \frac{GM}{r} \quad \text{(spherical)}V(\vec{r}) = \frac{GM}{r} \left[ 1 - \sum_{n=2}^{\infty} \sum_{m=0}^{n} \left(\frac{R}{r}\right)^n P_{nm}(\sin\phi) (C_{nm}\cos m\lambda + S_{nm}\sin m\lambda) \right
-]
+$$ V(\vec{r}) = \frac{GM}{r} \left[ 1 - \sum_{n=2}^{\infty} \sum_{m=0}^{n} \left(\frac{R}{r}
+ight)^n P_{nm}(\sin\phi) (C_{nm}\cos m\lambda + S_{nm}\sin m\lambda) 
+ight] $$
 
 **### Inertial Navigation **
 

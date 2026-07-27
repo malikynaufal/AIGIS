@@ -75,3 +75,16 @@
 - Subscribe to IAG newsletters for updates
 
 > *All sources are legal, free, and open-access (CC, public domain, or government-hosted).*
+
+## Latest arXiv Preprints (2026-07-24)
+
+| Paper | Authors | Date | Link |
+|-------|---------|------|------|
+| Diffusion-guided optimization for full waveform inversion | Shen, Chen, Engquist | 2026-07-24 | https://arxiv.org/abs/2607.21987 |
+| Anomalous-diffusion synthesis of non-Gaussian reservoir anomalies | Nogueira et al. | 2026-07-23 | https://arxiv.org/abs/2607.21854 |
+| Latent Variable-Mediated Cross-Learning for Few-Shot Acoustic Impedance | Peng et al. | 2026-07-23 | https://arxiv.org/abs/2607.20989 |
+| Juxtaposition of Shallow Reservoir-Triggered Seismicity | Zhou et al. | 2026-07-21 | https://arxiv.org/abs/2607.19606 |
+| AGENTS4GEOS: agentic platform for open-source multi-physics simulation | Côrtes et al. | 2026-07-20 | https://arxiv.org/abs/2607.18557 |
+| Richards' equation as a hydrodynamic limit | Rigon | 2026-07-19 | https://arxiv.org/abs/2607.17358 |
+| Estimation of Elastic Parameters with Guidance-based Diffusion model | — | 2026-07-14 | https://arxiv.org/abs/2607.13207 |
+| A Unified Conceptual Framework for Gravitational Instabilities | — | 2026-07-16 | https://arxiv.org/abs/2607.14831 |

@@ -22,7 +22,6 @@ created: 2026-07-27
 
 ## 🧮 Key Equations
 
-```latex
 \begin{equation}
 S = k_B \\ln \\Omega
 \\end{equation}
@@ -37,7 +36,6 @@ Z = \\sum_i e^{-\\beta E_i}
 f(E) = \\frac{g(E)}{Z} e^{-\\beta E}
 \\end{equation}
 \\text{(Boltzmann distribution)}
-```
 
 ### Distribution Functions
 
