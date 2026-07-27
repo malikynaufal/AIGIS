@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIGIS - Accurately Imparting Geodetic Information Sensei</title>
+    <meta name="description" content="A comprehensive knowledge base for Geodesy, Mathematics, and Physics - managed by Hermes Agent">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --border: #2a2a3a;
+            --text-primary: #f0f0f5;
+            --text-secondary: #8888a0;
+            --accent-cyan: #00d4ff;
+            --accent-purple: #a855f7;
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-rose: #f43f5e;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            letter-spacing: -2px;
+        }
+
+        .tagline {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            margin-top: 20px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-emerald);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        /* Navigation Cards */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .nav-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .nav-card:hover::before {
+            opacity: 1;
+        }
+
+        .nav-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .nav-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .nav-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .nav-card-stats {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        .stat {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .stat strong {
+            color: var(--accent-cyan);
+        }
+
+        /* Topology Section */
+        .topology-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+
+        .topology-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .topology-container {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .topology-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Subject Colors */
+        .geodesy { --subject: var(--accent-cyan); }
+        .math { --subject: var(--accent-purple); }
+        .physics { --subject: var(--accent-emerald); }
+
+        .nav-card.geodesy:hover { border-color: var(--accent-cyan); box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15); }
+        .nav-card.math:hover { border-color: var(--accent-purple); box-shadow: 0 20px 40px rgba(168, 85, 247, 0.15); }
+        .nav-card.physics:hover { border-color: var(--accent-emerald); box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .nav-grid { grid-template-columns: 1fr; }
+            .topology-container iframe { height: 350px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AIGIS</h1>
+            <p class="tagline">Accurately Imparting Geodetic Information Sensei</p>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>System Online • 408 Notes Synced</span>
+            </div>
+        </header>
+
+        <!-- Navigation Cards -->
+        <div class="nav-grid">
+            <a href="Geodesy/Geodesy%20MOC.md" class="nav-card geodesy">
+                <div class="nav-card-icon">🌍</div>
+                <h2>Geodesy</h2>
+                <p>Study of Earth's shape, gravity field, and point positioning. Includes mapping, GNSS, and geodetic reference frames.</p>
+                <div class="nav-card-stats">
+                    <span class="stat"><strong>120+</strong> notes</span>
+                    <span class="stat"><strong>8</strong> semesters</span>
+                </div>
+            </a>
+
+            <a href="Mathematics/Mathematics%20MOC.md" class="nav-card math">
+                <div class="nav-card-icon">🔢</div>
+                <h2>Mathematics</h2>
+                <p>Calculus, linear algebra, statistics, numerical methods, and optimization for engineering applications.</p>
+                <div class="nav-card-stats">
+                    <span class="stat"><strong>150+</strong> notes</span>
+                    <span class="stat"><strong>8</strong> semesters</span>
+                </div>
+            </a>
+
+            <a href="Physics/Physics%20MOC.md" class="nav-card physics">
+                <div class="nav-card-icon">⚛️</div>
+                <h2>Physics</h2>
+                <p>Classical mechanics, electromagnetism, thermodynamics, quantum physics, and relativistic geodesy.</p>
+                <div class="nav-card-stats">
+                    <span class="stat"><strong>100+</strong> notes</span>
+                    <span class="stat"><strong>8</span> semesters</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- System Topology -->
+        <div class="topology-section">
+            <h2>🗺️ System Topology</h2>
+            <div class="topology-container">
+                <iframe src="AIGIS_Topology.html" title="AIGIS System Architecture"></iframe>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="nav-grid">
+            <a href="README.md" class="nav-card">
+                <div class="nav-card-icon">📚</div>
+                <h2>Documentation</h2>
+                <p>Repository readme, sync status, and contribution guidelines.</p>
+            </a>
+
+            <a href="Knowledge-Machine.md" class="nav-card">
+                <div class="nav-card-icon">🤖</div>
+                <h2>Knowledge Machine</h2>
+                <p>AI-powered study assistant powered by Hermes Agent and NotebookLM integration.</p>
+            </a>
+        </div>
+
+        <footer>
+            <p>🔄 Last synced: <span id="last-sync">Loading...</span></p>
+            <p>Built with ❤️ by <a href="https://github.com/malikynaufal/AIGIS">Naufal Arham Maliky</a> • Managed by <a href="https://github.com/nickmackenzie/hermes">Hermes Agent</a></p>
+            <p style="margin-top: 10px; opacity: 0.6;">© 2026 AIGIS Knowledge Base • Licensed under MIT</p>
+        </footer>
+    </div>
+
+    <script>
+        // Auto-update sync time
+        fetch('sync.log')
+            .then(r => r.text())
+            .then(text => {
+                const lines = text.trim().split('\n');
+                const last = lines[lines.length - 1];
+                document.getElementById('last-sync').textContent = last || 'Unknown';
+            })
+            .catch(() => {
+                document.getElementById('last-sync').textContent = new Date().toLocaleString();
+            });
+    </script>
+</body>
+</html>
