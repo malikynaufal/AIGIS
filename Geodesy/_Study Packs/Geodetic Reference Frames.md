@@ -21,11 +21,11 @@ A **geodetic reference frame** is a set of precisely determined coordinates of c
 ## 🌐 International Terrestrial Reference System (ITRS) & Frame (ITRF)
 
 ### Conceptual Hierarchy
-| Level | Name | Definition |
-|-------|------|-----------|
-| **Terrestrial Reference System (TRS)** | ITRS | Theoretical system: origin at Earth's center of mass (CM), axes fixed to Earth, no rotation relative to distant objects |
-| **Terrestrial Reference Frame (TRF)** | **ITRF** | **Realization** of ITRS: precise coordinates + velocities of sites (GNSS stations, SLR stations, VLBI antennas, DORIS beacons) |
-| **Frame Realizations** | ITRF2020, ITRF2014, ITRF2008, ... | Specific epoch + set of coordinates/velocities |
+| Level                                  | Name                              | Definition                                                                                                                     |
+| -------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| **Terrestrial Reference System (TRS)** | ITRS                              | Theoretical system: origin at Earth's center of mass (CM), axes fixed to Earth, no rotation relative to distant objects        |
+| **Terrestrial Reference Frame (TRF)**  | **ITRF**                          | **Realization** of ITRS: precise coordinates + velocities of sites (GNSS stations, SLR stations, VLBI antennas, DORIS beacons) |
+| **Frame Realizations**                 | ITRF2020, ITRF2014, ITRF2008, ... | Specific epoch + set of coordinates/velocities                                                                                 |
 
 ### Properties of ITRS
 | Property | Definition |

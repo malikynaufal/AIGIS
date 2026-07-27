@@ -15,7 +15,7 @@ _A comprehensive guide to celestial coordinate systems, star observations, and h
 ## 1. Introduction
 
 **Geodetic astronomy** uses observations of celestial bodies (stars, Sun, planets) to determine:
-1. **Astronomical latitude** $\varphi^*$ and **astronomical longitude**$\lambda^*$ at a point on Earth.
+1. **Astronomical latitude** $\varphi^*$ and **astronomical longitude** $\lambda^*$ at a point on Earth.
 2. **Azimuth** and **time**.
 3. The **deflection of the vertical** (the angle between the true plumb line and the ellipsoid normal).
 
@@ -25,14 +25,14 @@ Historically the only way to establish coordinates of points, geodetic astronomy
 
 ---
 
-## 2. Coordinate Systems
+**2. Coordinate Systems**
 
 ### 2.1. Terrestrial (Earth‑fixed) Coordinates
 
 | System | Origin | Axes | Use |
 |--------|--------|------|-----|
-| **Geodetic**$\(\varphi, \lambda, h) $\$ | Centre of ellipsoid | Latitude, longitude, height above [[Reference Ellipsoid]] | Standard for GNSS/GIS |
-| **Astronomical**$\(\varphi^*, \lambda^*) $\$ | Local plumb line | Measured by star observations | Provides local gravity direction |
+| **Geodetic** $(\varphi, \lambda, h)$ | Centre of ellipsoid | Latitude, longitude, height above [[Reference Ellipsoid]] | Standard for GNSS/GIS |
+| **Astronomical** $(\varphi^*, \lambda^*)$ | Local plumb line | Measured by star observations | Provides local gravity direction |
 | **Local ENU** | Station point | East, North, Up | Surveying (see [[Local ENU NEU]]) |
 
 ### 2.2. Celestial Coordinates
@@ -42,23 +42,23 @@ The celestial sphere is an imaginary sphere of infinite radius centred on the ob
 | System | Equator | Origin | Use |
 |--------|---------|--------|-----|
 | **Topocentric** (horizontal) | Local horizon | Observer zenith | Star observations from field |
-| **Equatorial** | Celestial equator | Vernal equinox (γ) | Star catalogues |
+| **Equatorial** | Celestial equator | Vernal equinox ($\\gamma$) | Star catalogues |
 | **Ecliptic** | Ecliptic plane | Vernal equinox | Solar system |
 | **Galactic** | Galactic plane | Galactic centre | Galactic astronomy |
 
 ### 2.3. Converting between Systems
 
-**Topocentric to Equatorial:**$$
-
-\begin{aligned}
-\sin\delta &= \sin\varphi \sin h + \cos\varphi \cos h \cos A \\
-\cos\delta \cos\alpha &= \cos\varphi \cos h \sin A - \sin\varphi\cos\delta\sin\alpha \\
-\cos\delta\sin\alpha &= \cos h \cos A
-\end{aligned}
+**Topocentric to Equatorial:**
 
 $$
+\begin{aligned}
+\sin \delta &= \sin \varphi \sin h + \cos \varphi \cos h \cos A \\
+\cos \delta \cos \alpha &= \cos \varphi \cos h \sin A - \sin \varphi \cos \delta \sin \alpha \\
+\cos \delta \sin \alpha &= \cos h \cos A
+\end{aligned}
+$$
 
-where $ A$= azimuth, $ h $= altitude, $\alpha $= right ascension, $\delta $= declination, $\varphi $= latitude.
+where $A$ = azimuth, $h$ = altitude, $\alpha$ = right ascension, $\delta$ = declination, and $\varphi$ = latitude.
 
 ---
 
@@ -97,37 +97,45 @@ $$
 
 $$
 
-where LST = Local Sidereal Time, and $ \delta $, $\alpha $ are from the star catalogue.
+where LST = Local Sidereal Time, and $\delta$, $\alpha$ are from the star catalogue.
 
 ### 4.2. Circumpolar Stars (Dome Star)
 
 For high latitudes, use stars that never set. The **Dome (Kozai) star method**:
 1. Observe the same star at two positions on the great circle through the pole.
-2. Measure altitudes $h_1 $, $ h_2$ and the azimuth difference.
-3. Compute latitude $ $\varphi^* = \delta \pm \arccos\left(\frac{\cos h_1 + \cos h_2}{2\cos(p/2)\cos\delta}\right) $\$ $where $ p$ is the hour angle difference.
+2. Measure altitudes $h_1$, $h_2$ and the azimuth difference.
+3. Compute latitude:
 
-### 4.3. Polaris (North Star
-) $\$ $\varphi^* = h + \epsilon \cos H$ $where $ h$= measured altitude of Polaris, $\epsilon \approx 0.6696°$\(Polaris' angular distance from the pole), and $ H$= hour angle (from ephemeris).
+$$\varphi^* = \delta \pm \arccos\left(\frac{\cos h_1 + \cos h_2}{2\cos(p/2)\cos\delta}\right)$$
 
-### 4.4. Time Determination (Longitude
-) $\$ $\lambda^* = \alpha_{\text{star}} - \text{LST} + 12h
+where $p$ is the hour angle difference.
 
-$$
+### 4.3. Polaris (North Star)
+
+$$\varphi^* = h + \epsilon \cos H$$
+
+where $h$ = measured altitude of Polaris, $\epsilon \approx 0.6696°$ (Polaris' angular distance from the pole), and $H$ = hour angle (from ephemeris).
+
+### 4.4. Time Determination (Longitude)
+
+$$\lambda^* = \alpha_{\text{star}} - \text{LST} + 12h$$
 
 Requires accurate time (GPS provides time to ns accuracy).
 
 ---
 
 ## 5. Deflection of the Vertical (DOV)
+The **deflection of the vertical** (plumb‑line anomaly) $\xi, \eta$:
 
-The **deflection of the vertical** (plumb‑line anomaly) $\$\xi, \eta $: $ $\xi = \varphi^* - \varphi\eta = (\lambda^* - \lambda)\cos\varphi
+$$\xi = \varphi^* - \varphi$$
+$$\eta = (\lambda^* - \lambda)\cos\varphi$$
 
-$$where $ \varphi, \lambda $ are the geodetic coordinates from GNSS/leveling.
+where $\varphi, \lambda$ are the geodetic coordinates from GNSS/leveling.
 
 | Component | Direction | Typical magnitude |
 |-----------|-----------|-------------------|
-| $\xi$\(meridional) | North–South | 0.1–5″ (arc‑seconds) |
-| $\eta$\(prime vertical) | East–West | 0.1–5″ (arc‑seconds) |
+| $\xi$ (meridional) | North–South | 0.1–5″ (arc‑seconds) |
+| $\eta$ (prime vertical) | East–West | 0.1–5″ (arc‑seconds) |
 
 **Why DOV matters:**
 
@@ -136,18 +144,23 @@ $$where $ \varphi, \lambda $ are the geodetic coordinates from GNSS/leveling.
 - In mountainous areas, DOV can be **5–30″** (e.g., Himalayas, Andes).
 
 - DOV is the link between the geoid and the [[Reference Ellipsoid]]:
- -$\xi \approx -\frac{1}{M\gamma}\frac{\partial N}{\partial\varphi} $-$\eta \approx -\frac{1}{N\gamma\cos\varphi}\frac{\partial N}{\partial\lambda} $---
+
+$$\xi \approx -\frac{1}{M\gamma}\frac{\partial N}{\partial\varphi}$$
+$$\eta \approx -\frac{1}{N\gamma\cos\varphi}\frac{\partial N}{\partial\lambda}$$
 
 ## 6. Worked Example — Determining Latitude from Polaris
 
-**Observed:** Polaris at transit (hour angle $H = 0 $), altitude $ h = 45° 32' 15.4″$.
+**Observed:** Polaris at transit (hour angle $H = 0$), altitude $h = 45° 32' 15.4''$.
 
-**Given:**$\epsilon = 0° 40' 16.6″$\(Polaris angular distance from pole), $ H = 0 $.$ $\varphi^* = h + \epsilon \cos H = 45° 32' 15.4″ + 0° 40' 16.6″ = 46° 12' 32.0
-″
+**Given:** $\epsilon = 0° 40' 16.6''$ (Polaris angular distance from the pole), $H = 0$.
 
-$$
+$$\varphi^* = h + \epsilon \cos H = 45° 32' 15.4'' + 0° 40' 16.6'' = 46° 12' 32.0''$$
 
-Cross‑check with GNSS: GNSS latitude = 46° 12' 30.5″.$ $\xi = \varphi^* - \varphi = 1.5″$$This suggests the plumb line is deflected 1.5″ northward — consistent with nearby topographic mass to the south.
+Cross‑check with GNSS: GNSS latitude = 46° 12' 30.5''.
+
+$$\xi = \varphi^* - \varphi = 1.5''$$
+
+This suggests the plumb line is deflected 1.5'' northward — consistent with nearby topographic mass to the south.
 
 ---
 
