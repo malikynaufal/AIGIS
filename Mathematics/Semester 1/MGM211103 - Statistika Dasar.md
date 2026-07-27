@@ -5,7 +5,10 @@ sks: 3
 semester: 1
 program: S.Kom
 university: Universitas Gadjah Mada (UGM)
-tags: [mathematics, statistics, probability, data analysis]
+tags:
+  - mathematics
+  - statistics
+  - probability
 ---
 
 # MGM211103 — Statistika Dasar (Basic Statistics)
