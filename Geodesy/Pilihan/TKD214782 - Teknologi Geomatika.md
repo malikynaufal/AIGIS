@@ -23,10 +23,8 @@ Emerging technologies in geomatics: UAV photogrammetry, mobile mapping (MMS), we
 | Camera | 12–100 MP | Aerial imagery |
 | PPP-RTK receiver | 2–5 cm | Direct georeferencing |
 
-### 2. Mobile Mapping Systems (MMS)
-$$
-\text{Trajectory} = f(\text{GNSS}, \text{IMU}, \text{Odometer}, \text{LiDAR})
-$$
+### 2. Mobile Mapping Systems (MMS)$\$$
+\text{Trajectory} = f(\text{GNSS}, \text{IMU}, \text{Odometer}, \text{LiDAR})$\$$
 # ## 3. Cloud Geospatial
 - AWS/Google Cloud for big data
 - XPlanet, Planet.com, Copernicus Data

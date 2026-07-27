@@ -23,7 +23,7 @@ Praktikum ini melatih mahasiswa dalam pengoperasian echo sounder tunggal (single
 ### Modul 1: Peralatan Hidrografi
 
 - **Single-beam echo sounder**: Operasi dan kalibrasi
- - Prinsip: $d = \frac{c \cdot t}{2}$(kedalaman =$\frac{v imes t}{2}$)
+ - Prinsip: $d = \frac{c \cdot t}{2}$\(kedalaman =$\frac{v imes t}{2}$)
 
 - **GNSS DGPS/RTK**: Posisi perahu
 
@@ -36,7 +36,7 @@ Praktikum ini melatih mahasiswa dalam pengoperasian echo sounder tunggal (single
 ### Modul 2: Kalibrasi dan Setup
 
 - **Kalibrasi echo sounder**:
- - Draft calibration: $\Delta d = ext{draft statis} + ext{draft dinamis} $- Speed of sound:$c = 1449.2 + 4.6T - 0.055T^2 $ (Mackenzie formula)
+ - Draft calibration: $\Delta d = ext{draft statis} + ext{draft dinamis} $- Speed of sound:$c = 1449.2 + 4.6T - 0.055T^2 $\(Mackenzie formula)
 
 - **Setup tide gauge**: Pasang logger air, zero calibration
 
@@ -46,7 +46,7 @@ Praktikum ini melatih mahasiswa dalam pengoperasian echo sounder tunggal (single
 
 ### Modul 3: Sounding di Air Dangkal
 
-- **Pola lintasan**: Paralel, jarak lintasan $s = W_{ext{swath}} imes (1 - 0.20)$ untuk 20% overlap
+- **Pola lintasan**: Paralel, jarak lintasan $s = W_{ext{swath}} imes (1 - 0.20)$\$ untuk 20% overlap
 
 - **Kedalaman**: 1–5 m (muara sungai / perairan teluk)
 
@@ -65,13 +65,13 @@ Praktikum ini melatih mahasiswa dalam pengoperasian echo sounder tunggal (single
  - Hitung MSL, MLLW, MHHW
  - Prediksi pasang surut berikutnya dari analisis harmonik
 
-- **Reduksi sounding**: $ d_{CD} = d_{ext{observed}} - (\eta_t - \eta_{CD}) $### Modul 5: Data Processing Sederhana
+- **Reduksi sounding**: $ d_{CD} = d_{ext{observed}} - (\eta_t - \eta_{CD})$\$### Modul 5: Data Processing Sederhana
 
 - **Import**: Raw sounding file → software (HYPACK, QPS Qimera, atau open-source)
 
 - **Koreksi**:
  1. Tide correction → referensi Chart Datum
- 2. Heel correction →$d_{ext{corr}} = d / \cosheta$ (roll angle $heta$)
+ 2. Heel correction →$d_{ext{corr}} = d / \cosheta$\(roll angle $heta$)
  3. Draft correction → $d_{ext{net}} = d - ext{static draft}$- **Interpolasi**: IDW (Inverse Distance Weighting) ke grid raste
 r$ $z = \frac{\sum w_i z_i}{\sum w_i}, \quad w_i = d_i^{-p}$ $- **Kontur**: Buat isobaths dari grid
 
@@ -117,7 +117,7 @@ r$ $z = \frac{\sum w_i z_i}{\sum w_i}, \quad w_i = d_i^{-p}$ $- **Kontur**: Buat
 | Koreksi roll |$ d_{ext{corr}} = d / \coshi $|
 | Koreksi pasang surut |$ d_{CD} = d_{ext{obs}} - \Delta\eta $|
 | Interpolasi IDW |$ z_p = \sum w_i z_i / \sum w_i $, $w_i = r_i^{-p} $ |
-| Swath width (single beam) |$W = 2d \cdot an(\alpha_{\max})$ |
+| Swath width (single beam) |$W = 2d \cdot an(\alpha_{\max})$\$ |
 
 ---
 

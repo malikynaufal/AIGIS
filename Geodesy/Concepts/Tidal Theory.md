@@ -24,7 +24,7 @@ created: 2026-07-27
 
 ## 2. Earth (Solid) Tides
 
-The tidal potential from a body of mass $m$ at distance $r$ is expanded in spherical harmonics. The dominant term is the **second‑degree** component (the first degree is a pure translation and does not deform) $ $ V_{\text{tide}}(r,\theta,\lambda,t) = \sum_{n=2}^{3} \sum_{m=0}^{n} V_{nm}(\theta,\lambda,t)\left(\frac{r_0}{r}\right)^{n+1} $$# ## 2.1. Displacement due to solid Earth tides
+The tidal potential from a body of mass $m$ at distance $r$ is expanded in spherical harmonics. The dominant term is the **second‑degree** component (the first degree is a pure translation and does not deform)$\$ $ V_{\text{tide}}(r,\theta,\lambda,t) = \sum_{n=2}^{3} \sum_{m=0}^{n} V_{nm}(\theta,\lambda,t)\left(\frac{r_0}{r}\right)^{n+1} $$# ## 2.1. Displacement due to solid Earth tides
 
 The IERS Conventions (2010) prescribe the displacement at the Earth's surface as:
 $$
@@ -39,8 +39,8 @@ $$
 | $h_n$ | Love number (radial deformation);$h_2 \approx 0.609$, $h_3 \approx 0.295$ |
 | $l_n$ | Shida number (horizontal deformation);$l_2 \approx 0.085$, $l_3 \approx 0.015$ |
 | $g$| Mean gravity at surface |
-|$ V_n $|$n$‑th degree tidal potential |
-|$r_0 $ | Mean Earth radius |
+|$V_n$|$n$‑th degree tidal potential |
+|$r_0$ | Mean Earth radius |
 
 ### 2.2. Typical amplitude
 
@@ -57,7 +57,7 @@ $$
 
 ### 3.1. Ocean tide models
 
-The deforming of the ocean surface under tidal forces creates a loading that pushes down on the Earth's crust. Ocean tide models provide the water column height $H_i(\theta,\lambda,t)$ at grid points:
+The deforming of the ocean surface under tidal forces creates a loading that pushes down on the Earth's crust. Ocean tide models provide the water column height $H_i(\theta,\lambda,t)$\$ at grid points:
 
 | Model | Source | Resolution | Coverage |
 |-------|--------|------------|----------|
@@ -69,7 +69,7 @@ The deforming of the ocean surface under tidal forces creates a loading that pus
 ### 3.2. Ocean loading displacement
 
 The displacement due to ocean loading$ $\mathbf{d}_{\text{load}}(t) = \sum_i \int_{\text{area}} \mathbf{G}(\theta,\theta_i) \cdot \rho_w \cdot H_i(\theta_i,\lambda_i,t)\,\mathrm{d}\Omega
-$$where$ \mathbf{G} $ is the Green's function for elastic loading (relates a point mass at the surface to the displacement at the observation point). The **Bos & Becker (2012)** Green's functions are widely used.
+$$where $ \mathbf{G} $ is the Green's function for elastic loading (relates a point mass at the surface to the displacement at the observation point). The **Bos & Becker (2012)** Green's functions are widely used.
 
 | Direction | Typical amplitude | Notes |
 |-----------|-------------------|-------|
@@ -110,7 +110,7 @@ The equilibrium tide (theoretical response to a point mass) has a maximum range 
 
 Compute the radial displacement at a point in Jakarta ( $\varphi = -6.2°$, $\lambda = 106.8°$) due to the Moon at a given epoch.
 
-The Moon's tidal potential coefficient $V_2$ (degree 2) can be evaluated from the Moon's position. For a typical alignment:$ $\Delta r = h_2 \frac{V_2}{g} \cdot r_0 \approx 0.609 \times \frac{0.15\;\text{m}^2\text{s}^{-2}}{9.78\;\text{m s}^{-2}} \times 6\,371\,000 \;\text{m} \approx 29.4\;\text{cm} $$(The exact value depends on the Moon's position; the maximum is ~40 cm.)
+The Moon's tidal potential coefficient $V_2$\(degree 2) can be evaluated from the Moon's position. For a typical alignment:$ $\Delta r = h_2 \frac{V_2}{g} \cdot r_0 \approx 0.609 \times \frac{0.15\;\text{m}^2\text{s}^{-2}}{9.78\;\text{m s}^{-2}} \times 6\,371\,000 \;\text{m} \approx 29.4\;\text{cm} $$\(The exact value depends on the Moon's position; the maximum is ~40 cm.)
 
 ---
 

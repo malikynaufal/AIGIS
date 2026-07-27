@@ -27,7 +27,7 @@ updated: 2026-07-27
 
 ## Key Formulas from Basic Geodesy
 1. $h = H + N$— Height relationship
-2. $ (X, Y, Z)$vs $ (\varphi, \lambda, h)$— coordinate transform
+2. $\(X, Y, Z)$\$vs $\(\varphi, \lambda, h)$\$— coordinate transform
 3. $ e^2 = 2f - f^2$— Eccentricity
 4. $ N = a/\sqrt{1-e^2\sin^2\varphi}$ — Prime vertical radius
 

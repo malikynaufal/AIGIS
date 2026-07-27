@@ -15,9 +15,10 @@ _Covering absolute and relative gravimeters, gravity networks, and the role of g
 ## 1. Introduction
 
 Gravity measurements quantify the Earth's gravitational field strength at a point. The **gravity vector** $\mathbf{g}$ combines gravitational attraction and centrifugal acceleration $ $\mathbf{g} = \nabla W$$
-At the Earth's surface, the **normal gravity** on the [[Reference Ellipsoid]] (Somigliana formula) $ $\gamma_0 = \frac{a\,g_p\sin^2\varphi + b\,g_e\cos^2\varphi}{\sqrt{a^2\cos^2\varphi + b^2\sin^2\varphi}} $$where$ g_e = 9.780326\,7715\;\text{m/s}^2 $ (equatorial) and$ g_p = 9.832186\,3685\;\text{m/s}^2 $ (polar).
 
-Free‑air correction$ $\delta g_{FA} = 2\gamma\frac{h}{R} \approx 0.3086\;h \;\text{mGal/m} $$Bouguer correction$ $\delta g_B = 2\pi G\rho h \approx 0.04193\;h \;\text{mGal/m} $$> **Indonesian term:** *Pengukuran Gravitasi*
+At the Earth's surface, the **normal gravity** on the [[Reference Ellipsoid]] (Somigliana formula) $\$ $\gamma_0 = \frac{a\,g_p\sin^2\varphi + b\,g_e\cos^2\varphi}{\sqrt{a^2\cos^2\varphi + b^2\sin^2\varphi}} $ $where $ g_e = 9.780326\,7715\;\text{m/s}^2 $\(equatorial) and $ g_p = 9.832186\,3685\;\text{m/s}^2 $\(polar).
+
+Free‑air correction $ $\delta g_{FA} = 2\gamma\frac{h}{R} \approx 0.3086\;h \;\text{mGal/m} $ $Bouguer correction $ $\delta g_B = 2\pi G\rho h \approx 0.04193\;h \;\text{mGal/m} $$> **Indonesian term:** *Pengukuran Gravitasi*
 
 ---
 
@@ -26,8 +27,8 @@ Free‑air correction$ $\delta g_{FA} = 2\gamma\frac{h}{R} \approx 0.3086\;h \;\
 | Unit | Symbol | Definition | Typical value |
 |------|--------|------------|---------------|
 | Gal | Gal | $1\;\text{cm/s}^2 = 0.01\;\text{m/s}^2$ | ~980 Gal at equator |
-| Milligal | mGal | $10^{-3}$ Gal | 1 mGal ≈ 1 ppm of $g$|
-| Microgal |$\mu $Gal |$ 10^{-6}$Gal | High‑precision (1 nm/s²) |
+| Milligal | mGal | $10^{-3}$ Gal | 1 mGal ≈ 1 ppm of $ g$|
+| Microgal |$\mu $ Gal |$ 10^{-6}$ Gal | High‑precision (1 nm/s²) |
 | SI | $\text{m/s}^2$ | Base SI unit | ~9.78–9.83 m/s² |
 | Eötvös (E) | E | $10^{-9}\;\text{s}^{-2}$ | Gravity gradient |
 
@@ -53,7 +54,9 @@ Free‑air correction$ $\delta g_{FA} = 2\gamma\frac{h}{R} \approx 0.3086\;h \;\
 2. A laser interferometer records the position at regular time intervals.
 3. The acceleration $g$ is derived from the second difference of positions.
 4. The result is corrected for: local terrain, tidal effects, ocean loading, polar motion, atmospheric pressure
-.$ $ g_{\text{corrected}} = g_{\text{observed}} - \delta g_{\text{tide}} - \delta g_{\text{atm}} - \delta g_{\text{polar}} - \delta g_{\text{load}}$$# ## 3.2. Typical Correction Magnitudes
+.$ $ g_{\text{corrected}} = g_{\text{observed}} - \delta g_{\text{tide}} - \delta g_{\text{atm}} - \delta g_{\text{polar}} - \delta g_{\text{load}}$$
+
+# ## 3.2. Typical Correction Magnitudes
 
 | Correction | Order of magnitude | Formula / Source |
 |------------|-------------------|------------------|
@@ -78,7 +81,7 @@ Free‑air correction$ $\delta g_{FA} = 2\gamma\frac{h}{R} \approx 0.3086\;h \;\
 | Weight | ~5 kg (field model D) |
 | Key use | Relative gravity surveys, microgravity |
 
-The measurement equation$ $ g_{\text{station}} = g_{\text{base}} + C \cdot R + d \cdot (t - t_0) + \text{corrections}$$where$ C$= calibration factor, $R$= reading, $d$= drift rate, $t$ = time.
+The measurement equation $ $ g_{\text{station}} = g_{\text{base}} + C \cdot R + d \cdot (t - t_0) + \text{corrections}$ $where $ C$= calibration factor, $ R $= reading, $ d $= drift rate, $ t$ = time.
 
 ### 4.2. Scintrex CG‑6 Autograv
 
@@ -115,7 +118,9 @@ The measurement equation$ $ g_{\text{station}} = g_{\text{base}} + C \cdot R + d
 
 ### 5.2. Base Station Concept
 
-Gravity surveys always reference **base stations** with known gravity values. The base station gravity is the anchor; all stations are measured relative to it.$ $ g_{\text{station}} = g_{\text{base}} + \Delta g_{\text{field measurements}}$$# ## 5.3. Tying to International Reference
+Gravity surveys always reference **base stations** with known gravity values. The base station gravity is the anchor; all stations are measured relative to it.$ $ g_{\text{station}} = g_{\text{base}} + \Delta g_{\text{field measurements}}$$
+
+# ## 5.3. Tying to International Reference
 
 The international gravity standard is the **International Gravity Standardization Net 1971 (IGSN71)**, with 1 254 stations worldwide.
 
@@ -153,26 +158,36 @@ Satellite gravity gives the **long‑wavelength** field (degree < 150); surface 
 | Station B | 4548.3 | 11:00 | — |
 | Base (final) | 4521.5 | 12:00 | — |
 
-**Step 1: Drift rate** (average over the day)$ $\text{Drift} = \frac{4521.5 - 4521.2}{4\;\text{h}} = 0.075\;\text{counts/hour} $$**Step 2: Drift correction at each station time:** $$
+**Step 1: Drift rate** (average over the day) $\$ $\text{Drift} = \frac{4521.5 - 4521.2}{4\;\text{h}} = 0.075\;\text{counts/hour} $ $**Step 2: Drift correction at each station time:** $$
+
 \begin{aligned}
 \text{Station A}: \;& \text{drift correction} = 0.075 \times (9-8) = 0.075 \\
 \text{Station B}: \;& \text{drift correction} = 0.075 \times (11-8) = 0.225
 \end{aligned
 }
+
 $$**Step 3: Drift‑corrected readings:**$$
+
 \begin{aligned}
 R_A^{\text{corr}} &= 4535.7 - 0.075 = 4535.625\\
 R_B^{\text{corr}} &= 4548.3 - 0.225 = 4548.075
 \end{aligned}
+
 $$
+
 **Step 4: Gravity difference** (using calibration factor $C = 1.0$ mGal/count):
+
 $$
+
 \begin{aligned}
 \Delta g_A &= R_A^{\text{corr}} - R_{B,\text{avg}}^{\text{corr}} = 4535.625 - 4521.3 = 14.325\;\text{mGal}\\
 \Delta g_B &= 4548.075 - 4521.3 = 26.775\;\text{mGal}
 \end{aligned
 }
-$$**Step 5: Station gravities:**$ $ g_A = 978\,052.432 + 14.325 = 978\,066.757\;\text{mGal}g_B = 978\,052.432 + 26.775 = 978\,079.207\;\text{mGal}$$ ---
+
+$$**Step 5: Station gravities:**$ $ g_A = 978\,052.432 + 14.325 = 978\,066.757\;\text{mGal}g_B = 978\,052.432 + 26.775 = 978\,079.207\;\text{mGal}$$
+
+---
 
 ## 8. Diagram — Gravimeter Types
 
@@ -214,8 +229,8 @@ $$**Step 5: Station gravities:**$ $ g_A = 978\,052.432 + 14.325 = 978\,066.757\;
 
 | Application | How gravity helps |
 |-------------|-------------------|
-| **Geoid modelling** | Gravity anomalies → Stokes integral →$N$ (see [[Geoid]]) |
-| **Survey height conversion** | Convert $h$→$H$ using gravimetric geoid |
+| **Geoid modelling** | Gravity anomalies → Stokes integral →$N$\(see [[Geoid]]) |
+| **Survey height conversion** | Convert $h $→$ H$ using gravimetric geoid |
 | **Oil & mineral exploration** | Bouguer anomaly maps → subsurface density |
 | **Volcanic monitoring** | Gravity changes → magma movement |
 | **Hydrogeology** | Water table changes affect local $g$ |

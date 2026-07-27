@@ -19,8 +19,8 @@ The classical Helmert transformation in matrix form:
 $$
 \begin{bmatrix} X_T \\ Y_T \\ Z_T \end{bmatrix} = s\,R(\omega_x,\omega_y,\omega_z)\,\begin{bmatrix} X_S \\ Y_S \\ Z_S \end{bmatrix} + \begin{bmatrix} T_x \\ T_y \\ T_z \end{bmatrix} $ $ | Symbol | Meaning | Units |
 |--------|---------|-------|
-| $(X_S, Y_S, Z_S)$ | Source‑frame coordinates (ECEF) | m |
-| $(X_T, Y_T, Z_T)$ | Target‑frame coordinates | m |
+| $\(X_S, Y_S, Z_S)$\$ | Source‑frame coordinates (ECEF) | m |
+| $\(X_T, Y_T, Z_T)$\$ | Target‑frame coordinates | m |
 | $T_x, T_y, T_z$ | Translations (3 parameters) | m |
 | $\omega_x, \omega_y, \omega_z$ | Rotations about each axis (3 parameters) | rad or arc‑sec |
 | $s$ | Scale factor (1 parameter) | dimensionless, but reported in ppm |
@@ -29,8 +29,7 @@ $$
 1 & -\omega_z & \omega_y \\
 \omega_z & 1 & -\omega_x \\
 -\omega_y & \omega_x & 1
-\end{bmatrix} + O(\omega^2)
-$$# ## 1.2. Vector form
+\end{bmatrix} + O(\omega^2)$\$$# ## 1.2. Vector form
 
 Often written as$ $\mathbf{X}_T = (1+s)\cdot R\cdot\mathbf{X}_S + \mathbf{T} $$With all seven parameters:$$
 \begin{aligned}
@@ -41,25 +40,24 @@ Z_T &= T_z + (1+s)\bigl[Z_S + \omega_y X_S - \omega_x Y_S\bigr]
 
 ## 2. Time‑Dependent Extension (14‑Parameter Model)
 
-For ITRF realizations, the parameters include rates (per year):$ $\mathbf{X}_T(t) = \mathbf{T} + \dot{\mathbf{T}}(t-t_0) + \bigl(1 + s + \dot{s}(t-t_0)\bigr)R(t)\,\mathbf{X}_S\text{with } R(t) = R\bigl(\omega_x + \dot{\omega}_x(t-t_0),\, \omega_y + \dot{\omega}_y(t-t_0),\, \omega_z + \dot{\omega}_z(t-t_0)\bigr)
-$$
+For ITRF realizations, the parameters include rates (per year):$ $\mathbf{X}_T(t) = \mathbf{T} + \dot{\mathbf{T}}(t-t_0) + \bigl(1 + s + \dot{s}(t-t_0)\bigr)R(t)\,\mathbf{X}_S\text{with } R(t) = R\bigl(\omega_x + \dot{\omega}_x(t-t_0),\, \omega_y + \dot{\omega}_y(t-t_0),\, \omega_z + \dot{\omega}_z(t-t_0)\bigr)$\$$
 The 14‑parameter model is published for every ITRF realization (see [[ITRF]]).
 
 ---
 
 ## 3. Worked Example – WGS84 → ITRF2020
 
-Source point in **WGS84** (G2139 epoch 2024‑01‑15)$ $ X_S = -2\,466\,310.2 \;\text{m},\quad Y_S = 5\,691\,984.7 \;\text{m},\quad Z_S = -2\,653\,725.4\;\text{m}$$Helmert parameters (WGS84 → ITRF2020, at epoch 2010.0):
+Source point in **WGS84** (G2139 epoch 2024‑01‑15)$\$ $ X_S = -2\,466\,310.2 \;\text{m},\quad Y_S = 5\,691\,984.7 \;\text{m},\quad Z_S = -2\,653\,725.4\;\text{m}$$Helmert parameters (WGS84 → ITRF2020, at epoch 2010.0):
 
 | Parameter | Value | Units |
 |-----------|-------|-------|
 | $T_x$ | $+0.0007$| m |
-| $ T_y$| $-0.0007$| m |
-| $ T_z$| $-0.0001$| m |
+| $T_y$| $-0.0007$| m |
+| $T_z$| $-0.0001$| m |
 | $\omega_x$|$+0.000000$| arc‑sec |
 | $\omega_y$|$-0.000000$| arc‑sec |
 | $\omega_z$|$-0.000000$| arc‑sec |
-| $s$|$ 0.0 $ | ppb |
+| $s$|$0.0$ | ppb |
 
 Substituting (essentially identity for WGS84 ↔ ITRF2020):
 $$
@@ -127,7 +125,7 @@ $$For the same point:$ $ X_{SAD69} = (1-0.27\times 10^{-6})\cdot(-2\,466\,310.2)
 
 ## 6. Common Datum‑Transformation Parameters
 
-| Source → Target | $T_x$ (m) | $T_y$ (m) | $T_z$ (m) | $s$ (ppm) | Reference |
+| Source → Target | $T_x$\(m) | $T_y$\(m) | $T_z$\(m) | $s$\(ppm) | Reference |
 |------------------|-----------|-----------|-----------|-----------|-----------|
 | WGS84 → ITRF2020 | 0 | 0 | 0 | 0 | NGA/IGN |
 | NAD27 → NAD83 | varies (grid‑based) | — | — | — | NGS NADCON |
@@ -143,8 +141,7 @@ $$For the same point:$ $ X_{SAD69} = (1-0.27\times 10^{-6})\cdot(-2\,466\,310.2)
 ## 7. Inversion
 
 The inverse transformation uses the negative of parameters and the inverse scale$ $\mathbf{X}_S = \frac{1}{1+s}R^{-1}(\mathbf{X}_T - \mathbf{T}
-)
-$$For the linearised form:$ $ T_{\text{inv}} = -\mathbf{T},\qquad s_{\text{inv}} = \frac{-s}{1+s},\qquad \omega_{\text{inv}} = -\omega $$---
+)$\$$For the linearised form:$ $ T_{\text{inv}} = -\mathbf{T},\qquad s_{\text{inv}} = \frac{-s}{1+s},\qquad \omega_{\text{inv}} = -\omega $$---
 
 ## 8. Related
 

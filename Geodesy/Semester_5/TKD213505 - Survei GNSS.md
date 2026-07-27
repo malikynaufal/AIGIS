@@ -86,7 +86,7 @@ For double-differenced baseline processing:
 
 For RTK: typically ≤ 5 minutes per point
 
-### 3.4 Dilution of Precision (DOP)$ $ ext{PDOP} = \sqrt{\sigma_x^2 + \sigma_y^2 + \sigma_z^2} \; / \; \sigma_0ext{HDOP} = \sqrt{\sigma_x^2 + \sigma_y^2} \; / \; \sigma_0ext{VDOP} = \sigma_z \; / \; \sigma_0ext{TDOP} = \sigma_t \; / \; \sigma_0$ $where$ \sigma_0 $ is the standard deviation of the unit-weight pseudorange.
+### 3.4 Dilution of Precision (DOP)$\$ $ ext{PDOP} = \sqrt{\sigma_x^2 + \sigma_y^2 + \sigma_z^2} \; / \; \sigma_0ext{HDOP} = \sqrt{\sigma_x^2 + \sigma_y^2} \; / \; \sigma_0ext{VDOP} = \sigma_z \; / \; \sigma_0ext{TDOP} = \sigma_t \; / \; \sigma_0$ $where$ \sigma_0 $ is the standard deviation of the unit-weight pseudorange.
 
 ---
 
@@ -238,7 +238,7 @@ n$ $\hat{N} = \frac{\Phi - \rho}{\lambda}$ $- **Float solution:**$N$ estimated a
 
 #### LAMBDA Method (Least-squares AMBiguity Decorrelation Adjustment)
 
-The LAMBDA method transforms the ambiguity space to improve search efficiency$ $\hat{Z} = Z \cdot \hat{N}, \quad Q_{\hat{Z}} = Z \cdot Q_{\hat{N}} \cdot Z^T$ $where$ Z$ is an integer-decorrelating transformation matrix.
+The LAMBDA method transforms the ambiguity space to improve search efficiency$ $\hat{Z} = Z \cdot \hat{N}, \quad Q_{\hat{Z}} = Z \cdot Q_{\hat{N}} \cdot Z^T$ $where$Z$ is an integer-decorrelating transformation matrix.
 
 ---
 

@@ -10,8 +10,7 @@ The **Mercator** projection is a **conformal** cylindrical map projection that p
 
 ## Derivation & Key Formulas
 
-For a sphere of radius $R$, the Mercator projection maps a point at latitude $\phi$ and longitude $\lambda$ to coordinates $ (x, y)$:$ $x = R \, (\lambda - \lambda_0)y = R \ln \left[ \tan \left( \frac{\pi}{4} + \frac{\phi}{2} \right) \right] = R \, \text{gd}^{-1}(\phi)$$where$ \lambda_0 $ is the **central meridian** (garis tengah), and $\text{gd}^{-1}$is the inverse **Gudermannian function**$ $\text{gd}^{-1}(\phi) = \sinh^{-1}(\tan \phi) = \text{artanh}(\sin \phi)
-$$The inverse (map → sphere)$ $\phi = 2 \, \arctan\!\left(e^{y/R}\right) - \frac{\pi}{2}, \qquad \lambda = \lambda_0 + \frac{x}{R} $$# ## Conformality (Konformitas)
+For a sphere of radius $R$, the Mercator projection maps a point at latitude $\phi$ and longitude $\lambda$ to coordinates $\(x, y)$\$:$ $x = R \, (\lambda - \lambda_0)y = R \ln \left[ \tan \left( \frac{\pi}{4} + \frac{\phi}{2} \right) \right] = R \, \text{gd}^{-1}(\phi)$\$$where $ \lambda_0 $ is the **central meridian** (garis tengah), and $\text{gd}^{-1}$is the inverse **Gudermannian function**$ $\text{gd}^{-1}(\phi) = \sinh^{-1}(\tan \phi) = \text{artanh}(\sin \phi)$\$$The inverse (map → sphere)$\$ $\phi = 2 \, \arctan\!\left(e^{y/R}\right) - \frac{\pi}{2}, \qquad \lambda = \lambda_0 + \frac{x}{R} $$# ## Conformality (Konformitas)
 
 A map projection is **conformal** when the scale factor is the same in all directions at every point, preserving angles locally. For Mercator this means the **Tissot's indicatrix** at any point is a circle, not an ellipse.
 
@@ -25,7 +24,7 @@ The **point scale factor** (skala titik) of Mercator at latitude $\phi$ is: $ $ 
 
 - As$ \phi \to \pm 90°$, $k \to \infty $— the poles cannot be shown (singularitas).
 
-The **scale factor along the meridian** (a) and along the parallel (b) satisfy $k_m = \sec\phi$ and $k_p = \sec\phi$, so $k_m = k_p$, confirming conformality.
+The **scale factor along the meridian** (a) and along the parallel (b) satisfy $k_m = \sec\phi$and$k_p = \sec\phi$, so $k_m = k_p$, confirming conformality.
 
 ### Areal Distortion
 
@@ -40,7 +39,7 @@ The **Universal Transverse Mercator** (UTM / UTM) system divides the Earth into 
 
 ### UTM Scale Factor
 
-Each UTM zone has a central meridian with a scale factor of $k_0 = 0{.}9996$ (pengurangan skala)$ $x = k_0 \, R \, (\lambda - \lambda_0) \cos \phi, \qquad y = k_0 \, R \, \text{gd}^{-1}(\phi)$$The false easting is$500{,}000 $m to keep easting values positive (false easting $= 500000$ m).
+Each UTM zone has a central meridian with a scale factor of $k_0 = 0{.}9996$\(pengurangan skala)$\$ $x = k_0 \, R \, (\lambda - \lambda_0) \cos \phi, \qquad y = k_0 \, R \, \text{gd}^{-1}(\phi)$\$$The false easting is$500{,}000 $m to keep easting values positive (false easting $= 500000$ m).
 
 ## Mercator vs Web Mercator (Peta Web)
 

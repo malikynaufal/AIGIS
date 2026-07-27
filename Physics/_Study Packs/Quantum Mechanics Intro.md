@@ -49,7 +49,9 @@ $ $ \int_{-\infty}^{\infty} |\Psi(\vec{r}, t)|^2 d^3r =
 
 **### Time-Dependent Schrödinger Equation **
 
- i\hbar\frac{\partial\Psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\Psi + V\Psi $$
+ i\hbar\frac{\partial\Psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\Psi + V\Psi
+
+$$
 
 # ## Time-Independent Schrödinger Equation
 For stationary states $ \Psi(\vec{r},t) = \psi(\vec{r})e^{-iEt/\hbar} $:
@@ -141,7 +143,9 @@ $ $ \hat{x} = x, \quad \hat{p} = -i\hbar\frac{\partial}{\partial x} $$
 # ## Canonical Commutation Relatio
 n
 
-$ $ [\hat{x}, \hat{p}] = \hat{x}\hat{p} - \hat{p}\hat{x} = i\hbar $$
+$ $ [\hat{x}, \hat{p}] = \hat{x}\hat{p} - \hat{p}\hat{x} = i\hbar
+
+$$
 
 # ## Measurement Outcomes
 

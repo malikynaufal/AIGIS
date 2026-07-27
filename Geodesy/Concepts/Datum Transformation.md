@@ -56,7 +56,7 @@ $$
 
 ### Molodensky Transformation (Geodetic)
 
-Works directly in geodetic coordinates $(\phi, \lambda, h)$ without converting to ECEF. More practical for small-area transformations.
+Works directly in geodetic coordinates $\(\phi, \lambda, h)$\$ without converting to ECEF. More practical for small-area transformations.
 
 **Formulas** (simplified):$ $\Delta\phi = \frac{1}{M}\left[-a_X\cos\phi\sin\lambda + a_Y\cos\phi\cos\lambda + a_Z\sin\phi\right]\Delta\lambda = \frac{1}{N\cos\phi}\left[-a_X\sin\lambda + a_Y\cos\lambda\right]\Delta h = -a_X\cos\phi\cos\lambda - a_Y\cos\phi\sin\lambda + a_Z\sin\phi + \text{scale terms} $$---
 
@@ -192,7 +192,7 @@ In practice, for many applications, WGS84 ≈ DGN95 (difference < 0.1 m).
 ## Study Problems
 
 1. **Recall:** List three datums and compare their ellipsoid parameters.
-2. **Application:** Given WGS84 coordinates $(\phi, \lambda, h)$ = (-6.2, 106.8, 25), transform to DGN95. What parameters from BIG or BIG's official document would you use?
+2. **Application:** Given WGS84 coordinates $\(\phi, \lambda, h)$\$ = (-6.2, 106.8, 25), transform to DGN95. What parameters from BIG or BIG's official document would you use?
 3. **Derivation:** Starting from the 7-parameter Helmert transform, derive the transformation of geodetic coordinates to first order in rotations (small-angle approximation).
 4. **Real-world:** You have coordinates in NAD27 and want to publish them in WGS84. What is the approximate error if you skip the datum transformation? What EPSG codes should you use?
 

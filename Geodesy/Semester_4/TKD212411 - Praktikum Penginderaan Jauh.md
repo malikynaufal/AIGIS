@@ -32,7 +32,7 @@ Preprocessing diperlukan untuk mempersiapkan data analisis:
 #### 1. Radiometric Correction
 $$
 L_{corrected} = \frac{L_{sensor} - L_{min}}{L_{max} - L_{min}} imes (Digital Number_{max} - Digital Number_{min}
-)$ $2. Geometric Correction$ $# 2. Geometric Correction
+)$\$ $2. Geometric Correction$ $# 2. Geometric Correction
 
 ### # 2. Geometric Correction
 

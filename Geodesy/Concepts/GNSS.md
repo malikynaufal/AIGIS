@@ -38,14 +38,14 @@ updated: 2026-07-27
 
 ### Basic Pseudorange
 $$
-\rho = c \cdot (t_{rx} - t_{tx}) = ||\mathbf{r}_{sat}(t) - \mathbf{r}_{rx}|| + c\Delta t$ $**Resolving for 4 unknowns**$(x, y, z, \delta t)$ requires ≥ 4 satellites
+\rho = c \cdot (t_{rx} - t_{tx}) = ||\mathbf{r}_{sat}(t) - \mathbf{r}_{rx}|| + c\Delta t$ $**Resolving for 4 unknowns**$\(x, y, z, \delta t)$\$ requires ≥ 4 satellites
 $$
 \begin{bmatrix} \rho_1 \\ \rho_2 \\ \rho_3 \\ \rho_4 \end{bmatrix} \xrightarrow{\text{least squares}} \begin{bmatrix} x_{rx} \\ y_{rx} \\ z_{rx} \\ \delta t_{rx} \end{bmatrix} $$# ## Observation Equations
 
 **Code (pseudorange):*
 *$ $ P_i = \rho + c(dt_r - dt_s) + d_{iono} + d_{trop} + \varepsilon_P $$**Carrier phase:*
 *$ $\Phi_i = \frac{\rho}{\lambda} + N_i + \frac{c}{\lambda}(dt_r - dt_s) - \frac{d_{iono}}{\lambda} + \frac{d_{trop}}{\lambda} + \varepsilon_\Phi
-$$where$ \rho = ||\mathbf{r}_r - \mathbf{r}_s|| $= geometric range, $N$ = integer ambiguity.
+$$where $ \rho = ||\mathbf{r}_r - \mathbf{r}_s|| $= geometric range, $N$ = integer ambiguity.
 
 ### Error Sources
 
@@ -84,8 +84,8 @@ Base station transmits corrections to rover$ $\rho_{corr} = \rho_{rover} + \Delt
 
 ### RTK (Real-Time Kinematic)
 
-Float solution: estimate $N \in \mathbb{R}$ Fixed solution: resolve $N \in \mathbb{Z}$(LAMBDA method
-)$ $\hat{N}_{float} \xrightarrow{\text{LAMBDA}} \hat{N}_{fixed} $$**Accuracy:** 1–2 cm + 2 ppm (horizontal)
+Float solution: estimate $N \in \mathbb{R}$ Fixed solution: resolve $N \in \mathbb{Z}$\(LAMBDA method
+)$\$ $\hat{N}_{float} \xrightarrow{\text{LAMBDA}} \hat{N}_{fixed} $$**Accuracy:** 1–2 cm + 2 ppm (horizontal)
 
 ### Network RTK (CORS)
 
@@ -116,7 +116,7 @@ Multiple reference stations model spatially-correlated errors:
 |------------|------|-------|
 | Single-diff (receivers) | $\Delta\Phi_{ij} = \Phi_i - \Phi_j$ | Removes satellite clock |
 | Double-diff (receivers & sats) | $\nabla\Delta\Phi_{ij}^{pq} = \Phi_i^p - \Phi_j^p - \Phi_i^q + \Phi_j^q $ | Removes receiver clocks |
-| Triple-diff (epochs) | $\delta\nabla\Delta\Phi_{ij}^{pq} = \nabla\Delta\Phi(t_2) - \nabla\Delta\Phi(t_1) $ | Removes ambiguities (detects cycle slips) |
+| Triple-diff (epochs) | $\delta\nabla\Delta\Phi_{ij}^{pq} = \nabla\Delta\Phi(t_2) - \nabla\Delta\Phi(t_1)$\$ | Removes ambiguities (detects cycle slips) |
 
 ---
 
@@ -155,7 +155,7 @@ Multiple reference stations model spatially-correlated errors:
 | $\rho = ||\mathbf{r}_r - \mathbf{r}_s|| + c\Delta t $| Pseudorange | Basic ranging |
 |$ P = \rho + cdt + d_{iono} + d_{trop} + \varepsilon $| Code equation | Observation model |
 |$\Phi = \rho/\lambda + N + \dots $ | Phase equation | Precision positioning |
-| $ P_{IF} = (f_1^2 P_1 - f_2^2 P_2)/(f_1^2 - f_2^2) $| Ionosphere-free | PPP processing |
+| $ P_{IF} = (f_1^2 P_1 - f_2^2 P_2)/(f_1^2 - f_2^2)$\$| Ionosphere-free | PPP processing |
 |$\nabla\Delta\Phi_{12}^{34} $ | Double difference | RTK processing |
 | $\rho = c \cdot \Delta t$ | Time-of-flight | Range from timing |
 
@@ -184,7 +184,7 @@ Multiple reference stations model spatially-correlated errors:
 ## Study Problems
 
 1. **Recall:** Why must ≥ 4 satellites be visible for 3D positioning? (Hint: count unknowns.)
-2. **Application:** A GPS-SPP receiver gets $\rho_1 = 20589423.5$ m, $\rho_2 = 21045987.2$ m, $\rho_3 = 20765432.1$ m, $\rho_4 = 21234567.8$ m. The satellite positions (ECEF) are given. Form the design matrix and compute the receiver position (simplified: skip clock term for this problem).
+2. **Application:** A GPS-SPP receiver gets $\rho_1 = 20589423.5$m, $\rho_2 = 21045987.2$m, $\rho_3 = 20765432.1$m, $\rho_4 = 21234567.8$ m. The satellite positions (ECEF) are given. Form the design matrix and compute the receiver position (simplified: skip clock term for this problem).
 3. **Derivation:** Show that in double-differencing, the receiver clock term cancels.
 4. **Real-world:** In CORS network, a rover is 50 km from the nearest reference station. Estimate the residual ionospheric and tropospheric errors after differential correction.
 

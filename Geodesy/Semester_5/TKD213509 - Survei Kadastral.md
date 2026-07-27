@@ -112,7 +112,7 @@ Boundary determination is based on **5 evidences** (*5 alat bukti*), listed in o
 #### Method 1: Intersection (Sudut Silang)
 
 For each boundary point, observe angles to two or more known points:
-$$d = \frac{a \cdot \sin A}{\sin(A+B+C)}$ $where$ a$ is the distance between known points, and $A, B, C$ are the observed angles.
+$$d = \frac{a \cdot \sin A}{\sin(A+B+C)}$ $where$a$ is the distance between known points, and $A, B, C$ are the observed angles.
 
 **Advantages:** Does not require linear measurement, efficient for urban parcels
 **Disadvantages:** Requires line-of-sight, error propagation
@@ -143,15 +143,15 @@ Direct positioning of boundary points using GNSS:
 ### 4.3 Area Calculation
 
 #### Trapezoidal Rule (Koordinat Method
-)$ $A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i) \right|$ $**Requirements:**
+)$\$ $A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i) \right|$ $**Requirements:**
 
 - Coordinates must be in a local or UTM system
 
 - Points must be in sequence (clockwise or counterclockwise)
--$x_{n+1} = x_1$, $y_{n+1} = y_1$ (closing the polygon)
+-$x_{n+1} = x_1$, $y_{n+1} = y_1$\(closing the polygon)
 
 #### Measured Distance Metho
-d$ $A = \frac{1}{2} \sum_{i=1}^{n} d_i \cdot \sin\alpha_i $ $where$ d_i $ is the measured distance and$ \alpha_i $ is the internal angle.
+d$ $A = \frac{1}{2} \sum_{i=1}^{n} d_i \cdot \sin\alpha_i $ $where$d_i$ is the measured distance and$ \alpha_i $ is the internal angle.
 
 ---
 

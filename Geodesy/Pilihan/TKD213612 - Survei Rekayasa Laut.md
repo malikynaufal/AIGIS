@@ -57,7 +57,7 @@ flowchart TD
 | Post-dredge | MBES | Quantity verification |
 
 **Volume calculation:**
-$$V = \sum_{i=1}^{n} A_i \times d_i$ $where$ A_i $ is grid cell area and$ d_i$ is depth difference.
+$$V = \sum_{i=1}^{n} A_i \times d_i$ $where$A_i$ is grid cell area and$d_i$ is depth difference.
 
 ## Related Concepts
 

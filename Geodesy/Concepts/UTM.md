@@ -17,7 +17,7 @@ updated: 2026-07-27
 |----------|-------|
 | Number of zones | 60 (001°E to 360°E) |
 | Zone width | $6°$ longitude |
-| Central meridian |$\lambda_0 = 6°(Z - 1) - 180° + 3°$for zone$ Z$ |
+| Central meridian |$\lambda_0 = 6°(Z - 1) - 180° + 3°$for zone$Z$ |
 | Latitude bands | C to X (80°S to 84°N) |
 | False easting | 500 000 m (at central meridian) |
 | False northing | 0 m (equator) for northern hemisphere; 10 000 000 m for southern |
@@ -42,15 +42,14 @@ The zone number $Z$ is computed as:$ $Z = \text{floor}\left(\frac{\lambda + 180�
 
 ## Forward Projection Formulas
 
-Given geodetic coordinates $(\varphi, \lambda)$ on [[WGS84]]:$ $n = \frac{a - b}{a + b} = \frac{f}{2 - f}$$$ $A = \frac{a}{1+n}\left(1 + n^2/4 + n^4/64 + \ldots\right)$$$ $t = \sinh(\tanh^{-1}(\sin\varphi)) - 2n\cdot\text{atanh}(n\sin\varphi) $$$ $ \lambda' = \lambda - \lambda_0 \quad \text{(reduced longitude)}
+Given geodetic coordinates $\(\varphi, \lambda)$\$ on [[WGS84]]:$ $n = \frac{a - b}{a + b} = \frac{f}{2 - f}$$$ $A = \frac{a}{1+n}\left(1 + n^2/4 + n^4/64 + \ldots\right)$\$$$ $t = \sinh(\tanh^{-1}(\sin\varphi)) - 2n\cdot\text{atanh}(n\sin\varphi)$\$$$ $ \lambda' = \lambda - \lambda_0 \quad \text{(reduced longitude)}
 $$
 $ $\xi' = \frac{1}{2}\ln\frac{1+t}{1-t} \quad \text{(isometric latitude)}
 $$
 $ $x = A \cdot \ln\frac{1+\sin\xi'\cos\lambda'}{1-\sin\xi'\cos\lambda'} \quad \text{(meridional arc)}$$The final UTM coordinates:$ $E = k_0 \cdot N(\varphi) \cdot \cos\varphi \cdot \lambda' + \ldots + 500\,000 \text{ m}$$$ $N = k_0 \cdot \text{meridional arc} + 0 \text{ m (northern hemisphere)}$$# ## Simplified Transverse Mercator Series
 
 For direct computation (Bowring & Romer):$ $E = E_0 + k_0 N \cos\varphi \left[\lambda' + \frac{(1-T+C)\lambda'^3}{6} + \frac{(5-18T+T^2+72C-58e'^2)\lambda'^5}{120} + \ldots\right]$$$ $N = N_0 + k_0 \left[M(\varphi) - M(\varphi_0) + N\tan\varphi\left(\frac{\lambda'^2}{2} + \frac{(5-T+9C+4C^2)\lambda'^4}{24} + \frac{(61-58T+T^2+600C-330e'^2)\lambda'^6}{720}\right)\right]$$where:
--$T = \tan^2\varphi $
--$ C = e'^2\cos^2\varphi = \frac{e^2}{1-e^2}\cos^2\varphi $-$ N = a/\sqrt{1-e^2\sin^2\varphi} $ ([[GRS80#Radius of Curvature|prime vertical radius]])
+-$T = \tan^2\varphi $-$ C = e'^2\cos^2\varphi = \frac{e^2}{1-e^2}\cos^2\varphi $-$ N = a/\sqrt{1-e^2\sin^2\varphi} $\([[GRS80#Radius of Curvature|prime vertical radius]])
 - $E_0 = 500\,000$ m
 
 ## Scale Factor
@@ -91,7 +90,7 @@ Indonesia spans zones 46–54. For surveys spanning zone boundaries:$ $ E_{zoneB
 
 1. Determine the UTM zone for Yogyakarta ( $\varphi = -7.8°$, $\lambda = 110.4°$).
 2. Calculate the scale factor at$2°$ from the central meridian.
-3. Convert UTM coordinates $(E, N) = (567\,000, 9\,123\,456)$ to geographic.
+3. Convert UTM coordinates $\(E, N) = (567\,000, 9\,123\,456)$\$ to geographic.
 4. Explain why UTM uses $k_0 = 0.9996$ instead of $k_0 = 1.0$.
 
 ## Related Concepts
@@ -99,7 +98,7 @@ Indonesia spans zones 46–54. For surveys spanning zone boundaries:$ $ E_{zoneB
 - [[Transverse Mercator]] — Underlying projection
 - [[Map Projection]] — Broader category
 - [[Mercator]] — Similar but cylindrical (not transverse)
-- [[Projected Coordinates]] — $(E, N)$ on any projection
+- [[Projected Coordinates]] — $\(E, N)$\$ on any projection
 - [[WGS84]] — Reference ellipsoid
 - [[UTM#Indonesia|Indonesia]] — National mapping standard
 - [[GRS80]] — Ellipsoid used

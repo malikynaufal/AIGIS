@@ -85,7 +85,9 @@ $$
 
 The residuals: $ $\hat{\mathbf{v}} = \mathbf{A}\hat{\mathbf{x}} - \mathbf{l} = [\mathbf{A}(\mathbf{A}^T\mathbf{A})^{-1}\mathbf{A}^T - \mathbf{I}]\mathbf{l}
 
-$$ ---
+$$
+
+---
 
 ## 5. Weighted Least Squares (Penyesuaian Bernilai Bobot)
 

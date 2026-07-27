@@ -10,11 +10,11 @@ A **vertical datum** (datum tinggi) is the reference surface from which elevatio
 
 ### 1. Ellipsoidal Height ( $h$)
 
-The ellipsoidal height is the distance from a point on the Earth's surface to the reference ellipsoid, measured along the ellipsoid normal.$ $h = \sqrt{X^2 + Y^2 + \left(\frac{a^2}{b^2} Z\right)^2} - \frac{a^2}{b} \cdot \frac{1}{\sqrt{X^2 + Y^2 + \left(\frac{a^2}{b^2} Z\right)^2}} + Z $$where$ a$and$ b$ are the semi-major and semi-minor axes of the ellipsoid.
+The ellipsoidal height is the distance from a point on the Earth's surface to the reference ellipsoid, measured along the ellipsoid normal.$ $h = \sqrt{X^2 + Y^2 + \left(\frac{a^2}{b^2} Z\right)^2} - \frac{a^2}{b} \cdot \frac{1}{\sqrt{X^2 + Y^2 + \left(\frac{a^2}{b^2} Z\right)^2}} + Z $$where$a$and$b$ are the semi-major and semi-minor axes of the ellipsoid.
 
 **Key properties:**
 
-- Computed directly from geocentric coordinates $(X, Y, Z)$- Does NOT follow the direction of gravity — the ellipsoid normal does not align with the plumb line
+- Computed directly from geocentric coordinates $\(X, Y, Z)$\$- Does NOT follow the direction of gravity — the ellipsoid normal does not align with the plumb line
 
 - Used in GPS/GNSS heighting as the native height output
 
@@ -26,7 +26,7 @@ The orthometric height is the distance from a point on the Earth's surface to th
 -$h$= ellipsoidal height
 -$N$ = geoid undulation (separation between ellipsoid and geoid)
 
-The geoid undulation $N$ is derived from the Bruns formula$ $N = \frac{\Delta W}{\gamma}$$where$ \Delta W $is the disturbing potential and$ \gamma $ is the normal gravity at the surface.
+The geoid undulation $N$ is derived from the Bruns formula$ $N = \frac{\Delta W}{\gamma}$$where $ \Delta W $is the disturbing potential and$ \gamma $ is the normal gravity at the surface.
 
 **Key properties:**
 
@@ -40,7 +40,7 @@ The geoid undulation $N$ is derived from the Bruns formula$ $N = \frac{\Delta W}
 
 ### 3. Normal Height ( $h_N$)
 
-The normal height was introduced by Molodenskii as an alternative that avoids the need for gravity data at the Earth's surface.$ $h_N = h - \zeta$$where$ \zeta $ is the **height anomaly** (quasi-geoid undulation) $ $\zeta = \frac{T_P}{\gamma_0}$$-$T_P$ = disturbing potential at point P
+The normal height was introduced by Molodenskii as an alternative that avoids the need for gravity data at the Earth's surface.$ $h_N = h - \zeta$$where $ \zeta $ is the **height anomaly** (quasi-geoid undulation)$\$ $\zeta = \frac{T_P}{\gamma_0}$$-$T_P$ = disturbing potential at point P
 -$\gamma_0$= normal gravity on the telluroid
 
 **Key properties:**
@@ -66,7 +66,7 @@ H &= h_N + (N - \zeta) & \text{(orthometric vs normal difference)}
 ## The Geoid (Geoid) and Quasi-Geoid
 
 ### Geoid Definition
-The geoid is the equipotential surface of the Earth's gravity field that best fits, in a least-squares sense, Mean Sea Level (MSL). It is defined such that$ $W(P_{geoid}) = W_0 = \text{constant}$$where$ W$is the gravity potential and$ W_0 $ is the global equipotential value at MSL.
+The geoid is the equipotential surface of the Earth's gravity field that best fits, in a least-squares sense, Mean Sea Level (MSL). It is defined such that$ $W(P_{geoid}) = W_0 = \text{constant}$$where$W$is the gravity potential and$W_0$ is the global equipotential value at MSL.
 
 ### Quasi-Geoid (Quasi-Geoid)
 The quasi-geoid (kuasi-geoid) is the Molodenskii surface$ $\zeta = \frac{T}{\gamma_0}$$Unlike the geoid, the quasi-geoid is NOT an equipotential surface but provides a geometrically simpler reference for height determination.
@@ -132,15 +132,15 @@ Indonesian height benchmarks are organized hierarchically:
 3. **Restore**: Add back the long-wavelength component
 
 ### Stokes' Formula (Geoid from Gravity Anomaly
-)$ $N = \frac{R}{4\pi\gamma_0} \int \int_{\sigma} \Delta g \cdot S(\psi) \, d\sigma $$where:
--$S(\psi)$= Stokes kernel function
+)$\$ $N = \frac{R}{4\pi\gamma_0} \int \int_{\sigma} \Delta g \cdot S(\psi) \, d\sigma $$where:
+-$S(\psi)$\$= Stokes kernel function
 -$\Delta g$= gravity anomaly
 -$\psi$= spherical distance from computation point
 -$R$ = mean Earth radius
 
 ### Molodenskii Formula (Height Anomaly
-)$ $\zeta = \frac{R}{4\pi\gamma_0} \int \int_{\sigma} \Delta g^* \cdot S(\psi) \, d\sigma + \zeta_0
-$$where$ \Delta g^*$is the Molodenskii gravity anomaly and$ \zeta_0 $ is a constant determined from GNSS/levelling.
+)$\$ $\zeta = \frac{R}{4\pi\gamma_0} \int \int_{\sigma} \Delta g^* \cdot S(\psi) \, d\sigma + \zeta_0
+$$where $ \Delta g^*$is the Molodenskii gravity anomaly and$ \zeta_0 $ is a constant determined from GNSS/levelling.
 
 ## Practical Applications
 
@@ -161,7 +161,7 @@ $$where$ \Delta g^*$is the Molodenskii gravity anomaly and$ \zeta_0 $ is a const
 - Tidal datums (MSL, MHHW, MLW) serve as local references
 
 ### GNSS Levelling Workflo
-w$ $ H_{site} = h_{GNSS} - N_{geoid} + \delta H_{tide}$$where$ \delta H_{tide} $ is the tidal correction for the observation epoch.
+w$ $ H_{site} = h_{GNSS} - N_{geoid} + \delta H_{tide}$$where $ \delta H_{tide} $ is the tidal correction for the observation epoch.
 
 ## Key References
 

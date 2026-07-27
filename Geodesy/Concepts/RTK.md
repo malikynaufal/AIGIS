@@ -15,28 +15,28 @@ updated: 2026-07-27
 
 ## 1. Basic Principle
 
-The raw carrier‑phase measurement on frequency $f$ from satellite $s$ at receiver$ r$:$ $\Phi_{r,f}^s = \rho_r^s + c(\delta t_r - \delta t^s) + \lambda_f N_{r,f}^s + I_r^s + T_r^s + \epsilon_{\Phi} $$ | Symbol | Meaning |
+The raw carrier‑phase measurement on frequency $f$ from satellite $s$ at receiver$r$:$ $\Phi_{r,f}^s = \rho_r^s + c(\delta t_r - \delta t^s) + \lambda_f N_{r,f}^s + I_r^s + T_r^s + \epsilon_{\Phi} $$ | Symbol | Meaning |
 |--------|---------|
 | $\rho_r^s$| Geometric range |
 | $c$| Speed of light |
 |$\delta t_r, \delta t^s $| Receiver & satellite clock errors |
-|$\lambda_f $| Wavelength of frequency$ f$|
+|$\lambda_f $| Wavelength of frequency$f$|
 |$ N_{r,f}^s $| **Integer ambiguity** (cycles) |
 |$ I_r^s $| Ionospheric delay |
 |$ T_r^s $| Tropospheric delay |
 |$\epsilon_{\Phi} $ | Measurement noise (~1 mm) |
 
-The key difference from code pseudorange is the **integer ambiguity**$N$. Once$ N$is resolved, $\Phi $ becomes an extremely precise range measurement (mm noise).
+The key difference from code pseudorange is the **integer ambiguity**$N$. Once$N$is resolved, $\Phi$ becomes an extremely precise range measurement (mm noise).
 
 ---
 
 ## 2. Single‑Difference and Double‑Difference
 
-### 2.1. Single Difference (between rover $r$ and base$ b$for the same satellite$ s$)$ $\nabla\Phi_{rb,f}^s = \Phi_{r,f}^s - \Phi_{b,f}^s = \nabla\rho_{rb}^s + c(\delta t_r - \delta t_b) + \lambda_f \nabla N_{rb,f}^s + \nabla I_{rb}^s + \nabla T_{rb}^s
+### 2.1. Single Difference (between rover $r$ and base$b$for the same satellite$s$)$\$ $\nabla\Phi_{rb,f}^s = \Phi_{r,f}^s - \Phi_{b,f}^s = \nabla\rho_{rb}^s + c(\delta t_r - \delta t_b) + \lambda_f \nabla N_{rb,f}^s + \nabla I_{rb}^s + \nabla T_{rb}^s
 $$
 Common errors (satellite clock, ephemeris, atmospheric delays for short baselines) **cancel out**.
 
-### 2.2. Double Difference (between two satellites $s_1, s_2$)$ $\Delta\nabla\Phi_{rb,f}^{s_1s_2} = \nabla\Phi_{rb,f}^{s_1} - \nabla\Phi_{rb,f}^{s_2} = \Delta\nabla\rho_{rb}^{s_1s_2} + \lambda_f \Delta\nabla N_{rb,f}^{s_1s_2} + \Delta\nabla I_{rb}^{s_1s_2} + \Delta\nabla T_{rb}^{s_1s_2} $$Receiver clock terms also cancel. **Double‑difference carrier phase** is the standard RTK observable.
+### 2.2. Double Difference (between two satellites $s_1, s_2$)$\$ $\Delta\nabla\Phi_{rb,f}^{s_1s_2} = \nabla\Phi_{rb,f}^{s_1} - \nabla\Phi_{rb,f}^{s_2} = \Delta\nabla\rho_{rb}^{s_1s_2} + \lambda_f \Delta\nabla N_{rb,f}^{s_1s_2} + \Delta\nabla I_{rb}^{s_1s_2} + \Delta\nabla T_{rb}^{s_1s_2} $$Receiver clock terms also cancel. **Double‑difference carrier phase** is the standard RTK observable.
 
 ---
 
@@ -50,8 +50,7 @@ First, solve for $\Delta\nabla N$ as real numbers using least squares $ $\hat{\m
 
 ### 3.2. Integer least‑squares (ILS)
 
-Search the integer grid:$ $\hat{\mathbf{a}}_{\text{int}} = \underset{\mathbf{a}\in\mathbb{Z}^n}{\arg\min} \quad (\mathbf{a} - \hat{\mathbf{a}}_{\text{float}})^\top \mathbf{Q}_{\hat{\mathbf{a}}}^{-1} (\mathbf{a} - \hat{\mathbf{a}}_{\text{float}})
-$$
+Search the integer grid:$ $\hat{\mathbf{a}}_{\text{int}} = \underset{\mathbf{a}\in\mathbb{Z}^n}{\arg\min} \quad (\mathbf{a} - \hat{\mathbf{a}}_{\text{float}})^\top \mathbf{Q}_{\hat{\mathbf{a}}}^{-1} (\mathbf{a} - \hat{\mathbf{a}}_{\text{float}})$\$$
 Standard search algorithms:
 
 - **LAMBDA** (Least‑squares AMBiguity Decorrelation Adjustment) – decorrelates $\mathbf{Q}$ before integer search (Teunissen, 1995).
@@ -59,7 +58,7 @@ Standard search algorithms:
 - **MLAMBDA** / **Partial Fixing** – fixes a subset when full resolution is uncertain.
 
 ### 3.3. Validation – Ratio tes
-t$ $\text{Ratio} = \frac{\text{Second‑best quadratic form}}{\text{Best quadratic form}} $$If$ \text{Ratio} > \text{threshold} $ (typically 3 or 4), the fix is accepted.
+t$ $\text{Ratio} = \frac{\text{Second‑best quadratic form}}{\text{Best quadratic form}} $$If$ \text{Ratio} > \text{threshold} $\(typically 3 or 4), the fix is accepted.
 
 ---
 
@@ -78,7 +77,7 @@ For larger areas (> 10–20 km baseline), single‑base RTK degrades due to spat
 
 ## 5. Worked Example – Baseline Resolution
 
-**Scenario:** Base at $X_b, Y_b, Z_b$ (known). Rover measures carrier phase on GPS L1 ( $\lambda = 0.19029367$ m) and L2 ( $\lambda = 0.24421021$ m) to 6 satellites.
+**Scenario:** Base at $X_b, Y_b, Z_b$\(known). Rover measures carrier phase on GPS L1 ( $\lambda = 0.19029367$ m) and L2 ( $\lambda = 0.24421021$ m) to 6 satellites.
 
 Double‑difference float ambiguities (after least squares, cycles):
 

@@ -50,7 +50,7 @@ $$
 ### Modul 3: Indeks Spektral
 Menghitung dan menginterpretasikan indeks dari citra:
 
-- NDVI untuk pemetaan vegetasi$ $NDVI = \frac{Band5 - Band4}{Band5 + Band4} \quad (ext{Landsat 8}) $ $- NDWI untuk deteksi badan air
+- NDVI untuk pemetaan vegetasi$ $NDVI = \frac{Band5 - Band4}{Band5 + Band4} \quad (ext{Landsat 8})$\$ $- NDWI untuk deteksi badan air
 
 - SAVI (Soil Adjusted Vegetation Index) untuk lahan terbuka$ $ SAVI = \frac{(NIR - Red)(1 + L)}{NIR + Red + L} $ $- EVI untuk koreksi atmosferik setengah
 

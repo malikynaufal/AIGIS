@@ -40,11 +40,11 @@ $$z = \sum_{i=1}^{n} w_i z_i$ $### 3. Elevasi dan Kontur
 | Atribut | Rumus | Penggunaan |
 |---------|-------|------------|
 | Slope | $\sqrt{(artial z/artial x)^2 + (artial z/artial y)^2} $| Drainage, landslide |
-| Aspect |$\arctan(-artial z/artial x, artial z/artial y) $| Solar radiation |
-| Hillshade |$\cosheta_z\cos\alpha_i + \sinheta_z\sin\alpha_i\cos(hi_{az}-\alpha_{az}) $| Visualisasi |
+| Aspect |$\arctan(-artial z/artial x, artial z/artial y)$\$| Solar radiation |
+| Hillshade |$\cosheta_z\cos\alpha_i + \sinheta_z\sin\alpha_i\cos(hi_{az}-\alpha_{az})$\$| Visualisasi |
 | Curvature |$ artial^2 z/artial x^2 $| Drainage convergence |
-| Roughness |$ ext{Var}(z_i) $ | Texture |
-| TWI (Topographic Wetness Index) | $\ln(a/an\beta)$ | Hydrology |
+| Roughness |$ ext{Var}(z_i)$\$ | Texture |
+| TWI (Topographic Wetness Index) | $\ln(a/an\beta)$\$ | Hydrology |
 | Flow Direction | D8 algorithm | Watershed |
 
 ### 5. Sumber Data

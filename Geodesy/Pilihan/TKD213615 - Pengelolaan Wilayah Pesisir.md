@@ -28,7 +28,7 @@ Coastal Zone Management integrates [[GIS]], [[Remote Sensing]], and [[Survei Hid
 
 **End Point Rate (EPR):**
 $$R_{EPR} = \frac{x_2 - x_1}{t_2 - t_1}$ $**Linear Regression Rate (LRR):**$$
-R_{LRR} = \text{slope of shoreline position vs. time}$ $### 3. Coastal Vulnerability Index (CVI)$$CVI = \frac{\sqrt{\prod_{i=1}^n r_i}}{n}$ $where$ r_i$ are ranked factors (geomorphology, slope, sea-level rise, wave height, tide range)
+R_{LRR} = \text{slope of shoreline position vs. time}$ $### 3. Coastal Vulnerability Index (CVI)$\$$CVI = \frac{\sqrt{\prod_{i=1}^n r_i}}{n}$ $where$r_i$ are ranked factors (geomorphology, slope, sea-level rise, wave height, tide range)
 
 ### 4. Mangrove Monitoring
 

@@ -7,7 +7,7 @@ updated: 2026-07-27
 
 # 🗺️ Projected Coordinates
 
-**Projected coordinates** (e.g., [[UTM]], State Plane, Web Mercator) are a 2D representation in meters on a flat plane — the result of a [[Map Projection]] applied to geodetic coordinates $(\phi, \lambda)$. They enable flat-Earth calculations (distances, areas, angles) over regional extents where ellipsoid curvature can be treated as distortion.
+**Projected coordinates** (e.g., [[UTM]], State Plane, Web Mercator) are a 2D representation in meters on a flat plane — the result of a [[Map Projection]] applied to geodetic coordinates $\(\phi, \lambda)$\$. They enable flat-Earth calculations (distances, areas, angles) over regional extents where ellipsoid curvature can be treated as distortion.
 
 ## Why We Need Them
 
@@ -32,9 +32,9 @@ updated: 2026-07-27
 
 ## Forward and Inverse Problems
 
-### Forward: $(\phi, \lambda) \to (E, N)$ Given geodetic coordinates, apply the projection formulas to get easting (E) and northing (N):$ $E = E_0 + k_0 \cdot f_1(\phi, \lambda)N = N_0 + k_0 \cdot f_2(\phi, \lambda)$$where$ E_0, N_0 $ are false easting/northing, $k_0 $ is the scale factor.
+### Forward: $\(\phi, \lambda) \to (E, N)$\$ Given geodetic coordinates, apply the projection formulas to get easting (E) and northing (N):$ $E = E_0 + k_0 \cdot f_1(\phi, \lambda)N = N_0 + k_0 \cdot f_2(\phi, \lambda)$\$$where $ E_0, N_0 $ are false easting/northing, $k_0$ is the scale factor.
 
-### Inverse:$(E, N) \to (\phi, \lambda) $ Solve the inverse formulas (often iterative for TM projections).
+### Inverse:$\(E, N) \to (\phi, \lambda)$\$ Solve the inverse formulas (often iterative for TM projections).
 
 ## Key Parameters of Any Projection
 
@@ -71,10 +71,10 @@ The scale factor $k_0 < 1$ means projections are **slightly smaller** than the e
 
 ## Worked Example: Projected Distance
 
-**Problem:** Two points in UTM Zone 33N have projected coordinates: $A: (290312.3,\ 5712982.2)$
-$B: (340500.1,\ 5740120.5)$ Compute the grid distance.
+**Problem:** Two points in UTM Zone 33N have projected coordinates: $A: (290312.3,\ 5712982.2)$\$
+$B: (340500.1,\ 5740120.5)$\$ Compute the grid distance.
 
-**Solution:**$ $\Delta E = 340500.1 - 290312.3 = 50187.8\ \text{m}\Delta N = 5740120.5 - 5712982.2 = 27138.3\ \text{m}d_{\text{grid}} = \sqrt{50187.8^2 + 27138.3^2} = \sqrt{2518816563 + 736488307} = 57134.6\ \text{m} $ $**To get the true ground distance**, multiply by the average scale factor at the midpoint. If $k_{\text{mid}} = 1.0002$, then:$ $ d_{\text{true}} = 57134.6 / 1.0002 = 57123.2\ \text{m}$$(Difference: 11.4 m over 57 km — due to 0.02% average distortion.)
+**Solution:**$ $\Delta E = 340500.1 - 290312.3 = 50187.8\ \text{m}\Delta N = 5740120.5 - 5712982.2 = 27138.3\ \text{m}d_{\text{grid}} = \sqrt{50187.8^2 + 27138.3^2} = \sqrt{2518816563 + 736488307} = 57134.6\ \text{m} $ $**To get the true ground distance**, multiply by the average scale factor at the midpoint. If $k_{\text{mid}} = 1.0002$, then:$ $ d_{\text{true}} = 57134.6 / 1.0002 = 57123.2\ \text{m}$$\(Difference: 11.4 m over 57 km — due to 0.02% average distortion.)
 
 ## Accuracy Budget for Surveying
 

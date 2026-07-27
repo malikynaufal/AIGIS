@@ -59,7 +59,7 @@ where $ g $ depends on $\theta $ only through $  T $, and $  h $ does not depend
 
 The exponential family has density
 
-$ $ f(x|\theta) = h(x)\exp\left(\sum_{i=1}^k \eta_i(\theta)T_i(x) - A(\theta)\right)$ $**Theorem**: $\sum_{i=1}^k T_i(X_i) $ is sufficient for $\theta $.
+$ $ f(x|\theta) = h(x)\exp\left(\sum_{i=1}^k \eta_i(\theta)T_i(x) - A(\theta)\right) $ $**Theorem**: $\sum_{i=1}^k T_i(X_i) $ is sufficient for $\theta $.
 
 ---
 
@@ -130,7 +130,9 @@ $ $ E[S(\theta)] = 0\text{Var}(S(\theta)) = I(\theta)$$
 
 For any unbiased estimator $\hat{\theta} $:
 
-$ $\text{Var}(\hat{\theta}) \geq \frac{1}{I(\theta)} $$---
+$ $\text{Var}(\hat{\theta}) \geq \frac{1}{I(\theta)} $$
+
+---
 
 ## 5. Cramér-Rao Lower Bound
 

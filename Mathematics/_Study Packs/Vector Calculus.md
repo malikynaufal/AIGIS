@@ -240,7 +240,9 @@ $ d\mathbf{S} = R\,\hat{\mathbf{r}}\,d\theta\,dz $---
 
 ### 7.2 Identity Chain
 
-$ $\nabla \times (\nabla f) = \mathbf{0} \\quad \text{(curl of gradient is zero)}\nabla \cdot (\nabla \times \mathbf{F}) = 0 \\quad \text{(divergence of curl is zero)} $$---
+$ $\nabla \times (\nabla f) = \mathbf{0} \\quad \text{(curl of gradient is zero)}\nabla \cdot (\nabla \times \mathbf{F}) = 0 \\quad \text{(divergence of curl is zero)} $$
+
+---
 
 ## 8. Integral Theorems: Detailed Examples
 

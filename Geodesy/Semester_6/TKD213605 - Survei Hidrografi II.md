@@ -28,7 +28,7 @@ $$
 -$n$= beam number (0 = nadir)
 
 **Swath width:*
-*$ $W = 2 d \cdot an(\alpha_{\max})$ $**Number of beams:*
+*$ $W = 2 d \cdot an(\alpha_{\max})$\$ $**Number of beams:*
 *$ $N_{ext{beams}} = \frac{2\alpha_{\max}}{\Delta\alpha} + 1 $ $For a typical MBES with$ \alpha_{\max} = 60°$and$ \Delta\alpha = 1°$:$ $N = 121 ext{ beams per swath}$ $ 2.2 MBES Frequency vs. Depth Range
 
 | Frequency | Depth Range | Beam Angle | Resolution |
@@ -59,7 +59,7 @@ The MBES measures along the acoustic beam, requiring compensation for vessel mot
 
 ### 2.3 Motion Compensation
 
-The MBES measures along the acoustic beam, requiring compensation for vessel motion\vec{r}_{ext{corrected}} = \vec{r}_{ext{raw}} - R_z(si) \cdot R_y(heta) \cdot R_x(hi) \cdot \vec{r}_{ext{transducer}}Where $R_x(hi), R_y(heta), R_z(si)$ are rotation matrices for **roll, pitch, yaw** angles compensated by the **MRU (Motion Reference Unit)**.
+The MBES measures along the acoustic beam, requiring compensation for vessel motion\vec{r}_{ext{corrected}} = \vec{r}_{ext{raw}} - R_z(si) \cdot R_y(heta) \cdot R_x(hi) \cdot \vec{r}_{ext{transducer}}Where $R_x(hi), R_y(heta), R_z(si)$\$ are rotation matrices for **roll, pitch, yaw** angles compensated by the **MRU (Motion Reference Unit)**.
 
 ### 2.4 Patch Test
 
@@ -86,7 +86,7 @@ Patch test procedure:
 
 ### 3.1 Operating Principle
 
-Side-scan sonar (SSS) maps the **acoustic seafloor reflectivity** (backscatter), providing imagery of the seabed that complements bathymetric data$ $R = \frac{P_r}{P_t} \cdot \left(\frac{c}{2}\right)^{2\cdot r}$ $where$ R$is reflectivity, $ P_r $= received power, $P_t $= transmitted power, $r$= slant range.
+Side-scan sonar (SSS) maps the **acoustic seafloor reflectivity** (backscatter), providing imagery of the seabed that complements bathymetric data$ $R = \frac{P_r}{P_t} \cdot \left(\frac{c}{2}\right)^{2\cdot r}$ $where$R$is reflectivity, $P_r$= received power, $P_t$= transmitted power, $r$= slant range.
 
 ### 3.2 System Configuration
 
@@ -123,10 +123,10 @@ Side-scan sonar (SSS) maps the **acoustic seafloor reflectivity** (backscatter),
 
 ### 4.1 Harmonic Analysis
 
-Tides can be decomposed into harmonic constituents$ $\eta(t) = Z_0 + \sum_{i=1}^{N} R_i \cos(\omega_i t - hi_i) + \epsilon(t)$ $where:
--$\eta(t)$= water surface elevation at time $t$-$Z_0$= mean water level
+Tides can be decomposed into harmonic constituents$ $\eta(t) = Z_0 + \sum_{i=1}^{N} R_i \cos(\omega_i t - hi_i) + \epsilon(t)$\$ $where:
+-$\eta(t)$\$= water surface elevation at time $t$-$Z_0$= mean water level
 -$R_i$= amplitude of constituent $i$-$\omega_i$= angular frequency of constituent $i$-$hi_i$= phase lag
--$\epsilon(t)$= residual
+-$\epsilon(t)$\$= residual
 
 ### 4.2 Major Tidal Constituents
 
@@ -140,7 +140,7 @@ Tides can be decomposed into harmonic constituents$ $\eta(t) = Z_0 + \sum_{i=1}^
 
 ### 4.3 Tide Prediction
 
-For a given epoch $t$:$ $\eta(t) = Z_0 + \sum_{i=1}^{N} R_i \cos(\omega_i t - hi_i)$ $**Chart datum** typically corresponds to **Lowest Astronomical Tide (LAT)** — the lowest predictable tidal level.
+For a given epoch $t$:$ $\eta(t) = Z_0 + \sum_{i=1}^{N} R_i \cos(\omega_i t - hi_i)$\$ $**Chart datum** typically corresponds to **Lowest Astronomical Tide (LAT)** — the lowest predictable tidal level.
 
 ### 4.4 Indonesian Tidal Regimes
 
@@ -152,7 +152,7 @@ For a given epoch $t$:$ $\eta(t) = Z_0 + \sum_{i=1}^{N} R_i \cos(\omega_i t - hi
 | Arafura Sea | Mixed | Complex |
 
 ### 4.5 Tide Correction for Sounding
-s$ $d_{CD} = d_{ext{observed}} - (ext{HT} - ext{RT}) $ $where:
+s$ $d_{CD} = d_{ext{observed}} - (ext{HT} - ext{RT})$\$ $where:
 
 - HT = Heel Tide (correction for vessel movement)
 
@@ -176,7 +176,7 @@ s$ $d_{CD} = d_{ext{observed}} - (ext{HT} - ext{RT}) $ $where:
 
 - **IHO S-4** (now S-23) defines standard chart datum practices
 
-- **Squat** effect for vessel depth correction$ $\Delta d = \frac{v^2}{2g}(C_B - C_B^2)$ $where$ v$= vessel speed, $g$= gravity, $C_B $= block coefficient.
+- **Squat** effect for vessel depth correction$ $\Delta d = \frac{v^2}{2g}(C_B - C_B^2)$\$ $where$v$= vessel speed, $g$= gravity, $C_B$= block coefficient.
 
 ---
 
@@ -300,7 +300,7 @@ The Indonesian hydrographic fleet uses:
 ### 9.2 Satellite Bathymetry
 
 - **Satellite-derived bathymetry (SDB):*
-*$ $d \approx f(\lambda_{green}, \lambda_{nearext{-}IR}) $ $Green light penetrates water to ~30 m depth; near-IR reflects from surface.
+*$ $d \approx f(\lambda_{green}, \lambda_{nearext{-}IR})$\$ $Green light penetrates water to ~30 m depth; near-IR reflects from surface.
 
 - **Satellite data:** Sentinel-2 (10 m), WorldView (3.7 m)
 
@@ -326,9 +326,9 @@ Airborne LiDAR with green laser penetrates water surface$ $ z_{bottom} = z_{surf
 
 | Concept | Formula |
 |---------|---------|
-| Swath width | $W = 2d \cdot an(\alpha_{\max})$ |
+| Swath width | $W = 2d \cdot an(\alpha_{\max})$\$ |
 | Number of beams | $ N = \frac{2\alpha_{\max}}{\Delta\alpha} + 1 $|
-| Tide prediction |$\eta(t) = Z_0 + \sum R_i \cos(\omega_i t - hi_i) $|
+| Tide prediction |$\eta(t) = Z_0 + \sum R_i \cos(\omega_i t - hi_i)$\$|
 | Heel correction |$ d_{corr} = d / \cosheta $|
 | SDE |$ ext{SDE} = \sqrt{\frac{1}{n}\sum(z_{obs}-z_{grid})^2} $|
 | Backscatter (relative) |$ R = \frac{P_r}{P_t} \cdot \left(\frac{c}{2}\right)^{2r}$ |

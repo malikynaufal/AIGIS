@@ -13,14 +13,14 @@ Fotogrametri Dasar mempelajari prinsip-prinsip pengukuran dari foto udara dan ci
 ### 1. Geometri Kamera
 $$
 x = -f\frac{a_1(X-X_0)+b_1(Y-Y_0)+c_1(Z-Z_0)}{a_3(X-X_0)+b_3(Y-Y_0)+c_3(Z-Z_0)}y = -f\frac{a_2(X-X_0)+b_2(Y-Y_0)+c_2(Z-Z_0)}{a_3(X-X_0)+b_3(Y-Y_0)+c_3(Z-Z_0)} $ $-$f$= focal length
--$(X_0, Y_0, Z_0)$= posisi kamera
+-$\(X_0, Y_0, Z_0)$\$= posisi kamera
 -$a_i, b_i, c_i$= elemen orientasi luar
 
 ### 2. Orientasi Foto
 
 **Orientasi Dalam (Interior Orientation)**: parameter kamera (focal length, principal point, lens distortion).
 
-**Orientasi Luar (Exterior Orientation)**: 6 parameter — posisi $(X_0,Y_0,Z_0)$ dan orientasi sudut $(\omega,\varphi,\kappa)$.
+**Orientasi Luar (Exterior Orientation)**: 6 parameter — posisi $\(X_0,Y_0,Z_0)$\$ dan orientasi sudut $\(\omega,\varphi,\kappa)$\$.
 
 ### 3. Stereoskopi dan Parallax
 

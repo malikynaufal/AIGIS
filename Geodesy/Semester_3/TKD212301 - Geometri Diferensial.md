@@ -22,7 +22,7 @@ Dalam konteks geodesi, geometri differensial digunakan untuk memahami bentuk bum
 
 ### 2. Tensor Metrik dan Koneksi
 
-- **Tensor metrik pertama** (first fundamental form)$ $I = ds^2 = E\,du^2 + 2F\,du\,dv + G\,dv^2 $ $- **Tensor metrik kedua** (second fundamental form)$ $II = L\,du^2 + 2M\,du\,dv + N\,dv^2$ $- **Kurevatur Gaussian** dari tensor metrik$ $K = \frac{LN-M^2}{EG-F^2}$ $- **Koneksi Levi-Civita** dan simbol Christoffel
+- **Tensor metrik pertama** (first fundamental form)$\$ $I = ds^2 = E\,du^2 + 2F\,du\,dv + G\,dv^2 $ $- **Tensor metrik kedua** (second fundamental form)$\$ $II = L\,du^2 + 2M\,du\,dv + N\,dv^2$ $- **Kurevatur Gaussian** dari tensor metrik$ $K = \frac{LN-M^2}{EG-F^2}$ $- **Koneksi Levi-Civita** dan simbol Christoffel
 
 ### 3. Garis Geodesik
 Garis geodesik adalah garis terpendek antara dua titik pada permukaan. Persamaan diferensial garis geodesik pada permukaan:$ $\frac{d^2u^i}{ds^2} + \Gamma^i_{jk}\frac{du^j}{ds}\frac{du^k}{ds} = 0

@@ -184,7 +184,9 @@ $$
 
 $ $\int \sin^n x\, dx = -\frac{\sin^{n-1}x\cos x}{n} + \frac{n-1}{n}\int \sin^{n-2}x\, dx\int \cos^n x\, dx = \frac{\cos^{n-1}x\sin x}{n} + \frac{n-1}{n}\int \cos^{n-2}x\, dx
 
-$$---
+$$
+
+---
 
 ## 5. Definite Integral Properties
 
@@ -203,7 +205,9 @@ $$---
 ### 6.1 Area Between Curve
 s
 
-$ $  A = \int_a^b |f(x) - g(x)|\, dx $$
+$ $  A = \int_a^b |f(x) - g(x)|\, dx
+
+$$
 
 For functions of $ y $: $  A = \int_c^d |x_R(y) - x_L(y)|\, dy $### 6.2 Volume of Solids of Revolution
 
@@ -225,12 +229,16 @@ x
 
 $$
 
-# ## 6.3 Arc Length $ $  L = \int_a^b \sqrt{1 + \left(\frac{dy}{dx}\right)^2}\, dx $$**Application in geodesy:** Computing distances along curved surfaces (geodesic lines on the ellipsoid).
+# ## 6.3 Arc Length $ $  L = \int_a^b \sqrt{1 + \left(\frac{dy}{dx}\right)^2}\, dx
+
+$$**Application in geodesy:** Computing distances along curved surfaces (geodesic lines on the ellipsoid).
 
 ### 6.4 Wor
 k
 
-$ $  W = \int_a^b F(x)\, dx $$
+$ $  W = \int_a^b F(x)\, dx
+
+$$
 
 where $ F(x) $ is the force applied over distance.
 
@@ -244,14 +252,18 @@ $$
 # ## 6.6 Probabilit
 y
 
-$ $ P(a \leq X \leq b) = \int_a^b f(x)\, dx $$
+$ $ P(a \leq X \leq b) = \int_a^b f(x)\, dx
+
+$$
 
 where $ f(x) $ is the probability density function.
 
 ### 6.7 Average Value of a Functio
 n
 
-$ $ f_{\text{avg}} = \frac{1}{b-a}\int_a^b f(x)\, dx $$
+$ $ f_{\text{avg}} = \frac{1}{b-a}\int_a^b f(x)\, dx
+
+$$
 
 ---
 

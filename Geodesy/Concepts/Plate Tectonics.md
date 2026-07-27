@@ -15,7 +15,7 @@ updated: 2026-07-27
 
 ### NUVEL-1A and MORVEL
 
-| Plate | $\Omega$ (°/Myr) | Velocity at center (mm/yr) |
+| Plate | $\Omega$\(°/Myr) | Velocity at center (mm/yr) |
 |-------|---------------------|----------------------------|
 | Pacific | 0.958 | ~88 |
 | Nazca | 0.734 | ~62 |
@@ -73,8 +73,7 @@ flowchart TD
 | SOLO | Sunda | 63.4 N, 12.1 E |
 | PNGA | Australian | 71.5 N, 2.3 E |
 
-## Strain Rate and Seismic Hazard$ $\dot{\epsilon}_{ij} = \frac{1}{2}\left(\frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i}\right)
-$$Maximum shear strain rate:$ $\dot{\gamma}_{max} = \sqrt{\left(\frac{\dot{\epsilon}_{11} - \dot{\epsilon}_{22}}{2}\right)^2 + \dot{\epsilon}_{12}^2}
+## Strain Rate and Seismic Hazard$ $\dot{\epsilon}_{ij} = \frac{1}{2}\left(\frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i}\right)$\$$Maximum shear strain rate:$ $\dot{\gamma}_{max} = \sqrt{\left(\frac{\dot{\epsilon}_{11} - \dot{\epsilon}_{22}}{2}\right)^2 + \dot{\epsilon}_{12}^2}
 $$
 # # In [[Geodesy]] Context
 

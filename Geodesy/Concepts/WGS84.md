@@ -34,7 +34,7 @@ updated: 2026-07-27
 | Prime vertical radius $N$|$\frac{a}{(1-e^2\sin^2\varphi)^{1/2}} $ | 6 378 137 m | 6 399 594 m |
 | Mean radius $R$|$\sqrt{MN} $ | — | — |
 
-### Normal Gravity (Somigliana Formula)$ $\gamma_0(\varphi) = \frac{\gamma_a (1 + k\sin^2\varphi)}{\sqrt{1 - e^2\sin^2\varphi}}
+### Normal Gravity (Somigliana Formula)$\$ $\gamma_0(\varphi) = \frac{\gamma_a (1 + k\sin^2\varphi)}{\sqrt{1 - e^2\sin^2\varphi}}
 $$where:$ $k = \frac{b\gamma_p - a\gamma_a}{a\gamma_a} = 0.00193185138639 $$# # WGS84 Evolution
 
 | Version | Year | Key Change | Alignment |
@@ -49,12 +49,12 @@ $$where:$ $k = \frac{b\gamma_p - a\gamma_a}{a\gamma_a} = 0.00193185138639 $$# # 
 
 ## WGS84 vs GRS80
 
-The WGS84 ellipsoid is defined with the **same** $a$ and$ 1/f $ as [[GRS80]], but WGS84 uses the full normal gravity formula while GRS80 defines only the geometry. For geodetic computations the two are interchangeable.
+The WGS84 ellipsoid is defined with the **same** $a$ and$1/f$ as [[GRS80]], but WGS84 uses the full normal gravity formula while GRS80 defines only the geometry. For geodetic computations the two are interchangeable.
 
 | Property | WGS84 | GRS80 |
 |----------|-------|-------|
-| $a$(m) | 6 378 137.0 | 6 378 137.0 |
-|$ 1/f $ | 298.257223563 | 298.257222101 |
+| $a$\(m) | 6 378 137.0 | 6 378 137.0 |
+|$1/f$ | 298.257223563 | 298.257222101 |
 | Purpose | Full system (coord + gravity) | Reference ellipsoid only |
 | GM | ✅ Defined | ✅ Defined |
 | Normal gravity | ✅ Somigliana | Not specified |
@@ -63,12 +63,10 @@ The WGS84 ellipsoid is defined with the **same** $a$ and$ 1/f $ as [[GRS80]], bu
 
 ### ECEF → Geodetic (Bowring Iteration)
 
-Given $(X, Y, Z)$ in [[Geocentric Cartesian ECEF]]:$ $p = \sqrt{X^2 + Y^2}$$$ $\lambda = \arctan2(Y, X)$$
-$ $\varphi^{(0)} = \arctan\left(\frac{Z}{p(1-e^2)}\right)
-$$Iterate:$ $ N^{(i)} = \frac{a}{\sqrt{1 - e^2\sin^2\varphi^{(i)}}} $$$ $ \varphi^{(i+1)} = \arctan\left(\frac{Z + e^2 N^{(i)}\sin\varphi^{(i)}}{p}\right)
-$$Converges in 3–4 iterations to$< 1 $mm.
+Given $\(X, Y, Z)$\$ in [[Geocentric Cartesian ECEF]]:$ $p = \sqrt{X^2 + Y^2}$$$ $\lambda = \arctan2(Y, X)$\$$
+$ $\varphi^{(0)} = \arctan\left(\frac{Z}{p(1-e^2)}\right)$\$$Iterate:$ $ N^{(i)} = \frac{a}{\sqrt{1 - e^2\sin^2\varphi^{(i)}}} $$$ $ \varphi^{(i+1)} = \arctan\left(\frac{Z + e^2 N^{(i)}\sin\varphi^{(i)}}{p}\right)$\$$Converges in 3–4 iterations to$< 1 $mm.
 
-### Height Relationship$ $h = \frac{p}{\cos\varphi} - N \quad \text{or} \quad h = \frac{Z}{\sin\varphi} + e^2 N $$where$ h$ is [[Ellipsoidal Height]].
+### Height Relationship$ $h = \frac{p}{\cos\varphi} - N \quad \text{or} \quad h = \frac{Z}{\sin\varphi} + e^2 N $$where$h$ is [[Ellipsoidal Height]].
 
 ## Key Equations to Memorize
 
@@ -88,14 +86,14 @@ $$Converges in 3–4 iterations to$< 1 $mm.
 
 ## Study Problems
 
-1. Compute the meridian radius of curvature at latitude $\varphi = -6°$(Jakarta).
-2. Given ECEF coordinates$ (X, Y, Z) = (−5{,}242{,}000, \ldots) $, convert to geodetic.
+1. Compute the meridian radius of curvature at latitude $\varphi = -6°$\(Jakarta).
+2. Given ECEF coordinates$\(X, Y, Z) = (−5{,}242{,}000, \ldots)$\$, convert to geodetic.
 3. Explain why WGS84 G2139 is essentially identical to [[ITRF]]2014.
 4. Compute normal gravity at the equator and pole; what is the difference?
 
 ## Common Mistakes
 
-1. **Confusing $a$ and$ b$** —$a$ is always semi-major (equatorial), $b$ is semi-minor (polar).
+1. **Confusing $a$ and$b$** —$a$ is always semi-major (equatorial), $b$ is semi-minor (polar).
 2. **Using wrong sign for flattening** — $f > 0$, not negative.
 3. **Treating WGS84 as static** — it was updated 7 times; always specify the realization.
 4. **Mixing WGS84 and GRS80** — they differ in $1/f$ by 0.0000000001; negligible for surveying but matters for precise orbits.
@@ -105,8 +103,8 @@ $$Converges in 3–4 iterations to$< 1 $mm.
 - [[GRS80]] — Nearly identical ellipsoid
 - [[ITRF]] — Current realization standard
 - [[Reference Ellipsoid]] — Theoretical basis
-- [[Geodetic Coordinates]] — $(\varphi, \lambda, h)$ on WGS84
-- [[Geocentric Cartesian ECEF]] — $(X, Y, Z)$
+- [[Geodetic Coordinates]] — $\(\varphi, \lambda, h)$\$ on WGS84
+- [[Geocentric Cartesian ECEF]] — $\(X, Y, Z)$\$
 - [[Datum]] — The broader reference system
 - [[GPS]] — Primary user of WGS84
 

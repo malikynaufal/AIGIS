@@ -48,8 +48,7 @@ sym_diff = gpd.overlay(gdf1, gdf2, how='symmetric_difference')
 identity = gpd.overlay(gdf1, gdf2, how='identity')
 ```
 
-#### Raster Overlay (Map Algebra)
-$$C = f(A, B)$ $where$ f$can be:
+#### Raster Overlay (Map Algebra)$\$$C = f(A, B)$\$ $where$f$can be:
 
 - **Arithmetic:**$ A + B$, $A - B$, $A imes B$, $A / B$- **Logical:**$A ext{ AND } B$, $A ext{ OR } B$, $ext{NOT } A$- **Relational:**$A > B$, $A == B$, $A < B$```python
 import rasterio
@@ -94,7 +93,7 @@ buffer = gdf.buffer(500).dissolve()
 
 Interpolation estimates values at unmeasured locations from measured points.
 
-#### Inverse Distance Weighting (IDW)$ $z_0 = \frac{\sum_{i=1}^{n} w_i z_i}{\sum_{i=1}^{n} w_i},
+#### Inverse Distance Weighting (IDW)$\$ $z_0 = \frac{\sum_{i=1}^{n} w_i z_i}{\sum_{i=1}^{n} w_i},
 
 ```python
 from scipy.interpolate import griddata
@@ -191,7 +190,7 @@ acc = grid.accumulation(flowdir)
 
 #### Quadrat Analysis
 
-Tests for complete spatial randomness (CSR)$ $\chi^2 = \sum_{i=1}^{q} \frac{(O_i - E)^2}{E} $ $where$ O_i $= observed points in quadrat$ i$, $E = n/q $= expected.
+Tests for complete spatial randomness (CSR)$\$ $\chi^2 = \sum_{i=1}^{q} \frac{(O_i - E)^2}{E} $ $where$O_i$= observed points in quadrat$i$, $E = n/q $= expected.
 
 #### Nearest Neighbor Analysis
 
@@ -337,7 +336,7 @@ from rsgislib.imageutils import viewshed
 | Derivative | Formula | Unit |
 |------------|---------|------|
 | **Slope** | $\alpha = \arctan\sqrt{(artial z/artial x)^2 + (artial z/artial y)^2} $| degrees/% |
-| **Aspect** |$ heta = \arctan2(-artial z/artial x, artial z/artial y) $| 0–360° |
+| **Aspect** |$ heta = \arctan2(-artial z/artial x, artial z/artial y)$\$| 0–360° |
 | **Curvature (profile)** |$ k_p = \frac{z_{xx}z_x^2 + 2z_{xy}z_xz_y + z_{yy}z_y^2}{(z_x^2 + z_y^2)^{3/2}} $| 1/m |
 | **Curvature (plan)** |$ k_{pl} = \frac{z_{xx}z_y^2 - 2z_{xy}z_xz_y + z_{yy}z_x^2}{(z_x^2 + z_y^2)^{3/2}} $ | 1/m |
 
@@ -364,7 +363,7 @@ aspect = (aspect + 360) % 360
 
 - **SPI** (Stream Power Index) — erosion potential
 
-- **TWI** (Topographic Wetness Index) —$\ln(a / an\beta)$---
+- **TWI** (Topographic Wetness Index) —$\ln(a / an\beta)$\$---
 
 ## 6. Indonesian Spatial Analysis Applications
 
@@ -379,7 +378,7 @@ aspect = (aspect + 360) % 360
 
 ### 6.2 Land Suitability Analysis
 
-Multi-criteria evaluation (MCE) using **AHP** (Analytic Hierarchy Process)$ $S = \sum_{i=1}^{n} w_i \cdot x_i$ $where$ w_i $ are weights from pairwise comparison matrix.
+Multi-criteria evaluation (MCE) using **AHP** (Analytic Hierarchy Process)$\$ $S = \sum_{i=1}^{n} w_i \cdot x_i$ $where$w_i$ are weights from pairwise comparison matrix.
 
 ### 6.3 Watershed Management
 
@@ -414,7 +413,7 @@ Multi-criteria evaluation (MCE) using **AHP** (Analytic Hierarchy Process)$ $S =
 | Moran's I |$ I = \frac{n}{S_0}\frac{\sum w_{ij}(x_i-\bar{x})(x_j-\bar{x})}{\sum(x_i-\bar{x})^2} $|
 | Nearest neighbor |$ R = \frac{\bar{r}_{obs}}{0.5\sqrt{A/n}} $|
 | Slope |$\alpha = \arctan\sqrt{(artial z/artial x)^2 + (artial z/artial y)^2} $|
-| TWI |$\ln(a / an\beta)$ |
+| TWI |$\ln(a / an\beta)$\$ |
 
 ---
 

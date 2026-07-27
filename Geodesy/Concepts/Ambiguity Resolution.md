@@ -16,8 +16,8 @@ updated: 2026-07-27
 The carrier-phase observation equation:
 $$
 \Phi = \rho + c(\delta t_u - \delta t^s) - I + T + \lambda N + \epsilon$ $where:
--$\Phi $= carrier-phase measurement (cycles)
--$\rho $= geometric range (m)
+-$\Phi$= carrier-phase measurement (cycles)
+-$\rho$= geometric range (m)
 -$\delta t_u, \delta t^s $ = receiver and satellite clock errors (s)
 - $I$= ionospheric delay (m)
 -$T$= tropospheric delay (m)
@@ -33,11 +33,10 @@ $$
 
 ### Mathematical Formulation
 
-The float solution gives real-valued ambiguities $\hat{\mathbf{a}}$with covariance $ Q_{\hat{a}\hat{a}}$:$ $\min_{\mathbf{a} \in \mathbb{Z}^n} (\hat{\mathbf{a}} - \mathbf{a})^T Q_{\hat{a}\hat{a}}^{-1} (\hat{\mathbf{a}} - \mathbf{a})
-$$
+The float solution gives real-valued ambiguities $\hat{\mathbf{a}}$with covariance $ Q_{\hat{a}\hat{a}}$:$ $\min_{\mathbf{a} \in \mathbb{Z}^n} (\hat{\mathbf{a}} - \mathbf{a})^T Q_{\hat{a}\hat{a}}^{-1} (\hat{\mathbf{a}} - \mathbf{a})$\$$
 # ## Decorrelation Step
 
-1. Apply Z-transform to decorrelate: $\hat{\mathbf{z}} = Z^T \hat{\mathbf{a}}$2.$ Q_{\hat{z}\hat{z}} = Z^T Q_{\hat{a}\hat{a}} Z $(near-diagonal)
+1. Apply Z-transform to decorrelate: $\hat{\mathbf{z}} = Z^T \hat{\mathbf{a}}$2.$ Q_{\hat{z}\hat{z}} = Z^T Q_{\hat{a}\hat{a}} Z $\(near-diagonal)
 3. Search in$ \mathbf{z} $-space (much faster)
 4. Back-transform:$\hat{\mathbf{a}} = Z^{-T} \hat{\mathbf{z}} $### Search Strategy
 

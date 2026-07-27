@@ -155,7 +155,9 @@ The axes are defined by eigenvectors of $\mathbf{C}_{\hat{x}\hat{x}} $ with semi
 
 **2D error ellipse parameters:**
 
-$ $  a = \hat{\sigma}_0\sqrt{\frac{1}{2}(\sigma_x^2 + \sigma_y^2 + \sqrt{(\sigma_x^2 - \sigma_y^2)^2 + 4\sigma_{xy}^2})}b = \hat{\sigma}_0\sqrt{\frac{1}{2}(\sigma_x^2 + \sigma_y^2 - \sqrt{(\sigma_x^2 - \sigma_y^2)^2 + 4\sigma_{xy}^2})}\theta = \frac{1}{2}\arctan\frac{2\sigma_{xy}}{\sigma_x^2 - \sigma_y^2}$$---
+$ $  a = \hat{\sigma}_0\sqrt{\frac{1}{2}(\sigma_x^2 + \sigma_y^2 + \sqrt{(\sigma_x^2 - \sigma_y^2)^2 + 4\sigma_{xy}^2})}b = \hat{\sigma}_0\sqrt{\frac{1}{2}(\sigma_x^2 + \sigma_y^2 - \sqrt{(\sigma_x^2 - \sigma_y^2)^2 + 4\sigma_{xy}^2})}\theta = \frac{1}{2}\arctan\frac{2\sigma_{xy}}{\sigma_x^2 - \sigma_y^2}$$
+
+---
 
 ## 5. Quality Control in Surveying (Pengendalian Mutu)
 

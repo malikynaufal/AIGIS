@@ -25,7 +25,9 @@ The derivative represents the **slope of the tangent line** to the curve $ y = f
 
 **Geometric interpretation:** The equation of the tangent line at $ x = a $:
 
-$ $  y = f(a) + f'(a)(x - a)$$---
+$ $  y = f(a) + f'(a)(x - a)$$
+
+---
 
 ## 2. Differentiation Rules
 
@@ -72,7 +74,9 @@ $ $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} $$**Examples:**
 
 For $ z = f(x(t), y(t)) $:
 
-$ $\frac{dz}{dt} = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt} $$---
+$ $\frac{dz}{dt} = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt} $$
+
+---
 
 ## 3. Common Derivatives Table
 
@@ -149,7 +153,9 @@ $$
 
 The Taylor series of $ f $ centered at $  a $:
 
-$ $ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots $$
+$ $ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots
+
+$$
 
 The **Maclaurin series** (centered at $ a = 0 $):
 

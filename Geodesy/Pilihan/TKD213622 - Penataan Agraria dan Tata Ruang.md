@@ -26,5 +26,5 @@ Spatial planning concepts (RTRW/RDTR), agrarian law implementation in Indonesia,
 
 ### 3. Spatial Tools
 - Land Suitability Analysis (Multi-Criteria Evaluation - MCE)
-- [[GIS]] suitability models: $Suitability = \sum (Weight \times Factor)$---
+- [[GIS]] suitability models: $Suitability = \sum (Weight \times Factor)$\$---
 *Maintained by AIGIS — part of [[Geodesy MOC]]*

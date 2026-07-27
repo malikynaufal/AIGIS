@@ -48,14 +48,16 @@ $ $ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$ | Term | Interpretation |
 
 ### 2.1 Bernoulli Distribution $ X \sim \text{Bernoulli}(p) $: $ P(X=1)=p $, $ P(X=0)=1-p $.
 
-$ $ E[X] = p, \quad \text{Var}(X) = p(1-p)$ $### 2.2 Binomial Distribution $  X \sim \text{Bin}(n, p) $: number of successes in $  n $ independent Bernoulli trials
+$ $ E[X] = p, \quad \text{Var}(X) = p(1-p) $ $### 2.2 Binomial Distribution $  X \sim \text{Bin}(n, p) $: number of successes in $  n $ independent Bernoulli trials
 .
 
-$ $ P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0, 1, \ldots, nE[X] = np, \quad \text{Var}(X) = np(1-p)$ $**Application in geodesy:** Probability of detecting a gross error in $  n $ independent measurement epochs.
+$ $ P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0, 1, \ldots, nE[X] = np, \quad \text{Var}(X) = np(1-p) $ $**Application in geodesy:** Probability of detecting a gross error in $  n $ independent measurement epochs.
 
 ### 2.3 Poisson Distribution $ X \sim \text{Poisson}(\lambda) $: models count data when events occur at a constant rate.
 
-$ $ P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}, \quad k = 0, 1, 2, \ldotsE[X] = \lambda, \quad \text{Var}(X) = \lambda $$**Application:** Number of GNSS cycle slips per observation session; number of blunders per survey day.
+$ $ P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}, \quad k = 0, 1, 2, \ldotsE[X] = \lambda, \quad \text{Var}(X) = \lambda
+
+$$**Application:** Number of GNSS cycle slips per observation session; number of blunders per survey day.
 
 ### 2.4 Geometric Distribution $ X \sim \text{Geom}(p) $: number of trials until first success.
 
@@ -95,7 +97,7 @@ $ $ E[\chi^2] = k, \quad \text{Var}(\chi^2) = 2k $ $**Key use:** Testing the ove
 
 If $ Z \sim \mathcal{N}(0,1) $ and $  V \sim \chi^2(k) $ independently
 
-$ $  T = \frac{Z}{\sqrt{V/k}} \sim t(k)$ $| Degrees of freedom $\nu $ | 95% two-tailed critical value |
+$ $  T = \frac{Z}{\sqrt{V/k}} \sim t(k) $ $| Degrees of freedom $\nu $ | 95% two-tailed critical value |
 |---------------------------|-------------------------------|
 | 1 | 12.71 |
 | 5 | 2.57 |
@@ -187,7 +189,7 @@ An **estimator** $\hat{\theta} $ is a function of the sample. Good properties:
 
 Given data $\mathbf{x} = (x_1, \ldots, x_n) $ from distribution $ f(x|\theta) $:
 
-$ $ L(\theta) = \prod_{i=1}^n f(x_i|\theta)\ell(\theta) = \ln L(\theta) = \sum_{i=1}^n \ln f(x_i|\theta)$ $**MLE:**$\hat{\theta}_{\text{MLE}} = \arg\max_\theta \ell(\theta) $.
+$ $ L(\theta) = \prod_{i=1}^n f(x_i|\theta)\ell(\theta) = \ln L(\theta) = \sum_{i=1}^n \ln f(x_i|\theta) $ $**MLE:**$\hat{\theta}_{\text{MLE}} = \arg\max_\theta \ell(\theta) $.
 
 Solve $\frac{d\ell}{d\theta} = 0 $ (score equation).
 
@@ -289,7 +291,7 @@ where $ x_{(i)} $ are ordered values and $ a_i $ are tabulated coefficients.
 
 Weighted version of K-S test that gives more weight to the tails
 
-$ $ A^2 = -n - \frac{1}{n}\sum_{i=1}^{n}(2i-1)[\ln F_0(x_{(i)}) + \ln(1 - F_0(x_{(n+1-i)}))]$ $**Geodesy application:** After least-squares adjustment, test whether residuals $\mathbf{v} $ follow $\mathcal{N}(0, \sigma_0^2) $.
+$ $ A^2 = -n - \frac{1}{n}\sum_{i=1}^{n}(2i-1)[\ln F_0(x_{(i)}) + \ln(1 - F_0(x_{(n+1-i)}))] $ $**Geodesy application:** After least-squares adjustment, test whether residuals $\mathbf{v} $ follow $\mathcal{N}(0, \sigma_0^2) $.
 
 ---
 

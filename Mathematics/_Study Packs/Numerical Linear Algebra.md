@@ -63,7 +63,9 @@ If $\kappa(A) = 10^{10} $, we lose ~10 digits → ~6 significant digits remain.
 
 ### 2.1 Factorization
 
-$ $ PA = LU $$
+$ $ PA = LU
+
+$$
 
 where:
 -$ P $: permutation matrix (partial pivoting)
@@ -113,7 +115,9 @@ Thomas algorithm forward sweep, then backward substitution —$ O(n) $ complexit
 ### 3.1 Factorizatio
 n
 
-$ $  A = QR $$
+$ $  A = QR
+
+$$
 
 where $ Q $ is orthogonal ( $ Q^TQ = I $),$  R $ is upper triangular.
 

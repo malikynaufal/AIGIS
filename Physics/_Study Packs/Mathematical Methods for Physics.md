@@ -71,7 +71,9 @@ $ $ \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \quad \frac{\
 # ## Cauchy's Integral Formul
 a
 
-$ $ f(z_0) = \frac{1}{2\pi i} \oint_C \frac{f(z)}{z - z_0} \, dz $$
+$ $ f(z_0) = \frac{1}{2\pi i} \oint_C \frac{f(z)}{z - z_0} \, dz
+
+$$
 
 # ## Residue Theore
 m
@@ -108,7 +110,9 @@ a
 
 **### Fourier Series (Periodic Functions) **
 
- f(x) = \sum_{n=-\infty}^{\infty} c_n \, e^{inx/L}c_n = \frac{1}{2L}\int_{-L}^{L} f(x) \, e^{-inx/L} \, dx $$
+ f(x) = \sum_{n=-\infty}^{\infty} c_n \, e^{inx/L}c_n = \frac{1}{2L}\int_{-L}^{L} f(x) \, e^{-inx/L} \, dx
+
+$$
 
 # ## Key Properties
 | Property | Time Domain | Frequency Domain |
@@ -266,7 +270,9 @@ Add constraint $ g(x, y_1, \ldots, y_n) = 0 $ using multiplier $ \lambda(x) $:
 
 $ $ \frac{\partial F}{\partial y_i} - \frac{d}{dx}\frac{\partial F}{\partial y_i'} + \lambda\frac{\partial g}{\partial y_i} = 0
 
-$$ ---
+$$
+
+---
 
 ## 8. Tensors and Differential Geometry
 

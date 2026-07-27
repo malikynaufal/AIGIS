@@ -61,7 +61,7 @@ updated: 2026-07-27
 
 ### Reference Ellipsoid — Meridian Curvature
 $$
-M = \frac{a(1-e^2)}{(1-e^2\sin^2\phi)^{3/2}} $ $### Prime Vertical Curvature$ $N = \frac{a}{\sqrt{1-e^2\sin^2\phi}}$ $### Geodetic to Cartesian (ECEF)$$
+M = \frac{a(1-e^2)}{(1-e^2\sin^2\phi)^{3/2}} $ $### Prime Vertical Curvature$ $N = \frac{a}{\sqrt{1-e^2\sin^2\phi}}$ $### Geodetic to Cartesian (ECEF)$\$$
 \begin{pmatrix} X \\ Y \\ Z \end{pmatrix} = \begin{pmatrix} (N+h)\cos\phi\cos\lambda \\ (N+h)\cos\phi\sin\lambda \\ (N(1-e^2)+h)\sin\phi \end{pmatrix}
 $$
 ---

@@ -55,17 +55,17 @@ $$
 | Parameter | Value | Unit | Rate | Unit/yr |
 |-----------|-------|------|------|---------|
 | $T_1$ | 0.0021 | m | $\dot{T}_1$| 0.0003 |
-| $ T_2$| 0.0091 | m | $\dot{T}_2$| 0.0006 |
-| $ T_3$| 0.0057 | m | $\dot{T}_3$| -0.0014 |
+| $T_2$| 0.0091 | m | $\dot{T}_2$| 0.0006 |
+| $T_3$| 0.0057 | m | $\dot{T}_3$| -0.0014 |
 | $D$| 0.36e-9 | — |$\dot{D} $| 0.02e-9 |
-|$ R_1 $| -0.054 | mas |$\dot{R}_1 $| 0.011 |
-|$ R_2 $| 0.051 | mas |$\dot{R}_2 $| 0.003 |
-|$ R_3 $| -0.068 | mas |$\dot{R}_3 $ | 0.016 |
+|$R_1$| -0.054 | mas |$\dot{R}_1 $| 0.011 |
+|$R_2$| 0.051 | mas |$\dot{R}_2 $| 0.003 |
+|$R_3$| -0.068 | mas |$\dot{R}_3 $ | 0.016 |
 
 ## ITRF and Tectonic Plates
 
 ITRF station positions change due to plate motion. IERS maintains a plate motion model (NNR-ITRF2014):$ $\mathbf{v}_{NNR} = \boldsymbol{\Omega}_{plate} \times \mathbf{r}
-$$where$ \boldsymbol{\Omega}_{plate} $ is the angular velocity vector of the tectonic plate.
+$$where $ \boldsymbol{\Omega}_{plate} $ is the angular velocity vector of the tectonic plate.
 
 ### Indonesia's Plate Motion
 
@@ -92,8 +92,7 @@ The Sunda arc collision produces deformation that makes Indonesia one of the mos
 
 ### Epoch Management
 
-For precise surveys, reduce coordinates to the survey date:$ $\mathbf{r}(t) = \mathbf{r}(t_0) + \mathbf{v} \cdot (t - t_0)
-$$
+For precise surveys, reduce coordinates to the survey date:$ $\mathbf{r}(t) = \mathbf{r}(t_0) + \mathbf{v} \cdot (t - t_0)$\$$
 For inter-island surveys in Indonesia, velocities of 50–70 mm/yr mean significant displacement between observation dates.
 
 ## Study Problems

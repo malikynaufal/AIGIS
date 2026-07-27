@@ -173,7 +173,9 @@ z
 
 $$
 
-# ## 6.2 Derivatives $ $ f^{(n)}(z_0) = \frac{n!}{2\pi i}\oint_C \frac{f(z)}{(z-z_0)^{n+1}}\,dz $$**Moral**: Analytic functions are infinitely differentiable!
+# ## 6.2 Derivatives $ $ f^{(n)}(z_0) = \frac{n!}{2\pi i}\oint_C \frac{f(z)}{(z-z_0)^{n+1}}\,dz
+
+$$**Moral**: Analytic functions are infinitely differentiable!
 
 ### 6.3 Liouville's Theorem
 
@@ -195,7 +197,9 @@ $$
 
 By Cauchy integral formula: $ $= \frac{1}{2i}(2\pi i\sin i - 2\pi i\sin(-i)) = \pi(\sin i + \sin i) = 2\pi\sin i
 
-$$ ---
+$$
+
+---
 
 ## 7. Series Representations
 
@@ -218,7 +222,9 @@ n
 
 $$
 
-where: $ $ a_n = \frac{1}{2\pi i}\oint_C \frac{f(z)}{(z-z_0)^{n+1}}\,dz $$
+where: $ $ a_n = \frac{1}{2\pi i}\oint_C \frac{f(z)}{(z-z_0)^{n+1}}\,dz
+
+$$
 
 # ## 7.3 Singularity Classification
 
@@ -267,7 +273,9 @@ Singularities at $ z=0 $ and $ z=1 $ (both inside $  C $).
 
 $ $\oint = 2\pi i(2+3) = 10\pi i
 
-$$---
+$$
+
+---
 
 ## 9. Contour Integration
 
@@ -302,7 +310,9 @@ For $ m > 0 $, if $ f(z) \to 0 $ uniformly as $  R \to \infty $ on the semicircl
 
 $ $\lim_{R \to \infty}\int_{C_R} f(z)e^{imz}\,dz = 0
 
-$$---
+$$
+
+---
 
 ## 10. Conformal Mapping
 
@@ -363,7 +373,9 @@ $ $\oint_{|z|=1} \frac{dz/(iz)}{2+(z+z^{-1})/2} = \frac{2}{i}\oint \frac{dz}{z^2
 
 Roots: $ z = -2 \pm \sqrt{3} $. Only $  z = -2+\sqrt{3} \approx -0.268 $ inside $|z|=1 $.
 
-$ $\text{Res} = \frac{2}{i} \cdot \frac{1}{2z+4}\bigg|_{z=-2+\sqrt{3}} = \frac{2}{i}\cdot\frac{1}{2\sqrt{3}} = \frac{1}{i\sqrt{3}}\text{Integral} = 2\pi i \cdot \frac{1}{i\sqrt{3}} = \frac{2\pi}{\sqrt{3}} $$---
+$ $\text{Res} = \frac{2}{i} \cdot \frac{1}{2z+4}\bigg|_{z=-2+\sqrt{3}} = \frac{2}{i}\cdot\frac{1}{2\sqrt{3}} = \frac{1}{i\sqrt{3}}\text{Integral} = 2\pi i \cdot \frac{1}{i\sqrt{3}} = \frac{2\pi}{\sqrt{3}} $$
+
+---
 
 ## 12. Applications
 

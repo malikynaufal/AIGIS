@@ -39,7 +39,7 @@ The design of a geodetic network must balance:
 
 #### Strength of Figure
 
-For a triangle network, the **strength ratio** $R$ determines error propagation $ $R = \frac{ext{product of non-adjusted sides}}{ext{product of adjusted sides}}$ $A smaller$ R$ indicates better geometric strength. For first-order networks, $R < 1.5 imes 10^{-4}$.
+For a triangle network, the **strength ratio** $R$ determines error propagation $ $R = \frac{ext{product of non-adjusted sides}}{ext{product of adjusted sides}}$ $A smaller$R$ indicates better geometric strength. For first-order networks, $R < 1.5 imes 10^{-4}$.
 
 ### 2.3 Geometric Criteria
 
@@ -54,7 +54,7 @@ For a triangle network, the **strength ratio** $R$ determines error propagation 
 
 ### 2.4 Redundancy
 
-The **redundancy** $r$ of a network$ $r = n - u$ $where$ n$is the number of observations and$ u$ is the number of unknowns.
+The **redundancy** $r$ of a network$ $r = n - u$ $where$n$is the number of observations and$u$ is the number of unknowns.
 
 For a 2D network with $p$ points$ $u = 2p - 2 \quad ext{(fixing 2 degrees of freedom)}$ $---
 
@@ -71,16 +71,16 @@ Measurement of **horizontal angles** from network stations:
 | **Schumacher** | 8 observations (4 FL + 4 FR) | Third-order |
 
 **Angular accuracy requirements:*
-*$ $m_{ext{angle}} = \frac{1.5}{\sqrt{2}} \cdot c \; ext{for first-order}$ $where$ c$ is the micrometer reading accuracy of the theodolite (typically 0.01").
+*$ $m_{ext{angle}} = \frac{1.5}{\sqrt{2}} \cdot c \; ext{for first-order}$ $where$c$ is the micrometer reading accuracy of the theodolite (typically 0.01").
 
 ### 3.2 Trilateration (*Trilaterasi*)
 
-Direct measurement of **distances** between stations using EDM (Electronic Distance Measurement)$ $\sigma = \sqrt{(a)^2 + (b \cdot d)^2}$ $where:
+Direct measurement of **distances** between stations using EDM (Electronic Distance Measurement)$\$ $\sigma = \sqrt{(a)^2 + (b \cdot d)^2}$ $where:
 -$a$= constant error (mm)
 -$b$= proportional error (ppm)
 -$d$= distance (km)
 
-For a Leica TDM6000:$\sigma = m(1 ext{ mm} + 0.5 ext{ ppm}) $### 3.3 Combined Method
+For a Leica TDM6000:$\sigma = m(1 ext{ mm} + 0.5 ext{ ppm})$\$### 3.3 Combined Method
 
 Modern geodetic surveys combine:
 
@@ -178,7 +178,7 @@ Modern geodetic surveys combine:
 
 ### 5.1 Fundamental Equation
 
-For a system of $n$ observations and$ u$unknowns, the least squares solution$ $\hat{x} = (A^T P A)^{-1} A^T P l$ $where:
+For a system of $n$ observations and$u$unknowns, the least squares solution$ $\hat{x} = (A^T P A)^{-1} A^T P l$ $where:
 -$\hat{x}$= vector of unknown parameters
 -$A$= design matrix (partial derivatives of observations w.r.t. parameters)
 -$P$= weight matrix ($P = \sigma_0^2 \Sigma^{-1} $, where$ \Sigma $is covariance matrix)
@@ -191,18 +191,18 @@ For a system of $n$ observations and$ u$unknowns, the least squares solution$ $\
 *$ $\sigma_0 = \sqrt{\frac{v^T P v}{n - u}}$ $**Standard error of parameters:*
 *$ $\Sigma_{\hat{x}} = \sigma_0^2 (A^T P A)^{-1}$ $5.3 Chi-Square Tes
 t$ $## 5.3 Chi-Square Tes
-t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u) $ $# ## 5.3 Chi-Square Tes
-t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)If $\chi^2 > \chi^2_{0.95}(n-u)$, the model may be inadequate or outliers may exist.
+t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)$\$ $# ## 5.3 Chi-Square Tes
+t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)If $\chi^2 > \chi^2_{0.95}(n-u)$\$, the model may be inadequate or outliers may exist.
 
 ### 5.4 Network Types and Unknowns
 
 **Horizontal 2D network:**
 
-- Unknowns: coordinates $(x_i, y_i)$ of $p$ points
+- Unknowns: coordinates $\(x_i, y_i)$\$ of $p$ points
 
-- If 2 points fixed:$ u = 2(p-2) $**3D network:**
+- If 2 points fixed:$ u = 2(p-2)$\$**3D network:**
 
-- Unknowns:$(x_i, y_i, z_i) $- If 2 points fixed (6 DOF):$u = 3(p-2) $---
+- Unknowns:$\(x_i, y_i, z_i)$\$- If 2 points fixed (6 DOF):$u = 3(p-2)$\$---
 
 ## 6. Monumentation (*Penentuan Tonggak*)
 
@@ -303,7 +303,7 @@ t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)If $\chi^2 > \chi^2_{0.95
 n$ $|v_i| > k_{\alpha} \cdot \sigma_{v_i}$ $- **Chi-square test** for global model adequacy
 
 ### 9.2 Error Propagatio
-n$ $\Sigma_{f} = B \cdot \Sigma_{\hat{x}} \cdot B^T$ $where$ B$is the Jacobian of the function$ f(\hat{x}) $ with respect to the adjusted parameters.
+n$ $\Sigma_{f} = B \cdot \Sigma_{\hat{x}} \cdot B^T$ $where$B$is the Jacobian of the function$ f(\hat{x})$\$ with respect to the adjusted parameters.
 
 ### 9.3 Reliability
 

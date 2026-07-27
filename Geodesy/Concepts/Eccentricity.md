@@ -11,15 +11,15 @@ In geodesy, **eccentricity** measures how far an ellipse deviates from a circle.
 
 ## First Eccentricity (e)
 
-The **first eccentricity** $e$ relates the semimajor axis $a$ and semiminor axis$ b$:$ $e = \sqrt{1 - \frac{b^2}{a^2}}$$For Earth-like ellipsoids, $e \approx 0.08 $, indicating a near-circular but distinctly oblate shape.
+The **first eccentricity** $e$ relates the semimajor axis $a$ and semiminor axis$b$:$ $e = \sqrt{1 - \frac{b^2}{a^2}}$$For Earth-like ellipsoids, $e \approx 0.08 $, indicating a near-circular but distinctly oblate shape.
 
 ## Second Eccentricity (e′)
 
-The **second eccentricity** $e'$ is used in some geodetic formulas (particularly for auxiliary latitudes and the [[Transverse Mercator]] projection) $ $e' = \sqrt{\frac{a^2}{b^2} - 1}$$It is related to the first eccentricity by $ $e' = \frac{e}{\sqrt{1 - e^2}}$$# # Linear Eccentricity (c)
+The **second eccentricity** $e'$ is used in some geodetic formulas (particularly for auxiliary latitudes and the [[Transverse Mercator]] projection)$\$ $e' = \sqrt{\frac{a^2}{b^2} - 1}$$It is related to the first eccentricity by $ $e' = \frac{e}{\sqrt{1 - e^2}}$$# # Linear Eccentricity (c)
 
 The linear eccentricity (distance from center to focus) is$ $c = \sqrt{a^2 - b^2} = a e$$# # Numerical Values for Common Ellipsoids
 
-| Ellipsoid | $a$(m) |$b$(m) |$e$|$ e^2 $|$ e'$|$e'^2 $ |
+| Ellipsoid | $a$\(m) |$b$\(m) |$e$|$e^2$|$e'$|$e'^2$ |
 |-----------|---------|---------|-----|-------|------|--------|
 | **WGS84** | 6,378,137.0 | 6,356,752.3142 | 0.0818191908426 | 0.0066943799901 | 0.0820944379497 | 0.0067394967423 |
 | **GRS80** | 6,378,137.0 | 6,356,752.3141 | 0.0818191910428 | 0.0066943800229 | 0.0820944381517 | 0.0067394967755 |
@@ -31,7 +31,7 @@ The linear eccentricity (distance from center to focus) is$ $c = \sqrt{a^2 - b^2
 
 ## Relationship to Flattening
 
-The first eccentricity $e$ and [[Flattening]]$f$ are mathematically linked:$ $e^2 = 2f - f^2f = 1 - \sqrt{1 - e^2}$$This relationship means an ellipsoid can be defined equivalently by $(a, f)$ or $(a, e)$. For small flattening ( $f \approx 0.00335$ for Earth), a useful approximation is$ $e^2 \approx 2f$$# # Eccentricity in Geodetic Formulas
+The first eccentricity $e$ and [[Flattening]]$f$ are mathematically linked:$ $e^2 = 2f - f^2f = 1 - \sqrt{1 - e^2}$$This relationship means an ellipsoid can be defined equivalently by $\(a, f)$\$ or $\(a, e)$\$. For small flattening ( $f \approx 0.00335$ for Earth), a useful approximation is$ $e^2 \approx 2f$$# # Eccentricity in Geodetic Formulas
 
 | Application | Where $e$ Appears |
 |-------------|-------------------|
@@ -47,10 +47,10 @@ The relationship between geodetic latitude $\phi$, geocentric latitude $\theta$,
 $$
 # # Worked Example
 
-**Problem:** For the WGS84 ellipsoid ( $a = 6378137.0$ m, $f = 1/298.257223563$), compute $e$, $e^2 $, and$ e'$.
+**Problem:** For the WGS84 ellipsoid ( $a = 6378137.0$m, $f = 1/298.257223563$), compute $e$, $e^2$, and$e'$.
 
 **Solution:**
-1.$f = 1/298.257223563 = 0.00335281066475 $ 2.$ e^2 = 2f - f^2 = 2(0.0033528) - (0.0033528)^2 = 0.0066943799901 $3.$e = \sqrt{0.0066943799901} = 0.0818191908426 $4.$ e' = \frac{e}{\sqrt{1 - e^2}} = \frac{0.08181919}{\sqrt{0.99330562}} = 0.0820944379497$## References
+1.$f = 1/298.257223563 = 0.00335281066475 $2.$ e^2 = 2f - f^2 = 2(0.0033528) - (0.0033528)^2 = 0.0066943799901 $3.$e = \sqrt{0.0066943799901} = 0.0818191908426 $4.$ e' = \frac{e}{\sqrt{1 - e^2}} = \frac{0.08181919}{\sqrt{0.99330562}} = 0.0820944379497$## References
 
 - Torge, W., & Müller, J. (2012). *Geodesy*. de Gruyter.
 

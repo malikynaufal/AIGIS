@@ -76,7 +76,9 @@ $ $\mathbf{x}_{k+1} = \mathbf{x}_k - \mathbf{H}^{-1} \nabla f(\mathbf{x}_k)
 
 $$**Gauss-Newton** (for LS problems, approximates Hessian as $\approx 2\mathbf{A}^T\mathbf{P}\mathbf{A} $):
 
-$ $\delta\mathbf{x} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{v} $$---
+$ $\delta\mathbf{x} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{v} $$
+
+---
 
 ## 2. Error Analysis — Quantifying Uncertainty
 

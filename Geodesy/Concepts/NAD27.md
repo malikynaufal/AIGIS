@@ -41,10 +41,10 @@ $$
 | Parameter | Value |
 |-----------|-------|
 | $a$| 6,378,206.4 m |
-|$b$(derived) | 6,356,583.8 m |
+|$b$\(derived) | 6,356,583.8 m |
 |$f$| 1/294.978698 |
-|$ e^2 $| 0.006768658 |
-|$ e'^2 $ | 0.006814785 |
+|$e^2$| 0.006768658 |
+|$e'^2$ | 0.006814785 |
 | Location difference vs WGS84 | Up to 180 m |
 
 ## Datum Shift: NAD27 → WGS84/NAD83
@@ -53,7 +53,7 @@ The offset between NAD27 and modern datums varies across North America. Direct H
 
 ### Typical Offsets
 
-| Region | $dX$ (NAD27−WGS84) | $dY$ | $dZ$ |
+| Region | $dX$\(NAD27−WGS84) | $dY$ | $dZ$ |
 |--------|--------------------|------|------|
 | Contiguous US | −15 to −50 m | ±20 m | 0 to +20 m |
 | Alaska | −100 to +70 m | −100 to +90 m | −30 to +80 m |
@@ -78,9 +78,9 @@ For NAD27→WGS84 (continental US), approximate parameters:
 | $T_y$ | +152 m |
 | $T_z$ | −178 m |
 | $s$| +3.6 × 10⁻⁶ (3.6 ppm) |
-|$ R_x $| −24.7″ |
-|$ R_y $| +14.5″ |
-|$ R_z$ | +2.37″ |
+|$R_x$| −24.7″ |
+|$R_y$| +14.5″ |
+|$R_z$ | +2.37″ |
 
 These yield ~±20 m accuracy — not good enough for cadastral or engineering work. Grid shifts are mandatory.
 

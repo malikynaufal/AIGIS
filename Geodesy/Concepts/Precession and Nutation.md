@@ -25,8 +25,7 @@ Precession is the slow (~26,000-year) circular motion of Earth's rotational axis
 
 ### Precession Matrix
 
-The precession matrix $P$ transforms from the mean equator of date to the mean equator of J2000.0:$ $P = R_3(\zeta_A) \cdot R_2(\theta_A) \cdot R_3(-z_A)
-$$where:$ $\zeta_A = 2.5976176" + 0.0028469"t + 0.0000050"t^2
+The precession matrix $P$ transforms from the mean equator of date to the mean equator of J2000.0:$ $P = R_3(\zeta_A) \cdot R_2(\theta_A) \cdot R_3(-z_A)$\$$where:$ $\zeta_A = 2.5976176" + 0.0028469"t + 0.0000050"t^2
 $$
 $ $\theta_A = 20.043109" - 0.0085330"t - 0.0000934"t^2
 $$
@@ -45,12 +44,11 @@ Nutation is the short-period wobble of Earth's axis superimposed on precession, 
 
 | Parameter | Symbol | Value | Period |
 |-----------|--------|-------|--------|
-| Obliquity nutation | $\Delta\varepsilon$| $\pm 9.21"$| 18.6 years |
+| Obliquity nutation | $\Delta\varepsilon$|$\pm 9.21"$| 18.6 years |
 | Longitude nutation |$\Delta\psi $|$\pm 17.23"$ | 18.6 years |
 | IAU 2000A terms | — | 678 terms | Various |
 
-### Nutation Matrix$ $N = R_1(-\varepsilon_0) \cdot R_3(\Delta\psi) \cdot R_1(+\varepsilon_0 + \Delta\varepsilon)
-$$where$ \varepsilon_0 $ is the mean obliquity of the ecliptic.
+### Nutation Matrix$ $N = R_1(-\varepsilon_0) \cdot R_3(\Delta\psi) \cdot R_1(+\varepsilon_0 + \Delta\varepsilon)$\$$where $ \varepsilon_0 $ is the mean obliquity of the ecliptic.
 
 ### IAU 2000A Fundamental Arguments
 
@@ -62,7 +60,7 @@ $$where$ \varepsilon_0 $ is the mean obliquity of the ecliptic.
 | Elongation of Moon $D$ | 27.32 days | 297.85020° |
 | Longitude of ascending node $\Omega$ | 18.6 years | 125.04452° |
 
-## Combined: Precession-Nutation (IAU 2000A)$ $\mathbf{r}_{true} = N \cdot P \cdot \mathbf{r}_{J2000.0}
+## Combined: Precession-Nutation (IAU 2000A)$\$ $\mathbf{r}_{true} = N \cdot P \cdot \mathbf{r}_{J2000.0}
 $$
 $$
 \begin{pmatrix} x \\ y \\ z \end{pmatrix}_{true} = N \cdot P \cdot \begin{pmatrix} x \\ y \\ z \end{pmatrix}_{J2000.0}
@@ -72,7 +70,7 @@ $$
 | Parameter | Symbol | Range | IERS Publication |
 |-----------|--------|-------|------------------|
 | UT1-UTC | ΔUT1 | ±0.9 s | Bulletin A |
-| Polar motion | $(x_p, y_p)$ | ±0.4" | Bulletin A |
+| Polar motion | $\(x_p, y_p)$\$ | ±0.4" | Bulletin A |
 | Nutation corrections | $\Delta\varepsilon, \Delta\psi$ | ±0.01" | Bulletin B |
 | LOD (Length of Day) | LOD | 86164 ± 0.001 s | Bulletin A |
 

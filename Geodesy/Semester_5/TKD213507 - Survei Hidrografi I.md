@@ -44,7 +44,7 @@ $$
 ext{Depth}_{Chart} = ext{Observed Depth} - ext{Tide Correction} + ext{Heel Correction} $ $where:
 -$ext{Observed Depth}$= echo sounder reading
 -$ext{Tide Correction}$= difference between water surface and CD
--$ext{Heel Correction}$= ship list correction: $\delta d = d \cdot \sinheta$ for heel angle $ heta$### 2.3 Corrections Applied to Soundings
+-$ext{Heel Correction}$= ship list correction: $\delta d = d \cdot \sinheta$ for heel angle $heta$### 2.3 Corrections Applied to Soundings
 
 1. **Heel correction** — for ship lis
 t$ $d_{corrected} = \frac{d}{\cosheta}$ $ 2. **Draft correction** — for ship's draft $ $d_{corrected} = d - ext{static draft}$ $3. **Speed correction** — for transducer movement
@@ -136,11 +136,11 @@ A nautical chart includes:
 ## 5. Survey Planning
 
 ### 5.1 Coverage Requirement
-s$ $ D_{track} = 3 \cdot d \cdot \sin(\alpha_{max}) $ $where$ d$is the depth and$ \alpha_{max} $ is the maximum beam angle. This ensures overlapping tracks for complete coverage.
+s$ $ D_{track} = 3 \cdot d \cdot \sin(\alpha_{max})$\$ $where$d$is the depth and$ \alpha_{max} $ is the maximum beam angle. This ensures overlapping tracks for complete coverage.
 
 ### 5.2 Line Spacin
 g$ $s = D_{swath} - 2 \cdot \Delta$ $where:
--$D_{swath}$= swath width (at depth $d$):$D_{swath} = 2d \cdot an(\alpha_{max}) $-$\Delta$= overlap (typically 10–25%)
+-$D_{swath}$= swath width (at depth $d$):$D_{swath} = 2d \cdot an(\alpha_{max})$\$-$\Delta$= overlap (typically 10–25%)
 
 For IHO **Order** standards:
 
@@ -222,7 +222,7 @@ d$ $P = \rho \cdot g \cdot h + P_{atm}$ $- **Acoustic tide gauge** — measures 
 ### 7.2 Quality Control (QC) — IHO S-44
 
 **Standard Deviation of Depth Error (SDE):*
-*$ $ ext{SDE} = \sqrt{\frac{\sum_{i=1}^{n} (d_i - \bar{d})^2}{n-1}} $ $where$ d_i $ are the difference between sounding and predicted depth from a digital terrain model.
+*$ $ ext{SDE} = \sqrt{\frac{\sum_{i=1}^{n} (d_i - \bar{d})^2}{n-1}} $ $where$d_i$ are the difference between sounding and predicted depth from a digital terrain model.
 
 **Requirements:**
 -$ext{SDE} \leq 0.25$ m for Order 1
@@ -264,7 +264,7 @@ d$ $P = \rho \cdot g \cdot h + P_{atm}$ $- **Acoustic tide gauge** — measures 
 | Heel correction |$d_{corr} = \frac{d}{\cosheta} $ | m |
 | Swath width |$D = 2d \cdot an\alpha_{max} $ | m |
 | Tide correction |$d_{CD} = d_{raw} - \Delta tide $ | m |
-| Line spacing |$s = D_{swath}(1 - overlap)$ | m |
+| Line spacing |$s = D_{swath}(1 - overlap)$\$ | m |
 
 ---
 

@@ -73,7 +73,7 @@ The **IERS Conventions** (latest: 2010, updated annually) define standards for:
 
 | Item | Value/Model | Source |
 |------|-------------|--------|
-| Earth Rotation Angle (ERA) | $ 0.7790572732640 + 1.00273781191135448 T_U$ (turns) | IERS Conventions |
+| Earth Rotation Angle (ERA) | $ 0.7790572732640 + 1.00273781191135448 T_U$\(turns) | IERS Conventions |
 | Precession | P03 model (Capitaine et al.) | IERS 2010 |
 | Nutation | IERS 2010A (MHB2000) | IERS 2010 |
 | Free core nutation | Variable, ~0.7 yr period | IERS monitoring |

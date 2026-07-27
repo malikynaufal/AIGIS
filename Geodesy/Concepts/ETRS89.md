@@ -21,15 +21,14 @@ ETRS89 is coincident with [[ITRF]]/[[ITRF]] at **epoch 1989.0** (January 1, 1989
 
 ## Relationship to ITRF
 
-The transformation between ETRS89 and ITRF at epoch $t$ follows $ $\mathbf{X}_{ITRF}(t) = \mathbf{X}_{ETRS89} + \mathbf{T}(t) + \mathbf{R}(t)\cdot\mathbf{X}_{ETRS89} + \mathbf{S}(t)
-$$where$ \mathbf{T} $, $\mathbf{R} $, $\mathbf{S} $ are the time-dependent translation, rotation, and scale parameters published by [[IERS]]/[[ITRF]].
+The transformation between ETRS89 and ITRF at epoch $t$ follows $ $\mathbf{X}_{ITRF}(t) = \mathbf{X}_{ETRS89} + \mathbf{T}(t) + \mathbf{R}(t)\cdot\mathbf{X}_{ETRS89} + \mathbf{S}(t)$\$$where $ \mathbf{T} $, $\mathbf{R} $, $\mathbf{S} $ are the time-dependent translation, rotation, and scale parameters published by [[IERS]]/[[ITRF]].
 
 | ITRF Realization | Transformation to ETRS89 (at epoch 2010.0) |
 |------------------|---------------------------------------------|
-| ITRF2000 → ETRS89 | $\mathbf{T}: (0.054, 0.051, -0.048)$m |
-| ITRF2005 → ETRS89 | $\mathbf{T}: (0.054, 0.051, -0.048)$m |
-| ITRF2014 → ETRS89 | $\mathbf{T}: (0.054, 0.051, -0.048)$m |
-| ITRF2020 → ETRS89 | $\mathbf{T}: (0.054, 0.050, -0.049)$m |
+| ITRF2000 → ETRS89 | $\mathbf{T}: (0.054, 0.051, -0.048)$\$m |
+| ITRF2005 → ETRS89 | $\mathbf{T}: (0.054, 0.051, -0.048)$\$m |
+| ITRF2014 → ETRS89 | $\mathbf{T}: (0.054, 0.051, -0.048)$\$m |
+| ITRF2020 → ETRS89 | $\mathbf{T}: (0.054, 0.050, -0.049)$\$m |
 
 *Note: Values approximate; consult EUREF technical notes for official parameters.*
 

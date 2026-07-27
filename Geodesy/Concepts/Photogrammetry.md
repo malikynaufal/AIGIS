@@ -13,12 +13,12 @@ updated: 2026-07-27
 
 ## Fundamental Principle: Collinearity Condition
 
-The collinearity equations relate image coordinates $(x, y)$to object coordinates $ (X, Y, Z)$:$ $x - x_0 = -f \frac{m_{11}(X - X_L) + m_{12}(Y - Y_L) + m_{13}(Z - Z_L)}{m_{31}(X - X_L) + m_{32}(Y - Y_L) + m_{33}(Z - Z_L)}$$$ $y - y_0 = -f \frac{m_{21}(X - X_L) + m_{22}(Y - Y_L) + m_{23}(Z - Z_L)}{m_{31}(X - X_L) + m_{32}(Y - Y_L) + m_{33}(Z - Z_L)}$$where:
--$(x_0, y_0) $ = principal point (mm)
+The collinearity equations relate image coordinates $\(x, y)$\$to object coordinates $\(X, Y, Z)$\$:$ $x - x_0 = -f \frac{m_{11}(X - X_L) + m_{12}(Y - Y_L) + m_{13}(Z - Z_L)}{m_{31}(X - X_L) + m_{32}(Y - Y_L) + m_{33}(Z - Z_L)}$$$ $y - y_0 = -f \frac{m_{21}(X - X_L) + m_{22}(Y - Y_L) + m_{23}(Z - Z_L)}{m_{31}(X - X_L) + m_{32}(Y - Y_L) + m_{33}(Z - Z_L)}$$where:
+-$\(x_0, y_0)$\$ = principal point (mm)
 -$f$= focal length (mm)
--$ (m_{ij}) $ = rotation matrix from object to image system
-- $(X_L, Y_L, Z_L)$ = lens center coordinates
-- $(X, Y, Z)$ = ground point coordinates
+-$\(m_{ij})$\$ = rotation matrix from object to image system
+- $\(X_L, Y_L, Z_L)$\$ = lens center coordinates
+- $\(X, Y, Z)$\$ = ground point coordinates
 
 ## Camera Parameters
 
@@ -27,16 +27,16 @@ The collinearity equations relate image coordinates $(x, y)$to object coordinate
 | Parameter | Symbol | Typical Value | Determined by |
 |-----------|--------|---------------|---------------|
 | Focal length | $f$ | 50–120 mm | Calibration |
-| Principal point | $(x_0, y_0)$ | 0 ± 0.01 mm | Calibration |
+| Principal point | $\(x_0, y_0)$\$ | 0 ± 0.01 mm | Calibration |
 | Lens distortion | $k_1, k_2, k_3$ | Various | Calibration |
 | Affinity | $b_1, b_2$ | 0 ± 1e-5 | Calibration |
 
 ### Distortion Model$ $\Delta r = k_1 r^3 + k_2 r^5 + k_3 r^7 + b_1(r^2 + 2x^2) + 2b_2 xy
-$$where$ r = \sqrt{x^2 + y^2} $ is radial distance from principal point.
+$$where $ r = \sqrt{x^2 + y^2} $ is radial distance from principal point.
 
 ## Exterior Orientation (EO)
 
-Six parameters per photograph: $(X_L, Y_L, Z_L, \omega, \phi, \kappa)$| Parameter | Description | Unit |
+Six parameters per photograph: $\(X_L, Y_L, Z_L, \omega, \phi, \kappa)$\$| Parameter | Description | Unit |
 |-----------|-------------|------|
 | $X_L$ | Lens X coordinate | m |
 | $Y_L$ | Lens Y coordinate | m |
@@ -47,7 +47,7 @@ Six parameters per photograph: $(X_L, Y_L, Z_L, \omega, \phi, \kappa)$| Paramete
 
 ## Photo Scale and Overlap
 
-### Photo Scale$ $S = \frac{f}{H - h} = \frac{f}{\text{AGL}}$$where$ H$= flight altitude and$ h$ = ground elevation.
+### Photo Scale$ $S = \frac{f}{H - h} = \frac{f}{\text{AGL}}$$where$H$= flight altitude and$h$ = ground elevation.
 
 ### Overlap Requirements
 

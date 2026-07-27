@@ -114,7 +114,7 @@ VMF3 (Vienna Mapping Function) is the current state‑of‑the‑art, derived fr
 | 4 | Estimate troposphere Zenith Delay (random‑walk) | ZD estimated per epoch |
 | 5 | Solve position + float ambiguities (Kalman filter) | Coordinates: float |
 | 6 | Apply MW + LAMBDA for AR | WL: fixed, NL: fixed |
-| 7 | Final fixed position | $\sigma_{xy} = 1.8$ cm, $\sigma_z = 3.2$ cm |
+| 7 | Final fixed position | $\sigma_{xy} = 1.8$cm, $\sigma_z = 3.2$ cm |
 
 ---
 

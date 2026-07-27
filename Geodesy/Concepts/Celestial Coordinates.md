@@ -24,11 +24,11 @@ updated: 2026-07-27
 |----------|--------|-------|-----------|
 | Azimuth | $A$ | 0°–360° | North, clockwise |
 | Altitude | $h$ | -90° to +90° | Horizon |
-| Zenith angle | $z$| 0°–180° | Zenith |$ $h = 90° - z, \quad A = \arctan\left(\frac{\sin\alpha}{\cos\alpha \sin\varphi - \tan\delta \cos\varphi}\right) $ $### Conversion: Equatorial ↔ Horizontal$ $ \sin h = \sin\varphi \sin\delta + \cos\varphi \cos\delta \cos H
+| Zenith angle | $z$| 0°–180° | Zenith |$ $h = 90° - z, \quad A = \arctan\left(\frac{\sin\alpha}{\cos\alpha \sin\varphi - \tan\delta \cos\varphi}\right)$\$ $### Conversion: Equatorial ↔ Horizontal$ $ \sin h = \sin\varphi \sin\delta + \cos\varphi \cos\delta \cos H
 $$
 $ $\cos A \sin h = \cos\delta \sin H$$
 $ $\sin A \sin h = \cos\varphi \sin\delta - \sin\varphi \cos\delta \cos H
-$$where$ H = \theta - \alpha $ is the [[Geodetic Astronomy|hour angle]], and $\theta$ is Greenwich Apparent Sidereal Time.
+$$where $ H = \theta - \alpha $ is the [[Geodetic Astronomy|hour angle]], and $\theta$ is Greenwich Apparent Sidereal Time.
 
 ## Epoch Transformations
 
@@ -60,11 +60,11 @@ See [[Precession and Nutation]] for detailed formulas.
 - **Latitude/longitude:** Classical method before [[GPS]]
 
 ### Azimuth from Stellar Observations$ $\alpha_{az} = \sum_{i=1}^{N} w_i \cdot \alpha_{i,obs}
-$$where$ w_i $ weights each observation by altitude, zenith distance, and atmospheric conditions.
+$$where$w_i$ weights each observation by altitude, zenith distance, and atmospheric conditions.
 
 ## Study Problems
 
-1. Convert star coordinates $(\alpha, \delta) = (6h, 23°)$ to local $(A, h)$ for an observer at $\varphi = -7°$ at LST = 10h.
+1. Convert star coordinates $\(\alpha, \delta) = (6h, 23°)$\$ to local $\(A, h)$\$ for an observer at $\varphi = -7°$ at LST = 10h.
 2. Compute the hour angle for a star with $\alpha = 15h$ when GST = 20h.
 3. Explain the difference between precession and nutation.
 

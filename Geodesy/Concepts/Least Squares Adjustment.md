@@ -16,29 +16,27 @@ The **least squares adjustment** (also called *least squares estimation* or *col
 ## 1. Core Idea
 
 For a system with $n$ observations and $u$ unknowns ($n > u $), we write each observation equation as:$ $\ell_i + v_i = f_i(x_1, x_2, \ldots, x_u
-)
-$$or in vector form:$ $\mathbf{L} + \mathbf{V} = \mathbf{F}(\mathbf{X})
-$$
+)$\$$or in vector form:$ $\mathbf{L} + \mathbf{V} = \mathbf{F}(\mathbf{X})$\$$
 where:
 
 | Symbol | Meaning |
 |--------|---------|
 | $\mathbf{L}$| Vector of observations (n×1) |
 | $\mathbf{V}$| Vector of residuals (n×1) |
-| $\mathbf{F}(\mathbf{X})$| Vector of nonlinear functions |
+| $\mathbf{F}(\mathbf{X})$\$| Vector of nonlinear functions |
 | $\mathbf{X}$ | Vector of unknowns (u×1) |
 
 Linearising about an approximate value $\mathbf{X}_0$:$ $\mathbf{V} = \mathbf{A}\,\mathbf{x} - \boldsymbol{\ell} $$with:
 -$\mathbf{A} = \partial\mathbf{F}/\partial\mathbf{X}\big|_{\mathbf{X}_0} $— Jacobian (n×u)
 -$\mathbf{x} = \mathbf{X} - \mathbf{X}_0$— parameter corrections (u×1)
--$\boldsymbol{\ell} = \mathbf{L} - \mathbf{F}(\mathbf{X}_0) $— observed minus computed (n×1)
+-$\boldsymbol{\ell} = \mathbf{L} - \mathbf{F}(\mathbf{X}_0)$\$— observed minus computed (n×1)
 
 ---
 
 ## 2. Least Squares Principle
 
 Minimise the weighted sum of squared residuals$ $\mathbf{V}^\top \mathbf{W}\,\mathbf{V} \;\longrightarrow\; \min
-$$where$ \mathbf{W} = \mathbf{P}^{-1} $and$ \mathbf{P} $ is the **weight matrix** (n×n) of observations. Typically $\mathbf{P} = \text{diag}(\sigma_i^{-2})$for variances $\sigma_i^2$.
+$$where $ \mathbf{W} = \mathbf{P}^{-1} $and$ \mathbf{P} $ is the **weight matrix** (n×n) of observations. Typically $\mathbf{P} = \text{diag}(\sigma_i^{-2})$\$for variances $\sigma_i^2$.
 
 ---
 
@@ -56,27 +54,25 @@ After solving, residuals:$ $\hat{\mathbf{V}} = \mathbf{A}\hat{\mathbf{x}} - \bol
 }
 $$
 **Reference variance** (a posteriori variance factor):$ $\hat{\sigma}_0^2 = \frac{\hat{\mathbf{V}}^\top\mathbf{P}\,\hat{\mathbf{V}}}{n-u} = \frac{\hat{\mathbf{V}}^\top\mathbf{P}\,\hat{\mathbf{V}}}{r}
-$$where$ r = n - u $ is the **redundancy number** (degrees of freedom).
+$$where $ r = n - u $ is the **redundancy number** (degrees of freedom).
 
 ---
 
 ## 5. Variance–Covariance Propagation
 
-The variance–covariance matrix of the adjusted parameters is$ $\boxed{\;\mathbf{Q}_{\hat{\mathbf{X}}} = \sigma_0^2\,\mathbf{N}^{-1}\;} $$The variance–covariance matrix of the residuals $ $\mathbf{Q}_{\hat{\mathbf{V}}} = \sigma_0^2\bigl(\mathbf{P}^{-1} - \mathbf{A}\,\mathbf{N}^{-1}\,\mathbf{A}^\top\bigr)
-$$For a derived quantity$ y = \mathbf{c}^\top\hat{\mathbf{X}} $(a single‑parameter function)$ $\sigma_y^2 = \sigma_0^2 \cdot \mathbf{c}^\top\mathbf{N}^{-1}\mathbf{c} $$---
+The variance–covariance matrix of the adjusted parameters is$ $\boxed{\;\mathbf{Q}_{\hat{\mathbf{X}}} = \sigma_0^2\,\mathbf{N}^{-1}\;} $$The variance–covariance matrix of the residuals $ $\mathbf{Q}_{\hat{\mathbf{V}}} = \sigma_0^2\bigl(\mathbf{P}^{-1} - \mathbf{A}\,\mathbf{N}^{-1}\,\mathbf{A}^\top\bigr)$\$$For a derived quantity$ y = \mathbf{c}^\top\hat{\mathbf{X}} $\(a single‑parameter function)$\$ $\sigma_y^2 = \sigma_0^2 \cdot \mathbf{c}^\top\mathbf{N}^{-1}\mathbf{c} $$---
 
 ## 6. Worked Example – Trilateration Network
 
 A simple level‑net: unknowns are the heights of stations B and C relative to A. Observed differences $h_i$ with weights $p_i$:
 
-| Observation | $h_i$ (m) | $\sigma_i$(mm) | $ p_i = 1/\sigma_i^2$ |
+| Observation | $h_i$\(m) | $\sigma_i$\(mm) | $ p_i = 1/\sigma_i^2$ |
 |-------------|-----------|-----------------|----------------------|
 | A → B | 1.234 | 2 | 250 000 |
 | B → C | −2.105 | 2 | 250 000 |
 | A → C | −0.872 | 2 | 250 000 |
 
-The system in terms of $x_B, x_C$:
-$$
+The system in terms of $x_B, x_C$:$$
 \begin{aligned}
 x_B &= h_{AB} - v_1\\
 x_C - x_B &= h_{BC} - v_2\\
@@ -99,7 +95,7 @@ $$
 ## 7. Special Forms
 
 ### 7.1. Parametric adjustment (what we just did
-)$ $\mathbf{V} = \mathbf{A}\mathbf{x} - \boldsymbol{\ell} $$# ## 7.2. Condition adjustment
+)$\$ $\mathbf{V} = \mathbf{A}\mathbf{x} - \boldsymbol{\ell} $$# ## 7.2. Condition adjustment
 
 Use only redundancy conditions$ $\mathbf{B}\mathbf{V} + \mathbf{W} = 0$$with solution$ \mathbf{V} = -\mathbf{P}^{-1}\mathbf{B}^\top(\mathbf{B}\mathbf{P}^{-1}\mathbf{B}^\top)^{-1}\mathbf{W} $.
 
@@ -108,8 +104,7 @@ Use only redundancy conditions$ $\mathbf{B}\mathbf{V} + \mathbf{W} = 0$$with sol
 Add constraints $\mathbf{C}\hat{\mathbf{x}} = \mathbf{d}$via Lagrange multipliers $$
 \begin{bmatrix} \mathbf{N} & \mathbf{C}^\top \\ \mathbf{C} & 0 \end{bmatrix}\begin{bmatrix} \hat{\mathbf{x}} \\ \boldsymbol{\lambda} \end{bmatrix} = \begin{bmatrix} \mathbf{U} \\ \mathbf{d} \end{bmatrix} $$# ## 7.4. Sequential / Kalman filter
 
-Recursive update for streaming data$ $\hat{\mathbf{x}}_{k+1} = \hat{\mathbf{x}}_k + \mathbf{K}_{k+1}(\ell_{k+1} - \mathbf{a}_{k+1}\hat{\mathbf{x}}_k)
-$$with gain$ \mathbf{K} = \mathbf{Q}_{\hat{\mathbf{x}}_k}\mathbf{a}^\top(\mathbf{a}\mathbf{Q}_{\hat{\mathbf{x}}_k}\mathbf{a}^\top + \sigma^2)^{-1} $.
+Recursive update for streaming data$ $\hat{\mathbf{x}}_{k+1} = \hat{\mathbf{x}}_k + \mathbf{K}_{k+1}(\ell_{k+1} - \mathbf{a}_{k+1}\hat{\mathbf{x}}_k)$\$$with gain$ \mathbf{K} = \mathbf{Q}_{\hat{\mathbf{x}}_k}\mathbf{a}^\top(\mathbf{a}\mathbf{Q}_{\hat{\mathbf{x}}_k}\mathbf{a}^\top + \sigma^2)^{-1} $.
 
 ---
 

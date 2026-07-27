@@ -250,7 +250,9 @@ Randomly select one data point $ i $ per iteration. Crucial for large-scale mach
 
 ### 8.4 Adam Optimizer
 
-$ $ m_t = \beta_1 m_{t-1} + (1-\beta_1)g_tv_t = \beta_2 v_{t-1} + (1-\beta_2)g_t^2\hat{m}_t = \frac{m_t}{1-\beta_1^t}, \\quad \hat{v}_t = \frac{v_t}{1-\beta_2^t}\mathbf{x}_{t+1} = \mathbf{x}_t - \frac{\alpha}{\sqrt{\hat{v}_t}+\epsilon}\hat{m}_t $$---
+$ $ m_t = \beta_1 m_{t-1} + (1-\beta_1)g_tv_t = \beta_2 v_{t-1} + (1-\beta_2)g_t^2\hat{m}_t = \frac{m_t}{1-\beta_1^t}, \\quad \hat{v}_t = \frac{v_t}{1-\beta_2^t}\mathbf{x}_{t+1} = \mathbf{x}_t - \frac{\alpha}{\sqrt{\hat{v}_t}+\epsilon}\hat{m}_t $$
+
+---
 
 ## 9. Practice Problems
 

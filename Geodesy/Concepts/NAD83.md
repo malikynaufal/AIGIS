@@ -58,8 +58,7 @@ NAD83 and ITRF diverge because NAD83 is fixed to the North American plate (≈WG
 
 ### Transformation: NAD83(2011) ↔ ITRF2008
 
-At epoch $t$:$ $\mathbf{X}_{ITRF2008}(t) = \mathbf{T}(t) + (1+s)\,\mathbf{R}(t)\,\mathbf{X}_{NAD83}(t)
-$$| Parameter |$ T_x $|$ T_y $|$ T_z $|$s$|$ R_x $|$ R_y $|$ R_z $ |
+At epoch $t$:$ $\mathbf{X}_{ITRF2008}(t) = \mathbf{T}(t) + (1+s)\,\mathbf{R}(t)\,\mathbf{X}_{NAD83}(t)$\$$| Parameter |$T_x$|$T_y$|$T_z$|$s$|$R_x$|$R_y$|$R_z$ |
 |-----------|-------|-------|-------|-----|-------|-------|-------|
 | Translation (m) | −0.993 | 1.907 | −0.514 | — | — | — | — |
 | Scale (ppb) | — | — | — | 0.809 | — | — | — |
@@ -86,7 +85,7 @@ Converting from [[NAD27]] to NAD83 is not a simple 7-parameter Helmert. The reco
 
 **NADCON** (National Ocean Service, NOAA):
 
-- Input: NAD27 $(\phi, \lambda)$- Output: NAD83 $(\phi, \lambda)$- Method: Bilinear interpolation in a 30″ × 30″ grid of shift values
+- Input: NAD27 $\(\phi, \lambda)$\$- Output: NAD83 $\(\phi, \lambda)$\$- Method: Bilinear interpolation in a 30″ × 30″ grid of shift values
 
 - Accuracy: ±0.15 m (CONUS), ±0.5 m (Alaska)
 
@@ -94,7 +93,7 @@ Converting from [[NAD27]] to NAD83 is not a simple 7-parameter Helmert. The reco
 
 **NTv2** (Natural Resources Canada):
 
-- Input: NAD27 $(\phi, \lambda)$- Output: NAD83 $(\phi, \lambda)$- Grid resolution: 1′ × 1′
+- Input: NAD27 $\(\phi, \lambda)$\$- Output: NAD83 $\(\phi, \lambda)$\$- Grid resolution: 1′ × 1′
 
 - Accuracy: ±0.10 m (southern Canada), ±0.50 m (northern)
 

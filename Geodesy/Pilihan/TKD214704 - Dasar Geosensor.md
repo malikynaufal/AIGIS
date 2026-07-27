@@ -29,7 +29,7 @@ Fundamentals of geo-sensors used in geodetic instruments — electronic theodoli
 ### 2. Sensor Error Models
 
 **Linear sensor model:**
-$$y = a + b \cdot x + \epsilon$ $where$ a$= bias, $b$= scale factor, $\epsilon $ = noise.
+$$y = a + b \cdot x + \epsilon$ $where$a$= bias, $b$= scale factor, $\epsilon $ = noise.
 
 **Allan variance for noise characterization:**$ $\sigma^2(\tau) = \frac{1}{2(N-1)} \sum_{i=1}^{N-1} (y_{i+1}(\tau) - y_i(\tau))^2
 $$
@@ -39,8 +39,7 @@ $$
 $$
 \begin{pmatrix}
 \dot{\phi} \\ \dot{\lambda} \\ \dot{h}
-\end{pmatrix} = f(\mathbf{f}^n, \boldsymbol{\omega}^n, \mathbf{R}_b^n)
-$$
+\end{pmatrix} = f(\mathbf{f}^n, \boldsymbol{\omega}^n, \mathbf{R}_b^n)$\$$
 # ## 4. Calibration
 
 - Scale factor and bias estimation for GNSS receivers

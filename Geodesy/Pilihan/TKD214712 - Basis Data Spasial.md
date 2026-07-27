@@ -35,7 +35,7 @@ SELECT ST_Intersects(a.geom, buffer.geom) AS includes;
 
 ### 3. Spatial Indexing
 
-- R-tree (via GiST): $O(\log N)$ search
+- R-tree (via GiST): $O(\log N)$\$ search
 - Grid indexing for rasters
 
 ---

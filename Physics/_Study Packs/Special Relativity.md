@@ -38,7 +38,9 @@ x = \gamma(x' + vt')t = \gamma(t' + vx'/c^2
 
  \begin{pmatrix} ct' \\ x' \\ y' \\ z' \end{pmatrix} = \begin{pmatrix} \gamma & -\gamma\beta & 0 & 0 \\ -\gamma\beta & \gamma & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} ct \\ x \\ y \\ z \end{pmatrix}
 
-$$ ---
+$$
+
+---
 
 ## 3. Consequences
 

@@ -28,7 +28,7 @@ Advanced applications of [[Remote Sensing]] data for environmental monitoring, r
 
 **NDVI time series for phenology:**
 $$
-NDVI(t) = a + b \sin(2\pi t) + c \cos(2\pi t)$ $**Change detection:**$$\Delta NDVI = NDVI_{t2} - NDVI_{t1}$$
+NDVI(t) = a + b \sin(2\pi t) + c \cos(2\pi t)$\$ $**Change detection:**$$\Delta NDVI = NDVI_{t2} - NDVI_{t1}$$
 # ## 3. Land Cover/Land Use
 
 - Sentinel-2 10-class classification

@@ -47,7 +47,11 @@ $$
 
 # ## 2.4 Fourier Series on $ [-L, L] $
 
-$ $ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos\frac{n\pi x}{L} + b_n\sin\frac{n\pi x}{L}\right)a_n = \frac{1}{L}\int_{-L}^{L}f(x)\cos\frac{n\pi x}{L}\,dx $$---
+$ $ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos\frac{n\pi x}{L} + b_n\sin\frac{n\pi x}{L}\right)a_n = \frac{1}{L}\int_{-L}^{L}f(x)\cos\frac{n\pi x}{L}\,dx
+
+$$
+
+---
 
 ## 3. Worked Examples
 
@@ -55,7 +59,7 @@ $ $ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos\frac{n\pi x}{L} + b_
 
 This is an odd function, so $ a_n = 0 $ for all $  n $.
 
-$ $ b_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)\,dx = \frac{2}{\pi}\int_0^{\pi}\sin(nx)\,dx= \frac{2}{\pi}\left[-\frac{\cos(nx)}{n}\right]_0^{\pi} = \frac{2}{n\pi}(1-\cos n\pi) = \frac{2}{n\pi}(1-(-1)^n)b_n = \begin{cases} \frac{4}{n\pi} & n \text{ odd} \\ 0 & n \text{ even} \end{cases}f(x) = \frac{4}{\pi}\left(\sin x + \frac{\sin 3x}{3} + \frac{\sin 5x}{5} + \cdots\right)$ $### Example 2: Sawtooth Wave $ f(x) = x $ for $  x \in (-\pi, \pi) $, periodic with period $ 2\pi $.
+$ $ b_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)\,dx = \frac{2}{\pi}\int_0^{\pi}\sin(nx)\,dx= \frac{2}{\pi}\left[-\frac{\cos(nx)}{n}\right]_0^{\pi} = \frac{2}{n\pi}(1-\cos n\pi) = \frac{2}{n\pi}(1-(-1)^n)b_n = \begin{cases} \frac{4}{n\pi} & n \text{ odd} \\ 0 & n \text{ even} \end{cases}f(x) = \frac{4}{\pi}\left(\sin x + \frac{\sin 3x}{3} + \frac{\sin 5x}{5} + \cdots\right) $ $### Example 2: Sawtooth Wave $ f(x) = x $ for $  x \in (-\pi, \pi) $, periodic with period $ 2\pi $.
 
 $ a_n = 0 $ (odd function).
 
@@ -103,7 +107,9 @@ For any $ f \in L^2[-\pi,\pi] $, the Fourier series converges in mean-square:
 
 $ $\lim_{N\to\infty}\int|f(x) - S_N(x)|^2\,dx = 0
 
-$$---
+$$
+
+---
 
 ## 6. Fourier Transform
 
@@ -117,7 +123,9 @@ $$
 # ## 6.2 Invers
 e
 
-$ $ f(x) = \frac{1}{2\pi}\int_{-\infty}^{\infty}\hat{f}(\omega)e^{i\omega x}\,d\omega $$
+$ $ f(x) = \frac{1}{2\pi}\int_{-\infty}^{\infty}\hat{f}(\omega)e^{i\omega x}\,d\omega
+
+$$
 
 # ## 6.3 Key Properties
 
