@@ -27,17 +27,17 @@ updated: 2026-07-27
 
 | Quantity | Symbol | Formula | Units |
 |----------|--------|---------|-------|
-| Heat | $ Q $ | $ Q = mc\Delta T $ | J |
-| Work | $ W $ | $ W = \int P\,dV $ | J |
-| Internal energy | $ U $ | $ U = \frac{f}{2}nRT $ | J |
-| Enthalpy | $ H $ | $ H = U + PV $ | J |
+| Heat | $ Q $ | $  Q = mc\Delta T $ | J |
+| Work | $ W $ | $  W = \int P\,dV $ | J |
+| Internal energy | $ U $ | $  U = \frac{f}{2}nRT $ | J |
+| Enthalpy | $ H $ | $  H = U + PV $ | J |
 | Entropy | $ S $ | $ dS = \frac{\delta Q}{T} $ | J/K |
-| Specific heat | $ c $ | $ c = \frac{Q}{m\Delta T} $ | J/(kg·K) |
-| Latent heat | $ L $ | $ Q = mL $ | J/kg |
+| Specific heat | $ c $ | $  c = \frac{Q}{m\Delta T} $ | J/(kg·K) |
+| Latent heat | $ L $ | $  Q = mL $ | J/kg |
 
 ### Ideal Gas Law
 
-$ PV = nRT = Nk_B T $ $ | Gas | Degrees of freedom $$ f $ | $ \gamma = C_P/C_V $ |
+$ PV = nRT = Nk_B T $ $ | Gas | Degrees of freedom $ $ f $ | $ \gamma = C_P/C_V $ |
 |-----|----------------------|-------------------|
 | Monatomic (He, Ne) | 3 | 5/3 = 1.667 |
 | Diatomic (N₂, O₂) | 5 | 7/5 = 1.400 |
@@ -167,7 +167,7 @@ This is a systematic error source in high-precision GPS.
 2. **Forgetting sign conventions:** $ \Delta U = Q - W $ (work done BY system), not $+W $.
 3. **Treating entropy as disorder only:** It's more precisely a measure of energy dispersal at a given temperature.
 4. **Ignoring latent heat:** Phase changes absorb/release huge energy without temperature change.
-5. **Assuming linear response:** Heat flow is nonlinear at large $ \Delta T $ because $ k $, $ c $, $ \alpha $ all vary with temperature.
+5. **Assuming linear response:** Heat flow is nonlinear at large $ \Delta T $ because $  k $, $  c $, $ \alpha $ all vary with temperature.
 
 ---
 

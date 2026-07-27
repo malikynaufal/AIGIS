@@ -29,7 +29,7 @@ $ $
 u(t) = K_p e(t) + K_i \int_0^t e(\tau)\,d\tau + K_d \frac{de(t)}{dt
 }
 
-$ In the Laplace domain: $$ C(s) = K_p + \frac{K_i}{s} + K_d s $ $
+$ In the Laplace domain: $ $ C(s) = K_p + \frac{K_i}{s} + K_d s $ $
 
 | Term (Suku) | Action (Aksi) | Effect (Efek) | Drawback |
 |---|---|---|---|
@@ -39,7 +39,7 @@ $ In the Laplace domain: $$ C(s) = K_p + \frac{K_i}{s} + K_d s $ $
 
 ### 1.2 Ziegler–Nichols Tuning
 
-For a system with critical gain $K_u $ (at sustained oscillation) and critical period $T_u $:
+For a system with critical gain $K_u $ (at sustained oscillation) and critical period $ T_u $:
 
 | Controller | $ K_p $ | $ K_i $ | $ K_d $ |
 |---|---|---|---|
@@ -57,7 +57,7 @@ When the actuator saturates ( $ u_{\min} \leq u \leq u_{\max}$), the integral te
 
 $ $ \dot{x}_i = \frac{1}{T_t}(u_{\text{sat}} - u) + e(t)
 
-$ where $T_t $ is the tracking time constant.
+$ where $ T_t $ is the tracking time constant.
 
 ---
 
@@ -77,7 +77,7 @@ $ $ \mathbf{x}[k+1] = \mathbf{A}_d \mathbf{x}[k] + \mathbf{B}_d \mathbf{u}[k]
 
 $$
 
-### 2.2 Controllability and Observability
+# ## 2.2 Controllability and Observability
 
 **Controllability matrix**
 
@@ -140,7 +140,7 @@ $$
 
 $ \dot{V} < 0 $→ asymptotically stable (stabil asimtotik).
 
-**Lyapunov function for linear systems**: For $ \dot{\mathbf{x}} = \mathbf{A}\mathbf{x} $, choose $ V = \mathbf{x}^T\mathbf{P}\mathbf{x} $where $\mathbf{P} $ solves $ $ \mathbf{A}^T\mathbf{P} + \mathbf{P}\mathbf{A} = -\mathbf{Q} $$
+**Lyapunov function for linear systems**: For $ \dot{\mathbf{x}} = \mathbf{A}\mathbf{x} $, choose $  V = \mathbf{x}^T\mathbf{P}\mathbf{x} $ where $\mathbf{P} $ solves $ $ \mathbf{A}^T\mathbf{P} + \mathbf{P}\mathbf{A} = -\mathbf{Q} $$
 
 The Lyapunov equation for positive $ \mathbf{Q}$ has a positive-definite solution $ \mathbf{P}$ iff all eigenvalues of $ \mathbf{A}$ have negative real parts.
 
@@ -148,7 +148,7 @@ The Lyapunov equation for positive $ \mathbf{Q}$ has a positive-definite solutio
 
 The Nyquist criterion relates open-loop behavior to closed-loop stability. For a system with open-loop transfer function $L(s) $, the number of unstable closed-loop poles:
 
-$ Z = P - N $where $ P $ is the number of unstable open-loop poles and $ N $ is the number of clockwise encirclements of $ (-1, 0) $.
+$ Z = P - N $ where $  P $ is the number of unstable open-loop poles and $  N $ is the number of clockwise encirclements of $ (-1, 0) $.
 
 ### 4.3 Gain and Phase Margins
 

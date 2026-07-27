@@ -29,7 +29,7 @@ $ $ y(x,t) = A\cos(kx - \omega t + \phi) $$
 
 ### Double Slit (Young)
 Path difference: $ \Delta r = d\sin\theta $- **Bright fringes:**$ d\sin\theta = m\lambda $- **Dark fringes:**$ d\sin\theta = (m+\frac{1}{2})\lambda $ Fringe spacing: $ \Delta y = \frac{\lambda L}{d} $### Multiple Slits (Diffraction Grating)
-Principal maxima: $ d\sin\theta = m\lambda $ Angular dispersion: $ \frac{d\theta}{d\lambda} = \frac{m}{d\cos\theta} $ Resolving power: $ R = \frac{\lambda}{\Delta\lambda} = mN $---
+Principal maxima: $ d\sin\theta = m\lambda $ Angular dispersion: $ \frac{d\theta}{d\lambda} = \frac{m}{d\cos\theta} $ Resolving power: $  R = \frac{\lambda}{\Delta\lambda} = mN $---
 
 ## 3. Diffraction
 
@@ -75,7 +75,7 @@ $ $
 ### Key Idea
 Fraunhofer diffraction pattern = **Fourier Transform** of aperture function.
 
-### Aperture Function $ A(x,y) $ For a slit of width $ a $:
+### Aperture Function $ A(x,y) $ For a slit of width $  a $:
 
 $ $
 
@@ -97,7 +97,7 @@ $ $ \mathcal{F}\{\text{rect}(x/a)\text{rect}(y/b)\} = ab\,\text{sinc}(\pi a f_x)
 
 $$
 
-### Convolution Theorem
+# ## Convolution Theorem
 For two apertures: $ A_1 * A_2 \leftrightarrow \mathcal{F}\{A_1\} \cdot \mathcal{F}\{A_2\} $---
 
 ## 6. Laser Basics
@@ -118,7 +118,7 @@ n
 
 $ $ W(N_2 - N_1) = \frac{1}{\tau_c} $$
 
-### Common Laser Types
+# ## Common Laser Types
 | Type | Wavelength | Application |
 |------|------------|-------------|
 | He-Ne | 632.8 nm | Alignment, holography |
@@ -149,8 +149,8 @@ $ $ W(N_2 - N_1) = \frac{1}{\tau_c} $$
 1. Calculate the angular resolution of a 10-m telescope at 500 nm. Compare to Hubble (2.4 m).
 2. A laser has linewidth 1 MHz. What is its coherence length?
 3. Use Jones calculus to find the output of a QWP at 45° followed by a horizontal polarizer for 45° linear input.
-4. Find the Fraunhofer pattern of a triangular aperture of base $ b $ and height $ h $.
-5. A He-Ne laser ($ \lambda = 632.8 $ nm) passes through a 0.2 mm slit at 2 m distance. Find the width of the central maximum.
+4. Find the Fraunhofer pattern of a triangular aperture of base $ b $ and height $  h $.
+5. A He-Ne laser ( $ \lambda = 632.8 $ nm) passes through a 0.2 mm slit at 2 m distance. Find the width of the central maximum.
 
 ---
 

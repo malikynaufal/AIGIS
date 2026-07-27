@@ -55,7 +55,7 @@ $ $ \nabla^2 f = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2 \frac{\partia
 
 $ $ \nabla^2 f = \frac{1}{\rho}\frac{\partial}{\partial\rho}\left(\rho \frac{\partial f}{\partial\rho}\right) + \frac{1}{\rho^2}\frac{\partial^2 f}{\partial\phi^2} + \frac{\partial^2 f}{\partial z^2} $$
 
-### Physics Applications
+# ## Physics Applications
 
 - **Gravitational field:**$ \vec{g} = \nabla U $, where $ \nabla^2 U = 4\pi G\rho $- **Electromagnetism:**$ \nabla \cdot \vec{E} = \rho/\epsilon_0 $, $ \nabla \times \vec{E} = -\partial\vec{B}/\partial t $- **Fluid dynamics:**$ \nabla \cdot \vec{v} = 0 $ (incompressible),$ \nabla \times \vec{v} = \vec{\omega} $ (vorticity)
 
@@ -68,12 +68,12 @@ If $ f(z) = u(x,y) + iv(x,y) $ is analytic, then
 
 $ $ \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \quad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x} $$
 
-### Cauchy's Integral Formul
+# ## Cauchy's Integral Formul
 a
 
 $ $ f(z_0) = \frac{1}{2\pi i} \oint_C \frac{f(z)}{z - z_0} \, dz $$
 
-### Residue Theore
+# ## Residue Theore
 m
 
 $ $ \oint_C f(z) \, dz = 2\pi i \sum_{k} \text{Res}(f, z_k)
@@ -82,7 +82,7 @@ $$
 
 **Computing Residues:**
 
-- **Simple pole:**$ \text{Res}(f, z_0) = \lim_{z \to z_0} (z - z_0) f(z) $- **Pole of order $ n $:** $ \text{Res}(f, z_0) = \frac{1}{(n-1)!} \lim_{z \to z_0} \frac{d^{n-1}}{dz^{n-1}}[(z-z_0)^n f(z)] $### Common Physics Applications
+- **Simple pole:**$ \text{Res}(f, z_0) = \lim_{z \to z_0} (z - z_0) f(z) $- **Pole of order $  n $:** $ \text{Res}(f, z_0) = \frac{1}{(n-1)!} \lim_{z \to z_0} \frac{d^{n-1}}{dz^{n-1}}[(z-z_0)^n f(z)] $### Common Physics Applications
 
 - Evaluating real integrals: $ \int_0^{\infty} \frac{dx}{1+x^2} = \frac{\pi}{2} $ (via semicircular contour)
 
@@ -110,7 +110,7 @@ a
 
  f(x) = \sum_{n=-\infty}^{\infty} c_n \, e^{inx/L}c_n = \frac{1}{2L}\int_{-L}^{L} f(x) \, e^{-inx/L} \, dx $$
 
-### Key Properties
+# ## Key Properties
 | Property | Time Domain | Frequency Domain |
 |----------|-------------|------------------|
 | Linearity | $ af(t) + bg(t) $ | $ a\tilde{f}(\omega) + b\tilde{g}(\omega) $ |
@@ -126,11 +126,11 @@ $ $ \int_{-\infty}^{\infty} |f(t)|^2 \, dt = \frac{1}{2\pi}\int_{-\infty}^{\inft
 
 $$
 
-### Common Transforms
+# ## Common Transforms
 | Function | Transform |
 |----------|-----------|
 | Gaussian $ e^{-at^2} $ | $ \sqrt{\pi/a} \, e^{-\omega^2/(4a)} $ |
-| Rect function $ \text{rect}(t/T) $ | $ T \, \text{sinc}(\omega T/2\pi) $ |
+| Rect function $ \text{rect}(t/T) $ | $  T \, \text{sinc}(\omega T/2\pi) $ |
 | Delta $ \delta(t-t_0) $ | $ e^{-i\omega t_0} $ |
 | Exponential decay $ e^{-at}u(t) $ | $ 1/(a + i\omega) $ |
 
@@ -151,20 +151,20 @@ $ $ \frac{dy}{dx} + P(x)y = Q(x)
 
 $$
 
-**Solution via integrating factor:**$ \mu = e^{\int P \, dx} $, then $ y = \frac{1}{\mu}\int\mu Q \, dx $.
+**Solution via integrating factor:**$ \mu = e^{\int P \, dx} $, then $  y = \frac{1}{\mu}\int\mu Q \, dx $.
 
 ### Second-Order Linear (Constant Coefficients)
 
 $ ay'' + by' + cy = 0 $ Characteristic equation: $ ar^2 + br + c = 0 $.
 
-- **Real distinct roots $ r_1 \neq r_2 $:** $ y = c_1 e^{r_1 x} + c_2 e^{r_2 x} $- **Repeated root $ r $:** $ y = (c_1 + c_2 x)e^{rx} $- **Complex $ r = \alpha \pm i\beta $:** $ y = e^{\alpha x}(c_1\cos\beta x + c_2\sin\beta x) $### Nonhomogeneous: Method of Undetermined Coefficients
+- **Real distinct roots $ r_1 \neq r_2 $:** $  y = c_1 e^{r_1 x} + c_2 e^{r_2 x} $- **Repeated root $  r $:** $  y = (c_1 + c_2 x)e^{rx} $- **Complex $  r = \alpha \pm i\beta $:** $  y = e^{\alpha x}(c_1\cos\beta x + c_2\sin\beta x) $### Nonhomogeneous: Method of Undetermined Coefficients
 For $ ay'' + by' + cy = f(x) $, try particular solution matching the form of $ f(x) $.
 
 ### Euler Equation
 
 $ $ x^2 y'' + ax y' + by = 0 $$
 
-Try $ $ y = x^s $: leads to characteristic equation $ s(s-1) + as + b = 0 $.$
+Try $ $  y = x^s $: leads to characteristic equation $ s(s-1) + as + b = 0 $.$
 
 ### Bessel's Equation
 
@@ -176,7 +176,7 @@ Solutions: Bessel functions $ $ J_\nu(x) $ and $ Y_\nu(x) $.$
 
 $ $ (1-x^2)y'' - 2xy' + \nu(\nu+1)y = 0 $$
 
-Solutions: Legendre polynomials $ $ P_n(x) $ (regular at $ x = \pm 1 $).$
+Solutions: Legendre polynomials $ $ P_n(x) $ (regular at $  x = \pm 1 $).$
 
 ### Physics Applications
 
@@ -231,7 +231,7 @@ u(x) = \int G(x, x') f(x') \, dx' $$ | Equation | Green's Function (3D, free spa
 
 ### Bessel Functions $ J_n(x) $- Solutions to cylindrical problems (waves in cylinders, heat in circular plates)
 
-- **Orthogonality:**$ \int_0^a J_n(\alpha_{nm}r/a) J_n(\alpha_{np}r/a) \, r \, dr = 0 $ for $ m \neq p $- **Asymptotic:** $ J_n(x) \sim \sqrt{\frac{2}{\pi x}}\cos\left(x - \frac{n\pi}{2} - \frac{\pi}{4}\right) $ for $ x \gg 1 $### Legendre Polynomials $ P_n(x) $- Solutions to spherical problems (electrostatics, quantum mechanics)
+- **Orthogonality:**$ \int_0^a J_n(\alpha_{nm}r/a) J_n(\alpha_{np}r/a) \, r \, dr = 0 $ for $  m \neq p $- **Asymptotic:** $ J_n(x) \sim \sqrt{\frac{2}{\pi x}}\cos\left(x - \frac{n\pi}{2} - \frac{\pi}{4}\right) $ for $  x \gg 1 $### Legendre Polynomials $ P_n(x) $- Solutions to spherical problems (electrostatics, quantum mechanics)
 
 - **Rodrigues formula:** $ P_n(x) = \frac{1}{2^n n!}\frac{d^n}{dx^n}(x^2-1)^n $- **Orthonormality:**$ \int_{-1}^{1} P_m(x)P_n(x) \, dx = \frac{2}{2n+1}\delta_{mn} $- First few: $ P_0 = 1 $, $ P_1 = x $, $ P_2 = \frac{1}{2}(3x^2 - 1) $### Associated Legendre Functions $ P_n^m(x) $ Used in spherical harmonic expansion: $ Y_l^m(\theta,\phi) = N_{lm}P_l^m(\cos\theta)e^{im\phi} $### Hermite Functions $ H_n(x) $- Quantum harmonic oscillator eigenfunctions: $ \psi_n(x) = N_n e^{-x^2/2} H_n(x) $- **Recursion:** $ H_{n+1}(x) = 2xH_n(x) - 2nH_{n-1}(x) $### Laguerre Polynomials $ L_n(x) $- Hydrogen atom radial wavefunctions: $ R_{nl}(r) \propto e^{-r/na}L_{2l+1}^{2l+1}(2r/na) $### Airy Functions $ \text{Ai}(x) $, $ \text{Bi}(x) $- Solutions near turning points (WKB approximation in QM, optics caustics)
 
@@ -246,7 +246,7 @@ $ $ \frac{\partial F}{\partial y} - \frac{d}{dx}\frac{\partial F}{\partial y'} =
 
 $$
 
-### Applications
+# ## Applications
 
 - **Brachistochrone:** Fastest descent curve → cycloid
 
@@ -261,7 +261,7 @@ $ $ \frac{\partial F}{\partial y_i} - \frac{d}{dx}\frac{\partial F}{\partial y_i
 
 $$
 
-### With Constraints (Lagrange Multipliers)
+# ## With Constraints (Lagrange Multipliers)
 Add constraint $ g(x, y_1, \ldots, y_n) = 0 $ using multiplier $ \lambda(x) $:
 
 $ $ \frac{\partial F}{\partial y_i} - \frac{d}{dx}\frac{\partial F}{\partial y_i'} + \lambda\frac{\partial g}{\partial y_i} = 0
@@ -275,29 +275,29 @@ A rank-2 tensor $ T_{ij} $ transforms as
 
 $ $ T'_{ij} = \frac{\partial x'^i}{\partial x^k}\frac{\partial x'^j}{\partial x^l}T_{kl} $$
 
-### Metric Tenso
+# ## Metric Tenso
 r
 
-$ ds^2 = g_{ij}dx^i dx^j $ $ - Cartesian: $ g_{ij} = \delta_{ij} $- Spherical: $ g_{rr} = 1 $, $ g_{\theta\theta} = r^2 $, $ g_{\phi\phi} = r^2\sin^2\theta $### Christoffel Symbol $
+$ ds^2 = g_{ij}dx^i dx^j $ $ - Cartesian: $ g_{ij} = \delta_{ij} $- Spherical: $ g_{rr} = 1 $, $ g_{\theta\theta} = r^2 $, $ g_{\phi\phi} = r^2\sin^2\theta $### Christoffel Symbol $ 
 s
 
 $ $ \Gamma^k_{ij} = \frac{1}{2}g^{kl}\left(\frac{\partial g_{li}}{\partial x^j} + \frac{\partial g_{lj}}{\partial x^i} - \frac{\partial g_{ij}}{\partial x^l}\right)
 
 $$
 
-### Covariant Derivativ
+# ## Covariant Derivativ
 e
 
 $ $ \nabla_j V^i = \frac{\partial V^i}{\partial x^j} + \Gamma^i_{jk}V^k
 
 $$
 
-### Riemann Curvature Tenso
+# ## Riemann Curvature Tenso
 r
 
 $ $ R^i_{\ jkl} = \frac{\partial\Gamma^i_{jl}}{\partial x^k} - \frac{\partial\Gamma^i_{jk}}{\partial x^l} + \Gamma^i_{mk}\Gamma^m_{jl} - \Gamma^i_{ml}\Gamma^m_{jk} $$
 
-### Physics Applications
+# ## Physics Applications
 
 - **General relativity:** Einstein field equations $ R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R = \frac{8\pi G}{c^4}T_{\mu\nu} $- **Continuum mechanics:** Stress tensor $ \sigma_{ij} $, strain tensor $ \epsilon_{ij} $- **Crystallography:** Inertia tensor, dielectric tensor
 
@@ -310,7 +310,7 @@ s
 
 $ $ A\vec{v} = \lambda\vec{v} $$
 
-- **Characteristic equation:**$ \det(A - \lambda I) = 0 $- **Diagonalization:** $ A = PDP^{-1} $ where $ D $ = diagonal eigenvalues
+- **Characteristic equation:**$ \det(A - \lambda I) = 0 $- **Diagonalization:** $  A = PDP^{-1} $ where $  D $ = diagonal eigenvalues
 
 ### Hermitian Operators
 

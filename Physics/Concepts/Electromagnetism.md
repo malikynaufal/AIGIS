@@ -46,8 +46,8 @@ $ $ \oint_S \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\epsilon_0
 
 $$
 
-### Derivation from Coulomb's Law
-Consider a point charge $ q $ at the origin. On a sphere of radius $ r $:
+# ## Derivation from Coulomb's Law
+Consider a point charge $ q $ at the origin. On a sphere of radius $  r $:
 
 - $ \vec{E} = \frac{q}{4\pi\epsilon_0 r^2}\hat{r} $ (radial)
 -$ d\vec{A} = r^2\sin\theta\,d\theta\,d\phi\,\hat{r} $ (radial)
@@ -55,22 +55,22 @@ Consider a point charge $ q $ at the origin. On a sphere of radius $ r $:
 
 $ $ \oint \vec{E}\cdot d\vec{A} = \frac{q}{4\pi\epsilon_0}\int_0^{2\pi}d\phi\int_0^{\pi}\sin\theta\,d\theta = \frac{q}{4\pi\epsilon_0}\cdot 4\pi = \frac{q}{\epsilon_0} $$
 
-### Applications
+# ## Applications
 | Geometry | Surface | Result |
 |----------|---------|--------|
 | Point charge | Sphere | $ E = \frac{q}{4\pi\epsilon_0 r^2} $ |
-| Infinite line ($\lambda $) | Cylinder | $ E = \frac{\lambda}{2\pi\epsilon_0 r} $ |
-| Infinite plane ($\sigma $) | Gaussian pillbox | $ E = \frac{\sigma}{2\epsilon_0} $ |
+| Infinite line ( $\lambda $) | Cylinder | $  E = \frac{\lambda}{2\pi\epsilon_0 r} $ |
+| Infinite plane ( $\sigma $) | Gaussian pillbox | $  E = \frac{\sigma}{2\epsilon_0} $ |
 | Conducting sphere | Outer sphere | $ E = \frac{q}{4\pi\epsilon_0 r^2} $ (outside) |
 
 ### Worked Example: Electric Field of a Thick Shell
-A conducting spherical shell has inner radius $ R_1 $, outer radius $ R_2 $, charge $ Q $.
+A conducting spherical shell has inner radius $ R_1 $, outer radius $ R_2 $, charge $  Q $.
 
-- **Inside ( $ r < R_1 $):** $ E = 0 $ (no enclosed charge)
+- **Inside ( $ r < R_1 $):** $  E = 0 $ (no enclosed charge)
 
-- **Between shells ( $ R_1 < r < R_2 $):** $ E = 0 $ (inside conductor)
+- **Between shells ( $ R_1 < r < R_2 $):** $  E = 0 $ (inside conductor)
 
-- **Outside ( $ r > R_2 $):** $ E = \frac{Q}{4\pi\epsilon_0 r^2} $ (total charge enclosed)
+- **Outside ( $ r > R_2 $):** $  E = \frac{Q}{4\pi\epsilon_0 r^2} $ (total charge enclosed)
 
 **Dimensional check:**$ [E] = \frac{[q]}{\epsilon_0 [r^2]} = \frac{C}{(F/m)(m^2)} = \frac{C \cdot m}{F \cdot m^2} = \frac{V}{m} $✓
 
@@ -88,17 +88,17 @@ where $\mu_0 = 4\pi \times 10^{-7} $ T·m/A (permeability of free space).
 ### Ampere's Law
 The line integral of $ \vec{B} $ around a closed loop equals $\mu_0 $ times the enclosed current $ $ \oint_C \vec{B}\cdot d\vec{l} = \mu_0 I_{\text{enc}} $$
 
-### Differential For
+# ## Differential For
 m
 
 $ $ \nabla \times \vec{B} = \mu_0\vec{J} $$
 
-### Applications
+# ## Applications
 | Geometry | Loop | Result |
 |----------|------|--------|
-| Infinite straight wire | Circle of radius $ r $ | $ B = \frac{\mu_0 I}{2\pi r} $ |
-| Solenoid ($ n $ turns/m) | Rectangle inside | $ B = \mu_0 n I $ |
-| Toroid ($ N $ turns, radius $ R $) | Circle of radius $ r $ | $ B = \frac{\mu_0 N I}{2\pi r} $ |
+| Infinite straight wire | Circle of radius $ r $ | $  B = \frac{\mu_0 I}{2\pi r} $ |
+| Solenoid ( $ n $ turns/m) | Rectangle inside | $  B = \mu_0 n I $ |
+| Toroid ( $ N $ turns, radius $  R $) | Circle of radius $  r $ | $  B = \frac{\mu_0 N I}{2\pi r} $ |
 
 ---
 
@@ -109,7 +109,7 @@ A changing magnetic flux induces an electromotive force (EMF)
 
 $ $ \mathcal{E} = -\frac{d\Phi_B}{dt} $$
 
-### Differential For
+# ## Differential For
 m
 
 $ $ \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} $$
@@ -121,7 +121,7 @@ e
 
 $ $ \mathcal{E} = -L\frac{dI}{dt} $$
 
-For a solenoid: $ $ L = \mu_0 n^2 \ell A $ where $\ell $ is length,$ A $ is cross-sectional area.
+For a solenoid: $ $  L = \mu_0 n^2 \ell A $ where $\ell $ is length,$  A $ is cross-sectional area.
 
 ---
 
@@ -146,7 +146,7 @@ $ $ \begin{aligned}
 \oint_C \vec{B}\cdot d\vec{l} &= \mu_0 I_{\text{enc}} + \mu_0\epsilon_0\frac{d\Phi_E}{dt}
 \end{aligned} $$
 
-### Physical Meaning of Each Equation
+# ## Physical Meaning of Each Equation
 | Equation | Name | Meaning |
 |----------|------|---------|
 | $ \nabla \cdot \vec{E} = \rho/\epsilon_0 $ | Gauss's Law (E) | Charges produce electric fields |
@@ -162,7 +162,7 @@ The term $ \mu_0\epsilon_0\frac{\partial \vec{E}}{\partial t} $ was Maxwell's cr
 ## 6. Electromagnetic Waves
 
 ### Derivation of the Wave Equation
-From Faraday's and Ampere-Maxwell in vacuum ($ \rho = 0 $, $ \vec{J} = 0 $):
+From Faraday's and Ampere-Maxwell in vacuum ( $ \rho = 0 $, $ \vec{J} = 0 $):
 
 Take the curl of Faraday's Law:
 
@@ -210,7 +210,7 @@ In a dielectric medium, the permittivity becomes $ \epsilon = \kappa\epsilon_0 $
 
 $ $ \vec{E} = \frac{\vec{E}_{\text{vac}}}{\kappa} \quad \text{(inside dielectric)} $$
 
-### Gauss's Law in Dielectric
+# ## Gauss's Law in Dielectric
 s
 
 $ $ \nabla \cdot \vec{D} = \rho_f \quad \text{where } \vec{D} = \epsilon\vec{E} $$
@@ -231,10 +231,10 @@ $ $ \nabla \cdot \vec{D} = \rho_f \quad \text{where } \vec{D} = \epsilon\vec{E} 
 ---
 
 ## Study Problems
-1. Use Gauss's law to find the electric field inside and outside a uniformly charged sphere of radius $ R $ and total charge $ Q $.
+1. Use Gauss's law to find the electric field inside and outside a uniformly charged sphere of radius $ R $ and total charge $  Q $.
 2. Derive Ampere's law for the magnetic field inside a long solenoid with $ n $ turns per meter.
 3. Show that electromagnetic waves carry energy at the rate given by the Poynting vector.
-4. A parallel plate capacitor has $ \kappa = 3 $, area $ A $, separation $ d $. Find the capacitance and the stored energy.
+4. A parallel plate capacitor has $ \kappa = 3 $, area $  A $, separation $  d $. Find the capacitance and the stored energy.
 5. Verify the speed of light from $ \mu_0 $ and $\epsilon_0 $ values.
 
 ---

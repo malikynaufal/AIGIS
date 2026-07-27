@@ -26,23 +26,23 @@ The relationship between input (stimulus) $x $ and output (response) $ y$ is cha
 
 **Sensitivity** (sensitivitas): Rate of change of output with respect to input
 
-$S = \frac{\partial y}{\partial x} \bigg|_{x_0} $ Example: A thermocouple with $S = 41\;\mu\text{V/°C} $ produces 41 μV per degree change.
+$S = \frac{\partial y}{\partial x} \bigg|_{x_0} $ Example: A thermocouple with $  S = 41\;\mu\text{V/°C} $ produces 41 μV per degree change.
 
 **Linearity** (linearitas): Maximum deviation from ideal linear response
 
 $ $ \text{Linearity} = \frac{\max|y_i - (mx_i + b)|}{y_{\text{FS}}} \times 100\% $$
 
-**Hysteresis** (histeresis): Difference in output for increasing vs. decreasing input $ $ H = \frac{\max|y_{\uparrow}(x) - y_{\downarrow}(x)|}{y_{\text{FS}}} \times 100\% $$
+**Hysteresis** (histeresis): Difference in output for increasing vs. decreasing input $ $  H = \frac{\max|y_{\uparrow}(x) - y_{\downarrow}(x)|}{y_{\text{FS}}} \times 100\% $$
 
-### 1.2 Dynamic Characteristics
+# ## 1.2 Dynamic Characteristics
 
 A sensor's response to time-varying inputs is modeled as a differential equation. First-order sensor
 
 $ $ \tau \frac{dy}{dt} + y = K \cdot x(t)
 
-$ where $\tau $ is the time constant (konstanta waktu) and $ K $ is the steady-state gain. For a step input $ x(t) = u_0 \cdot u(t) $:
+$ where $\tau $ is the time constant (konstanta waktu) and $  K $ is the steady-state gain. For a step input $ x(t) = u_0 \cdot u(t) $:
 
-$ $ y(t) = K u_0 \left(1 - e^{-t/\tau}\right) $$ A sensor reaches 99% of final value at $ $ t = 5\tau $.
+$ $ y(t) = K u_0 \left(1 - e^{-t/\tau}\right) $ $ A sensor reaches 99% of final value at $ $  t = 5\tau $.
 
 Second-order sensor (model umum):
 
@@ -68,9 +68,9 @@ $ where $\omega_n $ is the natural frequency (frekuensi alami) and $\zeta$ is th
 
 ### 2.2 Piezoelectric Sensors
 
-The piezoelectric effect (efek piezoelektrik) generates charge $q $ proportional to applied force $ F $:
+The piezoelectric effect (efek piezoelektrik) generates charge $q $ proportional to applied force $  F $:
 
-$ q = d \cdot F $where $ d $ is the piezoelectric constant (typically 2–500 pC/N). The open-circuit voltage $ V = \frac{q}{C_p} = \frac{d \cdot F}{C_p} $where $ C_p $is the sensor capacitance. Piezoelectric sensors cannot measure DC signals due to charge leakage through $R_p $:
+$ q = d \cdot F $ where $  d $ is the piezoelectric constant (typically 2–500 pC/N). The open-circuit voltage $  V = \frac{q}{C_p} = \frac{d \cdot F}{C_p} $ where $ C_p $ is the sensor capacitance. Piezoelectric sensors cannot measure DC signals due to charge leakage through $ R_p $:
 
 $ $ V(t) = V_0 e^{-t/(R_p C_p)} $$
 
@@ -89,7 +89,7 @@ $$
 
 Modern MEMS accelerometers (e.g., Analog Devices ADXL355) achieve:
 
-- Noise density: $ 25\;\mu g/\sqrt{\text{Hz}} $- Bias stability: $ 0.25\;\text{mg} $over temperature
+- Noise density: $ 25\;\mu g/\sqrt{\text{Hz}} $- Bias stability: $ 0.25\;\text{mg} $ over temperature
 
 - Bandwidth: DC to 1.5 kHz
 
@@ -101,13 +101,13 @@ Modern MEMS accelerometers (e.g., Analog Devices ADXL355) achieve:
 
 **Thermal (Johnson–Nyquist) noise**
 
-$V_n = \sqrt{4 k_B T R \Delta f} $ where $k_B = 1.38 \times 10^{-23} $ J/K, $T $ is temperature (K), $ R $ is resistance (Ω), and $\Delta f $ is bandwidth (Hz).
+$V_n = \sqrt{4 k_B T R \Delta f} $ where $ k_B = 1.38 \times 10^{-23} $ J/K, $  T $ is temperature (K), $  R $ is resistance (Ω), and $\Delta f $ is bandwidth (Hz).
 
 **Shot noise** (noise tembakan)
 
-$i_n = \sqrt{2 e I \Delta f} $ where $e = 1.6 \times 10^{-19} $ C and $I $ is the average current.
+$i_n = \sqrt{2 e I \Delta f} $ where $  e = 1.6 \times 10^{-19} $ C and $  I $ is the average current.
 
-**1/$ f $(flicker) noise** (noise kedip)
+**1/$ f $ (flicker) noise** (noise kedip)
 
 $ V_{1/f}^2 = \frac{K_f}{f^n} \Delta f, \quad n \approx 1 $ $
 
@@ -135,7 +135,7 @@ This shows the first stage dominates the system noise — the rationale for low-
 **Comparison method**: Compare sensor output against a reference standard under controlled conditions
 .
 
-$y = a_0 + a_1 x + a_2 x^2 + \cdots + \epsilon $ Calibration coefficients $a_i $ determined by least-squares regression.
+$y = a_0 + a_1 x + a_2 x^2 + \cdots + \epsilon $ Calibration coefficients $ a_i $ determined by least-squares regression.
 
 **Substitution method**: Replace the DUT (device under test) with a calibrated standard and compare readings.
 
@@ -145,7 +145,7 @@ $y = a_0 + a_1 x + a_2 x^2 + \cdots + \epsilon $ Calibration coefficients $a_i $
 
 The combined standard uncertainty from calibration
 
-$u_c = \sqrt{u_{\text{ref}}^2 + u_{\text{repeatability}}^2 + u_{\text{hysteresis}}^2 + u_{\text{environment}}^2} $Expanded uncertainty at 95% confidence: $ U = k \cdot u_c $where $ k = 2 $for normal distribution.
+$u_c = \sqrt{u_{\text{ref}}^2 + u_{\text{repeatability}}^2 + u_{\text{hysteresis}}^2 + u_{\text{environment}}^2} $ Expanded uncertainty at 95% confidence: $  U = k \cdot u_c $ where $  k = 2 $ for normal distribution.
 
 ---
 
@@ -157,7 +157,7 @@ The ADC resolution (resolusi ADC) determines the minimum detectable signal chang
 
 $ $ \text{LSB} = \frac{V_{\text{ref}}}{2^n} $$
 
-For a 12-bit ADC with $ V_{\text{ref}} = 3.3 $V: LSB = 0.81 mV.
+For a 12-bit ADC with $ V_{\text{ref}} = 3.3 $ V: LSB = 0.81 mV.
 
 | Microcontroller | ADC Bits | Sample Rate | Interface |
 |---|---|---|---|
@@ -168,7 +168,7 @@ For a 12-bit ADC with $ V_{\text{ref}} = 3.3 $V: LSB = 0.81 mV.
 
 ### 5.2 Case Study: Volcano Tiltmeter Network
 
-A tiltmeter (inklinometer) network on Mount Merapi uses MEMS accelerometers (Analog Devices ADXL345,$ \pm 3 $ g range, 13-bit resolution) interfaced with ESP32 microcontrollers. Each station:
+A tiltmeter (inklinometer) network on Mount Merapi uses MEMS accelerometers (Analog Devices ADXL345,$ \pm 3 $  g range, 13-bit resolution) interfaced with ESP32 microcontrollers. Each station:
 
 - Samples at 10 Hz with 12-bit oversampling (effective 16-bit)
 

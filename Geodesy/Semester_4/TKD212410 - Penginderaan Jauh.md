@@ -55,7 +55,7 @@ Penginderaan Jauh mempelajari pengukuran sifat fisik objek di permukaan bumi dar
 
 $$ NDVI = \frac{NIR - Red}{NIR + Red}NDWI = \frac{Green - NIR}{Green + NIR}$$
 
-### 6. Aplikasi
+# ## 6. Aplikasi
 
 - **Land cover classification**: supervised / unsupervised
 

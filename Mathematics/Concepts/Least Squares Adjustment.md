@@ -18,10 +18,10 @@ updated: 2026-07-27
 
 $$\mathbf{y} = \mathbf{f}(\mathbf{x}) + \boldsymbol{\varepsilon} $ $ | Symbol | Type | Meaning |
 |--------|------|---------|
-| $\mathbf{y} $ | Observation vector ($ n \times 1 $) | Measured quantities |
-| $\mathbf{x} $ | Parameter vector ($ u \times 1 $) | Unknowns to estimate |
+| $\mathbf{y} $ | Observation vector ( $  n \times 1 $) | Measured quantities |
+| $\mathbf{x} $ | Parameter vector ( $  u \times 1 $) | Unknowns to estimate |
 | $\mathbf{f}(\mathbf{x}) $ | Functional model | Theory relating observations to parameters |
-| $\boldsymbol{\varepsilon} $ | Residual vector ($ n \times 1 $) | Errors $ E[\boldsymbol{\varepsilon}] = 0 $ |
+| $\boldsymbol{\varepsilon} $ | Residual vector ( $  n \times 1 $) | Errors $ E[\boldsymbol{\varepsilon}] = 0 $ |
 
 **Stochastic model:**$ E[\boldsymbol{\varepsilon}\boldsymbol{\varepsilon}^T] = \sigma_0^2 \mathbf{P}^{-1} $ where $\mathbf{P} $ is the weight matrix and $\sigma_0^2 $ is the prior variance factor.
 
@@ -41,7 +41,7 @@ $$ **Solution:**$ $\hat{\mathbf{x}} = (\mathbf{H}^T\mathbf{P}\mathbf{H})^{-1}\ma
 
 $$
 
-### Nonlinear Model (Gauss-Newton Iteration)
+# ## Nonlinear Model (Gauss-Newton Iteration)
 
 For $\mathbf{f}(\mathbf{x}) $ nonlinear, linearize around current estimate $\mathbf{x}_k $:
 
@@ -91,7 +91,7 @@ If $\mathbf{P} = \mathbf{C}^{-1} $ (inverse covariance), the solution is the **B
 
 ### Block Diagonal Structure in GNSS
 
-For $ m $ receivers and $ n $ satellites observed over $ T $ epochs:
+For $ m $ receivers and $  n $ satellites observed over $  T $ epochs:
 
 The normal matrix has a **block diagonal + coupling** structure
 

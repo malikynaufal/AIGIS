@@ -12,29 +12,29 @@ The **Mercator** projection is a **conformal** cylindrical map projection that p
 
 For a sphere of radius $R $, the Mercator projection maps a point at latitude $\phi $ and longitude $\lambda $ to coordinates $ (x, y) $:
 
-$ $ x = R \, (\lambda - \lambda_0)y = R \ln \left[ \tan \left( \frac{\pi}{4} + \frac{\phi}{2} \right) \right] = R \, \text{gd}^{-1}(\phi)$$
+$ $  x = R \, (\lambda - \lambda_0)y = R \ln \left[ \tan \left( \frac{\pi}{4} + \frac{\phi}{2} \right) \right] = R \, \text{gd}^{-1}(\phi)$$
 
 where $\lambda_0 $ is the **central meridian** (garis tengah), and $\text{gd}^{-1} $ is the inverse **Gudermannian function**$ $\text{gd}^{-1}(\phi) = \sinh^{-1}(\tan \phi) = \text{artanh}(\sin \phi)
 
 $$
 
-The inverse (map → sphere)$ $\phi = 2 \, \arctan\!\left(e^{y/R}\right) - \frac{\pi}{2}, \qquad \lambda = \lambda_0 + \frac{x}{R} $$
+The inverse (map → sphere) $ $\phi = 2 \, \arctan\!\left(e^{y/R}\right) - \frac{\pi}{2}, \qquad \lambda = \lambda_0 + \frac{x}{R} $$
 
-### Conformality (Konformitas)
+# ## Conformality (Konformitas)
 
 A map projection is **conformal** when the scale factor is the same in all directions at every point, preserving angles locally. For Mercator this means the **Tissot's indicatrix** at any point is a circle, not an ellipse.
 
 ## Scale Factor
 
-The **point scale factor** (skala titik) of Mercator at latitude $\phi $ is:$ $ k(\phi) = \sec \phi = \frac{1}{\cos \phi}$$
+The **point scale factor** (skala titik) of Mercator at latitude $\phi $ is: $ $ k(\phi) = \sec \phi = \frac{1}{\cos \phi}$$
 
 This means:
 
-- At the equator ($\phi = 0°$), $ k = 1 $— no distortion.
+- At the equator ( $\phi = 0°$), $  k = 1 $— no distortion.
 
-- At $ 60°$ N/S,$ k = 2 $— distances are doubled.
+- At $ 60°$ N/S,$  k = 2 $— distances are doubled.
 
-- As $\phi \to \pm 90°$, $ k \to \infty $— the poles cannot be shown (singularitas).
+- As $\phi \to \pm 90°$, $  k \to \infty $— the poles cannot be shown (singularitas).
 
 The **scale factor along the meridian** (a) and along the parallel (b) satisfy $ k_m = \sec\phi $ and $ k_p = \sec\phi $, so $ k_m = k_p $, confirming conformality.
 
@@ -58,9 +58,9 @@ The **Universal Transverse Mercator** (UTM / UTM) system divides the Earth into 
 
 Each UTM zone has a central meridian with a scale factor of $ k_0 = 0{.}9996 $ (pengurangan skala)
 
-$ $ x = k_0 \, R \, (\lambda - \lambda_0) \cos \phi, \qquad y = k_0 \, R \, \text{gd}^{-1}(\phi)$$
+$ $  x = k_0 \, R \, (\lambda - \lambda_0) \cos \phi, \qquad y = k_0 \, R \, \text{gd}^{-1}(\phi)$$
 
-The false easting is $ 500{,}000 $ m to keep easting values positive (false easting $= 500000 $ m).
+The false easting is $ 500{,}000 $  m to keep easting values positive (false easting $= 500000 $ m).
 
 ## Mercator vs Web Mercator (Peta Web)
 
@@ -101,7 +101,7 @@ In practice, for most web mapping applications the spherical approximation intro
 
 - Area wildly distorted at high latitudes (tidak ada di dekat kutub)
 
-- Cannot show the poles ($\phi = \pm 90°$ is a singularity / singularitas)
+- Cannot show the poles ( $\phi = \pm 90°$ is a singularity / singularitas)
 
 - Distances can only be trusted at the equator or locally
 

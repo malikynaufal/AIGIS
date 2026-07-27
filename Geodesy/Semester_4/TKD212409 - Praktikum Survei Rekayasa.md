@@ -30,7 +30,7 @@ Dimana:
 
 $ $ ext{Precision} = \sqrt{\sum_{i=1}^{n} \frac{(h_i - \bar{h})^2}{2n(n-1)}}
 
-$ $3. GPS/GNSS RTK
+$ $ 3. GPS/GNSS RTK
 **Akurasi RTK:**$ $
 
 # 3. GPS/GNSS RTK

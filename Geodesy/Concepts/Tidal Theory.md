@@ -24,9 +24,9 @@ created: 2026-07-27
 
 ## 2. Earth (Solid) Tides
 
-The tidal potential from a body of mass $m $ at distance $ r $ is expanded in spherical harmonics. The dominant term is the **second‑degree** component (the first degree is a pure translation and does not deform)$ $ V_{\text{tide}}(r,\theta,\lambda,t) = \sum_{n=2}^{3} \sum_{m=0}^{n} V_{nm}(\theta,\lambda,t)\left(\frac{r_0}{r}\right)^{n+1} $$
+The tidal potential from a body of mass $m $ at distance $  r $ is expanded in spherical harmonics. The dominant term is the **second‑degree** component (the first degree is a pure translation and does not deform) $ $ V_{\text{tide}}(r,\theta,\lambda,t) = \sum_{n=2}^{3} \sum_{m=0}^{n} V_{nm}(\theta,\lambda,t)\left(\frac{r_0}{r}\right)^{n+1} $$
 
-### 2.1. Displacement due to solid Earth tides
+# ## 2.1. Displacement due to solid Earth tides
 
 The IERS Conventions (2010) prescribe the displacement at the Earth's surface as:
 
@@ -43,7 +43,7 @@ where:
 | $ h_n $ | Love number (radial deformation);$ h_2 \approx 0.609 $, $ h_3 \approx 0.295 $ |
 | $ l_n $ | Shida number (horizontal deformation);$ l_2 \approx 0.085 $, $ l_3 \approx 0.015 $ |
 | $ g $ | Mean gravity at surface |
-| $ V_n $ | $ n $‑th degree tidal potential |
+| $ V_n $ | $  n $‑th degree tidal potential |
 | $ r_0 $ | Mean Earth radius |
 
 ### 2.2. Typical amplitude
@@ -121,7 +121,7 @@ The equilibrium tide (theoretical response to a point mass) has a maximum range 
 
 ## 5. Worked Example – Solid Earth Tide Correction
 
-Compute the radial displacement at a point in Jakarta ($\varphi = -6.2°$, $\lambda = 106.8°$) due to the Moon at a given epoch.
+Compute the radial displacement at a point in Jakarta ( $\varphi = -6.2°$, $\lambda = 106.8°$) due to the Moon at a given epoch.
 
 The Moon's tidal potential coefficient $ V_2 $ (degree 2) can be evaluated from the Moon's position. For a typical alignment:
 

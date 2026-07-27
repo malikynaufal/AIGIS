@@ -29,10 +29,10 @@ where $\mathbf{T} $,$\mathbf{R} $,$\mathbf{S} $ are the time-dependent translati
 
 | ITRF Realization | Transformation to ETRS89 (at epoch 2010.0) |
 |------------------|---------------------------------------------|
-| ITRF2000 → ETRS89 | $\mathbf{T}: (0.054, 0.051, -0.048) $ m |
-| ITRF2005 → ETRS89 | $\mathbf{T}: (0.054, 0.051, -0.048) $ m |
-| ITRF2014 → ETRS89 | $\mathbf{T}: (0.054, 0.051, -0.048) $ m |
-| ITRF2020 → ETRS89 | $\mathbf{T}: (0.054, 0.050, -0.049)$ m |
+| ITRF2000 → ETRS89 | $\mathbf{T}: (0.054, 0.051, -0.048) $  m |
+| ITRF2005 → ETRS89 | $\mathbf{T}: (0.054, 0.051, -0.048) $  m |
+| ITRF2014 → ETRS89 | $\mathbf{T}: (0.054, 0.051, -0.048) $  m |
+| ITRF2020 → ETRS89 | $\mathbf{T}: (0.054, 0.050, -0.049)$  m |
 
 *Note: Values approximate; consult EUREF technical notes for official parameters.*
 

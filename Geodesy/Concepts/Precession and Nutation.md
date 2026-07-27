@@ -27,7 +27,7 @@ Precession is the slow (~26,000-year) circular motion of Earth's rotational axis
 
 The precession matrix $ P $ transforms from the mean equator of date to the mean equator of J2000.0:
 
-$ $
+$ $ 
 
 P = R_3(\zeta_A) \cdot R_2(\theta_A) \cdot R_3(-z_A)
 
@@ -51,11 +51,11 @@ $ $ z_A = -2.5976176" + 0.0028469"t + 0.0000050"t^2
 
 $$
 
-$ $ t = (JD_{date} - 2451545.0) / 36525 \quad \text{(Julian centuries from J2000.0)}
+$ $  t = (JD_{date} - 2451545.0) / 36525 \quad \text{(Julian centuries from J2000.0)}
 
 $$
 
-### Rotation Matrices
+# ## Rotation Matrices
 
 $ $ R_3(\alpha) = \begin{pmatrix} \cos\alpha & \sin\alpha & 0 \\ -\sin\alpha & \cos\alpha & 0 \\ 0 & 0 & 1 \end{pmatrix}
 
@@ -65,7 +65,7 @@ $ $ R_2(\alpha) = \begin{pmatrix} \cos\alpha & 0 & \sin\alpha \\ 0 & 1 & 0 \\ -\
 
 $$
 
-## Nutation
+# # Nutation
 
 Nutation is the short-period wobble of Earth's axis superimposed on precession, caused by periodic changes in the Sun-Moon-Earth geometry (lunar nodal cycle: 18.6 years, solar semi-annual: 6 months).
 
@@ -79,7 +79,7 @@ Nutation is the short-period wobble of Earth's axis superimposed on precession, 
 
 ### Nutation Matrix
 
-$ $
+$ $ 
 
 N = R_1(-\varepsilon_0) \cdot R_3(\Delta\psi) \cdot R_1(+\varepsilon_0 + \Delta\varepsilon)
 
@@ -111,7 +111,7 @@ $ $
 
 $$
 
-## Earth Rotation and EOP
+# # Earth Rotation and EOP
 
 | Parameter | Symbol | Range | IERS Publication |
 |-----------|--------|-------|------------------|
@@ -132,7 +132,7 @@ $ $ y_{ITRF} = -y_p + \text{tidal terms}
 
 $$
 
-## In [[Geodesy]] Context
+# # In [[Geodesy]] Context
 
 ### Applications
 
@@ -151,7 +151,7 @@ JD = 2451545.0 + 367Y - \text{int}(7(Y + \text{int}((M+9)/12))/4) + \text{int}(2
 
 $$
 
-## Study Problems
+# # Study Problems
 
 1. Compute the number of Julian centuries from J2000.0 for 2026-01-01.
 2. Why does precession have a 26,000-year period?

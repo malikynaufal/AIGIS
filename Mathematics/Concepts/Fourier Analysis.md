@@ -14,9 +14,9 @@ updated: 2026-07-27
 
 ## 1. Fourier Series
 
-Any periodic function $f(x) $ with period $ 2\pi $ can be written: $ $ f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n \cos(nx) + b_n \sin(nx) \right)$$ ### Fourier Coefficients $ $ a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos(nx) \, dx, \quad b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin(nx) \, dx $$### Complex Form $ $ f(x) = \sum_{n=-\infty}^{\infty} c_n e^{inx}, \quad c_n = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) e^{-inx} \, dx $$
+Any periodic function $f(x) $ with period $ 2\pi $ can be written: $ $ f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n \cos(nx) + b_n \sin(nx) \right)$ $ ### Fourier Coefficients $ $ a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos(nx) \, dx, \quad b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin(nx) \, dx $ $### Complex Form $ $ f(x) = \sum_{n=-\infty}^{\infty} c_n e^{inx}, \quad c_n = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) e^{-inx} \, dx $$
 
-### Convergence
+# ## Convergence
 
 **Dirichlet's Theorem:** If $ f $ is piecewise smooth, the Fourier series converges to:
 
@@ -32,7 +32,7 @@ $ $\frac{1}{2\pi} \int_{-\pi}^{\pi} |f(x)|^2 \, dx = |c_0|^2 + 2\sum_{n=1}^{\inf
 
 $$
 
-## 2. Fourier Transform
+# # 2. Fourier Transform
 
 For non-periodic functions on $\mathbb{R} $:
 
@@ -40,7 +40,7 @@ $ $\hat{f}(\xi) = \int_{-\infty}^{\infty} f(x) e^{-2\pi i \xi x} \, dx
 
 $$**Inverse:**$ $ f(x) = \int_{-\infty}^{\infty} \hat{f}(\xi) e^{2\pi i \xi x} \, d\xi $$
 
-### Properties
+# ## Properties
 
 | Property | Domain | Frequency Domain |
 |----------|--------|-----------------|
@@ -58,7 +58,7 @@ $ $\int_{-\infty}^{\infty} |f(x)|^2 \, dx = \int_{-\infty}^{\infty} |\hat{f}(\xi
 
 $$
 
-## 3. Common Transforms
+# # 3. Common Transforms
 
 | Function $ f(x) $ | Transform $\hat{f}(\xi) $ |
 |-------------------|--------------------------|
@@ -72,9 +72,9 @@ $$
 
 For $ N $ samples $ x_0, x_1, \dots, x_{N-1} $:
 
-$ $ X_k = \sum_{n=0}^{N-1} x_n e^{-2\pi i kn/N}, \quad k = 0, 1, \dots, N-1 $$**Inverse DFT:**$ $ x_n = \frac{1}{N} \sum_{k=0}^{N-1} X_k e^{2\pi i kn/N}$$
+$ $ X_k = \sum_{n=0}^{N-1} x_n e^{-2\pi i kn/N}, \quad k = 0, 1, \dots, N-1 $ $**Inverse DFT:**$ $ x_n = \frac{1}{N} \sum_{k=0}^{N-1} X_k e^{2\pi i kn/N}$$
 
-### Fast Fourier Transform (FFT)
+# ## Fast Fourier Transform (FFT)
 
 Computes DFT in $ O(N \log N) $ instead of $ O(N^2) $. Cooley-Tukey algorithm (1965) is one of the most important algorithms in computational mathematics.
 

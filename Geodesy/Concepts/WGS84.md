@@ -28,13 +28,13 @@ updated: 2026-07-27
 
 ## Derived Quantities
 
-$ $ b = a(1 - f) = 6{,}356{,}752.314245 \text{ m}$$
+$ $  b = a(1 - f) = 6{,}356{,}752.314245 \text{ m}$$
 
 $ $ e^2 = \frac{a^2 - b^2}{a^2} = 2f - f^2 $$
 
 $ ${e'}^2 = \frac{a^2 - b^2}{b^2} = \frac{e^2}{1 - e^2}$$
 
-### Radius of Curvature
+# ## Radius of Curvature
 
 | Quantity | Formula | Value at equator | Value at pole |
 |----------|---------|-------------------|---------------|
@@ -48,9 +48,9 @@ $ $\gamma_0(\varphi) = \frac{\gamma_a (1 + k\sin^2\varphi)}{\sqrt{1 - e^2\sin^2\
 
 $$
 
-where:$ $ k = \frac{b\gamma_p - a\gamma_a}{a\gamma_a} = 0.00193185138639 $$
+where: $ $  k = \frac{b\gamma_p - a\gamma_a}{a\gamma_a} = 0.00193185138639 $$
 
-## WGS84 Evolution
+# # WGS84 Evolution
 
 | Version | Year | Key Change | Alignment |
 |---------|------|------------|-----------|
@@ -80,7 +80,7 @@ The WGS84 ellipsoid is defined with the **same** $ a $ and $ 1/f $ as [[GRS80]],
 
 Given $ (X, Y, Z) $ in [[Geocentric Cartesian ECEF]]:
 
-$ $ p = \sqrt{X^2 + Y^2} $$
+$ $  p = \sqrt{X^2 + Y^2} $$
 
 $ $ \lambda = \arctan2(Y, X)
 
@@ -90,7 +90,7 @@ $ $\varphi^{(0)} = \arctan\left(\frac{Z}{p(1-e^2)}\right)
 
 $$
 
-Iterate:$ $ N^{(i)} = \frac{a}{\sqrt{1 - e^2\sin^2\varphi^{(i)}}} $$
+Iterate: $ $ N^{(i)} = \frac{a}{\sqrt{1 - e^2\sin^2\varphi^{(i)}}} $$
 
 $ $ \varphi^{(i+1)} = \arctan\left(\frac{Z + e^2 N^{(i)}\sin\varphi^{(i)}}{p}\right)
 
@@ -100,7 +100,7 @@ Converges in 3–4 iterations to $< 1 $ mm.
 
 ### Height Relationship
 
-$ $ h = \frac{p}{\cos\varphi} - N \quad \text{or} \quad h = \frac{Z}{\sin\varphi} + e^2 N $$
+$ $  h = \frac{p}{\cos\varphi} - N \quad \text{or} \quad h = \frac{Z}{\sin\varphi} + e^2 N $$
 
 where $ h $ is [[Ellipsoidal Height]].
 
@@ -129,7 +129,7 @@ where $ h $ is [[Ellipsoidal Height]].
 
 ## Common Mistakes
 
-1. **Confusing $ a $ and $ b $** — $ a $ is always semi-major (equatorial), $ b $ is semi-minor (polar).
+1. **Confusing $ a $ and $  b $** — $  a $ is always semi-major (equatorial), $  b $ is semi-minor (polar).
 2. **Using wrong sign for flattening** — $ f > 0 $, not negative.
 3. **Treating WGS84 as static** — it was updated 7 times; always specify the realization.
 4. **Mixing WGS84 and GRS80** — they differ in $ 1/f $ by 0.0000000001; negligible for surveying but matters for precise orbits.

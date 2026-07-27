@@ -23,8 +23,8 @@ updated: 2026-07-27
 
 | Parameter | Formula | Value |
 |-----------|---------|-------|
-| Flattening $ f $ | $ f = \frac{a-b}{a} $ | 1/298.257 222 101 |
-| Semi-minor axis $ b $ | $ b = a(1-f) $ | 6 356 752.314 140 m |
+| Flattening $ f $ | $  f = \frac{a-b}{a} $ | 1/298.257 222 101 |
+| Semi-minor axis $ b $ | $  b = a(1-f) $ | 6 356 752.314 140 m |
 | First eccentricity² $ e^2 $ | $ e^2 = 2f - f^2 $ | 0.006 694 380 022 90 |
 | Second eccentricity² $ {e'}^2 $ | $ {e'}^2 = e^2/(1-e^2) $ | 0.006 739 496 775 48 |
 
@@ -42,7 +42,7 @@ $ $= 6.694\,380\,022\,90 \times 10^{-3}
 
 $$
 
-## GRS80 vs WGS84
+# # GRS80 vs WGS84
 
 | Property | GRS80 | [[WGS84]] |
 |----------|-------|-----------|
@@ -65,11 +65,11 @@ $$
 
 ### Meridian Radius
 
-$ $ M(\varphi) = \frac{a(1 - e^2)}{(1 - e^2 \sin^2\varphi)^{3/2}}$$### Prime Vertical Radius $ $ N(\varphi) = \frac{a}{(1 - e^2 \sin^2\varphi)^{1/2}}$$### Gaussian Curvature Radius $ $ K(\varphi) = \frac{MN}{a^2} = \frac{a}{(1 - e^2\sin^2\varphi)}$$
+$ $ M(\varphi) = \frac{a(1 - e^2)}{(1 - e^2 \sin^2\varphi)^{3/2}}$ $### Prime Vertical Radius $ $ N(\varphi) = \frac{a}{(1 - e^2 \sin^2\varphi)^{1/2}}$ $### Gaussian Curvature Radius $ $ K(\varphi) = \frac{MN}{a^2} = \frac{a}{(1 - e^2\sin^2\varphi)}$$
 
-## Values at Key Latitudes
+# # Values at Key Latitudes
 
-| Latitude | $ M $ (m) | $ N $ (m) | $ 1°$ meridian (km) |$ 1°$ parallel (km) |
+| Latitude | $ M $ (m) | $  N $ (m) | $ 1°$ meridian (km) |$ 1°$ parallel (km) |
 |----------|---------|---------|---------------------|---------------------|
 | 0° (equator) | 6 335 439 | 6 378 137 | 110.574 | 111.320 |
 | 30° | 6 367 389 | 6 388 851 | 110.852 | 96.486 |
@@ -87,7 +87,7 @@ $$**Parallel:**$ $\Delta s_P \approx N(\varphi) \cos\varphi \times \frac{\pi}{18
 
 $$
 
-## Geodetic Reference System of 1980 (Resolution IAG 1979)
+# # Geodetic Reference System of 1980 (Resolution IAG 1979)
 
 The full GRS80 system specifies:
 
@@ -116,7 +116,7 @@ $$
 
 ## Study Problems
 
-1. Compute the meridian radius $ M $ at Jakarta ($\varphi = -6°12'$).
+1. Compute the meridian radius $ M $ at Jakarta ( $\varphi = -6°12'$).
 2. Show that $ e^2 = 2f - f^2 $ algebraically.
 3. Calculate the surface distance between two points at the equator separated by $ 1°$ longitude.
 4. Explain why GRS80 was chosen over WGS84 for ITRF.

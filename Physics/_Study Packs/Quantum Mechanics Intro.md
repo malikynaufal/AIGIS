@@ -15,13 +15,13 @@ _Wave Function, Uncertainty Principle, Particle in a Box
 ### Blackbody Radiation (Planck, 1900)
 Energy comes in discrete packets (quanta):
 
-$E = nh\nu \quad (n = 0, 1, 2, \dots) $ where $ h = 6.626 \times 10^{-34} $ J·s (Planck's constant).
+$E = nh\nu \quad (n = 0, 1, 2, \dots) $ where $  h = 6.626 \times 10^{-34} $ J·s (Planck's constant).
 
 Planck distribution
 
 $ $ u(\nu, T) = \frac{8\pi h\nu^3}{c^3}\frac{1}{e^{h\nu/k_BT} - 1} $$
 
-### Photoelectric Effect (Einstein, 1905)
+# ## Photoelectric Effect (Einstein, 1905)
 Light acts as particles (photons) with $ E = h\nu $.
 
 $ K_{\max} = h\nu - \phi $ where $\phi $ = work function of metal.
@@ -31,7 +31,7 @@ $ K_{\max} = h\nu - \phi $ where $\phi $ = work function of metal.
 
 $ $ \Delta\lambda = \lambda' - \lambda = \frac{h}{m_e c}(1 - \cos\theta)
 
-$ Confirmed light's momentum: $ p = h/\lambda = \hbar k $.$
+$ Confirmed light's momentum: $  p = h/\lambda = \hbar k $.$
 
 ---
 
@@ -51,7 +51,7 @@ $ $ \int_{-\infty}^{\infty} |\Psi(\vec{r}, t)|^2 d^3r =
 
  i\hbar\frac{\partial\Psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\Psi + V\Psi $$
 
-### Time-Independent Schrödinger Equation
+# ## Time-Independent Schrödinger Equation
 For stationary states $ \Psi(\vec{r},t) = \psi(\vec{r})e^{-iEt/\hbar} $:
 
 $ $ -\frac{\hbar^2}{2m}\nabla^2\psi + V\psi = E\psi
@@ -73,8 +73,8 @@ This is not about measurement limitations — it's a fundamental property of qua
 
 $ $ \sigma_E \sigma_t \geq \frac{\hbar}{2}\sigma_\theta \sigma_\ell \geq \frac{\hbar}{2} $$
 
-### Example: Electron in Atom
-Electron confined to $ \sigma_x \approx 10^{-10} $ m (Bohr radius):
+# ## Example: Electron in Atom
+Electron confined to $ \sigma_x \approx 10^{-10} $  m (Bohr radius):
 
 $ $ \sigma_p \geq \frac{\hbar}{2\sigma_x} \approx 5.3 \times 10^{-25} \text{ kg·m/s}K = \frac{\sigma_p^2}{2m_e} \approx 1.5 \text{ eV} $ $$$
 
@@ -99,7 +99,7 @@ s
 
 E_n = \frac{n^2\pi^2\hbar^2}{2mL^2} $$
 
-### Key Properties
+# ## Key Properties
 
 - **Zero-point energy:** $ E_1 = \pi^2\hbar^2/(2mL^2) > 0 $- **Energy spacing:** $ E_{n+1} - E_n = (2n+1)E_1 $- **Nodes:**$ \psi_n $ has $ n-1 $ nodes
 
@@ -108,7 +108,7 @@ x
 
 $ E_{n_x,n_y} = \frac{\pi^2\hbar^2}{2m}\left(\frac{n_x^2}{L_x^2} + \frac{n_y^2}{L_y^2}\right) $$$
 
-### 3D Bo
+# ## 3D Bo
 x
 
 $ E_{n_x,n_y,n_z} = \frac{\pi^2\hbar^2}{2m}\left(\frac{n_x^2}{L_x^2} + \frac{n_y^2}{L_y^2} + \frac{n_z^2}{L_z^2}\right) $$$
@@ -122,7 +122,7 @@ l
 
 $ $ V(x) = \frac{1}{2}m\omega^2 x^2 $$
 
-### Energy Level
+# ## Energy Level
 s
 
 $ E_n = \hbar\omega\left(n + \frac{1}{2}\right), \quad n = 0, 1, 2, \dots $ $ - Zero-point energy: $ E_0 = \frac{1}{2}\hbar\omega $- Evenly spaced: $ \Delta E = \hbar\omega $### Ladder Operators $
@@ -138,12 +138,12 @@ s
 
 $ $ \hat{x} = x, \quad \hat{p} = -i\hbar\frac{\partial}{\partial x} $$
 
-### Canonical Commutation Relatio
+# ## Canonical Commutation Relatio
 n
 
 $ $ [\hat{x}, \hat{p}] = \hat{x}\hat{p} - \hat{p}\hat{x} = i\hbar $$
 
-### Measurement Outcomes
+# ## Measurement Outcomes
 
 - Measuring $ \hat{A} $ on state $ |\psi\rangle $ yields eigenvalue $ a_n $ with $ |\psi_n\rangle $- After measurement: system collapses to $ |\psi_n\rangle $- Average (expectation): $ \langle A \rangle = \langle\psi|\hat{A}|\psi\rangle $---
 
@@ -156,12 +156,12 @@ $ $ \Delta E = h\nu = E_n - E_m
 
 $$
 
-### GNSS Atomic Clocks
+# ## GNSS Atomic Clocks
 Caesium/Rubidium clocks use atomic transition frequencies as time standards
 
 $ $ \nu_{Cs} = 9,192,631,770 \text{ Hz (exact, defines the second)} $$
 
-### Quantum Metrology
+# ## Quantum Metrology
 Entanglement and squeezed states can improve precision beyond standard quantum limit.
 
 ---
@@ -181,7 +181,7 @@ Entanglement and squeezed states can improve precision beyond standard quantum l
 
 ## Problems
 1. An electron is confined to a box of width 0.1 nm. Calculate the energy levels $ E_1 $ through $ E_4 $ in eV.
-2. Find the probability of finding a particle in a 1D box between $ x = L/4 $ and $ x = 3L/4 $ for the ground state.
+2. Find the probability of finding a particle in a 1D box between $ x = L/4 $ and $  x = 3L/4 $ for the ground state.
 3. Show that $ [\hat{a}, \hat{a}^\dagger] = 1 $ using $ [\hat{x}, \hat{p}] = i\hbar$.
 4. A quantum dot is modeled as a 3D box of side 5 nm. Find the ground state energy.
 5. Using the uncertainty principle, estimate the ground state energy of hydrogen.

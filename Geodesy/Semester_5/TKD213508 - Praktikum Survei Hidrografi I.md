@@ -36,7 +36,7 @@ Praktikum ini melatih mahasiswa dalam pengoperasian echo sounder tunggal (single
 ### Modul 2: Kalibrasi dan Setup
 
 - **Kalibrasi echo sounder**:
- - Draft calibration: $\Delta d = ext{draft statis} + ext{draft dinamis} $- Speed of sound: $ c = 1449.2 + 4.6T - 0.055T^2 $ (Mackenzie formula)
+ - Draft calibration: $\Delta d = ext{draft statis} + ext{draft dinamis} $- Speed of sound: $  c = 1449.2 + 4.6T - 0.055T^2 $ (Mackenzie formula)
 
 - **Setup tide gauge**: Pasang logger air, zero calibration
 
@@ -75,7 +75,7 @@ Praktikum ini melatih mahasiswa dalam pengoperasian echo sounder tunggal (single
  3. Draft correction → $ d_{ext{net}} = d - ext{static draft} $- **Interpolasi**: IDW (Inverse Distance Weighting) ke grid raste
 r
 
-$ $ z = \frac{\sum w_i z_i}{\sum w_i}, \quad w_i = d_i^{-p}$ $
+$ $  z = \frac{\sum w_i z_i}{\sum w_i}, \quad w_i = d_i^{-p}$ $
 
 - **Kontur**: Buat isobaths dari grid
 
@@ -89,7 +89,7 @@ $ $ ext{SDE} = \sqrt{\frac{\sum(z_{obs} - z_{model})^2}{n-1}} $ $
 
 - **Noise filtering**: Median filter, threshold based
 
-- **Akurasi target**: SNI 8435 / IHO S-44 Order 2 → SDE $\leq 0.5 $ m
+- **Akurasi target**: SNI 8435 / IHO S-44 Order 2 → SDE $\leq 0.5 $  m
 
 ### Modul 7: Pembuatan Peta Bathimetri
 

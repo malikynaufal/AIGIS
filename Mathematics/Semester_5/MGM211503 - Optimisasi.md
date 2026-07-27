@@ -88,9 +88,9 @@ $ $
 
 ## 🎯 Practice Problems
 
-1. Solve $\min x^2 + y^2 $ subject to $ x + y = 1 $.
+1. Solve $\min x^2 + y^2 $ subject to $  x + y = 1 $.
 2. Apply gradient descent to $ f(x,y) = x^2 + 4y^2 - 8x - 16y + 10 $.
-3. Derive KKT conditions for $\min x^2 + y^2 $ s.t.$ x + 2y \geq 5$.
+3. Derive KKT conditions for $\min x^2 + y^2 $ s.t.$  x + 2y \geq 5$.
 4. Solve a small LP using the simplex method.
 5. Implement Newton's method for Rosenbrock function.
 

@@ -29,7 +29,7 @@ Fisika radiasi elektromagnetik dan interaksi dengan permukaan bumi:
 
 - Hukum Planck dan radiasi benda hitam: $B_\lambda = \frac{2hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda k_BT}-1} $- Konsep spektrum reflektan: $\rho_\lambda = \frac{L_\lambda}{E_\lambda} $ untuk material tanah, air, dan vegetasi
 
-- Karakteristik spektrum air: $\rho $ rendah di NIR ($\rho_{NIR} < 0.05 $)
+- Karakteristik spektrum air: $\rho $ rendah di NIR ( $\rho_{NIR} < 0.05 $)
 
 - Karakteristik spektrum vegetasi: red edge di 700nm dan plateu di NIR
 
@@ -99,7 +99,7 @@ Teknik pengelompokan piksel berdasarkan spektrum:
 
 - **Unsupervised**: K-means clustering, ISODATA
 
-- Training samples: homogenitas, representativitas, jumlah minimal ($ n \geq 10 imes p $ dimensi)
+- Training samples: homogenitas, representativitas, jumlah minimal ( $ n \geq 10 imes p $ dimensi)
 
 - Deep learning: Convolutional Neural Networks (CNN) untuk klasifikasi citra
 

@@ -39,7 +39,7 @@ $ $ x_{cell} = \left\lfloor x / w_{cell} \right\rfloor, \quad y_{cell} = \left\l
 
 $$
 
-### 3. Topological Data Structures
+# ## 3. Topological Data Structures
 
 | Topology | Description | GIS Example |
 |----------|-------------|-------------|
@@ -56,7 +56,7 @@ $ $
 
 $$
 
-### 4. Raster Data
+# ## 4. Raster Data
 
 | Property | Description | Typical Values |
 |----------|-------------|----------------|

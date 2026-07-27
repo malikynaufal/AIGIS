@@ -433,7 +433,7 @@ def utm_to_latlon(easting, northing, zone, north, a=6378137, e=0.0818191908):
 *
 
 A = \frac{1}{2} \sum_{i=1}^{n} x_i y_{i+1} - x_{i+1} y_
-i**Trigonometric method:**$ $
+i**Trigonometric method:**$ $ 
 
 A = \frac{1}{2} \sum d_i \sin\alpha_i $$
 

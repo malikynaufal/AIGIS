@@ -13,23 +13,23 @@ updated: 2026-07-27
 
 ## Measurement Principle
 
-EDM measures the **phase difference** between a transmitted and received signal. The wavelength $\lambda $ is determined by the carrier frequency $ f $:
+EDM measures the **phase difference** between a transmitted and received signal. The wavelength $\lambda $ is determined by the carrier frequency $  f $:
 
 $ $\lambda = \frac{c}{f}
 
 $$
 
-where $ c $ is the speed of light in vacuum ($ 299\,792\,458 $ m/s).
+where $ c $ is the speed of light in vacuum ( $ 299\,792\,458 $ m/s).
 
 ### Phase Measurement
 
-The measured phase difference $\Delta\phi $ is:$ $\Delta\phi = \frac{2\pi s}{\lambda} \mod 2\pi
+The measured phase difference $\Delta\phi $ is: $ $\Delta\phi = \frac{2\pi s}{\lambda} \mod 2\pi
 
 $$
 
-where $ s $ is the slope distance. The **fractional distance** is:$ $ s_{frac} = \frac{\Delta\phi}{2\pi} \cdot \lambda $$
+where $ s $ is the slope distance. The **fractional distance** is: $ $ s_{frac} = \frac{\Delta\phi}{2\pi} \cdot \lambda $$
 
-### Carrier Frequencies
+# ## Carrier Frequencies
 
 | Band | Frequency | Wavelength | Medium | Typical Range |
 |------|-----------|------------|--------|---------------|
@@ -45,15 +45,15 @@ where $ s $ is the slope distance. The **fractional distance** is:$ $ s_{frac} =
 
 The speed of light in air is reduced by the refractive index $ n $:
 
-$ $ v = \frac{c}{n}$$
+$ $  v = \frac{c}{n}$$
 
-$ $ n - 1 = \frac{P}{\rho R T} \cdot \left(\alpha + \frac{\beta}{\lambda^2}\right)$$
+$ $  n - 1 = \frac{P}{\rho R T} \cdot \left(\alpha + \frac{\beta}{\lambda^2}\right)$$
 
-where $ P $ is atmospheric pressure,$\rho $ is air density,$ R $ is the gas constant,$ T $ is temperature, and $\alpha $, $\beta $ are empirical constants.
+where $ P $ is atmospheric pressure,$\rho $ is air density,$  R $ is the gas constant,$  T $ is temperature, and $\alpha $, $\beta $ are empirical constants.
 
 ### Edlén's Formula (Simplified)
 
-$ $(n - 1) \times 10^6 = \frac{8342.13}{\lambda^2} \cdot \frac{P_{dry}}{T} + \frac{29025.5}{\lambda^2} \cdot \frac{P_{wet}}{T} \cdot \frac{e_w}{e_s}$$
+$ $ (n - 1) \times 10^6 = \frac{8342.13}{\lambda^2} \cdot \frac{P_{dry}}{T} + \frac{29025.5}{\lambda^2} \cdot \frac{P_{wet}}{T} \cdot \frac{e_w}{e_s}$$
 
 where:
 - $\lambda $ is in micrometers
@@ -128,7 +128,7 @@ where $ D_s $ is the slope distance and $\theta $ is the zenith angle.
 
 $ $ D_h = D_s \cdot \cos\theta \cdot \left(1 + \frac{D_s}{2R}\right)$$
 
-where $ R = 6\,371\,000 $ m is Earth's mean radius.
+where $ R = 6\,371\,000 $  m is Earth's mean radius.
 
 ### Orthometric Correction (for long sights)
 
@@ -176,7 +176,7 @@ flowchart LR
 1. Given $ D_s = 1500.000 $ m, $\theta = 95°$, compute $ D_h $.
 2. If temperature is 30°C and pressure is 1000 hPa, compute the EDM correction for K-band.
 3. Explain why EDM accuracy degrades with longer distances.
-4. Compute the combined atmospheric correction for $ s = 2 $ km, $ T = 25°C $, $ P = 1010$ hPa.
+4. Compute the combined atmospheric correction for $ s = 2 $ km, $  T = 25°C $, $  P = 1010$ hPa.
 
 ## Common Mistakes
 

@@ -8,13 +8,13 @@ A **vertical datum** (datum tinggi) is the reference surface from which elevatio
 
 ## Height Systems (Sistem Tinggi)
 
-### 1. Ellipsoidal Height ($h $)
+### 1. Ellipsoidal Height ( $h $)
 
 The ellipsoidal height is the distance from a point on the Earth's surface to the reference ellipsoid, measured along the ellipsoid normal.
 
-$ $ h = \sqrt{X^2 + Y^2 + \left(\frac{a^2}{b^2} Z\right)^2} - \frac{a^2}{b} \cdot \frac{1}{\sqrt{X^2 + Y^2 + \left(\frac{a^2}{b^2} Z\right)^2}} + Z $$
+$ $  h = \sqrt{X^2 + Y^2 + \left(\frac{a^2}{b^2} Z\right)^2} - \frac{a^2}{b} \cdot \frac{1}{\sqrt{X^2 + Y^2 + \left(\frac{a^2}{b^2} Z\right)^2}} + Z $$
 
-where $ a $ and $ b $ are the semi-major and semi-minor axes of the ellipsoid.
+where $ a $ and $  b $ are the semi-major and semi-minor axes of the ellipsoid.
 
 **Key properties:**
 
@@ -26,11 +26,11 @@ where $ a $ and $ b $ are the semi-major and semi-minor axes of the ellipsoid.
 
 - Not physically meaningful for hydrology or construction
 
-### 2. Orthometric Height ($ H $)
+### 2. Orthometric Height ( $ H $)
 
 The orthometric height is the distance from a point on the Earth's surface to the **geoid** (quasi-geoid), measured along the plumb line.
 
-$ $ H = h - N $$
+$ $  H = h - N $$
 
 where:
 -$ h $ = ellipsoidal height
@@ -38,7 +38,7 @@ where:
 
 The geoid undulation $ N $ is derived from the Bruns formula
 
-$ $ N = \frac{\Delta W}{\gamma}$$
+$ $  N = \frac{\Delta W}{\gamma}$$
 
 where $\Delta W $ is the disturbing potential and $\gamma $ is the normal gravity at the surface.
 
@@ -52,13 +52,13 @@ where $\Delta W $ is the disturbing potential and $\gamma $ is the normal gravit
 
 - Two points with equal orthometric height are hydraulically connected
 
-### 3. Normal Height ($ h_N $)
+### 3. Normal Height ( $ h_N $)
 
 The normal height was introduced by Molodenskii as an alternative that avoids the need for gravity data at the Earth's surface.
 
 $ $ h_N = h - \zeta $$
 
-where $\zeta $ is the **height anomaly** (quasi-geoid undulation)$ $\zeta = \frac{T_P}{\gamma_0} $$
+where $\zeta $ is the **height anomaly** (quasi-geoid undulation) $ $\zeta = \frac{T_P}{\gamma_0} $$
 
 -$ T_P $ = disturbing potential at point P
 -$\gamma_0 $= normal gravity on the telluroid
@@ -163,7 +163,7 @@ Indonesian height benchmarks are organized hierarchically:
 
 ### Remove-Compute-Restore (RCR) Technique
 
-$ $ N = N_{long} + N_{res}N_{res} = \frac{G\Delta\rho}{\gamma} \int \int \frac{h - h_P}{r} \, d\sigma $$
+$ $  N = N_{long} + N_{res}N_{res} = \frac{G\Delta\rho}{\gamma} \int \int \frac{h - h_P}{r} \, d\sigma $$
 
 1. **Remove**: Remove long-wavelength geoid from satellite data (GRACE/GOCE)
 2. **Compute**: Compute residual geoid from local gravity data using Stokes/Helmert integral
@@ -172,7 +172,7 @@ $ $ N = N_{long} + N_{res}N_{res} = \frac{G\Delta\rho}{\gamma} \int \int \frac{h
 ### Stokes' Formula (Geoid from Gravity Anomaly
 )
 
-$ $ N = \frac{R}{4\pi\gamma_0} \int \int_{\sigma} \Delta g \cdot S(\psi) \, d\sigma $$
+$ $  N = \frac{R}{4\pi\gamma_0} \int \int_{\sigma} \Delta g \cdot S(\psi) \, d\sigma $$
 
 where:
 -$ S(\psi) $= Stokes kernel function

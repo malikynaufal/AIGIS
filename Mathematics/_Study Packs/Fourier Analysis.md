@@ -19,7 +19,7 @@ Fourier analysis decomposes functions and signals into sums of sinusoids. It is 
 
 Jean-Baptiste Joseph Fourier (1807) proposed that any periodic function can be represented as a sum of sines and cosines:
 
-$$ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos\left(\frac{2\pi nx}{T}\right) + b_n\sin\left(\frac{2\pi nx}{T}\right)\right)$ $
+$$ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos\left(\frac{2\pi nx}{T}\right) + b_n\sin\left(\frac{2\pi nx}{T}\right)\right) $ $
 
 This was revolutionary — even discontinuous functions can be represented!
 
@@ -34,12 +34,18 @@ $ $
 f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}(a_n\cos nx + b_n\sin nx
 )
 
-$$### 2.2 Fourier Coefficients $ $ a_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos(nx)\,dxb_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\sin(nx)\,d
+$$
+
+# ## 2.2 Fourier Coefficients $ $ a_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos(nx)\,dxb_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\sin(nx)\,d
 x
 
-$$### 2.3 Orthogonality (Key Property) $ $\int_{-\pi}^{\pi}\cos(mx)\cos(nx)\,dx = \begin{cases} \pi & m=n \\ 0 & m \neq n \end{cases}\int_{-\pi}^{\pi}\sin(mx)\sin(nx)\,dx = \begin{cases} \pi & m=n \\ 0 & m \neq n \end{cases}\int_{-\pi}^{\pi}\cos(mx)\sin(nx)\,dx = 0 \\quad \\forall m,n
+$$
 
-$$ ### 2.4 Fourier Series on $ [-L, L] $
+# ## 2.3 Orthogonality (Key Property) $ $\int_{-\pi}^{\pi}\cos(mx)\cos(nx)\,dx = \begin{cases} \pi & m=n \\ 0 & m \neq n \end{cases}\int_{-\pi}^{\pi}\sin(mx)\sin(nx)\,dx = \begin{cases} \pi & m=n \\ 0 & m \neq n \end{cases}\int_{-\pi}^{\pi}\cos(mx)\sin(nx)\,dx = 0 \\quad \\forall m,n
+
+$$
+
+# ## 2.4 Fourier Series on $ [-L, L] $
 
 $ $ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos\frac{n\pi x}{L} + b_n\sin\frac{n\pi x}{L}\right)a_n = \frac{1}{L}\int_{-L}^{L}f(x)\cos\frac{n\pi x}{L}\,dx $$---
 
@@ -47,15 +53,15 @@ $ $ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos\frac{n\pi x}{L} + b_
 
 ### Example 1: Square Wave $ f(x) = \begin{cases} 1 & 0 < x < \pi \\ -1 & -\pi < x < 0 \end{cases} $, periodic with period $ 2\pi $.
 
-This is an odd function, so $ a_n = 0 $ for all $ n $.
+This is an odd function, so $ a_n = 0 $ for all $  n $.
 
-$ $ b_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)\,dx = \frac{2}{\pi}\int_0^{\pi}\sin(nx)\,dx= \frac{2}{\pi}\left[-\frac{\cos(nx)}{n}\right]_0^{\pi} = \frac{2}{n\pi}(1-\cos n\pi) = \frac{2}{n\pi}(1-(-1)^n)b_n = \begin{cases} \frac{4}{n\pi} & n \text{ odd} \\ 0 & n \text{ even} \end{cases}f(x) = \frac{4}{\pi}\left(\sin x + \frac{\sin 3x}{3} + \frac{\sin 5x}{5} + \cdots\right)$$### Example 2: Sawtooth Wave $ f(x) = x $ for $ x \in (-\pi, \pi) $, periodic with period $ 2\pi $.
+$ $ b_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)\,dx = \frac{2}{\pi}\int_0^{\pi}\sin(nx)\,dx= \frac{2}{\pi}\left[-\frac{\cos(nx)}{n}\right]_0^{\pi} = \frac{2}{n\pi}(1-\cos n\pi) = \frac{2}{n\pi}(1-(-1)^n)b_n = \begin{cases} \frac{4}{n\pi} & n \text{ odd} \\ 0 & n \text{ even} \end{cases}f(x) = \frac{4}{\pi}\left(\sin x + \frac{\sin 3x}{3} + \frac{\sin 5x}{5} + \cdots\right)$ $### Example 2: Sawtooth Wave $ f(x) = x $ for $  x \in (-\pi, \pi) $, periodic with period $ 2\pi $.
 
 $ a_n = 0 $ (odd function).
 
 $ $ b_n = \frac{2}{\pi}\int_0^{\pi}x\sin(nx)\,dx = \frac{2}{\pi}\left[-\frac{x\cos nx}{n}\bigg|_0^{\pi} + \frac{1}{n}\int_0^{\pi}\cos nx\,dx\right]= \frac{2}{\pi}\left[-\frac{\pi\cos n\pi}{n} + 0\right] = \frac{-2(-1)^n}{n} = \frac{2(-1)^{n+1}}{n}f(x) = 2\left(\sin x - \frac{\sin 2x}{2} + \frac{\sin 3x}{3} - \cdots\right)$$
 
-**Gibbs phenomenon**: At jump discontinuity ($ x = \pm\pi $), the partial sums overshoot by ~9% regardless of number of terms. The overshoot never converges to zero — only the width shrinks.
+**Gibbs phenomenon**: At jump discontinuity ( $ x = \pm\pi $), the partial sums overshoot by ~9% regardless of number of terms. The overshoot never converges to zero — only the width shrinks.
 
 ---
 
@@ -68,7 +74,9 @@ $ $
 f(x) = \sum_{n=-\infty}^{\infty} c_n e^{inx}c_n = \frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)e^{-inx}\,d
 x
 
-$$### 4.2 Parseval's Theorem $ $\frac{1}{2\pi}\int_{-\pi}^{\pi}|f(x)|^2\,dx = \sum_{n=-\infty}^{\infty}|c_n|^2
+$$
+
+# ## 4.2 Parseval's Theorem $ $\frac{1}{2\pi}\int_{-\pi}^{\pi}|f(x)|^2\,dx = \sum_{n=-\infty}^{\infty}|c_n|^2
 
 $$**Physical meaning**: Total energy = sum of energies of each harmonic.
 
@@ -106,12 +114,12 @@ $ $\hat{f}(\omega) = \int_{-\infty}^{\infty}f(x)e^{-i\omega x}\,dx
 
 $$
 
-### 6.2 Invers
+# ## 6.2 Invers
 e
 
 $ $ f(x) = \frac{1}{2\pi}\int_{-\infty}^{\infty}\hat{f}(\omega)e^{i\omega x}\,d\omega $$
 
-### 6.3 Key Properties
+# ## 6.3 Key Properties
 
 | Property | Time Domain | Frequency Domain |
 |----------|------------|-----------------|
@@ -153,9 +161,11 @@ $ $
 X_k = \sum_{n=0}^{N-1} x_n e^{-i2\pi kn/N}, \\quad k = 0, 1, \ldots, N-
 1
 
-$$### 7.2 Inverse DFT $ $ x_n = \frac{1}{N}\sum_{k=0}^{N-1}X_k e^{i2\pi kn/N}$$
+$$
 
-### 7.3 Fast Fourier Transform (FFT)
+# ## 7.2 Inverse DFT $ $ x_n = \frac{1}{N}\sum_{k=0}^{N-1}X_k e^{i2\pi kn/N}$$
+
+# ## 7.3 Fast Fourier Transform (FFT)
 
 The FFT computes the DFT in $ O(N\log N) $ operations instead of $ O(N^2) $.
 
@@ -240,19 +250,19 @@ Even function, so $ b_n = 0 $.
 
 $ $ a_0 = \frac{2}{\pi}\int_0^{\pi}x\,dx = \pia_n = \frac{2}{\pi}\int_0^{\pi}x\cos(nx)\,dx = \frac{2}{\pi}\left[\frac{x\sin nx}{n}\bigg|_0^{\pi} - \frac{1}{n}\int_0^{\pi}\sin nx\,dx\right] = \frac{2}{\pi}\left[0 + \frac{\cos n\pi - 1}{n^2}\right]a_n = \frac{2((-1)^n-1)}{\pi n^2}$$
 
-$ a_n = 0 $ for $ n $ even,$ a_n = \frac{-4}{\pi n^2} $ for $ n $ odd
+$ a_n = 0 $ for $  n $ even,$ a_n = \frac{-4}{\pi n^2} $ for $  n $ odd
 .
 
 $ $|x| = \frac{\pi}{2} - \frac{4}{\pi}\sum_{k=0}^{\infty}\frac{\cos(2k+1)x}{(2k+1)^2} $$
 
-### Problem 2
+# ## Problem 2
 Find the Fourier transform of $ f(x) = e^{-|x|} $.
 
 **Solution**:
 
 $ $\hat{f}(\omega) = \int_{-\infty}^{\infty}e^{-|x|}e^{-i\omega x}\,dx = \int_0^{\infty}e^{-x(1+i\omega)}\,dx + \int_{-\infty}^{0}e^{x(1-i\omega)}\,dx= \frac{1}{1+i\omega} + \frac{1}{1-i\omega} = \frac{(1-i\omega)+(1+i\omega)}{1+\omega^2} = \frac{2}{1+\omega^2} $$
 
-### Problem 3
+# ## Problem 3
 Parseval's theorem check: $\frac{1}{\pi}\int_{-\pi}^{\pi}|x|^2\,dx = \frac{2\pi^2}{3} $?
 
 $ $\frac{1}{\pi}\int_{-\pi}^{\pi}x^2\,dx = \frac{1}{\pi}\cdot\frac{2\pi^3}{3} = \frac{2\pi^2}{3}\sum_{n=0}^{\infty}|c_n|^2 = \frac{\pi^2}{4} + \sum_{k=0}^{\infty}\frac{16}{\pi^2(2k+1)^4} $$

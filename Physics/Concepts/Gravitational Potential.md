@@ -20,14 +20,14 @@ updated: 2026-07-27
 
 $ $ U(\vec{r}) = -\frac{GM}{r} $$
 
-where $ G = 6.674\times10^{-11} $ m³/(kg·s²), $ M = 5.972\times10^{24} $ kg,$ r = |\vec{r}| $**Physical meaning:** Work per unit mass to bring a test mass from infinity to point $ \vec{r} $.
+where $ G = 6.674\times10^{-11} $ m³/(kg·s²), $  M = 5.972\times10^{24} $ kg,$  r = |\vec{r}| $**Physical meaning:** Work per unit mass to bring a test mass from infinity to point $ \vec{r} $.
 
 ### Gravity Vector from Potential
 
 $ $ \vec{g} = \nabla U = \frac{\partial U}{\partial \vec{r}
 }
 
-$ In spherical coordinates: $$ \vec{g} = \frac{\partial U}{\partial r}\hat{r} + \frac{1}{r}\frac{\partial U}{\partial \phi}\hat{\phi} + \frac{1}{r\cos\phi}\frac{\partial U}{\partial \lambda}\hat{\lambda} $
+$ In spherical coordinates: $ $ \vec{g} = \frac{\partial U}{\partial r}\hat{r} + \frac{1}{r}\frac{\partial U}{\partial \phi}\hat{\phi} + \frac{1}{r\cos\phi}\frac{\partial U}{\partial \lambda}\hat{\lambda} $
 
 $ $ ---
 
@@ -75,13 +75,13 @@ where $ k = \frac{b \cdot \gamma_p - a \cdot \gamma_a}{a \cdot \gamma_a} $ Numer
 
 $$
 
-### Equipotential Surfaces
+# ## Equipotential Surfaces
 Surfaces where gravitational potential is constant:
 
 - **Geoid:** Equipotential surface that best fits mean sea level
 
 - **Reference ellipsoid:** Rotationally symmetric equipotential (normal gravity)
-- $ V = \text{const} $ on all equipotential surfaces (gradient of $ V $ is perpendicular to surface)
+- $ V = \text{const} $ on all equipotential surfaces (gradient of $  V $ is perpendicular to surface)
 
 ---
 
@@ -90,19 +90,19 @@ Surfaces where gravitational potential is constant:
 ### Disturbing Potentia
 l
 
-$ T = W - V $ where $ W $ = true gravity potential,$ V $ = normal gravity potential.
+$ T = W - V $ where $  W $ = true gravity potential,$  V $ = normal gravity potential.
 
 ### Geoid Undulation (Bruns' Formula)
 
 $ N = \frac{T}{\gamma} $$$
 
-### Height Systems (Relationship)
+# ## Height Systems (Relationship)
 
 || Height Type | Definition | Relation |
 |---|---|---|---|
-| **Ellipsoidal ($ h $)** | Distance from reference ellipsoid (GNSS) | $ h = H + N $ |
-| **Orthometric ($ H $)** | Height above geoid, along plumb line | $ H = h - N $ |
-| **Normal ($ H^*$)** | Height above quasigeoid | $ H^* = h - \zeta $ |
+| **Ellipsoidal ( $ h $)** | Distance from reference ellipsoid (GNSS) | $  h = H + N $ |
+| **Orthometric ( $ H $)** | Height above geoid, along plumb line | $  H = h - N $ |
+| **Normal ( $ H^*$)** | Height above quasigeoid | $ H^* = h - \zeta $ |
 | **Dynamic ( $ H_{dyn} $)** | Proportional to gravity potential | $ H_{dyn} = \frac{C-W}{\gamma_0} $ |
 
 ### Molodensky's Formula
@@ -116,7 +116,7 @@ $ $ T(P) \approx \int_0^H \left(\frac{\partial \gamma^*}{\partial H^*}\right) \,
 
 A geopotential number $ C $ is the potential difference between the geoid and point P
 
-$ C = \int_P^{\text{geoid}} g \, dh $ For practical computation (assuming constant $ g $):
+$ C = \int_P^{\text{geoid}} g \, dh $ For practical computation (assuming constant $  g $):
 
 $ C \approx \bar{g} \cdot H $ where $\bar{g} $ is the mean gravity along the plumb line from geoid to P.
 
@@ -170,10 +170,10 @@ The first term is the potential due to the non-spherical mass distribution (zona
 ## 9. Worked Examples
 
 ### Example 1: Geoid Undulation from GPS + Gravity
-Given: GPS height $ h = 152 $ m, orthometric height $ H = 145 $ m
+Given: GPS height $ h = 152 $ m, orthometric height $  H = 145 $ m
 .
 
-$ $
+$ $ 
 
 N = h - H = 152 - 145 = 7 \text{ m
 }
@@ -184,7 +184,7 @@ N = h - H = 152 - 145 = 7 \text{ m
 
 $$
 
-### Example 3: Gravity at 10 km Altitude
+# ## Example 3: Gravity at 10 km Altitude
 Approximation: $ \Delta g \approx -2g \frac{\Delta h}{R} $
 
 $ $ g(10\text{ km}) \approx 9.81 - 2(9.81)\frac{10000}{6.371\times10^6} = 9.81 - 0.0308 = 9.779 \text{ m/s}^2 $$

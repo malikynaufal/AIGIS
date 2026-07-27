@@ -135,13 +135,13 @@ Legacy: $\phi_{Bessel} = -6.20^\circ $, $\lambda_{Bessel} = 106.85^\circ $ (Jaka
 
 **Approach:**
 1. Apply a 7-parameter Helmert transformation (Bessel → WGS84):
- -$ T_x = -347 $ m,$ T_y = 213 $ m,$ T_z = -104 $ m (approximate for Jakarta region)
+ -$ T_x = -347 $ m,$ T_y = 213 $ m,$ T_z = -104 $  m (approximate for Jakarta region)
  -$ s = -1.5 \times 10^{-6} $ (1.5 ppm)
  -$ R_x = -6.5″, R_y = 5.3″, R_z = -2.1″$ 2. Convert Bessel geodetic → Bessel ECEF.
 3. Apply Helmert → WGS84 ECEF.
 4. Convert WGS84 ECEF → WGS84 geodetic = DGN95 coordinates.
 
-**Typical result:** Legacy → DGN95 shift is $ 20 $–$ 100$ m depending on location, consistent with the datum offset history.
+**Typical result:** Legacy → DGN95 shift is $ 20 $–$ 100$  m depending on location, consistent with the datum offset history.
 
 ## Practical Implications for Indonesian Geodesy
 

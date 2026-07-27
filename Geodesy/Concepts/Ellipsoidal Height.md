@@ -22,9 +22,9 @@ Every point on Earth has three distinct height values:
 ### Fundamental Relatio
 n
 
-$ $ h = H + N $$
+$ $  h = H + N $$
 
-This simple equation is the bridge between satellite-based positioning (ellipsoidal) and traditional surveying (orthometric). For a GNSS survey: measure $ h $ via satellite, subtract $ N $ from a geoid model, obtain $ H $ usable for mapping and engineering.
+This simple equation is the bridge between satellite-based positioning (ellipsoidal) and traditional surveying (orthometric). For a GNSS survey: measure $ h $ via satellite, subtract $  N $ from a geoid model, obtain $  H $ usable for mapping and engineering.
 
 ## Geometric Meaning
 
@@ -36,7 +36,7 @@ At a point $ P $ with geodetic latitude $\phi $ and longitude $\lambda $:
 
 - The point's ECEF coordinates are:
 
-$ $ X = (N + h)\cos\phi\cos\lambdaY = (N + h)\cos\phi\sin\lambdaZ = \left(N(1 - e^2) + h\right)\sin\phi $$
+$ $  X = (N + h)\cos\phi\cos\lambdaY = (N + h)\cos\phi\sin\lambdaZ = \left(N(1 - e^2) + h\right)\sin\phi $$
 
 where $ N = \frac{a}{\sqrt{1 - e^2\sin^2\phi}} $ is the radius of curvature in the prime vertical.
 
@@ -46,7 +46,7 @@ where $ N = \frac{a}{\sqrt{1 - e^2\sin^2\phi}} $ is the radius of curvature in t
 
 - Because the [[Reference Ellipsoid]] is a smooth mathematical surface,$ h $ takes no account of gravity, topography, or mass distributions.
 
-- Values range from about $-100 $ m (ocean trenches relative to ellipsoid) to $+9000 $ m (Mt. Everest ellipsoidal height).
+- Values range from about $-100 $  m (ocean trenches relative to ellipsoid) to $+9000 $  m (Mt. Everest ellipsoidal height).
 
 ## Typical Values at Selected Locations (WGS84)
 
@@ -57,7 +57,7 @@ where $ N = \frac{a}{\sqrt{1 - e^2\sin^2\phi}} $ is the radius of curvature in t
 | Indian Ocean | 0° | 80°E | 0 | ~−105 | −105 |
 | North Atlantic | 50°N | 10°W | 0 | ~+50 | 50 |
 
-The geoid undulation $ N $ varies by ±110 m globally, causing significant differences between $ h $ and $ H $.
+The geoid undulation $ N $ varies by ±110 m globally, causing significant differences between $  h $ and $  H $.
 
 ## Accuracy Considerations
 
@@ -91,7 +91,7 @@ where $\gamma $ is normal gravity at the ellipsoid. This connects height systems
 
 - [[Geoid Undulation]] — The conversion factor $ N $
 
-- [[Geodetic Coordinates]] — Complete position representation ($\phi, \lambda, h $)
+- [[Geodetic Coordinates]] — Complete position representation ( $\phi, \lambda, h $)
 
 - [[Geocentric Cartesian ECEF]] — Conversion to/from $ X,Y,Z$
 

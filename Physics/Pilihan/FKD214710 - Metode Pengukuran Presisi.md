@@ -24,7 +24,7 @@ Precision measurement methods (metode pengukuran presisi) provide the foundation
 
 An interferometer splits a coherent beam (e.g., laser) into two paths and recombines them. The interference pattern depends on the optical path difference (OPD, selisih lintasan optik):
 
-$I = I_0 \left[1 + V\cos\left(\frac{2\pi \cdot \text{OPD}}{\lambda}\right)\right] $ where $ V $ is the visibility (visibilitas) of the fringes and $\lambda$ is the wavelength.
+$I = I_0 \left[1 + V\cos\left(\frac{2\pi \cdot \text{OPD}}{\lambda}\right)\right] $ where $  V $ is the visibility (visibilitas) of the fringes and $\lambda$ is the wavelength.
 
 ### 1.2 Michelson Interferometer
 
@@ -33,9 +33,9 @@ The Michelson interferometer splits a beam at a 50/50 beam splitter. Moving one 
 $ $ \text{OPD} = 2d\cos\thet
 a
 
-$ The number of fringes passing a detector point: $N = \frac{2d}{\lambda} $ $
+$ The number of fringes passing a detector point: $  N = \frac{2d}{\lambda} $ $
 
-For a HeNe laser ($\lambda = 632.8 $ nm), each fringe corresponds to 316.4 nm of mirror displacement.
+For a HeNe laser ( $\lambda = 632.8 $ nm), each fringe corresponds to 316.4 nm of mirror displacement.
 
 ### 1.3 Applications in Metrology
 
@@ -43,7 +43,7 @@ For a HeNe laser ($\lambda = 632.8 $ nm), each fringe corresponds to 316.4 nm of
 |---|---|---|
 | Length standard | Laser interferometry | $ \lambda/1000 \approx 0.6 $ nm |
 | Surface profiling | Fizeau interferometer | $ \lambda/20 \approx 30 $ nm |
-| Gravitational waves | LIGO (km-scale) | $10^{-19}$ m |
+| Gravitational waves | LIGO (km-scale) | $10^{-19}$  m |
 | Geodetic ranging | Two-color EDM | 1 mm + 0.1 ppm |
 | Strain measurement | Fiber Bragg grating | $10^{-6}$ strain |
 
@@ -77,7 +77,7 @@ $$
 
 **Example**: Measuring the area of a rectangle $ A = l \cdot w $ with $\sigma_l = 0.1 $ mm and $\sigma_w = 0.2 $ mm $ $
 
- \frac{\sigma_A}{A} = \sqrt{\left(\frac{\sigma_l}{l}\right)^2 + \left(\frac{\sigma_w}{w}\right)^2} $For $ l = 100.0 $mm and $ w = 50.0 $mm $$$
+ \frac{\sigma_A}{A} = \sqrt{\left(\frac{\sigma_l}{l}\right)^2 + \left(\frac{\sigma_w}{w}\right)^2} $For $  l = 100.0 $ mm and $  w = 50.0 $ mm $$$
 
  \sigma_A = A\sqrt{\left(\frac{0.1}{100}\right)^2 + \left(\frac{0.2}{50}\right)^2} = 5000 \times 4.47 \times 10^{-3} = 22.4\;\text{mm}^2
 
@@ -85,9 +85,9 @@ $ $
 
 ### 2.3 Outlier Detection
 
-**Grubbs' test**: For a dataset with mean $ \bar{x}$ and standard deviation $ s $:
+**Grubbs' test**: For a dataset with mean $ \bar{x}$ and standard deviation $  s $:
 
-$ G = \frac{|x_{\text{suspect}} - \bar{x}|}{s} $Reject if $ G > G_{\alpha, N} $at significance level $ \alpha $ with $ N $ observations.
+$ G = \frac{|x_{\text{suspect}} - \bar{x}|}{s} $ Reject if $  G > G_{\alpha, N} $ at significance level $ \alpha $ with $  N $ observations.
 
 **Chauvenet's criterion**: Reject if probability of obtaining the deviation is $< 1/(2N) $.
 
@@ -101,7 +101,7 @@ Measurement traceability (jejak pengukuran) requires an unbroken chain of calibr
 
 $ $ \text{SI unit} \rightarrow \text{National standard (BPN)} \rightarrow \text{Working standard} \rightarrow \text{DUT (device under test)} $$
 
-### 3.2 Calibration Methods
+# ## 3.2 Calibration Methods
 
 **Six Calibration Approaches**:
 
@@ -141,11 +141,11 @@ $$ **Type B evaluation** (from other information):
 
 $ u_B = \frac{a}{\sqrt{3}} \quad \text{(rectangular distribution)}u_B = \frac{a}{\sqrt{6}} \quad \text{(triangular distribution)}u_B = \frac{a}{3} \quad \text{(normal distribution, } k=3\text{)} $$$
 
-### 4.2 Combined and Expanded Uncertainty
+# ## 4.2 Combined and Expanded Uncertainty
 
 **Combined standard uncertainty**
 
-$ u_c(y) = \sqrt{\sum_{i} \left(\frac{\partial y}{\partial x_i}\right)^2 u^2(x_i) + 2\sum_{i<j}\frac{\partial y}{\partial x_i}\frac{\partial y}{\partial x_j}u(x_i,x_j)} $ $ **Expanded uncertainty** (95% confidence) $$ U = k \cdot u_c $ $
+$ u_c(y) = \sqrt{\sum_{i} \left(\frac{\partial y}{\partial x_i}\right)^2 u^2(x_i) + 2\sum_{i<j}\frac{\partial y}{\partial x_i}\frac{\partial y}{\partial x_j}u(x_i,x_j)} $ $ **Expanded uncertainty** (95% confidence) $ $ U = k \cdot u_c $ $
 
 where $ k = 2 $ (normal distribution, 95.45% confidence).$
 
@@ -155,7 +155,7 @@ The Welch–Satterthwaite formula gives the effective degrees of freedom
 
 $ $ \nu_{\text{eff}} = \frac{u_c^4}{\sum_{i} \frac{u_i^4}{\nu_i}} $$
 
-If $ \nu_{\text{eff}} < 30$, use the Student $ t $-distribution with $ k = t_{0.025, \nu_{\text{eff}}}$.
+If $ \nu_{\text{eff}} < 30 $, use the Student $  t $-distribution with $  k = t_{0.025, \nu_{\text{eff}}}$.
 
 ---
 
@@ -172,21 +172,21 @@ If $ \nu_{\text{eff}} < 30$, use the Student $ t $-distribution with $ k = t_{0.
 
 **Analysis**:
 
-- Mean: $ \bar{x} = 2000.00349 $ m
+- Mean: $ \bar{x} = 2000.00349 $  m
 
-- Standard deviation: $s = 0.00044 $ m
+- Standard deviation: $s = 0.00044 $  m
 
-- Type A uncertainty: $u_A = s/\sqrt{10} = 0.00014 $ m
+- Type A uncertainty: $u_A = s/\sqrt{10} = 0.00014 $  m
 
-- Type B (EDM spec ±1 mm): $u_B = 0.001/\sqrt{3} = 0.00058 $ m
+- Type B (EDM spec ±1 mm): $u_B = 0.001/\sqrt{3} = 0.00058 $  m
 
-- Combined: $u_c = \sqrt{u_A^2 + u_B^2} = 0.00060 $ m
+- Combined: $u_c = \sqrt{u_A^2 + u_B^2} = 0.00060 $  m
 
-- Expanded ($k=2 $): $ U = 0.0012 $m
+- Expanded ( $k=2 $): $  U = 0.0012 $ m
 
 - **Bias**: $ \Delta = \bar{x} - L_0 = +3.49 $ mm (statistically significant: $ |\Delta| > U $)
 
-- **Correction needed**: Add$-3.5 \pm 1.2 $ mm to future measurements
+- **Correction needed**: Add $-3.5 \pm 1.2 $ mm to future measurements
 
 ---
 

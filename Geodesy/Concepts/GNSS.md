@@ -44,7 +44,7 @@ $ $**Resolving for 4 unknowns**$ (x, y, z, \delta t) $ requires ≥ 4 satellites
 
 $ $\begin{bmatrix} \rho_1 \\ \rho_2 \\ \rho_3 \\ \rho_4 \end{bmatrix} \xrightarrow{\text{least squares}} \begin{bmatrix} x_{rx} \\ y_{rx} \\ z_{rx} \\ \delta t_{rx} \end{bmatrix} $$
 
-### Observation Equations
+# ## Observation Equations
 
 **Code (pseudorange):*
 *
@@ -58,7 +58,7 @@ $ $\Phi_i = \frac{\rho}{\lambda} + N_i + \frac{c}{\lambda}(dt_r - dt_s) - \frac{
 
 $$
 
-where $\rho = ||\mathbf{r}_r - \mathbf{r}_s|| $= geometric range,$ N $ = integer ambiguity.
+where $\rho = ||\mathbf{r}_r - \mathbf{r}_s|| $= geometric range,$  N $ = integer ambiguity.
 
 ### Error Sources
 
@@ -101,7 +101,7 @@ $ $\rho_{corr} = \rho_{rover} + \Delta\rho_{base} $$
 
 ### RTK (Real-Time Kinematic)
 
-Float solution: estimate $ N \in \mathbb{R} $ Fixed solution: resolve $ N \in \mathbb{Z} $ (LAMBDA method
+Float solution: estimate $ N \in \mathbb{R} $ Fixed solution: resolve $  N \in \mathbb{Z} $ (LAMBDA method
 )
 
 $ $\hat{N}_{float} \xrightarrow{\text{LAMBDA}} \hat{N}_{fixed} $$

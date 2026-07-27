@@ -13,7 +13,7 @@ updated: 2026-07-27
 
 ## 1. Definition
 
-If $Z_1, Z_2, \ldots, Z_n $ are independent standard normal random variables, then:$ $\chi^2_n = Z_1^2 + Z_2^2 + \cdots + Z_n^2
+If $Z_1, Z_2, \ldots, Z_n $ are independent standard normal random variables, then: $ $\chi^2_n = Z_1^2 + Z_2^2 + \cdots + Z_n^2
 
 $$
 
@@ -23,8 +23,8 @@ has a **chi-square distribution** with $ n $ degrees of freedom.
 
 | Symbol | Name | Value |
 |--------|------|-------|
-| $ n $ or $ k $ | Degrees of freedom | Positive integer |
-| $ f(x) = \frac{x^{n/2-1} e^{-x/2}}{2^{n/2} \Gamma(n/2)} $ | PDF | For $ x > 0 $ |
+| $ n $ or $  k $ | Degrees of freedom | Positive integer |
+| $ f(x) = \frac{x^{n/2-1} e^{-x/2}}{2^{n/2} \Gamma(n/2)} $ | PDF | For $  x > 0 $ |
 
 ---
 
@@ -35,7 +35,7 @@ has a **chi-square distribution** with $ n $ degrees of freedom.
 | Mean | $ E[\chi^2_n] = n $ |
 | Variance | $\text{Var}[\chi^2_n] = 2n $ |
 | Skewness | $\sqrt{8/n} $ |
-| MGF | $ M(t) = (1-2t)^{-n/2} $, $ t < 1/2 $ |
+| MGF | $ M(t) = (1-2t)^{-n/2} $, $  t < 1/2 $ |
 | Additivity | $\chi^2_m + \chi^2_n \sim \chi^2_{m+n} $ |
 
 ---
@@ -46,11 +46,15 @@ has a **chi-square distribution** with $ n $ degrees of freedom.
 
 $ $\frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}
 
-$$### Distribution as $ n \to \infty $
+$$
+
+# ## Distribution as $  n \to \infty $
 
 $ $\frac{\chi^2_n - n}{\sqrt{2n}} \xrightarrow{d} \mathcal{N}(0,1) \quad (\text{CLT})
 
-$$### Relationship to Gamma $ $\chi^2_n \sim \text{Gamma}(n/2, 2)
+$$
+
+# ## Relationship to Gamma $ $\chi^2_n \sim \text{Gamma}(n/2, 2)
 
 $$
 
@@ -66,7 +70,7 @@ $ $\Omega = \hat{v}^T P \hat{v} = v^T P v \sim \chi^2_{n-t}
 
 $$
 
-where $ n $= observations,$ t $ = parameters.
+where $ n $= observations,$  t $ = parameters.
 
 ### 4.2 Baarda Data Snooping
 
@@ -74,11 +78,11 @@ Test statistic for outlier detection:
 
 $ $ T_i = \frac{|w_i|}{\sqrt{(q_{w_i})}} \sim \mathcal{N}(0,1) $$
 
-or equivalently:$ $ \frac{w_i^2}{q_{w_i}} \sim \chi^2_1
+or equivalently: $ $ \frac{w_i^2}{q_{w_i}} \sim \chi^2_1
 
 $$
 
-### 4.3 Model Validation
+# ## 4.3 Model Validation
 
 Test whether observed residuals match expected $\chi^2 $ distribution.
 

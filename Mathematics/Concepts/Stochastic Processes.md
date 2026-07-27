@@ -28,7 +28,7 @@ A **stochastic process** is a collection $\{X_t\}_{t \in T} $ of random variable
 
 $ X_{n+1} $ depends on $ X_n $ only (memoryless):
 
-$ $ P(X_{n+1} = j \mid X_n = i, X_{n-1}, \dots, X_0) = P(X_{n+1} = j \mid X_n = i) = p_{ij}$$### Transition Matrix $ $ P = \begin{bmatrix} p_{00} & p_{01} & \cdots \\ p_{10} & p_{11} & \cdots \\ \vdots & & \ddots \end{bmatrix}$$
+$ $ P(X_{n+1} = j \mid X_n = i, X_{n-1}, \dots, X_0) = P(X_{n+1} = j \mid X_n = i) = p_{ij}$ $### Transition Matrix $ $  P = \begin{bmatrix} p_{00} & p_{01} & \cdots \\ p_{10} & p_{11} & \cdots \\ \vdots & & \ddots \end{bmatrix}$$
 
 where $ p_{ij} \geq 0 $ and $\sum_j p_{ij} = 1 $.
 
@@ -36,7 +36,7 @@ where $ p_{ij} \geq 0 $ and $\sum_j p_{ij} = 1 $.
 
 $ $ P^{(n)} = P^n \quad \Rightarrow \quad p_{ij}^{(n)} = P(X_n = j \mid X_0 = i)$$
 
-### Classification of States
+# ## Classification of States
 
 | State Type | Property |
 |-----------|----------|
@@ -54,7 +54,9 @@ For irreducible aperiodic positive recurrent chains:
 
 $ $\lim_{n \to \infty} p_{ij}^{(n)} = \pi_j
 
-$$### Mean Recurrence Time $ $ m_{ii} = E[T_i] = \sum_{n=1}^{\infty} n \cdot P(T_i = n) = \frac{1}{\pi_i}$$
+$$
+
+# ## Mean Recurrence Time $ $ m_{ii} = E[T_i] = \sum_{n=1}^{\infty} n \cdot P(T_i = n) = \frac{1}{\pi_i}$$
 
 ```mermaid
 stateDiagram-v2
@@ -89,7 +91,7 @@ $ $ P(N(t) = k) = \frac{(\lambda t)^k e^{-\lambda t}}{k!}$$
 
 $\{W_t\}_{t \geq 0} $ is a **standard Brownian motion** if:
 1. $ W_0 = 0 $
-2. **Independent increments:** $ W_t - W_s $ independent of $ W_u $ ($ u \leq s $)
+2. **Independent increments:** $ W_t - W_s $ independent of $ W_u $ ( $  u \leq s $)
 3. **Gaussian increments:** $ W_t - W_s \sim N(0, t - s) $
 4. **Continuous paths:** $ t \mapsto W_t $ is continuous (a.s.)
 
@@ -118,7 +120,7 @@ $\{X_t\} $ is a **martingale** with respect to filtration $\{\mathcal{F}_t\} $ i
 
 ### Optional Stopping Theorem
 
-Under regularity conditions, $ E[X_T] = E[X_0] $ for bounded stopping times $ T $.
+Under regularity conditions, $ E[X_T] = E[X_0] $ for bounded stopping times $  T $.
 
 ## 6. Applications
 

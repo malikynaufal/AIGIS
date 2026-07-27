@@ -16,26 +16,28 @@ Statistics and probability form the backbone of data analysis, uncertainty quant
 
 ### 1.1 Sample Space and Events
 
-The **sample space** ($\Omega $) is the set of all possible outcomes of a random experiment. An **event** $ A \subseteq \Omega $ is any subset of $\Omega $.
+The **sample space** ( $\Omega $) is the set of all possible outcomes of a random experiment. An **event** $  A \subseteq \Omega $ is any subset of $\Omega $.
 
 $ $ P(A) = \frac{|A|}{|\Omega|} \quad \text{(classical definition, equally likely outcomes)}$$
 
-### 1.2 Axioms of Probability (Kolmogorov)
+# ## 1.2 Axioms of Probability (Kolmogorov)
 
-1.$ P(A) \geq 0 $ for any event $ A $ 2.$ P(\Omega) = 1 $ 3. For disjoint events $ A_1, A_2, \ldots $: $ P\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} P(A_i) $### 1.3 Addition and Complement Rules
+1.$ P(A) \geq 0 $ for any event $  A $ 2.$ P(\Omega) = 1 $ 3. For disjoint events $ A_1, A_2, \ldots $: $ P\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} P(A_i) $### 1.3 Addition and Complement Rules
 
 $ $
 
 P(A \cup B) = P(A) + P(B) - P(A \cap B)P(\bar{A}) = 1 - P(A
 )
 
-$$### 1.4 Conditional Probability and Independence $ $ P(A|B) = \frac{P(A \cap B)}{P(B)}, \quad P(B) > 0 $$**Independence:**$ A $ and $ B $ are independent iff $ P(A \cap B) = P(A) \cdot P(B) $, which is equivalent to $ P(A|B) = P(A) $.
+$$
+
+# ## 1.4 Conditional Probability and Independence $ $ P(A|B) = \frac{P(A \cap B)}{P(B)}, \quad P(B) > 0 $ $**Independence:**$  A $ and $  B $ are independent iff $ P(A \cap B) = P(A) \cdot P(B) $, which is equivalent to $ P(A|B) = P(A) $.
 
 **Bayes' Theorem:**
 
 $ $ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$ | Term | Interpretation |
 |------|---------------|
-| $ P(A) $ | Prior — belief before observing $ B $ |
+| $ P(A) $ | Prior — belief before observing $  B $ |
 | $ P(B\|A) $ | Likelihood — probability of data given hypothesis |
 | $ P(A\|B) $ | Posterior — updated belief after data |
 | $ P(B) $ | Evidence — normalising constant |
@@ -46,10 +48,10 @@ $ $ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$ | Term | Interpretation |
 
 ### 2.1 Bernoulli Distribution $ X \sim \text{Bernoulli}(p) $: $ P(X=1)=p $, $ P(X=0)=1-p $.
 
-$ $ E[X] = p, \quad \text{Var}(X) = p(1-p)$$### 2.2 Binomial Distribution $ X \sim \text{Bin}(n, p) $: number of successes in $ n $ independent Bernoulli trials
+$ $ E[X] = p, \quad \text{Var}(X) = p(1-p)$ $### 2.2 Binomial Distribution $  X \sim \text{Bin}(n, p) $: number of successes in $  n $ independent Bernoulli trials
 .
 
-$ $ P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0, 1, \ldots, nE[X] = np, \quad \text{Var}(X) = np(1-p)$$**Application in geodesy:** Probability of detecting a gross error in $ n $ independent measurement epochs.
+$ $ P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0, 1, \ldots, nE[X] = np, \quad \text{Var}(X) = np(1-p)$ $**Application in geodesy:** Probability of detecting a gross error in $  n $ independent measurement epochs.
 
 ### 2.3 Poisson Distribution $ X \sim \text{Poisson}(\lambda) $: models count data when events occur at a constant rate.
 
@@ -57,7 +59,7 @@ $ $ P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}, \quad k = 0, 1, 2, \ldotsE[X] 
 
 ### 2.4 Geometric Distribution $ X \sim \text{Geom}(p) $: number of trials until first success.
 
-$ $ P(X = k) = (1-p)^{k-1} p, \quad E[X] = \frac{1}{p}$$### 2.5 Negative Binomial Distribution $ X \sim \text{NB}(r, p) $: number of trials until $ r $ successes
+$ $ P(X = k) = (1-p)^{k-1} p, \quad E[X] = \frac{1}{p}$ $### 2.5 Negative Binomial Distribution $  X \sim \text{NB}(r, p) $: number of trials until $  r $ successes
 .
 
 $ $ P(X = k) = \binom{k-1}{r-1} p^r (1-p)^{k-r}$$
@@ -87,27 +89,27 @@ $ $ f(x) = \frac{1}{\sigma\sqrt{2\pi}} \exp\!\left(-\frac{(x - \mu)^2}{2\sigma^2
 
 If $ Z_1, \ldots, Z_k \sim \mathcal{N}(0,1) $ independently, then $\chi^2 = \sum Z_i^2 \sim \chi^2(k) $.
 
-$ $ E[\chi^2] = k, \quad \text{Var}(\chi^2) = 2k $$**Key use:** Testing the overall fit of a least-squares model. The quadratic form $\mathbf{v}^T P \mathbf{v} / \sigma_0^2 $ follows $\chi^2 $ with $\nu = n - u $ degrees of freedom.
+$ $ E[\chi^2] = k, \quad \text{Var}(\chi^2) = 2k $ $**Key use:** Testing the overall fit of a least-squares model. The quadratic form $\mathbf{v}^T P \mathbf{v} / \sigma_0^2 $ follows $\chi^2 $ with $\nu = n - u $ degrees of freedom.
 
 ### 3.3 Student's t-Distribution
 
-If $ Z \sim \mathcal{N}(0,1) $ and $ V \sim \chi^2(k) $ independently
+If $ Z \sim \mathcal{N}(0,1) $ and $  V \sim \chi^2(k) $ independently
 
-$ $ T = \frac{Z}{\sqrt{V/k}} \sim t(k)$$| Degrees of freedom $\nu $ | 95% two-tailed critical value |
+$ $  T = \frac{Z}{\sqrt{V/k}} \sim t(k)$ $| Degrees of freedom $\nu $ | 95% two-tailed critical value |
 |---------------------------|-------------------------------|
 | 1 | 12.71 |
 | 5 | 2.57 |
 | 10 | 2.23 |
 | 20 | 2.09 |
-| $\infty $ | 1.96 ($\to $ normal) |
+| $\infty $ | 1.96 ( $\to $ normal) |
 
 **Use:** Confidence intervals for estimated parameters when population variance is unknown (small sample size).
 
 ### 3.4 F-Distribution
 
-If $ U \sim \chi^2(d_1) $ and $ V \sim \chi^2(d_2) $ independently
+If $ U \sim \chi^2(d_1) $ and $  V \sim \chi^2(d_2) $ independently
 
-$ $ F = \frac{U/d_1}{V/d_2} \sim F(d_1, d_2)$$
+$ $  F = \frac{U/d_1}{V/d_2} \sim F(d_1, d_2)$$
 
 **Use:** Comparing variances of two populations; testing nested regression models (ANOVA, F-test for model significance).
 
@@ -116,7 +118,9 @@ $ $ F = \frac{U/d_1}{V/d_2} \sim F(d_1, d_2)$$
 $ $ f(x) = \frac{1}{b-a}, \quad a \leq x \leq bE[X] = \frac{a+b}{2}, \quad \text{Var}(X) = \frac{(b-a)^2}{12
 }
 
-$$### 3.6 Exponential Distribution $ $ f(x) = \lambda e^{-\lambda x}, \quad x \geq 0E[X] = \frac{1}{\lambda}, \quad \text{Var}(X) = \frac{1}{\lambda^2}$$**Use:** Time between random events — satellite failures, GNSS cycle slips, equipment malfunctions.
+$$
+
+# ## 3.6 Exponential Distribution $ $ f(x) = \lambda e^{-\lambda x}, \quad x \geq 0E[X] = \frac{1}{\lambda}, \quad \text{Var}(X) = \frac{1}{\lambda^2}$$**Use:** Time between random events — satellite failures, GNSS cycle slips, equipment malfunctions.
 
 ---
 
@@ -175,7 +179,7 @@ An **estimator** $\hat{\theta} $ is a function of the sample. Good properties:
 | Property | Definition |
 |----------|------------|
 | Unbiased | $ E[\hat{\theta}] = \theta $ |
-| Consistent | $\hat{\theta} \xrightarrow{p} \theta $ as $ n \to \infty $ |
+| Consistent | $\hat{\theta} \xrightarrow{p} \theta $ as $  n \to \infty $ |
 | Efficient | Minimum variance among all unbiased estimators |
 | Sufficient | Uses all information about $\theta $ in the data |
 
@@ -183,7 +187,7 @@ An **estimator** $\hat{\theta} $ is a function of the sample. Good properties:
 
 Given data $\mathbf{x} = (x_1, \ldots, x_n) $ from distribution $ f(x|\theta) $:
 
-$ $ L(\theta) = \prod_{i=1}^n f(x_i|\theta)\ell(\theta) = \ln L(\theta) = \sum_{i=1}^n \ln f(x_i|\theta)$$**MLE:**$\hat{\theta}_{\text{MLE}} = \arg\max_\theta \ell(\theta) $.
+$ $ L(\theta) = \prod_{i=1}^n f(x_i|\theta)\ell(\theta) = \ln L(\theta) = \sum_{i=1}^n \ln f(x_i|\theta)$ $**MLE:**$\hat{\theta}_{\text{MLE}} = \arg\max_\theta \ell(\theta) $.
 
 Solve $\frac{d\ell}{d\theta} = 0 $ (score equation).
 
@@ -231,8 +235,8 @@ $$ | Confidence Level | $ z_{\alpha/2} $ |
 
 | | $ H_0 $ is true | $ H_0 $ is false |
 |---|---|---|
-| Reject $ H_0 $ | Type I error ($\alpha $) | Correct (power $= 1-\beta $) |
-| Fail to reject $ H_0 $ | Correct | Type II error ($\beta $) |
+| Reject $ H_0 $ | Type I error ( $\alpha $) | Correct (power $= 1-\beta $) |
+| Fail to reject $ H_0 $ | Correct | Type II error ( $\beta $) |
 
 **Power** $= 1 - \beta = P(\text{reject } H_0 \mid H_0 \text{ is false}) $.
 
@@ -240,18 +244,18 @@ $$ | Confidence Level | $ z_{\alpha/2} $ |
 
 | Test | Statistic | Use case |
 |------|-----------|----------|
-| **Z-test** | $ Z = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}} $ | Known variance, large $ n $ |
+| **Z-test** | $ Z = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}} $ | Known variance, large $  n $ |
 | **t-test** | $ t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} $ | Unknown variance |
 | **$\chi^2 $ test** |$\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i} $ | Goodness-of-fit |
 | **F-test** | $ F = s_1^2 / s_2^2 $ | Comparing two variances |
 
 ### 6.4 Two-Sided vs One-Sided
 
-- **Two-sided** ($ H_a: \mu \neq \mu_0 $): reject if $|T| > t_{\alpha/2} $
+- **Two-sided** ( $ H_a: \mu \neq \mu_0 $): reject if $|T| > t_{\alpha/2} $
 
-- **Right-sided** ($ H_a: \mu > \mu_0 $): reject if $ T > t_\alpha $
+- **Right-sided** ( $ H_a: \mu > \mu_0 $): reject if $  T > t_\alpha $
 
-- **Left-sided** ($ H_a: \mu < \mu_0 $): reject if $ T < -t_\alpha $---
+- **Left-sided** ( $ H_a: \mu < \mu_0 $): reject if $  T < -t_\alpha $---
 
 ## 7. Goodness-of-Fit Testing
 
@@ -259,13 +263,13 @@ $$ | Confidence Level | $ z_{\alpha/2} $ |
 
 Tests whether observed frequencies $ O_i $ match expected frequencies $ E_i $:
 
-$ $\chi^2 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i} $$- Degrees of freedom: $\nu = k - 1 - p $ (where $ p $= number of estimated parameters)
+$ $\chi^2 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i} $ $- Degrees of freedom: $\nu = k - 1 - p $ (where $  p $= number of estimated parameters)
 
 - Reject $ H_0 $ (distribution fits) if $\chi^2 > \chi^2_{\alpha, \nu} $### 7.2 Kolmogorov-Smirnov Test
 
 Compares the empirical CDF $ F_n(x) $ with a theoretical CDF $ F_0(x) $:
 
-$ $
+$ $ 
 
 D = \sup_x |F_n(x) - F_0(x)|$$
 
@@ -277,7 +281,7 @@ Reject if $ D > D_{\alpha, n} $ (critical values from tables).
 
 Specifically tests normality. Uses the statistic
 
-$ $ W = \frac{\left(\sum_{i=1}^n a_i x_{(i)}\right)^2}{\sum(x_i - \bar{x})^2}$$
+$ $  W = \frac{\left(\sum_{i=1}^n a_i x_{(i)}\right)^2}{\sum(x_i - \bar{x})^2}$$
 
 where $ x_{(i)} $ are ordered values and $ a_i $ are tabulated coefficients.
 
@@ -285,7 +289,7 @@ where $ x_{(i)} $ are ordered values and $ a_i $ are tabulated coefficients.
 
 Weighted version of K-S test that gives more weight to the tails
 
-$ $ A^2 = -n - \frac{1}{n}\sum_{i=1}^{n}(2i-1)[\ln F_0(x_{(i)}) + \ln(1 - F_0(x_{(n+1-i)}))]$$**Geodesy application:** After least-squares adjustment, test whether residuals $\mathbf{v} $ follow $\mathcal{N}(0, \sigma_0^2) $.
+$ $ A^2 = -n - \frac{1}{n}\sum_{i=1}^{n}(2i-1)[\ln F_0(x_{(i)}) + \ln(1 - F_0(x_{(n+1-i)}))]$ $**Geodesy application:** After least-squares adjustment, test whether residuals $\mathbf{v} $ follow $\mathcal{N}(0, \sigma_0^2) $.
 
 ---
 
@@ -299,7 +303,7 @@ In continuous form with parameter $\theta $ and data $\mathbf{x} $:
 
 $ $\pi(\theta|\mathbf{x}) = \frac{L(\theta|\mathbf{x}) \cdot \pi(\theta)}{\int L(\theta|\mathbf{x}) \cdot \pi(\theta)\, d\theta} $$
 
-### 8.2 Conjugate Priors
+# ## 8.2 Conjugate Priors
 
 | Likelihood | Conjugate Prior | Posterior |
 |------------|-----------------|-----------|
@@ -336,7 +340,7 @@ As $ n \to \infty $, the posterior concentrates around $\bar{x} $ regardless of 
 
 Tests whether $ k $ group means are equal:
 
-$ $ H_0: \mu_1 = \mu_2 = \cdots = \mu_kF = \frac{\text{MS}_{\text{between}}}{\text{MS}_{\text{within}}} = \frac{\sum_{j=1}^k n_j(\bar{x}_j - \bar{x})^2/(k-1)}{\sum_{j=1}^k \sum_{i=1}^{n_j}(x_{ij} - \bar{x}_j)^2/(N-k)}$$-$ F > F_{\alpha, k-1, N-k} $: reject $ H_0 $ (at least one group mean differs)
+$ $ H_0: \mu_1 = \mu_2 = \cdots = \mu_kF = \frac{\text{MS}_{\text{between}}}{\text{MS}_{\text{within}}} = \frac{\sum_{j=1}^k n_j(\bar{x}_j - \bar{x})^2/(k-1)}{\sum_{j=1}^k \sum_{i=1}^{n_j}(x_{ij} - \bar{x}_j)^2/(N-k)}$ $-$  F > F_{\alpha, k-1, N-k} $: reject $ H_0 $ (at least one group mean differs)
 
 ### 9.2 Assumptions
 

@@ -96,7 +96,7 @@ The tidal potential at Earth's surface
 $ U_T = \frac{GM_s}{D}\left(\frac{r}{D}\right)^2 P_2(\cos Z_s) + \frac{GM_m}{d}\left(\frac{r}{d}\right)^2 P_2(\cos Z_m) $ $
 
 - $ M_s $ = Sun mass, $ M_m $ = Moon mass
--$ D $, $ d $ = Sun/Earth and Moon/Earth distances
+-$ D $, $  d $ = Sun/Earth and Moon/Earth distances
 - $ Z_s $, $ Z_m $ = zenith angles
 
 This drives:
@@ -123,11 +123,11 @@ From $ E $, compute true anomaly $ \nu $:
 
 $ $ \tan\frac{\nu}{2} = \sqrt{\frac{1+e}{1-e}}\tan\frac{E}{2} $$
 
-### Earth Rotation
+# ## Earth Rotation
 
 The Euler equations for torque-free rigid body rotation:
 
-$ I_1\dot{\omega}_1 + (I_3 - I_2)\omega_2\omega_3 = 0I_2\dot{\omega}_2 + (I_1 - I_3)\omega_3\omega_1 = 0I_3\dot{\omega}_3 + (I_2 - I_1)\omega_1\omega_2 = 0 $Earth's dynamic flattening $ H = (C-A)/C \approx 1/305 $ drives **free core nutation** (~433-day period).
+$ I_1\dot{\omega}_1 + (I_3 - I_2)\omega_2\omega_3 = 0I_2\dot{\omega}_2 + (I_1 - I_3)\omega_3\omega_1 = 0I_3\dot{\omega}_3 + (I_2 - I_1)\omega_1\omega_2 = 0 $ Earth's dynamic flattening $  H = (C-A)/C \approx 1/305 $ drives **free core nutation** (~433-day period).
 
 ---
 
@@ -161,7 +161,7 @@ $ I_1\dot{\omega}_1 + (I_3 - I_2)\omega_2\omega_3 = 0I_2\dot{\omega}_2 + (I_1 - 
 
 ## Study Problems
 
-1. **Recall:** A satellite in circular orbit at altitude $ h = 20,200 $ km (GPS orbit). Compute its orbital period, velocity, and the centripetal acceleration. Compare $ a_c $ to surface gravity $ g $.
+1. **Recall:** A satellite in circular orbit at altitude $ h = 20,200 $ km (GPS orbit). Compute its orbital period, velocity, and the centripetal acceleration. Compare $ a_c $ to surface gravity $  g $.
 2. **Application:** The tidal potential has a $ P_2(\cos Z) $ dependence. Show that $ P_2(x) = \frac{1}{2}(3x^2-1) $. Then compute the ratio of solar to lunar tidal forces at Earth (use $ M_s/M_m = 2.7 \times 10^7 $, $ D/d \approx 390 $).
 3. **Derivation:** Derive the orbital energy $ E = -\frac{GMm}{2a} $ for an elliptical orbit. (Hint: start from vis-viva equation.)
 4. **Real-world:** A geodetic GNSS station records position with sub-cm precision. The dominant signal is the diurnal/semidiurnal Earth tide. If the vertical tide amplitude is ~30 cm, estimate the maximum horizontal velocity from the tidal loading. (Hint: assume sinusoidal displacement.)
@@ -170,9 +170,9 @@ $ I_1\dot{\omega}_1 + (I_3 - I_2)\omega_2\omega_3 = 0I_2\dot{\omega}_2 + (I_1 - 
 
 ## Common Mistakes
 
-1. **Confusing mass and weight:** $ W = mg $ on Earth's surface, but weight changes with $ g $ (altitude, latitude, local geology).
+1. **Confusing mass and weight:** $ W = mg $ on Earth's surface, but weight changes with $  g $ (altitude, latitude, local geology).
 2. **Forgetting vector direction:** Force and acceleration are vectors; magnitude alone isn't enough.
-3. **Using $ F = mv $ instead of $ F = ma$:** Force equals mass times acceleration, not velocity.
+3. **Using $ F = mv $ instead of $  F = ma$:** Force equals mass times acceleration, not velocity.
 4. **Ignoring non-inertial frames:** Coriolis and centrifugal forces appear in rotating Earth frame.
 5. **Mixing up energy and momentum:** Energy is scalar, momentum is vector; both are conserved but in different ways.
 

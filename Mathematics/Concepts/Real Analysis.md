@@ -35,7 +35,7 @@ This is equivalent to:
 
 ### Convergence
 
-$ (a_n) $ **converges** to $ L $ if $\forall \varepsilon > 0, \exists N \in \mathbb{N}: n \geq N \implies |a_n - L| < \varepsilon $.
+$ (a_n) $ **converges** to $  L $ if $\forall \varepsilon > 0, \exists N \in \mathbb{N}: n \geq N \implies |a_n - L| < \varepsilon $.
 
 **Cauchy sequence:** $\forall \varepsilon > 0, \exists N: m, n \geq N \implies |a_m - a_n| < \varepsilon $.
 
@@ -64,7 +64,7 @@ Every sequence satisfies: $\liminf a_n \leq \limsup a_n $, with equality iff $\l
 | Test | Condition | Type |
 |------|-----------|------|
 | **Comparison** | $ 0 \leq a_n \leq b_n $, $\sum b_n $ converges $\implies \sum a_n $ converges | Positive terms |
-| **Ratio** | $\lim |a_{n+1}/a_n| = L $| $ L < 1 $: converges, $ L > 1 $: diverges |
+| **Ratio** | $\lim |a_{n+1}/a_n| = L $| $  L < 1 $: converges, $  L > 1 $: diverges |
 | **Root** | $\lim \sqrt[n]{|a_n|} = L $ | Same as ratio test |
 | **Integral** | $\int_1^\infty f(x)dx $ converges $\iff $ $\sum f(n) $ converges | Positive, decreasing |
 | **Dirichlet** | Partial sums of $\sum b_n $ bounded,$ a_n \to 0 $ monotonically | Alternating-like |
@@ -74,17 +74,19 @@ Every sequence satisfies: $\liminf a_n \leq \limsup a_n $, with equality iff $\l
 
 $ $\sum_{n=0}^{\infty} c_n (x-a)^n
 
-$$**Radius of convergence:**$ R = 1/\limsup |c_n|^{1/n} $- Converges absolutely for $|x-a| < R $- Diverges for $|x-a| > R $### Uniform Convergence $ f_n \to f $**uniformly** on $ S $ if $\sup_{x \in S} |f_n(x) - f(x)| \to 0 $.
+$$**Radius of convergence:**$  R = 1/\limsup |c_n|^{1/n} $- Converges absolutely for $|x-a| < R $- Diverges for $|x-a| > R $### Uniform Convergence $ f_n \to f $**uniformly** on $  S $ if $\sup_{x \in S} |f_n(x) - f(x)| \to 0 $.
 
 **Key property:** Uniform limit of continuous functions is continuous.
 
 ## 4. Continuity (Rigorous)
 
-$ f: \mathbb{R} \to \mathbb{R} $ is **continuous at $ a $** if:
+$ f: \mathbb{R} \to \mathbb{R} $ is **continuous at $  a $** if:
 
 $ $\forall \varepsilon > 0, \exists \delta > 0: |x - a| < \delta \implies |f(x) - f(a)| < \varepsilon
 
-$$### Heine Definition $ f $ is continuous at $ a $ $\iff $ for every sequence $ x_n \to a $, we have $ f(x_n) \to f(a) $.
+$$
+
+# ## Heine Definition $  f $ is continuous at $  a $ $\iff $ for every sequence $ x_n \to a $, we have $ f(x_n) \to f(a) $.
 
 ### Properties
 
@@ -110,7 +112,7 @@ Lagrange remainder: $ R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1} $
 
 ### Riemann Integral
 
-$\int_a^b f(x) \, dx = \lim_{\|P\| \to 0} \sum_{i=1}^{n} f(c_i)(x_i - x_{i-1}) $**Integrability:**$ f $ is Riemann integrable $\iff $ it is bounded and continuous almost everywhere.
+$\int_a^b f(x) \, dx = \lim_{\|P\| \to 0} \sum_{i=1}^{n} f(c_i)(x_i - x_{i-1}) $**Integrability:**$  f $ is Riemann integrable $\iff $ it is bounded and continuous almost everywhere.
 
 ### Fundamental Theorem of Calculus
 
@@ -132,7 +134,7 @@ $ $\int f \, dm = \sup \left\{ \int s \, dm : 0 \leq s \leq f, \; s \text{ simpl
 
 $$
 
-### Lebesgue's Dominated Convergence Theorem
+# ## Lebesgue's Dominated Convergence Theorem
 
 If $ f_n \to f $ pointwise and $|f_n| \leq g $ with $\int g < \infty $, then:
 
@@ -140,7 +142,7 @@ $ $\lim_{n \to \infty} \int f_n = \int f
 
 $$
 
-## 8. Metric Space Topology
+# # 8. Metric Space Topology
 
 ### Important Properties
 
@@ -150,7 +152,7 @@ $$
 | **Compact** | Every open cover has a finite subcover |
 | **Connected** | Not a union of two disjoint non-empty open sets |
 
-**Compactness in $\mathbb{R}^n $:** $ K $ is compact $\iff $ closed and bounded (Heine-Borel).
+**Compactness in $\mathbb{R}^n $:** $  K $ is compact $\iff $ closed and bounded (Heine-Borel).
 
 ## Practice Problems
 

@@ -48,23 +48,23 @@ This course introduces the axioms of probability, random variables, and fundamen
 
 **Discrete**:
 
-- Bernoulli($ p $): $ P(1)=p $, $ E=p $, $ ext{Var}=p(1-p) $
+- Bernoulli( $ p $): $ P(1)=p $, $ E=p $, $ ext{Var}=p(1-p) $
 
-- Binomial($ n,p $): $\binom{n}{k}p^k(1-p)^{n-k} $
+- Binomial( $ n,p $): $\binom{n}{k}p^k(1-p)^{n-k} $
 
-- Poisson($\lambda $): $ e^{-\lambda}\lambda^k/k!$, $ E=\lambda $, $ ext{Var}=\lambda $
+- Poisson( $\lambda $): $ e^{-\lambda}\lambda^k/k!$, $ E=\lambda $, $ ext{Var}=\lambda $
 
-- Geometric($ p $): $ (1-p)^{k-1}p $, $ E=1/p $
+- Geometric( $ p $): $ (1-p)^{k-1}p $, $ E=1/p $
 
 **Continuous**:
 
-- Uniform($ a,b $): $ f(x)=1/(b-a) $, $ E=(a+b)/2 $
+- Uniform( $ a,b $): $ f(x)=1/(b-a) $, $ E=(a+b)/2 $
 
-- Normal($\mu,\sigma^2 $): $ f(x) = \frac{1}{\sigma\sqrt{2i}}e^{-(x-\mu)^2/(2\sigma^2)} $
+- Normal( $\mu,\sigma^2 $): $ f(x) = \frac{1}{\sigma\sqrt{2i}}e^{-(x-\mu)^2/(2\sigma^2)} $
 
-- Exponential($\lambda $): $\lambda e^{-\lambda x} $, $ E=1/\lambda $, $ ext{Var}=1/\lambda^2 $
+- Exponential( $\lambda $): $\lambda e^{-\lambda x} $, $ E=1/\lambda $, $ ext{Var}=1/\lambda^2 $
 
-- Chi-square($ n $): $\sum Z_i^2 $### Unit 5: Limit Theorems
+- Chi-square( $ n $): $\sum Z_i^2 $### Unit 5: Limit Theorems
 
 - **Law of Large Numbers** (weak and strong): $\bar{X}_n o \mu $- **Central Limit Theorem**: $\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \\xrightarrow{d} N(0,1) $### Unit 6: Joint Distributions
 

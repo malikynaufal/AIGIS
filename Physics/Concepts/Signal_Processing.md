@@ -115,7 +115,7 @@ $ $ \hat{S}_{xx}(f) = \frac{1}{K}\sum_{k=1}^{K}\frac{|X_k(f)|^2}{M
 
 $$
 
-- For 1-hour GNSS observation at 30 s sampling ($ N=120 $): $ \Delta f \approx 0.028 $ mHz
+- For 1-hour GNSS observation at 30 s sampling ( $ N=120 $): $ \Delta f \approx 0.028 $ mHz
 
 - Longer observation → better spectral resolution
 
@@ -209,7 +209,7 @@ In dB $ $
 
 $$
 
-### Noise Reduction by Averaging
+# ## Noise Reduction by Averaging
 For $ N $ uncorrelated measurements, averaging reduces noise by $ \sqrt{N} $:
 
 $ $ \sigma_{\bar{x}} = \frac{\sigma_x}{\sqrt{N}} $$
@@ -241,14 +241,14 @@ m
 
 $ $ \boxed{f_s \geq 2f_{\text{max}}} $$
 
-If sampling rate is below $ 2f_{\text{max}} $: **aliasing** occurs — frequencies $ f > f_s/2 $ fold back to $ f_s - f $.
+If sampling rate is below $ 2f_{\text{max}} $: **aliasing** occurs — frequencies $  f > f_s/2 $ fold back to $ f_s - f $.
 
 **Anti-aliasing filter:** Low-pass with cutoff $ f_c = f_s/2 $ applied before ADC.
 
 ### Oversampling and Undersampling
 
 - **Oversampling ( $ f_s \gg 2f_{\text{max}} $):** Improves effective resolution, relaxes analog filter requirements
- - SNR improvement: $ \Delta\text{SNR} = 10\log_{10}(n/1) $ dB for $ n $-times oversampling
+ - SNR improvement: $ \Delta\text{SNR} = 10\log_{10}(n/1) $ dB for $  n $-times oversampling
  - Resolution improvement: ~1 bit per doubling of oversampling rate
 
 - **Undersampling (sub-Nyquist):** Intentional aliasing of bandpass signal — used in bandpass sampling for RF signals
@@ -369,7 +369,7 @@ Used in: GNSS navigation solution, PPP ambiguity resolution, inertial navigation
 1. Compute the DFT of the sequence $ x[n] = \{1, 1, 1, 1, 0, 0, 0, 0\} $ and interpret the frequency components.
 2. A GPS L1 carrier (1575.42 MHz) is sampled at 1 GHz — is this Nyquist-compliant? What about aliasing?
 3. Design an anti-aliasing filter for 30-second GPS data acquisition with significant signals up to 0.0167 Hz.
-4. Compute the Allan variance of a random walk noise with sampling interval $ \tau_0 = 1 $ s and $\sigma = 1 $ m.
+4. Compute the Allan variance of a random walk noise with sampling interval $ \tau_0 = 1 $  s and $\sigma = 1 $ m.
 5. Derive the SNR improvement from 10× oversampling a 16-bit ADC.
 6. Explain the difference between FIR and IIR filters — advantages and disadvantages for GNSS filtering.
 7. Compute the cross-correlation between two sine waves at slightly different frequencies and explain the beat phenomenon.

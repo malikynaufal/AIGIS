@@ -25,7 +25,7 @@ E = \frac{1}{2}mv^2 - \frac{GMm}{r} = \text{constant}\vec{h} = \vec{r} \times \v
 | Element | Symbol | Description |
 |---------|--------|-------------|
 | Semi-major axis | $ a $ | Orbit size |
-| Eccentricity | $ e $ | Orbit shape ($ 0 \le e < 1 $) |
+| Eccentricity | $ e $ | Orbit shape ( $ 0 \le e < 1 $) |
 | Inclination | $ i $ | Tilt relative to equator |
 | Right ascension of ascending node | $ \Omega $ | Longitude of ascending node |
 | Argument of perigee | $ \omega $ | Orientation of ellipse in plane |
@@ -33,12 +33,12 @@ E = \frac{1}{2}mv^2 - \frac{GMm}{r} = \text{constant}\vec{h} = \vec{r} \times \v
 | Mean anomaly | $ M $ | Mean angular position (linear with time) |
 
 ### Kepler's Laws
-1. **Elliptical orbits:** $ r = \frac{a(1-e^2)}{1 + e\cos f} $ 2. **Equal areas in equal times:**$ \frac{dA}{dt} = \frac{h}{2} = \text{constant} $ 3. **Period relation:** $ T = 2\pi\sqrt{\frac{a^3}{GM}} $### Vis-viva Equatio
+1. **Elliptical orbits:** $ r = \frac{a(1-e^2)}{1 + e\cos f} $ 2. **Equal areas in equal times:**$ \frac{dA}{dt} = \frac{h}{2} = \text{constant} $ 3. **Period relation:** $  T = 2\pi\sqrt{\frac{a^3}{GM}} $### Vis-viva Equatio
 n
 
 $ $ v^2 = GM\left(\frac{2}{r} - \frac{1}{a}\right) $$
 
-### Orbit Types
+# ## Orbit Types
 | Type | Eccentricity | Semi-major axis | Period |
 |------|--------------|-----------------|--------|
 | LEO (Low Earth Orbit) | ~0 | 6,378–8,000 km | ~90 min |
@@ -95,7 +95,7 @@ At any instant, the satellite follows a Keplerian ellipse whose elements slowly 
 
 $ $ \frac{da}{dt} = \frac{2}{n\sqrt{1-e^2}}\left[ e\sin f \cdot S + \frac{p}{r} \cdot T \right]\frac{de}{dt} = \frac{\sqrt{1-e^2}}{na}\left[ \sin f \cdot S + \left( \cos f + \frac{e + \cos f}{1 + e\cos f} \right) \cdot T \right]\frac{di}{dt} = \frac{r\cos(\omega+f)}{na\sqrt{1-e^2}} \cdot W
 
-$ where $ S $,$ T $,$ W $ are perturbing accelerations in **radial**, **transverse** (along-track), **normal** directions.
+$ where $  S $,$  T $,$  W $ are perturbing accelerations in **radial**, **transverse** (along-track), **normal** directions.
 
 ### Principal Perturbations (Order of Magnitude)
 
@@ -114,7 +114,7 @@ $ where $ S $,$ T $,$ W $ are perturbing accelerations in **radial**, **transver
 ### Earth's Gravity Potentia
 l
 
-$ U = \frac{GM}{r}\left[1 - J_2\left(\frac{a_e}{r}\right)^2 P_2(\sin\phi) + J_3\left(\frac{a_e}{r}\right)^3 P_3(\sin\phi) + \cdots \right] $where $ J_2 \approx 1.08263 \times 10^{-3} $, $ a_e = 6,378,137 $ m.
+$ U = \frac{GM}{r}\left[1 - J_2\left(\frac{a_e}{r}\right)^2 P_2(\sin\phi) + J_3\left(\frac{a_e}{r}\right)^3 P_3(\sin\phi) + \cdots \right] $ where $ J_2 \approx 1.08263 \times 10^{-3} $, $ a_e = 6,378,137 $ m.
 
 ### Secular Rates (Long-term, averaged over orbit)
 
@@ -133,11 +133,11 @@ $ $ \dot{\omega} = \frac{3}{4} n J_2 \left(\frac{a_e}{a}\right)^2 \frac{5\cos^2 
 
 $ $ \dot{M} = n + \frac{3}{4} n J_2 \left(\frac{a_e}{a}\right)^2 \frac{3\cos^2 i - 1}{(1-e^2)^{3/2}} $$
 
-**Critical inclination:**$ \dot{\omega} = 0 $ at $ i = 63.4^\circ $ or $ 116.6^\circ $ (Molniya orbits).
+**Critical inclination:**$ \dot{\omega} = 0 $ at $  i = 63.4^\circ $ or $ 116.6^\circ $ (Molniya orbits).
 
 ### GPS Relevance
 
-- For GPS ( $ a \approx 26,560 $ km, $ i = 55^\circ $, $ e \approx 0.01 $):
+- For GPS ( $ a \approx 26,560 $ km, $  i = 55^\circ $, $  e \approx 0.01 $):
  - $ \dot{\Omega} \approx -0.044^\circ $/day (westward precession)
  - $ \dot{\omega} \approx +0.069^\circ $/day
 
@@ -155,7 +155,7 @@ where $ C_D \approx 2.2 $ (drag coefficient),$ A/m $= area-to-mass ratio,$ \rho 
 
 ### Density Models
 
-- **Exponential model:**$ \rho = \rho_0 \exp(-(h-h_0)/H) $- **Scale height $ H $:** ~50–100 km (varies with solar activity)
+- **Exponential model:**$ \rho = \rho_0 \exp(-(h-h_0)/H) $- **Scale height $  H $:** ~50–100 km (varies with solar activity)
 
 - **Models:** NRLMSISE-00, JB2008, DTM2020
 
@@ -266,7 +266,7 @@ t
 
 $ $ \frac{\Delta f_{net}}{f_0} = \frac{+45.8 - 7.2}{\text{day}} = +38.6 \mu\text{s/day} $$
 
-### Factory Frequency Offset
+# ## Factory Frequency Offset
 GPS clocks set to: $ f = 10.23 \text{ MHz} \times (1 - 4.465 \times 10^{-10}) = 10.22999999543 \text{ MHz} $ Once in orbit, relativistic speedup brings them into sync with ground UTC.
 
 ### Periodic Relativistic Effect (Eccentricity)
@@ -274,7 +274,7 @@ For $ e \neq 0 $:
 
 $ $ \Delta t_{ecc} = -\frac{2\sqrt{GM a}}{c^2} e \sin E
 
-$ where $ E $ = eccentric anomaly. Amplitude: ~0.5 μs for GPS ( $ e \approx 0.01 $).
+$ where $  E $ = eccentric anomaly. Amplitude: ~0.5 μs for GPS ( $  e \approx 0.01 $).
 
 ### Receiver Application
 The receiver applies the broadcast clock correction polynomial:
@@ -343,7 +343,7 @@ $ where $ O_i $ = observations (range, range-rate, angles), $ C_i $ = computed v
 
 ## Problems
 1. Calculate the semi-major axis of a GPS satellite given its 12-hour sidereal period.
-2. Compute the J₂-induced nodal precession rate for GPS ($ a=26,560 $ km,$ i=55^\circ $, $ e=0.01 $).
+2. Compute the J₂-induced nodal precession rate for GPS ( $ a=26,560 $ km,$ i=55^\circ $, $ e=0.01 $).
 3. Estimate the atmospheric drag force on a 1,000 kg satellite at 400 km altitude ( $ C_D=2.2 $, $ A=5 $ m²,$ \rho=2\times10^{-12} $ kg/m³).
 4. Verify the +38.6 μs/day net relativistic clock offset for GPS using $ v=3,874 $ m/s and $ r=26,560 $ km.
 5. Derive the Sagnac correction for a GPS receiver at 45°N latitude receiving from a satellite at zenith.

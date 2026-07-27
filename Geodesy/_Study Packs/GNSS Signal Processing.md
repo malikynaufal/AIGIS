@@ -19,7 +19,7 @@ GNSS positioning relies on measuring the **travel time** of electromagnetic sign
 | Observable | Symbol | Noise level | Ambiguity | Key challenge |
 |------------|--------|-------------|-----------|---------------|
 | **Code pseudorange** | $P $ | 0.3–1.0 m | None | Multipath, ionosphere |
-| **Carrier phase** | $\Phi $| 1–2 mm | Integer $ N $ (cycles) | Cycle slips, ambiguity resolution |
+| **Carrier phase** | $\Phi $| 1–2 mm | Integer $  N $ (cycles) | Cycle slips, ambiguity resolution |
 
 The signal structure for modern multi‑frequency GNSS:
 
@@ -45,7 +45,7 @@ e
 
 $ $ P_{r,f}^s = \rho_r^s + c(\delta t_r - \delta t^s) + I_{r,f}^s + T_r^s + d_{r,f}^s + d_f^s + \varepsilon_P $$
 
-### 2.2. Carrier Phas
+# ## 2.2. Carrier Phas
 e
 
 $ $\Phi_{r,f}^s = \rho_r^s + c(\delta t_r - \delta t^s) - I_{r,f}^s + T_r^s + \lambda_f N_{r,f}^s + \delta_{r,f}^s + \delta_f^s + \varepsilon_\Phi
@@ -126,7 +126,7 @@ $ $\hat{\mathbf{a}}_{\text{int}} = \underset{\mathbf{a} \in \mathbb{Z}^n}{\arg\m
 
 $$
 
-### 5.2. LAMBDA Method
+# ## 5.2. LAMBDA Method
 
 1. **Decorrelation**: Find unimodular matrix $\mathbf{Z} $ such that $\mathbf{Z}\mathbf{Q}_{\hat{\mathbf{a}}}\mathbf{Z}^\top $ is nearly diagonal.
 2. **Search**: Integer search in transformed space (ellipsoidal region).

@@ -73,7 +73,7 @@ Membagi tabel berdasarkan kunci (sharding key).
 
 - **Multi-Master:** Semua node bisa menerima write. Risiko konflik.
 
-- **Quorum-based (Dynamo):** Membutuhkan $R + W > N $ untuk konsistensi ($ N$ = jumlah replika).
+- **Quorum-based (Dynamo):** Membutuhkan $R + W > N $ untuk konsistensi ( $ N$ = jumlah replika).
 
 ---
 

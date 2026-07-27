@@ -68,12 +68,12 @@ u' = \frac{u - v}{1 - uv/c^2
 
 $$
 
-### Worked Example: Muon Decay
-Muons produced at 60 km altitude with $ v = 0.998c $ ($\gamma = 15.8 $). Proper lifetime $ \tau_0 = 2.2 $ \mu $ s.$
+# ## Worked Example: Muon Decay
+Muons produced at 60 km altitude with $ v = 0.998c $ ( $\gamma = 15.8 $). Proper lifetime $ \tau_0 = 2.2 $ \mu $ s.$
 
-**Classical:** $ d = v\tau = 0.998c \times 2.2\,\mu\text{s} = 660 $ m → would not reach Earth.
+**Classical:** $ d = v\tau = 0.998c \times 2.2\,\mu\text{s} = 660 $  m → would not reach Earth.
 
-**Relativistic:** In Earth frame, muon lifetime is $ \gamma\tau_0 = 34.8 $ \mu $ s, so $ d = v\gamma\tau_0 = 10.4 $ km. Probability of surviving 60 km: $ P = e^{-60/10.4} = 0.003 $ (still small but measurable).$
+**Relativistic:** In Earth frame, muon lifetime is $ \gamma\tau_0 = 34.8 $ \mu $ s, so $  d = v\gamma\tau_0 = 10.4 $ km. Probability of surviving 60 km: $  P = e^{-60/10.4} = 0.003 $ (still small but measurable).$
 
 ---
 
@@ -123,24 +123,24 @@ y
 
 $ E = \gamma mc^2 $$$
 
-- **Rest energy:** $ E_0 = mc^2 $- **Kinetic energy:** $ K = (\gamma - 1)mc^2 $### Relativistic Momentu
+- **Rest energy:** $ E_0 = mc^2 $- **Kinetic energy:** $  K = (\gamma - 1)mc^2 $### Relativistic Momentu
 m
 
 $ $ \vec{p} = \gamma m\vec{v} $$
 
-### Energy-Momentum Relatio
+# ## Energy-Momentum Relatio
 n
 
 $ $ E^2 = (mc^2)^2 + (pc)^2 $$
 
-#### Limits:
-- $ p \ll mc $: $ E \approx mc^2 + p^2/(2m) $ (Newtonian limit)
-- $ p \gg mc $: $ E \approx pc $ (ultrarelativistic, e.g., photons)
+# ## # Limits:
+- $ p \ll mc $: $  E \approx mc^2 + p^2/(2m) $ (Newtonian limit)
+- $ p \gg mc $: $  E \approx pc $ (ultrarelativistic, e.g., photons)
 
 ### Worked Example: LHC Proton
 Proton with $ K = 7 $ TeV, rest mass $ m_p c^2 = 938 $ MeV:
 
-1.$ \gamma = 1 + K/(m_p c^2) = 1 + 7000/0.938 = 7463 $ 2.$ v/c = \sqrt{1 - 1/\gamma^2} \approx 1 - 10^{-8} $ (99.999999%$ c $)
+1.$ \gamma = 1 + K/(m_p c^2) = 1 + 7000/0.938 = 7463 $ 2.$ v/c = \sqrt{1 - 1/\gamma^2} \approx 1 - 10^{-8} $ (99.999999%$  c $)
 3. Total $ E = \gamma m_p c^2 = 7.001 $ TeV
 
 ---
@@ -152,7 +152,7 @@ y
 
 $ $ u^\mu = \frac{dx^\mu}{d\tau} = \gamma(c, \vec{v}) $$
 
-Normalization: $ $ u^\mu u_\mu = -c^2 $### Four-Acceleratio $
+Normalization: $ $ u^\mu u_\mu = -c^2 $### Four-Acceleratio $ 
 n
 
 $ $ a^\mu = \frac{du^\mu}{d\tau} $$
@@ -167,7 +167,7 @@ $ $
 F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\m
 u
 
-$ Maxwell's equations in covariant form: $$ \partial_\mu F^{\mu\nu} = \mu_0 J^\nu\partial_{[\alpha} F_{\beta\gamma]} = 0 $
+$ Maxwell's equations in covariant form: $ $ \partial_\mu F^{\mu\nu} = \mu_0 J^\nu\partial_{[\alpha} F_{\beta\gamma]} = 0 $
 
 $ $ ---
 
@@ -190,7 +190,7 @@ $ $ \vec{a}_{\text{rel}} = \frac{GM}{c^2 r^2}\left[\left(4\frac{GM}{r} - v^2\rig
 
 $$
 
-### Light Deflection (GR)
+# ## Light Deflection (GR)
 For a ray passing near the Sun
 
 $ $ \Delta\theta = \frac{4GM}{c^2 b} = 1.75'' \text{ (at Sun's limb)} $$

@@ -52,12 +52,12 @@ $ $
 
 ### 3. Convergence of Iterative Methods
 
-An iterative method $ x_{n+1} = g(x_n) $ converges to fixed point $ p $ if:
+An iterative method $ x_{n+1} = g(x_n) $ converges to fixed point $  p $ if:
 1. $ g(p) = p $ (fixed point)
 2. $|g'(p)| < 1 $ (local convergence)
 
 **Rate of convergence:**
-- **Linear:** $|e_{n+1}| \leq C|e_n|$, $ C < 1 $
+- **Linear:** $|e_{n+1}| \leq C|e_n|$, $  C < 1 $
 - **Quadratic:** $|e_{n+1}| \leq C|e_n|^2 $- **Superlinear:**$\lim \frac{|e_{n+1}|}{|e_n|} = 0 $
 
 ## 🔧 Root-Finding Methods
@@ -78,7 +78,7 @@ $ $ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$ $- **Rate:** Quadratic (if $ f'(p) \
 
 $ $ x_{n+1} = x_n - f(x_n) \frac{x_n - x_{n-1}}{f(x_n) - f(x_{n-1})}$ $
 
-- **Rate:** Superlinear ($\approx 1.618 $, golden ratio)
+- **Rate:** Superlinear ( $\approx 1.618 $, golden ratio)
 - **Advantage:** No derivative needed
 
 ## 📈 Interpolation
@@ -91,7 +91,7 @@ $ $
 
 Newton's Divided Differences
 
-$ $## Newton's Divided DifferencesP(x) = f[x_0] + f[x_0,x_1](x-x_0) + \cdots + f[x_0,\dots,x_n] rod_{i=0}^{n-1}(x-x_i)$ $
+$ $## Newton's Divided DifferencesP(x) = f[x_0] + f[x_0,x_1](x-x_0) + \cdots + f[x_0,\dots,x_n] rod_{i=0}^{n-1}(x-x_i) $ $
 
 # ## Newton's Divided DifferencesP(x) = f[x_0] + f[x_0,x_1](x-x_0) + \cdots + f[x_0,\dots,x_n] rod_{i=0}^{n-1}(x-x_i)Cubic Splines
 Piecewise cubic polynomials with continuous first and second derivatives.
@@ -105,7 +105,7 @@ Piecewise cubic polynomials with continuous first and second derivatives.
 
 ## 🧮 Numerical Integration
 
-### Trapezoidal Rule\int_a^b f(x)\,dx \approx \frac{h}{2}[f(a) + 2\sum_{i=1}^{n-1} f(x_i) + f(b)]$ $
+### Trapezoidal Rule\int_a^b f(x)\,dx \approx \frac{h}{2}[f(a) + 2\sum_{i=1}^{n-1} f(x_i) + f(b)] $ $
 
 # ## Cubic Splines
 Piecewise cubic polynomials with continuous first and second derivatives.
@@ -161,8 +161,8 @@ Solved using least squares (see [[Least Squares Adjustment]]).
 
 ## 🎯 Practice Problems
 
-1. **Error Analysis:** If $ x = 1.23 m 0.01 $ and $ y = 0.45 m 0.02 $, find $ z = x/y $ and its uncertainty.
-2. **Root Finding:** Use Newton-Raphson to find the root of $ f(x) = x^3 - 2x - 5 $ near $ x = 2 $.
+1. **Error Analysis:** If $ x = 1.23 m 0.01 $ and $  y = 0.45 m 0.02 $, find $  z = x/y $ and its uncertainty.
+2. **Root Finding:** Use Newton-Raphson to find the root of $ f(x) = x^3 - 2x - 5 $ near $  x = 2 $.
 3. **Interpolation:** Given data points $ (0,1), (1,2), (2,0) $, find the quadratic interpolant.
 4. **Integration:** Compute $\int_0^1 e^{-x^2} dx $ using Simpson's rule with $ n=4 $.
 5. **ODE:** Solve $ y' = -2y + 1, y(0) = 0 $ using RK4 with $ h=0.1$ for 5 steps.

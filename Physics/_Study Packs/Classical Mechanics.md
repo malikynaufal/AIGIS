@@ -35,19 +35,19 @@ $ $ \sum_i (\vec{F}_i - m_i\vec{a}_i) \cdot \delta\vec{r}_i = 0
 
 $$
 
-### Generalized Coordinates
+# ## Generalized Coordinates
 Let $ q_1, q_2, \dots, q_n $ be independent generalized coordinates. Virtual displacements
 
 $ $ \delta \vec{r}_i = \sum_j \frac{\partial \vec{r}_i}{\partial q_j} \delta q_j
 
 $$
 
-### The Lagrangian
+# ## The Lagrangian
 Define the scalar function
 
 $ $ L(q, \\dot{q}, t) = T - V $$
 
-where $ T $ is kinetic energy (all terms) and $ V $ is potential energy (conservative forces only).
+where $ T $ is kinetic energy (all terms) and $  V $ is potential energy (conservative forces only).
 
 ### Euler-Lagrange Equation
 s
@@ -59,18 +59,18 @@ $$ **Proof sketch:** Substitute generalized coordinates into D'Alembert's princi
 ### Example: Simple Pendulum
 
 - Generalized coordinate: $ \theta $ (angle from vertical)
-- $ T = \frac{1}{2}m l^2 \\dot{\theta}^2 $- $ V = -mgl\cos\theta $- $ L = \frac{1}{2}m l^2 \\dot{\theta}^2 + mgl\cos\theta $ Euler-Lagrange:
+- $ T = \frac{1}{2}m l^2 \\dot{\theta}^2 $- $  V = -mgl\cos\theta $- $  L = \frac{1}{2}m l^2 \\dot{\theta}^2 + mgl\cos\theta $ Euler-Lagrange:
 
 $ $ \frac{d}{dt}(m l^2 \\dot{\theta}) + mgl\sin\theta = 0ml^2\ddot{\theta} + mgl\sin\theta = 0\ddot{\theta} + \frac{g}{l}\sin\theta = 0
 
 $$
 
-For small angles ($ \sin\theta \approx \theta $): $ \ddot{\theta} + (g/l)\theta = 0 $. Natural freq. $ \omega_0 = \sqrt{g/l} $.
+For small angles ( $ \sin\theta \approx \theta $): $ \ddot{\theta} + (g/l)\theta = 0 $. Natural freq. $ \omega_0 = \sqrt{g/l} $.
 
 ### Example: Central Force Problem (Orbits)
 Use polar coordinates $ (r, \theta) $:
 
-- $ T = \frac{1}{2}m(\\dot{r}^2 + r^2\\dot{\theta}^2) $- $ V = V(r) $: gravitational, Coulomb, etc.
+- $ T = \frac{1}{2}m(\\dot{r}^2 + r^2\\dot{\theta}^2) $- $  V = V(r) $: gravitational, Coulomb, etc.
 
 For gravity: $ V = -GMm/r $.
 
@@ -96,13 +96,13 @@ L
 
 \\dot{q}_j = \frac{\partial H}{\partial p_j}\\dot{p}_j = -\frac{\partial H}{\partial q_j}
 
-$ These are $ 2n $ first-order ODEs (vs.$ n $ second-order from Lagrangian).
+$ These are $ 2n $ first-order ODEs (vs.$  n $ second-order from Lagrangian).
 
 ### Example: 1D Harmonic Oscillator $ L = \frac{1}{2}m\\dot{x}^2 - \frac{1}{2}kx^2 $
 
 $ p = m\\dot{x} \\implies \\dot{x} = p/m $
 
-$ H = p\\dot{x} - L = \frac{p^2}{m} - (\frac{1}{2}m\frac{p^2}{m^2} - \frac{1}{2}kx^2) = \frac{p^2}{2m} + \frac{1}{2}kx^2 $Hamilton's equations:
+$ H = p\\dot{x} - L = \frac{p^2}{m} - (\frac{1}{2}m\frac{p^2}{m^2} - \frac{1}{2}kx^2) = \frac{p^2}{2m} + \frac{1}{2}kx^2 $ Hamilton's equations:
 
 $ $ \\dot{x} = \frac{\partial H}{\partial p} = \frac{p}{m}-\\dot{p} = \frac{\partial H}{\partial x} = kx
 
@@ -115,7 +115,7 @@ $ $ \{A, B\\} = \sum_j \left[\frac{\partial A}{\partial q_j}\frac{\partial B}{\p
 $$
 
 Key identities:
--$\\{q_i, p_j\\} = \delta_{ij} $-$\\{q_i, q_j\\} = 0 = \\{p_i, p_j\\} $- Hamilton's equations: $\\dot{A} = \\{A, H\\} + \partial_t A $ If $\\{A, H\\} = 0 $, then $ A $ is a **constant of motion**.
+-$\\{q_i, p_j\\} = \delta_{ij} $-$\\{q_i, q_j\\} = 0 = \\{p_i, p_j\\} $- Hamilton's equations: $\\dot{A} = \\{A, H\\} + \partial_t A $ If $\\{A, H\\} = 0 $, then $  A $ is a **constant of motion**.
 
 ---
 
@@ -123,9 +123,9 @@ Key identities:
 
 | Symmetry | Conserved Quantity |
 |----------|-------------------|
-| Time translation | Energy ($ H $) |
-| Spatial translation | Linear momentum ($ \vec{p} $) |
-| Rotation | Angular momentum ($ \vec{L} $) |
+| Time translation | Energy ( $ H $) |
+| Spatial translation | Linear momentum ( $ \vec{p} $) |
+| Rotation | Angular momentum ( $ \vec{L} $) |
 | Galilean boost | Center-of-mass position |
 
 ---

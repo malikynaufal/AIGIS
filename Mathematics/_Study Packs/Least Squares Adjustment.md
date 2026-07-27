@@ -32,10 +32,10 @@ $ $\mathbf{l} + \mathbf{v} = \mathbf{A}\hat{\mathbf{x}} $$
 or equivalently $ $\mathbf{v} = \mathbf{A}\hat{\mathbf{x}} - \mathbf{l} $$
 
 where:
--$\mathbf{l} $: $ n \times 1 $ observation vector (measured values)
--$\mathbf{v} $: $ n \times 1 $ residual vector (corrections to observations)
--$\mathbf{A} $: $ n \times u $ design (Jacobian/coefficient) matrix
--$\hat{\mathbf{x}} $: $ u \times 1 $ unknown parameter vector
+-$\mathbf{l} $: $  n \times 1 $ observation vector (measured values)
+-$\mathbf{v} $: $  n \times 1 $ residual vector (corrections to observations)
+-$\mathbf{A} $: $  n \times u $ design (Jacobian/coefficient) matrix
+-$\hat{\mathbf{x}} $: $  u \times 1 $ unknown parameter vector
 
 **Requirements:**$ n > u $ (overdetermined),$\text{rank}(\mathbf{A}) = u $### 2.2 Condition Equations (Alternative Form)
 
@@ -45,7 +45,7 @@ $ $\mathbf{B}\mathbf{v} = \mathbf{w} $$
 
 where $\mathbf{B} $ is the condition matrix and $\mathbf{w} $ is the misclosure vector. The least-squares solution $ $\mathbf{v} = \mathbf{P}^{-1}\mathbf{B}^T(\mathbf{B}\mathbf{P}^{-1}\mathbf{B}^T)^{-1}\mathbf{w} $$
 
-### 2.3 Mixed Model
+# ## 2.3 Mixed Model
 
 Combines observation equations and condition equations
 
@@ -64,9 +64,9 @@ where $\mathbf{N} = \mathbf{A}^T\mathbf{P}\mathbf{A} $ is the **normal equation 
 **Solution:*
 *
 
-$ $\hat{\mathbf{x}} = \mathbf{N}^{-1}\mathbf{t} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l} $$**Properties of $\mathbf{N} $:**
+$ $\hat{\mathbf{x}} = \mathbf{N}^{-1}\mathbf{t} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l} $ $**Properties of $\mathbf{N} $:**
 
-- Symmetric ($\mathbf{N}^T = \mathbf{N} $)
+- Symmetric ( $\mathbf{N}^T = \mathbf{N} $)
 
 - Positive definite (if $\text{rank}(\mathbf{A}) = u $)
 
@@ -76,7 +76,7 @@ $ $\hat{\mathbf{x}} = \mathbf{N}^{-1}\mathbf{t} = (\mathbf{A}^T\mathbf{P}\mathbf
 
 ## 4. Unweighted Least Squares
 
-When all observations have equal weight ($\mathbf{P} = \mathbf{I} $):
+When all observations have equal weight ( $\mathbf{P} = \mathbf{I} $):
 
 $ $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{A})^{-1}\mathbf{A}^T\mathbf{l
 }
@@ -108,7 +108,7 @@ n
 
 $ $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l} $$
 
-### 5.3 Adjusted Observation
+# ## 5.3 Adjusted Observation
 s
 
 $ $\hat{\mathbf{l}} = \mathbf{A}\hat{\mathbf{x}} $$
@@ -139,12 +139,12 @@ $ $\mathbf{Q}_{\hat{l}\hat{l}} = \mathbf{A}\mathbf{N}^{-1}\mathbf{A}^T = \mathbf
 
 $$
 
-### 6.4 Cofactor Matrix of Residual
+# ## 6.4 Cofactor Matrix of Residual
 s
 
 $ $\mathbf{Q}_{vv} = \mathbf{P}^{-1} - \mathbf{A}\mathbf{N}^{-1}\mathbf{A}^T = \mathbf{P}^{-1} - \mathbf{Q}_{\hat{l}\hat{l}} $$
 
-### 6.5 Propagation Summary
+# ## 6.5 Propagation Summary
 
 | Quantity | Cofactor Matrix |
 |----------|----------------|
@@ -179,7 +179,7 @@ $ $ E[\hat{\sigma}_0^2] = \sigma_0^2 $$
 
 The standard deviation of unit weight $ $\hat{\sigma}_0 = \sqrt{\frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\nu}} $$
 
-### 7.3 A Priori vs A Posteriori Variance
+# ## 7.3 A Priori vs A Posteriori Variance
 
 | | A priori | A posteriori |
 |--|---------|-------------|
@@ -191,11 +191,11 @@ The standard deviation of unit weight $ $\hat{\sigma}_0 = \sqrt{\frac{\mathbf{v}
 
 $ $\hat{\sigma}_{x_i} = \hat{\sigma}_0\sqrt{(\mathbf{N}^{-1})_{ii}} = \hat{\sigma}_0\sqrt{q_{\hat{x}_i\hat{x}_i}} $$
 
-### 7.5 Global Model Test ($\chi^2 $ Test)
+# ## 7.5 Global Model Test ( $\chi^2 $ Test)
 
 Test whether the adjustment is statistically consistent
 
-$ $ T = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\sigma_0^2} = \frac{\nu\hat{\sigma}_0^2}{\sigma_0^2} \sim \chi^2(\nu)$$
+$ $  T = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\sigma_0^2} = \frac{\nu\hat{\sigma}_0^2}{\sigma_0^2} \sim \chi^2(\nu)$$
 
 **Decision rule:**
 
@@ -305,7 +305,7 @@ Minimizes the semi-major axis of the confidence ellipsoid.
 | $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l} $ | Normal equations | Parameter estimation |
 | $\hat{\sigma}_0^2 = \mathbf{v}^T\mathbf{P}\mathbf{v}/\nu $ | Variance of unit weight | Quality measure |
 | $\mathbf{Q}_{\hat{x}\hat{x}} = \mathbf{N}^{-1} $ | Cofactor matrix | Precision of estimates |
-| $ T = \mathbf{v}^T\mathbf{P}\mathbf{v}/\sigma_0^2 $ | Global test ($\chi^2 $) | Model validation |
+| $ T = \mathbf{v}^T\mathbf{P}\mathbf{v}/\sigma_0^2 $ | Global test ( $\chi^2 $) | Model validation |
 | $ w_i = v_i/\hat{\sigma}_{v_i}$ | Baarda test | Outlier detection |
 
 ---

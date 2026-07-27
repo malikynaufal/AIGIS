@@ -37,7 +37,7 @@ $ $\Phi_{LC} = \frac{f_1^2 \Phi_1 - f_2^2 \Phi_2}{f_1^2 - f_2^2} = \rho + c(\del
 
 $$
 
-## LAMBDA Method
+# # LAMBDA Method
 
 ### Mathematical Formulation
 
@@ -47,7 +47,7 @@ $ $\min_{\mathbf{a} \in \mathbb{Z}^n} (\hat{\mathbf{a}} - \mathbf{a})^T Q_{\hat{
 
 $$
 
-### Decorrelation Step
+# ## Decorrelation Step
 
 1. Apply Z-transform to decorrelate: $\hat{\mathbf{z}} = Z^T \hat{\mathbf{a}} $ 2.$ Q_{\hat{z}\hat{z}} = Z^T Q_{\hat{a}\hat{a}} Z $ (near-diagonal)
 3. Search in $\mathbf{z} $-space (much faster)
@@ -71,7 +71,7 @@ flowchart TD
 
 The most common validation is the ratio test:
 
-$ $ R = \frac{\Delta\chi^2_2}{\Delta\chi^2_1} = \frac{\|\hat{\mathbf{a}} - \mathbf{a}_2\|^2_{Q^{-1}}}{\|\hat{\mathbf{a}} - \mathbf{a}_1\|^2_{Q^{-1}}} $$
+$ $  R = \frac{\Delta\chi^2_2}{\Delta\chi^2_1} = \frac{\|\hat{\mathbf{a}} - \mathbf{a}_2\|^2_{Q^{-1}}}{\|\hat{\mathbf{a}} - \mathbf{a}_1\|^2_{Q^{-1}}} $$
 
 | Ratio Value | Confidence | Decision |
 |-------------|------------|----------|
@@ -101,13 +101,15 @@ $$
 
 $ $\Phi_{WL} = \Phi_1 - \Phi_2, \quad N_{WL} = N_1 - N_2
 
-$$### Narrow-Lane Combination $ $\lambda_{NL} = \frac{c}{f_1 + f_2} \approx 10.70 \text{ cm}
+$$
+
+# ## Narrow-Lane Combination $ $\lambda_{NL} = \frac{c}{f_1 + f_2} \approx 10.70 \text{ cm}
 
 $$
 
 $ $ N_{NL} = N_1 + N_2 $$
 
-## In [[Geodesy]] Context
+# # In [[Geodesy]] Context
 
 ### Indonesian CORS Applications
 - **BIG CORS Network:** 200+ stations, network RTK with ambiguity fixing

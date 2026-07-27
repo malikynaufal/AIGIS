@@ -17,14 +17,14 @@ updated: 2026-07-27
 
 ### Sequences
 
-A sequence $\{a_n\} $ converges to $ L $ if $\forall \varepsilon > 0, \exists N: n > N \implies |a_n - L| < \varepsilon $.
+A sequence $\{a_n\} $ converges to $  L $ if $\forall \varepsilon > 0, \exists N: n > N \implies |a_n - L| < \varepsilon $.
 
 ### Series Convergence Tests
 
 | Test | Condition | Use |
 |------|-----------|-----|
 | **Geometric series** | $\sum ar^n $ converges iff $|r| < 1 $, sum $= a/(1-r) $ | Exponential models |
-| **p-series** | $\sum 1/n^p $ converges iff $ p > 1 $ | Integrals, sums |
+| **p-series** | $\sum 1/n^p $ converges iff $  p > 1 $ | Integrals, sums |
 | **Ratio test** | $ L = \lim |a_{n+1}/a_n|$: converge if $< 1 $ | Factorials, powers |
 | **Root test** | $ L = \lim |a_n|^{1/n} $: converge if $< 1 $ | Power series |
 | **Comparison** | Compare with known series | Direct comparison |
@@ -56,7 +56,7 @@ $$
 
 The gravitational potential
 
-$ $ V(r,\theta,\lambda) = \frac{GM}{r}\sum_{n=0}^{N}\sum_{m=0}^{n}\left(\frac{a}{r}\right)^n[\bar{C}_{nm}\cos m\lambda + \bar{S}_{nm}\sin m\lambda]\bar{P}_{nm}(\cos\theta)$$**Convergence:** The series converges for $ r > a $ (outside the source radius).
+$ $ V(r,\theta,\lambda) = \frac{GM}{r}\sum_{n=0}^{N}\sum_{m=0}^{n}\left(\frac{a}{r}\right)^n[\bar{C}_{nm}\cos m\lambda + \bar{S}_{nm}\sin m\lambda]\bar{P}_{nm}(\cos\theta)$ $**Convergence:** The series converges for $  r > a $ (outside the source radius).
 
 **Truncation:** EGM2008 uses $ N_{max} = 2190 $ (~9 km resolution), requiring ~4.8 million coefficients.
 
@@ -66,9 +66,9 @@ $ $ V(r,\theta,\lambda) = \frac{GM}{r}\sum_{n=0}^{N}\sum_{m=0}^{n}\left(\frac{a}
 
 $ $\bar{P}_{nm}(\cos\theta) = \text{(normalized)} $$**Recurrence relation** (used in computation)
 
-$ $(n-m+1)\bar{P}_{n+1,m} = (2n+1)\cos\theta\,\bar{P}_{nm} - (n+m)\bar{P}_{n-1,m} $$
+$ $ (n-m+1)\bar{P}_{n+1,m} = (2n+1)\cos\theta\,\bar{P}_{nm} - (n+m)\bar{P}_{n-1,m} $$
 
-### Taylor Series for Linearization
+# ## Taylor Series for Linearization
 
 The pseudorange equation is nonlinear. Taylor series around approximate position
 
@@ -113,7 +113,7 @@ Each $\omega_k $ corresponds to a known astronomical frequency (M₂, S₂, K₁
 
 ## Study Problems
 
-1. **Recall:** Determine if $\sum_{n=1}^{\infty} \frac{1}{n^2} $ converges and find its sum ($\pi^2/6 $).
+1. **Recall:** Determine if $\sum_{n=1}^{\infty} \frac{1}{n^2} $ converges and find its sum ( $\pi^2/6 $).
 2. **Application:** Compute $ e^{-0.01} $ using the first 4 terms of its Taylor series. What is the relative error vs. the exact value?
 3. **Derivation:** Derive the Taylor expansion of $\sin x $ up to $ x^5 $.
 4. **Real-world:** EGM2008 uses spherical harmonics up to degree 2190. How many coefficients are there (approximately)? How does truncation at degree 180 limit resolution?

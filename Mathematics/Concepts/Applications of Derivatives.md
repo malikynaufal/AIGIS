@@ -22,7 +22,7 @@ A function $f(x) $ has a **critical point** (titik kritis) where $ f'(x) = 0 $ o
 
 $ $\text{If } f'(c) = 0 \text{ and } f''(c) > 0 \implies f \text{ has a local minimum at } c\text{If } f'(c) = 0 \text{ and } f''(c) < 0 \implies f \text{ has a local maximum at } c\text{If } f''(c) = 0 \implies \text{test is inconclusive (uji tidak tegas)} $$
 
-### Constrained Optimization (Optimasi Terkonstraksi)
+# ## Constrained Optimization (Optimasi Terkonstraksi)
 
 In geodesy, many problems minimize a quantity subject to constraints:
 
@@ -31,32 +31,32 @@ e
 
 $ $ S(\mathbf{x}) = \mathbf{v}^T \mathbf{P} \mathbf{v} = (\mathbf{A}\mathbf{x} - \mathbf{L})^T \mathbf{P} (\mathbf{A}\mathbf{x} - \mathbf{L})$$
 
-subject to observation equations. Setting $\frac{\partial S}{\partial \mathbf{x}} = \mathbf{0} $ yields the **normal equations**:$ $\mathbf{A}^T \mathbf{P} \mathbf{A} \hat{\mathbf{x}} = \mathbf{A}^T \mathbf{P} \mathbf{L} $$
+subject to observation equations. Setting $\frac{\partial S}{\partial \mathbf{x}} = \mathbf{0} $ yields the **normal equations**: $ $\mathbf{A}^T \mathbf{P} \mathbf{A} \hat{\mathbf{x}} = \mathbf{A}^T \mathbf{P} \mathbf{L} $$
 
 This is the geometric interpretation of the derivative as zero at the minimum — the gradient vanishes at the optimal solution.
 
 ### Global vs Local Optimum
 
-A **local optimum** (optimum lokal) is the best point in a neighbourhood; a **global optimum** (optimum global) is the best over the entire domain. For convex functions ($ f''(x) > 0 $ everywhere for univariate), any local minimum is automatically global — a property exploited in least-squares where the sum of squared residuals is always a convex function.
+A **local optimum** (optimum lokal) is the best point in a neighbourhood; a **global optimum** (optimum global) is the best over the entire domain. For convex functions ( $ f''(x) > 0 $ everywhere for univariate), any local minimum is automatically global — a property exploited in least-squares where the sum of squared residuals is always a convex function.
 
 ## 2. Related Rates (Tingkat Hubungan)
 
 **Related rates** problems involve finding how one quantity changes with respect to time when another quantity's rate of change is known. The key technique is **implicit differentiation** (diferensiasi implisit) with respect to $ t $.
 
 ### Classic Example: Expanding Circle
-A circle's radius increases at $\frac{dr}{dt} = 2 $ m/s. How fast is the area increasing when $ r = 5 $ m
+A circle's radius increases at $\frac{dr}{dt} = 2 $ m/s. How fast is the area increasing when $  r = 5 $ m
 ?
 
-$ $ A = \pi r^2 \implies \frac{dA}{dt} = 2\pi r \frac{dr}{dt} = 2\pi (5)(2) = 20\pi \;\text{m}^2/\text{s}$$
+$ $  A = \pi r^2 \implies \frac{dA}{dt} = 2\pi r \frac{dr}{dt} = 2\pi (5)(2) = 20\pi \;\text{m}^2/\text{s}$$
 
-### Geodetic Application: GNSS Baseline Rate
+# ## Geodetic Application: GNSS Baseline Rate
 If two GNSS receivers on a moving vehicle measure a baseline vector $\mathbf{b}(t) $, the rate of change of baseline length is:
 
 $ $\frac{d|\mathbf{b}|}{dt} = \frac{\mathbf{b} \cdot \dot{\mathbf{b}}}{|\mathbf{b}|} $$
 
 where $\dot{\mathbf{b}} = d\mathbf{b}/dt $ is the velocity of the baseline — this is the radial component of relative velocity between the two receivers.
 
-**Tingkat hubungan** is also used in radar/lidar tracking, where range-rate ($\dot{\rho} $) relates to line-of-sight velocity through differentiation of the slant range formula.
+**Tingkat hubungan** is also used in radar/lidar tracking, where range-rate ( $\dot{\rho} $) relates to line-of-sight velocity through differentiation of the slant range formula.
 
 ## 3. Curve Sketching (Menggambar Kurva)
 
@@ -70,14 +70,14 @@ Sign changes of $ f'$ identify **critical points** (titik kritis) — potential 
 
 ### Second Derivative: Concavity (Kelengkungan)
 
-$ $ f''(x) > 0 \implies f \text{ concave up (cekung ke atas)}f''(x) < 0 \implies f \text{ concave down (cekung ke bawah)}$$**Inflection point** (titik belok): where $ f''(x) $ changes sign — the curve switches concavity.
+$ $ f''(x) > 0 \implies f \text{ concave up (cekung ke atas)}f''(x) < 0 \implies f \text{ concave down (cekung ke bawah)}$ $**Inflection point** (titik belok): where $ f''(x) $ changes sign — the curve switches concavity.
 
 ### Procedure for Sketching (Prosedur Menggambar Kurva)
 
 1. Domain — where is $ f $ defined?
-2. Intercepts —$ x $-intercepts ($ f(x) = 0 $) and $ y $-intercept ($ x = 0 $).
-3. Symmetry — even ($ f(-x) = f(x) $) or odd ($ f(-x) = -f(x) $).
-4. Asymptotes — horizontal $\left(\lim_{x\to\pm\infty} f(x) = L\right) $, vertical (where $ f $ blows up), oblique.
+2. Intercepts —$ x $-intercepts ( $ f(x) = 0 $) and $  y $-intercept ( $  x = 0 $).
+3. Symmetry — even ( $ f(-x) = f(x) $) or odd ( $ f(-x) = -f(x) $).
+4. Asymptotes — horizontal $\left(\lim_{x\to\pm\infty} f(x) = L\right) $, vertical (where $  f $ blows up), oblique.
 5.$ f'(x) = 0 $— critical points, intervals of increase/decrease.
 6.$ f''(x) = 0 $— inflection points, concavity.
 7. Plot key points and connect with the correct shape.
@@ -86,7 +86,7 @@ $ $ f''(x) > 0 \implies f \text{ concave up (cekung ke atas)}f''(x) < 0 \implies
 
 Newton's method is an iterative root-finding algorithm using the first derivative
 
-$ $ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$**Geometric interpretation**: at each step, approximate $ f $ by its tangent line at $ x_n $, then find where that tangent meets the $ x $-axis.
+$ $ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$ $**Geometric interpretation**: at each step, approximate $  f $ by its tangent line at $ x_n $, then find where that tangent meets the $  x $-axis.
 
 ### Convergence
 
@@ -111,7 +111,7 @@ Converges within 3 iterations to the Dottie number $\approx 0.7390851 $.
 Derivatives are fundamental in economics, particularly in marginal analysis (analisis marginal):
 
 ### Marginal Cost (Biaya Marjinal)
-If $ C(q) $ is the total cost (total biaya) function of producing $ q $ units
+If $ C(q) $ is the total cost (total biaya) function of producing $  q $ units
 
 $ $ MC(q) = C'(q) = \lim_{\Delta q \to 0} \frac{C(q + \Delta q) - C(q)}{\Delta q}$$
 

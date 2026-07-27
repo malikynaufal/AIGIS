@@ -45,7 +45,7 @@ where $\mathbf{u} $ is a unit vector in the desired direction.
 ### Hessian Matri
 x
 
-$ $ H = \begin{bmatrix} f_{xx} & f_{xy} & f_{xz} \\ f_{yx} & f_{yy} & f_{yz} \\ f_{zx} & f_{zy} & f_{zz} \end{bmatrix}$$
+$ $  H = \begin{bmatrix} f_{xx} & f_{xy} & f_{xz} \\ f_{yx} & f_{yy} & f_{yz} \\ f_{zx} & f_{zy} & f_{zz} \end{bmatrix}$$
 
 **Second derivative test (2D):**
 
@@ -60,7 +60,7 @@ $ $ H = \begin{bmatrix} f_{xx} & f_{xy} & f_{xz} \\ f_{yx} & f_{yy} & f_{yz} \\ 
 
 For $\mathbf{F}: \mathbb{R}^n \to \mathbb{R}^m $:
 
-$ $ J = \begin{bmatrix} \frac{\partial F_1}{\partial x_1} & \cdots & \frac{\partial F_1}{\partial x_n} \\ \vdots & \ddots & \vdots \\ \frac{\partial F_m}{\partial x_1} & \cdots & \frac{\partial F_m}{\partial x_n} \end{bmatrix}$$---
+$ $  J = \begin{bmatrix} \frac{\partial F_1}{\partial x_1} & \cdots & \frac{\partial F_1}{\partial x_n} \\ \vdots & \ddots & \vdots \\ \frac{\partial F_m}{\partial x_1} & \cdots & \frac{\partial F_m}{\partial x_n} \end{bmatrix}$$---
 
 ## In Geodesy Context
 
@@ -68,7 +68,7 @@ $ $ J = \begin{bmatrix} \frac{\partial F_1}{\partial x_1} & \cdots & \frac{\part
 
 For the transformation $ (\phi, \lambda, h) \to (X, Y, Z) $:
 
-$ $ J = \begin{bmatrix} -(N+h)\sin\phi\cos\lambda & -(N+h)\cos\phi\sin\lambda & \cos\phi\cos\lambda \\ -(N+h)\sin\phi\sin\lambda & (N+h)\cos\phi\cos\lambda & \cos\phi\sin\lambda \\ (N(1-e^2)+h)\cos\phi & 0 & \sin\phi \end{bmatrix}+ \text{ terms with } \partial N/\partial\phi $$
+$ $  J = \begin{bmatrix} -(N+h)\sin\phi\cos\lambda & -(N+h)\cos\phi\sin\lambda & \cos\phi\cos\lambda \\ -(N+h)\sin\phi\sin\lambda & (N+h)\cos\phi\cos\lambda & \cos\phi\sin\lambda \\ (N(1-e^2)+h)\cos\phi & 0 & \sin\phi \end{bmatrix}+ \text{ terms with } \partial N/\partial\phi $$
 
 This Jacobian is essential for error propagation from geodetic to ECEF coordinates.
 
@@ -78,7 +78,7 @@ The normal equations arise from setting the gradient of the least-squares criter
 
 $ $\frac{\partial}{\partial \mathbf{x}} (\mathbf{r}^T \mathbf{P} \mathbf{r}) = 0 \implies \mathbf{J}^T \mathbf{P} \mathbf{J} \Delta\mathbf{x} = -\mathbf{J}^T \mathbf{P} \mathbf{r} $$
 
-### Surface Integrals on the Ellipsoid
+# ## Surface Integrals on the Ellipsoid
 
 The total mass of a body: $ M = \iiint \rho\, dV $ The gravitational potential at a point outside
 
@@ -141,7 +141,7 @@ This gives the normal equations — the heart of least-squares estimation.
 
 1. **Evaluating the gradient in the wrong direction:** The gradient points in direction of increasing $ f $, not decreasing.
 2. **Swapping rows and columns of the Jacobian:** The $ (i,j) $ element is $\partial F_i / \partial x_j $.
-3. **Confusing $\partial $ with $ d $:** Partial derivatives hold other variables constant; total derivatives account for chain dependence.
+3. **Confusing $\partial $ with $  d $:** Partial derivatives hold other variables constant; total derivatives account for chain dependence.
 4. **Ignoring the chain rule in multivariable contexts:** $ df/dt = \nabla f \cdot d\mathbf{r}/dt$.
 
 ---

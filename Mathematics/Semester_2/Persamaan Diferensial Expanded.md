@@ -45,7 +45,7 @@ $ $
 $ y = 2e^{x^2/2} $#### 1.3 First-Order Linea
 r
 
-$ $ y' + P(x)y = Q(x)$ $
+$ $ y' + P(x)y = Q(x) $ $
 
 Integrating factor $\mu = e^{\int P\,dx} $:
 
@@ -59,23 +59,23 @@ $ e^{2x}y = e^x - 1 $
 
 $ y = e^{-x} - e^{-2x} $#### 1.4 Exact Equations $ M(x,y)\,dx + N(x,y)\,dy = 0 $ is exact if $ M_y = N_x $.
 
-Find $ F $ with $ F_x = M $, $ F_y = N $. Solution: $ F = C $.
+Find $ F $ with $ F_x = M $, $ F_y = N $. Solution: $  F = C $.
 
 #### 1.5 Bernoulli Equation
 
-$ y' + P(x)y = Q(x)y^n $ Substitute $ v = y^{1-n} $→ linear in $ v $.
+$ y' + P(x)y = Q(x)y^n $ Substitute $  v = y^{1-n} $→ linear in $  v $.
 
-**Example**: $ y' + y/x = y^2/x^2 $ ($ n=2 $)
+**Example**: $ y' + y/x = y^2/x^2 $ ( $ n=2 $)
 $ v = y^{-1} $: $ v' - v/x = -1/x^2 $→ linear,$\mu = 1/x $
-$ (v/x)' = -1/x^3 $→$ v/x = 1/(2x^2) + C $→$ v = 1/(2x) + Cx $#### 1.6 Homogeneous Equations $ y' = F(y/x) $→ substitute $ v = y/x $, $ y = xv $, $ y' = v + xv'$### Weeks 4-6: Second-Order Linear ODEs
+$ (v/x)' = -1/x^3 $→$ v/x = 1/(2x^2) + C $→$  v = 1/(2x) + Cx $#### 1.6 Homogeneous Equations $ y' = F(y/x) $→ substitute $  v = y/x $, $  y = xv $, $ y' = v + xv'$### Weeks 4-6: Second-Order Linear ODEs
 
 #### 2.1 Homogeneous: $ y'' + py' + qy = 0 $ Characteristic equation $ r^2 + pr + q = 0 $.
 
 | Discriminant | Roots | Solution |
 |-------------|-------|----------|
-| $\Delta > 0 $|$ r_1 \neq r_2 $ real | $ y = C_1e^{r_1 x} + C_2e^{r_2 x} $ |
-| $\Delta = 0 $| repeated $ r $|$ y = (C_1 + C_2 x)e^{rx} $ |
-| $\Delta < 0 $|$\alpha m \beta i $|$ y = e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x) $ |
+| $\Delta > 0 $|$ r_1 \neq r_2 $ real | $  y = C_1e^{r_1 x} + C_2e^{r_2 x} $ |
+| $\Delta = 0 $| repeated $  r $|$  y = (C_1 + C_2 x)e^{rx} $ |
+| $\Delta < 0 $|$\alpha m \beta i $|$  y = e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x) $ |
 
 #### 2.2 Worked Example $ y'' - 3y' + 2y = 0 $ Characteristic: $ r^2-3r+2 = (r-1)(r-2) = 0 $
 
@@ -101,7 +101,7 @@ $ y = y_h + y_p $ (homogeneous + particular)
 
 **Example**: $ y''-3y'+2y = e^{3x} $ Trial: $ y_p = Ae^{3x} $
 
-$ 9Ae^{3x} - 9Ae^{3x} + 2Ae^{3x} = e^{3x} $→$ 2A = 1 $→$ A = 1/2 $
+$ 9Ae^{3x} - 9Ae^{3x} + 2Ae^{3x} = e^{3x} $→$ 2A = 1 $→$  A = 1/2 $
 
 $ y = C_1e^x + C_2e^{2x} + \frac{1}{2}e^{3x} $#### 2.4 Variation of Parameters
 
@@ -124,7 +124,7 @@ m
 
 $ $\mathbf{x}' = A\mathbf{x}, \\quad \mathbf{x}(0) = \mathbf{x}_0
 
-$ $3.2 Matrix Exponentia
+$ $ 3.2 Matrix Exponentia
 l $ $
 
 # 3.2 Matrix Exponentia
@@ -196,7 +196,7 @@ $\mathcal{L}^{-1} = -2e^{-t} + 7e^{-2t} $#### 4.4 Solving ODEs with Laplace
 
 **Example**: $ y''+4y=0 $, $ y(0)=1 $, $ y'(0)=0 $
 
-$ s^2Y-s-0+4Y=0 $→$ Y(s^2+4)=s $→$ Y = \frac{s}{s^2+4} $
+$ s^2Y-s-0+4Y=0 $→$ Y(s^2+4)=s $→$  Y = \frac{s}{s^2+4} $
 
 $ y = \cos(2t) $---
 

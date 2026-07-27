@@ -49,7 +49,7 @@ Prior $\mu_0 $ (data lama) dan data baru $\bar{D} $ digabungkan secara natural.
 
 ## 2. Pemilihan Prior
 
-- **Non-informatif (Jeffreys prior):**$ P(\theta) \propto \sqrt{I(\theta)} $di mana $ I(\theta)$ adalah informasi Fisher.
+- **Non-informatif (Jeffreys prior):**$ P(\theta) \propto \sqrt{I(\theta)} $ di mana $ I(\theta)$ adalah informasi Fisher.
 
 - **Informatif:** Berdasarkan studi sebelumnya (misal: posisi awal dari tabel).
 

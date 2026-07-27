@@ -50,7 +50,7 @@ $ -\hbar ^2/(2m) d^2ψ/dx^2 + Vψ = Eψ$
 
 - **Infinite square well (particle in a box):**
  ψ_n(x) = √(2/L) sin(nπx/L)
-$ E_$ n = n $^2\pi ^2\hbar ^2/(2mL^2) $
+$ E_$  n = n $^2\pi ^2\hbar ^2/(2mL^2) $
 
 - **Finite potential well:** tunneling solutions
 

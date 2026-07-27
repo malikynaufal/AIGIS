@@ -15,26 +15,26 @@ updated: 2026-07-27
 
 ## 1. Basic Principle
 
-The raw carrier‑phase measurement on frequency $f $ from satellite $ s $ at receiver $ r $:
+The raw carrier‑phase measurement on frequency $f $ from satellite $  s $ at receiver $  r $:
 
 $ $\Phi_{r,f}^s = \rho_r^s + c(\delta t_r - \delta t^s) + \lambda_f N_{r,f}^s + I_r^s + T_r^s + \epsilon_{\Phi} $$ | Symbol | Meaning |
 |--------|---------|
 | $\rho_r^s $ | Geometric range |
 | $ c $ | Speed of light |
 | $\delta t_r, \delta t^s $ | Receiver & satellite clock errors |
-| $\lambda_f $| Wavelength of frequency $ f $ |
+| $\lambda_f $| Wavelength of frequency $  f $ |
 | $ N_{r,f}^s $ | **Integer ambiguity** (cycles) |
 | $ I_r^s $ | Ionospheric delay |
 | $ T_r^s $ | Tropospheric delay |
 | $\epsilon_{\Phi} $ | Measurement noise (~1 mm) |
 
-The key difference from code pseudorange is the **integer ambiguity**$ N $. Once $ N $ is resolved,$\Phi $ becomes an extremely precise range measurement (mm noise).
+The key difference from code pseudorange is the **integer ambiguity**$ N $. Once $  N $ is resolved,$\Phi $ becomes an extremely precise range measurement (mm noise).
 
 ---
 
 ## 2. Single‑Difference and Double‑Difference
 
-### 2.1. Single Difference (between rover $ r $ and base $ b $ for the same satellite $ s $)
+### 2.1. Single Difference (between rover $ r $ and base $  b $ for the same satellite $  s $)
 
 $ $\nabla\Phi_{rb,f}^s = \Phi_{r,f}^s - \Phi_{b,f}^s = \nabla\rho_{rb}^s + c(\delta t_r - \delta t_b) + \lambda_f \nabla N_{rb,f}^s + \nabla I_{rb}^s + \nabla T_{rb}^s
 
@@ -98,7 +98,7 @@ For larger areas (> 10–20 km baseline), single‑base RTK degrades due to spat
 
 ## 5. Worked Example – Baseline Resolution
 
-**Scenario:** Base at $ X_b, Y_b, Z_b $ (known). Rover measures carrier phase on GPS L1 ($\lambda = 0.19029367 $ m) and L2 ($\lambda = 0.24421021 $ m) to 6 satellites.
+**Scenario:** Base at $ X_b, Y_b, Z_b $ (known). Rover measures carrier phase on GPS L1 ( $\lambda = 0.19029367 $ m) and L2 ( $\lambda = 0.24421021 $ m) to 6 satellites.
 
 Double‑difference float ambiguities (after least squares, cycles):
 

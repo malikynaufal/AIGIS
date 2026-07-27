@@ -57,8 +57,8 @@ ORDER BY distance_km;
 |---|---|---|---|
 | R-tree | Hierarchical rectangles | Range queries | $O(\log n) $ |
 | Quad-tree | Recursive 4-way split | Point data | $ O(\log n) $ |
-| kd-tree | k-dimensional binary tree | Nearest neighbor | $ O(\log n) $average |
-| Grid index | Regular grid cells | Simple overlap | $ O(1) $lookup |
+| kd-tree | k-dimensional binary tree | Nearest neighbor | $ O(\log n) $ average |
+| Grid index | Regular grid cells | Simple overlap | $ O(1) $ lookup |
 | Space-filling curve | Hilbert/Z-order | Linearization | $ O(\log n)$ |
 
 PostGIS uses the GiST (Generalized Search Tree) framework, which supports R-tree, kNN, and other index types.

@@ -34,7 +34,7 @@ A metric space is **complete** if every Cauchy sequence converges.
 ## 2. Topological Spaces
 
 A **topology** on $ X $ is a collection $\tau \subseteq \mathcal{P}(X) $ such that:
-1. $\emptyset, X \in \tau $ 2. Arbitrary unions of sets in $\tau $ are in $\tau $ 3. Finite intersections of sets in $\tau $ are in $\tau $ A **topological space** is $ (X, \tau) $. Elements of $\tau $ are **open sets**.
+1. $\emptyset, X \in \tau $ 2. Arbitrary unions of sets in $\tau $ are in $\tau $ 3. Finite intersections of sets in $\tau $ are in $\tau $  A **topological space** is $ (X, \tau) $. Elements of $\tau $ are **open sets**.
 
 ### Basis and Subbasis
 
@@ -44,15 +44,15 @@ Standard basis for $\mathbb{R}^n $: $\{B(x, r) : x \in \mathbb{R}^n, r > 0\} $.
 
 ### Continuous Maps
 
-$ f: X \to Y $ is **continuous** if $ f^{-1}(U) $ is open in $ X $ for every open $ U \subseteq Y $.
+$ f: X \to Y $ is **continuous** if $ f^{-1}(U) $ is open in $  X $ for every open $  U \subseteq Y $.
 
 **Equivalent:** $ f $ preserves limits: $ x_n \to x \implies f(x_n) \to f(x) $.
 
 ### Homeomorphisms
 
-A **homeomorphism** is a bijection $ f: X \to Y $ with $ f $ and $ f^{-1} $ continuous.
+A **homeomorphism** is a bijection $ f: X \to Y $ with $  f $ and $ f^{-1} $ continuous.
 
-$ X $ and $ Y $ are **homeomorphic** ($ X \cong Y $) — they have identical topological properties.
+$ X $ and $  Y $ are **homeomorphic** ( $  X \cong Y $) — they have identical topological properties.
 
 | Invariant under homeomorphism | Not invariant |
 |------------------------------|---------------|
@@ -75,7 +75,7 @@ $ X $ and $ Y $ are **homeomorphic** ($ X \cong Y $) — they have identical top
 
 ## 4. Connectedness
 
-$ X $ is **connected** if it cannot be written as $ U \cup V $ with $ U, V $ non-empty, open, disjoint.
+$ X $ is **connected** if it cannot be written as $  U \cup V $ with $ U, V $ non-empty, open, disjoint.
 
 $ X $ is **path-connected** if $\forall x, y \in X, \exists $ continuous $ f: [0,1] \to X $ with $ f(0)=x, f(1)=y $.
 
@@ -96,11 +96,11 @@ $ K \subseteq X $ is **compact** if every open cover has a finite subcover.
 
 ### Product Topology
 
-For $\prod X_i $, basic open sets are $\prod U_i $ where $ U_i \subseteq X_i $ open and $ U_i = X_i $ for all but finitely many $ i $.
+For $\prod X_i $, basic open sets are $\prod U_i $ where $ U_i \subseteq X_i $ open and $ U_i = X_i $ for all but finitely many $  i $.
 
 ### Quotient Topology
 
-Given $ f: X \to Y $ surjective, $ U \subseteq Y $ is open iff $ f^{-1}(U) $ is open in $ X $.
+Given $ f: X \to Y $ surjective, $  U \subseteq Y $ is open iff $ f^{-1}(U) $ is open in $  X $.
 
 **Example:** Identifying opposite edges of a square gives a torus.
 

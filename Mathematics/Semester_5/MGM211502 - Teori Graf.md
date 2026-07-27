@@ -51,18 +51,18 @@ $ $\max_{f} |f| = \min_{(S,T)} c(S,T)
 $ $
 
 ### 5. Menger's Theorem
-The maximum number of vertex-disjoint $ s $-$ t $ paths equals the minimum size of an $ s $-$ t $ vertex cut.
+The maximum number of vertex-disjoint $ s $-$  t $ paths equals the minimum size of an $  s $-$  t $ vertex cut.
 
 ## 📊 Spectral Graph Theory
 
 The **adjacency matrix** $ A $ of a graph:
 - $\lambda_1 $ (largest eigenvalue): $\lambda_1 \geq \bar{d} $ (average degree)
 - **Spectral gap** $\lambda_1 - \lambda_2 $: measures connectivity/expansion
-- **Algebraic connectivity** $\lambda_2 $ of Laplacian $ L = D - A $: positive $\iff $ connected
+- **Algebraic connectivity** $\lambda_2 $ of Laplacian $  L = D - A $: positive $\iff $ connected
 
 ### Laplacian Matrix
 
-$ L = D - A $ where $ D = ext{deg}(v_i) $.
+$ L = D - A $ where $  D = ext{deg}(v_i) $.
 
 Properties:
 - $\lambda_1 = 0 $ (always)
@@ -71,7 +71,7 @@ Properties:
 
 ## 💡 Solved Example: Network Flow
 
-**Problem:** Find the maximum flow from $ s $ to $ t $ in:
+**Problem:** Find the maximum flow from $ s $ to $  t $ in:
 
 ```
 s --(3)-- A --(2)-- t
@@ -80,9 +80,9 @@ A --(2)-- B
 ```
 
 **Solution using Ford-Fulkerson:**
-1. Augment $ s o A o t $ (flow 2): residual $ s o A(1) $, $ A o t(0) $
-2. Augment $ s o B o t $ (flow 3): residual $ s o B(1) $, $ B o t(0) $
-3. Augment $ s o A o B o t $: path blocked ($ B o t $ saturated)
+1. Augment $ s o A o t $ (flow 2): residual $  s o A(1) $, $  A o t(0) $
+2. Augment $ s o B o t $ (flow 3): residual $  s o B(1) $, $  B o t(0) $
+3. Augment $ s o A o B o t $: path blocked ( $  B o t $ saturated)
 4. Min-cut: $\{s\} $ vs $\{A, B, t\} $, capacity $ 3 + 4 = 7 $
 5. **Maximum flow = 7**
 

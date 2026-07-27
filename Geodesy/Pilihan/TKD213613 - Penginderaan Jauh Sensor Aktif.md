@@ -39,7 +39,7 @@ $$
 
 **Deformation mapping:**
 
-$ $
+$ $ 
 
 d = \frac{\lambda}{4\pi} \cdot \Delta\phi_{def}
 

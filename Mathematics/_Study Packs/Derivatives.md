@@ -14,7 +14,7 @@ The **derivative** measures the instantaneous rate of change of a function with 
 
 ## 1. Core Definition
 
-The derivative of $f $ at $ x $ is $ $ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
+The derivative of $f $ at $  x $ is $ $ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 
 **Alternative form:*
 *
@@ -25,7 +25,7 @@ The derivative represents the **slope of the tangent line** to the curve $ y = f
 
 **Geometric interpretation:** The equation of the tangent line at $ x = a $:
 
-$ $ y = f(a) + f'(a)(x - a)$$---
+$ $  y = f(a) + f'(a)(x - a)$$---
 
 ## 2. Differentiation Rules
 
@@ -65,7 +65,7 @@ $ $\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)
 
 $$
 
-If $ y = f(u) $ and $ u = g(x) $:
+If $ y = f(u) $ and $  u = g(x) $:
 
 $ $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} $$**Examples:**
 -$\frac{d}{dx}[\sin(x^2)] = \cos(x^2) \cdot 2x $-$\frac{d}{dx}[e^{3x}] = 3e^{3x} $-$\frac{d}{dx}[\ln(\cos x)] = \frac{-\sin x}{\cos x} = -\tan x $-$\frac{d}{dx}[(2x+1)^5] = 5(2x+1)^4 \cdot 2 = 10(2x+1)^4 $### 2.6 Extended Chain Rule (Multivariable)
@@ -100,12 +100,12 @@ $ $\frac{dz}{dt} = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f
 
 ## 4. Implicit Differentiation
 
-When $ y $ is defined implicitly by $ F(x, y) = 0 $, differentiate both sides with respect to $ x $, treating $ y $ as a function of $ x $:
+When $ y $ is defined implicitly by $ F(x, y) = 0 $, differentiate both sides with respect to $  x $, treating $  y $ as a function of $  x $:
 
-$ $\frac{d}{dx}[F(x,y)] = F_x + F_y \frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{F_x}{F_y} $$**Example:**$ x^2 + y^2 = 25 $ (circle
+$ $\frac{d}{dx}[F(x,y)] = F_x + F_y \frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{F_x}{F_y} $ $**Example:**$ x^2 + y^2 = 25 $ (circle
 )
 
-$ $2x + 2y\frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{x}{y}$$
+$ $ 2x + 2y\frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{x}{y}$$
 
 **Example:**$ e^y + xy = 1 $
 
@@ -115,14 +115,14 @@ $ $ e^y \frac{dy}{dx} + y + x\frac{dy}{dx} = 0 \implies \frac{dy}{dx} = \frac{-y
 
 ## 5. Higher-Order Derivatives
 
-The $ n $-th derivative of $ f $:
+The $ n $-th derivative of $  f $:
 
 $ $ f^{(n)}(x) = \frac{d^n f}{dx^n} = \underbrace{\frac{d}{dx}\left(\frac{d}{dx}\left(\cdots \frac{d}{dx}[f]\right)\right)}_{n \text{ times}}$$ | Notation | Meaning |
 |----------|---------|
 | $ f'(x) $ or $ f^{(1)}(x) $ | First derivative (rate of change) |
 | $ f''(x) $ or $ f^{(2)}(x) $ | Second derivative (concavity) |
 | $ f'''(x) $ or $ f^{(3)}(x) $ | Third derivative |
-| $ f^{(n)}(x) $ | $ n $-th derivative |
+| $ f^{(n)}(x) $ | $  n $-th derivative |
 
 **Leibniz notation:** If $ y = f(x) $, then $\frac{d^2 y}{dx^2} $ is the second derivative.
 
@@ -147,7 +147,7 @@ $$
 
 ### 6.1 Taylor and Maclaurin Series
 
-The Taylor series of $ f $ centered at $ a $:
+The Taylor series of $ f $ centered at $  a $:
 
 $ $ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots $$
 
@@ -155,7 +155,7 @@ The **Maclaurin series** (centered at $ a = 0 $):
 
 $ $ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n $$
 
-### 6.2 Important Taylor Series
+# ## 6.2 Important Taylor Series
 
 | Function | Maclaurin Series | Radius of convergence |
 |----------|------------------|-----------------------|
@@ -171,7 +171,7 @@ The error after truncating at the $ n $-th term:
 
 $ $ R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$$
 
-for some $ c $ between $ a $ and $ x $. This gives a bound on the approximation error.
+for some $ c $ between $  a $ and $  x $. This gives a bound on the approximation error.
 
 ### 6.4 Applications of Taylor Series
 
@@ -179,7 +179,7 @@ for some $ c $ between $ a $ and $ x $. This gives a bound on the approximation 
 
 - **Numerical computation:** Computing $ e^x $, $\sin x $, $\cos x $ on computers
 
-- **Asymptotic analysis:** Understanding behaviour as $ x \to 0 $ or $ x \to \infty $- **Error bounds:** Quantifying truncation error in numerical methods
+- **Asymptotic analysis:** Understanding behaviour as $ x \to 0 $ or $  x \to \infty $- **Error bounds:** Quantifying truncation error in numerical methods
 
 ---
 
@@ -191,7 +191,7 @@ To find local maxima/minima of $ f(x) $:
 
 1. Compute $ f'(x) $ 2. Find **critical points**: solve $ f'(x) = 0 $ (or where $ f'$ is undefined)
 3. Classify using the **second derivative test**:
- -$ f''(a) > 0 $: local **minimum** at $ x = a $-$ f''(a) < 0 $: local **maximum** at $ x = a $-$ f''(a) = 0 $: inconclusive — use higher-order tests or first derivative test
+ -$ f''(a) > 0 $: local **minimum** at $  x = a $-$ f''(a) < 0 $: local **maximum** at $  x = a $-$ f''(a) = 0 $: inconclusive — use higher-order tests or first derivative test
 
 **Geodesy application:** Finding the point of closest approach, optimal measurement configurations, or minimizing least-squares residuals.
 
@@ -199,17 +199,17 @@ To find local maxima/minima of $ f(x) $:
 
 When multiple quantities change with time, use the chain rule to relate their rates:
 
-$ $\frac{dy}{dx} = \frac{dy/dt}{dx/dt} $$**Example in surveying:** If a leveling rod moves at rate $ dh/dt $ while being read at distance $ D $, the angular rate is $ d\theta/dt = (dD/dt \cdot h - dh/dt \cdot D)/D^2 $.
+$ $\frac{dy}{dx} = \frac{dy/dt}{dx/dt} $ $**Example in surveying:** If a leveling rod moves at rate $ dh/dt $ while being read at distance $  D $, the angular rate is $ d\theta/dt = (dD/dt \cdot h - dh/dt \cdot D)/D^2 $.
 
 ### 7.3 Mean Value Theorem
 
 If $ f $ is continuous on $ [a,b] $ and differentiable on $ (a,b) $, then:
 
-$ $\exists\, c \in (a,b) : f'(c) = \frac{f(b) - f(a)}{b - a} $$**Cauchy's MVT:** If $ f $ and $ g $ are continuous on $ [a,b] $ and differentiable on $ (a,b) $:
+$ $\exists\, c \in (a,b) : f'(c) = \frac{f(b) - f(a)}{b - a} $ $**Cauchy's MVT:** If $  f $ and $  g $ are continuous on $ [a,b] $ and differentiable on $ (a,b) $:
 
 $ $\exists\, c \in (a,b) : \frac{f'(c)}{g'(c)} = \frac{f(b) - f(a)}{g(b) - g(a)} $$
 
-### 7.4 L'Hôpital's Rule
+# ## 7.4 L'Hôpital's Rule
 
 For indeterminate forms $ 0/0 $ or $\infty/\infty $:
 
@@ -221,10 +221,10 @@ provided the limit on the right exists. Also applies to $ 0 \cdot \infty $,$\inf
 
 | Property | Information |
 |----------|-------------|
-| $ f'(x) > 0 $| $ f $ is increasing |
-| $ f'(x) < 0 $| $ f $ is decreasing |
-| $ f''(x) > 0 $| $ f $ is concave up |
-| $ f''(x) < 0 $|$ f $ is concave down |
+| $ f'(x) > 0 $| $  f $ is increasing |
+| $ f'(x) < 0 $| $  f $ is decreasing |
+| $ f''(x) > 0 $| $  f $ is concave up |
+| $ f''(x) < 0 $|$  f $ is concave down |
 | $ f''(x) = 0 $ | Possible inflection point |
 
 ---

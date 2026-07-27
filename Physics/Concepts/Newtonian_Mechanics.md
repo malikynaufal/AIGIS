@@ -107,14 +107,14 @@ $ $
 
 ### Problem 1: Satellite Launch Velocity
 
-**Given:** Earth's mass $ M_{\\oplus} = 5.972 \\times 10^{24} $ kg, Earth's radius $ R_{\\oplus} = 6.371 \\times 10^6 $ m
+**Given:** Earth's mass $ M_{\\oplus} = 5.972 \\times 10^{24} $ kg, Earth's radius $ R_{\\oplus} = 6.371 \\times 10^6 $  m
 
 **Find:** Minimum orbital velocity at Earth's surface
 
 **Solution:**
 
 1. **Identify principle:** Centripetal force equals gravitational force
-2. **Set up equations:** $\\frac{mv^2}{R_{\\oplus}} = \\frac{GM_{\\oplus}m}{R_{\\oplus}^2} $ 3. **Solve:** $ v = \\sqrt{\\frac{GM_{\\oplus}}{R_{\\oplus}}} = \\sqrt{\\frac{3.986\\times10^{14}}{6.371\\times10^6}} = 7,905 $m/s
+2. **Set up equations:** $\\frac{mv^2}{R_{\\oplus}} = \\frac{GM_{\\oplus}m}{R_{\\oplus}^2} $ 3. **Solve:** $  v = \\sqrt{\\frac{GM_{\\oplus}}{R_{\\oplus}}} = \\sqrt{\\frac{3.986\\times10^{14}}{6.371\\times10^6}} = 7,905 $ m/s
 4. **Check:** Altitude required for stable orbit
 
 **Answer:** $ v_\\text{orbital} = 7,905 $ m/s

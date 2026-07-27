@@ -16,14 +16,14 @@ updated: 2026-07-27
 | **Coordinate transformations** | Forward/inverse for 100+ map projections |
 | **Datum transformations** | 7-parameter Helmert, grid shifts (NADCON, NTv2), time-dependent |
 | **CRS management** | EPSG database (registry), WKT definitions |
-| **Pipeline processing** | Chained operations ($+proj=a +proj=b +proj=c $) |
+| **Pipeline processing** | Chained operations ( $+proj=a +proj=b +proj=c $) |
 | **Grid shift support** | NTv2, NADCON, FPS, ISN2000/L2004, etc. |
 | **Time-dependent transformations** | Plate motion models (ITRF2020 → ETRS89) |
 | **Geodetic operations** | Geodesic distance (Karney), azimuth, area |
 
 ## Basic Usage (Command-Line: `proj`)
 
-### Forward Projection ($\phi, \lambda \to E, N $)
+### Forward Projection ( $\phi, \lambda \to E, N $)
 
 ```bash
 
@@ -33,7 +33,7 @@ echo "51.5 0.0" | proj +proj=utm +zone=33 +ellps=WGS84
 # Output: 290312.3 5712982.2
 ```
 
-### Inverse Projection ($ E, N \to \phi, \lambda$)
+### Inverse Projection ( $ E, N \to \phi, \lambda$)
 
 ```bash
 echo "290312.3 5712982.2" | proj -I +proj=utm +zone=33 +ellps=WGS84

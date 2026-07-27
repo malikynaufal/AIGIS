@@ -42,8 +42,8 @@ $$ Y_t = T_t + S_t + R_t \quad \text{(additif)}Y_t = T_t \cdot S_t \cdot R_t \qu
 ### 1.2 Stasionaritas
 
 **Stasionaritas lemah (weak stationarity):**
-1. Mean konstan: $E[Y_t] = \mu $ untuk semua $t $.
-2. Variansi konstan: $\text{Var}(Y_t) = \sigma^2 $ untuk semua $t $.
+1. Mean konstan: $E[Y_t] = \mu $ untuk semua $  t $.
+2. Variansi konstan: $\text{Var}(Y_t) = \sigma^2 $ untuk semua $  t $.
 3. Autokorelasi hanya bergantung lag: $\text{Cov}(Y_t, Y_{t+k}) = \gamma(k) $.
 
 **Uji Stasionaritas:**
@@ -64,7 +64,7 @@ Untuk tren polinomial orde $ d $:
 
 $ $\nabla^d Y_t = \sum_{j=0}^{d} (-1)^j \binom{d}{j} Y_{t-j} $$
 
-Seasonal differencing: $\nabla_s Y_t = Y_t - Y_{t-s} $ (misal: $s=7 $ untuk data harian mingguan).
+Seasonal differencing: $\nabla_s Y_t = Y_t - Y_{t-s} $ (misal: $ s=7 $ untuk data harian mingguan).
 
 ---
 
@@ -88,7 +88,7 @@ $$
 
 Dihitung dengan regresi $ $ Y_t = \phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \cdots + \phi_k Y_{t-k} + \varepsilon_t $$
 
-### 2.3 Identifikasi Model dari ACF/PACF
+# ## 2.3 Identifikasi Model dari ACF/PACF
 
 | Model | ACF Pattern | PACF Pattern |
 |-------|-------------|--------------|
@@ -114,7 +114,7 @@ di mana:
 -$ p $ = orde AutoRegressive
 -$ d $ = orde differencing (integrated)
 -$ q $ = orde Moving Average
--$ B $ = backshift operator: $ B Y_t = Y_{t-1} $-$\phi(B) = 1 - \phi_1 B - \phi_2 B^2 - \cdots - \phi_p B^p $-$\theta(B) = 1 + \theta_1 B + \theta_2 B^2 + \cdots + \theta_q B^q $-$\varepsilon_t \sim \text{WN}(0, \sigma^2) $ (white noise)
+-$ B $ = backshift operator: $  B Y_t = Y_{t-1} $-$\phi(B) = 1 - \phi_1 B - \phi_2 B^2 - \cdots - \phi_p B^p $-$\theta(B) = 1 + \theta_1 B + \theta_2 B^2 + \cdots + \theta_q B^q $-$\varepsilon_t \sim \text{WN}(0, \sigma^2) $ (white noise)
 
 ### 3.2 Model Spesifik
 
@@ -127,7 +127,7 @@ di mana:
 
 $ $ Y_t - Y_{t-1} = \phi_1(Y_{t-1} - Y_{t-2}) + \varepsilon_t + \theta_1 \varepsilon_{t-1}$$
 
-### 3.3 SARIMA: Model Seasonal
+# ## 3.3 SARIMA: Model Seasonal
 
 ARIMA musiman $\text{SARIMA}(p,d,q)(P,D,Q)_s $:
 
@@ -149,7 +149,7 @@ $$**Contoh SARIMA(1,1,1)(1,1,1) $_{12} $** untuk data bulanan tahunan:
 | Kriteria | Rumus | Interpretasi |
 |----------|-------|-------------|
 | **AIC** | $-2\ln L + 2k $ | Keseimbangan goodness-of-fit & parsimony |
-| **AICc** | $\text{AIC} + \frac{2k(k+1)}{N-k-1} $| Koreksi untuk $ N $ kecil |
+| **AICc** | $\text{AIC} + \frac{2k(k+1)}{N-k-1} $| Koreksi untuk $  N $ kecil |
 | **BIC** | $-2\ln L + k \ln N $ | Lebih konservatif dari AIC |
 | **RMSE** | $\sqrt{\frac{1}{N}\sum(Y_t-\hat{Y}_t)^2} $ | Error prediksi (in-sample) |
 | **MAPE** | $\frac{100}{N}\sum\left|\frac{Y_t-\hat{Y}_t}{Y_t}\right| $ | Error relatif (persen) |
@@ -167,7 +167,9 @@ $ $
 S(f) = \sum_{k=-\infty}^{\infty} \gamma(k) e^{-i2\pi fk}\gamma(k) = \int_{-1/2}^{1/2} S(f) e^{i2\pi fk} \, d
 f
 
-$$### 4.2 Periodogram $ $ I(f_j) = \frac{1}{T}\left|\sum_{t=1}^{T} Y_t e^{-i2\pi f_j t}\right|^2, \quad f_j = \frac{j}{T}$$
+$$
+
+# ## 4.2 Periodogram $ $ I(f_j) = \frac{1}{T}\left|\sum_{t=1}^{T} Y_t e^{-i2\pi f_j t}\right|^2, \quad f_j = \frac{j}{T}$$
 
 Properti: $\mathbb{E}[I(f_j)] \approx S(f_j) $ (asymptotically unbiased) tetapi $\text{Var}[I(f_j)] \approx S(f_j)^2 $ (**tidak konsisten!**).
 
@@ -192,7 +194,7 @@ Data ketinggian air harian selama 3 tahun (1095 hari) dianalisis:
 -$f = 0.07996 $ cpd → periode 12.51 jam → **M2** (semi-diurnal lunar)
 -$f = 0.08333 $ cpd → periode 12.00 jam → **S2** (semi-diurnal solar)
 
-> **Hasil:** Model SARIMA(2,1,1)(1,1,1)$_7 $ memberikan RMSE = 4.2 cm, cocok untuk peramalan water level real-time.
+> **Hasil:** Model SARIMA(2,1,1)(1,1,1) $_7 $ memberikan RMSE = 4.2 cm, cocok untuk peramalan water level real-time.
 
 ---
 
@@ -206,11 +208,11 @@ Data ketinggian air harian selama 3 tahun (1095 hari) dianalisis:
 | **Holt** (Double) | $ l_t $ | $ b_t $ | — | $ b_t = \beta^*(l_t - l_{t-1}) + (1-\beta^*)b_{t-1} $ |
 | **Holt-Winters** | $ l_t $ | $ b_t $ | $ s_t $ | $ s_t = \gamma(Y_t - l_{t-1} - b_{t-1}) + (1-\gamma)s_{t-m} $ |
 
-Peramalan $ k $langkah ke depan (Holt-Winters additive)
+Peramalan $ k $ langkah ke depan (Holt-Winters additive)
 
 $ $\hat{Y}_{T+k|T} = l_T + k \cdot b_T + s_{T+k-m} $$
 
-### 5.2 Perbandingan Model Peramalan
+# ## 5.2 Perbandingan Model Peramalan
 
 | Model | Kelebihan | Kekurangan | Cocok Untuk |
 |-------|----------|------------|-------------|

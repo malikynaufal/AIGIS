@@ -43,17 +43,19 @@ x
 $$**Linear (integrating factor):** $ $ y' + P(x)y = Q(x)\mu(x) = e^{\int P(x)\,dx}y = \frac{1}{\mu(x)} \left[\int \mu(x)Q(x)\,dx + C\right
 ]
 
-$$ ### Second-Order Linear ODEs $ $
+$$
+
+# ## Second-Order Linear ODEs $ $
 
 ay'' + by' + cy = f(x)$$
 
-**Homogeneous** ($ f = 0 $) — characteristic equation:
+**Homogeneous** ( $ f = 0 $) — characteristic equation:
 
 $ $ ar^2 + br + c = 0 \implies r = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$ | Discriminant | Roots | General Solution |
 |-------------|-------|-----------------|
-| $ b^2 - 4ac > 0 $ | Two real $ r_1, r_2 $ | $ y = c_1 e^{r_1 x} + c_2 e^{r_2 x} $ |
-| $ b^2 - 4ac = 0 $ | One repeated $ r $ | $ y = (c_1 + c_2 x)e^{rx} $ |
-| $ b^2 - 4ac < 0 $ | Complex $\alpha \pm \beta i $| $ y = e^{\alpha x}(c_1 \cos\beta x + c_2 \sin\beta x) $ |
+| $ b^2 - 4ac > 0 $ | Two real $ r_1, r_2 $ | $  y = c_1 e^{r_1 x} + c_2 e^{r_2 x} $ |
+| $ b^2 - 4ac = 0 $ | One repeated $  r $ | $  y = (c_1 + c_2 x)e^{rx} $ |
+| $ b^2 - 4ac < 0 $ | Complex $\alpha \pm \beta i $| $  y = e^{\alpha x}(c_1 \cos\beta x + c_2 \sin\beta x) $ |
 
 ---
 
@@ -81,7 +83,7 @@ $$
 
 From the second, angular momentum $ h = r^2\dot{\theta} $ is conserved. Substituting into the first gives the orbit equation $ $ r(t) = \frac{a(1-e^2)}{1 + e\cos\theta}$$
 
-where $ a $= semi-major axis,$ e $ = eccentricity — an ellipse!
+where $ a $= semi-major axis,$  e $ = eccentricity — an ellipse!
 
 ### Deformation Time Series Analysis
 
@@ -113,7 +115,7 @@ $ $\dot{\mathbf{x}} = F\mathbf{x} + G\mathbf{w}\dot{P} = FP + PF^T + Q
 
 $$
 
-where $ F $= dynamics matrix,$ Q $ = process noise,$ P $ = state covariance.
+where $ F $= dynamics matrix,$  Q $ = process noise,$  P $ = state covariance.
 
 These form a matrix differential equation for the covariance — fundamental to real-time GNSS navigation.
 
@@ -151,8 +153,8 @@ These form a matrix differential equation for the covariance — fundamental to 
 
 1. **Recall:** Solve $ y' + 2xy = 0 $ with $ y(0) = 3 $. (Hint: integrating factor or separable.)
 2. **Application:** A GNSS receiver uses Kalman tracking. Given $ F = \begin{bmatrix} 0 & 1 \\ -\omega_0^2 & -2\lambda \end{bmatrix} $, write the state equations and compute the natural frequency $\omega_0 $ from $ f_0 = 1/Hz $.
-3. **Derivation:** Starting from Newton's law of gravitation, derive the Keplerian orbit equation from the two-body DE (use $ u = 1/r $, $ h = r^2\dot{\theta} $).
-4. **Real-world:** Earth's mantle behaves like a Maxwell viscoelastic body. Write the DE that describes post-glacial rebound: $\ddot{h} + \frac{E}{\eta}\dot{h} + \frac{E}{\tau_R^2}h = \frac{L}{\eta} $ where $ E $= elastic modulus,$\eta $= viscosity. Identify the relaxation time constant.
+3. **Derivation:** Starting from Newton's law of gravitation, derive the Keplerian orbit equation from the two-body DE (use $ u = 1/r $, $  h = r^2\dot{\theta} $).
+4. **Real-world:** Earth's mantle behaves like a Maxwell viscoelastic body. Write the DE that describes post-glacial rebound: $\ddot{h} + \frac{E}{\eta}\dot{h} + \frac{E}{\tau_R^2}h = \frac{L}{\eta} $ where $  E $= elastic modulus,$\eta $= viscosity. Identify the relaxation time constant.
 
 ---
 
@@ -160,7 +162,7 @@ These form a matrix differential equation for the covariance — fundamental to 
 
 1. **Dropping constants of integration** — they determine the particular solution.
 2. **Swapping order of integration in exact DEs** — check $\partial M/\partial y = \partial N/\partial x $ before concluding.
-3. **Forgetting the negative sign** in spring equation: $ F = -kx $ not $ F = kx$.
+3. **Forgetting the negative sign** in spring equation: $ F = -kx $ not $  F = kx$.
 4. **Treating ODE and PDE interchangeably** — they have different solution methods.
 5. **Misinterpreting the characteristic equation** — the sign of the discriminant determines solution form.
 

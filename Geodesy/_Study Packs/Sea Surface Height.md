@@ -52,7 +52,7 @@ The radar altimeter on a satellite transmits a microwave pulse downward and meas
 
 $ $ SSH_{\text{altimetry}} = h_{\text{orbit}} - \rho - \text{dry tropo} - \text{wet tropo} - \text{ionosphere} - \text{sea state bias (SSB)} + \text{solid Earth tide} + \text{ocean tide} $$
 
-### Key Corrections in Altimetry
+# ## Key Corrections in Altimetry
 
 | Correction | Source | Typical Magnitude |
 |------------|--------|-------------------|
@@ -210,7 +210,7 @@ $ $ SSH_{\text{equilibrium}} = N + MDT_{\text{equilibrium}} \approx N $$
 
 - Altimetric SSH: $\pm 2–4 \text{ cm} $ (along-track)
 
-- Geoid ($ N $) from EGM2008/GOCE: $\pm 5–10 \text{ cm} $ (global),$\pm 2–3 \text{ cm} $ (regional with local data)
+- Geoid ( $ N $) from EGM2008/GOCE: $\pm 5–10 \text{ cm} $ (global),$\pm 2–3 \text{ cm} $ (regional with local data)
 
 - MDT residual: $\sim 1–2 \text{ cm} $ (dominant error source for coastal zones)
 
@@ -253,7 +253,9 @@ $ $
 SSH(t) = \text{MSL} + \text{trend} \cdot t + \text{seasonal} + \text{residual}\text{trend} = \frac{\sum(t_i - \bar{t})(SSH_i - \overline{SSH})}{\sum(t_i - \bar{t})^2
 }
 
-$$### Sea Level Trend (Linear)$ $\text{MSL}(t) = a_0 + a_1 (t - t_0) + \varepsilon
+$$
+
+# ## Sea Level Trend (Linear) $ $\text{MSL}(t) = a_0 + a_1 (t - t_0) + \varepsilon
 
 $$
 
@@ -270,7 +272,7 @@ Typical values (Jason-3): $\sigma_{\text{orbit}} \approx 1.5 \text{ cm} $,$\sigm
 
 ### Geostrophic Current from SSH
 
-$ $ u = -\frac{g}{f}\frac{\partial SSH}{\partial y}, \quad v = \frac{g}{f}\frac{\partial SSH}{\partial x}$$---
+$ $  u = -\frac{g}{f}\frac{\partial SSH}{\partial y}, \quad v = \frac{g}{f}\frac{\partial SSH}{\partial x}$$---
 
 ## 🔗 Related Notes
 

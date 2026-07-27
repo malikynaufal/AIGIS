@@ -117,7 +117,7 @@ $$
 
 **Correlation coefficient** (Pearson's $ r $):
 
-$ $ r = \frac{\text{Cov}(X, Y)}{s_X s_Y}, \quad -1 \leq r \leq 1 $$-$ r = \pm 1 $: perfect linear relationship
+$ $  r = \frac{\text{Cov}(X, Y)}{s_X s_Y}, \quad -1 \leq r \leq 1 $ $-$  r = \pm 1 $: perfect linear relationship
 
 - $ r = 0 $: no linear relationship
 

@@ -29,7 +29,7 @@ Semester 4 covers specialized advanced techniques: digital photogrammetry, compu
 - Construction surveying techniques
 - Layout of horizontal and vertical curves:
 
- $$ x = R\sin\theta, \quad y = R(1-\cos\theta) \quad \text{(horizontal curve)} $ $ $ $ y = \frac{x^2}{2R} \quad \text{(vertical curve: parabola)}$$
+ $$ x = R\sin\theta, \quad y = R(1-\cos\theta) \quad \text{(horizontal curve)} $ $ $ $  y = \frac{x^2}{2R} \quad \text{(vertical curve: parabola)}$$
 
 - Tunnel and bridge surveying
 - Machine control and grade surveying

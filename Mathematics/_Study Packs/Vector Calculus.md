@@ -59,17 +59,17 @@ $ $\nabla f = \left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}
 
 $$
 
-### 2.2 Properties
+# ## 2.2 Properties
 
 1. **Direction**: Points toward maximum rate of increase
 2. **Magnitude**: Rate of increase in that direction
-3. **Perpendicular to level surfaces**: $\nabla f \cdot \mathbf{v} = 0 $ for tangent $\mathbf{v} $ 4. **Chain rule**: If $ f = f(\mathbf{r}(t)) $, then $\frac{df}{dt} = \nabla f \cdot \mathbf{r}'(t) $### 2.3 Gradient in Curvilinear Coordinates
+3. **Perpendicular to level surfaces**: $\nabla f \cdot \mathbf{v} = 0 $ for tangent $\mathbf{v} $ 4. **Chain rule**: If $  f = f(\mathbf{r}(t)) $, then $\frac{df}{dt} = \nabla f \cdot \mathbf{r}'(t) $### 2.3 Gradient in Curvilinear Coordinates
 
 **Spherical**
 
 $ $\nabla f = \frac{\partial f}{\partial r}\hat{\mathbf{r}} + \frac{1}{r}\frac{\partial f}{\partial \theta}\hat{\boldsymbol{\theta}} + \frac{1}{r\sin\theta}\frac{\partial f}{\partial \phi}\hat{\boldsymbol{\phi}} $$
 
-### 2.4 Worked Example
+# ## 2.4 Worked Example
 
 Find the gradient of $ f(x,y,z) = x^2yz + e^{xz} $ and evaluate at $ (1,2,0) $.
 
@@ -77,7 +77,7 @@ Find the gradient of $ f(x,y,z) = x^2yz + e^{xz} $ and evaluate at $ (1,2,0) $.
 
 $ $\frac{\partial f}{\partial x} = 2xyz + ze^{xz}, \\quad \frac{\partial f}{\partial y} = x^2z, \\quad \frac{\partial f}{\partial z} = x^2y + xe^{xz} $$
 
-At $ (1,2,0) $: $\nabla f = (0, 0, 3) $ The gradient points upward (positive $ z $), indicating maximum increase occurs in the $ z $-direction at this point.
+At $ (1,2,0) $: $\nabla f = (0, 0, 3) $ The gradient points upward (positive $  z $), indicating maximum increase occurs in the $  z $-direction at this point.
 
 ---
 
@@ -89,7 +89,7 @@ For a vector field $\mathbf{F} = (P, Q, R) $:
 
 $ $\nabla \cdot \mathbf{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z} $$
 
-### 3.2 Physical Meaning
+# ## 3.2 Physical Meaning
 
 - **Positive divergence**: Source (outflow exceeds inflow)
 
@@ -128,7 +128,7 @@ At origin: $\nabla \cdot \mathbf{F} = 0 $ (source-free at that point)
 
 $ $\nabla \times \mathbf{F} = \begin{vmatrix} \hat{\mathbf{i}} & \hat{\mathbf{j}} & \hat{\mathbf{k}} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ P & Q & R \end{vmatrix}= \left(\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}\right)\hat{\mathbf{i}} + \left(\frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}\right)\hat{\mathbf{j}} + \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\hat{\mathbf{k}} $$
 
-### 4.2 Physical Meaning
+# ## 4.2 Physical Meaning
 
 - **Nonzero curl**: Rotational/turbulent flow
 
@@ -155,10 +155,10 @@ Surface integral: $\iint_S 2\,dA = 2 \times 1 = 2 $ Line integral around unit sq
 
 - Bottom: $\int_0^1 (0, x, 0) \cdot (1,0,0)\,dx = 0 $- Right: $\int_0^1 (x, 1, 0) \cdot (0,1,0)\,dy = 1 $- Top: $\int_1^0 (y, y, 0) \cdot (-1,0,0)\,dy = \int_0^1 y\,dy = 0.5 $- Left: $\int_1^0 (-y, 0, 0) \cdot (0,-1,0)\,dy = 0 $ Wait — let me compute properly for counterclockwise path:
 
-Bottom: $ (x, 0) \to (x+\Delta x, 0) $: $\mathbf{F} \cdot \Delta\mathbf{r} = 0 $ Actually, parameterize correctly: $ C_1 $: $ (x, 0) $ for $ x \in [0,1] $: $\mathbf{F} = (0, x, 0) $, $ d\mathbf{r} = (1,0,0)dx $→ contribution $= 0 $
-$ C_2 $: $ (1, y) $ for $ y \in [0,1] $: $\mathbf{F} = (-y, 1, 0) $, $ d\mathbf{r} = (0,1,0)dy $→$= 1\cdot 1 = 1 $
-$ C_3 $: $ (x, 1) $ for $ x \in [1,0] $: $\mathbf{F} = (-1, x, 0) $, $ d\mathbf{r} = (-1,0,0)dx $→$= 1\cdot 1 = 1 $
-$ C_4 $: $ (0, y) $ for $ y \in [1,0] $: $\mathbf{F} = (-y, 0, 0) $, $ d\mathbf{r} = (0,-1,0)dy $→$= 0 $ Wait, let me redo: $ C_3 $: $ (x, 1) $ from $ x=1 $ to $ x=0 $: $\mathbf{F} = (-1, x, 0) $, $ d\mathbf{r} = (-1, 0, 0)\,dx $→$ (-1)(-1)\,dx = dx $→$\int_1^0 1\,dx = -1 $
+Bottom: $ (x, 0) \to (x+\Delta x, 0) $: $\mathbf{F} \cdot \Delta\mathbf{r} = 0 $ Actually, parameterize correctly: $ C_1 $: $ (x, 0) $ for $  x \in [0,1] $: $\mathbf{F} = (0, x, 0) $, $ d\mathbf{r} = (1,0,0)dx $→ contribution $= 0 $
+$ C_2 $: $ (1, y) $ for $  y \in [0,1] $: $\mathbf{F} = (-y, 1, 0) $, $ d\mathbf{r} = (0,1,0)dy $→$= 1\cdot 1 = 1 $
+$ C_3 $: $ (x, 1) $ for $  x \in [1,0] $: $\mathbf{F} = (-1, x, 0) $, $ d\mathbf{r} = (-1,0,0)dx $→$= 1\cdot 1 = 1 $
+$ C_4 $: $ (0, y) $ for $  y \in [1,0] $: $\mathbf{F} = (-y, 0, 0) $, $ d\mathbf{r} = (0,-1,0)dy $→$= 0 $ Wait, let me redo: $ C_3 $: $ (x, 1) $ from $ x=1 $ to $ x=0 $: $\mathbf{F} = (-1, x, 0) $, $ d\mathbf{r} = (-1, 0, 0)\,dx $→$ (-1)(-1)\,dx = dx $→$\int_1^0 1\,dx = -1 $
 $ C_4 $: $ (0, y) $ from $ y=1 $ to $ y=0 $: $\mathbf{F} = (-y, 0, 0) $, $ d\mathbf{r} = (0, -1, 0)\,dy $→$ 0\,dy = 0 $ Hmm, this is getting tangled. Let me just state the result.$\mathbf{F} = (-y, x, 0) $ is the classic rotational field.$\nabla \times \mathbf{F} = (0, 0, 2) $.
 
 **Green's theorem**: $\oint (-y\,dx + x\,dy) = \iint (1 - (-1))\,dA = 2 \times \text{Area} $.
@@ -174,13 +174,15 @@ For unit square: $\oint = 2 $, $\iint_S 2\,dA = 2 $. ✓
 $ $\int_C f\,ds = \int_a^b f(\mathbf{r}(t))|\mathbf{r}'(t)|\,d
 t
 
-$$### 5.2 Vector Line Integral $ $\int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b \mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\,dt
+$$
+
+# ## 5.2 Vector Line Integral $ $\int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b \mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\,dt
 
 $$
 
 This measures the component of $\mathbf{F} $ along the curve.
 
-### 5.3 Conservative Fields $\mathbf{F} $ is conservative if $\mathbf{F} = \nabla f $ for some potential $ f $.
+### 5.3 Conservative Fields $\mathbf{F} $ is conservative if $\mathbf{F} = \nabla f $ for some potential $  f $.
 
 **Equivalently**: $\nabla \times \mathbf{F} = \mathbf{0} $ (for simply connected domains).
 
@@ -203,14 +205,14 @@ $ $\iint_S f\,dS = \iint_D f(\mathbf{r}(u,v))|\mathbf{r}_u \times \mathbf{r}_v|\
 
 $$
 
-### 6.2 Vector Surface Integral (Flux
+# ## 6.2 Vector Surface Integral (Flux
 )
 
 $ $\iint_S \mathbf{F} \cdot d\mathbf{S} = \iint_D \mathbf{F} \cdot (\mathbf{r}_u \times \mathbf{r}_v)\,du\,dv
 
 $$
 
-### 6.3 Common Surfaces
+# ## 6.3 Common Surfaces
 
 **Sphere** of radius $ R $:
 
@@ -218,7 +220,7 @@ $ $\mathbf{r}(\theta,\phi) = (R\sin\phi\cos\theta, R\sin\phi\sin\theta, R\cos\ph
 
 $$
 
-$ d\mathbf{S} = R^2\sin\phi\,\hat{\mathbf{r}}\,d\theta\,d\phi $**Cylinder** of radius $ R $:
+$ d\mathbf{S} = R^2\sin\phi\,\hat{\mathbf{r}}\,d\theta\,d\phi $**Cylinder** of radius $  R $:
 
 $ $\mathbf{r}(\theta, z) = (R\cos\theta, R\sin\theta, z)
 
@@ -254,11 +256,11 @@ $$
 
 (symmetric limits kill all terms)
 
-Actually wait — this is only zero if the domain is symmetric. For the unit ball: $\iiint 2x\,dV = 0 $ by symmetry (odd function in $ x $ over symmetric domain), same for $ y, z $.
+Actually wait — this is only zero if the domain is symmetric. For the unit ball: $\iiint 2x\,dV = 0 $ by symmetry (odd function in $  x $ over symmetric domain), same for $ y, z $.
 
 So total $= 0 $. The net flux through the unit sphere is zero.
 
-**Direct computation**: $\mathbf{F} = \hat{\mathbf{r}} r^2 $ on the sphere,$ r = 1 $, so $\mathbf{F} \cdot \hat{\mathbf{r}} = 1 $.
+**Direct computation**: $\mathbf{F} = \hat{\mathbf{r}} r^2 $ on the sphere,$  r = 1 $, so $\mathbf{F} \cdot \hat{\mathbf{r}} = 1 $.
 
 $\iint_S 1\,dS = 4\pi $... Hmm, this contradicts!
 
@@ -311,7 +313,7 @@ Find the divergence and curl of $\mathbf{F} = (yz, xz, xy) $.
 This is a conservative field with potential $ f = xyz $.
 
 ### Problem 2
-Evaluate $\int_C \mathbf{F} \cdot d\mathbf{r} $ where $\mathbf{F} = (y, -x, 0) $ along the helix $\mathbf{r}(t) = (\cos t, \sin t, t) $, $ t \in [0, 2\pi] $.
+Evaluate $\int_C \mathbf{F} \cdot d\mathbf{r} $ where $\mathbf{F} = (y, -x, 0) $ along the helix $\mathbf{r}(t) = (\cos t, \sin t, t) $, $  t \in [0, 2\pi] $.
 
 **Solution**:
 $\mathbf{r}'(t) = (-\sin t, \cos t, 1) $
@@ -321,7 +323,7 @@ $ $\int_0^{2\pi} (\sin t, -\cos t, 0) \cdot (-\sin t, \cos t, 1)\,dt = \int_0^{2
 
 $$
 
-### Problem 3
+# ## Problem 3
 Use the divergence theorem to find the flux of $\mathbf{F} = (x, y, z) $ through the unit cube $ [0,1]^3 $.
 
 **Solution**:
@@ -331,8 +333,8 @@ $ $\iiint_V 3\,dV = 3 \times 1 = 3
 
 $$
 
-### Problem 4
-Verify that $\nabla \times (\nabla f) = \mathbf{0} $ for $ f = x^2y + yz^2 $.
+# ## Problem 4
+Verify that $\nabla \times (\nabla f) = \mathbf{0} $ for $  f = x^2y + yz^2 $.
 
 **Solution**:
 $\nabla f = (2xy, x^2+z^2, 2yz) $

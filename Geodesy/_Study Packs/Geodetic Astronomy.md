@@ -54,7 +54,7 @@ The celestial sphere is an imaginary sphere of infinite radius centred on the ob
 \cos\delta\sin\alpha &= \cos h \cos A
 \end{aligned} $$
 
-where $ A $= azimuth,$ h $ = altitude,$\alpha $= right ascension,$\delta $= declination,$\varphi $= latitude.
+where $ A $= azimuth,$  h $ = altitude,$\alpha $= right ascension,$\delta $= declination,$\varphi $= latitude.
 
 ---
 
@@ -111,7 +111,7 @@ $ $\varphi^* = h + \epsilon \cos H
 
 $$
 
-where $ h $= measured altitude of Polaris,$\epsilon \approx 0.6696°$ (Polaris' angular distance from the pole), and $ H $= hour angle (from ephemeris).
+where $ h $= measured altitude of Polaris,$\epsilon \approx 0.6696°$ (Polaris' angular distance from the pole), and $  H $= hour angle (from ephemeris).
 
 ### 4.4. Time Determination (Longitude
 )
@@ -150,9 +150,9 @@ where $\varphi, \lambda $ are the geodetic coordinates from GNSS/leveling.
 
 ## 6. Worked Example — Determining Latitude from Polaris
 
-**Observed:** Polaris at transit (hour angle $ H = 0 $), altitude $ h = 45° 32' 15.4″$.
+**Observed:** Polaris at transit (hour angle $ H = 0 $), altitude $  h = 45° 32' 15.4″$.
 
-**Given:** $\epsilon = 0° 40' 16.6″$ (Polaris angular distance from pole),$ H = 0 $.
+**Given:** $\epsilon = 0° 40' 16.6″$ (Polaris angular distance from pole),$  H = 0 $.
 
 $ $\varphi^* = h + \epsilon \cos H = 45° 32' 15.4″ + 0° 40' 16.6″ = 46° 12' 32.0
 ″

@@ -52,21 +52,21 @@ If $ hi: G o H $ is a group homomorphism: $ $ G/\kerhi \cong ext{im}hi $ $
 
 ### 3. Sylow Theorems
 
-For $|G| = p^n \cdot m $ where $ p \nmid m $:
+For $|G| = p^n \cdot m $ where $  p \nmid m $:
 
 1. **Existence:** There exists a Sylow $ p $-subgroup of order $ p^n $
 2. **Conjugacy:** All Sylow $ p $-subgroups are conjugate
-3. **Count:** The number $ n_p $ of Sylow $ p $-subgroups satisfies $ n_p \equiv 1 mod{p} $ and $ n_p \mid m $
+3. **Count:** The number $ n_p $ of Sylow $  p $-subgroups satisfies $ n_p \equiv 1 mod{p} $ and $ n_p \mid m $
 
 ### 4. Fundamental Theorem of Finite Abelian Groups
 
 Every finite abelian group is a direct product of cyclic groups of prime-power order:
 
-$ $ G \cong \mathbb{Z}_{p_1^{k_1}} imes \mathbb{Z}_{p_2^{k_2}} imes \cdots imes \mathbb{Z}_{p_r^{k_r}}$ $
+$ $  G \cong \mathbb{Z}_{p_1^{k_1}} imes \mathbb{Z}_{p_2^{k_2}} imes \cdots imes \mathbb{Z}_{p_r^{k_r}}$ $
 
 ### 5. Fundamental Theorem of Galois Theory
 
-For a Galois extension $ E/K $ with Galois group $ G = ext{Gal}(E/K) $:
+For a Galois extension $ E/K $ with Galois group $  G = ext{Gal}(E/K) $:
 - There is a bijection between subgroups of $ G $ and intermediate fields
 - $ [E:F] = |ext{Gal}(E/F)|$ and $ [F:K] = [G:ext{Gal}(E/F)] $
 
@@ -83,15 +83,15 @@ $ (G, \cdot) $ is a group if:
 
 | Group | Operation | Order | Abelian? |
 |-------|-----------|-------|---------|
-| $\mathbb{Z}_n $| Addition mod $ n $|$ n $ | Yes |
-| $ S_n $ | Composition | $ n!$ | No ($ n \geq 3 $) |
-| $ D_n $ | Symmetries of $ n $-gon | $ 2n $ | No ($ n \geq 3 $) |
+| $\mathbb{Z}_n $| Addition mod $  n $|$  n $ | Yes |
+| $ S_n $ | Composition | $ n!$ | No ( $  n \geq 3 $) |
+| $ D_n $ | Symmetries of $  n $-gon | $ 2n $ | No ( $  n \geq 3 $) |
 | $ GL(n, \mathbb{R}) $ | Matrix mult. | $\infty $ | No |
 | $\mathbb{Z} $| Addition |$\infty $ | Yes |
 
 ### Cyclic Groups
 
-A group $ G $ is **cyclic** if $ G = \langle g \rangle = \{g^n : n \in \mathbb{Z}\} $.
+A group $ G $ is **cyclic** if $  G = \langle g \rangle = \{g^n : n \in \mathbb{Z}\} $.
 
 **Classification:** Every cyclic group of order $ n $ is isomorphic to $\mathbb{Z}_n $.
 
@@ -125,7 +125,7 @@ $ I \subseteq R $ is an ideal if:
 
 $\mathbb{F}_{p^n} $ exists and is unique for every prime power $ p^n $.
 
-**Construction:** $\mathbb{F}_{p^n} = \mathbb{F}_p[x]/\langle f(x) \rangle $ where $ f $ is irreducible of degree $ n $.
+**Construction:** $\mathbb{F}_{p^n} = \mathbb{F}_p[x]/\langle f(x) \rangle $ where $  f $ is irreducible of degree $  n $.
 
 ### Applications
 
@@ -135,7 +135,7 @@ $\mathbb{F}_{p^n} $ exists and is unique for every prime power $ p^n $.
 
 ### RSA
 
-1. Choose primes $ p, q $, compute $ N = pq $, $ hi(N) = (p-1)(q-1) $ 2. Choose $ e $ with $\gcd(e, hi(N)) = 1 $ 3. Compute $ d = e^{-1} mod{hi(N)} $ 4. **Encrypt:**$ c = m^e mod{N} $ 5. **Decrypt:**$ m = c^d mod{N} $
+1. Choose primes $ p, q $, compute $  N = pq $, $ hi(N) = (p-1)(q-1) $ 2. Choose $  e $ with $\gcd(e, hi(N)) = 1 $ 3. Compute $  d = e^{-1} mod{hi(N)} $ 4. **Encrypt:**$  c = m^e mod{N} $ 5. **Decrypt:**$  m = c^d mod{N} $
 
 ### Elliptic Curve Cryptography
 
@@ -156,7 +156,7 @@ Since $ S_4 $ has more than one subgroup of order 8 (e.g., $ D_4 $ embedded in d
 
 ## 🎯 Practice Problems
 
-1. **Groups:** Prove that every group of order $ pq $ ($ p < q $ primes) has a normal Sylow subgroup.
+1. **Groups:** Prove that every group of order $ pq $ ( $  p < q $ primes) has a normal Sylow subgroup.
 2. **Rings:** Show that $\mathbb{Z}[\sqrt{-5}] $ is not a UFD.
 3. **Fields:** Construct $\mathbb{F}_{16} $ explicitly.
 4. **Galois:** Find the Galois group of $ x^4 - 2 $ over $\mathbb{Q} $.

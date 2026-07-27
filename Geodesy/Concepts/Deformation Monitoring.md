@@ -79,7 +79,9 @@ where $\mathbf{r}_{ref} $ are stable reference stations and $\mathbf{T}_{plate} 
 
 $ $\hat{v} = \frac{\sum_{i=1}^{n} (t_i - \bar{t})(r_i - \bar{r})}{\sum_{i=1}^{n} (t_i - \bar{t})^2}
 
-$$### Confidence Interval $ $\hat{v} \pm t_{\alpha/2, n-2} \cdot \frac{s_v}{\sqrt{n}}
+$$
+
+# ## Confidence Interval $ $\hat{v} \pm t_{\alpha/2, n-2} \cdot \frac{s_v}{\sqrt{n}}
 
 $$
 

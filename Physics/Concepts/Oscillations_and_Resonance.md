@@ -25,7 +25,7 @@ $$ \frac{d^2x}{dt^2} + \omega_0^2 x =
 
 ### Energy
 
-- Kinetic: $ K = \frac{1}{2}mv^2 = \frac{1}{2}m\omega_0^2 A^2 \sin^2(\omega_0 t + \phi) $- Potential: $ U = \frac{1}{2}kx^2 = \frac{1}{2}m\omega_0^2 A^2 \cos^2(\omega_0 t + \phi) $- Total: $ E = \frac{1}{2}m\omega_0^2 A^2 $ (constant)
+- Kinetic: $ K = \frac{1}{2}mv^2 = \frac{1}{2}m\omega_0^2 A^2 \sin^2(\omega_0 t + \phi) $- Potential: $  U = \frac{1}{2}kx^2 = \frac{1}{2}m\omega_0^2 A^2 \cos^2(\omega_0 t + \phi) $- Total: $  E = \frac{1}{2}m\omega_0^2 A^2 $ (constant)
 
 ---
 
@@ -35,7 +35,7 @@ $$ \frac{d^2x}{dt^2} + \omega_0^2 x =
 
 $ $ m\frac{d^2x}{dt^2} + b\frac{dx}{dt} + kx = 0 $$
 
-### Underdamped ($ b^2 < 4mk $, i.e., $ \gamma < \omega_0 $)
+# ## Underdamped ( $ b^2 < 4mk $, i.e., $ \gamma < \omega_0 $)
 
 $ $ x(t) = A e^{-\gamma t}\cos(\omega_d t + \phi) $$
 
@@ -44,17 +44,17 @@ where:
 -$ \omega_d = \sqrt{\omega_0^2 - \gamma^2} $ (damped frequency)
 -$ \omega_d < \omega_0 $ always
 
-### Critically Damped ($ b^2 = 4mk $)
+### Critically Damped ( $ b^2 = 4mk $)
 Fastest return to equilibrium without oscillation.
 
 $ $ x(t) = (A + Bt)e^{-\gamma t} $$
 
-### Overdamped ($ b^2 > 4mk $)
+# ## Overdamped ( $ b^2 > 4mk $)
 Slow exponential return, no oscillation.
 
 ### Quality Factor $ Q $
 
-$ Q = \frac{\omega_0}{2\gamma} = \frac{\omega_0 m}{b} $ Higher $ Q $→ less damping → more oscillations before decay.
+$ Q = \frac{\omega_0}{2\gamma} = \frac{\omega_0 m}{b} $ Higher $  Q $→ less damping → more oscillations before decay.
 
 | $ Q $ Value | Description |
 |-----------|-------------|
@@ -72,29 +72,29 @@ $ Q = \frac{\omega_0}{2\gamma} = \frac{\omega_0 m}{b} $ Higher $ Q $→ less dam
 
 $ $ m\frac{d^2x}{dt^2} + b\frac{dx}{dt} + kx = F_0\cos(\omega t) $$
 
-### Ste-State Solutio
+# ## Ste-State Solutio
 n
 
 $ $ x(t) = A(\omega)\cos(\omega t - \delta) $$
 
-### Amplitude Respons
+# ## Amplitude Respons
 e
 
 $ $ A(\omega) = \frac{F_0/m}{\sqrt{(\omega_0^2 - \omega^2)^2 + (2\gamma\omega)^2}} $$
 
-### Phase Respons
+# ## Phase Respons
 e
 
 $ $ \tan\delta = \frac{2\gamma\omega}{\omega_0^2 - \omega^2} $$
 
-### Resonance
+# ## Resonance
 Maximum amplitude at:
 
 $ $ \omega_{\text{res}} = \sqrt{\omega_0^2 - 2\gamma^2} \quad \text{(amplitude resonance)} $$
 
-For small damping ($\gamma \ll \omega_0 $): $ \omega_{\text{res}} \approx \omega_0 $ Maximum amplitude at resonance $ A_{\text{max}} = \frac{F_0}{2\gamma m\omega_0} = \frac{Q \cdot F_0}{m\omega_0^2} $$$
+For small damping ( $\gamma \ll \omega_0 $): $ \omega_{\text{res}} \approx \omega_0 $ Maximum amplitude at resonance $ A_{\text{max}} = \frac{F_0}{2\gamma m\omega_0} = \frac{Q \cdot F_0}{m\omega_0^2} $$$
 
-### Power Absorptio
+# ## Power Absorptio
 n
 
 $ $ P(\omega) = \frac{F_0^2}{2b}\frac{\gamma^2}{\gamma^2 + (\omega-\omega_0)^2} \quad \text{(Lorentzian, near resonance)} $$
@@ -107,7 +107,7 @@ Full width at half-maximum (FWHM): $ \Delta\omega = 2\gamma = \omega_0/Q $---
 
 $ m_1\ddot{x}_1 = -k_1 x_1 - k_{12}(x_1 - x_2)m_2\ddot{x}_2 = -k_2 x_2 + k_{12}(x_1 - x_2) $$$
 
-### Normal Modes
+# ## Normal Modes
 Solutions are superpositions of normal modes
 
 $ x_i(t) = A_i e^{i\omega_\alpha t + \phi_\alpha} $ For $ m_1 = m_2 = m $ and $ k_1 = k_2 = k $:
@@ -129,9 +129,9 @@ $ x_i(t) = A_i e^{i\omega_\alpha t + \phi_\alpha} $ For $ m_1 = m_2 = m $ and $ 
 | Resonance of GNSS satellites | Orbital resonance |
 
 ### Everyday Examples
-| System | $ \omega_0 $ | Typical $ Q $ |
+| System | $ \omega_0 $ | Typical $  Q $ |
 |--------|-----------|-------------|
-| Clock pendulum | $ 2\pi/1 $ s $^{-1} $ | $ 10^3 $ |
+| Clock pendulum | $ 2\pi/1 $  s $^{-1} $ | $ 10^3 $ |
 | Guitar string | $ 2\pi f $ (100-1000 Hz) | $ 10^2-10^3 $ |
 | LC circuit | $ 1/\sqrt{LC} $ | $ 10^2-10^4 $ |
 | Quartz crystal | $ 2\pi \times 32768 $ Hz | $ 10^4-10^5 $ |
@@ -151,7 +151,7 @@ $ x_i(t) = A_i e^{i\omega_\alpha t + \phi_\alpha} $ For $ m_1 = m_2 = m $ and $ 
 ---
 
 ## Study Problems
-1. A 2 kg mass on a spring ( $ k = 200 $ N/m) has damping coefficient $ b = 2 $ N·s/m. Find $ \omega_0 $, $ \gamma $, $ \omega_d $, and $ Q $.
+1. A 2 kg mass on a spring ( $ k = 200 $ N/m) has damping coefficient $  b = 2 $ N·s/m. Find $ \omega_0 $, $ \gamma $, $ \omega_d $, and $  Q $.
 2. A driven oscillator has $ Q = 50 $, natural frequency 100 Hz. At what frequency range (FWHM) does the amplitude exceed half-maximum?
 3. Show that the average power dissipated equals the average power supplied at resonance.
 4. Two coupled pendulums (equal mass, connected by spring). Find normal mode frequencies if $ k_{12}/k = 0.1 $.

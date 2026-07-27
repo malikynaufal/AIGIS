@@ -27,11 +27,11 @@ where $\Theta $ is the parameter space.
 
 ### 1.2 Examples
 
-- Bernoulli($ p $): $\Theta = [0,1] $
+- Bernoulli( $ p $): $\Theta = [0,1] $
 
-- Normal($\mu, \sigma^2 $): $\Theta = \mathbb{R} \times \mathbb{R}^+$
+- Normal( $\mu, \sigma^2 $): $\Theta = \mathbb{R} \times \mathbb{R}^+$
 
-- Poisson($\lambda $): $\Theta = (0, \infty) $### 1.3 Random Sample $ X_1, \ldots, X_n $ is a random sample from $ P_\theta $ if i.i.d. with $ X_i \sim P_\theta $.
+- Poisson( $\lambda $): $\Theta = (0, \infty) $### 1.3 Random Sample $ X_1, \ldots, X_n $ is a random sample from $ P_\theta $ if i.i.d. with $ X_i \sim P_\theta $.
 
 ---
 
@@ -39,19 +39,19 @@ where $\Theta $ is the parameter space.
 
 ### 2.1 Definition
 
-$ T(X_1, \ldots, X_n) $ is a **sufficient statistic** for $\theta $ if the conditional distribution of $ (X_1, \ldots, X_n) $ given $ T $ does not depend on $\theta $.
+$ T(X_1, \ldots, X_n) $ is a **sufficient statistic** for $\theta $ if the conditional distribution of $ (X_1, \ldots, X_n) $ given $  T $ does not depend on $\theta $.
 
 ### 2.2 Factorization Theorem
 
 $ T $ is sufficient for $\theta $ $\\iff $ the likelihood factors as $ $ L(\theta; \mathbf{x}) = g(T(\mathbf{x}), \theta) \cdot h(\mathbf{x})$$
 
-where $ g $ depends on $\theta $ only through $ T $, and $ h $ does not depend on $\theta $.
+where $ g $ depends on $\theta $ only through $  T $, and $  h $ does not depend on $\theta $.
 
 ### 2.3 Examples
 
-**Normal $ N(\mu, 1) $**: Sufficient for $\mu $ is $ T = \bar{X} $ (sample mean).
+**Normal $ N(\mu, 1) $**: Sufficient for $\mu $ is $  T = \bar{X} $ (sample mean).
 
-**Binomial $ (n, p) $**: Sufficient for $ p $ is $ T = \sum X_i $ (total successes).
+**Binomial $ (n, p) $**: Sufficient for $  p $ is $  T = \sum X_i $ (total successes).
 
 ### 2.4 Minimal Sufficiency $ T $ is **minimal sufficient** if it is a function of every other sufficient statistic.
 
@@ -59,7 +59,7 @@ where $ g $ depends on $\theta $ only through $ T $, and $ h $ does not depend o
 
 The exponential family has density
 
-$ $ f(x|\theta) = h(x)\exp\left(\sum_{i=1}^k \eta_i(\theta)T_i(x) - A(\theta)\right)$$**Theorem**: $\sum_{i=1}^k T_i(X_i) $ is sufficient for $\theta $.
+$ $ f(x|\theta) = h(x)\exp\left(\sum_{i=1}^k \eta_i(\theta)T_i(x) - A(\theta)\right)$ $**Theorem**: $\sum_{i=1}^k T_i(X_i) $ is sufficient for $\theta $.
 
 ---
 
@@ -77,7 +77,9 @@ Equivalently, maximize the log-likelihood: $ $
 \\ell(\theta) = \sum_{i=1}^n \log f(x_i|\theta
 )
 
-$$ ### 3.2 Score Function $ $ S(\theta) = \frac{\partial \\ell}{\partial \theta}$$
+$$
+
+# ## 3.2 Score Function $ $ S(\theta) = \frac{\partial \\ell}{\partial \theta}$$
 
 Set $ S(\theta) = 0 $ for MLE.
 
@@ -89,9 +91,9 @@ $ $\\ell(\mu,\sigma^2) = -\frac{n}{2}\log(2\pi) - n\log\sigma - \frac{1}{2\sigma
 
 $$
 
-### 3.4 Invariance Property
+# ## 3.4 Invariance Property
 
-If $\hat{\theta} $ is MLE of $\theta $ and $ g $ is a function, then $ g(\hat{\theta}) $ is MLE of $ g(\theta) $.
+If $\hat{\theta} $ is MLE of $\theta $ and $  g $ is a function, then $ g(\hat{\theta}) $ is MLE of $ g(\theta) $.
 
 ### 3.5 Consistency and Asymptotic Normality
 
@@ -118,13 +120,13 @@ For sample of size $ n $: $ I_n(\theta) = nI(\theta) $.
 
 $ $ E[S(\theta)] = 0\text{Var}(S(\theta)) = I(\theta)$$
 
-### 4.3 Examples
+# ## 4.3 Examples
 
 **Normal $ N(\mu, \sigma^2) $**: $ I(\mu) = 1/\sigma^2 $, $ I(\sigma^2) = 1/(2\sigma^4) $
 
-**Bernoulli($ p $)**: $ I(p) = 1/[p(1-p)] $
+**Bernoulli( $ p $)**: $ I(p) = 1/[p(1-p)] $
 
-**Poisson($\lambda $)**: $ I(\lambda) = 1/\lambda $### 4.4 Information Inequality
+**Poisson( $\lambda $)**: $ I(\lambda) = 1/\lambda $### 4.4 Information Inequality
 
 For any unbiased estimator $\hat{\theta} $:
 
@@ -138,7 +140,7 @@ For any unbiased estimator $ T $ of $\tau(\theta) $:
 
 $ $\text{Var}(T) \geq \frac{[\tau'(\theta)]^2}{I(\theta)} $$
 
-### 5.2 Multivariate Case
+# ## 5.2 Multivariate Case
 
 For $\tau(\theta) \in \mathbb{R}^d $, $\theta \in \mathbb{R}^k $:
 
@@ -146,7 +148,7 @@ $ $\text{Var}(\mathbf{T}) \geq \nabla\tau^T I^{-1}(\theta)\nabla\tau
 
 $$
 
-### 5.3 Efficient Estimator
+# ## 5.3 Efficient Estimator
 
 An estimator $\hat{\theta} $ is **efficient** if it achieves the Cramér-Rao bound $ $\text{Var}(\hat{\theta}) = \frac{1}{I(\theta)} $$
 
@@ -191,20 +193,22 @@ For $\sigma^2 $ known, testing $\mu = \mu_0 $:
 
 The LRT is equivalent to the z-test:
 
-$ $
+$ $ 
 
 Z = \frac{\bar{X}-\mu_0}{\sigma/\sqrt{n}
 }
 
-$$### 6.4 Power Function $ $\beta(\theta) = P(\text{reject } H_0|\theta)
+$$
+
+# ## 6.4 Power Function $ $\beta(\theta) = P(\text{reject } H_0|\theta)
 
 $$
 
 | Type | Probability |
 |------|------------|
-| Type I error ($\alpha $) | $ P(\text{reject } H_0|H_0 \text{ true}) $ |
-| Type II error ($\beta $) | $ P(\text{fail to reject}|H_1 \text{ true}) $ |
-| Power ($ 1-\beta $) | $ P(\text{reject }|H_1 \text{ true}) $ |
+| Type I error ( $\alpha $) | $ P(\text{reject } H_0|H_0 \text{ true}) $ |
+| Type II error ( $\beta $) | $ P(\text{fail to reject}|H_1 \text{ true}) $ |
+| Power ( $ 1-\beta $) | $ P(\text{reject }|H_1 \text{ true}) $ |
 
 ### 6.5 UMP Tests
 
@@ -221,7 +225,7 @@ r
 
 $ $ p(\theta|\mathbf{x}) = \frac{L(\theta;\mathbf{x})p(\theta)}{\int L(\theta;\mathbf{x})p(\theta)\,d\theta}$$
 
-### 7.2 Bayesian Point Estimation
+# ## 7.2 Bayesian Point Estimation
 
 | Loss | Estimator |
 |------|-----------|
@@ -236,8 +240,8 @@ $ $ p(\theta|\mathbf{x}) = \frac{L(\theta;\mathbf{x})p(\theta)}{\int L(\theta;\m
 | Likelihood | Conjugate Prior | Posterior |
 |-----------|----------------|-----------|
 | Bernoulli | Beta | Beta |
-| Normal($\mu $, known) | Normal | Normal |
-| Normal($\sigma^2 $, known) | Normal | Normal |
+| Normal( $\mu $, known) | Normal | Normal |
+| Normal( $\sigma^2 $, known) | Normal | Normal |
 | Poisson | Gamma | Gamma |
 
 ---
@@ -248,12 +252,14 @@ $ $ p(\theta|\mathbf{x}) = \frac{L(\theta;\mathbf{x})p(\theta)}{\int L(\theta;\m
 
 For $\bar{X} \sim N(\mu, \sigma^2/n) $:
 
-$ $\bar{X} \pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}} $$### 8.2 $ t $-Interval (unknown $\sigma $)
+$ $\bar{X} \pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}} $ $### 8.2 $  t $-Interval (unknown $\sigma $)
 
 $ $\bar{X} \pm t_{n-1,\alpha/2}\frac{S}{\sqrt{n}
 }
 
-$$### 8.3 Wilson Score Interval (Binomial)$ $\frac{\hat{p}+\frac{z^2}{2n}\pm z\sqrt{\frac{\hat{p}(1-\hat{p})}{n}+\frac{z^2}{4n^2}}}{1+\frac{z^2}{n}}
+$$
+
+# ## 8.3 Wilson Score Interval (Binomial) $ $\frac{\hat{p}+\frac{z^2}{2n}\pm z\sqrt{\frac{\hat{p}(1-\hat{p})}{n}+\frac{z^2}{4n^2}}}{1+\frac{z^2}{n}}
 
 $$
 
@@ -270,7 +276,7 @@ Find the MLE of $\theta $ for $ f(x) = \theta x^{\theta-1} $, $ 0 < x < 1 $, $\t
 
 $ $\\ell(\theta) = n\log\theta + (\theta-1)\sum\log x_i\frac{d\\ell}{d\theta} = \frac{n}{\theta} + \sum\log x_i = 0\hat{\theta} = \frac{-n}{\sum\log x_i} $$
 
-### Problem 2
+# ## Problem 2
 Show that $\bar{X} $ is sufficient for $\mu $ when $ X_i \sim N(\mu, \sigma^2) $ with $\sigma^2 $ known.
 
 **Solution**: By factorization theorem:
@@ -280,13 +286,13 @@ $ $ L(\mu) = \prod\frac{1}{\sqrt{2\pi\sigma^2}}e^{-(x_i-\mu)^2/(2\sigma^2)} = \f
 $ g(\bar{x},\mu) = \exp(-n(\bar{x}-\mu)^2/(2\sigma^2)) $ and $ h(\mathbf{x}) = \exp(-\sum x_i^2/(2\sigma^2)) $.
 
 $ T = \bar{X} $ is sufficient.$\\blacksquare $### Problem 3
-Compute the Cramér-Rao lower bound for $ p $ in Bernoulli($ p $).
+Compute the Cramér-Rao lower bound for $ p $ in Bernoulli( $  p $).
 
 **Solution**: $ I(p) = \frac{1}{p(1-p)} $.
 
 For $\tau(p) = p $: CRLB $= \frac{1}{I(p)} = p(1-p) $.
 
-The sample proportion $\hat{p}=\bar{X} $ achieves this: $\text{Var}(\bar{X})=p(1-p)/n $→ CRLB for $ n $ observations is $ p(1-p)/n $. ✓
+The sample proportion $\hat{p}=\bar{X} $ achieves this: $\text{Var}(\bar{X})=p(1-p)/n $→ CRLB for $  n $ observations is $ p(1-p)/n $. ✓
 
 ### Problem 4
 Derive the likelihood ratio test for $ H_0: \mu=\mu_0 $ vs $ H_1: \mu=\mu_1 $ for $ X_i \sim N(\mu, \sigma^2) $ with $\sigma^2 $ known.

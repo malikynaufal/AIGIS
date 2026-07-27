@@ -105,7 +105,7 @@ $$**Parameters** (at reference epoch $ t_0 $):
 
 $ $\begin{pmatrix} X_B \\ Y_B \\ Z_B \end{pmatrix} = \begin{pmatrix} T_x \\ T_y \\ T_z \end{pmatrix} + (1+s) \begin{pmatrix} 1 & -R_z & R_y \\ R_z & 1 & -R_x \\ -R_y & R_x & 1 \end{pmatrix} \begin{pmatrix} X_A \\ Y_A \\ Z_A \end{pmatrix} $$
 
-### ITRF Combination Formula (IERS Standard)
+# ## ITRF Combination Formula (IERS Standard)
 For transformation from ITRF2014 → ITRF2020 (example values from IERS):
 
 | Parameter | Value (mm, ppb, mas) | Rate (mm/yr, ppb/yr, mas/yr) |
@@ -219,7 +219,7 @@ For satellite system $ s $ (GPS, Galileo, GLONASS, BeiDou):
 
 **Pseudorange**
 
-$ $ P^s = \rho^s + c(\delta t_r - \delta t^{s}) + I^s + T^s + \epsilon_P^s $$**Carrier Phase**$ $\Phi^s = \rho^s + c(\delta t_r - \delta t^{s}) - I^s + T^s + \lambda N^s + \epsilon_\Phi^s
+$ $ P^s = \rho^s + c(\delta t_r - \delta t^{s}) + I^s + T^s + \epsilon_P^s $ $**Carrier Phase**$ $\Phi^s = \rho^s + c(\delta t_r - \delta t^{s}) - I^s + T^s + \lambda N^s + \epsilon_\Phi^s
 
 $$
 

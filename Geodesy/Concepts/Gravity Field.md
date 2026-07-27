@@ -9,7 +9,7 @@ created: 2026-07-12
 The **gravity field** of Earth is the combined effect of gravitational attraction and the centrifugal force arising from Earth's daily rotation. Every point in and around the Earth experiences a net acceleration $\vec{g} $ that defines the direction of "down" at that location and shapes the equipotential surfaces upon which geodesy is built
 .
 
-$ $\vec{g} = \vec{g}_{\text{grav}} + \vec{g}_{\text{centrifugal}} $$**Medan gaya berat** (gravity field) is the vector field $\vec{g}(\mathbf{r}) $ that varies with position both in magnitude and direction.
+$ $\vec{g} = \vec{g}_{\text{grav}} + \vec{g}_{\text{centrifugal}} $ $**Medan gaya berat** (gravity field) is the vector field $\vec{g}(\mathbf{r}) $ that varies with position both in magnitude and direction.
 
 ## Mathematical Representation: Spherical Harmonics
 
@@ -40,9 +40,9 @@ $ $ W(r, \theta, \lambda) = \frac{GM}{r} \sum_{n=0}^{\infty} \sum_{m=0}^{n} \lef
 
 ## The Gravity Potential & Its Properties
 
-The total gravity potential $ W $ combines the attractive Newtonian potential $ V $ and the centrifugal potential $\Phi $:
+The total gravity potential $ W $ combines the attractive Newtonian potential $  V $ and the centrifugal potential $\Phi $:
 
-$ $ W = V + \Phi, \qquad \Phi = -\frac{1}{2} \omega^{2} r^{2} \cos^{2} \theta $$
+$ $  W = V + \Phi, \qquad \Phi = -\frac{1}{2} \omega^{2} r^{2} \cos^{2} \theta $$
 
 where $\omega $ is Earth's angular velocity (rotasi Bumi). Key properties:
 
@@ -72,7 +72,7 @@ where $ g_{\text{Fay}} \approx 0{.}3086 \;\text{mGal/m} $ is the free-air gradie
 
 $ $\Delta g_{\text{B}} = \Delta g_{\text{FA}} - g_{\text{Bouguer}}; \quad g_{\text{Bouguer}} = 2\pi G \rho h \approx 0{.}0419 \;\rho h \;\text{mGal} $$
 
-with $\rho $ in g/cm³ and $ h $ in metres.
+with $\rho $ in g/cm³ and $  h $ in metres.
 
 - **Isostatic anomaly**: Removes isostatic compensation (keseimbangan isostatik) as well — used to study deep crustal structure.
 
@@ -96,9 +96,9 @@ $$**Practical modern approach**: Use a truncated spherical harmonic expansion (E
 
 $ $ N(\phi, \lambda) = \frac{GM}{\gamma a} \sum_{n=2}^{N_{\max}} \sum_{m=0}^{n} \left( \frac{a}{r} \right)^{n+1} \frac{1}{\gamma} \left( C_{nm} \cos m\lambda + S_{nm} \sin m\lambda \right) P_{nm}(\cos \phi) \cdot \frac{n+1}{n}$$
 
-The **relationship between ellipsoidal height**$ h $, **orthometric height**$ H $, and **geoid height**$ N $ is:
+The **relationship between ellipsoidal height**$ h $, **orthometric height**$  H $, and **geoid height**$  N $ is:
 
-$ $ h = H + N $$
+$ $  h = H + N $$
 
 This equation is one of the most important in physical geodesy, allowing conversion between GNSS-derived ellipsoidal heights and traditional levelling-derived orthometric heights.
 

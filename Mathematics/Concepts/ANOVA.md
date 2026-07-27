@@ -15,7 +15,7 @@ created: 2026-07-27
 
 ### One-Way ANOVA (ANOVA Satu Arah)
 
-Tests whether the means of $ k \geq 3 $ groups (kelompok/perlakuan) differ across a single factor (faktor tunggal). Let $ n_i $ be the sample size and $\bar{y}_i $ the mean of group $ i $, with $ N = \sum n_i $ the grand total, and $\bar{y}_{..} $ the overall mean.
+Tests whether the means of $ k \geq 3 $ groups (kelompok/perlakuan) differ across a single factor (faktor tunggal). Let $ n_i $ be the sample size and $\bar{y}_i $ the mean of group $  i $, with $  N = \sum n_i $ the grand total, and $\bar{y}_{..} $ the overall mean.
 
 **Sum of Squares** (Jumlah Kuadrat):
 
@@ -33,11 +33,11 @@ MS_{\text{Between}} = \frac{SS_{\text{Between}}}{k - 1}, \qquad MS_{\text{Within
 
 $$**F-statistic**:
 
-$ $ F = \frac{MS_{\text{Between}}}{MS_{\text{Within}}}$$
+$ $  F = \frac{MS_{\text{Between}}}{MS_{\text{Within}}}$$
 
-Under $ H_0 $ (all $\mu_i $ equal),$ F \sim F(k-1, N-k) $— an **F-distribution** derajat kebebasan $ (k-1, N-k) $.
+Under $ H_0 $ (all $\mu_i $ equal),$  F \sim F(k-1, N-k) $— an **F-distribution** derajat kebebasan $ (k-1, N-k) $.
 
-**Keputusan** (decision): If $ F > F_{\alpha}(k-1, N-k) $, reject $ H_0 $ at significance level $\alpha $ (umumnya $\alpha = 0{.}05 $). Alternatively, compute the $ p $-value = $ P(F_{k-1,N-k} > F_{\text{obs}}) $ and reject if $ p < \alpha $.
+**Keputusan** (decision): If $ F > F_{\alpha}(k-1, N-k) $, reject $ H_0 $ at significance level $\alpha $ (umumnya $\alpha = 0{.}05 $). Alternatively, compute the $  p $-value = $ P(F_{k-1,N-k} > F_{\text{obs}}) $ and reject if $  p < \alpha $.
 
 ### Assumptions (Asumsi ANOVA) (Asumsi ANOVA)
 
@@ -45,7 +45,7 @@ ANOVA relies on three key assumptions that should be verified before interpretin
 
 1. **Independence** (Independensi): Observations within and between groups are independent — not influenced by each other. Violation common in spatial data: measurements near each other may be correlated (autokorelasi).
 
-2. **Normality** (Normalitas): The data in each group follow a normal distribution $ N(\mu_i, \sigma^2) $. For large samples ($ n_i \geq 20 $–$ 30 $), ANOVA is robust to moderate departures from normality (robust terhadap penyimpangan). For small samples, use Shapiro-Wilk or Kolmogorov-Smirnov tests (uji normalitas).
+2. **Normality** (Normalitas): The data in each group follow a normal distribution $ N(\mu_i, \sigma^2) $. For large samples ( $ n_i \geq 20 $–$ 30 $), ANOVA is robust to moderate departures from normality (robust terhadap penyimpangan). For small samples, use Shapiro-Wilk or Kolmogorov-Smirnov tests (uji normalitas).
 
 3. **Homoscedasticity** (Homogenitas Varians): All groups share a common variance — $\sigma_1^2 = \sigma_2^2 = \cdots = \sigma_k^2 = \sigma^2 $. Check with Levene's test atau uji Bartlett. Jika homogenitas gagal, gunakan Welch's ANOVA (ANOVA Welch) sebagai alternatif non-parametrik (alternatif untuk data tidak homogen).
 
@@ -62,13 +62,13 @@ When two factors (faktor) are of interest simultaneously — e.g., survey method
 
 $ $ SS_{\text{Total}} = SS_A + SS_B + SS_{AB} + SS_{\text{Within}}$$
 
-The model for balanced design ($ n $ observations per cell)
+The model for balanced design ( $ n $ observations per cell)
 
 $ $ y_{ijk} = \mu + \alpha_i + \beta_j + (\alpha\beta)_{ij} + \varepsilon_{ijk}$$
 
-where $\alpha_i $ is the $ i $-th level effect of Factor A,$\beta_j $ the $ j $-th level effect of Factor B $ (\text{i}\beta)_{ij} is the interaction effect, and $\varepsilon_{ijk} \sim N(0, \sigma^2) $ is the random error (suku galat).$
+where $\alpha_i $ is the $  i $-th level effect of Factor A,$\beta_j $ the $  j $-th level effect of Factor B $ (\text{i}\beta)_{ij} is the interaction effect, and $\varepsilon_{ijk} \sim N(0, \sigma^2) $ is the random error (suku galat).$
 
-**Interpretation**: If the interaction term is significant ($ p < \alpha $), the effect of one factor depends on the level of the other — the two factors do not act independently (efek tidak saling bebas).
+**Interpretation**: If the interaction term is significant ( $ p < \alpha $), the effect of one factor depends on the level of the other — the two factors do not act independently (efek tidak saling bebas).
 
 ## Post-hoc Tests (Uji Lanjutan)
 
@@ -87,9 +87,9 @@ When the ANOVA $ F $-test rejects $ H_0 $ (there is at least one group differenc
 ### Tukey-Kramer Formul
 a
 
-$ $ q = \frac{|\bar{y}_i - \bar{y}_j|}{\sqrt{MS_{\text{Within}} \left( \frac{1}{n_i} + \frac{1}{n_j} \right)}}$$
+$ $  q = \frac{|\bar{y}_i - \bar{y}_j|}{\sqrt{MS_{\text{Within}} \left( \frac{1}{n_i} + \frac{1}{n_j} \right)}}$$
 
-Reject $ H_0: \mu_i = \mu_j $ if $ q > q_{\alpha}(k, N-k) $, where $ q_{\alpha}$ is the studentised range critical value.
+Reject $ H_0: \mu_i = \mu_j $ if $  q > q_{\alpha}(k, N-k) $, where $ q_{\alpha}$ is the studentised range critical value.
 
 ## ANOVA in Geodesy and Surveying
 

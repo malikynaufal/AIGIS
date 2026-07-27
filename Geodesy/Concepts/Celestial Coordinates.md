@@ -18,9 +18,9 @@ updated: 2026-07-27
 | Quantity | Symbol | Range | Reference |
 |----------|--------|-------|-----------|
 | Right Ascension | $\alpha $ | 0°–360° (or 0h–24h) | Vernal equinox |
-| Declination | $\delta $| -90° to +90° | Celestial equator |$ $ x = r \cos\delta \cos\alpha, \quad y = r \cos\delta \sin\alpha, \quad z = r \sin\delta $$
+| Declination | $\delta $| -90° to +90° | Celestial equator |$ $  x = r \cos\delta \cos\alpha, \quad y = r \cos\delta \sin\alpha, \quad z = r \sin\delta $$
 
-### Horizontal System (Observer-Local)
+# ## Horizontal System (Observer-Local)
 
 | Quantity | Symbol | Range | Reference |
 |----------|--------|-------|-----------|
@@ -28,7 +28,7 @@ updated: 2026-07-27
 | Altitude | $ h $ | -90° to +90° | Horizon |
 | Zenith angle | $ z $ | 0°–180° | Zenith |
 
-$ $ h = 90° - z, \quad A = \arctan\left(\frac{\sin\alpha}{\cos\alpha \sin\varphi - \tan\delta \cos\varphi}\right) $$### Conversion: Equatorial ↔ Horizontal $ $ \sin h = \sin\varphi \sin\delta + \cos\varphi \cos\delta \cos H
+$ $  h = 90° - z, \quad A = \arctan\left(\frac{\sin\alpha}{\cos\alpha \sin\varphi - \tan\delta \cos\varphi}\right) $ $### Conversion: Equatorial ↔ Horizontal $ $ \sin h = \sin\varphi \sin\delta + \cos\varphi \cos\delta \cos H
 
 $$
 
@@ -46,13 +46,13 @@ where $ H = \theta - \alpha $ is the [[Geodetic Astronomy|hour angle]], and $\th
 
 ### Precession (J2000.0 → Epoch)
 
-The precession matrix $ P $ transforms from J2000.0 equatorial to mean equator at epoch $ t $:
+The precession matrix $ P $ transforms from J2000.0 equatorial to mean equator at epoch $  t $:
 
 $ $\begin{pmatrix} x' \\ y' \\ z' \end{pmatrix} = P \begin{pmatrix} x \\ y \\ z \end{pmatrix}_{J2000}
 
 $$
 
-### Nutation (Mean → True Equator)
+# ## Nutation (Mean → True Equator)
 
 The nutation matrix $ N $ accounts for short-period oscillations:
 

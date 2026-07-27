@@ -14,19 +14,19 @@ updated: 2026-07-27
 
 ## 1. Groups
 
-A **group** $(G, \cdot) $ is a set $ G $ with a binary operation $\cdot $ satisfying:
+A **group** $(G, \cdot) $ is a set $  G $ with a binary operation $\cdot $ satisfying:
 
 1. **Closure:** $ a, b \in G \implies a \cdot b \in G $
 2. **Associativity:** $ (a \cdot b) \cdot c = a \cdot (b \cdot c) $
-3. **Identity:** $\exists e \in G $ such that $ e \cdot a = a \cdot e = a $ 4. **Inverses:**$\forall a \in G, \exists a^{-1} \in G $ such that $ a \cdot a^{-1} = e $ If $ a \cdot b = b \cdot a $ for all $ a, b $, $ G $ is **abelian**.
+3. **Identity:** $\exists e \in G $ such that $  e \cdot a = a \cdot e = a $ 4. **Inverses:**$\forall a \in G, \exists a^{-1} \in G $ such that $  a \cdot a^{-1} = e $ If $  a \cdot b = b \cdot a $ for all $ a, b $, $  G $ is **abelian**.
 
 ### Examples
 
 | Group | Operation | Order | Properties |
 |-------|-----------|-------|------------|
 | $ (\mathbb{Z}, +) $ | Addition | Infinite | Cyclic, abelian |
-| $ (\mathbb{Z}/n\mathbb{Z}, +) $ | Addition mod $ n $ | $ n $ | Cyclic, abelian |
-| $ S_n $ (permutations) | Composition | $ n!$| Non-abelian for $ n \geq 3 $ |
+| $ (\mathbb{Z}/n\mathbb{Z}, +) $ | Addition mod $  n $ | $  n $ | Cyclic, abelian |
+| $ S_n $ (permutations) | Composition | $ n!$| Non-abelian for $  n \geq 3 $ |
 | $ GL(n, \mathbb{R}) $ | Matrix multiplication | Infinite | Non-abelian |
 | $ (\mathbb{R}^*, \cdot) $ | Multiplication | Infinite | Abelian |
 
@@ -36,11 +36,11 @@ $ H \subseteq G $ is a subgroup if it's a group under the same operation. **Lagr
 
 $ $|H| \text{ divides } |G|$$
 
-### Cosets and Normal Subgroups
+# ## Cosets and Normal Subgroups
 
 **Left coset:** $ gH = \{gh : h \in H\} $. **Right coset:** $ Hg $.
 
-$ H $ is **normal** ($ H \trianglelefteq G $) if $ gH = Hg $ for all $ g \in G $, or equivalently $ ghg^{-1} \in H $ for all $ h \in H $.
+$ H $ is **normal** ( $  H \trianglelefteq G $) if $ gH = Hg $ for all $  g \in G $, or equivalently $ ghg^{-1} \in H $ for all $  h \in H $.
 
 ### Quotient Groups
 
@@ -72,7 +72,7 @@ A **ring** $ (R, +, \cdot) $ has two operations satisfying:
 
 $ I \subseteq R $ is an **ideal** if:
 - $ I $ is an additive subgroup
-- $\forall r \in R, a \in I: ra, ar \in I $**Quotient ring:**$ R/I $ is a ring. If $ I $ is maximal,$ R/I $ is a field.
+- $\forall r \in R, a \in I: ra, ar \in I $**Quotient ring:**$ R/I $ is a ring. If $  I $ is maximal,$ R/I $ is a field.
 
 ### Chinese Remainder Theorem (Ring Form)
 
@@ -80,7 +80,7 @@ If $ I_1, \dots, I_k $ are pairwise coprime ideals, then:
 
 $ $ R/(I_1 \cap \dots \cap I_k) \cong R/I_1 \times \dots \times R/I_k $$
 
-## 3. Fields
+# # 3. Fields
 
 A **field** $ F $ is a commutative ring where $ F^\times = F \setminus \{0\} $ is a group under multiplication.
 
@@ -91,11 +91,11 @@ A **field** $ F $ is a commutative ring where $ F^\times = F \setminus \{0\} $ i
 | $\mathbb{Q} $ (rationals) | 0 |
 | $\mathbb{R} $ (reals) | 0 |
 | $\mathbb{C} $ (complex) | 0 |
-| $\mathbb{F}_p = \mathbb{Z}/p\mathbb{Z} $ ($ p $ prime) | $ p $ |
+| $\mathbb{F}_p = \mathbb{Z}/p\mathbb{Z} $ ( $  p $ prime) | $  p $ |
 
 ### Field Extensions
 
-$ F/K $ is an extension. $ [F:K] $ = degree = dimension of $ F $ as $ K $-vector space.
+$ F/K $ is an extension. $ [F:K] $ = degree = dimension of $  F $ as $  K $-vector space.
 
 **Algebraic element:** $\alpha $ satisfies a polynomial $ f(x) \in K[x] $.
 
@@ -103,7 +103,7 @@ $ F/K $ is an extension. $ [F:K] $ = degree = dimension of $ F $ as $ K $-vector
 
 ## 4. Galois Theory
 
-The **Galois group** of a polynomial $ f \in K[x] $ is $\text{Gal}(f) = \text{Aut}(E/K) $ where $ E $ is the splitting field.
+The **Galois group** of a polynomial $ f \in K[x] $ is $\text{Gal}(f) = \text{Aut}(E/K) $ where $  E $ is the splitting field.
 
 ```mermaid
 flowchart TD
@@ -120,7 +120,7 @@ flowchart TD
 - Intermediate fields $ K \subseteq F \subseteq E $
 
 With correspondences:
-- $ H \leftrightarrow E^H $ (fixed field of $ H $)
+- $ H \leftrightarrow E^H $ (fixed field of $  H $)
 - $ [E^H : K] = |\text{Gal}(E/K)| / |H|$-$ F/K $ is Galois iff $\text{Gal}(E/F) \trianglelefteq \text{Gal}(E/K) $
 
 ### Solvability by Radicals
@@ -128,7 +128,7 @@ With correspondences:
 A polynomial is **solvable by radicals** iff its Galois group is a **solvable group** (has abelian composition factors).
 
 - Degrees 1-4: Always solvable (quadratic, cubic, quartic formulas)
-- Degree 5: Not solvable in general ($ S_5 $ is not solvable)
+- Degree 5: Not solvable in general ( $ S_5 $ is not solvable)
 
 ## 5. Applications
 

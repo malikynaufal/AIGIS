@@ -97,7 +97,7 @@ Indonesian cadastral coordinates:
 
 $$
 
-A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i y_{i+1} - x_{i+1} y_i) \right|$ $### Simpson's Rule (for curved boundaries)$$ A = \frac{h}{3}\left[y_0 + 4(y_1 + y_3 + \ldots) + 2(y_2 + y_4 + \ldots) + y_n\right]$ $
+A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i y_{i+1} - x_{i+1} y_i) \right|$ $### Simpson's Rule (for curved boundaries)$ $ A = \frac{h}{3}\left[y_0 + 4(y_1 + y_3 + \ldots) + 2(y_2 + y_4 + \ldots) + y_n\right] $ $
 
 ## In [[Geodesy]] Context
 

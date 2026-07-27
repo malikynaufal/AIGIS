@@ -31,9 +31,9 @@ Teori graf (graph theory) adalah cabang matematika yang mempelajari struktur rel
 
 ### 1.1 Definisi Formal
 
-**Graf tidak terarah:** $G = (V, E) $ di mana $V $ adalah himpunan simpul dan $E \subseteq \binom{V}{2} $ (himpunan pasangan tak-terurut).
+**Graf tidak terarah:** $G = (V, E) $ di mana $  V $ adalah himpunan simpul dan $  E \subseteq \binom{V}{2} $ (himpunan pasangan tak-terurut).
 
-**Graf terarah (digraf):**$ G = (V, E) $dengan $ E \subseteq V \times V $(urutan penting: $ e = (u, v)$).
+**Graf terarah (digraf):**$ G = (V, E) $ dengan $  E \subseteq V \times V $ (urutan penting: $  e = (u, v)$).
 
 ### 1.2 Istilah Penting
 
@@ -44,9 +44,9 @@ Teori graf (graph theory) adalah cabang matematika yang mempelajari struktur rel
 | **Derajat keluar** (digraf) | Jumlah sisi keluar dari $ v $ | $\deg^+(v) $ |
 | **Jalur (path)** | Urutan simpul berurutan terhubung | $ P = (v_0, v_1, \dots, v_k) $ |
 | **Siklus (cycle)** | Jalur tertutup tanpa simpul ulangan (kecuali awal=akhir) | $ C_k $ |
-| **Graf terhubung** | Ada jalur antara setiap pasangan simpul | $ G $connected |
+| **Graf terhubung** | Ada jalur antara setiap pasangan simpul | $ G $ connected |
 | **Graf lengkap** | Setiap pasangan simpul terhubung | $ K_n $ |
-| **Bipartit** | $ V = V_1 \cup V_2 $, sisanya antara $ V_1 $dan $ V_2 $ | $ G = (V_1, V_2, E) $ |
+| **Bipartit** | $ V = V_1 \cup V_2 $, sisanya antara $ V_1 $ dan $ V_2 $ | $  G = (V_1, V_2, E) $ |
 | **Pohon (tree)** | Graf terhubung tanpa siklus | $|E| = |V| - 1 $ |
 | **Forest** | Graf tanpa siklus (kumpulan pohon) | — |
 
@@ -59,13 +59,13 @@ $ $\sum_{v \in V} \deg(v) = 2|E| $$
 
 **Korolari:** Jumlah simpul berderajat ganjil selalu genap.
 
-**Teorema (Graf bipartit):**$ G $adalah graf bipartit $\iff $ $ G $tidak mengandung siklus ganjil.
+**Teorema (Graf bipartit):**$ G $ adalah graf bipartit $\iff $ $  G $ tidak mengandung siklus ganjil.
 
-**Teorema (Graf pohon):** Untuk graf $ G $dengan $ n $simpul
+**Teorema (Graf pohon):** Untuk graf $ G $ dengan $  n $ simpul
 
-$ $ G \text{ adalah pohon} \iff G \text{ terhubung dan } |E| = n - 1 \iff G \text{ terhubung dan tanpa siklus} \iff G \text{ tidak ada siklus dan } |E| = n - 1 $$
+$ $  G \text{ adalah pohon} \iff G \text{ terhubung dan } |E| = n - 1 \iff G \text{ terhubung dan tanpa siklus} \iff G \text{ tidak ada siklus dan } |E| = n - 1 $$
 
-### 1.4 Representasi Graf
+# ## 1.4 Representasi Graf
 
 | Representasi | Kompleksitas Ruang | Akses Edge | Cocok Untuk |
 |--------------|---------------------|------------|-------------|
@@ -84,7 +84,7 @@ $ $ G \text{ adalah pohon} \iff G \text{ terhubung dan } |E| = n - 1 \iff G \tex
 
 **Teorema Euler (1736, Königsberg):**
 
-Sebuah graf terhubung $G $ memiliki **Eulerian circuit**$\iff $ setiap simpul memiliki derajat genap.$ G $memiliki **Eulerian trail** (bukan circuit) $\iff $ tepat ada dua simpul berderajat ganjil (kedua ujung trail).
+Sebuah graf terhubung $G $ memiliki **Eulerian circuit**$\iff $ setiap simpul memiliki derajat genap.$  G $ memiliki **Eulerian trail** (bukan circuit) $\iff $ tepat ada dua simpul berderajat ganjil (kedua ujung trail).
 
 **Algoritma Hierholzer** untuk menemukan Eulerian circuit:
 1. Mulai dari sembarang simpul, ikuti sisi-sisi tak-terpakai.
@@ -99,11 +99,11 @@ Kompleksitas: $O(|E|)$.
 
 **Kondisi Cukup:**
 
-- **Theorem Dirac (1952):** Jika $\deg(v) \geq n/2 $ untuk setiap $v \in V $, maka $ G $Hamilton.
+- **Theorem Dirac (1952):** Jika $\deg(v) \geq n/2 $ untuk setiap $  v \in V $, maka $  G $ Hamilton.
 
-- **Theorem Ore (1960):** Jika $\deg(u) + \deg(v) \geq n $ untuk setiap pasangan takberdekatan $u, v $, maka $ G $Hamilton.
+- **Theorem Ore (1960):** Jika $\deg(u) + \deg(v) \geq n $ untuk setiap pasangan takberdekatan $ u, v $, maka $  G $ Hamilton.
 
-- **Theorem Bondy-Chvátal:** Tutup (closure) dari $ G $adalah $ K_n \implies G $Hamilton.
+- **Theorem Bondy-Chvátal:** Tutup (closure) dari $ G $ adalah $ K_n \implies G $ Hamilton.
 
 | Sifat | Graf Euler | Graf Hamilton |
 |-------|-----------|---------------|
@@ -140,7 +140,7 @@ Kompleksitas: $O(|E| \log |V|) $ dengan binary heap.
 
 Pohon biner di mana setiap node $x $ memenuhi:
 
-- Semua key di subtree kiri $\leq x.key $- Semua key di subtree kanan $\geq x.key $ Operasi dasar (pencarian, sisip, hapus): $O(h) $ dengan $h $= tinggi pohon.
+- Semua key di subtree kiri $\leq x.key $- Semua key di subtree kanan $\geq x.key $ Operasi dasar (pencarian, sisip, hapus): $ O(h) $ dengan $  h $= tinggi pohon.
 
 **Penyeimbangan (Balancing):**
 
@@ -156,7 +156,7 @@ Pohon biner di mana setiap node $x $ memenuhi:
 
 **Trie** menyimpan string sebagai jalur dari root ke leaf. Setiap edge mewakili satu karakter.
 
-Operasi: insert, search, prefix query — semuanya $O(m) $ di mana $m$ = panjang kata.
+Operasi: insert, search, prefix query — semuanya $O(m) $ di mana $ m$ = panjang kata.
 
 Aplikasi dalam georeferencing: kompresi himpunan koordinat awalan untuk indexing spasial.
 
@@ -167,12 +167,12 @@ Aplikasi dalam georeferencing: kompresi himpunan koordinat awalan untuk indexing
 ### 4.1 Algoritma Dijkstra
 
 Untuk graf dengan bobot non-negatif $w(e) \geq 0 $:
-1. Inisialisasi $ d(s) = 0 $, $ d(v) = \infty $untuk $ v \neq s $.
-2. Pilih simpul $ u $dengan $ d(u) $minimum yang belum di-finalisasi.
+1. Inisialisasi $ d(s) = 0 $, $ d(v) = \infty $ untuk $  v \neq s $.
+2. Pilih simpul $ u $ dengan $ d(u) $ minimum yang belum di-finalisasi.
 3. Relax semua edge $ (u, v) $: $ d(v) = \min(d(v), d(u) + w(u, v)) $.
 4. Ulangi hingga semua simpul difinalisasi.
 
-Kompleksitas: $ O((|V| + |E|) \log |V|)$dengan min-heap.
+Kompleksitas: $ O((|V| + |E|) \log |V|)$ dengan min-heap.
 
 ### 4.2 Algoritma Bellman-Ford
 
@@ -256,7 +256,7 @@ Kompleksitas: $O(|E| \cdot |f^*|) $ dengan $ f^*$= max flow. Edmonds-Karp (BFS):
 | Ukuran | Rumus | Intepretasi |
 |--------|-------|-------------|
 | **Degree centrality** | $C_D(v) = \deg(v) $ | Jumlah koneksi langsung |
-| **Betweenness centrality** | $ C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}} $ | Fraksi jalur terpendek yang melewati $ v $ |
+| **Betweenness centrality** | $ C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}} $ | Fraksi jalur terpendek yang melewati $  v $ |
 | **Closeness centrality** | $ C_C(v) = \frac{n-1}{\sum_{u \neq v} d(v, u)} $ | Kekinian terhadap semua simpul |
 | **Eigenvector centrality** | $\mathbf{Ax} = \lambda_1 \mathbf{x} $ | Pengaruh dalam jaringan (PageRank terinspirasi) |
 | **Clustering coefficient** | $ C(v) = \frac{2|\{e_{ij} : v_i, v_j \in N(v)\}|}{\deg(v)(\deg(v)-1)} $ | Seberapa terhubung tetangga $ v$ |
@@ -281,7 +281,7 @@ Sebuah jaringan 8 stasiun GNSS dengan koneksi baseline (edge weight = jarak):
 
 ### Latihan 1: Apakah graf berikut Eulerian?
 
-Graf $G $ memiliki 5 simpul $\{1,2,3,4,5\} $ dan 7 sisi: $(1,2), (1,3), (2,3), (2,4), (3,4), (3,5), (4,5) $.
+Graf $G $ memiliki 5 simpul $\{1,2,3,4,5\} $ dan 7 sisi: $ (1,2), (1,3), (2,3), (2,4), (3,4), (3,5), (4,5) $.
 
 Derajat:
 
@@ -323,7 +323,7 @@ Sisi diurutkan: $(A,C):2, \, (B,D):3, \, (A,B):5, \, (C,D):6, \, (B,C):7, \, (A,
 | Istilah | Definisi |
 |---------|----------|
 | $K_n $ | Graf lengkap (complete graph) |
-| $ C_n $ | Siklus sederhana panjang $ n $ |
+| $ C_n $ | Siklus sederhana panjang $  n $ |
 | $ K_{m,n} $ | Graf bipartit lengkap |
 | $ W_n $ | Wheel graph (siklus + hub pusat) |
 | $ P_n $ | Path graph |

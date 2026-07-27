@@ -38,8 +38,8 @@ An object at rest stays at rest; an object in motion stays in motion with consta
 
 $$ \sum F_x = ma_x, \quad \sum F_y = ma_y $$
 
-### Worked Example: Block on Inclined Plane (with friction)
-A block of mass $m$ on incline angle $\theta$ with coefficient of friction $\mu$:
+# ## Worked Example: Block on Inclined Plane (with friction)
+A block of mass $m $ on incline angle $\theta $ with coefficient of friction $\mu$:
 
 **Free-body diagram:**
 
@@ -74,7 +74,7 @@ Net force equals mass times acceleration (or rate of change of momentum).
 
 $$F_x = m\ddot{x}, \quad F_y = m\ddot{y}, \quad F_z = m\ddot{z}$$
 
-### Important Force Types
+# ## Important Force Types
 
 | Force | Expression | Origin |
 |-------|-----------|--------|
@@ -156,12 +156,12 @@ From Newton's 2nd law + Law of Universal Gravitation:
 
 $$m\frac{d^2\vec{r}}{dt^2} = -\frac{GMm}{r^3}\vec{r} + \vec{F}_{\text{perturb}}$$
 
-**Perturbation forces ($\vec{F}_{\text{perturb}}$):**
+**Perturbation forces ( $\vec{F}_{\text{perturb}}$):**
 
 | Force | Magnitude | Effect |
 |-------|-----------|--------|
-| Earth oblateness ($J_2$) | $\sim 10^{-3}\,\text{m/s}^2$ | Dominant, secular drift |
-| Atmospheric drag | $\sim 10^{-6}$–$10^{-8}\,\text{m/s}^2$ | LEO decay, semi-major axis |
+| Earth oblateness ( $J_2 $) | $\sim 10^{-3}\,\text{m/s}^2$ | Dominant, secular drift |
+| Atmospheric drag | $\sim 10^{-6}$–$ 10^{-8}\,\text{m/s}^2$ | LEO decay, semi-major axis |
 | Solar radiation pressure | $\sim 10^{-7}\,\text{m/s}^2$ | GPS, Galileo eccentricity |
 | Third-body (Moon/Sun) | $\sim 10^{-6}\,\text{m/s}^2$ | Long-period variations |
 | Relativistic correction | $\sim 10^{-10}\,\text{m/s}^2$ | Clock + orbit, ppm level |
@@ -174,7 +174,7 @@ $$U(\vec{r}) = \frac{GM}{r} \quad \text{(spherical)}$$
 
 $$V(\vec{r}) = \frac{GM}{r} \left[ 1 - \sum_{n=2}^{\infty} \sum_{m=0}^{n} \left(\frac{R}{r}\right)^n P_{nm}(\sin\phi) (C_{nm}\cos m\lambda + S_{nm}\sin m\lambda) \right]$$
 
-where $P_{nm}$ are associated Legendre polynomials, $C_{nm}$ and $S_{nm}$ are spherical harmonic coefficients from EGM2008.
+where P_{nm}$ are associated Legendre polynomials, $ C_{nm}$ and $ S_{nm}$ are spherical harmonic coefficients from EGM2008.
 
 ### Worked Example: GPS Satellite Orbit
 
@@ -222,7 +222,7 @@ This shows why GNSS aiding is essential for long-duration inertial navigation.
 
 $$v_{\text{esc}} = \sqrt{\frac{2GM}{R_E}} = \sqrt{\frac{2 \times 3.986 \times 10^{14}}{6.371 \times 10^6}} = \sqrt{1.250 \times 10^8} \approx 11{,}180\,\text{m/s} \approx 11.2\,\text{km/s}$$
 
-### Example 2: Geostationary Orbit Radius
+# ## Example 2: Geostationary Orbit Radius
 
 $$r = \left(\frac{GM T^2}{4\pi^2}\right)^{1/3} = \left(\frac{3.986\times10^{14} \times (86400)^2}{4\pi^2}\right)^{1/3} \approx 42{,}164\,\text{km}$$
 
@@ -230,11 +230,11 @@ Altitude above Earth's surface: $h = r - R_E = 42{,}164 - 6{,}371 = 35{,}786\,\t
 
 ### Example 3: $J_2$ Perturbation on GPS Orbit
 
-Rate of change of RAAN due to Earth oblateness ($J_2 = 1.0826 \times 10^{-3}$):
+Rate of change of RAAN due to Earth oblateness ( $J_2 = 1.0826 \times 10^{-3}$):
 
 $$\dot{\Omega} = -\frac{3}{2} J_2 \frac{n R_E^2}{a^2(1-e^2)^2} \cos i$$
 
-For GPS ($a = 26{,}571\,\text{km}$, $e \approx 0$, $i = 55°$):
+For GPS ( $a = 26{,}571\,\text{km}$, $  e \approx 0 $, $  i = 55°$):
 
 $$\dot{\Omega} \approx -3.1°/\text{day}$$
 

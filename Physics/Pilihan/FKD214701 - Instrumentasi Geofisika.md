@@ -27,7 +27,7 @@ A seismometer is a damped harmonic oscillator whose mass displacement relative t
 
 $ $ \ddot{x} + 2\xi\omega_0\dot{x} + \omega_0^2 x = -\ddot{u}(t)
 
-$ where $\ddot{u}(t) $ is ground acceleration and $x$ is the relative displacement of the proof mass.
+$ where $\ddot{u}(t) $ is ground acceleration and $ x$ is the relative displacement of the proof mass.
 
 | Component | Function (Fungsi) | Typical Material |
 |---|---|---|
@@ -48,7 +48,7 @@ The seismometer's output voltage $V(\omega) $ relates to ground velocity $ \dot{
 
 where the instrument response $ $ H(\omega) $ is characterized by poles and zeros in the Laplace domain. Typical calibration yields $$
 
- H(s) = \frac{A \cdot (s - z_1)(s - z_2) \cdots}{(s - p_1)(s - p_2) \cdots} $ Correcting raw data requires deconvolution of $H(s) $— a step handled by the SEED (Standard for the Exchange of Earthquake Data) metadata.
+ H(s) = \frac{A \cdot (s - z_1)(s - z_2) \cdots}{(s - p_1)(s - p_2) \cdots} $ Correcting raw data requires deconvolution of $ H(s) $— a step handled by the SEED (Standard for the Exchange of Earthquake Data) metadata.
 
 ---
 
@@ -58,7 +58,7 @@ where the instrument response $ $ H(\omega) $ is characterized by poles and zero
 
 - **Absolute gravimeters** measure $g$ directly via free-fall interferometry: a corner-cube reflector falls in vacuum, and its position is tracked by laser interferometry. The measurement equation is
 
-$g = \frac{2(z_2 - z_1)}{(t_2 - t_1)^2} $ The MICRO-G LaCoste FG5 achieves accuracy$ \sigma_g \approx 1\;\mu\text{Gal} $ ($ 1\;\mu\text{Gal} = 10^{-8}\;\text{m/s}^2$).
+$g = \frac{2(z_2 - z_1)}{(t_2 - t_1)^2} $ The MICRO-G LaCoste FG5 achieves accuracy $ \sigma_g \approx 1\;\mu\text{Gal} $ ( $ 1\;\mu\text{Gal} = 10^{-8}\;\text{m/s}^2$).
 
 - **Relative gravimeters** (LaCoste-Romberg, Scintrex CG-6) use a zero-length spring mechanism to measure gravity *differences* between stations. The LaCoste-Romberg equation of motion:
 
@@ -68,7 +68,7 @@ $mg = k \cdot l + \text{beam tilt corrections} $ $
 
 Gravity observations must be corrected for solid Earth tides (pasut). The tidal acceleration is
 
-$g_{\text{tidal}}(t) = \sum_{i} A_i \cos(\omega_i t + \phi_i) $ with principal tidal constituents $M_2 $ (period 12.42 h, amplitude ~50 μGal) and $S_2$ (12.00 h).
+$g_{\text{tidal}}(t) = \sum_{i} A_i \cos(\omega_i t + \phi_i) $ with principal tidal constituents $ M_2 $ (period 12.42 h, amplitude ~50 μGal) and $ S_2$ (12.00 h).
 
 ### 2.3 Field Calibration Table
 
@@ -97,7 +97,7 @@ Sensitivity: typically 0.01 nT; bandwidth: DC–1 kHz. Used widely in ground sur
 
 Exploits Larmor precession of protons in kerosene or water
 
-$$ f_L = \frac{\gamma_p}{2\pi} \cdot |B| $ where $\gamma_p = 42.577 $ MHz/T is the proton gyromagnetic ratio. For Earth's field ($ \sim 50\,000 $ nT), $f_L \approx 2.13 $ kHz. Resolution: ~0.1 nT.
+$$ f_L = \frac{\gamma_p}{2\pi} \cdot |B| $ where $\gamma_p = 42.577 $ MHz/T is the proton gyromagnetic ratio. For Earth's field ( $ \sim 50\,000 $ nT), $ f_L \approx 2.13 $ kHz. Resolution: ~0.1 nT.
 
 ### 3.3 Optical Pumping Magnetometer
 

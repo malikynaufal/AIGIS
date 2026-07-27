@@ -17,7 +17,7 @@ updated: 2026-07-27
 
 $$ d = \frac{c \cdot t}{2}$ $
 
-where $ c $ = sound velocity in water ($\approx 1500 $ m/s),$ t $ = two-way travel time.
+where $ c $ = sound velocity in water ( $\approx 1500 $ m/s),$  t $ = two-way travel time.
 
 ### Multi-Beam Echo Sounder (MBES)
 
@@ -37,11 +37,13 @@ $$
 
 $ $\text{Resolution} = \frac{c}{2 \cdot \text{bandwidth}}
 
-$$## Sound Velocity Profile
+$$
 
-$ $ c = 1449.2 + 4.6T - 0.055T^2 + 1.34(S - 35) + 0.018D $$
+# # Sound Velocity Profile
 
-where $ T $= temperature (°C),$ S $ = salinity (‰),$ D $ = depth (m).
+$ $  c = 1449.2 + 4.6T - 0.055T^2 + 1.34(S - 35) + 0.018D $$
+
+where $ T $= temperature (°C),$  S $ = salinity (‰),$  D $ = depth (m).
 
 ### Sound Velocity Table
 

@@ -52,15 +52,15 @@ $ $**Accuracy:**$ O(h^4) $ local error,$ O(h^4) $ global error.
 
 ### SVD (Singular Value Decomposition)
 
-Any $ m imes n $ matrix $ A $:
+Any $ m imes n $ matrix $  A $:
 
-$ $ A = U \Sigma V^T $ $
+$ $  A = U \Sigma V^T $ $
 
-where $ U \in \mathbb{R}^{m imes m} $, $\Sigma = ext{diag}(\sigma_1, \dots, \sigma_p) $, $ V \in \mathbb{R}^{n imes n} $.
+where $ U \in \mathbb{R}^{m imes m} $, $\Sigma = ext{diag}(\sigma_1, \dots, \sigma_p) $, $  V \in \mathbb{R}^{n imes n} $.
 
 **Applications:**
 - Least squares: $ x = V \Sigma^+ U^T b $
-- PCA: $\sigma_i^2 $= variance explained by $ i $-th component
+- PCA: $\sigma_i^2 $= variance explained by $  i $-th component
 - Numerical rank: count $\sigma_i > \varepsilon $
 
 ## 📐 Geodesy Application: GNSS Ambiguity Resolution

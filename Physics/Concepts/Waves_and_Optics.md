@@ -47,19 +47,19 @@ When waves overlap, the resultant displacement is the algebraic sum
 
 $ y_{\text{total}}(x,t) = \sum_i y_i(x,t) $$$
 
-### Constructive Interference
+# ## Constructive Interference
 Waves in phase: $ \Delta \phi = 2\pi n $
 
 $ A_{\text{total}} = A_1 + A_2 $$$
 
-### Destructive Interference
+# ## Destructive Interference
 Waves out of phase: $ \Delta \phi = (2n+1)\pi $
 
 $ $
 
 A_{\text{total}} = |A_1 - A_2| $$
 
-### Double-Slit Interference (Young's Experiment)
+# ## Double-Slit Interference (Young's Experiment)
 Path difference: $ \Delta r = d\sin\theta $- Bright fringes: $ d\sin\theta = m\lambda $- Dark fringes: $ d\sin\theta = (m+\frac{1}{2})\lambda $**Fringe spacing:**$ \Delta y = \frac{\lambda L}{d} $ (small angle)
 
 ---
@@ -72,7 +72,7 @@ Intensity pattern
 $ $ I(\theta) = I_0 \left(\frac{\sin\beta}{\beta}\right)^2, \quad \beta = \frac{\pi a \sin\theta}{\lambda} $$
 
 Minima: $ $ a\sin\theta = m\lambda \quad (m = \pm1, \pm2, \dots) $### Diffraction Grating $
-Multiple slits: $ N $ slits of width $ a $, separation $ d $ Principal maxima: $ d\sin\theta = m\lambda $**Angular dispersion:**$ \frac{d\theta}{d\lambda} = \frac{m}{d\cos\theta} $**Resolving power:** $ R = \frac{\lambda}{\Delta\lambda} = mN $---
+Multiple slits: $ N $ slits of width $  a $, separation $  d $ Principal maxima: $ d\sin\theta = m\lambda $**Angular dispersion:**$ \frac{d\theta}{d\lambda} = \frac{m}{d\cos\theta} $**Resolving power:** $  R = \frac{\lambda}{\Delta\lambda} = mN $---
 
 ## 4. Polarization
 
@@ -93,7 +93,7 @@ Reflected light perfectly polarized (s-polarized) when
 
 $ $ \tan\theta_B = \frac{n_2}{n_1} $$
 
-### Jones Calculus (Matrix Representation)
+# ## Jones Calculus (Matrix Representation)
 | Component | Jones Vector |
 |-----------|--------------|
 | Horizontal | $ \begin{pmatrix}1\\0\end{pmatrix} $ |
@@ -112,12 +112,12 @@ m
 
 $ $ \nabla^2\vec{E} = \mu_0\epsilon_0\frac{\partial^2\vec{E}}{\partial t^2} $$
 
-### Speed of Ligh
+# ## Speed of Ligh
 t
 
 $ c = \frac{1}{\sqrt{\mu_0\epsilon_0}} = 2.998\times10^8 \text{ m/s} $$$
 
-### In a Mediu
+# ## In a Mediu
 m
 
 $ v = \frac{c}{n}, \quad n = \sqrt{\epsilon_r\mu_r} $$$
@@ -131,7 +131,7 @@ Fraunhofer diffraction pattern is the **Fourier transform** of the aperture func
 
 $ $ U(x,y) = \mathcal{F}\{A(\xi,\eta)\} $$
 
-### Example: Rectangular Apertur
+# ## Example: Rectangular Apertur
 e
 
 $ $ U(x,y) \propto \text{sinc}\left(\frac{\pi a x}{\lambda z}\right)\text{sinc}\left(\frac{\pi b y}{\lambda z}\right) $$
@@ -174,13 +174,13 @@ $ $ U(x,y) \propto \text{sinc}\left(\frac{\pi a x}{\lambda z}\right)\text{sinc}\
 
 ## 9. Worked Examples
 
-### Example 1: Double Slit Fringes $ \lambda = 632.8 $ nm, $ d = 0.2 $ mm, $ L = 2 $ m
+### Example 1: Double Slit Fringes $ \lambda = 632.8 $ nm, $  d = 0.2 $ mm, $  L = 2 $ m
 .
 
 $ $ \Delta y = \frac{\lambda L}{d} = \frac{632.8\times10^{-9} \times 2}{0.2\times10^{-3}} = 6.33 \text{ mm} $$
 
-### Example 2: Diffraction Limit of Telescope
-Aperture $ D = 2.4 $ m (Hubble),$ \lambda = 500 $ nm
+# ## Example 2: Diffraction Limit of Telescope
+Aperture $ D = 2.4 $  m (Hubble),$ \lambda = 500 $ nm
 .
 
 $ $ \theta_{\text{min}} = 1.22\frac{\lambda}{D} = 1.22 \times \frac{500\times10^{-9}}{2.4} = 0.25 \text{ arcsec} $$
@@ -188,9 +188,9 @@ $ $ \theta_{\text{min}} = 1.22\frac{\lambda}{D} = 1.22 \times \frac{500\times10^
 ---
 
 ## Study Problems
-1. Derive the intensity distribution for two-slit interference with finite slit width $ a $ and separation $ d $.
+1. Derive the intensity distribution for two-slit interference with finite slit width $ a $ and separation $  d $.
 2. A diffraction grating has 500 lines/mm. What is the angular separation between 500 nm and 501 nm in first order?
-3. Calculate the Brewster angle for light going from air ($ n=1 $) to water ($ n=1.33 $).
+3. Calculate the Brewster angle for light going from air ( $ n=1 $) to water ( $ n=1.33 $).
 4. Use Jones calculus to find the output polarization after a quarter-wave plate at 45° to linear polarization.
 5. Estimate the coherence length of a He-Ne laser with linewidth $ \Delta\nu = 1 $ MHz.
 

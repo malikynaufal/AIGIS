@@ -45,7 +45,7 @@ A **metric space** is $(X, d) $ where $ d: X \times X \to [0, \infty) $ satisfie
 
 ### Convergence
 
-$ x_n \to x $ in $ (X, d) $ iff $ d(x_n, x) \to 0 $ as $ n \to \infty $.
+$ x_n \to x $ in $ (X, d) $ iff $ d(x_n, x) \to 0 $ as $  n \to \infty $.
 
 **Uniqueness of limits** holds in all metric spaces.
 
@@ -53,11 +53,11 @@ $ x_n \to x $ in $ (X, d) $ iff $ d(x_n, x) \to 0 $ as $ n \to \infty $.
 
 $ (x_n) $ is **Cauchy** iff $\forall \varepsilon > 0, \exists N: m,n \geq N \implies d(x_m, x_n) < \varepsilon $.
 
-Convergent $\implies $ Cauchy (always). Cauchy $\implies $ convergent iff $ X $ is **complete**.
+Convergent $\implies $ Cauchy (always). Cauchy $\implies $ convergent iff $  X $ is **complete**.
 
 ### Continuity
 
-$ f: X \to Y $ is continuous at $ x $ iff $ x_n \to x \implies f(x_n) \to f(x) $.
+$ f: X \to Y $ is continuous at $  x $ iff $ x_n \to x \implies f(x_n) \to f(x) $.
 
 Equivalently: $\forall \varepsilon > 0, \exists \delta > 0: d(x, x') < \delta \implies d(f(x), f(x')) < \varepsilon $.
 
@@ -75,7 +75,7 @@ A metric space is **complete** if every Cauchy sequence converges.
 
 ### Banach Fixed Point Theorem
 
-If $ (X, d) $ is complete and $ T: X \to X $ is a **contraction** ($ d(Tx, Ty) \leq q \cdot d(x,y) $, $ q < 1 $), then $ T $ has a unique fixed point $ x^*$ and:$ $ d(x_n, x^*) \leq \frac{q}{1-q} d(x_0, Tx_0)$$
+If $ (X, d) $ is complete and $ T: X \to X $ is a **contraction** ( $ d(Tx, Ty) \leq q \cdot d(x,y) $, $  q < 1 $), then $  T $ has a unique fixed point $ x^*$ and: $ $ d(x_n, x^*) \leq \frac{q}{1-q} d(x_0, Tx_0)$$
 
 **Applications:** Existence and uniqueness for ODEs (Picard-Lindelöf), convergence of iterative methods.
 
@@ -89,7 +89,7 @@ Every sequence has a convergent subsequence. In metric spaces, this is equivalen
 
 ## 6. Normed Spaces
 
-A **norm** $\|\cdot\| $ on a vector space $ V $ satisfies:
+A **norm** $\|\cdot\| $ on a vector space $  V $ satisfies:
 1. $\|x\| = 0 \iff x = 0 $ 2.$\|\alpha x\| = |\alpha| \|x\|$ 3.$\|x + y\| \leq \|x\| + \|y\| $ The metric is $ d(x,y) = \|x - y\|$.
 
 | Norm | Formula | Space |

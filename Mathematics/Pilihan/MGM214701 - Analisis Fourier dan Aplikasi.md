@@ -31,7 +31,7 @@ Analisis Fourier (Fourier Analysis) adalah cabang matematika yang mempelajari re
 
 ### 1.1 Definisi dan Konvergensi
 
-Untuk fungsi periodik $f(x) $ dengan periode $2\pi$ (atau $2L$), deret Fourier didefinisikan sebagai:
+Untuk fungsi periodik $f(x) $ dengan periode $ 2\pi $ (atau $ 2L$), deret Fourier didefinisikan sebagai:
 
 $ $
 
@@ -40,7 +40,7 @@ f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} \left[ a_n \cos\left(\frac{n\pi x}
 
 $$
 
-di mana koefisien Fourier dihitung dengan: $ $ a_0 = \frac{1}{L} \int_{-L}^{L} f(x) \, dxa_n = \frac{1}{L} \int_{-L}^{L} f(x) \cos\left(\frac{n\pi x}{L}\right) \, dxb_n = \frac{1}{L} \int_{-L}^{L} f(x) \sin\left(\frac{n\pi x}{L}\right) \, dx $$ **Teorema Konvergensi Dirichlet:** Jika $ f(x) $piecewise-continuous dan memiliki turunan piecewise-continuous pada $ [-L, L] $, maka deret Fourier konvergen ke $ f(x)$di titik kontinuitas, dan ke rata-rata limit kiri-kanan di titik diskontinuitas.
+di mana koefisien Fourier dihitung dengan: $ $ a_0 = \frac{1}{L} \int_{-L}^{L} f(x) \, dxa_n = \frac{1}{L} \int_{-L}^{L} f(x) \cos\left(\frac{n\pi x}{L}\right) \, dxb_n = \frac{1}{L} \int_{-L}^{L} f(x) \sin\left(\frac{n\pi x}{L}\right) \, dx $ $ **Teorema Konvergensi Dirichlet:** Jika $ f(x) $ piecewise-continuous dan memiliki turunan piecewise-continuous pada $ [-L, L] $, maka deret Fourier konvergen ke $ f(x)$ di titik kontinuitas, dan ke rata-rata limit kiri-kanan di titik diskontinuitas.
 
 ### 1.2 Bentuk Eksponensial Kompleks
 
@@ -53,9 +53,9 @@ f(x) \sim \sum_{n=-\infty}^{\infty} c_n e^{i n \pi x / L
 
 $$
 
-dengan:$ $ c_n = \frac{1}{2L} \int_{-L}^{L} f(x) e^{-i n \pi x / L} \, dx $$
+dengan: $ $ c_n = \frac{1}{2L} \int_{-L}^{L} f(x) e^{-i n \pi x / L} \, dx $$
 
-### 1.3 Parseval's Identity (Identitas Parseval)
+# ## 1.3 Parseval's Identity (Identitas Parseval)
 
 Energi total sinyal dalam domain waktu sama dengan energi dalam domain frekuensi
 
@@ -75,11 +75,11 @@ $ $\mathcal{F}\{f(t)\} = F(\omega) = \int_{-\infty}^{\infty} f(t) e^{-i\omega t}
 
 $$
 
-### 2.2 Sifat-Sifat Penting
+# ## 2.2 Sifat-Sifat Penting
 
 | Sifat | Domain Waktu | Domain Frekuensi |
 |-------|--------------|------------------|
-| **Linearitas** | $a f(t) + b g(t) $ | $ a F(\omega) + b G(\omega) $ |
+| **Linearitas** | $a f(t) + b g(t) $ | $  a F(\omega) + b G(\omega) $ |
 | **Pergeseran Waktu** | $ f(t - t_0) $ | $ e^{-i\omega t_0} F(\omega) $ |
 | **Pergeseran Frekuensi** | $ e^{i\omega_0 t} f(t) $ | $ F(\omega - \omega_0) $ |
 | **Skalasi** | $ f(at) $ | $\frac{1}{|a|} F(\frac{\omega}{a}) $ |
@@ -90,7 +90,7 @@ $$
 
 ### 2.3 Transformasi Fourier Diskrit (DFT)
 
-Untuk sinyal diskrit $ x[n] $panjang $ N $:
+Untuk sinyal diskrit $ x[n] $ panjang $  N $:
 
 $ $
 
@@ -105,13 +105,13 @@ Invers DFT: $ $ x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k] e^{i 2\pi k n / N}$$ --
 
 ### 3.1 Algoritma Cooley-Tukey
 
-FFT mengurangi kompleksitas DFT dari $O(N^2) $ menjadi $O(N \log N) $ dengan memanfaatkan simetri dan periodisitas twiddle factors $W_N = e^{-i 2\pi / N} $.
+FFT mengurangi kompleksitas DFT dari $O(N^2) $ menjadi $ O(N \log N) $ dengan memanfaatkan simetri dan periodisitas twiddle factors $ W_N = e^{-i 2\pi / N} $.
 
 **Struktur Radix-2 DIT (Decimation-in-Time):**
 
-- Bagi $ N $menjadi dua subsequences genap/ganjil
+- Bagi $ N $ menjadi dua subsequences genap/ganjil
 
-- Rekursif hingga $ N=2 $(butterfly operation)
+- Rekursif hingga $ N=2 $ (butterfly operation)
 
 - Gabungkan hasil dengan twiddle factors
 
@@ -124,9 +124,9 @@ $ $\begin{bmatrix} X[0] \\ X[1] \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & -1 
 
 $$
 
-Untuk umum:$ $ X[k] = E[k] + W_N^k O[k]X[k + N/2] = E[k] - W_N^k O[k]$$
+Untuk umum: $ $ X[k] = E[k] + W_N^k O[k]X[k + N/2] = E[k] - W_N^k O[k]$$
 
-di mana $ E[k] $ dan $O[k] $ adalah DFT subsequences genap dan ganjil.
+di mana $ E[k] $ dan $ O[k] $ adalah DFT subsequences genap dan ganjil.
 
 ### 3.3 Zero-Padding dan Spectral Leakage
 
@@ -175,7 +175,7 @@ Filter Butterworth/Chebyshev dirancang di domain frekuensi lalu diimplementasika
 
 $ $ H(\omega) = \frac{1}{\sqrt{1 + (\omega/\omega_c)^{2n}}} \quad \text{(Butterworth low-pass)}$$
 
-### 4.4 Studi Kasus: Dekomposisi Gelombang Laut (Ocean Tide Analysis)
+# ## 4.4 Studi Kasus: Dekomposisi Gelombang Laut (Ocean Tide Analysis)
 
 Data ketinggian air (tide gauge) 1 tahun dianalisis untuk ekstraksi konstituen astronomis:
 
@@ -193,7 +193,7 @@ Data ketinggian air (tide gauge) 1 tahun dianalisis untuk ekstraksi konstituen a
 
 ## 5. Worked Example / Contoh Terstruktur
 
-### Soal: Hitung koefisien Fourier untuk $f(x) = x $ pada $[-\pi, \pi] $**Langkah 1:** Identifikasi sifat fungsi.$ f(x) = x $ adalah fungsi **ganjil** ($ f(-x) = -f(x) $), sehingga $ a_n = 0 $untuk semua $ n $(termasuk $ a_0 $).
+### Soal: Hitung koefisien Fourier untuk $f(x) = x $ pada $ [-\pi, \pi] $**Langkah 1:** Identifikasi sifat fungsi.$ f(x) = x $ adalah fungsi **ganjil** ( $ f(-x) = -f(x) $), sehingga $ a_n = 0 $ untuk semua $  n $ (termasuk $ a_0 $).
 
 **Langkah 2:** Hitung $ b_n $:
 

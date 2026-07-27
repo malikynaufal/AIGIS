@@ -28,7 +28,7 @@ updated: 2026-07-27
 
 ### Density and Pressure Profiles
 
-- **Surface density:** $ \rho_0 \approx 1.225 $ kg/m³, decreasing roughly exponentially with scale height $ H \approx 8.5 $ km $ $ \rho(z) = \rho_0 \exp(-z/H)
+- **Surface density:** $ \rho_0 \approx 1.225 $ kg/m³, decreasing roughly exponentially with scale height $  H \approx 8.5 $ km $ $ \rho(z) = \rho_0 \exp(-z/H)
 
 $$
 
@@ -44,7 +44,7 @@ $$
 | Ne, He, CH₄, Kr, H₂O | trace | variable | Various effects |
 
 ### Vertical Motion and Stability
-**Hydrostatic balance:**$ \frac{dP}{dz} = -\rho g $**Stability criterion:** Brunt-Väisälä frequency $ N^2 = -\frac{g}{\theta}\frac{d\theta}{dz} $- $ N > 0 $: stable stratification (most of troposphere)
+**Hydrostatic balance:**$ \frac{dP}{dz} = -\rho g $**Stability criterion:** Brunt-Väisälä frequency $ N^2 = -\frac{g}{\theta}\frac{d\theta}{dz} $- $  N > 0 $: stable stratification (most of troposphere)
 
 - $ N < 0 $: unstable (cumulus convection)
 
@@ -69,10 +69,10 @@ $ $ \frac{S_0(1-\alpha)}{4} = (1 - \varepsilon_{\text{atm}})\sigma T_s^4 + \vare
 $$
 
 where:
-- $ T_e = \left[\frac{S_0(1-\alpha)}{4\sigma}\right]^{1/4} = 255 $ K (equilibrium temperature without greenhouse)
+- $ T_e = \left[\frac{S_0(1-\alpha)}{4\sigma}\right]^{1/4} = 255 $  K (equilibrium temperature without greenhouse)
 -$ \varepsilon_{\text{atm}} $= atmospheric emissivity (total infrared absorptivity)
 - $ T_s $ = surface temperature (≈ 288 K)
--$ \sigma $ = Stefan-Boltzmann constant ($ 5.67 \times 10^{-8} $ W/m²·K⁴)
+-$ \sigma $ = Stefan-Boltzmann constant ( $ 5.67 \times 10^{-8} $ W/m²·K⁴)
 
 ### Energy Transport Mechanisms
 
@@ -135,7 +135,7 @@ where:
 $ n = 1 + \frac{577(n_e - 0.8)}{720 + (0.45 T)^2 - 0.0046 (T - 15)^2 \cdot 10^{-3}} $$$
 
 where:
--$ T $ = temperature (°C) at height $ z $- $ n_e $ = number of electrons along line of sight (slant total electron content, STEC)
+-$ T $ = temperature (°C) at height $  z $- $ n_e $ = number of electrons along line of sight (slant total electron content, STEC)
 
 - Effect is small: $ n \approx 1.0003 $ at sea level
 
@@ -149,7 +149,7 @@ $ c_w = \frac{c_0}{n(T, N)} $ with $ n(T, N) = 1 + 776.7 \times 10^{-8} \frac{N}
 
 $ $ \delta = h \cdot \frac{(n-1)\tan h}{1 - (n-1)\sin h}, \quad h = \text{true altitude} $$
 
-For near-horizontal rays ($ h < 10°$):
+For near-horizontal rays ( $ h < 10°$):
 
 $ $ \delta \approx \frac{(n-1)\sec h}{(1 - (n-1)\sin h)^2
 }
@@ -160,7 +160,7 @@ $ $ \delta \approx \frac{(n-1)\sec h}{(1 - (n-1)\sin h)^2
 
 $$
 
-### Refraction for Earth’s Surface
+# ## Refraction for Earth’s Surface
 When propagating nadir to a point on Earth from satellite:
 **Geodetic refraction** accounts for slow arrival time and path curvature:
 

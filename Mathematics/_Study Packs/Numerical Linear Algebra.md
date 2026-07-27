@@ -37,14 +37,14 @@ where $\sigma $ are singular values.
 | $\kappa(A) $ | Meaning |
 |--------------|---------|
 | $\approx 1 $ | Well-conditioned |
-| $ 10^k $ | ~$ k $ digits of accuracy lost |
+| $ 10^k $ | ~$  k $ digits of accuracy lost |
 | $\to \infty $ | Ill-conditioned, essentially singular |
 
 **Example**: $ A = \begin{bmatrix} 1 & 1 \\ 1 & 1+\epsilon \end{bmatrix} $
 
 $ $\kappa(A) \approx \frac{4}{\epsilon} $$
 
-For small $\epsilon $,$ A $ is nearly singular and solutions are sensitive.
+For small $\epsilon $,$  A $ is nearly singular and solutions are sensitive.
 
 ### 1.3 Sensitivity Theorem
 
@@ -52,7 +52,7 @@ For $ A\mathbf{x} = \mathbf{b} $, perturbation $\delta\mathbf{b} $:
 
 $ $\frac{\\|\delta\mathbf{x}\\|}{\\|\mathbf{x}\\|} \leq \kappa(A)\frac{\\|\delta\mathbf{b}\\|}{\\|\mathbf{b}\\|} $$
 
-### 1.4 Practical Impact
+# ## 1.4 Practical Impact
 
 Double precision has $\epsilon_{\text{mach}} \approx 2.2 \times 10^{-16} $.
 If $\kappa(A) = 10^{10} $, we lose ~10 digits → ~6 significant digits remain.
@@ -74,7 +74,7 @@ where:
 
 ### 2.2 Gaussian Elimination Connection
 
-$ U $ = row echelon form,$ L $ = product of inverse multipliers.
+$ U $ = row echelon form,$  L $ = product of inverse multipliers.
 
 ### 2.3 Algorithm (LU with Partial Pivoting)
 
@@ -102,7 +102,7 @@ where $ s $= number of row swaps.
 
 For tridiagonal $ A $ (bandwidth 1): LU decomposition is $ O(n) $.
 
-$ $ A = \begin{bmatrix} b_1 & c_1 & & \\ a_2 & b_2 & c_2 & \\ & \ddots & \ddots & \ddots \\ & & a_n & b_n \end{bmatrix}$$
+$ $  A = \begin{bmatrix} b_1 & c_1 & & \\ a_2 & b_2 & c_2 & \\ & \ddots & \ddots & \ddots \\ & & a_n & b_n \end{bmatrix}$$
 
 Thomas algorithm forward sweep, then backward substitution —$ O(n) $ complexity.
 
@@ -113,17 +113,17 @@ Thomas algorithm forward sweep, then backward substitution —$ O(n) $ complexit
 ### 3.1 Factorizatio
 n
 
-$ $ A = QR $$
+$ $  A = QR $$
 
-where $ Q $ is orthogonal ($ Q^TQ = I $),$ R $ is upper triangular.
+where $ Q $ is orthogonal ( $ Q^TQ = I $),$  R $ is upper triangular.
 
 ### 3.2 Gram-Schmidt Process
 
-Given columns $\mathbf{a}_1, \ldots, \mathbf{a}_n $ of $ A $:
+Given columns $\mathbf{a}_1, \ldots, \mathbf{a}_n $ of $  A $:
 
 $ $\mathbf{q}_1 = \frac{\mathbf{a}_1}{\\|\mathbf{a}_1\\|}\mathbf{q}_j = \frac{\mathbf{a}_j - \sum_{i=1}^{j-1}(\mathbf{q}_i^T\mathbf{a}_j)\mathbf{q}_i}{\\|\cdot\\|}, \\quad j = 2,\ldots,nr_{ij} = \mathbf{q}_i^T\mathbf{a}_j, \\quad r_{jj} = \\|\text{orthogonal component}\\| $$
 
-### 3.3 Modified Gram-Schmidt
+# ## 3.3 Modified Gram-Schmidt
 
 Better numerical stability than classical Gram-Schmidt. Reorthogonalize against each previous vector
 
@@ -153,7 +153,7 @@ Solve by back substitution. More stable than normal equations.
 
 ### 3.7 Complexity
 
-QR via Householder: $ O(mn^2) $ for $ m \times n $ matrix. QR solves $ O(n^2) $ per right-hand side.
+QR via Householder: $ O(mn^2) $ for $  m \times n $ matrix. QR solves $ O(n^2) $ per right-hand side.
 
 ---
 
@@ -161,13 +161,13 @@ QR via Householder: $ O(mn^2) $ for $ m \times n $ matrix. QR solves $ O(n^2) $ 
 
 ### 4.1 Factorization
 
-$ $ A = U\Sigma V^T $$
+$ $  A = U\Sigma V^T $$
 
-$ U $: orthogonal ($ m \times m $), $\Sigma $: diagonal ($ m \times n $), $ V $: orthogonal ($ n \times n $)
+$ U $: orthogonal ( $  m \times m $), $\Sigma $: diagonal ( $  m \times n $), $  V $: orthogonal ( $  n \times n $)
 
 ### 4.2 Computing SVD
 
-1. $ A^TA = V\Sigma^2 V^T $— eigendecomposition (symmetric $ n \times n $)
+1. $ A^TA = V\Sigma^2 V^T $— eigendecomposition (symmetric $  n \times n $)
 2. $\sigma_i = \sqrt{\lambda_i(A^TA)} $— singular values
 3.$\mathbf{u}_i = \frac{1}{\sigma_i}A\mathbf{v}_i $ — left singular vectors
 
@@ -180,7 +180,9 @@ $ $
 A_k = \sum_{i=1}^k \sigma_i\mathbf{u}_i\mathbf{v}_i^T\\|A - A_k\\|_F = \sqrt{\sigma_{k+1}^2 + \sigma_{k+2}^2 + \cdots
 }
 
-$$### 4.4 Pseudoinverse via SVD $ $ A^+ = V\Sigma^+U^T $$
+$$
+
+# ## 4.4 Pseudoinverse via SVD $ $ A^+ = V\Sigma^+U^T $$
 
 where $\Sigma^+$ has $\sigma_i^{-1} $ replaced by 0 when $\sigma_i < \epsilon $.
 
@@ -205,13 +207,13 @@ Each component updated in parallel:
 
 $ $ x_i^{(k+1)} = \frac{1}{a_{ii}}\left(b_i - \sum_{j \neq i}a_{ij}x_j^{(k)}\right)$$
 
-### 5.2 Gauss-Seidel Method
+# ## 5.2 Gauss-Seidel Method
 
 Sequential update (uses latest values)
 
 $ $ x_i^{(k+1)} = \frac{1}{a_{ii}}\left(b_i - \sum_{j<i}a_{ij}x_j^{(k+1)} - \sum_{j>i}a_{ij}x_j^{(k)}\right)$$
 
-### 5.3 Successive Over-Relaxation (SOR
+# ## 5.3 Successive Over-Relaxation (SOR
 )
 
 $ $ x_i^{(k+1)} = (1-\omega)x_i^{(k)} + \frac{\omega}{a_{ii}}\left(b_i - \sum_{j < i}a_{ij}x_j^{(k+1)} - \sum_{j > i}a_{ij}x_j^{(k)}\right)$$

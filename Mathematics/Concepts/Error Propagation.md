@@ -16,19 +16,19 @@ updated: 2026-07-27
 
 ### 1.1 General Law of Error Propagation
 
-For a function $y = f(x_1, x_2, \dots, x_n) $, the variance of $ y $ is:
+For a function $y = f(x_1, x_2, \dots, x_n) $, the variance of $  y $ is:
 
 $ $\sigma_y^2 = \sum_{i=1}^n \sum_{j=1}^n \frac{\partial f}{\partial x_i} \frac{\partial f}{\partial x_j} \text{Cov}(x_i, x_j)
 
 $$
 
-**For independent observations** ($\text{Cov}(x_i, x_j) = 0 $ when $ i \neq j $):
+**For independent observations** ( $\text{Cov}(x_i, x_j) = 0 $ when $  i \neq j $):
 
 $ $\sigma_y^2 = \sum_{i=1}^n \left(\frac{\partial f}{\partial x_i}\right)^2 \sigma_{x_i}^2
 
 $$
 
-### 1.2 Matrix Form (General)
+# ## 1.2 Matrix Form (General)
 
 For a vector transformation $\mathbf{y} = \mathbf{f}(\mathbf{x}) $:
 
@@ -48,7 +48,7 @@ $ $\mathbf{f}(\mathbf{x}) \approx \mathbf{f}(\mathbf{x}_0) + \mathbf{J}(\mathbf{
 
 $$
 
-Taking variance of both sides:$ $\text{Var}[\mathbf{f}(\mathbf{x})] = \text{Var}[\mathbf{J}\mathbf{\delta}] = \mathbf{J}\,\text{Var}[\mathbf{\delta}]\,\mathbf{J}^T = \mathbf{J}\mathbf{C}_x\mathbf{J}^T
+Taking variance of both sides: $ $\text{Var}[\mathbf{f}(\mathbf{x})] = \text{Var}[\mathbf{J}\mathbf{\delta}] = \mathbf{J}\,\text{Var}[\mathbf{\delta}]\,\mathbf{J}^T = \mathbf{J}\mathbf{C}_x\mathbf{J}^T
 
 $$
 
@@ -56,7 +56,7 @@ $$
 
 ## 2. Common Propagation Rules
 
-| Operation | Error ($\sigma_y $) | Notes |
+| Operation | Error ( $\sigma_y $) | Notes |
 |-----------|-------------------|-------|
 | $ y = a + b $ | $\sigma_y^2 = \sigma_a^2 + \sigma_b^2 + 2\sigma_{ab} $ | Add variances + 2×covariance |
 | $ y = a - b $ | $\sigma_y^2 = \sigma_a^2 + \sigma_b^2 - 2\sigma_{ab} $ | Difference: covariance subtracts |
@@ -69,7 +69,7 @@ $$
 | $ y = \cos a $ | $\sigma_y = |\sin a|\,\sigma_a $ | |
 | $ y = \sqrt{a} $ | $\frac{\sigma_y}{y} = \frac{1}{2}\frac{\sigma_a}{a} $ | Square root: half relative error |
 
-**For uncorrelated variables** ($\sigma_{ab} = 0 $): the additive rule becomes $\sigma_y^2 = \sigma_a^2 + \sigma_b^2 $, and the product/quotient relative rules simplify to:
+**For uncorrelated variables** ( $\sigma_{ab} = 0 $): the additive rule becomes $\sigma_y^2 = \sigma_a^2 + \sigma_b^2 $, and the product/quotient relative rules simplify to:
 
 $ $\frac{\sigma_y}{|y|} = \sqrt{\left(\frac{\sigma_a}{a}\right)^2 + \left(\frac{\sigma_b}{b}\right)^2
 }
@@ -93,7 +93,7 @@ $ $\mathbf{C}_{\hat{x}\hat{x}} = \hat{\sigma}_0^2 (\mathbf{A}^T\mathbf{P}\mathbf
 
 $$**Propagation to derived quantities** (e.g., distance between two adjusted points):
 
-$ $ d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\sigma_d^2 = \mathbf{J}\mathbf{C}_{\hat{x}\hat{x}}\mathbf{J}^T $$
+$ $  d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\sigma_d^2 = \mathbf{J}\mathbf{C}_{\hat{x}\hat{x}}\mathbf{J}^T $$
 
 where $\mathbf{J} $ contains partial derivatives $\partial d/\partial x_1, \partial d/\partial y_1, \partial d/\partial x_2, \partial d/\partial y_2 $.
 
@@ -141,18 +141,20 @@ Jacobian: $ $
 \end{bmatrix
 }
 
-$$ ### 4.3 Leveling Error Propagation $ $\sigma_H = \sigma \sqrt{n} = \epsilon \sqrt{L}
+$$
+
+# ## 4.3 Leveling Error Propagation $ $\sigma_H = \sigma \sqrt{n} = \epsilon \sqrt{L}
 
 $$
 
-where $\sigma $= standard deviation per setup,$ n $ = number of setups,$\epsilon $= standard deviation per km,$ L $ = line length in km.
+where $\sigma $= standard deviation per setup,$  n $ = number of setups,$\epsilon $= standard deviation per km,$  L $ = line length in km.
 
 **Classic rule of thumb:**$\epsilon \approx 1.5 $ mm/$\sqrt{\text{km}} $ for precision leveling,$\approx 3 $ mm/$\sqrt{\text{km}} $ for technical leveling.
 
 ### 4.4 Distance Measurement Erro
 r
 
-$ $ D = ct/2 \implies \sigma_D^2 = \left(\frac{c}{2}\sigma_t\right)^2 + \left(\frac{t}{2}\sigma_c\right)^2 $$| Source | Typical $\sigma $ | Contribution |
+$ $  D = ct/2 \implies \sigma_D^2 = \left(\frac{c}{2}\sigma_t\right)^2 + \left(\frac{t}{2}\sigma_c\right)^2 $ $| Source | Typical $\sigma $ | Contribution |
 |--------|-----------------|-------------|
 | Time-of-flight | 100 ps | 15 mm |
 | Refractive index | 1 ppm | 1 mm/km |
@@ -174,7 +176,7 @@ $ $ D = ct/2 \implies \sigma_D^2 = \left(\frac{c}{2}\sigma_t\right)^2 + \left(\f
 
 ## 6. Common Mistakes
 
-1. **Assuming errors always add linearly:** For independent errors, use RSS ($\sqrt{\sum\sigma_i^2} $), not direct sum.
+1. **Assuming errors always add linearly:** For independent errors, use RSS ( $\sqrt{\sum\sigma_i^2} $), not direct sum.
 2. **Ignoring covariance:** When inputs are correlated, $\sigma_y^2 = \sum\sigma_i^2 + 2\sum\sigma_{ij} $— the covariance term can double or cancel the variance.
 3. **Wrong Jacobian:** The chain rule applies; verify each $\partial f/\partial x_i $ is correct for your specific function.
 4. **Neglecting nonlinearity:** For large $\sigma $, first-order propagation under/over-estimates. Check with Monte Carlo.
@@ -198,7 +200,7 @@ $ $ D = ct/2 \implies \sigma_D^2 = \left(\frac{c}{2}\sigma_t\right)^2 + \left(\f
 
 ## Study Problems
 
-1. **Recall:** A distance of 100 m is measured with $\sigma = 2 $ mm. What is the propagated error in $ y = 2.5 \times \text{distance} $?
+1. **Recall:** A distance of 100 m is measured with $\sigma = 2 $ mm. What is the propagated error in $  y = 2.5 \times \text{distance} $?
 2. **Application:** A GNSS survey reports $\sigma_X = 5 $ mm,$\sigma_Y = 5 $ mm,$\sigma_Z = 15 $ mm, all uncorrelated. What is the propagated horizontal position error? Vertical error?
 3. **Derivation:** Show that an angle $\theta = \arctan(Y/X) $ has error $\sigma_\theta = \sqrt{\sigma_X^2 + \sigma_Y^2}/D $.
 4. **Real-world:** Design a leveling line 2 km long with required accuracy 2 mm (95% confidence). Assuming $\sigma = 0.3 $ mm per setup, how many setups total and per km?

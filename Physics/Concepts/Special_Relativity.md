@@ -22,7 +22,7 @@ updated: 2026-07-27
 
 ## 2. Lorentz Transformations
 
-### Coordinates Transformation ($ x, t 	o x', t'$) for Frame Moving at $ v $ along $ x $
+### Coordinates Transformation ( $ x, t 	o x', t'$) for Frame Moving at $  v $ along $  x $
 
 $ $
 
@@ -37,7 +37,7 @@ ight)
 
 $$
 
-### Worked Example: GPS Time Dilation (Special Relativity)
+# ## Worked Example: GPS Time Dilation (Special Relativity)
 For a GPS satellite at orbital speed $ v = 3874 $ m/s:
 1.$eta = v/c = 3874/3	imes10^8 = 1.29 	imes 10^{-5} $ 2.$ \gamma = 1/\sqrt{1-eta^2} pprox 1 + 8.3	imes 10^{-11} $ 3. Per day: $ \Delta t = v^2/(2c^2) 	imes T = -7.2\,\mu	ext{s} $ (satellite clock runs *slower*)
 
@@ -46,16 +46,16 @@ For a GPS satellite at orbital speed $ v = 3874 $ m/s:
 ## 3. Consequences
 
 ### Time Dilation
-A clock at rest in frame $ S' $ runs slow when viewed from $ S $:
+A clock at rest in frame $ S' $ runs slow when viewed from $  S $:
 
 $ $ \Delta t = \gamma \Delta t_0
 
 $$
 
-### Length Contraction
-A rod at rest in $ S' $ with length $ L_0 $ appears shorter in $ S $:
+# ## Length Contraction
+A rod at rest in $ S' $ with length $ L_0 $ appears shorter in $  S $:
 
-$ $
+$ $ 
 
 L = rac{L_0}{\gamma
 }
@@ -74,7 +74,7 @@ E = mc^2E^2 = (pc)^2 + (mc^2)^
 
  \mathbf{p} = \gamma m \mathbf{v}
 
-$ For a photon: $ E = pc $ (rest mass = 0).
+$ For a photon: $  E = pc $ (rest mass = 0).
 
 ### Doppler Shif
 t
@@ -140,16 +140,16 @@ Plot $ x $ vs. $ ct $:
 ## 6. Common Pitfalls
 1. **Symmetry of time dilation**: Both observers see *the other* clock as slower. The resolution is *not* a true paradox: observers disagree on simultaneity.
 2. **Twin paradox**: Resolved because traveling twin accelerates and changes frames; returning twin is younger.
-3. **Forgetting γ**: At everyday speeds ($eta < 10^{-4} $), γ − 1 ≈ β²/2. Always expand for small β.
+3. **Forgetting γ**: At everyday speeds ( $eta < 10^{-4} $), γ − 1 ≈ β²/2. Always expand for small β.
 
 ---
 
 ## 7. Worked Examples
 
 ### (a) Muon Decay
-Muons produced at 60 km altitude travel at $ v = 0.998c $ ($ \gamma = 15.8 $). Lifetime in lab frame: $ au = 2.2\,\mu	ext{s} $.
+Muons produced at 60 km altitude travel at $ v = 0.998c $ ( $ \gamma = 15.8 $). Lifetime in lab frame: $ au = 2.2\,\mu	ext{s} $.
 
-- Lab distance before decay: $ L = v	au = 0.998c 	imes 2.2\,\mu	ext{s} = 660 $ m (not enough!).
+- Lab distance before decay: $ L = v	au = 0.998c 	imes 2.2\,\mu	ext{s} = 660 $  m (not enough!).
 
 - Proper lifetime: $ au_0 = 	au/\gamma = 0.14\,\mu	ext{s} $.
 
@@ -158,7 +158,7 @@ Muons produced at 60 km altitude travel at $ v = 0.998c $ ($ \gamma = 15.8 $).
 ### (b) Relativistic Kinetic Energy
 For electron at $ v = 0.9c $:
 
-- $ K = (\gamma - 1)mc^2 = (2.29 - 1) 	imes 0.511\,	ext{MeV} = 0.66\,	ext{MeV} $- Classical: $ K = rac{1}{2}mv^2 $ would give $ 0.5	imes0.511	imes0.81 = 0.21\,	ext{MeV} $ (off by factor 3).
+- $ K = (\gamma - 1)mc^2 = (2.29 - 1) 	imes 0.511\,	ext{MeV} = 0.66\,	ext{MeV} $- Classical: $  K = rac{1}{2}mv^2 $ would give $ 0.5	imes0.511	imes0.81 = 0.21\,	ext{MeV} $ (off by factor 3).
 
 ---
 

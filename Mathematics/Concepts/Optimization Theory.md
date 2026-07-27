@@ -26,7 +26,7 @@ $ $
 
 | Category | Conditions |
 |----------|------------|
-| **Linear Programming (LP)** | $ f_i $ linear, $ x \in \mathbb{R}^n $ |
+| **Linear Programming (LP)** | $ f_i $ linear, $  x \in \mathbb{R}^n $ |
 | **Quadratic (QP)** | $ f_0 $ quadratic, constraints linear |
 | **Convex** | $ f_i $ convex, $ h_i $ affine |
 | **Non-convex** | General nonlinear |
@@ -38,7 +38,7 @@ A function $ f $ is **convex** if:
 
 $ $ f(\theta x + (1-\theta)y) \leq \theta f(x) + (1-\theta)f(y), \quad \forall x, y, \theta \in [0,1]$$
 
-### Key Properties
+# ## Key Properties
 
 - Local minimum = Global minimum for convex problems
 - Any local minimizer of a convex function is a global minimizer
@@ -51,18 +51,18 @@ $ $ f(\theta x + (1-\theta)y) \leq \theta f(x) + (1-\theta)f(y), \quad \forall x
 | $ x^2 $ | $\mathbb{R} $ | Yes |
 | $ e^x $ | $\mathbb{R} $ | Yes |
 | $-\log x $|$\mathbb{R}_{++} $ | Yes |
-| $\|x\|_p $ ($ p \geq 1 $) | $\mathbb{R}^n $ | Yes |
-| $ x^T P x $ ($ P \succeq 0 $) | $\mathbb{R}^n $ | Yes |
+| $\|x\|_p $ ( $  p \geq 1 $) | $\mathbb{R}^n $ | Yes |
+| $ x^T P x $ ( $  P \succeq 0 $) | $\mathbb{R}^n $ | Yes |
 
 ## 3. Unconstrained Optimization
 
 ### First-Order Necessary Condition
 
-If $ x^*$ is a local minimizer and $ f $ is differentiable:$ $\nabla f(x^*) = 0
+If $ x^*$ is a local minimizer and $  f $ is differentiable: $ $\nabla f(x^*) = 0
 
 $$
 
-### Second-Order Conditions
+# ## Second-Order Conditions
 
 - **Necessary:** $\nabla^2 f(x^*) \succeq 0 $ (positive semidefinite)
 - **Sufficient:** $\nabla f(x^*) = 0 $ and $\nabla^2 f(x^*) \succ 0 $ (positive definite)
@@ -87,7 +87,7 @@ flowchart TD
 
 **Convergence rates:**
 - Convex, Lipschitz gradient: $ O(1/k) $
-- Strongly convex: Linear ($ O(\rho^k) $, $\rho < 1 $)
+- Strongly convex: Linear ( $ O(\rho^k) $, $\rho < 1 $)
 
 ### Newton's Method
 
@@ -146,13 +146,13 @@ $ $
 
 $$
 
-### Simplex Method
+# ## Simplex Method
 
 Moves along vertices of the feasible polyhedron. Polynomial-time in practice, exponential worst-case.
 
 ### Interior Point Methods
 
-Follow the central path through the interior. Polynomial-time ($ O(\sqrt{n} L) $).
+Follow the central path through the interior. Polynomial-time ( $ O(\sqrt{n} L) $).
 
 ### Duality in LP
 
@@ -180,7 +180,7 @@ Dual: max $ b^T y $, s.t. $ A^T y \leq c $
 
 ## Practice Problems
 
-1. Solve $\min x^2 + y^2 $ subject to $ x + y = 1 $ using Lagrange multipliers.
+1. Solve $\min x^2 + y^2 $ subject to $  x + y = 1 $ using Lagrange multipliers.
 2. Derive the dual of $\min \|Ax - b\|^2 + \lambda \|x\|_1 $ (LASSO).
 3. Show that $ f(x) = \log \sum e^{x_i}$ is convex.
 4. Implement gradient descent for logistic regression.

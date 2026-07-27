@@ -13,15 +13,15 @@ updated: 2026-07-27
 
 ## 1. Definition
 
-For any matrix $A \in \mathbb{R}^{m \times n} $ ($ m \geq n $):
+For any matrix $A \in \mathbb{R}^{m \times n} $ ( $  m \geq n $):
 
-$ $ A = Q \cdot R $$
+$ $  A = Q \cdot R $$
 
 where:
 - $ Q \in \mathbb{R}^{m \times m} $ is **orthogonal**: $ Q^T Q = I $
 - $ R \in \mathbb{R}^{m \times n} $ is **upper triangular**
 
-For the **thin (reduced) QR**: $ Q \in \mathbb{R}^{m \times n} $ with orthonormal columns, $ R \in \mathbb{R}^{n \times n} $ upper triangular.
+For the **thin (reduced) QR**: $ Q \in \mathbb{R}^{m \times n} $ with orthonormal columns, $  R \in \mathbb{R}^{n \times n} $ upper triangular.
 
 ---
 
@@ -59,13 +59,13 @@ MGS is numerically stable and equivalent to Householder in exact arithmetic.
 
 A Householder reflector:
 
-$ $ H = I - 2uu^T, \quad \|u\| = 1 $$
+$ $  H = I - 2uu^T, \quad \|u\| = 1 $$
 
-reflects $ x $ to $\pm \|x\| e_1 $. Apply $ n $ reflectors to zero out subdiagonal entries:
+reflects $ x $ to $\pm \|x\| e_1 $. Apply $  n $ reflectors to zero out subdiagonal entries:
 
 $ $ H_n H_{n-1} \cdots H_1 A = R $$
 
-$ $ Q = H_1 H_2 \cdots H_n = Q^T \quad (\text{since } H^T = H)$$
+$ $  Q = H_1 H_2 \cdots H_n = Q^T \quad (\text{since } H^T = H)$$
 
 ---
 
@@ -79,7 +79,7 @@ $ $\|a_1\| = \sqrt{2}, \quad u = \frac{a_1 - \|a_1\|e_1}{\|a_1 - \|a_1\|e_1\|} =
 
 $$
 
-Apply $ H_1 $ to get:$ $ R = \begin{pmatrix} -\sqrt{2} & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{pmatrix}, \quad Q = \begin{pmatrix} -1/\sqrt{2} & 1/\sqrt{2} \\ -1/\sqrt{2} & -1/\sqrt{2} \\ 0 & 0 \end{pmatrix}$$
+Apply $ H_1 $ to get: $ $  R = \begin{pmatrix} -\sqrt{2} & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{pmatrix}, \quad Q = \begin{pmatrix} -1/\sqrt{2} & 1/\sqrt{2} \\ -1/\sqrt{2} & -1/\sqrt{2} \\ 0 & 0 \end{pmatrix}$$
 
 ---
 
@@ -87,7 +87,7 @@ Apply $ H_1 $ to get:$ $ R = \begin{pmatrix} -\sqrt{2} & 0 \\ 0 & \sqrt{2} \\ 0 
 
 ### Solving Least Squares: $ A\hat{x} \approx b $
 
-$ $ A = QR \implies QR\hat{x} = b \implies R\hat{x} = Q^T b $$
+$ $  A = QR \implies QR\hat{x} = b \implies R\hat{x} = Q^T b $$
 
 Back-substitute the $ n \times n $ triangular system. Cost: $ O(2mn^2 - \frac{2n^3}{3}) $.
 
@@ -108,7 +108,7 @@ The **QR algorithm** iterates $ A_k = Q_k R_k $, $ A_{k+1} = R_k Q_k $ to conver
 | Property | LU | QR |
 |----------|----|----|
 | Square systems | ✓ Best | ✓ Overkill |
-| Rectangular ($ m > n $) | ✗ | ✓ Best |
+| Rectangular ( $ m > n $) | ✗ | ✓ Best |
 | Least squares | Indirect | Direct |
 | Numerical stability | Needs pivoting | Always stable |
 | SPD systems | Cholesky wins | Works but slower |

@@ -35,7 +35,7 @@ Kalkulus I covers the fundamental concepts of single-variable calculus: limits, 
 - Exponential and logarithmic functions
 
 #### 1.2 Limits
-**Definition**: $\lim_{x o a} f(x) = L $ means $ f(x) $ can be made arbitrarily close to $ L $ by taking $ x $ sufficiently close to $ a $.
+**Definition**: $\lim_{x o a} f(x) = L $ means $ f(x) $ can be made arbitrarily close to $  L $ by taking $  x $ sufficiently close to $  a $.
 
 **Properties**:
 
@@ -55,10 +55,10 @@ Kalkulus I covers the fundamental concepts of single-variable calculus: limits, 
 
 $ $\lim_{x o 0} \frac{\sin x}{x} = 1, \\quad \lim_{x o 0} \frac{e^x - 1}{x} = 1
 
-$ $### # 1.3 Continuity $ f $ is continuous at $ a $ if:
+$ $### # 1.3 Continuity $  f $ is continuous at $  a $ if:
 1.$ f(a) $ exists
 2.$\lim_{x o a} f(x) $ exists
-3.$\lim_{x o a} f(x) = f(a) $**Intermediate Value Theorem**: If $ f $ is continuous on $ [a,b] $ and $ f(a) < N < f(b) $, then $\\exists c \in (a,b): f(c) = N $.
+3.$\lim_{x o a} f(x) = f(a) $**Intermediate Value Theorem**: If $  f $ is continuous on $ [a,b] $ and $ f(a) < N < f(b) $, then $\\exists c \in (a,b): f(c) = N $.
 
 ### Weeks 3-5: Derivatives
 
@@ -92,7 +92,7 @@ $ $ f'(x) = \lim_{h o 0} \frac{f(x+h) - f(x)}{h}$ $**Interpretations**:
 | $\\arctan x $|$ 1/(1+x^2) $ |
 
 #### 2.4 Implicit Differentiation
-Differentiate both sides of an equation treating $ y $ as function of $ x $.
+Differentiate both sides of an equation treating $ y $ as function of $  x $.
 
 **Example**: $ x^2 + y^2 = 25 $→$ 2x + 2yy' = 0 $→$ y' = -x/y $#### 2.5 Higher-Order Derivatives $ f''(x) $, $ f'''(x) $, $ f^{(n)}(x) $— used in Taylor series and concavity.
 
@@ -108,7 +108,7 @@ Differentiate both sides of an equation treating $ y $ as function of $ x $.
 
 #### 3.1 Extrema
 
-- **Fermat's Theorem**: If $ f $ has local extremum at $ c $ and $ f'(c) $ exists, then $ f'(c) = 0 $.
+- **Fermat's Theorem**: If $ f $ has local extremum at $  c $ and $ f'(c) $ exists, then $ f'(c) = 0 $.
 
 - **Critical numbers**: $ f'(c) = 0 $ or $ f'(c) $ DNE
 
@@ -157,7 +157,7 @@ $ $\lim \frac{f}{g} = \lim \frac{f'}{g'} $ $
 
 ### Weeks 9-12: Integrals
 
-#### 4.1 Antiderivatives $ F' = f $→$ F $ is antiderivative of $ f $.
+#### 4.1 Antiderivatives $ F' = f $→$  F $ is antiderivative of $  f $.
 General antiderivative: $ F(x) + C $#### 4.2 Indefinite Integral
 s
 
@@ -197,10 +197,10 @@ sA = \int_a^b |f(x) - g(x)|\,dx $ $
 sA = \int_a^b |f(x) - g(x)|\,dx
 
 #### 5.2 Volumes
-**Disk**: $ V = i\int_a^b [R(x)]^2\,dx $**Washer**: $ V = i\int_a^b ([R(x)]^2 - [r(x)]^2)\,dx $**Shell**: $ V = 2i\int_a^b x\cdot f(x)\,dx $#### 5.3 Wor
+**Disk**: $ V = i\int_a^b [R(x)]^2\,dx $**Washer**: $  V = i\int_a^b ([R(x)]^2 - [r(x)]^2)\,dx $**Shell**: $  V = 2i\int_a^b x\cdot f(x)\,dx $#### 5.3 Wor
 k
 
-$ $ W = \int_a^b F(x)\,dx $ $
+$ $  W = \int_a^b F(x)\,dx $ $
 
 ---
 
@@ -216,15 +216,15 @@ $ $\lim_{x o 0} \frac{3x}{5x} \cdot \frac{\sin 3x}{3x} \cdot \frac{5x}{\sin 5x} 
 ### Example 2: Optimization
 Find the dimensions of a cylinder with volume 1000 cm³ that minimizes surface area.
 
-**Solution**: $ V = i r^2 h = 1000 $, so $ h = 1000/(i r^2) $
+**Solution**: $ V = i r^2 h = 1000 $, so $  h = 1000/(i r^2) $
 $ S = 2i r^2 + 2i r h = 2i r^2 + 2000/r $
-$ S' = 4i r - 2000/r^2 = 0 $→$ r^3 = 500/i $→$ r \approx 5.42 $ cm $ h = 1000/(i r^2) \approx 10.84 $ cm
+$ S' = 4i r - 2000/r^2 = 0 $→$ r^3 = 500/i $→$  r \approx 5.42 $ cm $  h = 1000/(i r^2) \approx 10.84 $ cm
 
 ### Example 3: Definite Integral
 Evaluate $\int_0^{i/2} \sin^3 x \cos^2 x\,dx $.
 
 **Solution**:
-$\int \sin^3 x \cos^2 x\,dx = \int \sin x (1-\cos^2 x) \cos^2 x\,dx $ Let $ u = \cos x $, $ du = -\sin x\,dx $
+$\int \sin^3 x \cos^2 x\,dx = \int \sin x (1-\cos^2 x) \cos^2 x\,dx $ Let $  u = \cos x $, $ du = -\sin x\,dx $
 $= -\int (1-u^2)u^2\,du = -\int (u^2 - u^4)\,du = -\frac{u^3}{3} + \frac{u^5}{5} $
 $= -\frac{\cos^3 x}{3} + \frac{\cos^5 x}{5} $ From 0 to $ i/2 $: $ [0] - [-\frac{1}{3} + \frac{1}{5}] = \frac{1}{3} - \frac{1}{5} = \frac{2}{15} $---
 
@@ -232,7 +232,7 @@ $= -\frac{\cos^3 x}{3} + \frac{\cos^5 x}{5} $ From 0 to $ i/2 $: $ [0] - [-\frac
 
 ### Problem Set 1: Limits
 1.$\lim_{x o 2} \frac{x^2-4}{x-2} $ 2.$\lim_{x o \infty} \frac{3x^2+2x+1}{5x^2-7} $ 3.$\lim_{x o 0} \frac{e^x - 1 - x}{x^2} $### Problem Set 2: Derivatives
-1.$ y = x^2\sin x + e^x\ln x $ 2.$ y = \frac{an x}{1+x^2} $ 3.$ y = (\sin x)^x $ (logarithmic differentiation)
+1.$ y = x^2\sin x + e^x\ln x $ 2.$  y = \frac{an x}{1+x^2} $ 3.$  y = (\sin x)^x $ (logarithmic differentiation)
 
 ### Problem Set 3: Applications
 1. Find absolute extrema of $ f(x) = x^3 - 3x^2 + 1 $ on $ [-1, 4] $ 2. A farmer has 2400 ft of fencing. What is the largest rectangular area that can be enclosed?

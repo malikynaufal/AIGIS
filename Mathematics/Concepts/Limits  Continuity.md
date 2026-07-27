@@ -17,19 +17,19 @@ The **limit** describes the value a function approaches as the input approaches 
 $$\text{Limit: } \lim_{x \to a} f(x) = L \quad \Longleftrightarrow \quad \text{f(x) approaches L as x approaches a} $ $## The Formal Definition of a Limit
 
 ### Intuitive Definition
-As $ x \to a $, the function $ f(x) $ approaches the value $ L $ written:
+As $ x \to a $, the function $ f(x) $ approaches the value $  L $ written:
 
 $ $\lim_{x \to a} f(x) = L
 
 $$
 
-### Epsilon-Delta Definition ($\varepsilon $–$\delta $)
+# ## Epsilon-Delta Definition ( $\varepsilon $–$\delta $)
 
 The rigorous definition is:
 
 $ $\forall\, \varepsilon > 0,\; \exists\, \delta > 0 \text{ such that } 0 < |x - a| < \delta \implies |f(x) - L| < \varepsilon
 
-$$**Artinya** (meaning): For any desired "tolerance"$\varepsilon $ around $ L $ (seberapun kecilnya), there exists a corresponding tolerance $\delta $ around $ a $ such that whenever $ x $ is within $\delta $ of $ a $ (but not equal to $ a $),$ f(x) $ is within $\varepsilon $ of $ L $.
+$$**Artinya** (meaning): For any desired "tolerance"$\varepsilon $ around $  L $ (seberapun kecilnya), there exists a corresponding tolerance $\delta $ around $  a $ such that whenever $  x $ is within $\delta $ of $  a $ (but not equal to $  a $),$ f(x) $ is within $\varepsilon $ of $  L $.
 
 ### One-Sided Limits (Limit Satu Sisi)
 
@@ -41,7 +41,9 @@ The two-sided limit exists **if and only if** both one-sided limits exist and ar
 
 $ $\lim_{x \to a} f(x) = L \iff \lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L
 
-$$### Example: Epsilon-Delta Proof that $\lim_{x \to 3} (2x+1) = 7 $ Let $\varepsilon > 0 $ be given. We need $\delta > 0 $ such that $ $0 < |x - 3| < \delta \implies |(2x+1) - 7| < \varepsilon $$
+$$
+
+# ## Example: Epsilon-Delta Proof that $\lim_{x \to 3} (2x+1) = 7 $ Let $\varepsilon > 0 $ be given. We need $\delta > 0 $ such that $ $ 0 < |x - 3| < \delta \implies |(2x+1) - 7| < \varepsilon $$
 
 Observe: $|(2x+1)-7| = |2x-6| = 2|x-3| $.
 
@@ -49,10 +51,12 @@ Choose $\delta = \varepsilon/2 $. Then:
 
 $ $|x-3| < \delta = \varepsilon/2 \implies 2|x-3| < \varepsilon \implies |(2x+1)-7| < \varepsilon \quad \checkmark
 
-$$## Continuity (Kekontinuan)
+$$
+
+# # Continuity (Kekontinuan)
 
 ### Definition
-A function $ f $ is **continuous at**$ a $ (kontinu pada $ a $) if all three conditions are met:
+A function $ f $ is **continuous at**$  a $ (kontinu pada $  a $) if all three conditions are met:
 
 1. $ f(a) $ is defined.
 2.$\lim_{x \to a} f(x) $ exists.
@@ -62,7 +66,7 @@ $ $\lim_{x \to a} f(x) = f(a)
 
 $$
 
-If any condition fails,$ f $ has a **discontinuity** (ketidakkontinuan) at $ a $.
+If any condition fails,$ f $ has a **discontinuity** (ketidakkontinuan) at $  a $.
 
 ### Types of Discontinuities (Jenis Ketidakkontinuan)
 
@@ -81,7 +85,7 @@ All of the following are **continuous on their domains** (kontinu pada daerah de
 
 - Rational functions (kecuali di titik nol penyebut)
 
-- Trigonometric functions ($\sin, \cos, \tan, \ldots $)
+- Trigonometric functions ( $\sin, \cos, \tan, \ldots $)
 
 - Exponential and logarithmic functions
 
@@ -89,19 +93,19 @@ All of the following are **continuous on their domains** (kontinu pada daerah de
 
 ### Intermediate Value Theorem (Teorema Nilai Antara / TVA)
 
-If $ f $ is continuous on $ [a, b] $ and $ N $ is any value between $ f(a) $ and $ f(b) $, then there exists at least one $ c \in (a, b) $ such that $ f(c) = N $.
+If $ f $ is continuous on $ [a, b] $ and $  N $ is any value between $ f(a) $ and $ f(b) $, then there exists at least one $  c \in (a, b) $ such that $ f(c) = N $.
 
 $ $\text{Continuous on } [a,b],\; f(a) < N < f(b) \;\Longrightarrow\; \exists\, c \in (a,b): f(c) = N
 
-$$**Application: Root existence (keberadaan akar).** If $ f(a) < 0 $ and $ f(b) > 0 $ and $ f $ is continuous, then $\exists\, c \in (a,b) $ with $ f(c) = 0 $. This justifies the **bisection method** (metode bagi dua) for root-finding — the fundamental convergence proof for numerical root-finders.
+$$**Application: Root existence (keberadaan akar).** If $ f(a) < 0 $ and $ f(b) > 0 $ and $  f $ is continuous, then $\exists\, c \in (a,b) $ with $ f(c) = 0 $. This justifies the **bisection method** (metode bagi dua) for root-finding — the fundamental convergence proof for numerical root-finders.
 
 ### Extreme Value Theorem (Teorema Nilai Ekstrim)
 
-If $ f $ is continuous on a **closed interval**$ [a, b] $, then $ f $ attains both an **absolute maximum** (nilai maksimum mutlak) and an **absolute minimum** (nilai minimum mutlak) on $ [a, b] $. This justifies optimization problems over bounded domains — critical in constrained least-squares adjustment.
+If $ f $ is continuous on a **closed interval**$ [a, b] $, then $  f $ attains both an **absolute maximum** (nilai maksimum mutlak) and an **absolute minimum** (nilai minimum mutlak) on $ [a, b] $. This justifies optimization problems over bounded domains — critical in constrained least-squares adjustment.
 
 ## L'Hôpital's Rule (Aturan L'Hôpital)
 
-L'Hôpital's Rule evaluates limits of the indeterminate forms $\frac{0}{0} $ (nol/nol) or $\frac{\infty}{\infty} $ (tak hingga/tak hingga) by differentiating numerator and denominator separately:$ $\text{If } \lim_{x \to a} f(x) = 0 \text{ and } \lim_{x \to a} g(x) = 0 \;\; (\text{or both } \to \infty)
+L'Hôpital's Rule evaluates limits of the indeterminate forms $\frac{0}{0} $ (nol/nol) or $\frac{\infty}{\infty} $ (tak hingga/tak hingga) by differentiating numerator and denominator separately: $ $\text{If } \lim_{x \to a} f(x) = 0 \text{ and } \lim_{x \to a} g(x) = 0 \;\; (\text{or both } \to \infty)
 
 $$$$\text{and } \lim_{x \to a} \frac{f'(x)}{g'(x)} \text{ exists, then } \lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}
 
@@ -123,7 +127,7 @@ $$**Example 3:** Multiple applications may be needed
 
 $ $\lim_{x \to 0} \frac{1 - \cos x}{x^2} = \frac{0}{0} \xrightarrow{\text{L'Hôpital}} \frac{\sin x}{2x} = \frac{0}{0} \xrightarrow{\text{L'Hôpital}} \frac{\cos x}{2} = \frac{1}{2} $$
 
-### Indeterminate Forms
+# ## Indeterminate Forms
 Common indeterminate forms requiring manipulation before L'Hôpital can be applied (or requiring other techniques):
 
 | Form | Strategy | Strategy | Bahasa Indonesia |
@@ -138,7 +142,7 @@ Common indeterminate forms requiring manipulation before L'Hôpital can be appli
 
 | Application | Concept Used |
 |-------------|-------------|
-| Numerical differentiation of observation data | Limit definition of the derivative: $ f'(x) \approx \frac{f(x+h)-f(x)}{h} $ as $ h \to 0 $ |
+| Numerical differentiation of observation data | Limit definition of the derivative: $ f'(x) \approx \frac{f(x+h)-f(x)}{h} $ as $  h \to 0 $ |
 | Convergence of least-squares iteration | Continuity of the objective function ensures iterative methods converge to the minimiser |
 | Geoid height computation via spherical harmonics | The harmonic series converges as a limit (partial sum $\to $ infinite series) |
 | GPS baseline convergence criteria | Iterative solvers terminate when $\ |\mathbf{x}_{k+1} - \mathbf{x}_k\| < \varepsilon $— an $\varepsilon $-$\delta $ idea in practice |
@@ -148,7 +152,7 @@ Common indeterminate forms requiring manipulation before L'Hôpital can be appli
 
 ## Formalising Convergence (Mengformalisasi Konvergensi)
 
-A sequence $\{a_n\} $**converges** to $ L $ if
+A sequence $\{a_n\} $**converges** to $  L $ if
 
 $ $\forall\, \varepsilon > 0, \; \exists\, N \in \mathbb{N} \text{ such that } n > N \implies |a_n - L| < \varepsilon
 

@@ -45,13 +45,13 @@ $$**Step 2:** Apply the rotation matrix
 
 $ $\begin{pmatrix} E \\ N \\ U \end{pmatrix} = \mathbf{R}(\phi_0, \lambda_0) \cdot \Delta\mathbf{X} $$
 
-where:$ $\mathbf{R}(\phi_0, \lambda_0) = \begin{pmatrix}
+where: $ $\mathbf{R}(\phi_0, \lambda_0) = \begin{pmatrix}
 -\sin\lambda_0 & \cos\lambda_0 & 0 \\
 -\sin\phi_0\cos\lambda_0 & -\sin\phi_0\sin\lambda_0 & \cos\phi_0 \\
 \cos\phi_0\cos\lambda_0 & \cos\phi_0\sin\lambda_0 & \sin\phi_0
 \end{pmatrix} $$
 
-### Row-by-row interpretation
+# ## Row-by-row interpretation
 
 - **E (row 1):** Project $\Delta\mathbf{X} $ onto the local east direction (perpendicular to meridian in the tangent plane).
 
@@ -74,18 +74,18 @@ Since rotation matrices are orthogonal: $\mathbf{R}^{-1} = \mathbf{R}^T $.
 
 1. Compute ECEF for both points (using the [[Geocentric Cartesian ECEF]] forward formulas):
 
-**Base station ($ h = 1000 $ m):**
--$ N_0 = a / \sqrt{1 - e^2\sin^2\phi} = 6378137 / \sqrt{1 - 0.00669438 \times 0.4131759} = 6386993.8 $ m
--$ X_0 = (6386993.8 + 1000) \times \cos40^\circ \times \cos(-105^\circ) = -1265973.8 $ m
--$ Y_0 = (6386993.8 + 1000) \times 0.7660444 \times \sin(-105^\circ) = -4725276.4 $ m
--$ Z_0 = (6386993.8 \times 0.99330562 + 1000) \times 0.6427876 = 4076485.7 $ m
+**Base station ( $ h = 1000 $ m):**
+-$ N_0 = a / \sqrt{1 - e^2\sin^2\phi} = 6378137 / \sqrt{1 - 0.00669438 \times 0.4131759} = 6386993.8 $  m
+-$ X_0 = (6386993.8 + 1000) \times \cos40^\circ \times \cos(-105^\circ) = -1265973.8 $  m
+-$ Y_0 = (6386993.8 + 1000) \times 0.7660444 \times \sin(-105^\circ) = -4725276.4 $  m
+-$ Z_0 = (6386993.8 \times 0.99330562 + 1000) \times 0.6427876 = 4076485.7 $  m
 
-**Rover ($ h = 1500 $ m):**
--$ N = 6386993.8 $ m (same latitude, same $ N $)
+**Rover ( $ h = 1500 $ m):**
+-$ N = 6386993.8 $  m (same latitude, same $ N $)
 
-- $ X = (6386993.8 + 1500) \times \cos40^\circ \times \cos(-105^\circ) = -1265806.4 $ m
--$ Y = (6386993.8 + 1500) \times 0.7660444 \times \sin(-105^\circ) = -4725078.0 $ m
--$ Z = (6386993.8 \times 0.99330562 + 1500) \times 0.6427876 = 4076657.6 $ m
+- $ X = (6386993.8 + 1500) \times \cos40^\circ \times \cos(-105^\circ) = -1265806.4 $  m
+-$ Y = (6386993.8 + 1500) \times 0.7660444 \times \sin(-105^\circ) = -4725078.0 $  m
+-$ Z = (6386993.8 \times 0.99330562 + 1500) \times 0.6427876 = 4076657.6 $  m
 
 2. Compute the displacement:
 
@@ -93,13 +93,13 @@ $ $\Delta X = -1265806.4 - (-1265973.8) = 167.4\ \text{m}\Delta Y = -4725078.0 -
 
 3. Apply rotation:
 
-With $\phi_0 = 40.0^\circ = 0.6981317 $ rad,$\lambda_0 = -105^\circ = -1.8325957 $ rad: $ $\sin\phi_0 = 0.6427876, \cos\phi_0 = 0.7660444\sin\lambda_0 = -0.9659258, \cos\lambda_0 = -0.2588190E = -(\sin\lambda_0)(\Delta X) + (\cos\lambda_0)(\Delta Y)E = -(-0.965926)(167.4) + (-0.258819)(198.4)E = 161.7 - 51.4 = 110.3\ \text{m}N = -(\sin\phi_0\cos\lambda_0)(\Delta X) - (\sin\phi_0\sin\lambda_0)(\Delta Y) + (\cos\phi_0)(\Delta Z)N = -(0.642788 \times -0.258819)(167.4) - (0.642788 \times -0.965926)(198.4) + (0.766044)(171.9)N = -(-0.1664)(167.4) - (-0.6210)(198.4) + 131.6N = 27.9 + 123.2 + 131.6 = 282.7\ \text{m}U = (\cos\phi_0\cos\lambda_0)(\Delta X) + (\cos\phi_0\sin\lambda_0)(\Delta Y) + (\sin\phi_0)(\Delta Z)U = (0.766044 \times -0.258819)(167.4) + (0.766044 \times -0.965926)(198.4) + (0.642788)(171.9)U = -0.1983(167.4) - 0.7399(198.4) + 110.5U = -33.2 - 146.8 + 110.5 = -69.5\ \text{m} $$ **Result:** The rover is at $ (E, N, U) = (110.3\ \text{m East}, 282.7\ \text{m North}, -69.5\ \text{m Up}) $ relative to the base. The negative Up value indicates the rover is 69.5 m lower in ellipsoidal height than the base, consistent with our assumption.
+With $\phi_0 = 40.0^\circ = 0.6981317 $ rad,$\lambda_0 = -105^\circ = -1.8325957 $ rad: $ $\sin\phi_0 = 0.6427876, \cos\phi_0 = 0.7660444\sin\lambda_0 = -0.9659258, \cos\lambda_0 = -0.2588190E = -(\sin\lambda_0)(\Delta X) + (\cos\lambda_0)(\Delta Y)E = -(-0.965926)(167.4) + (-0.258819)(198.4)E = 161.7 - 51.4 = 110.3\ \text{m}N = -(\sin\phi_0\cos\lambda_0)(\Delta X) - (\sin\phi_0\sin\lambda_0)(\Delta Y) + (\cos\phi_0)(\Delta Z)N = -(0.642788 \times -0.258819)(167.4) - (0.642788 \times -0.965926)(198.4) + (0.766044)(171.9)N = -(-0.1664)(167.4) - (-0.6210)(198.4) + 131.6N = 27.9 + 123.2 + 131.6 = 282.7\ \text{m}U = (\cos\phi_0\cos\lambda_0)(\Delta X) + (\cos\phi_0\sin\lambda_0)(\Delta Y) + (\sin\phi_0)(\Delta Z)U = (0.766044 \times -0.258819)(167.4) + (0.766044 \times -0.965926)(198.4) + (0.642788)(171.9)U = -0.1983(167.4) - 0.7399(198.4) + 110.5U = -33.2 - 146.8 + 110.5 = -69.5\ \text{m} $ $ **Result:** The rover is at $ (E, N, U) = (110.3\ \text{m East}, 282.7\ \text{m North}, -69.5\ \text{m Up}) $ relative to the base. The negative Up value indicates the rover is 69.5 m lower in ellipsoidal height than the base, consistent with our assumption.
 
 ## Applications in GNSS Processing
 
 | Application | Use of ENU |
 |-------------|------------|
-| **RTK baseline** | Base → Rover vector in ENU ($ dE,dN,dU$) |
+| **RTK baseline** | Base → Rover vector in ENU ( $ dE,dN,dU$) |
 | **Network adjustment** | Enu difference between CORS stations |
 | **Precision agriculture** | Vehicle guidance in ENU |
 | **Deformation monitoring** | Time series of ENU offsets |

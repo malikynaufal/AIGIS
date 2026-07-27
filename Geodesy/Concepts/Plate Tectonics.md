@@ -83,11 +83,11 @@ $ $\dot{\epsilon}_{ij} = \frac{1}{2}\left(\frac{\partial v_i}{\partial x_j} + \f
 
 $$
 
-Maximum shear strain rate:$ $\dot{\gamma}_{max} = \sqrt{\left(\frac{\dot{\epsilon}_{11} - \dot{\epsilon}_{22}}{2}\right)^2 + \dot{\epsilon}_{12}^2}
+Maximum shear strain rate: $ $\dot{\gamma}_{max} = \sqrt{\left(\frac{\dot{\epsilon}_{11} - \dot{\epsilon}_{22}}{2}\right)^2 + \dot{\epsilon}_{12}^2}
 
 $$
 
-## In [[Geodesy]] Context
+# # In [[Geodesy]] Context
 
 ### Deformation Monitoring
 - **CORS networks** detect inter-seismic deformation

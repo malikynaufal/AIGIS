@@ -15,9 +15,9 @@ updated: 2026-07-27
 
 The collinearity equations relate image coordinates $(x, y) $ to object coordinates $ (X, Y, Z) $:
 
-$ $ x - x_0 = -f \frac{m_{11}(X - X_L) + m_{12}(Y - Y_L) + m_{13}(Z - Z_L)}{m_{31}(X - X_L) + m_{32}(Y - Y_L) + m_{33}(Z - Z_L)}$$
+$ $  x - x_0 = -f \frac{m_{11}(X - X_L) + m_{12}(Y - Y_L) + m_{13}(Z - Z_L)}{m_{31}(X - X_L) + m_{32}(Y - Y_L) + m_{33}(Z - Z_L)}$$
 
-$ $ y - y_0 = -f \frac{m_{21}(X - X_L) + m_{22}(Y - Y_L) + m_{23}(Z - Z_L)}{m_{31}(X - X_L) + m_{32}(Y - Y_L) + m_{33}(Z - Z_L)}$$
+$ $  y - y_0 = -f \frac{m_{21}(X - X_L) + m_{22}(Y - Y_L) + m_{23}(Z - Z_L)}{m_{31}(X - X_L) + m_{32}(Y - Y_L) + m_{33}(Z - Z_L)}$$
 
 where:
 - $ (x_0, y_0) $ = principal point (mm)
@@ -62,9 +62,9 @@ Six parameters per photograph: $ (X_L, Y_L, Z_L, \omega, \phi, \kappa) $
 
 ### Photo Scale
 
-$ $ S = \frac{f}{H - h} = \frac{f}{\text{AGL}}$$
+$ $  S = \frac{f}{H - h} = \frac{f}{\text{AGL}}$$
 
-where $ H $= flight altitude and $ h $ = ground elevation.
+where $ H $= flight altitude and $  h $ = ground elevation.
 
 ### Overlap Requirements
 
@@ -79,11 +79,13 @@ where $ H $= flight altitude and $ h $ = ground elevation.
 
 ### Flying Height
 
-$ $ H = h + \frac{f}{S} $$### Ground Coverage $ $ \text{Width} = \frac{H \cdot w_{sensor}}{f}, \quad \text{Length} = \frac{H \cdot l_{sensor}}{f}
+$ $  H = h + \frac{f}{S} $ $### Ground Coverage $ $ \text{Width} = \frac{H \cdot w_{sensor}}{f}, \quad \text{Length} = \frac{H \cdot l_{sensor}}{f}
 
-$$### Number of Strips $ $ N_{strips} = \frac{\text{Project width} \times (1 - \text{side overlap})}{\text{Strip width}} + 1 $$
+$$
 
-## Digital Sensors
+# ## Number of Strips $ $ N_{strips} = \frac{\text{Project width} \times (1 - \text{side overlap})}{\text{Strip width}} + 1 $$
+
+# # Digital Sensors
 
 | Sensor Type | Resolution | swath | Typical Platform |
 |-------------|------------|-------|------------------|
@@ -126,7 +128,7 @@ flowchart LR
 
 1. Compute the photo scale for $ f = 50 $ mm, flight altitude AGL = 3000 m.
 2. Explain the collinearity condition in simple terms.
-3. Calculate the ground coverage for a 50 MP sensor with $ f = 50 $ mm at $ H = 2000$ m.
+3. Calculate the ground coverage for a 50 MP sensor with $ f = 50 $ mm at $  H = 2000$ m.
 4. Why are 60% forward overlap and 30% side overlap required for stereo?
 
 ## Related Concepts

@@ -54,7 +54,7 @@ $$ C = f(A, B) $ $
 
 where $ f $ can be:
 
-- **Arithmetic:**$ A + B $, $ A - B $, $ A imes B $, $ A / B $- **Logical:**$ A ext{ AND } B $, $ A ext{ OR } B $, $ ext{NOT } A $- **Relational:**$ A > B $, $ A == B $, $ A < B $```python
+- **Arithmetic:**$ A + B $, $  A - B $, $  A imes B $, $  A / B $- **Logical:**$  A ext{ AND } B $, $  A ext{ OR } B $, $ ext{NOT } A $- **Relational:**$  A > B $, $  A == B $, $  A < B $```python
 import rasterio
 from rasterio.enums import Resampling
 
@@ -208,14 +208,14 @@ Tests for complete spatial randomness (CSR)
 
 $ $\chi^2 = \sum_{i=1}^{q} \frac{(O_i - E)^2}{E} $ $
 
-where $ O_i $= observed points in quadrat $ i $,$ E = n/q $= expected.
+where $ O_i $= observed points in quadrat $  i $,$  E = n/q $= expected.
 
 #### Nearest Neighbor Analysis
 
 **Clark-Evans index:*
 *
 
-$ $ R = \frac{\bar{r}_{obs}}{\bar{r}_{exp}} = \frac{\frac{1}{n}\sum r_i}{0.5\sqrt{A/n}}$ $|$ R $ Value | Pattern |
+$ $  R = \frac{\bar{r}_{obs}}{\bar{r}_{exp}} = \frac{\frac{1}{n}\sum r_i}{0.5\sqrt{A/n}}$ $|$  R $ Value | Pattern |
 |-----------|---------|
 | $ R \approx 1 $ | Random |
 | $ R < 1 $ | Clustered |
@@ -247,7 +247,7 @@ k = K_function(pp, distances=[100, 200, 500, 1000])
 #### Global Moran's
 I
 
-$ $
+$ $ 
 
 I = \frac{n}{S_0} \frac{\sum_i \sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2}$ $ where $ S_0 = \sum_i \sum_j w_{ij} $.
 
@@ -272,9 +272,9 @@ gdf['significant'] = lisa.p_sim < 0.05
 
 #### Geary's C
 
-$ $ C = \frac{(n-1)}{2S_0} \frac{\sum_i \sum_j w_{ij}(x_i - x_j)^2}{\sum_i (x_i - \bar{x})^2}
+$ $  C = \frac{(n-1)}{2S_0} \frac{\sum_i \sum_j w_{ij}(x_i - x_j)^2}{\sum_i (x_i - \bar{x})^2}
 
-$ $3.3 Spatial Regression
+$ $ 3.3 Spatial Regression
 
 **OLS (Ordinary Least Squares):*
 *
@@ -292,14 +292,14 @@ $ $## 3.3 Spatial Regression
 **Spatial Lag Model (SAR):*
 *
 
-$ $
+$ $ 
 
 y = \rho W y + X\beta + \epsilon $ $
 
 **Spatial Error Model (SEM):*
 *
 
-$ $ y = X\beta + \epsilon, \quad \epsilon = \lambda W \epsilon + u $ $
+$ $  y = X\beta + \epsilon, \quad \epsilon = \lambda W \epsilon + u $ $
 
 ```python
 from spreg import ML_Lag, ML_Error
@@ -426,7 +426,7 @@ aspect = (aspect + 360) % 360
 
 Multi-criteria evaluation (MCE) using **AHP** (Analytic Hierarchy Process)
 
-$ $ S = \sum_{i=1}^{n} w_i \cdot x_i $ $
+$ $  S = \sum_{i=1}^{n} w_i \cdot x_i $ $
 
 where $ w_i $ are weights from pairwise comparison matrix.
 

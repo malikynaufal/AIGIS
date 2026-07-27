@@ -39,9 +39,9 @@ The design of a geodetic network must balance:
 
 #### Strength of Figure
 
-For a triangle network, the **strength ratio** $R $ determines error propagation $ $ R = \frac{ext{product of non-adjusted sides}}{ext{product of adjusted sides}}$ $
+For a triangle network, the **strength ratio** $R $ determines error propagation $ $  R = \frac{ext{product of non-adjusted sides}}{ext{product of adjusted sides}}$ $ 
 
-A smaller $ R $ indicates better geometric strength. For first-order networks,$ R < 1.5 imes 10^{-4} $.
+A smaller $ R $ indicates better geometric strength. For first-order networks,$  R < 1.5 imes 10^{-4} $.
 
 ### 2.3 Geometric Criteria
 
@@ -58,13 +58,13 @@ A smaller $ R $ indicates better geometric strength. For first-order networks,$ 
 
 The **redundancy** $ r $ of a network
 
-$ $ r = n - u $ $
+$ $  r = n - u $ $
 
-where $ n $ is the number of observations and $ u $ is the number of unknowns.
+where $ n $ is the number of observations and $  u $ is the number of unknowns.
 
 For a 2D network with $ p $ points
 
-$ $ u = 2p - 2 \quad ext{(fixing 2 degrees of freedom)}$ $
+$ $  u = 2p - 2 \quad ext{(fixing 2 degrees of freedom)}$ $
 
 ---
 
@@ -85,7 +85,7 @@ Measurement of **horizontal angles** from network stations:
 
 $ $
 
-m_{ext{angle}} = \frac{1.5}{\sqrt{2}} \cdot c \; ext{for first-order}$ $ where $ c $ is the micrometer reading accuracy of the theodolite (typically 0.01").
+m_{ext{angle}} = \frac{1.5}{\sqrt{2}} \cdot c \; ext{for first-order}$ $ where $  c $ is the micrometer reading accuracy of the theodolite (typically 0.01").
 
 ### 3.2 Trilateration (*Trilaterasi*)
 
@@ -196,7 +196,7 @@ Modern geodetic surveys combine:
 
 ### 5.1 Fundamental Equation
 
-For a system of $ n $ observations and $ u $ unknowns, the least squares solution
+For a system of $ n $ observations and $  u $ unknowns, the least squares solution
 
 $ $\hat{x} = (A^T P A)^{-1} A^T P l
 
@@ -205,7 +205,7 @@ $ $
 where:
 -$\hat{x} $= vector of unknown parameters
 -$ A $= design matrix (partial derivatives of observations w.r.t. parameters)
--$ P $ = weight matrix ($ P = \sigma_0^2 \Sigma^{-1} $, where $\Sigma $ is covariance matrix)
+-$ P $ = weight matrix ( $  P = \sigma_0^2 \Sigma^{-1} $, where $\Sigma $ is covariance matrix)
 -$ l $= observation vector (observed minus computed values)
 
 ### 5.2 Residuals and Quality
@@ -213,7 +213,7 @@ where:
 **Residual vector:*
 *
 
-$ $ v = A\hat{x} - l $ $
+$ $  v = A\hat{x} - l $ $
 
 **Standard error of unit weight:*
 *
@@ -225,11 +225,11 @@ $ $\sigma_0 = \sqrt{\frac{v^T P v}{n - u}} $ $
 
 $ $\Sigma_{\hat{x}} = \sigma_0^2 (A^T P A)^{-1}
 
-$ $5.3 Chi-Square Tes
+$ $ 5.3 Chi-Square Tes
 t
 
 $ $## 5.3 Chi-Square Tes
-t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)$ $
+t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u) $ $
 
 # ## 5.3 Chi-Square Tes
 t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)If $\chi^2 > \chi^2_{0.95}(n-u) $, the model may be inadequate or outliers may exist.
@@ -238,11 +238,11 @@ t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)If $\chi^2 > \chi^2_{0.95
 
 **Horizontal 2D network:**
 
-- Unknowns: coordinates $ (x_i, y_i) $ of $ p $ points
+- Unknowns: coordinates $ (x_i, y_i) $ of $  p $ points
 
 - If 2 points fixed: $ u = 2(p-2) $**3D network:**
 
-- Unknowns: $ (x_i, y_i, z_i) $- If 2 points fixed (6 DOF): $ u = 3(p-2) $---
+- Unknowns: $ (x_i, y_i, z_i) $- If 2 points fixed (6 DOF): $  u = 3(p-2) $---
 
 ## 6. Monumentation (*Penentuan Tonggak*)
 

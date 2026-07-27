@@ -29,7 +29,7 @@ EOP is the set of parameters that transforms between the Earth-fixed frame and t
 | **Y-polar motion** | $ y_p $ | Polar motion Y-component | ±0.5″ ≈ ±15 m |
 | **UT1 − UTC** | $\Delta $ UT1 | Earth rotation angle offset | −0.5 to +0.5 s ≈ −225 to +225 m at equator |
 | **UT1 − TAI** | — | Earth rotation angle offset | Continuous |
-| **LOD** | $\Delta $ L | Length of day | 0.001–0.004 s variation |
+| **LOD** | $\Delta $  L | Length of day | 0.001–0.004 s variation |
 | **Nut X** | $\epsilon_X $ | Nutation X (long-term) | — |
 | **Nut Y** | $\epsilon_Y $ | Nutation Y (long-term) | — |
 

@@ -37,7 +37,7 @@ $$\text{EMV} = \sum_i P_i \cdot V_i
 
 $ $
 
-di mana $ P_i $= probabilitas hasil ke-$ i $,$ V_i $ = nilai hasil ke-$ i $.
+di mana $ P_i $= probabilitas hasil ke-$  i $,$ V_i $ = nilai hasil ke-$  i $.
 
 ### 1.2 Expected Value of Perfect Information (EVPI)
 
@@ -51,7 +51,7 @@ Metode Saaty untuk keputusan multi-kriteria.
 
 ### 2.1 Matriks Perbandingan
 
-Bangun matriks berpasangan $A $ di mana $a_{ij} $ = tingkat penting kriteria $ i $relatif terhadap $ i$.
+Bangun matriks berpasangan $A $ di mana $ a_{ij} $ = tingkat penting kriteria $  i $ relatif terhadap $ i$.
 
 | Skor | Makna |
 |------|-------|
@@ -65,7 +65,7 @@ Bangun matriks berpasangan $A $ di mana $a_{ij} $ = tingkat penting kriteria $ i
 
 - Hitung vek eigen dominan (bobot kriteria).
 
-- Cek konsistensi: $\text{CR} = \frac{CI}{RI} < 0.1 $ (di mana $CI = \frac{\lambda_{\max} - n}{n-1} $).
+- Cek konsistensi: $\text{CR} = \frac{CI}{RI} < 0.1 $ (di mana $ CI = \frac{\lambda_{\max} - n}{n-1} $).
 
 ## 3. TOPSIS (Technique for Order Preference)
 
@@ -74,8 +74,8 @@ Bangun matriks berpasangan $A $ di mana $a_{ij} $ = tingkat penting kriteria $ i
 1. Normalisasi matriks keputusan.
 2. Hitung matriks terbobot.
 3. Tentukan solusi ideal positif (PIS) dan negatif (NIS).
-4. Hitung jarak ke PIS ($ S^+$) dan NIS ($ S^-$).
-5. Hitung skor: $ C^* = \frac{S^-}{S^+ + S^-}$(semakin dekat ke 1, semakin baik).
+4. Hitung jarak ke PIS ( $ S^+$) dan NIS ( $ S^-$).
+5. Hitung skor: $ C^* = \frac{S^-}{S^+ + S^-}$ (semakin dekat ke 1, semakin baik).
 
 ## 4. Aplikasi Geospasial
 
@@ -102,7 +102,7 @@ Bangun matriks berpasangan $A $ di mana $a_{ij} $ = tingkat penting kriteria $ i
 
 Dengan AHP, bobot kriteria diperoleh: $w = [0.35, 0.25, 0.20, 0.20] $.
 
-Setelah normalisasi TOPSIS, **Lokasi A** mendapatkan skor tertinggi ($ C^* = 0.73$), menjadi rekomendasi.
+Setelah normalisasi TOPSIS, **Lokasi A** mendapatkan skor tertinggi ( $ C^* = 0.73$), menjadi rekomendasi.
 
 ## 5. Referensi
 

@@ -22,20 +22,20 @@ Earth physics modeling (pemodelan fisika bumi) applies the principles of classic
 
 ### 1.1 Rigid Plate Motion on a Sphere
 
-Plate motion on Earth's surface is described as rotation about a Euler pole (polar Euler). For a plate rotating with angular velocity $ \boldsymbol{\omega}$ about pole $(\phi_p, \lambda_p) $, the velocity at point $ (\phi, \lambda) $is
+Plate motion on Earth's surface is described as rotation about a Euler pole (polar Euler). For a plate rotating with angular velocity $ \boldsymbol{\omega}$ about pole $ (\phi_p, \lambda_p) $, the velocity at point $ (\phi, \lambda) $ is
 
 $ $ \mathbf{v} = \boldsymbol{\omega} \times \mathbf{r
 }
 
-$ The components: $v_e = \omega \cdot R \cos\phi \sin\alphav_n = \omega \cdot R \sin(\Delta\sigma) \cdot \cos\alpha $ where $\Delta\sigma $ is the angular distance from the Euler pole, and $\alpha $ is the azimuth.$
+$ The components: $ v_e = \omega \cdot R \cos\phi \sin\alphav_n = \omega \cdot R \sin(\Delta\sigma) \cdot \cos\alpha $ where $\Delta\sigma $ is the angular distance from the Euler pole, and $\alpha $ is the azimuth.$
 
 ### 1.2 Spreading Rate and Age Relationship
 
-At mid-ocean ridges, the relationship between ocean floor depth $d $ and age $ t $ follows the plate cooling model
+At mid-ocean ridges, the relationship between ocean floor depth $d $ and age $  t $ follows the plate cooling model
 
 $ $ d(t) = d_r + c\sqrt{t} $$
 
-where $ d_r $is the ridge depth (~2500 m) and $ c \approx 350\;\text{m/Myr}^{1/2} $.
+where $ d_r $ is the ridge depth (~2500 m) and $  c \approx 350\;\text{m/Myr}^{1/2} $.
 
 | Tectonic Setting | Characteristic Rate | Example (Indonesia) |
 |---|---|---|
@@ -62,7 +62,7 @@ The temperature distribution $T(\mathbf{r}, t) $ in the Earth satisfies
 
 $ $ \rho c_p \frac{\partial T}{\partial t} = \nabla \cdot (k \nabla T) + H
 
-$ where $\rho $ is density, $ c_p $is specific heat,$ k $ is thermal conductivity, and $ H $ is volumetric heat production (from radioactive decay of $^{238} $ U,$^{235} $ U,$^{232} $ Th,$^{40} $ K).$
+$ where $\rho $ is density, $ c_p $ is specific heat,$  k $ is thermal conductivity, and $  H $ is volumetric heat production (from radioactive decay of $^{238} $ U,$^{235} $ U,$^{232} $ Th,$^{40} $ K).$
 
 ### 2.2 Surface Heat Flow
 
@@ -94,7 +94,7 @@ The lithosphere acts as a thermal boundary layer (lapisan batas termal) with tem
 
 $ $ T(z) = T_s + (T_m - T_s)\frac{\text{erf}(z/2\sqrt{\kappa t})}{\text{erf}(z_m/2\sqrt{\kappa t})} $$
 
-where $\kappa = k/(\rho c_p) $ is thermal diffusivity ($\kappa \approx 10^{-6} $ m²/s), and $T_m \approx 1300$°C is mantle temperature.
+where $\kappa = k/(\rho c_p) $ is thermal diffusivity ( $\kappa \approx 10^{-6} $ m²/s), and $ T_m \approx 1300$°C is mantle temperature.
 
 ---
 
@@ -118,11 +118,11 @@ v_P = \sqrt{\frac{\lambda + 2\mu}{\rho}} = \sqrt{\frac{K + 4\mu/3}{\rho}
 
 v_S = \sqrt{\frac{\mu}{\rho}} $$
 
-where $\lambda $ and $\mu $ are Lamé parameters,$ K $ is bulk modulus, and $ \rho $ is density.
+where $\lambda $ and $\mu $ are Lamé parameters,$  K $ is bulk modulus, and $ \rho $ is density.
 
 ### 3.2 Earth's Velocity Structure
 
-| Layer | Depth (km) | $v_P $ (km/s) | $v_S$ (km/s) | State |
+| Layer | Depth (km) | $v_P $ (km/s) | $ v_S$ (km/s) | State |
 |---|---|---|---|---|
 | Crust (kerak) | 0–35 | 5.5–6.8 | 3.0–3.9 | Solid |
 | Upper mantle (manle atas) | 35–410 | 8.1–9.9 | 4.4–5.6 | Solid |
@@ -137,13 +137,13 @@ Seismic ray paths follow Snell's law (hukum Snell) in the velocity-varying Earth
 
 $ $ \frac{\sin i}{v} = p = \text{constant along ray} $$
 
-where $ i $ is the angle of incidence and $ p $ is the ray parameter. This leads to the travel time integral $ $
+where $ i $ is the angle of incidence and $  p $ is the ray parameter. This leads to the travel time integral $ $
 
  T(p) = 2\int_{z_1}^{z_2} \frac{\eta^2(z)}{\sqrt{\eta^2(z) - p^2}}\,dz, \quad \eta(z) = \frac{1}{v(z)} $$
 
-### 3.4 Surface Wave Dispersion
+# ## 3.4 Surface Wave Dispersion
 
-Rayleigh wave group velocity $ c_g $as a function of period $ T $ depends on the shear velocity structure. For a simple crustal model
+Rayleigh wave group velocity $ c_g $ as a function of period $  T $ depends on the shear velocity structure. For a simple crustal model
 
 $ c_g(T) \approx \alpha \cdot v_{S,\text{crust}} + \beta \cdot v_{S,\text{mantle}} $$$
 

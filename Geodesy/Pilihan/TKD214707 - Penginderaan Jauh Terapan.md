@@ -42,7 +42,7 @@ $$
 
 $$
 
-### 3. Land Cover/Land Use
+# ## 3. Land Cover/Land Use
 
 - Sentinel-2 10-class classification
 - Forest cover change in Kalimantan

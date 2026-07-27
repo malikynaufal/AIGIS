@@ -84,7 +84,7 @@ $ $\delta\mathbf{x} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf
 
 For $ y = f(x_1, \ldots, x_n) $, the first-order Taylor expansion gives:
 
-$ $ y \approx f(\mathbf{x}_0) + \sum \frac{\partial f}{\partial x_i} (x_i - x_{i,0})$$
+$ $  y \approx f(\mathbf{x}_0) + \sum \frac{\partial f}{\partial x_i} (x_i - x_{i,0})$$
 
 The variance of $ y $ (assuming independent $ x_i $):
 
@@ -92,15 +92,15 @@ $ $\sigma_y^2 \approx \sum \left(\frac{\partial f}{\partial x_i}\right)^2 \sigma
 
 $$
 
-### 2.2 Relative Error Propagation
+# ## 2.2 Relative Error Propagation
 
 For multiplicative functions
 
-$ $ y = x_1^{a} x_2^{b} \implies \frac{\sigma_y}{|y|} \approx \sqrt{a^2\left(\frac{\sigma_{x_1}}{x_1}\right)^2 + b^2\left(\frac{\sigma_{x_2}}{x_2}\right)^2}$$**Example:** Computing volume $ V = \pi r^2 h $ with $ r $ and $ h $ measured
+$ $  y = x_1^{a} x_2^{b} \implies \frac{\sigma_y}{|y|} \approx \sqrt{a^2\left(\frac{\sigma_{x_1}}{x_1}\right)^2 + b^2\left(\frac{\sigma_{x_2}}{x_2}\right)^2}$ $**Example:** Computing volume $  V = \pi r^2 h $ with $  r $ and $  h $ measured
 
 $ $\frac{\sigma_V}{V} = \sqrt{\left(2\frac{\sigma_r}{r}\right)^2 + \left(\frac{\sigma_h}{h}\right)^2} $$
 
-### 2.3 Significant Figures and Error Bounds
+# ## 2.3 Significant Figures and Error Bounds
 
 | Rule | Example |
 |------|---------|
@@ -176,7 +176,7 @@ $ $ T_n(x) = \cos(n\arccos x), \quad x \in [-1, 1]$$
 
 Uses Richardson extrapolation on the trapezoidal rule:
 
-1. Compute $ T(h), T(h/2), T(h/4), \ldots $ 2. Extrapolate to $ h \to 0 $:
+1. Compute $ T(h), T(h/2), T(h/4), \ldots $ 2. Extrapolate to $  h \to 0 $:
 
 $ $ R_{i,j} = \frac{4^{j-1}R_{i,j-1} - R_{i-1,j-1}}{4^{j-1} - 1} $$**Converges very fast for smooth functions.**
 
@@ -185,7 +185,7 @@ e
 
 $ $ \int_{-1}^{1} f(x)\, dx \approx \sum_{i=1}^n w_i f(x_i)
 
-$$**Legendre-Gauss nodes and weights** (for $ n = 3 $):
+$$**Legendre-Gauss nodes and weights** (for $  n = 3 $):
 
 | $ i $ | $ x_i $ | $ w_i $ |
 |-----|-------|-------|
@@ -193,7 +193,7 @@ $$**Legendre-Gauss nodes and weights** (for $ n = 3 $):
 | 1 | 0.0000 | 0.8889 |
 | 2 | 0.7746 | 0.5556 |
 
-For arbitrary interval $ [a, b] $, transform: $ x = \frac{b-a}{2}t + \frac{b+a}{2} $.
+For arbitrary interval $ [a, b] $, transform: $  x = \frac{b-a}{2}t + \frac{b+a}{2} $.
 
 **Geodesy application:** Computing line integrals along geodesic paths, evaluating spherical harmonic integrals.
 
@@ -219,7 +219,9 @@ $$**Integrating factor** (for linear: $ y' + P(x)y = Q(x) $):
 $ $\mu(x) = \exp\left(\int P(x)\, dx\right)y = \frac{1}{\mu(x)}\int \mu(x)Q(x)\, d
 x
 
-$$### 5.2 Second-Order Linear ODEs $ $
+$$
+
+# ## 5.2 Second-Order Linear ODEs $ $
 
 ay'' + by' + cy = f(x)$$**Homogeneous solution** from characteristic equation $ ar^2 + br + c = 0 $:
 
@@ -252,7 +254,7 @@ n
 
 $ $ f(x) \approx f(x_0) + f'(x_0)(x - x_0) $$
 
-### 6.2 Multivariable Linearisatio
+# ## 6.2 Multivariable Linearisatio
 n
 
 $ $ \mathbf{f}(\mathbf{x}) \approx \mathbf{f}(\mathbf{x}_0) + \mathbf{J}_{\mathbf{f}}(\mathbf{x}_0) \cdot (\mathbf{x} - \mathbf{x}_0)

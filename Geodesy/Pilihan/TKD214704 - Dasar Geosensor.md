@@ -36,7 +36,7 @@ y = a + b \cdot x + \epsilon
 
 $ $
 
-where $ a $ = bias, $ b $ = scale factor, $\epsilon $ = noise.
+where $ a $ = bias, $  b $ = scale factor, $\epsilon $ = noise.
 
 **Allan variance for noise characterization:**
 
@@ -46,7 +46,7 @@ $ $
 
 $$
 
-### 3. IMU / INS Principles
+# ## 3. IMU / INS Principles
 
 **Strapdown INS mechanization:**
 
@@ -58,7 +58,7 @@ $ $
 
 $$
 
-### 4. Calibration
+# ## 4. Calibration
 
 - Scale factor and bias estimation for GNSS receivers
 - EDM offset/scale calibration

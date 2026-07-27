@@ -74,7 +74,7 @@ $ $\frac{L(heta_1)}{L(heta_0)} > k
 
 $ $
 
-where $ L $ is the likelihood function and $ k $ is chosen to achieve significance level $\alpha $.
+where $ L $ is the likelihood function and $  k $ is chosen to achieve significance level $\alpha $.
 
 ## 🎯 Point Estimation
 
@@ -168,7 +168,7 @@ p(heta | x) = \frac{p(x | heta) p(heta)}{p(x)}$ $
 
 ## 💡 Solved Example: MLE for Normal Distribution
 
-**Problem:** Find MLE of $\mu $ and $\sigma^2 $ for $ X \sim N(\mu, \sigma^2) $.
+**Problem:** Find MLE of $\mu $ and $\sigma^2 $ for $  X \sim N(\mu, \sigma^2) $.
 
 **Solution:**
 

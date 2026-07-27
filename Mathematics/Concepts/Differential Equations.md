@@ -36,33 +36,33 @@ Form: $\frac{dy}{dx} = g(x)h(y) $**Method**: Separate variables, integrate both 
 
 $ $\int \frac{1}{h(y)}\,dy = \int g(x)\,dx
 
-$$**Example**: $\frac{dy}{dx} = xy $,$ y(0) = 2 $ Separate: $\frac{1}{y}\,dy = x\,dx $ Integrate: $\ln|y| = \frac{x^2}{2} + C $ Solution: $ y = 2e^{x^2/2} $### 2.2 First-Order Linear DEs
+$$**Example**: $\frac{dy}{dx} = xy $,$ y(0) = 2 $ Separate: $\frac{1}{y}\,dy = x\,dx $ Integrate: $\ln|y| = \frac{x^2}{2} + C $ Solution: $  y = 2e^{x^2/2} $### 2.2 First-Order Linear DEs
 
 Form: $\frac{dy}{dx} + P(x)y = Q(x) $**Integrating factor**: $\mu(x) = e^{\int P(x)\,dx} $ Multiply through: $\frac{d}{dx}[\mu y] = \mu Q $
 
-$ $ y = \frac{1}{\mu}\int \mu Q\,dx $$**Example**: $\frac{dy}{dx} + 2y = e^{-x} $
+$ $  y = \frac{1}{\mu}\int \mu Q\,dx $ $**Example**: $\frac{dy}{dx} + 2y = e^{-x} $
 
 $\mu = e^{\int 2\,dx} = e^{2x} $
 
 $ $ e^{2x}y = \int e^{2x}e^{-x}\,dx = \int e^{x}\,dx = e^{x} + Cy = e^{-x} + Ce^{-2x}$$
 
-### 2.3 Exact Equations
+# ## 2.3 Exact Equations
 
 Form: $ M(x,y)\,dx + N(x,y)\,dy = 0 $ is exact if $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} $**Method**: Find $ F(x,y) $ such that $\frac{\partial F}{\partial x} = M $, $\frac{\partial F}{\partial y} = N $ Solution: $ F(x,y) = C $**Example**: $ (2xy + 3)\,dx + (x^2 + 4y)\,dy = 0 $
 
-$ M_y = 2x $, $ N_x = 2x $✓ (exact) $ F = x^2y + 3x + 2y^2 $, so $ x^2y + 3x + 2y^2 = C $### 2.4 Bernoulli Equations
+$ M_y = 2x $, $ N_x = 2x $✓ (exact) $  F = x^2y + 3x + 2y^2 $, so $ x^2y + 3x + 2y^2 = C $### 2.4 Bernoulli Equations
 
-Form: $\frac{dy}{dx} + P(x)y = Q(x)y^n $ Substitute $ v = y^{1-n} $, transforms to linear DE.
+Form: $\frac{dy}{dx} + P(x)y = Q(x)y^n $ Substitute $  v = y^{1-n} $, transforms to linear DE.
 
 ## 3. Second-Order Linear DEs with Constant Coefficients
 
 ### 3.1 Homogeneous: $ ay'' + by' + cy = 0 $**Characteristic equation**: $ ar^2 + br + c = 0 $ | Roots | General Solution |
 |-------|-----------------|
-| Distinct real $ r_1 \neq r_2 $ | $ y = C_1e^{r_1x} + C_2e^{r_2x} $ |
-| Repeated $ r_1 = r_2 $ | $ y = (C_1 + C_2x)e^{r_1x} $ |
-| Complex $ r = \alpha \pm \beta i $ | $ y = e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x) $ |
+| Distinct real $ r_1 \neq r_2 $ | $  y = C_1e^{r_1x} + C_2e^{r_2x} $ |
+| Repeated $ r_1 = r_2 $ | $  y = (C_1 + C_2x)e^{r_1x} $ |
+| Complex $ r = \alpha \pm \beta i $ | $  y = e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x) $ |
 
-### 3.2 Non-homogeneous: $ ay'' + by' + cy = g(x) $**General solution**: $ y = y_h + y_p $ where $ y_h $ is homogeneous solution and $ y_p $ is particular solution.
+### 3.2 Non-homogeneous: $ ay'' + by' + cy = g(x) $**General solution**: $  y = y_h + y_p $ where $ y_h $ is homogeneous solution and $ y_p $ is particular solution.
 
 #### Undetermined Coefficients Method
 
@@ -87,13 +87,13 @@ m
 
 $ $\mathbf{x}' = A\mathbf{x} $$
 
-where $ A $ is constant matrix. Solution involves eigenvalues/eigenvectors of $ A $.
+where $ A $ is constant matrix. Solution involves eigenvalues/eigenvectors of $  A $.
 
 If $ A $ has eigenvalue $\lambda $ with eigenvector $\mathbf{v} $:
 
 $ $\mathbf{x}(t) = e^{\lambda t}\mathbf{v} $$
 
-### 4.2 Phase Portrait Classification
+# ## 4.2 Phase Portrait Classification
 
 For $ 2\times 2 $ systems with eigenvalues $\lambda_1, \lambda_2 $:
 
@@ -115,7 +115,7 @@ $ $\mathcal{L}\{f(t)\} = F(s) = \int_0^{\infty} e^{-st}f(t)\,dt
 
 $$
 
-### 5.2 Common Transforms
+# ## 5.2 Common Transforms
 
 | $ f(t) $ | $ F(s) $ |
 |---------|--------|
@@ -132,34 +132,36 @@ $$
 
 **Example**: $ y'' + 3y' + 2y = e^{-t} $, $ y(0)=0 $, $ y'(0)=1 $ Take Laplace: $ (s^2+3s+2)Y - 1 = \frac{1}{s+1} $
 
-$ $
+$ $ 
 
 Y = \frac{s+2}{(s+1)(s+2)(s+1)} + \frac{1}{(s+1)(s+2)
 }
 
 $$
 
-Partial fractions + inverse Laplace: $ $ y(t) = -e^{-t} + 3e^{-2t} + te^{-t}$$ ## 6. Practice Problems
+Partial fractions + inverse Laplace: $ $ y(t) = -e^{-t} + 3e^{-2t} + te^{-t}$$
+
+# # 6. Practice Problems
 
 ### Problem 1
 Solve $\frac{dy}{dx} = \frac{x}{y} $, $ y(0) = 3 $**Solution**: Separable
 
 $ $\int y\,dy = \int x\,dx \implies \frac{y^2}{2} = \frac{x^2}{2} + Cy(0) = 3 \implies C = \frac{9}{2}y = \sqrt{x^2+9} $$
 
-### Problem 2
+# ## Problem 2
 Solve $ y'' - 5y' + 6y = 0 $, $ y(0)=1 $, $ y'(0)=2 $**Solution**: Characteristic equation $ r^2-5r+6=0 $, roots $ r=2,3 $
 
-$ $ y = C_1e^{2x} + C_2e^{3x}$$
+$ $  y = C_1e^{2x} + C_2e^{3x}$$
 
 $ y(0)=1 $: $ C_1+C_2=1 $
 $ y'(0)=2 $: $ 2C_1+3C_2=2 $
 
-$ C_1=1 $, $ C_2=0 $→$ y = e^{2x} $### Problem 3
+$ C_1=1 $, $ C_2=0 $→$  y = e^{2x} $### Problem 3
 Solve $ y' + 2y = 4 $, $ y(0)=1 $**Solution**: $\mu = e^{2x} $
 
 $ $ e^{2x}y = \int 4e^{2x}\,dx = 2e^{2x} + Cy = 2 + Ce^{-2x}$$
 
-$ y(0)=1 $: $ C=-1 $→$ y = 2 - e^{-2x}$
+$ y(0)=1 $: $ C=-1 $→$  y = 2 - e^{-2x}$
 
 ## 7. Where Geodesy Uses This
 

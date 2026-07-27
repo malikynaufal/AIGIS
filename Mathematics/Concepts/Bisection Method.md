@@ -62,9 +62,9 @@ where $ r $ is the true root.
 
 To achieve error $< \varepsilon $:
 
-$ $ n \geq \frac{\log(b-a) - \log(\varepsilon)}{\log 2}$$
+$ $  n \geq \frac{\log(b-a) - \log(\varepsilon)}{\log 2}$$
 
-### Rate
+# ## Rate
 
 - **Linear convergence** (rate $ 1/2 $)
 - One bit of accuracy per iteration
@@ -76,7 +76,7 @@ $ $ n \geq \frac{\log(b-a) - \log(\varepsilon)}{\log 2}$$
 
 | Method | Convergence | Requirements | Reliability |
 |--------|-------------|--------------|-------------|
-| Bisection | Linear ($ 1/2 $) | Sign change only | **Guaranteed** |
+| Bisection | Linear ( $ 1/2 $) | Sign change only | **Guaranteed** |
 | Newton | Quadratic | $ f'$ known, good guess | Can diverge |
 | Secant | Superlinear (1.618) | Two initial guesses | No guarantee |
 | Brent | Superlinear | Bracketing interval | Best of both worlds |

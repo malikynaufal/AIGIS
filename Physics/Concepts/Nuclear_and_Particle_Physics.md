@@ -19,7 +19,7 @@ The mass of a nucleus is always less than the sum of its constituent nucleons:
 
 $$ M(Z,A) = Z m_p + N m_n - \frac{B(A,Z)}{c^2} $ $
 
-where $ B(A,Z) $= **binding energy**, $ A = Z + N $= mass number,$ Z $ = proton number.
+where $ B(A,Z) $= **binding energy**, $  A = Z + N $= mass number,$  Z $ = proton number.
 
 ### Semi-Empirical Mass Formula (Bethe-Weizsäcker
 )
@@ -39,7 +39,7 @@ Like atomic electrons, nucleons fill quantized shells. **Magic numbers** (nuclei
 
 $ $ 2, 8, 20, 28, 50, 82, 126 $$
 
-Nuclei with magic $ $ Z $ and $ N $ are **doubly magic** ($^{4} $ He,$^{16} $ O,$^{40} $ Ca,$^{208} $ Pb).
+Nuclei with magic $ $  Z $ and $  N $ are **doubly magic** ( $^{4} $ He,$^{16} $ O,$^{40} $ Ca,$^{208} $ Pb).
 
 ### Liquid Drop Model
 Nucleus treated as incompressible liquid of nuclear matter:
@@ -64,7 +64,7 @@ where $\lambda $ = decay constant, $ N_0 $ = initial number of nuclei.
 **Activity (disintegrations per second):*
 *
 
-$ $
+$ $ 
 
 A = \lambda N = A_0 e^{-\lambda t
 }
@@ -73,30 +73,30 @@ A = \lambda N = A_0 e^{-\lambda t
 
 t_{1/2} = \frac{\ln 2}{\lambda} = \frac{0.693}{\lambda}, \quad \tau_{\text{mean}} = \frac{1}{\lambda} $$
 
-### Types of Radioactive Decay
+# ## Types of Radioactive Decay
 
 | Decay | Reaction | Radiation | Energy Range | Key Example |
 |-------|----------|-----------|-------------|-------------|
-| **Alpha ($\alpha $)** | $^{A}_{Z}X \to ^{A-4}_{Z-2}Y + ^4_2\text{He} $ | $ \alpha $ (²He nucleus) | 4–9 MeV | $^{238} $ U →$^{234} $ Th |
-| **Beta-minus ($ \beta^-$)** | $ n \to p + e^- + \bar{\nu}_e $ | $ e^-$+ antineutrino | < 1 MeV | $^{14} $ C →$^{14} $ N |
-| **Beta-plus ($ \beta^+$)** | $ p \to n + e^+ + \nu_e $ | $ e^+$+ neutrino | < 1 MeV | $^{22} $ Na →$^{22} $ Ne |
-| **Electron capture** | $ p + e^- \to n + \nu_e $ | X-ray,$ \nu_e $ | Variable | $^{40} $ K →$^{40} $ Ar |
-| **Gamma ($\gamma $)** | $^{A}_{Z}X^* \to ^{A}_{Z}X + \gamma $ | Photon | keV–MeV | $^{60} $ Co →$^{60} $ Ni |
-| **Fission** | Heavy nucleus → 2 medium nuclei | Fragments + n + $ \gamma $ | ~200 MeV | $^{235} $ U + n → fission |
+| **Alpha ( $\alpha $)** | $^{A}_{Z}X \to ^{A-4}_{Z-2}Y + ^4_2\text{He} $ | $ \alpha $ (²He nucleus) | 4–9 MeV | $^{238} $  U →$^{234} $ Th |
+| **Beta-minus ( $ \beta^-$)** | $  n \to p + e^- + \bar{\nu}_e $ | $ e^-$+ antineutrino | < 1 MeV | $^{14} $  C →$^{14} $  N |
+| **Beta-plus ( $ \beta^+$)** | $  p \to n + e^+ + \nu_e $ | $ e^+$+ neutrino | < 1 MeV | $^{22} $ Na →$^{22} $ Ne |
+| **Electron capture** | $ p + e^- \to n + \nu_e $ | X-ray,$ \nu_e $ | Variable | $^{40} $  K →$^{40} $ Ar |
+| **Gamma ( $\gamma $)** | $^{A}_{Z}X^* \to ^{A}_{Z}X + \gamma $ | Photon | keV–MeV | $^{60} $ Co →$^{60} $ Ni |
+| **Fission** | Heavy nucleus → 2 medium nuclei | Fragments + n + $ \gamma $ | ~200 MeV | $^{235} $  U + n → fission |
 
 ### Beta Decay (Fermi Theory)
 
 $ $ \frac{dN}{dt} = -G_F^2 |M_{fi}|^2 E_e^2 (E_0 - E_e)^2
 
-$ where $ G_F $ = Fermi constant ($ 1.166\times10^{-5} $ GeV⁻²), $ E_0 $ = endpoint energy.
+$ where $ G_F $ = Fermi constant ( $ 1.166\times10^{-5} $ GeV⁻²), $ E_0 $ = endpoint energy.
 
 **Key properties:**
 
 - Continuous energy spectrum (neutrino carries off energy)
 
 - Parity-violating (V-A theory)
--$ K $-capture / electron capture competes with $ \beta^+ $ when $ E < 2m_e c^2 $### Alpha Decay (Tunneling)
-The $ \alpha $ particle must tunnel through the Coulomb barrier $ $
+-$ K $-capture / electron capture competes with $ \beta^+ $ when $  E < 2m_e c^2 $### Alpha Decay (Tunneling)
+The $ \alpha $ particle must tunnel through the Coulomb barrier $ $ 
 
 P \propto \exp\left(-\frac{2}{\hbar}\int_{R}^{b}\sqrt{2m(V(r)-E)}\,dr\right
 )
@@ -113,9 +113,9 @@ $$
 
 ## 3. Geochronological Applications
 
-### Radiocarbon Dating ($^{14} $ C)
+### Radiocarbon Dating ( $^{14} $ C)
 
-- $^{14} $ C ( $ t_{1/2} = 5730 $ yr) produced in atmosphere by cosmic rays
+- $^{14} $  C ( $ t_{1/2} = 5730 $ yr) produced in atmosphere by cosmic rays
 
 - Absorbed by living organisms; decays after death
 
@@ -123,9 +123,9 @@ $$
 
 $ t = \frac{t_{1/2}}{\ln 2}\ln\frac{A_0}{A} = 8267 \ln\frac{A_0}{A} \text{ (years)} $ $
 
-### Potassium-Argon Dating ($^{40} $ K)
+### Potassium-Argon Dating ( $^{40} $ K)
 
-- $^{40} $ K ( $ t_{1/2} = 1.25 $ Ga) decays to $^{40} $ Ar by electron capture
+- $^{40} $  K ( $ t_{1/2} = 1.25 $ Ga) decays to $^{40} $ Ar by electron capture
 
 - Argon accumulates in mineral crystal; released by melting for analysis
 
@@ -133,11 +133,11 @@ $ t = \frac{t_{1/2}}{\ln 2}\ln\frac{A_0}{A} = 8267 \ln\frac{A_0}{A} \text{ (year
 
 ### Uranium-Series Disequilibrium
 
-- $^{238} $ U decay chain through $^{234} $ U →$^{230} $ Th →$^{226} $ Ra →$^{222} $ Rn → ... →$^{206} $ Pb
+- $^{238} $  U decay chain through $^{234} $  U →$^{230} $ Th →$^{226} $ Ra →$^{222} $ Rn → ... →$^{206} $ Pb
 
 - Different half-lives in chain create disequilibrium
 
-- Useful for dating corals, speleothems (cave deposits): $^{230} $ Th/$^{234} $ U method (10–350 kyr)
+- Useful for dating corals, speleothems (cave deposits): $^{230} $ Th/$^{234} $  U method (10–350 kyr)
 
 ---
 
@@ -186,7 +186,7 @@ where:
 
 | Force | Relative Strength | Range | Mediator | Unification |
 |-------|-------------------|-------|----------|-------------|
-| Strong | 1 | ~1 fm ($ 10^{-15} $ m) | Gluons | QCD |
+| Strong | 1 | ~1 fm ( $ 10^{-15} $ m) | Gluons | QCD |
 | Electromagnetic | $ 10^{-2} $ | Infinite | Photon | QED |
 | Weak | $ 10^{-6} $ | ~0.001 fm | $ W^\pm $, $ Z^0 $ | Electroweak |
 | Gravitational | $ 10^{-39} $ | Infinite | Graviton (hypothetical) | General Relativity |
@@ -203,13 +203,13 @@ Quarks are never observed free — they are confined inside hadrons by the stron
 
 $ $ V(r) = -\frac{4}{3}\frac{\alpha_s}{r} + kr $$
 
-where $\alpha_s $ = strong coupling constant (~0.1–0.3 at GeV scales), $ k \approx 1 $ GeV/fm = string tension.
+where $\alpha_s $ = strong coupling constant (~0.1–0.3 at GeV scales), $  k \approx 1 $ GeV/fm = string tension.
 
 ### Hadron Classification
 | Type | Composition | Examples |
 |------|-------------|----------|
 | Baryons | $ qqq $ | p ( $ uud $), n ( $ udd $), $ \Delta^{++} $ ( $ uuu $) |
-| Mesons | $ q\bar{q} $ | $ \pi^+$ ($ u\bar{d} $), $ \pi^0 $ (mix),$ K^+$ ($ u\bar{s} $) |
+| Mesons | $ q\bar{q} $ | $ \pi^+$ ( $ u\bar{d} $), $ \pi^0 $ (mix),$ K^+$ ( $ u\bar{s} $) |
 | Pentaquark | $ qqqq\bar{q} $ | Discovered 2015 (LHCb) |
 
 ### Color Charge
@@ -223,7 +223,7 @@ Each quark carries one of three "colors": red (r), green (g), blue (b).
 
 ### Charged Current (CC)
 
-$ $
+$ $ 
 
 d \to u + W^- \to u + e^- + \bar{\nu}_eW^+ \to e^+ + \nu_
 e
@@ -247,13 +247,13 @@ $ V_{ud} \approx 0.974 $, $ V_{us} \approx 0.225 $ — small mixing angles for l
 ## 7. Neutrino Physics
 
 ### Neutrino Oscillations
-Flavor eigenstates ($ \nu_e, \nu_\mu, \nu_\tau $) are mixtures of mass eigenstates ($ \nu_1, \nu_2, \nu_3 $).
+Flavor eigenstates ( $ \nu_e, \nu_\mu, \nu_\tau $) are mixtures of mass eigenstates ( $ \nu_1, \nu_2, \nu_3 $).
 
 **Oscillation probability (two-flavor approx.):**
 
 $ $ P(\nu_\alpha \to \nu_\beta) = \sin^2 2\theta \cdot \sin^2\left(\frac{\Delta m^2 L}{4E\hbar c}\right) $$
 
-where $\theta $ = mixing angle,$ \Delta m^2 = m_2^2 - m_1^2 $,$ L $ = propagation distance,$ E $ = neutrino energy.
+where $\theta $ = mixing angle,$ \Delta m^2 = m_2^2 - m_1^2 $,$  L $ = propagation distance,$  E $ = neutrino energy.
 
 ### Evidence for Neutrino Mass
 
@@ -278,10 +278,10 @@ where $\theta $ = mixing angle,$ \Delta m^2 = m_2^2 - m_1^2 $,$ L $ = propagatio
 ---
 
 ## Problems
-1. Calculate the binding energy of $^{12} $ C ( $ M = 12.00000 $ u) using the SEMF.
-2. Determine the decay constant and activity of $^{238} $ U ( $ t_{1/2} = 4.47 $ Ga).
+1. Calculate the binding energy of $^{12} $  C ( $ M = 12.00000 $ u) using the SEMF.
+2. Determine the decay constant and activity of $^{238} $  U ( $ t_{1/2} = 4.47 $ Ga).
 3. Explain why beta decay requires a neutrino (conservation of energy, momentum, and lepton number).
-4. Why are $^{14} $ C and $^{40}$ K useful for dating geological/ archaeological samples?
+4. Why are $^{14} $  C and $^{40}$  K useful for dating geological/ archaeological samples?
 5. Discuss the evidence for quark confinement from deep inelastic scattering.
 6. What determines whether a particle is a meson vs. baryon? Explain in terms of color charge.
 

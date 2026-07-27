@@ -38,11 +38,11 @@ The power spectral density (PSD) of geodetic noise is typically
 
 $ $ P(f) = P_0 f^{-\alpha} $$
 
-where $\alpha = 0 $ (white noise),$ \alpha = 1 $ (flicker/1-$ f $ noise), or $ \alpha = 2$ (random walk). Real GNSS series exhibit a mixture. The maximum likelihood estimation (MLE) approach of Langbein (2004) fits $ $
+where $\alpha = 0 $ (white noise),$ \alpha = 1 $ (flicker/1-$  f $ noise), or $ \alpha = 2 $ (random walk). Real GNSS series exhibit a mixture. The maximum likelihood estimation (MLE) approach of Langbein (2004) fits $ $
 
  \text{MLE} = \max_{\theta} \left[-\frac{N}{2}\ln(2\pi) - \frac{1}{2}\ln|\Sigma(\theta)| - \frac{1}{2}(\mathbf{d} - \mathbf{m})^T \Sigma^{-1}(\theta)(\mathbf{d} - \mathbf{m})\right]
 
-$ where $\Sigma(\theta) $ is the covariance matrix parameterized by noise amplitudes $ \theta$.$
+$ where $\Sigma(\theta) $ is the covariance matrix parameterized by noise amplitudes $ \theta $.$
 
 ### 1.3 Velocity Uncertainty
 
@@ -54,14 +54,14 @@ Formal velocity uncertainties $ \sigma_v $ assuming white noise are typically un
 
 ### 2.1 Discrete Fourier Transform
 
-For a uniformly sampled series $x[n] $ with $ N $ samples and sampling interval$ \Delta t $:
+For a uniformly sampled series $x[n] $ with $  N $ samples and sampling interval $ \Delta t $:
 
 $ $
 
 X[k] = \sum_{n=0}^{N-1} x[n] \cdot e^{-i2\pi kn/N}, \quad k = 0, 1, \ldots, N-
 1
 
-$ The power spectrum is: $$ P[k] = \frac{|X[k]|^2}{N \cdot \Delta t} $ $
+$ The power spectrum is: $ $ P[k] = \frac{|X[k]|^2}{N \cdot \Delta t} $ $
 
 Frequency resolution: $ \Delta f = 1/(N\Delta t) $.$
 
@@ -81,7 +81,7 @@ For unevenly sampled data (common in geodesy due to data gaps), the Lomb–Scarg
 
 $ $ P(\omega) = \frac{1}{2} \left[\frac{\left(\sum_j x_j \cos\omega(t_j-\tau)\right)^2}{\sum_j \cos^2\omega(t_j-\tau)} + \frac{\left(\sum_j x_j \sin\omega(t_j-\tau)\right)^2}{\sum_j \sin^2\omega(t_j-\tau)}\right] $$
 
-False alarm probability: $ $ P_{\text{FA}} = 1 - (1 - e^{-z})^M $, where $ z = P(\omega)/\langle P \rangle $ and $ M $ is independent frequencies.$
+False alarm probability: $ $ P_{\text{FA}} = 1 - (1 - e^{-z})^M $, where $  z = P(\omega)/\langle P \rangle $ and $  M $ is independent frequencies.$
 
 ---
 
@@ -128,7 +128,7 @@ If observations have known covariance $ \Sigma_d$:
 
 $ $ \hat{\mathbf{x}} = (\mathbf{A}^T\Sigma_d^{-1}\mathbf{A})^{-1}\mathbf{A}^T\Sigma_d^{-1}\mathbf{d} $$
 
-### 4.3 Tikhonov Regularization (Ridge Regression)
+# ## 4.3 Tikhonov Regularization (Ridge Regression)
 
 When $ \mathbf{A}^T\mathbf{A}$ is ill-conditioned (poorly conditioned) $ $ \hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{A} + \lambda^2 \mathbf{I})^{-1}\mathbf{A}^T\mathbf{d} $$
 
@@ -140,15 +140,15 @@ The regularization parameter $ \lambda $ is chosen by L-curve or cross-validatio
 
 ### 5.1 F-Test for Model Selection
 
-Comparing two models with $u_1 $ and $ u_2 $parameters ( $ u_2 > u_1 $):
+Comparing two models with $u_1 $ and $ u_2 $ parameters ( $ u_2 > u_1 $):
 
 $ F = \frac{(\mathbf{e}_1^T\mathbf{e}_1 - \mathbf{e}_2^T\mathbf{e}_2)/(u_2 - u_1)}{\mathbf{e}_2^T\mathbf{e}_2/(n - u_2)} \sim F(u_2-u_1, n-u_2) $$$
 
-### 5.2 Case Study: Detecting Coseismic Offsets
+# ## 5.2 Case Study: Detecting Coseismic Offsets
 
-After the 2018 Lombok earthquake ( $ M_w $6.9), GNSS stations on Lombok measured coseismic offsets. Using a pre-earthquake velocity model and post-earthquake observations
+After the 2018 Lombok earthquake ( $ M_w $ 6.9), GNSS stations on Lombok measured coseismic offsets. Using a pre-earthquake velocity model and post-earthquake observations
 
-$ $ \Delta x_{\text{obs}} = \Delta x_{\text{predicted}}(\text{dislocation model}) + \text{noise} $$ A $ \chi^2 $ test ($\chi^2 = \Delta\mathbf{x}^T\Sigma^{-1}\Delta\mathbf{x} $) with $ p < 0.05 $confirms whether the observed offsets are consistent with Okada elastic dislocation models, validating source parameters used for tsunami hazard assessment (penilaian bahaya tsunami).
+$ $ \Delta x_{\text{obs}} = \Delta x_{\text{predicted}}(\text{dislocation model}) + \text{noise} $ $ A $ \chi^2 $ test ( $\chi^2 = \Delta\mathbf{x}^T\Sigma^{-1}\Delta\mathbf{x} $) with $  p < 0.05 $ confirms whether the observed offsets are consistent with Okada elastic dislocation models, validating source parameters used for tsunami hazard assessment (penilaian bahaya tsunami).
 
 ---
 

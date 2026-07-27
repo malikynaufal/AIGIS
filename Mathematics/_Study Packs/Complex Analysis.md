@@ -19,7 +19,7 @@ Complex analysis studies functions of a complex variable. It is one of the most 
 
 ### 1.1 Fundamentals
 
-$$ z = x + iy = re^{i\theta} = r(\cos\theta + i\sin\theta)$ $
+$$ z = x + iy = re^{i\theta} = r(\cos\theta + i\sin\theta) $ $
 
 where $ i = \sqrt{-1} $.
 
@@ -46,7 +46,7 @@ The complex plane represents $ z = x+iy $ as the point $ (x,y) $. Three importan
 
 ### 2.2 Examples
 
-- $ f(z) = z^2 = (x^2-y^2) + i(2xy) $→$ u = x^2-y^2 $, $ v = 2xy $-$ f(z) = \overline{z} = x - iy $-$ f(z) = e^z = e^x(\cos y + i\sin y) $-$ f(z) = \sin z = \frac{e^{iz} - e^{-iz}}{2i} $### 2.3 Limits and Continuity
+- $ f(z) = z^2 = (x^2-y^2) + i(2xy) $→$  u = x^2-y^2 $, $  v = 2xy $-$ f(z) = \overline{z} = x - iy $-$ f(z) = e^z = e^x(\cos y + i\sin y) $-$ f(z) = \sin z = \frac{e^{iz} - e^{-iz}}{2i} $### 2.3 Limits and Continuity
 
 Same $\epsilon $-$\delta $ definition as real functions, but on the complex plane.
 
@@ -64,33 +64,33 @@ where $ h \to 0 $ along **any** path in $\mathbb{C} $.
 
 ### 3.2 Cauchy-Riemann Equations
 
-**Theorem**: $ f(z) = u + iv $ is analytic at $ z_0 $ $\\iff $ $ u $ and $ v $ satisfy
+**Theorem**: $ f(z) = u + iv $ is analytic at $ z_0 $ $\\iff $ $  u $ and $  v $ satisfy
 
 $ $\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \\quad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x} $$
 
 **Proof (necessary condition)**:
-Consider $ h \to 0 $ along real axis: $ h = \Delta x $:
+Consider $ h \to 0 $ along real axis: $  h = \Delta x $:
 
 $ $ f'(z) = \frac{\partial u}{\partial x} + i\frac{\partial v}{\partial x}$$
 
-Consider $ h \to 0 $ along imaginary axis: $ h = i\Delta y $:
+Consider $ h \to 0 $ along imaginary axis: $  h = i\Delta y $:
 
 $ $ f'(z) = \frac{1}{i}\left(\frac{\partial u}{\partial y} + i\frac{\partial v}{\partial y}\right) = \frac{\partial v}{\partial y} - i\frac{\partial u}{\partial y}$$
 
 Equating real and imaginary parts gives CR equations.$\\blacksquare $### 3.3 Harmonic Functions
 
-If $ f $ is analytic, both $ u $ and $ v $ satisfy **Laplace's equation**:
+If $ f $ is analytic, both $  u $ and $  v $ satisfy **Laplace's equation**:
 
 $ $\nabla^2 u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0\nabla^2 v = \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} = 0
 
 $$
 
-$ u $ and $ v $ are called **harmonic conjugates**.
+$ u $ and $  v $ are called **harmonic conjugates**.
 
 ### 3.4 Worked Example
 
 Check if $ f(z) = z^2 $ is analytic.$ f(z) = (x+iy)^2 = (x^2-y^2) + i(2xy) $
-$ u = x^2-y^2 $, $ v = 2xy $ Check CR:
+$ u = x^2-y^2 $, $  v = 2xy $ Check CR:
 -$\partial u/\partial x = 2x $, $\partial v/\partial y = 2x $✓
 -$\partial u/\partial y = -2y $, $-\partial v/\partial x = -2y $✓$ f'(z) = 2x + i(2y) = 2(x+iy) = 2z $✓
 
@@ -109,7 +109,9 @@ Properties:
 $ $\sin z = \frac{e^{iz} - e^{-iz}}{2i}, \\quad \cos z = \frac{e^{iz} + e^{-iz}}{2}\sinh z = \frac{e^{z} - e^{-z}}{2}, \\quad \cosh z = \frac{e^{z} + e^{-z}}{2
 }
 
-$$### 4.3 Logarithm $ $\log z = \ln|z| + i\arg(z)
+$$
+
+# ## 4.3 Logarithm $ $\log z = \ln|z| + i\arg(z)
 
 $$**Multi-valued**: $\log z = \ln|z| + i(\Theta + 2\pi n) $**Principal branch**: $\\text{Log}\,z = \ln|z| + i\Theta $,$\Theta \in (-\pi, \pi] $### 4.4 Complex Power
 s
@@ -124,13 +126,13 @@ Multi-valued!$ i^i = e^{i\log i} = e^{i(\ln 1 + i(\pi/2 + 2\pi n))} = e^{-(\pi/2
 
 ### 5.1 Statement
 
-If $ f $ is analytic on and inside a simple closed curve $ C $, then:
+If $ f $ is analytic on and inside a simple closed curve $  C $, then:
 
 $ $\oint_C f(z)\,dz = 0
 
 $$
 
-### 5.2 Proof Sketch
+# ## 5.2 Proof Sketch
 
 Using Green's theorem
 
@@ -140,7 +142,7 @@ $$
 
 By Green's theorem and CR equations, both integrals vanish.
 
-### 5.3 Cauchy-Goursat Theorem $ f $ analytic on $ C $ and its interior →$\oint f(z)\,dz = 0 $.
+### 5.3 Cauchy-Goursat Theorem $ f $ analytic on $  C $ and its interior →$\oint f(z)\,dz = 0 $.
 
 **Extensions**:
 
@@ -150,7 +152,7 @@ By Green's theorem and CR equations, both integrals vanish.
 
 ### 5.4 Deformation Theorem
 
-If $ C_1 $ and $ C_2 $ are two positively oriented simple closed curves with $ C_1 $ inside $ C_2 $, and $ f $ is analytic in the region between them
+If $ C_1 $ and $ C_2 $ are two positively oriented simple closed curves with $ C_1 $ inside $ C_2 $, and $  f $ is analytic in the region between them
 
 $ $\oint_{C_2} f(z)\,dz = \oint_{C_1} f(z)\,dz
 
@@ -162,24 +164,26 @@ $$
 
 ### 6.1 Statement
 
-If $ f $ is analytic on and inside $ C $, and $ z_0 $ is interior to $ C $:
+If $ f $ is analytic on and inside $  C $, and $ z_0 $ is interior to $  C $:
 
 $ $
 
 f(z_0) = \frac{1}{2\pi i}\oint_C \frac{f(z)}{z-z_0}\,d
 z
 
-$$### 6.2 Derivatives $ $ f^{(n)}(z_0) = \frac{n!}{2\pi i}\oint_C \frac{f(z)}{(z-z_0)^{n+1}}\,dz $$**Moral**: Analytic functions are infinitely differentiable!
+$$
+
+# ## 6.2 Derivatives $ $ f^{(n)}(z_0) = \frac{n!}{2\pi i}\oint_C \frac{f(z)}{(z-z_0)^{n+1}}\,dz $$**Moral**: Analytic functions are infinitely differentiable!
 
 ### 6.3 Liouville's Theorem
 
-If $ f $ is analytic on all $\mathbb{C} $ (entire) and bounded, then $ f $ is constant.
+If $ f $ is analytic on all $\mathbb{C} $ (entire) and bounded, then $  f $ is constant.
 
 **Application**: Fundamental theorem of algebra — every polynomial has a root in $\mathbb{C} $.
 
 ### 6.4 Worked Example
 
-Evaluate $\oint_C \frac{\sin z}{z^2+1}\,dz $ where $ C $ is $ |z|=2 $.
+Evaluate $\oint_C \frac{\sin z}{z^2+1}\,dz $ where $  C $ is $ |z|=2 $.
 
 **Solution**:
 Factor $ z^2+1 = (z-i)(z+i) $. By partial fractions:
@@ -201,11 +205,11 @@ If $ f $ is analytic at $ z_0 $:
 
 $ $ f(z) = \sum_{n=0}^{\infty} \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n $$
 
-Converges within $ |z-z_0| < R $ where $ R $ is distance to nearest singularity.
+Converges within $ |z-z_0| < R $ where $  R $ is distance to nearest singularity.
 
 ### 7.2 Laurent Series
 
-For $ f $ analytic in an annulus $ r < |z-z_0| < R $:
+For $ f $ analytic in an annulus $  r < |z-z_0| < R $:
 
 $ $
 
@@ -214,9 +218,9 @@ n
 
 $$
 
-where:$ $ a_n = \frac{1}{2\pi i}\oint_C \frac{f(z)}{(z-z_0)^{n+1}}\,dz $$
+where: $ $ a_n = \frac{1}{2\pi i}\oint_C \frac{f(z)}{(z-z_0)^{n+1}}\,dz $$
 
-### 7.3 Singularity Classification
+# ## 7.3 Singularity Classification
 
 | Type | Laurent series | Example |
 |------|---------------|---------|
@@ -238,26 +242,26 @@ where $ C $ encloses only $ z_0 $.
 
 ### 8.2 Computing Residues
 
-**Simple pole**: $\text{Res}(f, z_0) = \lim_{z \to z_0} (z-z_0)f(z) $**Pole of order $ m $**:
+**Simple pole**: $\text{Res}(f, z_0) = \lim_{z \to z_0} (z-z_0)f(z) $**Pole of order $  m $**:
 
 $ $\text{Res}(f, z_0) = \frac{1}{(m-1)!}\lim_{z \to z_0} \frac{d^{m-1}}{dz^{m-1}}\left[(z-z_0)^m f(z)\right]
 
 $$
 
-### 8.3 The Residue Theorem
+# ## 8.3 The Residue Theorem
 
-If $ f $ is analytic on and inside $ C $ except at finitely many singularities $ z_1, \ldots, z_n $:
+If $ f $ is analytic on and inside $  C $ except at finitely many singularities $ z_1, \ldots, z_n $:
 
 $ $\oint_C f(z)\,dz = 2\pi i \sum_{k=1}^n \text{Res}(f, z_k)
 
-$$**Proof**: Deform $ C $ into small circles around each singularity.$\oint $ around each small circle $= 2\pi i \cdot \\text{Res} $.
+$$**Proof**: Deform $  C $ into small circles around each singularity.$\oint $ around each small circle $= 2\pi i \cdot \\text{Res} $.
 
 ### 8.4 Worked Example
 
-Evaluate $\oint_C \frac{5z-2}{z(z-1)}\,dz $ where $ C $ is $ |z|=2 $.
+Evaluate $\oint_C \frac{5z-2}{z(z-1)}\,dz $ where $  C $ is $ |z|=2 $.
 
 **Solution**:
-Singularities at $ z=0 $ and $ z=1 $ (both inside $ C $).
+Singularities at $ z=0 $ and $ z=1 $ (both inside $  C $).
 
 - $\text{Res}(f, 0) = \lim_{z \to 0} z\frac{5z-2}{z(z-1)} = \frac{-2}{-1} = 2 $-$\text{Res}(f, 1) = \lim_{z \to 1} (z-1)\frac{5z-2}{z(z-1)} = \frac{5-2}{1} = 3 $
 
@@ -269,7 +273,7 @@ $$---
 
 ### 9.1 Real Integrals via Residues
 
-**Type 1** — Trigonometric integrals: $\int_0^{2\pi} R(\cos\theta, \sin\theta)\,d\theta $ Substitute $ z = e^{i\theta} $, $\cos\theta = \frac{z+z^{-1}}{2} $, $\sin\theta = \frac{z-z^{-1}}{2i} $.
+**Type 1** — Trigonometric integrals: $\int_0^{2\pi} R(\cos\theta, \sin\theta)\,d\theta $ Substitute $  z = e^{i\theta} $, $\cos\theta = \frac{z+z^{-1}}{2} $, $\sin\theta = \frac{z-z^{-1}}{2i} $.
 
 **Type 2** — Improper integrals: $\int_{-\infty}^{\infty} f(x)\,dx $ Use semicircular contour in upper half-plane.
 
@@ -280,7 +284,7 @@ $$---
 Evaluate $\int_{-\infty}^{\infty} \frac{dx}{x^2+1} $.
 
 **Solution**:
-Consider $\oint_C \frac{dz}{z^2+1} $ where $ C $ is $ [-R,R] $+ semicircle in upper half-plane.
+Consider $\oint_C \frac{dz}{z^2+1} $ where $  C $ is $ [-R,R] $+ semicircle in upper half-plane.
 
 Singularities: $ z = \pm i $ (only $ z=i $ is inside contour).
 
@@ -294,7 +298,7 @@ Indeed, $\frac{d}{dx}[\\arctan x] = \frac{1}{1+x^2} $, so $\int = [\\arctan x]_{
 
 ### 9.3 Jordan's Lemma
 
-For $ m > 0 $, if $ f(z) \to 0 $ uniformly as $ R \to \infty $ on the semicircle $ C_R $:
+For $ m > 0 $, if $ f(z) \to 0 $ uniformly as $  R \to \infty $ on the semicircle $ C_R $:
 
 $ $\lim_{R \to \infty}\int_{C_R} f(z)e^{imz}\,dz = 0
 
@@ -304,7 +308,7 @@ $$---
 
 ### 10.1 Definition $ w = f(z) $ is conformal at $ z_0 $ if it preserves angles between curves through $ z_0 $.
 
-$ f $ is conformal $\\iff $ $ f $ is analytic with $ f'(z_0) \neq 0 $.
+$ f $ is conformal $\\iff $ $  f $ is analytic with $ f'(z_0) \neq 0 $.
 
 ### 10.2 Important Mappings
 
@@ -312,14 +316,14 @@ $ f $ is conformal $\\iff $ $ f $ is analytic with $ f'(z_0) \neq 0 $.
 |---------|---------|----------|
 | Translation | $ w = z + c $ | Shifts |
 | Rotation | $ w = e^{i\theta}z $ | Rotates by $\theta $ |
-| Scaling | $ w = kz $ | Stretches by $ k $ |
+| Scaling | $ w = kz $ | Stretches by $  k $ |
 | Inversion | $ w = 1/z $ | Circles/lines → circles/lines |
 | Möbius transform | $ w = \frac{az+b}{cz+d} $ | Maps circles/lines to circles/lines |
 
 ### 10.3 Example: Möbius Transformatio
 n
 
-$ $ w = \frac{z-1}{z+1}$$- Maps right half-plane $\\text{Re}(z) > 0 $ to unit disk $ |w| < 1$- Maps imaginary axis to unit circle
+$ $  w = \frac{z-1}{z+1}$ $- Maps right half-plane $\\text{Re}(z) > 0 $ to unit disk $ |w| < 1$- Maps imaginary axis to unit circle
 
 ---
 
@@ -334,11 +338,11 @@ Show $ f(z) = e^z $ is analytic everywhere.
 
 **Solution**: $ f(z) = e^x\cos y + ie^x\sin y $
 
-$ u = e^x\cos y $, $ v = e^x\sin y $-$ u_x = e^x\cos y = v_y $✓
+$ u = e^x\cos y $, $  v = e^x\sin y $-$ u_x = e^x\cos y = v_y $✓
 -$ u_y = -e^x\sin y = -v_x $✓$ f'(z) = e^x\cos y + ie^x\sin y = e^z $✓
 
 ### Problem 3
-Evaluate $\oint_C \frac{e^z}{z^3}\,dz $ where $ C $ is $ |z|=1 $.
+Evaluate $\oint_C \frac{e^z}{z^3}\,dz $ where $  C $ is $ |z|=1 $.
 
 **Solution**:
 Pole of order 3 at $ z=0 $.
@@ -357,7 +361,7 @@ Let $ z = e^{i\theta} $, $\cos\theta = \frac{z+z^{-1}}{2} $, $ d\theta = dz/(iz)
 
 $ $\oint_{|z|=1} \frac{dz/(iz)}{2+(z+z^{-1})/2} = \frac{2}{i}\oint \frac{dz}{z^2+4z+1} $$
 
-Roots: $ z = -2 \pm \sqrt{3} $. Only $ z = -2+\sqrt{3} \approx -0.268 $ inside $|z|=1 $.
+Roots: $ z = -2 \pm \sqrt{3} $. Only $  z = -2+\sqrt{3} \approx -0.268 $ inside $|z|=1 $.
 
 $ $\text{Res} = \frac{2}{i} \cdot \frac{1}{2z+4}\bigg|_{z=-2+\sqrt{3}} = \frac{2}{i}\cdot\frac{1}{2\sqrt{3}} = \frac{1}{i\sqrt{3}}\text{Integral} = 2\pi i \cdot \frac{1}{i\sqrt{3}} = \frac{2\pi}{\sqrt{3}} $$---
 
@@ -375,7 +379,7 @@ Harmonic functions (Laplace's equation solutions) map to:
 
 ### 12.2 Signal Processing
 
--$ s $ and $ z $ transforms (Fourier)
+-$ s $ and $  z $ transforms (Fourier)
 
 - Filter design via conformal mapping
 

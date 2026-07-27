@@ -42,7 +42,7 @@ $$ \nabla \times (\nabla \times \vec{E}) = -\frac{\partial}{\partial t}(\nabla \
 
 $ Using $ \nabla \times (\nabla \times \vec{E}) = \nabla(\nabla\cdot\vec{E}) - \nabla^2\vec{E} = -\nabla^2\vec{E} $ (since $ \nabla\cdot\vec{E} = 0 $ in vacuum) $ $ \nabla^2\vec{E} = \mu_0\epsilon_0\frac{\partial^2\vec{E}}{\partial t^2} $$
 
-Wave speed:  $ $
+Wave speed:  $ $ 
 
 c = \frac{1}{\sqrt{\mu_0\epsilon_0}} = 2.998\times10^8 $ m/s.
 
@@ -54,7 +54,7 @@ where $\omega = ck $,$ |\vec{B}_0| = |\vec{E}_0|/c $,$ \vec{E} \\perp \vec{B} \\
 
 ### Energy and Momentum
 
-- **Energy density:** $ u = \frac{1}{2}\epsilon_0 E^2 + \frac{1}{2\mu_0}B^2 $- **Poynting vector:**$ \vec{S} = \frac{1}{\mu_0}\vec{E} \times \vec{B} $- **Intensity:** $ I = \langle S \rangle = \frac{1}{2}\epsilon_0 c E_0^2 $### Polarization States
+- **Energy density:** $ u = \frac{1}{2}\epsilon_0 E^2 + \frac{1}{2\mu_0}B^2 $- **Poynting vector:**$ \vec{S} = \frac{1}{\mu_0}\vec{E} \times \vec{B} $- **Intensity:** $  I = \langle S \rangle = \frac{1}{2}\epsilon_0 c E_0^2 $### Polarization States
 | Type | $ \vec{E} $ behavior |
 |------|---------------------|
 | Linear | Oscillates along fixed direction |
@@ -75,7 +75,7 @@ Electric dipole moment $ \vec{p} = \sum_i q_i \vec{r}_i $. Far field:
 
 $ $ \vec{E}_{\theta} = \frac{1}{4\pi\epsilon_0}\frac{\ddot{p}\sin\theta}{c^2 r} $$
 
-Total power:  $ $
+Total power:  $ $ 
 
 P = \frac{\mu_0}{6\pi c}\ddot{p}^2 $ (same as Larmor).
 
@@ -122,7 +122,7 @@ y
 
 $ $ \Delta_{\text{ion}} = \frac{40.3}{f^2} \int N_e \, ds \\quad \text{(meters)} $$
 
-where N_e $ = electron density (electrons/m³),$ f $ = frequency (Hz).
+where N_e $ = electron density (electrons/m³),$  f $ = frequency (Hz).
 
 ### Faraday Rotatio
 n

@@ -14,7 +14,7 @@ updated: 2026-07-27
 
 ## 1. Definitions
 
-A **graph** $G = (V, E) $ consists of a finite set of **vertices**$ V $ and a set of **edges**$ E \subseteq V \times V $.
+A **graph** $G = (V, E) $ consists of a finite set of **vertices**$  V $ and a set of **edges**$  E \subseteq V \times V $.
 
 ### Types of Graphs
 
@@ -35,10 +35,10 @@ The **degree** of vertex $ v $ is $\deg(v) = |\{e \in E : v \in e\}| $.
 
 $ $\sum_{v \in V} \deg(v) = 2|E| $$
 
-## 2. Paths and Connectivity
+# # 2. Paths and Connectivity
 
 - A **path** is a sequence of distinct vertices $ v_1, v_2, \dots, v_k $ where $\{v_i, v_{i+1}\} \in E $.
-- A **cycle** is a path where $ v_1 = v_k $ and $ k \geq 3 $.
+- A **cycle** is a path where $ v_1 = v_k $ and $  k \geq 3 $.
 - $ G $ is **connected** if every pair of vertices has a path between them.
 
 ```mermaid
@@ -95,7 +95,7 @@ flowchart TD
 
 $ $ d(v) = \min_{u: (u,v) \in E} \left( d(u) + w(u,v) \right)$$
 
-Initialize $ d(s) = 0 $, $ d(v) = \infty $ for $ v \neq s $.
+Initialize $ d(s) = 0 $, $ d(v) = \infty $ for $  v \neq s $.
 
 ## 5. Eulerian and Hamiltonian Paths
 
@@ -111,11 +111,11 @@ A graph is **planar** if it can be drawn in the plane without edge crossings.
 
 **Euler's Formula** for connected planar graphs:
 
-$ $ V - E + F = 2 $$
+$ $  V - E + F = 2 $$
 
 where $ F $ is the number of faces (including the outer face).
 
-**Corollary:** For simple planar graphs with $ V \geq 3 $: $ E \leq 3V - 6 $.
+**Corollary:** For simple planar graphs with $ V \geq 3 $: $  E \leq 3V - 6 $.
 
 ## 7. Graph Coloring
 
@@ -127,7 +127,7 @@ where $ F $ is the number of faces (including the outer face).
 
 ## 8. Network Flow
 
-**Max-Flow Min-Cut Theorem:** The maximum flow from source $ s $ to sink $ t $ equals the minimum capacity of an $ s $-$ t $ cut.
+**Max-Flow Min-Cut Theorem:** The maximum flow from source $ s $ to sink $  t $ equals the minimum capacity of an $  s $-$  t $ cut.
 
 $ $\max_{f} |f| = \min_{(S,T)} c(S,T)
 
@@ -154,8 +154,8 @@ graph LR
 
 ## 10. Key Theorems
 
-1. **Handshaking Lemma:** $\sum \deg(v) = 2|E| $ 2. **Euler's Formula:**$ V - E + F = 2 $ (planar)
-3. **Dirac's Theorem:** If $\deg(v) \geq |V|/2 $ for all $ v $, then $ G $ has a Hamiltonian cycle
+1. **Handshaking Lemma:** $\sum \deg(v) = 2|E| $ 2. **Euler's Formula:**$  V - E + F = 2 $ (planar)
+3. **Dirac's Theorem:** If $\deg(v) \geq |V|/2 $ for all $  v $, then $  G $ has a Hamiltonian cycle
 4. **König's Theorem:** In bipartite graphs, maximum matching = minimum vertex cover
 5. **Ramsey's Theorem:** $ R(s,t) $— in any 2-coloring of $ K_n $, there exists a monochromatic $ K_s $ or $ K_t $
 

@@ -19,10 +19,10 @@ updated: 2026-07-27
 | Potential | Symbol | Definition | Sources |
 |-----------|--------|------------|---------|
 | **Gravitational** | $V $|$ V(\mathbf{r}) = G \iiint \frac{\rho(\mathbf{r}')}{|\mathbf{r}-\mathbf{r}'|} dV'$ | All mass (Earth, Moon, Sun) |
-| **Centrifugal** | $\Phi $|$\Phi = \frac{1}{2}\omega^2 d^2 $ ($ d $ = distance from rotation axis) | Earth rotation |
-| **Gravity** | $ W $ | $ W = V + \Phi $ | Combined |
+| **Centrifugal** | $\Phi $|$\Phi = \frac{1}{2}\omega^2 d^2 $ ( $  d $ = distance from rotation axis) | Earth rotation |
+| **Gravity** | $ W $ | $  W = V + \Phi $ | Combined |
 | **Normal gravity** | $ U $ | Gravity of a reference ellipsoid | Reference Earth Model |
-| **Disturbing** | $ T $ | $ T = W - U $ | Anomalous masses |
+| **Disturbing** | $ T $ | $  T = W - U $ | Anomalous masses |
 
 ### Spherical Harmonic Expansion of the Gravitational Potentia
 l
@@ -54,7 +54,7 @@ $ $ g_{wgs}(\phi) = 9.7803253359 \cdot \frac{1 + 0.00193185265241\sin^2\phi}{\sq
 
 | Quantity | Symbol | Formula | Meaning |
 |----------|--------|---------|---------|
-| Geoid undulation | $ N $ | $ N = \frac{T}{\gamma} $ (Bruns formula) | Ellipsoid–geoid distance |
+| Geoid undulation | $ N $ | $  N = \frac{T}{\gamma} $ (Bruns formula) | Ellipsoid–geoid distance |
 | Gravity anomaly | $\Delta g $|$\Delta g = g_P - \gamma_Q $ | Observed minus normal |
 | Gravity disturbance | $\delta g $|$\delta g = g_P - \gamma_P $ | At same point |
 | Vertical deflection | $\xi,\eta $|$\xi = -\frac{1}{\gamma R}\frac{\partial T}{\partial \phi} $, $\eta = -\frac{1}{\gamma R\cos\phi}\frac{\partial T}{\partial \lambda} $ | Plumb line gradient |
@@ -63,13 +63,13 @@ $ $ g_{wgs}(\phi) = 9.7803253359 \cdot \frac{1 + 0.00193185265241\sin^2\phi}{\sq
 ### Bruns' Formul
 a
 
-$ $ N = \frac{W(P) - U(Q_0)}{\gamma(Q_0)} = \frac{T(P)}{\gamma(Q_0)}$$
+$ $  N = \frac{W(P) - U(Q_0)}{\gamma(Q_0)} = \frac{T(P)}{\gamma(Q_0)}$$
 
-This elegantly links the geoid undulation $ N $ to the disturbing potential $ T $.
+This elegantly links the geoid undulation $ N $ to the disturbing potential $  T $.
 
 ### Stokes' Integral (Gravimetric Geoid)
 
-$ $ N = \frac{R}{4\pi\gamma_0} \iint_\sigma \Delta g \, S(\psi)\, d\sigma $$
+$ $  N = \frac{R}{4\pi\gamma_0} \iint_\sigma \Delta g \, S(\psi)\, d\sigma $$
 
 where $ S(\psi) $ is Stokes' function. **Prerequisite:** No masses above the geoid, global gravity anomaly data.
 
@@ -86,7 +86,7 @@ For areas with topography, we cannot use Stokes directly. Molodensky uses gravit
 | Source | Magnitude (mGal) | Wavelength |
 |--------|------------------|------------|
 | Mean Earth (ellipsoid) | 978,000 | ∞ |
-| Oblateness ($ J_2 $) | ~10,000 | Continental |
+| Oblateness ( $ J_2 $) | ~10,000 | Continental |
 | Crustal structure | ±200 | 100–1000 km |
 | Mountains | ±100 | 10–100 km |
 | Sedimentary basins | ±50 | 50–500 km |
@@ -113,7 +113,7 @@ For areas with topography, we cannot use Stokes directly. Molodensky uses gravit
 
 **Free-air correction:**$\delta g_{FA} = -\frac{\partial \gamma}{\partial h} h \approx -0.3086h $ mGal/m
 
-**Simple Bouguer correction:**$\delta g_B = +0.1119 \, \rho \, h $ mGal ($\rho $ in g/cm³)
+**Simple Bouguer correction:**$\delta g_B = +0.1119 \, \rho \, h $ mGal ( $\rho $ in g/cm³)
 
 ---
 
@@ -148,7 +148,7 @@ For areas with topography, we cannot use Stokes directly. Molodensky uses gravit
 ## Study Problems
 
 1. **Recall:** Compute normal gravity at the equator, 45° latitude, and pole using the GRS80 formula. (Answer: ~9.780, ~9.806, ~9.832 m/s² respectively.)
-2. **Application:** A gravity measurement at $ h = 500 $ m gives $ g = 9,803,450 $μGal. Normal gravity at sea level is 9,803,000 μGal. Compute free-air anomaly. (1 mGal = 1000 μGal.)
+2. **Application:** A gravity measurement at $ h = 500 $  m gives $ g = 9,803,450 $μGal. Normal gravity at sea level is 9,803,000 μGal. Compute free-air anomaly. (1 mGal = 1000 μGal.)
 3. **Derivation:** Derive the free-air gradient $\partial\gamma/\partial h = -2\gamma/a = -0.3086 $ mGal/m.
 4. **Real-world:** The Bouguer anomaly over a mountain range is -50 mGal. What does this indicate about isostatic compensation?
 
@@ -156,7 +156,7 @@ For areas with topography, we cannot use Stokes directly. Molodensky uses gravit
 
 ## Common Mistakes
 
-1. **Confusing gravitational potential $ V $ with gravity potential $ W $:** $ W = V + \Phi$ (includes rotation).
+1. **Confusing gravitational potential $ V $ with gravity potential $  W $:** $  W = V + \Phi$ (includes rotation).
 2. **Applying Stokes' integral without removing topography:** The integration requires no masses above the geoid.
 3. **Using the wrong normal gravity formula:** GRS80 vs WGS84 differ at the μGal level (significant for precise work).
 4. **Forgetting to account for time-variable gravity (GRACE):** The static field changes with hydrology, ice, and tectonics.

@@ -20,7 +20,7 @@ Mata kuliah ini mempelajari konsep dan teknik grafika komputer 3D dan visualisas
 
 $$\begin{bmatrix} x_w \\ y_w \\ z_w \\ w \end{bmatrix} = \begin{bmatrix} 2n/(r-l) & 0 & (r+l)/(r-l) & 0 \\ 0 & 2n/(t-b) & (t+b)/(t-b) & 0 \\ 0 & 0 & -(f+n)/(f-n) & -2fn/(f-n) \\ 0 & 0 & -1 & 0 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix} $$
 
-### 2. Modeling 3D
+# ## 2. Modeling 3D
 
 - Mesh modeling (triangulation)
 

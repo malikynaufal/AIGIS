@@ -38,8 +38,8 @@ updated: 2026-07-27
 
 | Method | Formula | Degree | Use |
 |--------|---------|--------|-----|
-| **Lagrange** | $ P(x) = \sum_{i=0}^n y_i \prod_{j\neq i}\frac{x-x_j}{x_i-x_j} $ | ≤$ n $ | Exact fit to $ n+1 $ points |
-| **Newton** | $ P(x) = a_0 + a_1(x-x_0) + a_2(x-x_0)(x-x_1) + \cdots $ | ≤$ n $ | Easy to add points |
+| **Lagrange** | $ P(x) = \sum_{i=0}^n y_i \prod_{j\neq i}\frac{x-x_j}{x_i-x_j} $ | ≤$  n $ | Exact fit to $ n+1 $ points |
+| **Newton** | $ P(x) = a_0 + a_1(x-x_0) + a_2(x-x_0)(x-x_1) + \cdots $ | ≤$  n $ | Easy to add points |
 | **Spline** | Piecewise cubic,$ C^2 $ continuous | Local | Smooth interpolation |
 
 ### Numerical Integration (Quadrature)
@@ -114,7 +114,7 @@ This is essentially a Gauss quadrature on the sphere.
 
 ### Error Analysis
 
-**Condition number:**$\kappa(A) = \frac{\sigma_{max}}{\sigma_{min}} $ of the normal matrix $ A = H^T P H $.
+**Condition number:**$\kappa(A) = \frac{\sigma_{max}}{\sigma_{min}} $ of the normal matrix $  A = H^T P H $.
 
 | $\kappa $ | Interpretation |
 |-----------|---------------|
@@ -154,7 +154,7 @@ This is essentially a Gauss quadrature on the sphere.
 ## Study Problems
 
 1. **Recall:** Use Newton-Raphson to find $\sqrt{2} $ (root of $ x^2 - 2 = 0 $), starting from $ x_0 = 1.5 $.
-2. **Application:** Compute $\int_0^1 e^{-x^2}dx $ numerically using Simpson's rule with $ n = 4 $ intervals.
+2. **Application:** Compute $\int_0^1 e^{-x^2}dx $ numerically using Simpson's rule with $  n = 4 $ intervals.
 3. **Derivation:** Derive the central difference formula for $ f'(x) $ from Taylor expansions of $ f(x+h) $ and $ f(x-h)$.
 4. **Real-world:** In GNSS processing, the normal matrix is often nearly singular. Suggest two strategies to handle ill-conditioning.
 

@@ -82,7 +82,7 @@ The **Datum Geodesi Nasional 1995** (DGN95) is Indonesia's official geodetic dat
 
 The **South American Datum 1969** was the regional datum for South America:
 
-- **Ellipsoid:** South American 1969 ($ a = 6,378,160 $ m,$ 1/f = 298.25 $)
+- **Ellipsoid:** South American 1969 ( $ a = 6,378,160 $ m,$ 1/f = 298.25 $)
 
 - **Origin:** Chua Station, Goiás, Brazil
 

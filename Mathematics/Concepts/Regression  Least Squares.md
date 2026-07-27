@@ -27,7 +27,9 @@ Minimise $\sum_{i=1}^n (y_i - \hat{y}_i)^2 $:
 $ $\hat{\beta}_1 = \frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sum(x_i - \bar{x})^2} = \frac{S_{xy}}{S_{xx}}\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x
 }
 
-$$### 1.3 Coefficient of Determination $ $ R^2 = 1 - \frac{\text{SSE}}{\text{SST}} = 1 - \frac{\sum(y_i-\hat{y}_i)^2}{\sum(y_i-\bar{y})^2}$$
+$$
+
+# ## 1.3 Coefficient of Determination $ $ R^2 = 1 - \frac{\text{SSE}}{\text{SST}} = 1 - \frac{\sum(y_i-\hat{y}_i)^2}{\sum(y_i-\bar{y})^2}$$
 
 $ R^2 = 1 $ means perfect fit;$ R^2 = 0 $ means model explains none of the variance.
 
@@ -39,16 +41,16 @@ l
 $ $\mathbf{l} = A\mathbf{x} + \mathbf{v} $$
 
 where:
--$\mathbf{l} $: $ n \times 1 $ observation vector
--$ A $: $ n \times u $ design matrix
--$\mathbf{x} $: $ u \times 1 $ parameter vector
--$\mathbf{v} $: $ n \times 1 $ residual vector
+-$\mathbf{l} $: $  n \times 1 $ observation vector
+-$ A $: $  n \times u $ design matrix
+-$\mathbf{x} $: $  u \times 1 $ parameter vector
+-$\mathbf{v} $: $  n \times 1 $ residual vector
 
 ### 2.2 Normal Equations
 
-Minimise $\mathbf{v}^TP\mathbf{v} $ where $ P $ is weight matrix:$ $ A^TPA\hat{\mathbf{x}} = A^TPl\hat{\mathbf{x}} = (A^TPA)^{-1}A^TPl $$
+Minimise $\mathbf{v}^TP\mathbf{v} $ where $  P $ is weight matrix: $ $ A^TPA\hat{\mathbf{x}} = A^TPl\hat{\mathbf{x}} = (A^TPA)^{-1}A^TPl $$
 
-### 2.3 Solution Properties
+# ## 2.3 Solution Properties
 
 -$ E[\hat{\mathbf{x}}] = \mathbf{x} $ (unbiased)
 -$ C_{\hat{x}} = \sigma_0^2(A^TPA)^{-1} $ (covariance)
@@ -70,7 +72,7 @@ where $ n-u $= degrees of freedom.
 
 Model: $ y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \cdots + \beta_kx_k + \varepsilon $
 
-$ $\hat{\boldsymbol{\beta}} = (X^TX)^{-1}X^T\mathbf{y} $$### 3.1 Adjusted $ R^2 $
+$ $\hat{\boldsymbol{\beta}} = (X^TX)^{-1}X^T\mathbf{y} $ $### 3.1 Adjusted $ R^2 $
 
 $ $ R^2_{\text{adj}} = 1 - \frac{\text{SSE}/(n-p)}{\text{SST}/(n-1)}$$
 
@@ -91,7 +93,7 @@ where $\Sigma $ is covariance matrix of observations.
 ### 4.1 Cholesky Approac
 h
 
-$ $ P = L^TL $$
+$ $  P = L^TL $$
 
 Transform: $\tilde{A} = LA $,$\tilde{l} = Ll $ Solve $\tilde{A}^T\tilde{A}\hat{\mathbf{x}} = \tilde{A}^T\tilde{l} $## 5. Nonlinear Least Squares
 
@@ -99,13 +101,13 @@ Transform: $\tilde{A} = LA $,$\tilde{l} = Ll $ Solve $\tilde{A}^T\tilde{A}\hat{\
 
 For nonlinear model $\mathbf{l} = \mathbf{f}(\mathbf{x}) + \mathbf{v} $:
 
-Linearize: $\mathbf{f}(\mathbf{x} + \delta\mathbf{x}) \approx \mathbf{f}(\mathbf{x}) + J\delta\mathbf{x} $ Iterate:$ $ J^TJ\delta\hat{\mathbf{x}} = J^T(\mathbf{l} - \mathbf{f}(\mathbf{x}))\mathbf{x}_{k+1} = \mathbf{x}_k + \delta\hat{\mathbf{x}}$$
+Linearize: $\mathbf{f}(\mathbf{x} + \delta\mathbf{x}) \approx \mathbf{f}(\mathbf{x}) + J\delta\mathbf{x} $ Iterate: $ $ J^TJ\delta\hat{\mathbf{x}} = J^T(\mathbf{l} - \mathbf{f}(\mathbf{x}))\mathbf{x}_{k+1} = \mathbf{x}_k + \delta\hat{\mathbf{x}}$$
 
-### 5.2 Levenberg-Marquardt
+# ## 5.2 Levenberg-Marquardt
 
 Adds damping parameter $\lambda $:
 
-$ $(J^TJ + \lambda I)\delta\hat{\mathbf{x}} = J^T(\mathbf{l} - \mathbf{f})$$-$\lambda $ large: gradient descent (stable)
+$ $ (J^TJ + \lambda I)\delta\hat{\mathbf{x}} = J^T(\mathbf{l} - \mathbf{f})$ $-$\lambda $ large: gradient descent (stable)
 -$\lambda $ small: Gauss-Newton (fast convergence)
 
 ## 6. Hypothesis Testing in Regression
@@ -113,21 +115,21 @@ $ $(J^TJ + \lambda I)\delta\hat{\mathbf{x}} = J^T(\mathbf{l} - \mathbf{f})$$-$\l
 ### 6.1 t-Test for Individual Coefficient
 s
 
-$ $ t = \frac{\hat{\beta}_j}{\text{SE}(\hat{\beta}_j)} \sim t_{n-p}$$
+$ $  t = \frac{\hat{\beta}_j}{\text{SE}(\hat{\beta}_j)} \sim t_{n-p}$$
 
-### 6.2 F-Test for Model Significanc
+# ## 6.2 F-Test for Model Significanc
 e
 
-$ $ F = \frac{\text{SSR}/p}{\text{SSE}/(n-p-1)} \sim F(p, n-p-1) $$
+$ $  F = \frac{\text{SSR}/p}{\text{SSE}/(n-p-1)} \sim F(p, n-p-1) $$
 
-### 6.3 Confidence Interval
+# ## 6.3 Confidence Interval
 s
 
 $ $ \hat{\beta}_j \pm t_{\alpha/2, n-p} \cdot \text{SE}(\hat{\beta}_j)
 
 $$
 
-## 7. Residual Diagnostics
+# # 7. Residual Diagnostics
 
 ### 7.1 Assumptions
 
@@ -159,7 +161,7 @@ Promotes sparsity (feature selection).
 ## 9. Practice Problems
 
 ### Problem 1
-Given data $ (1,2), (2,3), (3,5), (4,4), (5,6) $. Fit $ y = \beta_0 + \beta_1 x $.
+Given data $ (1,2), (2,3), (3,5), (4,4), (5,6) $. Fit $  y = \beta_0 + \beta_1 x $.
 
 **Solution**:
 $\bar{x} = 3 $, $\bar{y} = 4 $
@@ -180,7 +182,7 @@ $ $\mathbf{x} = \frac{1}{3}\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}\begin{
 
 $$
 
-## 10. Where Geodesy Uses This
+# # 10. Where Geodesy Uses This
 
 - **ALL adjustments** — GPS, levelling, traverse, datum transform
 

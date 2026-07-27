@@ -17,7 +17,7 @@ Starting from Taylor expansion around $x_n $:
 
 $ $ f(x_{n+1}) = f(x_n) + f'(x_n)(x_{n+1} - x_n) + O((x_{n+1}-x_n)^2)$$
 
-Set $ f(x_{n+1}) = 0 $ and neglect higher-order terms:$ $0 \approx f(x_n) + f'(x_n)(x_{n+1} - x_n)$$
+Set $ f(x_{n+1}) = 0 $ and neglect higher-order terms: $ $ 0 \approx f(x_n) + f'(x_n)(x_{n+1} - x_n)$$
 
 Solving for $ x_{n+1} $:
 
@@ -51,7 +51,7 @@ Raise "Did not converge"
 
 ### Quadratic Convergence
 
-If $ f'(r) \neq 0 $ and $ f $ is $ C^2 $ near root $ r $:
+If $ f'(r) \neq 0 $ and $  f $ is $ C^2 $ near root $  r $:
 
 $ $|x_{n+1} - r| \approx \frac{|f''(r)|}{2|f'(r)|} |x_n - r|^2
 
@@ -111,9 +111,9 @@ For system $ F(x) = 0 $ where $ F: \mathbb{R}^n \to \mathbb{R}^n $:
 
 $ $ x_{k+1} = x_k - J_F(x_k)^{-1} F(x_k)$$
 
-where $ J_F $ is the $ n \times n $ Jacobian matrix.
+where $ J_F $ is the $  n \times n $ Jacobian matrix.
 
-**Cost:** $ O(n^3) $ per iteration for linear solve — use quasi-Newton (Broyden) for large $ n $.
+**Cost:** $ O(n^3) $ per iteration for linear solve — use quasi-Newton (Broyden) for large $  n $.
 
 ---
 

@@ -44,14 +44,16 @@ Given $ (\phi, \lambda, h) $, compute:
 
 **Step 1:** Compute the radius of curvature in the prime vertical:
 
-$ $
+$ $ 
 
 N = \frac{a}{\sqrt{1 - e^2 \sin^2\phi}
 }
 
 $$**Step 2:** Compute ECEF coordinates:
 
-$ $ X = (N + h)\cos\phi \cos\lambdaY = (N + h)\cos\phi \sin\lambdaZ = \left(N(1 - e^2) + h\right)\sin\phi $$## Conversion: ECEF → Geodetic (Inverse)
+$ $  X = (N + h)\cos\phi \cos\lambdaY = (N + h)\cos\phi \sin\lambdaZ = \left(N(1 - e^2) + h\right)\sin\phi $$
+
+# # Conversion: ECEF → Geodetic (Inverse)
 
 **Step 1:** Longitude (exact)
 
@@ -63,7 +65,7 @@ $$
 
 Start with:
 
-$ $ p = \sqrt{X^2 + Y^2}e'^2 = \frac{a^2}{b^2} - 1 = \frac{2f - f^2}{(1-f)^2}\phi_1 = \arctan\left(\frac{Z}{p(1 - e^2) + 0}\right) \approx \arctan\left(\frac{Z}{p(1 - e^2)}\right
+$ $  p = \sqrt{X^2 + Y^2}e'^2 = \frac{a^2}{b^2} - 1 = \frac{2f - f^2}{(1-f)^2}\phi_1 = \arctan\left(\frac{Z}{p(1 - e^2) + 0}\right) \approx \arctan\left(\frac{Z}{p(1 - e^2)}\right
 )
 
 $$
@@ -73,9 +75,9 @@ Iterate until convergence (typically 3–5 iterations): $ $ N_i = \frac{a}{\sqrt
 
 $$ **Step 3:** Height:
 
-$ $ h = \frac{p}{\cos\phi} - N $$
+$ $  h = \frac{p}{\cos\phi} - N $$
 
-### Bowring's Iterative Method (1976)
+# ## Bowring's Iterative Method (1976)
 
 A single-iteration approximation with sub-millimeter accuracy for most ellipsoids
 
@@ -91,22 +93,22 @@ where $\theta = \arctan\left(\frac{a}{b} \cdot \frac{Z}{p}\right) $,$\varepsilon
 
 **Solution:**
 
-1. WGS84 parameters: $ a = 6378137.0 $ m,$ f = 1/298.257223563 $ 2.$ e^2 = 2f - f^2 = 0.006694379990 $ 3. Convert $\phi = 51.477^\circ = 0.89865 $ rad,$\lambda = -0.001^\circ = -0.00001745 $ rad
+1. WGS84 parameters: $ a = 6378137.0 $ m,$  f = 1/298.257223563 $ 2.$ e^2 = 2f - f^2 = 0.006694379990 $ 3. Convert $\phi = 51.477^\circ = 0.89865 $ rad,$\lambda = -0.001^\circ = -0.00001745 $ rad
 
 4. Compute $ N $:
 
-$ $
+$ $ 
 
 N = \frac{6378137}{\sqrt{1 - 0.00669438 \times \sin^2(51.477^\circ)}}\sin(51.477^\circ) = 0.78246, \quad \sin^2 = 0.61224N = \frac{6378137}{\sqrt{1 - 0.0040937}} = \frac{6378137}{\sqrt{0.995906}} = \frac{6378137}{0.997951} = 6391250\ \text{m
 }
 
-$$5. Compute XYZ: $ $ X = (6391250 + 100) \times \cos(51.477^\circ) \times \cos(-0.001^\circ)= 6391350 \times 0.62315 \times 0.999999985 = 3,982,718\ \text{m}Y = 6391350 \times 0.62315 \times \sin(-0.001^\circ) = 6391350 \times 0.62315 \times (-0.0000175) = -69.1\ \text{m}Z = (6391250 \times 0.993306 + 100) \times 0.78246 = (6348522 + 100) \times 0.78246 = 4,966,175\ \text{m}$$ **Result:**$ (X, Y, Z) \approx (3,982,718, -69.1, 4,966,175) $ m
+$$5. Compute XYZ: $ $  X = (6391250 + 100) \times \cos(51.477^\circ) \times \cos(-0.001^\circ)= 6391350 \times 0.62315 \times 0.999999985 = 3,982,718\ \text{m}Y = 6391350 \times 0.62315 \times \sin(-0.001^\circ) = 6391350 \times 0.62315 \times (-0.0000175) = -69.1\ \text{m}Z = (6391250 \times 0.993306 + 100) \times 0.78246 = (6348522 + 100) \times 0.78246 = 4,966,175\ \text{m}$ $ **Result:**$ (X, Y, Z) \approx (3,982,718, -69.1, 4,966,175) $  m
 
 ## Worked Example: ECEF → Geodetic (Bowring)
 
-**Problem:** Convert ECEF coords to geodetic using the same WGS84 ellipsoid.$ (X, Y, Z) = (3.98\times10^6, -69, 4.97\times10^6) $ m from above.
+**Problem:** Convert ECEF coords to geodetic using the same WGS84 ellipsoid.$ (X, Y, Z) = (3.98\times10^6, -69, 4.97\times10^6) $  m from above.
 
-1.$ p = \sqrt{X^2 + Y^2} = \sqrt{3982718^2 + 69^2} \approx 3,982,718 $ m (Y contribution negligible)
+1.$ p = \sqrt{X^2 + Y^2} = \sqrt{3982718^2 + 69^2} \approx 3,982,718 $  m (Y contribution negligible)
 
 2.$\theta = \arctan\left(\frac{a}{b} \cdot \frac{Z}{p}\right) $, with $ a/b = 1.0033528 $
 
@@ -126,10 +128,10 @@ $ $\phi = \arctan(4971655 / 3954608) = \arctan(1.2571) = 51.477^\circ
 
 $$
 
-5.$ h $: With $\phi \approx 51.477^\circ $,$ N = 6391250 $
+5.$ h $: With $\phi \approx 51.477^\circ $,$  N = 6391250 $
 m
 
-$ $ h = \frac{3982718}{\cos(51.477^\circ)} - 6391250 = \frac{3982718}{0.62315} - 6391250 = 6391250 - 6391250 + 100 \approx 100\ \text{m}$$**Recovery:** Original $ h = 100 $ m — error < 0.1 mm after one iteration.
+$ $  h = \frac{3982718}{\cos(51.477^\circ)} - 6391250 = \frac{3982718}{0.62315} - 6391250 = 6391250 - 6391250 + 100 \approx 100\ \text{m}$ $**Recovery:** Original $  h = 100 $ m — error < 0.1 mm after one iteration.
 
 ## Importance of Geodetic Coordinates
 

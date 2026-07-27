@@ -7,7 +7,7 @@ updated: 2026-07-27
 
 # 🌊 Geoid Undulation (N)
 
-**Geoid undulation** $N $ is the separation (distance along the ellipsoidal normal) between the [[Geoid]] (equipotential surface approximating mean sea level) and the [[Reference Ellipsoid]] at a given point. It is the critical conversion factor in the height relationship $h = H + N $.
+**Geoid undulation** $N $ is the separation (distance along the ellipsoidal normal) between the [[Geoid]] (equipotential surface approximating mean sea level) and the [[Reference Ellipsoid]] at a given point. It is the critical conversion factor in the height relationship $  h = H + N $.
 
 ## Global Values and Behavior
 
@@ -76,7 +76,7 @@ The standard way to compute $ N(\phi, \lambda) $ at an arbitrary point:
 
 1. Locate the four grid points surrounding $ (\phi, \lambda) $.
 2. Use bilinear interpolation weights based on fractional distance.
-3. $ N = N_{00}(1-t)(1-u) + N_{01}(1-t)u + N_{10}t(1-u) + N_{11}tu $ where $ t = (\phi - \phi_0)/\Delta\phi $ and $ u = (\lambda - \lambda_0)/\Delta\lambda $.
+3. $ N = N_{00}(1-t)(1-u) + N_{01}(1-t)u + N_{10}t(1-u) + N_{11}tu $ where $  t = (\phi - \phi_0)/\Delta\phi $ and $  u = (\lambda - \lambda_0)/\Delta\lambda $.
 
 ### Spherical Harmonic Synthesis
 
@@ -94,7 +94,7 @@ Stokes' integral with the Stokes function $ S(\psi) $. In practice, this uses th
 
 ## Relationship to Other Height Systems
 
-$ $ h = H + NH = h - N $$
+$ $  h = H + NH = h - N $$
 
 In regions with poor geoid models (oceans, deserts), EGM2008 gives $ N $ accurate to 10–100 m. This means:
 
@@ -106,11 +106,11 @@ In regions with poor geoid models (oceans, deserts), EGM2008 gives $ N $ accurat
 
 ## Worked Example
 
-**Problem:** A GNSS survey at a point gives ellipsoidal height $ h = 152.345 $ m. Using EGM2008, the geoid undulation at that point is $ N = 42.678 $ m. What is the orthometric height?
+**Problem:** A GNSS survey at a point gives ellipsoidal height $ h = 152.345 $ m. Using EGM2008, the geoid undulation at that point is $  N = 42.678 $ m. What is the orthometric height?
 
 **Solution:**
 
-$ $ H = h - N = 152.345 - 42.678 = 109.667\ \text{m}$$
+$ $  H = h - N = 152.345 - 42.678 = 109.667\ \text{m}$$
 
 This orthometric height is what you would use on a construction site or topographic map.
 

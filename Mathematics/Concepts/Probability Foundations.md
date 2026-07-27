@@ -20,16 +20,16 @@ The **sample space** $\Omega $ is the set of all possible outcomes of a random e
 
 | Term | Symbol | Meaning |
 |------|--------|---------|
-| Sure event | $\Omega $ | Always occurs ($ P(\Omega) = 1 $) |
-| Impossible event | $\emptyset $ | Never occurs ($ P(\emptyset) = 0 $) |
-| Complement | $\bar{A} $ or $ A^c $| $ A $ does not occur: $ P(\bar{A}) = 1 - P(A) $ |
-| Union | $ A \cup B $ | At least one of $ A $ or $ B $ occurs |
-| Intersection | $ A \cap B $ | Both $ A $ and $ B $ occur |
+| Sure event | $\Omega $ | Always occurs ( $ P(\Omega) = 1 $) |
+| Impossible event | $\emptyset $ | Never occurs ( $ P(\emptyset) = 0 $) |
+| Complement | $\bar{A} $ or $ A^c $| $  A $ does not occur: $ P(\bar{A}) = 1 - P(A) $ |
+| Union | $ A \cup B $ | At least one of $  A $ or $  B $ occurs |
+| Intersection | $ A \cap B $ | Both $  A $ and $  B $ occur |
 | Mutually exclusive | $ A \cap B = \emptyset $ | Cannot both occur |
 
 ### 1.2 Axioms of Probability (Kolmogorov)
 
-1. **Non-negativity:**$ P(A) \geq 0 $ for every event $ A $ 2. **Normalisation:**$ P(\Omega) = 1 $ 3. **Additivity:** For pairwise disjoint events $ A_1, A_2, \ldots $:
+1. **Non-negativity:**$ P(A) \geq 0 $ for every event $  A $ 2. **Normalisation:**$ P(\Omega) = 1 $ 3. **Additivity:** For pairwise disjoint events $ A_1, A_2, \ldots $:
 
 $ $ P\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} P(A_i)$$
 
@@ -45,11 +45,11 @@ $ $ P(A) = \frac{|A|}{|\Omega|} = \frac{\text{number of outcomes in } A}{\text{t
 
 ## 2. Conditional Probability (Peluang Bersyarat)
 
-The probability of event $ A $ given that $ B $ has occurred
+The probability of event $ A $ given that $  B $ has occurred
 
 $ $ P(A|B) = \frac{P(A \cap B)}{P(B)}, \quad P(B) > 0 $$
 
-### 2.1 The Multiplication Rul
+# ## 2.1 The Multiplication Rul
 e
 
 $ $ P(A \cap B) = P(A|B)P(B) = P(B|A)P(A)$$
@@ -59,9 +59,9 @@ $ $ P(A \cap B) = P(A|B)P(B) = P(B|A)P(A)$$
 
 $ $ P(A_1 \cap A_2 \cap \cdots \cap A_n) = P(A_1)P(A_2|A_1)P(A_3|A_1\cap A_2)\cdots P(A_n|A_1\cap\cdots\cap A_{n-1})$$
 
-### 2.2 Law of Total Probability
+# ## 2.2 Law of Total Probability
 
-If $\{B_1, B_2, \ldots, B_k\} $ partition $\Omega $ (mutually exclusive and exhaustive)$ $ P(A) = \sum_{i=1}^k P(A|B_i)P(B_i)$$
+If $\{B_1, B_2, \ldots, B_k\} $ partition $\Omega $ (mutually exclusive and exhaustive) $ $ P(A) = \sum_{i=1}^k P(A|B_i)P(B_i)$$
 
 **In geodesy:** Partitioning error sources — GNSS total error = (tropospheric error) + (ionospheric error) + (receiver noise) + (multipath)...
 
@@ -69,7 +69,7 @@ If $\{B_1, B_2, \ldots, B_k\} $ partition $\Omega $ (mutually exclusive and exha
 
 ## 3. Independence (Kebebasan)
 
-Two events $ A $ and $ B $ are **independent** if any of the equivalent conditions hold:
+Two events $ A $ and $  B $ are **independent** if any of the equivalent conditions hold:
 
 $ $ P(A \cap B) = P(A)P(B)P(A|B) = P(A)P(B|A) = P(B)$$**Pairwise vs Mutual independence:**
 
@@ -89,14 +89,14 @@ The most important formula for updating beliefs with data
 
 $ $ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$
 
-### 4.1 Expanded Form (Multiple Hypotheses)
+# ## 4.1 Expanded Form (Multiple Hypotheses)
 
 Given a partition $\{B_1, \ldots, B_k\} $:
 
 $ $ P(B_j|A) = \frac{P(A|B_j)P(B_j)}{\sum_{i=1}^k P(A|B_i)P(B_i)}$$ | Term | Name | Meaning |
 |------|------|---------|
 | $ P(B_j) $ | **Prior** | Belief before observing data |
-| $ P(A\|B_j) $ | **Likelihood** | Probability of data under hypothesis $ j $ |
+| $ P(A\|B_j) $ | **Likelihood** | Probability of data under hypothesis $  j $ |
 | $ P(B_j\|A) $ | **Posterior** | Updated belief after data |
 | Denominator | **Evidence** | Normalising constant |
 
@@ -169,18 +169,20 @@ n
 
 $ $ f_{XY}(x,y) \quad \text{or} \quad P(X=x, Y=y)$$
 
-### 6.2 Marginal Distributio
+# ## 6.2 Marginal Distributio
 n
 
 $ $ f_X(x) = \int f_{XY}(x,y)\, dy \quad \text{or} \quad P(X=x) = \sum_y P(X=x, Y=y)$$
 
-### 6.3 Conditional Distributio
+# ## 6.3 Conditional Distributio
 n
 
 $ $ f_{Y|X}(y|x) = \frac{f_{XY}(x,y)}{f_X(x)
 }
 
-$$### 6.4 Law of Total Expectation and Variance $ $ E[Y] = E[E[Y|X]]\text{Var}(Y) = \text{Var}(E[Y|X]) + E[\text{Var}(Y|X)]$$---
+$$
+
+# ## 6.4 Law of Total Expectation and Variance $ $ E[Y] = E[E[Y|X]]\text{Var}(Y) = \text{Var}(E[Y|X]) + E[\text{Var}(Y|X)]$$---
 
 ## 7. Key Inequalities
 
@@ -188,10 +190,10 @@ $$### 6.4 Law of Total Expectation and Variance $ $ E[Y] = E[E[Y|X]]\text{Var}(Y
 |------------|---------|-----|
 | **Markov** | $ P(X \geq a) \leq E[X]/a $ | Upper bound on tail probability |
 | **Chebyshev** | $ P(|X-\mu| \geq k\sigma) \leq 1/k^2 $ | Bounds deviations, any distribution |
-| **Jensen** | $ E[g(X)] \geq g(E[X]) $ for convex $ g $ | Expectation of functions |
+| **Jensen** | $ E[g(X)] \geq g(E[X]) $ for convex $  g $ | Expectation of functions |
 | **Cauchy-Schwarz** | $|E[XY]| \leq \sqrt{E[X^2]E[Y^2]} $ | Correlation bound |
 
-**Chebyshev example:** At least $ 1 - 1/k^2 $ of data lies within $ k $ standard deviations of the mean. For $ k=2 $: at least 75% within $\mu \pm 2\sigma $ (any distribution).
+**Chebyshev example:** At least $ 1 - 1/k^2 $ of data lies within $  k $ standard deviations of the mean. For $ k=2 $: at least 75% within $\mu \pm 2\sigma $ (any distribution).
 
 ---
 

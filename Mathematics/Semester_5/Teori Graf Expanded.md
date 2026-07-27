@@ -23,7 +23,7 @@ Graph theory studies discrete structures composed of vertices (nodes) and edges 
 
 ### Unit 1: Basic Definitions
 
-- **Graph**: $G = (V, E) $ with vertex set $ V $ and edge set $ E $- **Types**: Simple, multigraph, directed, weighted, bipartite, planar
+- **Graph**: $G = (V, E) $ with vertex set $  V $ and edge set $  E $- **Types**: Simple, multigraph, directed, weighted, bipartite, planar
 
 - **Degree**: $\deg(v) $= number of incident edges
 
@@ -54,7 +54,7 @@ Graph theory studies discrete structures composed of vertices (nodes) and edges 
  -$ G $ has Eulerian path $\\iff $ exactly 0 or 2 vertices have odd degree
 
 - **Hamiltonian cycle**: Visits each vertex exactly once
- - Dirac's theorem: If $\deg(v) \geq n/2 $ for all $ v $, then $ G $ is Hamiltonian
+ - Dirac's theorem: If $\deg(v) \geq n/2 $ for all $  v $, then $  G $ is Hamiltonian
  - Finding Hamiltonian cycles is NP-complete
 
 ### Unit 5: Graph Coloring

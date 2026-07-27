@@ -26,7 +26,7 @@ The **Discrete-Time Fourier Transform (DTFT)** provides the frequency-domain rep
 
 $ $
 
- X(e^{j\omega}) = \sum_{n=-\infty}^{\infty} x[n] e^{-j\omega n} $ For finite-length sequences of $N $ points, the **Discrete Fourier Transform (DFT)** samples the DTFT at $ N $ equally-spaced frequencies $$$
+ X(e^{j\omega}) = \sum_{n=-\infty}^{\infty} x[n] e^{-j\omega n} $ For finite-length sequences of $  N $ points, the **Discrete Fourier Transform (DFT)** samples the DTFT at $  N $ equally-spaced frequencies $$$
 
  X[k] = \sum_{n=0}^{N-1} x[n] e^{-j2\pi kn/N}, \quad k = 0, 1, \ldots, N-1 $ The inverse DFT (IDFT) recovers the time-domain signal $$$
 
@@ -64,7 +64,7 @@ Common windows (jendela):
 | Hanning | $ 4/N $ | −31 dB | General purpose |
 | Hamming | $ 4/N $ | −43 dB | Better side lobe rejection |
 | Blackman | $ 6/N $ | −58 dB | Narrowband signals |
-| Kaiser ($\beta=8$) | Variable | −50 dB | Tunable trade-off |
+| Kaiser ( $\beta=8$) | Variable | −50 dB | Tunable trade-off |
 
 ---
 
@@ -84,13 +84,13 @@ FIR filters have linear phase when the coefficients are symmetric: $b_k = b_{N-k
 
 $ $ \tau_g(\omega) = -\frac{d\phi(\omega)}{d\omega} = \frac{N}{2} \quad \text{(constant)} $$
 
-### 2.3 Design Methods
+# ## 2.3 Design Methods
 
 **Window method**: Design by truncating the ideal impulse response with a window.
 
-Example — Lowpass filter with cutoff $f_c = 1 $ kHz at $f_s = 8 $ kHz
+Example — Lowpass filter with cutoff $f_c = 1 $ kHz at $ f_s = 8 $ kHz
 
-$h_{\text{ideal}}[n] = \frac{\sin(\omega_c(n - N/2))}{\pi(n - N/2)}, \quad \omega_c = 2\pi f_c / f_s $ Using a Hamming window of length $N = 31 $:
+$h_{\text{ideal}}[n] = \frac{\sin(\omega_c(n - N/2))}{\pi(n - N/2)}, \quad \omega_c = 2\pi f_c / f_s $ Using a Hamming window of length $  N = 31 $:
 
 $ $
 
@@ -113,19 +113,19 @@ $ $ y[n] = \sum_{k=0}^{M} b_k\, x[n-k] - \sum_{k=1}^{L} a_k\, y[n-k] $$
 
 Transfer function $ $ H(z) = \frac{B(z)}{A(z)} = \frac{b_0 + b_1 z^{-1} + \cdots + b_M z^{-M}}{1 + a_1 z^{-1} + \cdots + a_L z^{-L}} $$
 
-### 3.2 Analog-to-Digital Filter Design
+# ## 3.2 Analog-to-Digital Filter Design
 
 IIR design starts from an analog prototype and applies a bilinear transform:
 
 **Bilinear transform** (transformasi bilineal)
 
-$z = \frac{1 + sT/2}{1 - sT/2} $ This maps the left-half $ s $-plane to the inside of the unit circle, preserving stability. Frequency warping:
+$z = \frac{1 + sT/2}{1 - sT/2} $ This maps the left-half $  s $-plane to the inside of the unit circle, preserving stability. Frequency warping:
 
 $ $ \omega_d = \frac{2}{T}\tan\left(\frac{\omega_a T}{2}\right)
 
 $$
 
-### 3.3 Common IIR Types
+# ## 3.3 Common IIR Types
 
 | Type | Characteristics (Karakteristik) |
 |---|---|
@@ -147,21 +147,21 @@ $$ ---
 
 ### 4.1 Power Spectral Density Estimation
 
-**Welch's averaged periodogram**: Segment the signal into $M $ overlapping blocks, window each, compute$ \frac{1}{N_w}|X_i[k]|^2 $, and average:
+**Welch's averaged periodogram**: Segment the signal into $M $ overlapping blocks, window each, compute $ \frac{1}{N_w}|X_i[k]|^2 $, and average:
 
 $ $ \hat{P}_{\text{Welch}}[k] = \frac{1}{M}\sum_{i=1}^{M} \frac{|X_i[k]|^2}{N_w \cdot U} $$
 
-where $ U = \frac{1}{N_w}\sum w^2[n] $is the window power correction factor.
+where $ U = \frac{1}{N_w}\sum w^2[n] $ is the window power correction factor.
 
 ### 4.2 Spectral SNR Enhancement
 
 For a signal buried in white noise, coherent averaging of $M $ segments improves SNR $ $ \text{SNR}_{\text{improved}} = \text{SNR}_{\text{input}} + 10\log_{10}(M) \;\text{dB} $$
 
-### 4.3 Wavelet Denoising (Pengurangan Noise Wavelet)
+# ## 4.3 Wavelet Denoising (Pengurangan Noise Wavelet)
 
 The discrete wavelet transform (DWT) decomposes a signal into multi-resolution scales. Denoising proceeds by:
 
-1. Decompose $x[n] $ into wavelet coefficients $w_j[k] $ 2. Threshold coefficients: $ \hat{w}_j[k] = \text{sign}(w_j[k]) \cdot \max(|w_j[k]| - \lambda, 0) $ (soft thresholding)
+1. Decompose $x[n] $ into wavelet coefficients $ w_j[k] $ 2. Threshold coefficients: $ \hat{w}_j[k] = \text{sign}(w_j[k]) \cdot \max(|w_j[k]| - \lambda, 0) $ (soft thresholding)
 3. Reconstruct $ \hat{x}[n] $ from thresholded coefficients
 
 The universal threshold (Donoho & Johnstone):

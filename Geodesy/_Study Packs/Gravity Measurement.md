@@ -18,7 +18,7 @@ Gravity measurements quantify the Earth's gravitational field strength at a poin
 
 $$
 
-At the Earth's surface, the **normal gravity** on the [[Reference Ellipsoid]] (Somigliana formula)$ $\gamma_0 = \frac{a\,g_p\sin^2\varphi + b\,g_e\cos^2\varphi}{\sqrt{a^2\cos^2\varphi + b^2\sin^2\varphi}} $$
+At the Earth's surface, the **normal gravity** on the [[Reference Ellipsoid]] (Somigliana formula) $ $\gamma_0 = \frac{a\,g_p\sin^2\varphi + b\,g_e\cos^2\varphi}{\sqrt{a^2\cos^2\varphi + b^2\sin^2\varphi}} $$
 
 where $ g_e = 9.780326\,7715\;\text{m/s}^2 $ (equatorial) and $ g_p = 9.832186\,3685\;\text{m/s}^2 $ (polar).
 
@@ -37,7 +37,7 @@ Bouguer correction $ $\delta g_B = 2\pi G\rho h \approx 0.04193\;h \;\text{mGal/
 | Unit | Symbol | Definition | Typical value |
 |------|--------|------------|---------------|
 | Gal | Gal | $ 1\;\text{cm/s}^2 = 0.01\;\text{m/s}^2 $ | ~980 Gal at equator |
-| Milligal | mGal | $ 10^{-3} $ Gal | 1 mGal ≈ 1 ppm of $ g $ |
+| Milligal | mGal | $ 10^{-3} $ Gal | 1 mGal ≈ 1 ppm of $  g $ |
 | Microgal | $\mu $ Gal |$ 10^{-6} $ Gal | High‑precision (1 nm/s²) |
 | SI | $\text{m/s}^2 $ | Base SI unit | ~9.78–9.83 m/s² |
 | Eötvös (E) | E | $ 10^{-9}\;\text{s}^{-2} $ | Gravity gradient |
@@ -68,7 +68,7 @@ Bouguer correction $ $\delta g_B = 2\pi G\rho h \approx 0.04193\;h \;\text{mGal/
 
 $ $ g_{\text{corrected}} = g_{\text{observed}} - \delta g_{\text{tide}} - \delta g_{\text{atm}} - \delta g_{\text{polar}} - \delta g_{\text{load}}$$
 
-### 3.2. Typical Correction Magnitudes
+# ## 3.2. Typical Correction Magnitudes
 
 | Correction | Order of magnitude | Formula / Source |
 |------------|-------------------|------------------|
@@ -97,7 +97,7 @@ The measurement equation
 
 $ $ g_{\text{station}} = g_{\text{base}} + C \cdot R + d \cdot (t - t_0) + \text{corrections}$$
 
-where $ C $= calibration factor,$ R $ = reading,$ d $ = drift rate,$ t $ = time.
+where $ C $= calibration factor,$  R $ = reading,$  d $ = drift rate,$  t $ = time.
 
 ### 4.2. Scintrex CG‑6 Autograv
 
@@ -138,7 +138,7 @@ Gravity surveys always reference **base stations** with known gravity values. Th
 
 $ $ g_{\text{station}} = g_{\text{base}} + \Delta g_{\text{field measurements}}$$
 
-### 5.3. Tying to International Reference
+# ## 5.3. Tying to International Reference
 
 The international gravity standard is the **International Gravity Standardization Net 1971 (IGSN71)**, with 1 254 stations worldwide.
 
@@ -193,7 +193,7 @@ R_A^{\text{corr}} &= 4535.7 - 0.075 = 4535.625\\
 R_B^{\text{corr}} &= 4548.3 - 0.225 = 4548.075
 \end{aligned}
 
-$$ **Step 4: Gravity difference** (using calibration factor $ C = 1.0 $ mGal/count):
+$$ **Step 4: Gravity difference** (using calibration factor $  C = 1.0 $ mGal/count):
 
 $ $
 
@@ -246,7 +246,7 @@ $$**Step 5: Station gravities:** $ $ g_A = 978\,052.432 + 14.325 = 978\,066.757\
 | Application | How gravity helps |
 |-------------|-------------------|
 | **Geoid modelling** | Gravity anomalies → Stokes integral →$ N $ (see [[Geoid]]) |
-| **Survey height conversion** | Convert $ h $→$ H $ using gravimetric geoid |
+| **Survey height conversion** | Convert $ h $→$  H $ using gravimetric geoid |
 | **Oil & mineral exploration** | Bouguer anomaly maps → subsurface density |
 | **Volcanic monitoring** | Gravity changes → magma movement |
 | **Hydrogeology** | Water table changes affect local $ g$ |

@@ -13,12 +13,12 @@ updated: 2026-07-27
 
 ## 1. Definition
 
-Given a square matrix $A \in \mathbb{R}^{n \times n} $, the **LU Decomposition** factors $ A $ into:
+Given a square matrix $A \in \mathbb{R}^{n \times n} $, the **LU Decomposition** factors $  A $ into:
 
-$ $ A = L \cdot U $$
+$ $  A = L \cdot U $$
 
 where:
-- $ L $ is a **lower triangular** matrix with ones on the diagonal ($ l_{ii} = 1 $)
+- $ L $ is a **lower triangular** matrix with ones on the diagonal ( $ l_{ii} = 1 $)
 - $ U $ is an **upper triangular** matrix
 
 This is essentially Gaussian elimination captured in matrix form.
@@ -31,8 +31,8 @@ This is essentially Gaussian elimination captured in matrix form.
 |-----------|--------|
 | $ A $ is nonsingular | LU decomposition exists |
 | All leading minors $\det(A_k) \neq 0 $ | LU exists and is unique |
-| $ A $ is symmetric positive definite | **Cholesky** factorization exists: $ A = LL^T $ |
-| $ A $ requires row pivoting | **PLU** decomposition: $ PA = LU $ where $ P $ is a permutation matrix |
+| $ A $ is symmetric positive definite | **Cholesky** factorization exists: $  A = LL^T $ |
+| $ A $ requires row pivoting | **PLU** decomposition: $ PA = LU $ where $  P $ is a permutation matrix |
 
 ---
 
@@ -50,11 +50,11 @@ For k = 1 to n:
 
 Given:
 
-$ $ A = \begin{pmatrix} 2 & 1 & 1 \\ 4 & 3 & 3 \\ 8 & 7 & 9 \end{pmatrix}$$**Step 1:** Eliminate below $ a_{11} $:
+$ $  A = \begin{pmatrix} 2 & 1 & 1 \\ 4 & 3 & 3 \\ 8 & 7 & 9 \end{pmatrix}$ $**Step 1:** Eliminate below $ a_{11} $:
 
-$ $ L_1 = \begin{pmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 4 & 0 & 1 \end{pmatrix}, \quad U_1 = \begin{pmatrix} 2 & 1 & 1 \\ 0 & 1 & 1 \\ 0 & 3 & 5 \end{pmatrix}$$**Step 2:** Eliminate below $ a_{22} $:
+$ $ L_1 = \begin{pmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 4 & 0 & 1 \end{pmatrix}, \quad U_1 = \begin{pmatrix} 2 & 1 & 1 \\ 0 & 1 & 1 \\ 0 & 3 & 5 \end{pmatrix}$ $**Step 2:** Eliminate below $ a_{22} $:
 
-$ $ L = \begin{pmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 4 & 3 & 1 \end{pmatrix}, \quad U = \begin{pmatrix} 2 & 1 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 2 \end{pmatrix}$$**Verification:**$ L \cdot U = A $ ✓
+$ $  L = \begin{pmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 4 & 3 & 1 \end{pmatrix}, \quad U = \begin{pmatrix} 2 & 1 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 2 \end{pmatrix}$ $**Verification:**$  L \cdot U = A $ ✓
 
 ---
 
@@ -64,8 +64,8 @@ $ $ L = \begin{pmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 4 & 3 & 1 \end{pmatrix}, \quad
 
 Instead of inverting $ A $, solve two triangular systems:
 
-1. **Forward substitution:** $ Ly = b $ — solve for $ y $
-2. **Back substitution:** $ Ux = y $ — solve for $ x $
+1. **Forward substitution:** $ Ly = b $ — solve for $  y $
+2. **Back substitution:** $ Ux = y $ — solve for $  x $
 
 Cost: $ O(n^2) $ instead of $ O(n^3) $ per additional right-hand side.
 
@@ -75,7 +75,7 @@ $ $\det(A) = \det(L) \cdot \det(U) = 1 \cdot \prod_{i=1}^{n} u_{ii}
 
 $$
 
-### Computing the Inverse
+# ## Computing the Inverse
 
 Solve $ AX = I $ column by column using LU.
 
@@ -92,7 +92,7 @@ where $ P $ is a **permutation matrix** recording row swaps.
 ### Algorithm (Partial Pivoting)
 
 At each step $ k $:
-1. Find $ i \geq k $ such that $|a_{ik}| = \max_{j \geq k} |a_{jk}|$ 2. Swap rows $ k $ and $ i $
+1. Find $ i \geq k $ such that $|a_{ik}| = \max_{j \geq k} |a_{jk}|$ 2. Swap rows $  k $ and $  i $
 3. Proceed with standard LU elimination
 
 ---
@@ -140,7 +140,7 @@ where $\rho $ is the growth factor and $\kappa(A) $ is the condition number.
 
 In **least squares adjustment**, the normal equations $ N\hat{x} = w $ are solved using Cholesky (a special LU for SPD matrices):
 
-$ $ N = LL^T, \quad L y = w, \quad L^T \hat{x} = y $$
+$ $  N = LL^T, \quad L y = w, \quad L^T \hat{x} = y $$
 
 This is the computational backbone of [[Least Squares Adjustment]].
 

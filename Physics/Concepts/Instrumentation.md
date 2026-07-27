@@ -117,7 +117,7 @@ $ f_{\text{cutoff}} < \frac{f_s}{2} $ where $ f_s $ = sampling frequency.
 **Quantization:*
 *
 
-$ V_{\text{out}} = \frac{V_{\text{ref}}}{2^N} \cdot \text{code} $ where $ N $ = number of bits.
+$ V_{\text{out}} = \frac{V_{\text{ref}}}{2^N} \cdot \text{code} $ where $  N $ = number of bits.
 
 **Quantization error:**$ \pm \frac{1}{2} $ LSB =$ \pm \frac{V_{\text{ref}}}{2^{N+1}} $**Quantization noise power:*
 *
@@ -158,7 +158,7 @@ n
 
 $ y = (x - x_0) \cdot \frac{y_1 - y_0}{x_1 - x_0} + y_0 $$$
 
-### Multi-Point Calibration
+# ## Multi-Point Calibration
 
 - Measure at known values (calibration standards)
 
@@ -179,7 +179,7 @@ Every measurement should be traceable to SI units through an unbroken chain of c
 
 $ $ \text{Instrument} \leftarrow \text{Calibration} \leftarrow \text{Primary Standard} \leftarrow \text{Kibble Balance / Atomic Standards} $$
 
-### Key Calibration Parameters
+# ## Key Calibration Parameters
 
 - **Span adjustment:** Sensitivity (slope) correction
 
@@ -208,7 +208,7 @@ $ $ u_A = \frac{s}{\sqrt{n}} = \frac{1}{\sqrt{n(n-1)}}\sqrt{\sum_{i=1}^n (x_i - 
 
 $$ **Type B** (estimated bounds):
 
-$ u_B = \frac{a}{\sqrt{3}} \quad \text{(uniform distribution)}u_B = \frac{a}{2} \quad \text{(triangular distribution)} $ where $ a $ = half-width of bounds.
+$ u_B = \frac{a}{\sqrt{3}} \quad \text{(uniform distribution)}u_B = \frac{a}{2} \quad \text{(triangular distribution)} $ where $  a $ = half-width of bounds.
 
 ### Combined Standard Uncertaint
 y
@@ -220,7 +220,7 @@ This is the **law of propagation of uncertainty** (also called GUM — Guide to 
 ### Expanded Uncertaint
 y
 
-$ U = k \cdot u_c $ where $ k $ = coverage factor (typically $ k = 2 $ for ~95% confidence level).
+$ U = k \cdot u_c $ where $  k $ = coverage factor (typically $  k = 2 $ for ~95% confidence level).
 
 ### Error Budget Example (GNSS Baseline Measurement)
 
@@ -240,8 +240,8 @@ y
 
 $ $ \text{Relative uncertainty} = \frac{u}{|x|} \times 100\% $$
 
-### Resolution-Limited Uncertainty
-Instrument resolution $ \Delta $ contributes $ u_{\text{res}} = \frac{\Delta}{\sqrt{12}} $ For a digital scale with resolution 1 g: $ u_{\text{res}} = 0.29 $ g
+# ## Resolution-Limited Uncertainty
+Instrument resolution $ \Delta $ contributes $ u_{\text{res}} = \frac{\Delta}{\sqrt{12}} $ For a digital scale with resolution 1 g: $ u_{\text{res}} = 0.29 $  g
 
 ---
 
@@ -277,10 +277,10 @@ $ $ \sigma_{P} = \sqrt{\sigma_{\text{iono}}^2 + \sigma_{\text{tropo}}^2 + \sigma
 
 $ $ \sigma_{\phi} = \sqrt{\sigma_{\text{thermal}}^2 + \sigma_{\text{noise}}^2} $$
 
-Typically: $ \sigma_P \approx 1 $ m (code),$ \sigma_\phi \approx 1 $ mm (phase) for survey-grade receivers.
+Typically: $ \sigma_P \approx 1 $  m (code),$ \sigma_\phi \approx 1 $ mm (phase) for survey-grade receivers.
 
 ### Integer Ambiguity Resolution
-Carrier phase: $ \phi = \frac{\rho}{\lambda} + N + \varepsilon $ where $ N $ = integer number of wavelengths (ambiguity). Resolving $ N $ correctly → mm accuracy.
+Carrier phase: $ \phi = \frac{\rho}{\lambda} + N + \varepsilon $ where $  N $ = integer number of wavelengths (ambiguity). Resolving $  N $ correctly → mm accuracy.
 
 ---
 

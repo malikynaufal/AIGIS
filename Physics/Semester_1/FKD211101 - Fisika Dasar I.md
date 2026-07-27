@@ -185,16 +185,16 @@ $ $
 ### Example 3: Satellite Orbit from Newton's Second Law
 A satellite orbits Earth at altitude $ h = 200 $ km above the surface. Find the orbital speed.
 
-**Given:** $ R_E = 6371 $ km, $ GM = 3.986 	imes 10^{14} $ m³/s², $ r = R_E + h = 6571 $ km
+**Given:** $ R_E = 6371 $ km, $ GM = 3.986 	imes 10^{14} $ m³/s², $  r = R_E + h = 6571 $ km
 .
 
 $ v = \sqrt{rac{GM}{r}} = \sqrt{rac{3.986 	imes 10^{14}}{6.571 	imes 10^6}} = 7784 	ext{ m/s} pprox 7.8 	ext{ km/s} $ $ $
 
 **Period:** $ T = rac{2i r}{v} = rac{2i(6571)}{7784} = 5.32 	imes 10^3 	ext{ s} pprox 89 	ext{ min} $### Example 4: Work Done by Variable Force
-A force $ F(x) = 3x^2 + 2x $ acts on a 2 kg particle from $ x = 0 $ to $ x = 3 $ m
+A force $ F(x) = 3x^2 + 2x $ acts on a 2 kg particle from $  x = 0 $ to $  x = 3 $ m
 .
 
-$ W = \int_0^3 (3x^2 + 2x)\,dx = [x^3 + x^2]_0^3 = 27 + 9 = 36 	ext{ J} $ By work-energy theorem: $ W = \Delta K $, so $ v_f = \sqrt{2W/m} = \sqrt{72/2} = 6 $ m/s (if $ v_i = 0$).
+$ W = \int_0^3 (3x^2 + 2x)\,dx = [x^3 + x^2]_0^3 = 27 + 9 = 36 	ext{ J} $ By work-energy theorem: $  W = \Delta K $, so $ v_f = \sqrt{2W/m} = \sqrt{72/2} = 6 $ m/s (if $ v_i = 0$).
 
 ---
 

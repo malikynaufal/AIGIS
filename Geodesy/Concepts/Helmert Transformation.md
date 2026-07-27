@@ -27,11 +27,11 @@ $$\begin{bmatrix} X_T \\ Y_T \\ Z_T \end{bmatrix} = s\,R(\omega_x,\omega_y,\omeg
 
 ### 1.1. Rotation Matrix $ R $ For small angles, the rotation matrix is approximated to first order as
 
-$ $ R = I + \begin{bmatrix} 0 & -\omega_z & \omega_y \\ \omega_z & 0 & -\omega_x \\ -\omega_y & \omega_x & 0 \end{bmatrix}$$
+$ $  R = I + \begin{bmatrix} 0 & -\omega_z & \omega_y \\ \omega_z & 0 & -\omega_x \\ -\omega_y & \omega_x & 0 \end{bmatrix}$$
 
 Expanded to second order (more precise when $ s $ is expressed as $ 1 + s $):
 
-$ $
+$ $ 
 
 R = \begin{bmatrix}
 1 & -\omega_z & \omega_y \\
@@ -41,7 +41,7 @@ R = \begin{bmatrix}
 
 $$
 
-### 1.2. Vector form
+# ## 1.2. Vector form
 
 Often written as
 
@@ -106,7 +106,7 @@ T_x = +66.87,\; T_y = -4.37,\; T_z = +38.52 \;\text{m}\omega_x = \omega_y = \ome
 
 $$
 
-For the same point:$ $ X_{SAD69} = (1-0.27\times 10^{-6})\cdot(-2\,466\,310.2) + 66.87 = -2\,466\,243.99 \;\text{m}$$
+For the same point: $ $ X_{SAD69} = (1-0.27\times 10^{-6})\cdot(-2\,466\,310.2) + 66.87 = -2\,466\,243.99 \;\text{m}$$
 
 Note: residuals exceed 70 m — illustrating why **datum transformations matter**.
 
@@ -160,7 +160,7 @@ Note: residuals exceed 70 m — illustrating why **datum transformations matte
 
 ## 6. Common Datum‑Transformation Parameters
 
-| Source → Target | $ T_x $ (m) | $ T_y $ (m) | $ T_z $ (m) | $ s $ (ppm) | Reference |
+| Source → Target | $ T_x $ (m) | $ T_y $ (m) | $ T_z $ (m) | $  s $ (ppm) | Reference |
 |------------------|-----------|-----------|-----------|-----------|-----------|
 | WGS84 → ITRF2020 | 0 | 0 | 0 | 0 | NGA/IGN |
 | NAD27 → NAD83 | varies (grid‑based) | — | — | — | NGS NADCON |
@@ -182,7 +182,7 @@ $ $\mathbf{X}_S = \frac{1}{1+s}R^{-1}(\mathbf{X}_T - \mathbf{T}
 
 $$
 
-For the linearised form:$ $ T_{\text{inv}} = -\mathbf{T},\qquad s_{\text{inv}} = \frac{-s}{1+s},\qquad \omega_{\text{inv}} = -\omega $$
+For the linearised form: $ $ T_{\text{inv}} = -\mathbf{T},\qquad s_{\text{inv}} = \frac{-s}{1+s},\qquad \omega_{\text{inv}} = -\omega $$
 
 ---
 

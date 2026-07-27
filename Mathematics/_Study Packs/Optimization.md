@@ -40,7 +40,7 @@ where $ f: \mathbb{R}^n \to \mathbb{R} $ is the objective function, and $\mathca
 
 ### 2.1 Necessary Conditions (1st Order)
 
-If $\mathbf{x}^*$ is a local minimum of $ f $ (differentiable):$ $\nabla f(\mathbf{x}^*) = \mathbf{0} $$
+If $\mathbf{x}^*$ is a local minimum of $  f $ (differentiable): $ $\nabla f(\mathbf{x}^*) = \mathbf{0} $$
 
 $\mathbf{x}^*$ is called a **critical point**.
 
@@ -85,7 +85,7 @@ where $\alpha_k > 0 $ is the step size (learning rate).
 
 **Exact line search**: $\alpha_k = \arg\min_{\alpha>0}f(\mathbf{x}_k - \alpha\nabla f) $### 3.3 Convergence
 
-For convex $ f $ with Lipschitz gradient ($\\|\nabla f - \nabla g\\| \leq L\\|x-y\\| $):
+For convex $ f $ with Lipschitz gradient ( $\\|\nabla f - \nabla g\\| \leq L\\|x-y\\| $):
 
 $ $ f(\mathbf{x}_k) - f(\mathbf{x}^*) \leq \frac{L\\|\mathbf{x}_0 - \mathbf{x}^*\\|^2}{2(k+1)}$$
 
@@ -116,22 +116,26 @@ $ $\min f(\mathbf{x}) \\quad \text{subject to} \\quad g(\mathbf{x}) = 0
 
 $$
 
-### 4.2 Lagrangia
+# ## 4.2 Lagrangia
 n
 
 $ $ L(\mathbf{x}, \lambda) = f(\mathbf{x}) + \lambda g(\mathbf{x}
 )
 
-$$### 4.3 KKT Conditions (Necessary) $ $
+$$
+
+# ## 4.3 KKT Conditions (Necessary) $ $
 
 \nabla_{\mathbf{x}} L = \mathbf{0}, \\quad g(\mathbf{x}) = 0\frac{\partial L}{\partial \lambda} =
 0
 
-$$ ### 4.4 Multiple Constraints $ $\min f(\mathbf{x}) \\quad \text{subject to} \\quad \mathbf{g}(\mathbf{x}) = \mathbf{0}\nabla f = \sum_{i=1}^m \lambda_i\nabla g_i \\quad \text{and} \\quad \mathbf{g} = \mathbf{0}
+$$
+
+# ## 4.4 Multiple Constraints $ $\min f(\mathbf{x}) \\quad \text{subject to} \\quad \mathbf{g}(\mathbf{x}) = \mathbf{0}\nabla f = \sum_{i=1}^m \lambda_i\nabla g_i \\quad \text{and} \\quad \mathbf{g} = \mathbf{0}
 
 $$
 
-### 4.5 Worked Example
+# ## 4.5 Worked Example
 
 Find the point on $ x^2+y^2=4 $ closest to $ (3,0) $.
 
@@ -154,7 +158,9 @@ $ f(2,0)=1 $, $ f(-2,0)=25 $. Closest point: $ (2,0) $, distance $= 1 $.
 $ $\min f(\mathbf{x}) \\quad \text{subject to} \\quad g_i(\mathbf{x}) \leq 0, \\quad h_j(\mathbf{x}) =
 0
 
-$$### 5.2 KKT Conditions $ $\nabla f + \sum_i\mu_i\nabla g_i + \sum_j\lambda_j\nabla h_j = \mathbf{0}\mu_i \geq 0, \\quad g_i(\mathbf{x}^*) \leq 0, \\quad \mu_i g_i(\mathbf{x}^*) = 0
+$$
+
+# ## 5.2 KKT Conditions $ $\nabla f + \sum_i\mu_i\nabla g_i + \sum_j\lambda_j\nabla h_j = \mathbf{0}\mu_i \geq 0, \\quad g_i(\mathbf{x}^*) \leq 0, \\quad \mu_i g_i(\mathbf{x}^*) = 0
 
 $$
 
@@ -171,7 +177,7 @@ $ $\min \mathbf{c}^T\mathbf{x} \\quad \text{s.t.} \\quad A\mathbf{x} \leq \mathb
 
 **Simplex method**: Moves along vertices of polytope.
 
-**Interior-point methods**: $ O(n^{3.5}L) $ where $ L $ = bits of input.
+**Interior-point methods**: $ O(n^{3.5}L) $ where $  L $ = bits of input.
 
 ### 6.2 Quadratic Programming (QP
 )
@@ -233,7 +239,7 @@ Approximate Hessian using gradient information.$ O(n^2) $ per step
 
 $ $ H_{k+1} = H_k + \frac{\mathbf{y}\mathbf{y}^T}{\mathbf{y}^T\mathbf{s}} - \frac{H_k\mathbf{s}\mathbf{s}^TH_k}{\mathbf{s}^TH_k\mathbf{s}} $$
 
-### 8.3 Stochastic Gradient Descent (SGD
+# ## 8.3 Stochastic Gradient Descent (SGD
 )
 
 $ $ \mathbf{x}_{k+1} = \mathbf{x}_k - \alpha_k\nabla_{\mathbf{x}} f_i(\mathbf{x}_k)
@@ -264,7 +270,7 @@ $ f(0) = 0 $→ already at minimum!
 ### Problem 3
 Is $ f(x,y)=x^3+y^3-3xy $ convex on $\mathbb{R}^2 $?
 
-$ H = \begin{bmatrix}6x & -3\\ -3&6y\end{bmatrix} $. At $ (1,1) $: eigenvalues $= 6\pm 3 > 0 $ (definite). But at $ (0,0) $: $ H = -3I$ (negative definite). NOT convex.
+$ H = \begin{bmatrix}6x & -3\\ -3&6y\end{bmatrix} $. At $ (1,1) $: eigenvalues $= 6\pm 3 > 0 $ (definite). But at $ (0,0) $: $  H = -3I$ (negative definite). NOT convex.
 
 ---
 

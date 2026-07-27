@@ -15,14 +15,14 @@ The **least squares adjustment** (also called *least squares estimation* or *col
 
 ## 1. Core Idea
 
-For a system with $n $ observations and $ u $ unknowns ($ n > u $), we write each observation equation as:
+For a system with $n $ observations and $  u $ unknowns ( $  n > u $), we write each observation equation as:
 
 $ $\ell_i + v_i = f_i(x_1, x_2, \ldots, x_u
 )
 
 $$
 
-or in vector form:$ $\mathbf{L} + \mathbf{V} = \mathbf{F}(\mathbf{X})
+or in vector form: $ $\mathbf{L} + \mathbf{V} = \mathbf{F}(\mathbf{X})
 
 $$
 
@@ -101,7 +101,7 @@ The variance–covariance matrix of the residuals $ $\mathbf{Q}_{\hat{\mathbf{V}
 
 $$
 
-For a derived quantity $ y = \mathbf{c}^\top\hat{\mathbf{X}} $ (a single‑parameter function)$ $\sigma_y^2 = \sigma_0^2 \cdot \mathbf{c}^\top\mathbf{N}^{-1}\mathbf{c} $$
+For a derived quantity $ y = \mathbf{c}^\top\hat{\mathbf{X}} $ (a single‑parameter function) $ $\sigma_y^2 = \sigma_0^2 \cdot \mathbf{c}^\top\mathbf{N}^{-1}\mathbf{c} $$
 
 ---
 
@@ -126,31 +126,31 @@ x_C &= h_{AC} - v_3
 
 $$
 
-Design matrix:$ $
+Design matrix: $ $
 
 \mathbf{A} = \begin{bmatrix} 1 & 0 \\ -1 & 1 \\ 0 & 1 \end{bmatrix},\quad \boldsymbol{\ell} = \begin{bmatrix} h_{AB} \\ h_{BC} \\ h_{AC} \end{bmatrix},\quad \mathbf{P} = 250\,000\cdot \mathbf{I
 }
 
 $$
 
-Normal equations:$ $
+Normal equations: $ $
 
 \mathbf{N} = \mathbf{A}^\top\mathbf{P}\,\mathbf{A} = 250\,000\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix
 }
 
 $$
 
-Solving:$ $\hat{\mathbf{x}} = \begin{bmatrix} x_B \\ x_C \end{bmatrix} = \frac{1}{3}\begin{bmatrix} 2\,h_{AB} + h_{BC} - h_{AC} \\ h_{AB} + 2\,h_{BC} + h_{AC} \end{bmatrix}
+Solving: $ $\hat{\mathbf{x}} = \begin{bmatrix} x_B \\ x_C \end{bmatrix} = \frac{1}{3}\begin{bmatrix} 2\,h_{AB} + h_{BC} - h_{AC} \\ h_{AB} + 2\,h_{BC} + h_{AC} \end{bmatrix}
 
 $$
 
 With our numbers:
--$ x_B = (2(1.234) + (-2.105) - (-0.872))/3 = 1.235/3 = 0.412 $ m
--$ x_C = (1.234 + 2(-2.105) + (-0.872))/3 = -3.848/3 = -1.283 $ m
+-$ x_B = (2(1.234) + (-2.105) - (-0.872))/3 = 1.235/3 = 0.412 $  m
+-$ x_C = (1.234 + 2(-2.105) + (-0.872))/3 = -3.848/3 = -1.283 $  m
 
 Residuals
 
-$ $\hat{\mathbf{V}} = \mathbf{A}\hat{\mathbf{x}} - \boldsymbol{\ell} = \begin{bmatrix} -0.001 \\ 0.000 \\ +0.001 \end{bmatrix} \;\text{m} $$ A posteriori variance $ $\hat{\sigma}_0^2 = \frac{250\,000(0.001^2+0^2+0.001^2)}{3-2} = 0.5\;\text{mm}^2
+$ $\hat{\mathbf{V}} = \mathbf{A}\hat{\mathbf{x}} - \boldsymbol{\ell} = \begin{bmatrix} -0.001 \\ 0.000 \\ +0.001 \end{bmatrix} \;\text{m} $ $ A posteriori variance $ $\hat{\sigma}_0^2 = \frac{250\,000(0.001^2+0^2+0.001^2)}{3-2} = 0.5\;\text{mm}^2
 
 $$
 
@@ -163,7 +163,7 @@ $$
 
 $ $\mathbf{V} = \mathbf{A}\mathbf{x} - \boldsymbol{\ell} $$
 
-### 7.2. Condition adjustment
+# ## 7.2. Condition adjustment
 
 Use only redundancy conditions
 
@@ -177,7 +177,7 @@ with solution $\mathbf{V} = -\mathbf{P}^{-1}\mathbf{B}^\top(\mathbf{B}\mathbf{P}
 
 Add constraints $\mathbf{C}\hat{\mathbf{x}} = \mathbf{d} $ via Lagrange multipliers $ $\begin{bmatrix} \mathbf{N} & \mathbf{C}^\top \\ \mathbf{C} & 0 \end{bmatrix}\begin{bmatrix} \hat{\mathbf{x}} \\ \boldsymbol{\lambda} \end{bmatrix} = \begin{bmatrix} \mathbf{U} \\ \mathbf{d} \end{bmatrix} $$
 
-### 7.4. Sequential / Kalman filter
+# ## 7.4. Sequential / Kalman filter
 
 Recursive update for streaming data
 

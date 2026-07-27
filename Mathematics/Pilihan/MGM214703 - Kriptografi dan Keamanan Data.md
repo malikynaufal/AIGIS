@@ -35,13 +35,13 @@ Sistem kriptografi dasar:
 
 $$ P \xrightarrow{\text{Encrypt}(K_e)} C \xrightarrow{\text{Decrypt}(K_d)} P $ $
 
-di mana $ P $= plaintext (pesan asli),$ C $ = ciphertext (terenkripsi),$ K_e $ = kunci enkripsi,$ K_d$ = kunci dekripsi.
+di mana $ P $= plaintext (pesan asli),$  C $ = ciphertext (terenkripsi),$ K_e $ = kunci enkripsi,$ K_d$ = kunci dekripsi.
 
 ### 1.2 Klasifikasi Berdasarkan Kunci
 
 | Aspek | Simetris | Asimetris (Publik) |
 |-------|---------|---------------------|
-| **Jumlah kunci** | 1 kunci ($K_e = K_d $) | 2 kunci ($ K_e \neq K_d$) |
+| **Jumlah kunci** | 1 kunci ( $K_e = K_d $) | 2 kunci ( $ K_e \neq K_d$) |
 | **Kecepatan** | Sangat cepat (~100× lebih cepat) | Relatif lambat |
 | **Masalah kunci** | Distribusi kunci aman (key exchange) | Tidak ada masalah distribusi |
 | **Ukuran kunci** | 128–256 bit | 2048–4096 bit (RSA) |
@@ -71,7 +71,7 @@ di mana $ P $= plaintext (pesan asli),$ C $ = ciphertext (terenkripsi),$ K_e $ =
 ### 2.2 3DES (Triple DES
 )
 
-$ $ C = E_{K_3}(D_{K_2}(E_{K_1}(P)))$$
+$ $  C = E_{K_3}(D_{K_2}(E_{K_1}(P)))$$
 
 Efektif kunci 112 bit (2TDEA) atau 168 bit (3TDEA). Sertifikasi NIST dihentikan pada 2023.
 
@@ -129,14 +129,14 @@ plaintext = aesgcm.decrypt(nonce, ciphertext, b"station-001")
 Berdasarkan **masalah faktorisasi bilangan besar:** $n = pq $ sulit difaktor.
 
 **Key Generation:**
-1. Pilih dua bilangan prima besar $p $ dan $q $.
-2. Hitung $ n = pq $dan $\phi(n) = (p-1)(q-1) $.
-3. Pilih $ e $sehingga $\gcd(e, \phi(n)) = 1 $ (umum: $e = 65537 = 2^{16}+1 $).
-4. Hitung $ d = e^{-1} \mod \phi(n) $(extended Euclidean algorithm).
+1. Pilih dua bilangan prima besar $p $ dan $  q $.
+2. Hitung $ n = pq $ dan $\phi(n) = (p-1)(q-1) $.
+3. Pilih $ e $ sehingga $\gcd(e, \phi(n)) = 1 $ (umum: $  e = 65537 = 2^{16}+1 $).
+4. Hitung $ d = e^{-1} \mod \phi(n) $ (extended Euclidean algorithm).
 
 **Enkripsi/Deskripsi:**
 
-$ $ C = P^e \mod n \quad \text{(Enkripsi)}P = C^d \mod n \quad \text{(Deskripsi)}$$**Kebenaran:**$ P^{ed} = P^{1 + k\phi(n)} \equiv P \pmod{n}$oleh Fermat's Little Theorem.
+$ $  C = P^e \mod n \quad \text{(Enkripsi)}P = C^d \mod n \quad \text{(Deskripsi)}$ $**Kebenaran:**$ P^{ed} = P^{1 + k\phi(n)} \equiv P \pmod{n}$ oleh Fermat's Little Theorem.
 
 ### 3.2 Contoh RSA Sederhana
 
@@ -151,24 +151,24 @@ $ $ C = P^e \mod n \quad \text{(Enkripsi)}P = C^d \mod n \quad \text{(Deskripsi)
 
 **Enkripsi pesan $ P = 65 $:**
 
-$ $
+$ $ 
 
 C = 65^{17} \mod 3233 = 279
 0
 
-$$**Deskripsi:**$ $ P = 2790^{2753} \mod 3233 = 65 \quad \checkmark $$
+$$**Deskripsi:**$ $  P = 2790^{2753} \mod 3233 = 65 \quad \checkmark $$
 
-### 3.3 ECC (Elliptic Curve Cryptography)
+# ## 3.3 ECC (Elliptic Curve Cryptography)
 
 Cryptography berbasis kelompok aditif pada kurva eliptik
 
 $ $ y^2 = x^3 + ax + b \pmod{p}$$
 
-- Operasi: *point addition*$ P + Q $dan *point doubling*$ 2P $.
+- Operasi: *point addition*$ P + Q $ dan *point doubling*$ 2P $.
 
 - *Scalar multiplication:* $ kP = \underbrace{P + P + \cdots + P}_{k} $.
 
-- *Elliptic Curve Discrete Logarithm Problem (ECDLP):* Diberikan $ P $dan $ kP $, cari $ k$— sangat sulit secara komputasional.
+- *Elliptic Curve Discrete Logarithm Problem (ECDLP):* Diberikan $ P $ dan $ kP $, cari $ k$— sangat sulit secara komputasional.
 
 **Keunggulan:** Kunci lebih pendek dari RSA untuk keamanan setara.
 
@@ -186,9 +186,9 @@ $ $ y^2 = x^3 + ax + b \pmod{p}$$
 ### 4.1 Fungsi Hash Kriptografis
 
 Properti fungsi hash $H: \{0,1\}^* \to \{0,1\}^n $:
-1. **Preimage resistance:** Diberikan $ h $, sulit menemukan $ x $dengan $ H(x) = h $.
-2. **Second preimage resistance:** Diberikan $ x_1 $, sulit menemukan $ x_2 \neq x_1 $dengan $ H(x_1) = H(x_2) $.
-3. **Collision resistance:** Sulit menemukan $ x_1 \neq x_2 $dengan $ H(x_1) = H(x_2)$.
+1. **Preimage resistance:** Diberikan $ h $, sulit menemukan $  x $ dengan $ H(x) = h $.
+2. **Second preimage resistance:** Diberikan $ x_1 $, sulit menemukan $ x_2 \neq x_1 $ dengan $ H(x_1) = H(x_2) $.
+3. **Collision resistance:** Sulit menemukan $ x_1 \neq x_2 $ dengan $ H(x_1) = H(x_2)$.
 
 ### 4.2 Perbandingan Algoritma Hash
 
@@ -204,12 +204,12 @@ Properti fungsi hash $H: \{0,1\}^* \to \{0,1\}^n $:
 ### 4.3 Tanda Tangan Digital
 
 $ $\text{Sign}: \sigma = \text{Sign}_{sk}(H(m)) \quad \text{— Penandatangan memproduksi } \sigma\text{Verify}: \text{Verify}_{pk}(m, \sigma) \rightarrow \text{true/false} \quad \text{— Verifikator memeriksa} $$**DSA / ECDSA:**
-1. Pilih random $ k $, hitung $ R = kG \pmod{p} $, $ r = R_x \mod n $.
+1. Pilih random $ k $, hitung $  R = kG \pmod{p} $, $  r = R_x \mod n $.
 2. Hitung $ s = k^{-1}(H(m) + d \cdot r) \mod n $.
 3. Tanda tangan: $ (r, s) $.
 4. Verifikasi: hitung $ u_1, u_2 $, cek $ R_x' = r $.
 
-**EdDSA (Ed25519):** Lebih cepat, deterministik (tidak perlu kunci $ k $random), resisten timing attack.
+**EdDSA (Ed25519):** Lebih cepat, deterministik (tidak perlu kunci $ k $ random), resisten timing attack.
 
 ### 4.4 Studi Kasus: Verifikasi Integritas Data GNSS
 

@@ -40,19 +40,19 @@ $ $
 
 | Form | Strategy |
 |------|----------|
-| $\int \sin^m x\cos^n x\,dx $| If $ m $ odd: save one $\sin $, $\sin^2 = 1-\cos^2 $ |
+| $\int \sin^m x\cos^n x\,dx $| If $  m $ odd: save one $\sin $, $\sin^2 = 1-\cos^2 $ |
 | | If $ n $ odd: save one $\cos $, $\cos^2 = 1-\sin^2 $ |
 | | If both even: half-angle identities |
-| $\int an^m x\sec^n x\,dx $| If $ n $ even: save $\sec^2 x $ |
+| $\int an^m x\sec^n x\,dx $| If $  n $ even: save $\sec^2 x $ |
 | | If $ m $ odd: save $\sec xan x $ |
 
 #### 1.3 Trigonometric Substitution
 
 | Radial expression | Substitution | Identity |
 |-------------------|-------------|---------|
-| $\sqrt{a^2-x^2} $|$ x = a\sinheta $|$ 1-\sin^2heta = \cos^2heta $ |
-| $\sqrt{a^2+x^2} $|$ x = aanheta $|$ 1+an^2heta = \sec^2heta $ |
-| $\sqrt{x^2-a^2} $|$ x = a\secheta $|$\sec^2heta-1 = an^2heta $ |
+| $\sqrt{a^2-x^2} $|$  x = a\sinheta $|$ 1-\sin^2heta = \cos^2heta $ |
+| $\sqrt{a^2+x^2} $|$  x = aanheta $|$ 1+an^2heta = \sec^2heta $ |
+| $\sqrt{x^2-a^2} $|$  x = a\secheta $|$\sec^2heta-1 = an^2heta $ |
 
 **Example**: $\int \frac{dx}{x^2\sqrt{4+x^2}} $
 
@@ -95,7 +95,7 @@ s\int_1^{\infty} \frac{1}{x^p}\,dx = \begin{cases} \frac{1}{p-1} & p>1 \\ ext{di
 
 $ $\int_0^1 \frac{1}{\sqrt{x}}\,dx = [2\sqrt{x}]_0^1 = 2
 
-$ $(convergent) $ $\int_0^1 \frac{1}{x}\,dx = [\ln|x|]_0^1 = \infty
+$ $ (convergent) $ $\int_0^1 \frac{1}{x}\,dx = [\ln|x|]_0^1 = \infty
 
 $ $
 
@@ -127,7 +127,7 @@ $ $**Diverges** when $|r| \geq 1 $.
 $ $\sum_{n=1}^{\infty}\left(\frac{1}{n}-\frac{1}{n+1}\right) =
 1
 
-$ $3.5 p-Series $ $
+$ $ 3.5 p-Series $ $
 
 # 3.5 p-Series
 
@@ -150,7 +150,7 @@ If $ f $ is positive, continuous, decreasing with $ f(n)=a_n $:
 $ $\sum a_n ext{ and } \int_1^{\infty} f(x)\,dx ext{ both converge or both diverge
 }
 
-$ $4.2 Ratio Test $ $
+$ $ 4.2 Ratio Test $ $
 
 # 4.2 Ratio Test
 
@@ -171,7 +171,7 @@ $ $\rho = \lim_{no\infty} |a_n|^{1/n} $ $
 Same rules as ratio test.
 
 #### 4.4 Alternating Series Test $\sum (-1)^{n+1}b_n $ converges if:
-1.$ b_{n+1} \leq b_n $ for all $ n $ 2.$\lim b_n = 0 $**Error bound**: $|S-S_N| \leq b_{N+1} $#### 4.5 Absolute vs Conditional Convergence
+1.$ b_{n+1} \leq b_n $ for all $  n $ 2.$\lim b_n = 0 $**Error bound**: $|S-S_N| \leq b_{N+1} $#### 4.5 Absolute vs Conditional Convergence
 
 -$\sum |a_n| $ converges →$\sum a_n $**absolutely** convergent (converges!)
 -$\sum a_n $ converges but $\sum |a_n| $ diverges → **conditionally** convergent
@@ -185,7 +185,7 @@ s
 
 $ $\sum_{n=0}^{\infty} c_n(x-a)^n
 
-$ $**Radius of convergence**: $ R = 1/\lim|c_{n+1}/c_n|$ (ratio test)
+$ $**Radius of convergence**: $  R = 1/\lim|c_{n+1}/c_n|$ (ratio test)
 
 Converges absolutely on $ (a-R, a+R) $, needs checking at endpoints.
 
@@ -207,11 +207,11 @@ $ $ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n $ $
 #### 5.4 Taylor's Theorem with Remainde
 r
 
-$ $ f(x) = T_n(x) + R_n(x)$ $
+$ $ f(x) = T_n(x) + R_n(x) $ $
 
-where $ T_n $ is the $ n $ th degree Taylor polynomial and: $ $ R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ $
+where $ T_n $ is the $  n $ th degree Taylor polynomial and: $ $ R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ $
 
-for some $ c $ between $ a $ and $ x $.
+for some $ c $ between $  a $ and $  x $.
 
 ### Week 13: Applications of Series
 
@@ -221,7 +221,7 @@ Using series to evaluate limits
 
 $ $\lim_{xo 0}\frac{e^x-1-x}{x^2} = \lim_{xo 0}\frac{(1+x+x^2/2+\cdots)-1-x}{x^2} = \lim_{xo 0}\frac{x^2/2+\cdots}{x^2} = \frac{1}{2}
 
-$ $6.3 Definite Integral
+$ $ 6.3 Definite Integral
 s $ $
 
 # 6.3 Definite Integral
@@ -254,14 +254,14 @@ $ $= \frac{3}{4}\ln|x+3|+\frac{5}{4}\ln|x-1|+C
 $ $
 
 ### Example 2: Alternating Series Error
-Estimate $\sum_{n=0}^{\infty} \frac{(-1)^n}{n!} $ to within 0.001.$ S = e^{-1} \approx 0.3679 $
+Estimate $\sum_{n=0}^{\infty} \frac{(-1)^n}{n!} $ to within 0.001.$  S = e^{-1} \approx 0.3679 $
 
 $ S \approx 1 - 1 + 1/2 - 1/6 + 1/24 - 1/120 + 1/720 $ Error $\leq |a_7| = 1/5040 \approx 0.000198 < 0.001 $✓
 
 ### Example 3: Radius of Convergence
 Find the radius of convergence of $\sum_{n=1}^{\infty} \frac{n^n}{n!}x^n $.
 
-$\rho = \lim \frac{(n+1)^{n+1}/(n+1)!}{n^n/n!} \cdot |x| = \lim \frac{(n+1)^n}{n^n}|x| = e|x| $ Converges when $ e |x| < 1 $→$ R = 1/e $.
+$\rho = \lim \frac{(n+1)^{n+1}/(n+1)!}{n^n/n!} \cdot |x| = \lim \frac{(n+1)^n}{n^n}|x| = e|x| $ Converges when $  e |x| < 1 $→$  R = 1/e $.
 
 ---
 

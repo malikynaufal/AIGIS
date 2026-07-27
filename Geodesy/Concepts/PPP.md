@@ -98,8 +98,8 @@ $ $ T_r^s = m_h^s(\text{elev})\cdot Z_h + m_w^s(\text{elev})\cdot Z_w $$
 
 | Component | Mapping Function | Typical Value |
 |-----------|------------------|---------------|
-| Zenith hydrostatic ($ Z_h $) | VMF3 / GMF | ~2.3 m (reduced) |
-| Zenith wet ($ Z_w $) | VMF3 / GMF | ~0.1–0.3 m |
+| Zenith hydrostatic ( $ Z_h $) | VMF3 / GMF | ~2.3 m (reduced) |
+| Zenith wet ( $ Z_w $) | VMF3 / GMF | ~0.1–0.3 m |
 | Mapping function $ m_h $ | VMF3, GMF, NMF | 1/cos(z) approx |
 
 VMF3 (Vienna Mapping Function) is the current state‑of‑the‑art, derived from ECMWF NWP model data.

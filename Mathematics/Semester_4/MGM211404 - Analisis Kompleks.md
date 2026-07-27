@@ -36,7 +36,7 @@ created: 2026-07-27
 
 ### 1. Cauchy's Integral Theorem
 
-If $f $ is holomorphic in a simply connected domain $ D $ and $\gamma $ is a closed curve in $ D $:
+If $f $ is holomorphic in a simply connected domain $  D $ and $\gamma $ is a closed curve in $  D $:
 
 $ $\oint_\gamma f(z) \, dz = 0
 
@@ -44,7 +44,7 @@ $ $
 
 ### 2. Cauchy's Integral Formula
 
-If $ f $ is holomorphic inside and on $\gamma $, and $ a $ is inside $\gamma $:
+If $ f $ is holomorphic inside and on $\gamma $, and $  a $ is inside $\gamma $:
 
 $ $ f(a) = \frac{1}{2i i} \oint_\gamma \frac{f(z)}{z - a} \, dz $ $**Generalized:**$ f^{(n)}(a) = \frac{n!}{2i i} \oint_\gamma \frac{f(z)}{(z-a)^{n+1}} \, dz $### 3. Residue Theorem
 
@@ -54,15 +54,15 @@ $ $
 
 ### 4. Maximum Modulus Principle
 
-If $ f $ is holomorphic and non-constant on a domain $ D $, then $|f|$ has no maximum in the interior of $ D $.
+If $ f $ is holomorphic and non-constant on a domain $  D $, then $|f|$ has no maximum in the interior of $  D $.
 
 ## 🔢 Computing Residues
 
-### Simple Pole ($ n = 1 $)
+### Simple Pole ( $ n = 1 $)
 
 $ $ ext{Res}(f, z_0) = \lim_{z o z_0} (z - z_0)f(z)
 
-$ $### Pole of Order $ m $
+$ $### Pole of Order $  m $
 
 $ $ ext{Res}(f, z_0) = \frac{1}{(m-1)!} \lim_{z o z_0} \frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^m f(z)]
 

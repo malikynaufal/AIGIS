@@ -15,7 +15,7 @@ The TM projection uses complex variables to map the ellipsoid surface to a plane
 
 ### Complex Analytic Form (Redfearn)
 
-Given geodetic coordinates $(\phi, \lambda) $ on an ellipsoid with semimajor axis $ a $, eccentricity $ e $, and origin at $ (\phi_0, \lambda_0) $:
+Given geodetic coordinates $(\phi, \lambda) $ on an ellipsoid with semimajor axis $  a $, eccentricity $  e $, and origin at $ (\phi_0, \lambda_0) $:
 
 **Complex quantity:**
 
@@ -23,7 +23,7 @@ $ $\zeta + i\,\eta = \omega_0 + k_0 \cdot (q + i\,\eta_q)
 
 $$
 
-where $\omega_0 $ is the complex coordinate at the origin,$ q = \sinh^{-1}(\tan\phi) $ is the isometric latitude, and $ k_0 $ is the scale factor at the central meridian.
+where $\omega_0 $ is the complex coordinate at the origin,$  q = \sinh^{-1}(\tan\phi) $ is the isometric latitude, and $ k_0 $ is the scale factor at the central meridian.
 
 ### Standard TM Formulas (Snyder)
 
@@ -31,15 +31,15 @@ For geodetic coordinates $ (\phi, \lambda) $:
 
 **Step 1:** Compute the quantities:
 
-$ $ a = \frac{a(1-e^2)}{(1-e^2\sin^2\phi)^{1/2}} \quad \text{(meridional radius of curvature — not semimajor axis)}N = \frac{a}{(1-e^2\sin^2\phi)^{1/2}} \quad \text{(prime vertical radius of curvature)}t = \tan\phi, \quad c = \frac{e^2 N \cos^2\phi}{a(1-e^2)}l = \lambda - \lambda_0 \quad \text{(longitude difference from CM, in radians)}$$
+$ $  a = \frac{a(1-e^2)}{(1-e^2\sin^2\phi)^{1/2}} \quad \text{(meridional radius of curvature — not semimajor axis)}N = \frac{a}{(1-e^2\sin^2\phi)^{1/2}} \quad \text{(prime vertical radius of curvature)}t = \tan\phi, \quad c = \frac{e^2 N \cos^2\phi}{a(1-e^2)}l = \lambda - \lambda_0 \quad \text{(longitude difference from CM, in radians)}$$
 
-**Step 2:** Compute northing ($ N_{\text{UTM}} $):
+**Step 2:** Compute northing ( $ N_{\text{UTM}} $):
 
 $ $\kappa = k_0\left[N\cos\phi \cdot l + \frac{N\cos^3\phi}{6}\left(1 - t^2 + c + 9\frac{e^2 N^2 \cos^4\phi}{a^2}\right)l^3 + \cdots\right]
 
 $$
 
-**Step 3:** Compute northing ($ N_{\text{UTM}} $):
+**Step 3:** Compute northing ( $ N_{\text{UTM}} $):
 
 $ $ N_{\text{UTM}} = N_0 + k_0\left[\tilde{M} - \tilde{M}_0 + N \cos\phi \tan\phi \cdot l^2/2 + \cdots\right]$$
 
@@ -53,10 +53,10 @@ The full series expansion includes terms up to $ l^6 $.
 
 The **TM scale factor** $ k $ at any point $ (\phi, \lambda) $ is
 
-$ $ k = k_0 \left(1 + \frac{l^2}{2}\cos^2\phi(1 + \frac{e^2}{1-e^2}\sin^2\phi + c + \frac{l^2}{12}\cos^2\phi \cdots) \right)$$| Condition | $ k $ | Result |
+$ $  k = k_0 \left(1 + \frac{l^2}{2}\cos^2\phi(1 + \frac{e^2}{1-e^2}\sin^2\phi + c + \frac{l^2}{12}\cos^2\phi \cdots) \right)$ $| Condition | $  k $ | Result |
 |-----------|-----|--------|
-| At the central meridian ($ l = 0 $) | $ k = k_0 $ | Scale equals scale factor |
-| At standard parallel ($\pm l_0 $) | $ k = 1 $ | True scale on the ground |
+| At the central meridian ( $ l = 0 $) | $  k = k_0 $ | Scale equals scale factor |
+| At standard parallel ( $\pm l_0 $) | $  k = 1 $ | True scale on the ground |
 | At zone edges | $ k > 1 $ | Scale distortion (small for narrow zones) |
 
 ### Standard Scale Factors
@@ -70,7 +70,7 @@ $ $ k = k_0 \left(1 + \frac{l^2}{2}\cos^2\phi(1 + \frac{e^2}{1-e^2}\sin^2\phi + 
 
 ## Convergence Angle
 
-The angle between the grid north ($ Y $-axis) and true (geodetic) north is the **grid convergence** $\gamma $:
+The angle between the grid north ( $ Y $-axis) and true (geodetic) north is the **grid convergence** $\gamma $:
 
 $ $\gamma \approx l \cdot \sin\phi
 

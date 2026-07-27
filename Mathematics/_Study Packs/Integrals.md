@@ -26,11 +26,11 @@ where $ C $ is the **constant of integration** (arbitrary constant).
 
 ### 1.2 Definite Integral
 
-The definite integral of $ f(x) $ from $ a $ to $ b $:
+The definite integral of $ f(x) $ from $  a $ to $  b $:
 
 $ $\int_a^b f(x)\, dx = F(b) - F(a) = \left[F(x)\right]_a^b
 
-$$**Geometric meaning:** Signed area between the curve $ y = f(x) $ and the $ x $-axis from $ x = a $ to $ x = b $.
+$$**Geometric meaning:** Signed area between the curve $  y = f(x) $ and the $  x $-axis from $  x = a $ to $  x = b $.
 
 **Riemann integral (limit definition):**
 
@@ -38,7 +38,7 @@ $ $\int_a^b f(x)\, dx = \lim_{n \to \infty} \sum_{i=1}^n f(x_i^*) \Delta x
 
 $$
 
-where $\Delta x = (b-a)/n $ and $ x_i^*$ is a sample point in the $ i $-th subinterval.
+where $\Delta x = (b-a)/n $ and $ x_i^*$ is a sample point in the $  i $-th subinterval.
 
 ### 1.3 Improper Integrals
 
@@ -62,7 +62,7 @@ $ $ F'(x) = f(x)$$**Meaning:** Differentiation undoes integration. The rate of c
 
 ### 2.2 Second Part (FTC-2)
 
-If $ f $ is continuous on $ [a,b] $ and $ F $ is any antiderivative of $ f $:
+If $ f $ is continuous on $ [a,b] $ and $  F $ is any antiderivative of $  f $:
 
 $ $\int_a^b f(x)\, dx = F(b) - F(a)
 
@@ -112,13 +112,13 @@ $$ **Example:**$ $\int \frac{x}{1+x^2}\, dx \quad \text{let } u = 1+x^2, \, du =
 
 $$
 
-### 4.2 Integration by Parts
+# ## 4.2 Integration by Parts
 
 The counterpart of the product rule
 
 $ $\int u\, dv = uv - \int v\, du
 
-$$**LIATE rule** for choosing $ u $: **L**ogarithmic, **I**nverse trig, **A**lgebraic, **T**rigonometric, **E**xponential (choose the leftmost as $ u $).
+$$**LIATE rule** for choosing $  u $: **L**ogarithmic, **I**nverse trig, **A**lgebraic, **T**rigonometric, **E**xponential (choose the leftmost as $  u $).
 
 **Example:**
 
@@ -127,7 +127,7 @@ C
 
 $$**Example:** $ $\int \ln x\, dx \quad u = \ln x,\; dv = dx= x\ln x - \int x \cdot \frac{1}{x}\, dx = x\ln x - x + C
 
-$$ **Tabular method** (for repeated integration by parts): create a table with alternating signs, derivatives of $ u $, and integrals of $ dv $.
+$$ **Tabular method** (for repeated integration by parts): create a table with alternating signs, derivatives of $  u $, and integrals of $ dv $.
 
 ### 4.3 Partial Fractions (Pecahan Parsial)
 
@@ -152,13 +152,13 @@ $$ **Example:**$ $\int \frac{5x+3}{(x+1)(x+2)}\, dx = \int\left(\frac{-2}{x+1} +
 
 $$
 
-### 4.4 Trigonometric Substitution (Substitusi Trigonometri)
+# ## 4.4 Trigonometric Substitution (Substitusi Trigonometri)
 
 | Form | Substitution | Identity |
 |------|-------------|----------|
-| $\sqrt{a^2 - x^2} $| $ x = a\sin\theta $|$ 1 - \sin^2\theta = \cos^2\theta $ |
-| $\sqrt{a^2 + x^2} $| $ x = a\tan\theta $|$ 1 + \tan^2\theta = \sec^2\theta $ |
-| $\sqrt{x^2 - a^2} $| $ x = a\sec\theta $|$\sec^2\theta - 1 = \tan^2\theta $ |
+| $\sqrt{a^2 - x^2} $| $  x = a\sin\theta $|$ 1 - \sin^2\theta = \cos^2\theta $ |
+| $\sqrt{a^2 + x^2} $| $  x = a\tan\theta $|$ 1 + \tan^2\theta = \sec^2\theta $ |
+| $\sqrt{x^2 - a^2} $| $  x = a\sec\theta $|$\sec^2\theta - 1 = \tan^2\theta $ |
 
 **Example:**
 
@@ -166,7 +166,7 @@ $ $\int \frac{dx}{\sqrt{4-x^2}} \quad x = 2\sin\theta,\; dx = 2\cos\theta\, d\th
 
 $$
 
-### 4.5 Trigonometric Integrals
+# ## 4.5 Trigonometric Integrals
 
 **Powers of $\sin $ and $\cos $:**
 
@@ -174,13 +174,13 @@ $$
 
 - $\int \cos^n x\, dx $: similarly
 
-- $\int \sin^m x \cos^n x\, dx $: if $ m $ or $ n $ is odd, substitute the other function; if both even, use half-angle formulas
+- $\int \sin^m x \cos^n x\, dx $: if $  m $ or $  n $ is odd, substitute the other function; if both even, use half-angle formulas
 
 **Powers of $\sec $ and $\tan $:**
 
 - $\int \sec^n x\, dx $: use reduction formula or integration by parts
 
-- $\int \sec^2 x \tan^n x\, dx $: let $ u = \tan x $### 4.6 Reduction Formulas
+- $\int \sec^2 x \tan^n x\, dx $: let $  u = \tan x $### 4.6 Reduction Formulas
 
 $ $\int \sin^n x\, dx = -\frac{\sin^{n-1}x\cos x}{n} + \frac{n-1}{n}\int \sin^{n-2}x\, dx\int \cos^n x\, dx = \frac{\cos^{n-1}x\sin x}{n} + \frac{n-1}{n}\int \cos^{n-2}x\, dx
 
@@ -194,7 +194,7 @@ $$---
 | Linearity | $\int_a^b (cf + g)\, dx = c\int_a^b f\, dx + \int_a^b g\, dx $ |
 | Additivity | $\int_a^b f\, dx = \int_a^c f\, dx + \int_c^b f\, dx $ |
 | Dominance | If $ f(x) \geq g(x) $ on $ [a,b] $, then $\int_a^b f\, dx \geq \int_a^b g\, dx $ |
-| Mean value | $\int_a^b f(x)\, dx = f(c)(b-a) $ for some $ c \in [a,b] $ |
+| Mean value | $\int_a^b f(x)\, dx = f(c)(b-a) $ for some $  c \in [a,b] $ |
 
 ---
 
@@ -203,32 +203,34 @@ $$---
 ### 6.1 Area Between Curve
 s
 
-$ $ A = \int_a^b |f(x) - g(x)|\, dx $$
+$ $  A = \int_a^b |f(x) - g(x)|\, dx $$
 
-For functions of $ y $: $ A = \int_c^d |x_R(y) - x_L(y)|\, dy $### 6.2 Volume of Solids of Revolution
+For functions of $ y $: $  A = \int_c^d |x_R(y) - x_L(y)|\, dy $### 6.2 Volume of Solids of Revolution
 
 **Disk/Washer method** (revolve about $ x $-axis):
 
-$ $
+$ $ 
 
 V = \pi \int_a^b [R(x)]^2\, d
 x
 
 $$**Washer method** (two functions):
 
-$ $ V = \pi \int_a^b \left([R(x)]^2 - [r(x)]^2\right) dx $$**Shell method** (revolve about $ y $-axis):
+$ $  V = \pi \int_a^b \left([R(x)]^2 - [r(x)]^2\right) dx $ $**Shell method** (revolve about $  y $-axis):
 
-$ $
+$ $ 
 
 V = 2\pi \int_a^b x \cdot f(x)\, d
 x
 
-$$### 6.3 Arc Length $ $ L = \int_a^b \sqrt{1 + \left(\frac{dy}{dx}\right)^2}\, dx $$**Application in geodesy:** Computing distances along curved surfaces (geodesic lines on the ellipsoid).
+$$
+
+# ## 6.3 Arc Length $ $  L = \int_a^b \sqrt{1 + \left(\frac{dy}{dx}\right)^2}\, dx $$**Application in geodesy:** Computing distances along curved surfaces (geodesic lines on the ellipsoid).
 
 ### 6.4 Wor
 k
 
-$ $ W = \int_a^b F(x)\, dx $$
+$ $  W = \int_a^b F(x)\, dx $$
 
 where $ F(x) $ is the force applied over distance.
 
@@ -239,7 +241,7 @@ $ $\bar{x} = \frac{1}{A}\int_a^b x[f(x) - g(x)]\, dx, \quad \bar{y} = \frac{1}{A
 
 $$
 
-### 6.6 Probabilit
+# ## 6.6 Probabilit
 y
 
 $ $ P(a \leq X \leq b) = \int_a^b f(x)\, dx $$
@@ -264,7 +266,7 @@ $ $\int_a^b f(x)\, dx \approx \sum_{i=1}^n f(x_i) \Delta x
 
 $$
 
-### 7.2 Trapezoidal Rul
+# ## 7.2 Trapezoidal Rul
 e
 
 $ $\int_a^b f(x)\, dx \approx \frac{h}{2}\left[f(x_0) + 2\sum_{i=1}^{n-1}f(x_i) + f(x_n)\right]
@@ -287,7 +289,7 @@ Uses optimally chosen nodes and weights for maximum accuracy:
 
 $ $\int_{-1}^{1} f(x)\, dx \approx \sum_{i=1}^n w_i f(x_i)
 
-$$| Points $ n $ | Nodes $ x_i $ | Weights $ w_i $ |
+$$| Points $  n $ | Nodes $ x_i $ | Weights $ w_i $ |
 |------------|------------|---------------|
 | 2 | $\pm 1/\sqrt{3} $ | 1, 1 |
 | 3 | $ 0, \pm\sqrt{3/5} $ | 8/9, 5/9, 5/9 |
@@ -312,7 +314,7 @@ where $ x_i $ are random points in $\Omega $. Error: $ O(1/\sqrt{N}) $.
 |----------|------|-----|
 | $\int_a^b f\, dx = F(b)-F(a) $ | FTC-2 | Evaluation |
 | $\int u\, dv = uv - \int v\, du $ | Integration by parts | Products |
-| $\int f(g(x))g'(x)\, dx = \int f(u)\, du $| $ u $-substitution | Composition |
+| $\int f(g(x))g'(x)\, dx = \int f(u)\, du $| $  u $-substitution | Composition |
 | $ V = \pi\int [R(x)]^2\, dx $ | Disk method | Volume |
 | $ L = \int \sqrt{1+(y')^2}\, dx$ | Arc length | Distance |
 

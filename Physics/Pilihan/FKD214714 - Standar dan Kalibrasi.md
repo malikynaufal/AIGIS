@@ -27,7 +27,7 @@ The International System of Units (SI, Sistem Internasional) defines seven base 
 | Length (panjang) | m | Speed of light $c = 299\,792\,458 $ m/s |
 | Mass (massa) | kg | Planck constant $h = 6.626\,070\,15 \times 10^{-34}$ J·s |
 | Time (waktu) | s | Cesium-133 hyperfine transition: 9,192,631,770 Hz |
-| Electric current | A | Elementary charge $e = 1.602\,176\,634 \times 10^{-19} $ C |
+| Electric current | A | Elementary charge $e = 1.602\,176\,634 \times 10^{-19} $  C |
 | Temperature (suhu) | K | Boltzmann constant $k = 1.380\,649 \times 10^{-23} $ J/K |
 | Amount of substance | mol | Avogadro constant $N_A = 6.022\,140\,76 \times 10^{23} $ mol⁻¹ |
 | Luminous intensity | cd | Fixed luminous efficacy $K_{cd} = 683 $ lm/W |
@@ -52,7 +52,7 @@ Each link must have a calibration certificate with:
 
 - Measurand (quantity being measured)
 
-- Measured value with uncertainty ($U $, $ k = 2$)
+- Measured value with uncertainty ( $U $, $  k = 2$)
 
 - Calibration method used
 
@@ -118,7 +118,7 @@ ISO/IEC 17025:2017 organizes requirements into two models:
 
 1. **Define the measurand** (quantitas yang diukur)
 2. **Identify all input quantities** $x_i $.
-3. **Evaluate standard uncertainty** $ u(x_i) $for each input (Type A or Type B)
+3. **Evaluate standard uncertainty** $ u(x_i) $ for each input (Type A or Type B)
 4. **Determine the sensitivity coefficient** $ c_i = \partial f / \partial x_i $.
 5. **Calculate combined uncertainty** $ u_c = \sqrt{\sum c_i^2 u^2(x_i)} $.
 6. **Determine expanded uncertainty** $ U = k \cdot u_c $.
@@ -134,7 +134,7 @@ A reference thermometer (termometer referensi) and the DUT (device under test) a
 
 **Example**: Calibrating a Pt100 RTD against a standard Pt100
 
-| Set Point (°C) | Reference ($\Omega $) | DUT ($\Omega$) | Deviation (°C) |
+| Set Point (°C) | Reference ( $\Omega $) | DUT ( $\Omega$) | Deviation (°C) |
 |---|---|---|---|
 | 0.00 | 100.000 | 100.012 | +0.031 |
 | 50.00 | 119.400 | 119.408 | +0.020 |
@@ -144,20 +144,20 @@ A reference thermometer (termometer referensi) and the DUT (device under test) a
 
 **Polynomial fit** for correction:
 
-$T_{\text{corrected}} = T_{\text{read}} + a_0 + a_1 T_{\text{read}} + a_2 T_{\text{read}}^2 $ Fitting the data: $a_0 = 0.031 $, $ a_1 = -5.8 \times 10^{-5} $, $ a_2 = -2.6 \times 10^{-7} $
+$T_{\text{corrected}} = T_{\text{read}} + a_0 + a_1 T_{\text{read}} + a_2 T_{\text{read}}^2 $ Fitting the data: $ a_0 = 0.031 $, $ a_1 = -5.8 \times 10^{-5} $, $ a_2 = -2.6 \times 10^{-7} $
 
 **Uncertainty budget** for the 100 °C calibration point:
 
 | Source | Value | Distribution | $ u $ (°C) |
 |---|---|---|---|
-| Reference thermometer | 0.02 °C | Normal ($ k=2$) | 0.010 |
+| Reference thermometer | 0.02 °C | Normal ( $ k=2$) | 0.010 |
 | Bath uniformity | 0.03 °C | Rectangular | 0.017 |
 | Readout resolution | 0.001 °C | Rectangular | 0.0006 |
 | DUT repeatability | 0.005 °C | Type A (N=6) | 0.002 |
 | **Combined** | — | — | ** $u_c = 0.020 $** |
-| **Expanded** ($ k=2 $) | — | — | ** $ U = 0.040 $** |
+| **Expanded** ( $ k=2 $) | — | — | ** $  U = 0.040 $** |
 
-Result: $ T = 100.013 \pm 0.040 $ °C ($ k=2$, 95% confidence)
+Result: $ T = 100.013 \pm 0.040 $ °C ( $ k=2$, 95% confidence)
 
 ### 3.2 Length and Distance Calibration
 
@@ -203,11 +203,11 @@ $$
 
 ### 4.2 Control Charts
 
-The $ \bar{x} $ and $ R $ charts monitor measurement process stability:
+The $ \bar{x} $ and $  R $ charts monitor measurement process stability:
 
 **Center line:** $ \bar{\bar{x}} = \frac{1}{m}\sum_{j=1}^{m}\bar{x}_j $**Upper/Lower control limits:** $ $ \text{UCL} = \bar{\bar{x}} + A_2 \bar{R}, \quad \text{LCL} = \bar{\bar{x}} - A_2 \bar{R}
 
-$ For subgroup size $n = 5 $: $ A_2 = 0.577 $.$
+$ For subgroup size $  n = 5 $: $ A_2 = 0.577 $.$
 
 **Out-of-control signals** (sinyal di luar kendali):
 

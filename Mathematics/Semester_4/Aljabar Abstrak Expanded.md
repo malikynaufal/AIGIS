@@ -27,9 +27,9 @@ Abstract algebra studies algebraic structures: groups, rings, and fields. It pro
 
 - **Examples**: $ (\mathbb{Z},+) $, $ (\mathbb{R}^imes,imes) $, $ S_n $ (permutations),$ GL(n,\mathbb{R}) $ (invertible matrices)
 
-- **Subgroups**: $ H \subseteq G $ closed under same operation,$\\{0\\} $ and $ G $ are trivial subgroups
+- **Subgroups**: $ H \subseteq G $ closed under same operation,$\\{0\\} $ and $  G $ are trivial subgroups
 
-- **Cosets and Lagrange's theorem**: $|H| $ divides $|G| $ for finite $ G $- **Normal subgroups and quotient groups**: $ G/H $ quotient group exists when $ H $ is normal
+- **Cosets and Lagrange's theorem**: $|H| $ divides $|G| $ for finite $  G $- **Normal subgroups and quotient groups**: $ G/H $ quotient group exists when $  H $ is normal
 
 - **Homomorphisms**: $ hi(ab) = hi(a)hi(b) $, kernel is normal subgroup
 
@@ -41,9 +41,9 @@ Abstract algebra studies algebraic structures: groups, rings, and fields. It pro
 
 - **Examples**: $\mathbb{Z} $, $\mathbb{Z}_n $, $ M_n(\mathbb{R}) $ (square matrices)
 
-- **Integral domains**: $ ab=0 $→$ a=0 $ or $ b=0 $- **Fields**: Every nonzero element is a unit. Example: $\mathbb{Q}, \mathbb{R}, \mathbb{C}, \mathbb{Z}_p $ for prime $ p $.
+- **Integral domains**: $ ab=0 $→$ a=0 $ or $ b=0 $- **Fields**: Every nonzero element is a unit. Example: $\mathbb{Q}, \mathbb{R}, \mathbb{C}, \mathbb{Z}_p $ for prime $  p $.
 
-- **Ideals and quotient rings**: $ R/I $ quotient ring exists for ideal $ I $- **Polynomial rings**: $\mathbb{R}[x] $, factorization, irreducibility
+- **Ideals and quotient rings**: $ R/I $ quotient ring exists for ideal $  I $- **Polynomial rings**: $\mathbb{R}[x] $, factorization, irreducibility
 
 ### Unit 3: Fields
 

@@ -22,38 +22,22 @@ created: 2026-07-27
 
 ## 🧮 Key Equations
 
-$$
+$$ dU = \delta Q - \delta W $$
 
-\begin{equation}
-dU = \delta Q - \delta W
-\end{equation}
 \text{(First law of thermodynamics)}
 
 $ $
 
-$$
+$$ \Delta S \geq 0 $$
 
-\begin{equation}
-\Delta S \geq 0
-\end{equation}
 \text{(Second law — entropy always increases)}
 
-$ $
+$$ \eta_{\text{Carnot}} = 1 - \frac{T_C}{T_H} $$
 
-$$
-
-\begin{equation}
-\eta_{\text{Carnot}} = 1 - \frac{T_C}{T_H}
-\end{equation}
 \text{(Carnot efficiency)}
 
-$ $
+$$ F = U - TS, \quad G = H - TS $$
 
-$$
-
-\begin{equation}
-F = U - TS, \quad G = H - TS
-\end{equation}
 \text{(Helmholtz & Gibbs free energies)}
 
 $ $

@@ -76,7 +76,7 @@ $ $
 
  V(x) = 0 	ext{ for } 0 < x < L, \quad \infty 	ext{ otherwise} $$
 
-### Solutions $ $
+# ## Solutions $ $
 
  \psi_n(x) = \sqrt{rac{2}{L}} \sin\left(rac{n\pi x}{L}
 ight), \quad n = 1, 2, 3, \dot
@@ -86,9 +86,9 @@ s
 
 E_n = rac{n^2\pi^2\hbar^2}{2mL^2} $$
 
-### Key Features
+# ## Key Features
 
-- Zero-point energy: $ E_1 = rac{\pi^2\hbar^2}{2mL^2} > 0 $- Energy spacing increases with $ n $- Wave functions have $ n-1 $ nodes
+- Zero-point energy: $ E_1 = rac{\pi^2\hbar^2}{2mL^2} > 0 $- Energy spacing increases with $  n $- Wave functions have $ n-1 $ nodes
 
 ---
 
@@ -99,7 +99,7 @@ l
 
 $ $ V(x) = rac{1}{2}kx^2 = rac{1}{2}m\omega^2 x^2 $$
 
-### Energy Levels $ $ E_n = \hbar\omega\left(n + rac{1}{2}
+# ## Energy Levels $ $ E_n = \hbar\omega\left(n + rac{1}{2}
 ight), \quad n = 0, 1, 2, \dot
 s
 
@@ -119,7 +119,7 @@ l
 
 $ $ V(r) = -rac{e^2}{4\pi\epsilon_0 r} $$
 
-### Quantum Numbers
+# ## Quantum Numbers
 | Number | Symbol | Values | Meaning |
 |--------|--------|--------|---------|
 | Principal | $ n $ | $ 1, 2, 3, \dots $ | Energy level |
@@ -138,7 +138,7 @@ ight)
 
 $where $ a_0 = rac{4\pi\epsilon_0\hbar^2}{me^2} = 0.529\,	ext{Å} $ (Bohr radius).
 
-### Example: 1s State ($ n=1, l=0 $)
+### Example: 1s State ( $ n=1, l=0 $)
 
 $ $ \psi_{100}(r) = rac{1}{\sqrt{\pi a_0^3}}e^{-r/a_0} $$
 
@@ -152,10 +152,10 @@ $ $ \hat{\mathbf{L}} = \hat{\mathbf{r}} 	imes \hat{\mathbf{p}}\hat{L}^2 = \hbar^
 
 $$
 
-### Spin Angular Momentum
+# ## Spin Angular Momentum
 
 - Intrinsic property (not from motion in space)
--$ \hat{\mathbf{S}}^2 = \hbar^2 s(s+1) $- For electrons: $ s = 1/2 $, $ \hat{S}_z = \pm\hbar/2 $### Total Angular Momentum
+-$ \hat{\mathbf{S}}^2 = \hbar^2 s(s+1) $- For electrons: $  s = 1/2 $, $ \hat{S}_z = \pm\hbar/2 $### Total Angular Momentum
 
 $ $ \hat{\mathbf{J}} = \hat{\mathbf{L}} + \hat{\mathbf{S}}j = l \pm 1/
 2

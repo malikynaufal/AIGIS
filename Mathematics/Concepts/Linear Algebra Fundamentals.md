@@ -16,7 +16,7 @@ updated: 2026-07-27
 
 ### Vectors in ℝⁿ
 
-A vector $\mathbf{v} \in \mathbb{R}^n $ is an ordered $ n $-tuple:
+A vector $\mathbf{v} \in \mathbb{R}^n $ is an ordered $  n $-tuple:
 
 $ $\mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix} = (v_1, v_2, \dots, v_n)
 
@@ -34,22 +34,22 @@ $$**Operations:**
 -$\mathbf{u} \cdot \mathbf{v} = 0 \implies \mathbf{u} \perp \mathbf{v} $ (orthogonal)
 -$\ |\mathbf{v}\|^2 = \mathbf{v} \cdot \mathbf{v} $- Cauchy-Schwarz: $|\mathbf{u} \cdot \mathbf{v}| \leq \|\mathbf{u}\|\,\|\mathbf{v}\| $### Matrices
 
-A matrix $ A \in \mathbb{R}^{m \times n} $ has $ m $ rows and $ n $ columns
+A matrix $ A \in \mathbb{R}^{m \times n} $ has $  m $ rows and $  n $ columns
 
-$ $ A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}$$
+$ $  A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}$$
 
 **Special matrices:**
 
 | Type | Definition | Symbol |
 |------|-------------|--------|
 | Square | $ m = n $ | $ A_{n \times n} $ |
-| Diagonal | $ a_{ij} = 0 $ for $ i \neq j $ | $\text{diag}(d_1, \dots, d_n) $ |
+| Diagonal | $ a_{ij} = 0 $ for $  i \neq j $ | $\text{diag}(d_1, \dots, d_n) $ |
 | Identity | $ I_n = \text{diag}(1, 1, \dots, 1) $ | $ I_n $ |
 | Zero | All entries 0 | $ 0_{m \times n} $ |
 | Symmetric | $ A = A^T $ | $ A^T = A $ |
 | Skew-symmetric | $ A^T = -A $ | $ A^T = -A $ |
 | Orthogonal | $ A^T A = I $ | $ A^T = A^{-1} $ |
-| Positive definite | $\mathbf{x}^T A \mathbf{x} > 0 $ for $\mathbf{x} \neq 0 $| $ A \succ 0 $ |
+| Positive definite | $\mathbf{x}^T A \mathbf{x} > 0 $ for $\mathbf{x} \neq 0 $| $  A \succ 0 $ |
 
 ### Matrix Operations
 
@@ -72,22 +72,24 @@ $ $ A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \
 $ $\det(AB) = \det(A)\det(B)\det(A^T) = \det(A)\det(A^{-1}) = \frac{1}{\det(A)}\det(cA) = c^n \det(A) \quad (A \in \mathbb{R}^{n \times n}
 )
 
-$$### Matrix Inversion Lemma (Woodbury) $ $(A + UCV)^{-1} = A^{-1} - A^{-1}U(C^{-1} + VA^{-1}U)^{-1}VA^{-1}$$ **Use in geodesy:** Efficient inversion of augmented covariance matrices.
+$$
+
+# ## Matrix Inversion Lemma (Woodbury) $ $ (A + UCV)^{-1} = A^{-1} - A^{-1}U(C^{-1} + VA^{-1}U)^{-1}VA^{-1}$$ **Use in geodesy:** Efficient inversion of augmented covariance matrices.
 
 ### Eigenvalue Decomposition
 
 For a square matrix $ A \in \mathbb{R}^{n \times n} $:
 
-$ $ A\mathbf{v} = \lambda \mathbf{v}$$-$\lambda $= eigenvalue
+$ $ A\mathbf{v} = \lambda \mathbf{v}$ $-$\lambda $= eigenvalue
 -$\mathbf{v} $= eigenvector
 
 **Properties:**
--$\det(A) = \prod_{i=1}^n \lambda_i $-$\text{tr}(A) = \sum_{i=1}^n \lambda_i $-$ A $ diagonalizable if $ n $ independent eigenvectors exist
+-$\det(A) = \prod_{i=1}^n \lambda_i $-$\text{tr}(A) = \sum_{i=1}^n \lambda_i $-$  A $ diagonalizable if $  n $ independent eigenvectors exist
 
 ### Singular Value Decomposition (SVD
 )
 
-$ $ A = U\Sigma V^T $$
+$ $  A = U\Sigma V^T $$
 
 -$ U \in \mathbb{R}^{m \times m} $ (orthogonal)
 -$\Sigma \in \mathbb{R}^{m \times n} $ (diagonal singular values $\sigma_1 \geq \sigma_2 \geq \dots \geq 0 $)
@@ -116,16 +118,16 @@ Least-squares solution
 
 $ $\hat{\mathbf{x}} = (H^T H)^{-1} H^T \mathbf{y} $$
 
-### Covariance Propagation
+# ## Covariance Propagation
 
-If $\mathbf{x} $ has covariance $ C_x $, then $ y = Ax + b $ has
+If $\mathbf{x} $ has covariance $ C_x $, then $  y = Ax + b $ has
 
 $ $ C_y = A C_x A^T $$
 
-### Helmert Transformation (7-parameter
+# ## Helmert Transformation (7-parameter
 )
 
-$ $\begin{bmatrix} X \\ Y \\ Z \end{bmatrix}_{\text{new}} = \begin{bmatrix} 1 & -\varepsilon_Z & \varepsilon_Y \\ \varepsilon_Z & 1 & -\varepsilon_X \\ -\varepsilon_Y & \varepsilon_X & 1 \end{bmatrix} \begin{bmatrix} X \\ Y \\ Z \end{bmatrix}_{\text{old}} + \begin{bmatrix} T_X \\ T_Y \\ T_Z \end{bmatrix} $$- 3 translations $ (T_X, T_Y, T_Z) $- 3 rotations $ (\varepsilon_X, \varepsilon_Y, \varepsilon_Z) $- 1 scale factor $ s = 1 + \delta\mu $### Rotation Matrices
+$ $\begin{bmatrix} X \\ Y \\ Z \end{bmatrix}_{\text{new}} = \begin{bmatrix} 1 & -\varepsilon_Z & \varepsilon_Y \\ \varepsilon_Z & 1 & -\varepsilon_X \\ -\varepsilon_Y & \varepsilon_X & 1 \end{bmatrix} \begin{bmatrix} X \\ Y \\ Z \end{bmatrix}_{\text{old}} + \begin{bmatrix} T_X \\ T_Y \\ T_Z \end{bmatrix} $ $- 3 translations $ (T_X, T_Y, T_Z) $- 3 rotations $ (\varepsilon_X, \varepsilon_Y, \varepsilon_Z) $- 1 scale factor $  s = 1 + \delta\mu $### Rotation Matrices
 
 **Rotation about Z-axis (yaw):*
 *
@@ -186,7 +188,7 @@ Combined: $ R = R_z R_y R_x $---
 
 1. **Matrix multiplication order:** $ AB \neq BA $ in general — order matters.
 2. **Confusing transpose with inverse:**$ (AB)^T = B^T A^T $, but $ (AB)^{-1} = B^{-1} A^{-1} $.
-3. **Dimension mismatch:** Cannot multiply $ (m \times n)(p \times q) $ unless $ n = p $.
+3. **Dimension mismatch:** Cannot multiply $ (m \times n)(p \times q) $ unless $  n = p $.
 4. **Forgetting that inverse only exists for square, full-rank matrices.**
 5. **Using the wrong norm:** $\ell_1 $, $\ell_2 $, $\ell_\infty$ give different results.
 

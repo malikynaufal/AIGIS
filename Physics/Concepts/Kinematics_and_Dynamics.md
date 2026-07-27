@@ -25,7 +25,7 @@ $$ \vec{r}(t) = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k}\vec{v}(t) = \frac{d\vec{
 
 $
 
-**Range** (level ground): $ R = \frac{v_0^2 \sin 2\theta}{g} $**Maximum height**: $ H = \frac{v_0^2 \sin^2\theta}{2g} $### Relative Velocit
+**Range** (level ground): $ R = \frac{v_0^2 \sin 2\theta}{g} $**Maximum height**: $  H = \frac{v_0^2 \sin^2\theta}{2g} $### Relative Velocit
 y
 
 $ $ \vec{v}_{AC} = \vec{v}_{AB} + \vec{v}_{BC} $$
@@ -39,7 +39,7 @@ w
 
 $ $ \vec{F}_{\text{net}} = m\vec{a} = m\frac{d\vec{v}}{dt} $$
 
-### Work-Energy Theore
+# ## Work-Energy Theore
 m
 
 $ W = \int \vec{F}\cdot d\vec{r} = \Delta K = \frac{1}{2}m(v_f^2 - v_i^2) $ $
@@ -49,14 +49,14 @@ r
 
 $ P = \frac{dW}{dt} = \vec{F}\cdot\vec{v} $$
 
-### Impulse-Momentu
+# ## Impulse-Momentu
 m
 
 $ $ \vec{J} = \int \vec{F}\,dt = \Delta\vec{p} = m\vec{v}_f - m\vec{v}_i
 
 $$
 
-### Conservation of Angular Momentum
+# ## Conservation of Angular Momentum
 If $ \vec{\tau}_{\text{ext}} = 0 $, then:
 
 $ $ \vec{L} = \vec{r}\times\vec{p} = \text{constant} $$
@@ -78,7 +78,7 @@ l
 
 $ U_{\text{eff}}(r) = U(r) + \frac{L^2}{2mr^2} $ Radial equation $ $ m\ddot{r} = -\frac{dU_{\text{eff}}}{dr} $$
 
-### Orbit Equatio
+# ## Orbit Equatio
 n
 
 $ $ r(\theta) = \frac{p}{1 + e\cos\theta} $$
@@ -117,12 +117,12 @@ Planets orbit in ellipses with the Sun at one focus.
 
 $ $ \frac{dA}{dt} = \frac{L}{2m} = \text{constant} $$
 
-### Third La
+# ## Third La
 w
 
 $ $ T^2 = \frac{4\pi^2}{GM}a^3 $$
 
-### Worked Example: Earth's Orbit
+# ## Worked Example: Earth's Orbit
 Semi-major axis $ a = 1.496\times10^{11} $ m, $ M_\odot = 1.989\times10^{30} $ kg
 .
 

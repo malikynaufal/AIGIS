@@ -46,13 +46,13 @@ $ $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf
 
 $$
 
-The estimator is **unbiased** ($ E[\hat{\mathbf{x}}] = \mathbf{x} $) and has minimum variance among all linear unbiased estimators (BLUE — **Best Linear Unbiased Estimator**).
+The estimator is **unbiased** ( $ E[\hat{\mathbf{x}}] = \mathbf{x} $) and has minimum variance among all linear unbiased estimators (BLUE — **Best Linear Unbiased Estimator**).
 
 ### 2.2 Distribution of the Residual Quadratic Form
 
 $ $\frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\sigma_0^2} = SS / \sigma_0^2 \sim \chi^2_{n-u} $$
 
-where $ n $ is the number of observations and $ u $ is the number of unknowns.
+where $ n $ is the number of observations and $  u $ is the number of unknowns.
 
 This provides the theoretical basis for model validation.
 
@@ -75,16 +75,16 @@ $ $
 H_0: E[\mathbf{v}] = \mathbf{0} \quad \text{(model is correct)
 }
 
-$$**Test statistic:** $ $ T = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\sigma_0^2} = \frac{\nu\hat{\sigma}_0^2}{\sigma_0^2}$$ **Decision:**
--$ T < \chi^2_{1-\alpha/2, \nu} $ or $ T > \chi^2_{\alpha/2, \nu} $: reject $ H_0 $ at level $\alpha $-$\chi^2_{1-\alpha/2, \nu} \leq T \leq \chi^2_{\alpha/2, \nu} $: cannot reject $ H_0 $**Typical outcomes when GMT fails:**
+$$**Test statistic:** $ $  T = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\sigma_0^2} = \frac{\nu\hat{\sigma}_0^2}{\sigma_0^2}$$ **Decision:**
+-$ T < \chi^2_{1-\alpha/2, \nu} $ or $  T > \chi^2_{\alpha/2, \nu} $: reject $ H_0 $ at level $\alpha $-$\chi^2_{1-\alpha/2, \nu} \leq T \leq \chi^2_{\alpha/2, \nu} $: cannot reject $ H_0 $**Typical outcomes when GMT fails:**
 | Signal | Possible Cause |
 |--------|---------------|
-| $ T $ too large ($\gg \nu $) | Gross errors, underestimated $\sigma_0^2 $, wrong functional model |
-| $ T $ too small ($\ll \nu $) | Overestimated $\sigma_0^2 $, over-parameterized model |
+| $ T $ too large ( $\gg \nu $) | Gross errors, underestimated $\sigma_0^2 $, wrong functional model |
+| $ T $ too small ( $\ll \nu $) | Overestimated $\sigma_0^2 $, over-parameterized model |
 
-**Example:** GPS network with $ n = 50 $ baselines,$ u = 12 $ parameters,$\nu = 38 $. If $\mathbf{v}^T\mathbf{P}\mathbf{v} = 28.2 $ with $\sigma_0^2 = 1 $:
+**Example:** GPS network with $ n = 50 $ baselines,$  u = 12 $ parameters,$\nu = 38 $. If $\mathbf{v}^T\mathbf{P}\mathbf{v} = 28.2 $ with $\sigma_0^2 = 1 $:
 
-$ $ T = 28.2 / 1 = 28.2 $$
+$ $  T = 28.2 / 1 = 28.2 $$
 
 Critical values at $\alpha = 0.05 $: $\chi^2_{0.975, 38} \approx 22.88 $,$\chi^2_{0.025, 38} \approx 56.91 $ Since $ 28.2 > 22.88 $ and $ 28.2 < 56.91 $: test **passes**.
 
@@ -99,16 +99,18 @@ The **Baarda w-test** is intimately linked to the **t-test** when $\sigma_0^2 $ 
 t_i = \frac{v_i}{\hat{\sigma}_0\sqrt{q_{v_i v_i}}} \sim t(\nu
 )
 
-$$### 3.3 Chi-Square Test for Variance $ $ H_0: \sigma^2 = \sigma_0^2 \quad H_a: \sigma^2 \neq \sigma_0^2\chi^2 = \frac{(n-1)s^2}{\sigma_0^2} $$**Application:** Testing whether the observed variance of GNSS residuals matches the nominal receiver noise variance.
+$$
+
+# ## 3.3 Chi-Square Test for Variance $ $ H_0: \sigma^2 = \sigma_0^2 \quad H_a: \sigma^2 \neq \sigma_0^2\chi^2 = \frac{(n-1)s^2}{\sigma_0^2} $$**Application:** Testing whether the observed variance of GNSS residuals matches the nominal receiver noise variance.
 
 ### 3.4 Goodness of Fit for Normal Distributio
 n
 
 $ $ \chi^2 = \sum_{i=1}^k \frac{(O_i - E_i)^2}{E_i} $$
 
-where $ O_i $ are observed frequencies in $ k $ bins and $ E_i $= expected frequencies from a normal distribution. Tests whether residuals are actually normally distributed.
+where $ O_i $ are observed frequencies in $  k $ bins and $ E_i $= expected frequencies from a normal distribution. Tests whether residuals are actually normally distributed.
 
-**Degrees of freedom:**$\nu = k - 1 - m $ (where $ m $= number of estimated distribution parameters).
+**Degrees of freedom:**$\nu = k - 1 - m $ (where $  m $= number of estimated distribution parameters).
 
 ---
 
@@ -147,13 +149,13 @@ where $\sigma_{\text{UERE}} $ is the User Equivalent Range Error.
 
 For 3D positioning, the $ (1-\alpha) $ confidence ellipsoid
 
-$ $(\hat{\mathbf{x}} - \mathbf{x})^T \mathbf{C}_{\hat{x}\hat{x}}^{-1}(\hat{\mathbf{x}} - \mathbf{x}) \leq 3F_{3,\nu}(1-\alpha)$$
+$ $ (\hat{\mathbf{x}} - \mathbf{x})^T \mathbf{C}_{\hat{x}\hat{x}}^{-1}(\hat{\mathbf{x}} - \mathbf{x}) \leq 3F_{3,\nu}(1-\alpha)$$
 
 The axes are defined by eigenvectors of $\mathbf{C}_{\hat{x}\hat{x}} $ with semi-axis lengths proportional to $\sqrt{\lambda_i F} $.
 
 **2D error ellipse parameters:**
 
-$ $ a = \hat{\sigma}_0\sqrt{\frac{1}{2}(\sigma_x^2 + \sigma_y^2 + \sqrt{(\sigma_x^2 - \sigma_y^2)^2 + 4\sigma_{xy}^2})}b = \hat{\sigma}_0\sqrt{\frac{1}{2}(\sigma_x^2 + \sigma_y^2 - \sqrt{(\sigma_x^2 - \sigma_y^2)^2 + 4\sigma_{xy}^2})}\theta = \frac{1}{2}\arctan\frac{2\sigma_{xy}}{\sigma_x^2 - \sigma_y^2}$$---
+$ $  a = \hat{\sigma}_0\sqrt{\frac{1}{2}(\sigma_x^2 + \sigma_y^2 + \sqrt{(\sigma_x^2 - \sigma_y^2)^2 + 4\sigma_{xy}^2})}b = \hat{\sigma}_0\sqrt{\frac{1}{2}(\sigma_x^2 + \sigma_y^2 - \sqrt{(\sigma_x^2 - \sigma_y^2)^2 + 4\sigma_{xy}^2})}\theta = \frac{1}{2}\arctan\frac{2\sigma_{xy}}{\sigma_x^2 - \sigma_y^2}$$---
 
 ## 5. Quality Control in Surveying (Pengendalian Mutu)
 
@@ -181,7 +183,7 @@ The effect of an undetected outlier of size $\nabla_i $ on the estimated paramet
 
 $$
 
-where $\mathbf{a}_i $ is the $ i $-th row of $\mathbf{A} $.
+where $\mathbf{a}_i $ is the $  i $-th row of $\mathbf{A} $.
 
 ### 5.3 Redundancy (Redundansi)
 

@@ -57,7 +57,7 @@ The fundamental GPS measurement:
 
 $$\rho_i = \| \mathbf{r}_r - \mathbf{r}_i \| + c\,\delta t_r - c\,\delta t_i + \varepsilon_{\rho} $ $
 
-where $\mathbf{r}_r $= receiver position,$\mathbf{r}_i $= satellite $ i $ position,$ c $ = speed of light,$\delta t_r $= receiver clock error,$\delta t_i $= satellite clock error, and $\varepsilon_\rho $= measurement noise + atmospheric effects.
+where $\mathbf{r}_r $= receiver position,$\mathbf{r}_i $= satellite $  i $ position,$  c $ = speed of light,$\delta t_r $= receiver clock error,$\delta t_i $= satellite clock error, and $\varepsilon_\rho $= measurement noise + atmospheric effects.
 
 ## Positioning Modes
 

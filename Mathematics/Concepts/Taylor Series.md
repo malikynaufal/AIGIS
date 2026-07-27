@@ -13,7 +13,7 @@ updated: 2026-07-27
 
 ## 1. Definition
 
-For a function $f(x) $ that is infinitely differentiable at $ x = a $:
+For a function $f(x) $ that is infinitely differentiable at $  x = a $:
 
 $ $ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n $$
 
@@ -21,7 +21,7 @@ $ $= f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + 
 
 $$
 
-### Maclaurin Series
+# ## Maclaurin Series
 
 Special case when $ a = 0 $:
 
@@ -35,15 +35,15 @@ $ $ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n $$
 
 $ $ R_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-a)^{n+1}$$
 
-where $\xi $ is between $ a $ and $ x $.
+where $\xi $ is between $  a $ and $  x $.
 
 ### 2.2 Peano Remainder
 
 $ $ R_n(x) = o((x-a)^n) \quad \text{as } x \to a $$
 
-### 2.3 Convergence Criterion
+# ## 2.3 Convergence Criterion
 
-Taylor series converges to $ f(x) $ if $ R_n(x) \to 0 $ as $ n \to \infty $.
+Taylor series converges to $ f(x) $ if $ R_n(x) \to 0 $ as $  n \to \infty $.
 
 ---
 
@@ -51,10 +51,10 @@ Taylor series converges to $ f(x) $ if $ R_n(x) \to 0 $ as $ n \to \infty $.
 
 | Function | Expansion | Valid When |
 |----------|-----------|------------|
-| $ e^x $ | $\sum \frac{x^n}{n!} $| All $ x $ |
-| $\sin x $| $ x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots $| All $ x $ |
-| $\cos x $|$ 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots $| All $ x $ |
-| $\ln(1+x) $| $ x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots $|$-1 < x \leq 1 $ |
+| $ e^x $ | $\sum \frac{x^n}{n!} $| All $  x $ |
+| $\sin x $| $  x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots $| All $  x $ |
+| $\cos x $|$ 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots $| All $  x $ |
+| $\ln(1+x) $| $  x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots $|$-1 < x \leq 1 $ |
 | $\frac{1}{1-x} $|$\sum x^n $|$|x| < 1 $ |
 | $ (1+x)^\alpha $ | $\sum \binom{\alpha}{n} x^n $|$|x| \leq 1 $ |
 
@@ -94,7 +94,7 @@ Each pair of terms adds roughly 2 more correct decimal digits.
 
 ### 5.2 Small Angle Approximation
 
-For $\theta \ll 1 $ radians:$ $\sin\theta \approx \theta - \frac{\theta^3}{6} \approx \theta
+For $\theta \ll 1 $ radians: $ $\sin\theta \approx \theta - \frac{\theta^3}{6} \approx \theta
 
 $$
 
@@ -116,7 +116,7 @@ Second-order Taylor expansion of $ f(x) $ around $ x_0 $:
 
 $ $ f(x) \approx f(x_0) + f'(x_0)(x-x_0) + \frac{f''(x_0)}{2}(x-x_0)^2 $$
 
-Minimizing: $ f'(x_0) + f''(x_0)(x-x_0) = 0 $ gives:$ $ x = x_0 - \frac{f'(x_0)}{f''(x_0)}$$
+Minimizing: $ f'(x_0) + f''(x_0)(x-x_0) = 0 $ gives: $ $  x = x_0 - \frac{f'(x_0)}{f''(x_0)}$$
 
 This is Newton's method for optimization.
 

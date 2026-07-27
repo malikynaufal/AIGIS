@@ -13,7 +13,7 @@ updated: 2026-07-27
 ---
 
 ## 1. Continuity Equation (Mass Conservation)
-For incompressible flow ($\rho = $ const) $ A_1 v_1 = A_2 v_2 $ where $ A $ is cross‑sectional area,$ v $ velocity.
+For incompressible flow ( $\rho = $ const) $ A_1 v_1 = A_2 v_2 $ where $  A $ is cross‑sectional area,$  v $ velocity.
 
 For compressible flow (general)
 
@@ -34,12 +34,12 @@ If flow is steady and along a streamline, integrate to obtain **Bernoulli’s eq
 
 ## 3. Bernoulli’s Equation (Steady, Incompressible, Non‑viscous)
 
-$ $
+$ $ 
 
 p + rac{1}{2}\rho v^2 +
 ho g h = 	ext{constant} $$
 
-### Applications
+# ## Applications
 | Situation | Quantity Used |
 |------------|----------------|
 | Pitot tube (air speed) | $ p_{	ext{stagnation}} - p_{	ext{static}} = rac{1}{2}\rho v^2 $ |
@@ -92,12 +92,12 @@ $ Re = \frac{\rho v L}{\mu} = \frac{v L}{\nu} $$$
 ---
 
 ## 6. Poiseuille’s Law (Laminar Flow in a Pipe)
-For a circular pipe of radius $ R $ and length $ L $:
+For a circular pipe of radius $ R $ and length $  L $:
 
 $ Q = \frac{\pi R^4}{8\mu}\frac{\Delta p}{L}v_{	ext{avg}} = rac{Q}{\pi R^2} = \frac{R^2}{8\mu}\frac{\Delta p}{L} $$$
 
-### Example: Blood Flow in an Artery
-- $ R = 3 $ mm, $ L = 0.1 $ m,$ \Delta p = 1333 $ Pa (10 mmHg),$ \mu = 3.5	imes10^{-3} $ Pa·s.
+# ## Example: Blood Flow in an Artery
+- $ R = 3 $ mm, $  L = 0.1 $ m,$ \Delta p = 1333 $ Pa (10 mmHg),$ \mu = 3.5	imes10^{-3} $ Pa·s.
 - $ Q = rac{\pi (0.003)^4}{8	imes 3.5	imes10^{-3}}rac{1333}{0.1} pprox 1.2	imes10^{-6} $ m³/s ≈ 1.2 mL/s.
 
 ---
@@ -115,9 +115,9 @@ $ Q = \frac{\pi R^4}{8\mu}\frac{\Delta p}{L}v_{	ext{avg}} = rac{Q}{\pi R^2} = \
 ## 8. Dimensional Analysis Example
 Use Buckingham Pi theorem for a sphere falling in a viscous fluid (drag problem):
 
-- Variables: $F_D $, $ ho $,$ \mu $,$ v $,$ D $ (diameter).
+- Variables: $F_D $, $ ho $,$ \mu $,$  v $,$  D $ (diameter).
 
-- Fundamental dimensions: $ M $, $ L $, $ T $.
+- Fundamental dimensions: $ M $, $  L $, $  T $.
 
 - Pi groups: $ \Pi_1 = rac{F_D}{$
 ho v^2 D^2} $ (drag coefficient),$ \Pi_2 = rac{
@@ -145,10 +145,10 @@ ho v L}{\mu} $ | Reynolds number | Laminar vs turbulent classification |$
 ---
 
 ## Study Problems
-1. Compute the pressure drop in a 5‑m long pipe of radius 2 cm carrying water ($\mu=1.0	imes10^{-3} $ Pa·s) at a flow rate of 0.01 m³/s.
+1. Compute the pressure drop in a 5‑m long pipe of radius 2 cm carrying water ( $\mu=1.0	imes10^{-3} $ Pa·s) at a flow rate of 0.01 m³/s.
 2. A sphere of radius 0.01 m falls through oil (
 ho=900 kg/m³, \mu=0.2 Pa·s). Determine its terminal velocity using Stokes’ law.
-3. For air at sea level ( $ ho=1.225 $ kg/m³,$ \mu=1.8	imes10^{-5} $ Pa·s) flowing over a wing chord $ L=0.2 $ m with $ v=30 $ m/s, calculate the Reynolds number.
+3. For air at sea level ( $ ho=1.225 $ kg/m³,$ \mu=1.8	imes10^{-5} $ Pa·s) flowing over a wing chord $ L=0.2 $  m with $ v=30 $ m/s, calculate the Reynolds number.
 4. Derive the drag coefficient $ C_D $ for a flat plate aligned perpendicular to flow using dimensional analysis.
 5. Explain how Bernoulli’s principle underlies the operation of a Pitot‑static tube used in aviation.
 

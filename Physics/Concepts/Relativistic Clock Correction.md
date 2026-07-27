@@ -34,10 +34,10 @@ $ A moving clock ticks slower (dilated): $ $ \frac{\Delta\tau}{\Delta t} = \sqrt
 
 $$
 
-### GPS Satellite Velocity
+# ## GPS Satellite Velocity
 For a circular GPS orbit at radius $ r = 26,560 $ km
 
-$ v_{\text{GPS}} = \sqrt{\frac{GM}{r}} = \sqrt{\frac{3.9860\times 10^{14}}{26,560\times 10^3}} = 3,874 \text{ m/s} $ where $ G = 6.674\times 10^{-11} $ m³/(kg·s²), $ M = 5.972\times 10^{24} $ kg.
+$ v_{\text{GPS}} = \sqrt{\frac{GM}{r}} = \sqrt{\frac{3.9860\times 10^{14}}{26,560\times 10^3}} = 3,874 \text{ m/s} $ where $  G = 6.674\times 10^{-11} $ m³/(kg·s²), $  M = 5.972\times 10^{24} $ kg.
 
 ### Calculation of SR Effec
 t
@@ -63,16 +63,16 @@ In a uniform gravitational field, an accelerated observer is equivalent to one i
 
 $ $ d\tau^2 = \left(1 - \frac{2GM}{rc^2}\right)dt^2 - \frac{1}{c^2}\left(1 - \frac{2GM}{rc^2}\right)^{-1}dr^2 - \frac{r^2}{c^2}d\Omega^2 $$
 
-For a clock at radius $ $ r $, at rest ( $ dr = d\Omega = 0 $): $
+For a clock at radius $ $  r $, at rest ( $ dr = d\Omega = 0 $): $
 
 $ $ d\tau = \sqrt{1 - \frac{2GM}{rc^2}}\, dt $$
 
-### Clock Rate at Different Potentials
+# ## Clock Rate at Different Potentials
 For a satellite at $ r_{\text{sat}} $ vs. a ground clock at $ R_{\oplus} $:
 
 $ $ \frac{d\tau_{\text{sat}}}{dt} = \sqrt{1 - \frac{2GM}{r_{\text{sat}}c^2}}, \quad \frac{d\tau_{\text{ground}}}{dt} = \sqrt{1 - \frac{2GM}{R_{\oplus}c^2}} $$
 
-### First-Order Expansion (Weak Field)
+# ## First-Order Expansion (Weak Field)
 Using $ \sqrt{1-\epsilon}\approx 1-\epsilon/2 $ for small $ \epsilon $:
 
 $ $ \frac{d\tau_{\text{sat}}}{dt} \approx 1 - \frac{GM}{r_{\text{sat}}c^2}, \quad \frac{d\tau_{\text{ground}}}{dt} \approx 1 - \frac{GM}{R_{\oplus}c^2
@@ -152,14 +152,14 @@ The relativistic correction for eccentric orbits
 
 $ $ \Delta t_{\text{rel}} = -\frac{2\sqrt{GM\cdot a}}{c^2}e\sin E
 
-$ where $ E $ = eccentric anomaly from Kepler's equation,$ a $ = semi-major axis,$ e $ = eccentricity.$
+$ where $  E $ = eccentric anomaly from Kepler's equation,$  a $ = semi-major axis,$  e $ = eccentricity.$
 
 ### Eccentricity-Dependent Periodic Term
 For circular orbits ( $ e = 0 $): $ \Delta t_{\text{rel}} = 0 $ (factory offset fully handles the mean effect).
 
 For GPS ( $ e \approx 0.005 $–0.02): periodic variation of amplitude:
 
-$ A_{\text{rel}} = \frac{2\sqrt{GM\cdot a}}{c^2}e \approx \frac{2\times\sqrt{3.986\times10^{14}\times26.56\times10^6}}{9\times10^{16}}\times e $For $ e = 0.01 $: $ A_{\text{rel}} \approx 0.55\,\mu\text{s} \approx 0.16 $ m equivalent
+$ A_{\text{rel}} = \frac{2\sqrt{GM\cdot a}}{c^2}e \approx \frac{2\times\sqrt{3.986\times10^{14}\times26.56\times10^6}}{9\times10^{16}}\times e $ For $  e = 0.01 $: $ A_{\text{rel}} \approx 0.55\,\mu\text{s} \approx 0.16 $  m equivalent
 
 This correction is applied by the receiver every epoch using the broadcast ephemeris.
 
@@ -172,7 +172,7 @@ During signal propagation, Earth rotates beneath the signal path
 
 $ $ \Delta t_{\text{Sagnac}} = \frac{\vec{\Omega}_e \cdot (\vec{r}_{\text{sat}}\times\vec{r}_{\text{rx}})}{c^2} $$
 
-where $\vec{\Omega}_e $ = Earth rotation vector ($ 7.2921\times 10^{-5} $ rad/s).
+where $\vec{\Omega}_e $ = Earth rotation vector ( $ 7.2921\times 10^{-5} $ rad/s).
 
 **Magnitude:** Up to ~30 ns (~9 m) for maximum satellite-receiver separation.
 This is applied by transforming to ECEF coordinates or computing a Sagnac correction.
@@ -279,7 +279,7 @@ If relativistic clock correction is removed from the receiver:
 
 1. **Both SR and GR must be included** — neither alone gives the correct answer
 2. **Factory offset handles the mean effect** — the ±38.6 μs/day is pre-corrected at manufacture
-3. **Eccentricity term is periodic** — zero for circular orbits, sinusoidal for eccentric GPS ($ e\approx 0.01 $): ~0.5 μs amplitude
+3. **Eccentricity term is periodic** — zero for circular orbits, sinusoidal for eccentric GPS ( $ e\approx 0.01 $): ~0.5 μs amplitude
 4. **Different constellations, different corrections** — Galileo orbits higher than GPS → larger GR effect; GLONASS orbits lower
 5. **Sagnac effect is separate** — it's a coordinate transformation effect, not clock physics
 6. **PPP requires IGS final clocks** — broadcast ephemeris cannot achieve sub-meter for clocks
@@ -290,7 +290,7 @@ If relativistic clock correction is removed from the receiver:
 ## 11. Worked Examples
 
 ### Example 1: Verify GR Effect for GPS
-Using $ R_\oplus = 6,371,009 $ m, $ r_{\text{sat}} = 26,560,000 $ m
+Using $ R_\oplus = 6,371,009 $ m, $ r_{\text{sat}} = 26,560,000 $  m
 
 $ $ \frac{\Delta f}{f} = \frac{GM}{c^2}\left(\frac{1}{R_\oplus} - \frac{1}{r_{\text{sat}}}\right) = 4.435\times10^{-3}\times\left(1.570\times10^{-7} - 3.765\times10^{-8}\right) = 5.52\times10^{-10} $$
 
@@ -298,7 +298,7 @@ Per day: $ 5.52\times10^{-10}\times86400 = 47.7 $μs ✓ (matches +45.8 μs when
 
 ### Example 2: SR Effect for Galileo (23,222 km altitude)
 
-$ v = \sqrt{\frac{GM}{29601000}} = 3,611 \text{ m/s}\frac{\Delta f_{SR}}{f} = -\frac{v^2}{2c^2} = -\frac{3611^2}{2\times(299792458)^2} = -7.23\times10^{-11} $Per day: $-7.23\times10^{-11}\times86400 = -6.2 $μs/day (slightly smaller than GPS due to lower velocity)
+$ v = \sqrt{\frac{GM}{29601000}} = 3,611 \text{ m/s}\frac{\Delta f_{SR}}{f} = -\frac{v^2}{2c^2} = -\frac{3611^2}{2\times(299792458)^2} = -7.23\times10^{-11} $ Per day: $-7.23\times10^{-11}\times86400 = -6.2 $μs/day (slightly smaller than GPS due to lower velocity)
 
 ### Example 3: Equivalence of Factory Offset
 
@@ -308,7 +308,7 @@ $ $ \text{Required offset} = -\frac{\Delta f_{\text{net}}}{f_0} = -\frac{38.6\ti
 
 ## Study Problems
 1. Derive the +45.8 μs/day GR effect using the Schwarzschild metric expansion to first order.
-2. Compute the SR effect for GLONASS satellites ( $ r = 25,508 $ km, $ v = 3,987 $ m/s).
+2. Compute the SR effect for GLONASS satellites ( $ r = 25,508 $ km, $  v = 3,987 $ m/s).
 3. Explain why GLONASS uses a different time reference (GLONASS Time ≠ UTC) but still requires relativistic corrections.
 4. Derive the eccentricity correction $ \Delta t_{\text{rel}} = -\frac{2\sqrt{GMa}}{c^2}e\sin E $ from the energy of the orbit.
 5. Calculate the Sagnac correction for a GPS satellite at maximum angular separation from the receiver.

@@ -19,9 +19,9 @@ For a square matrix $\mathbf{A} \in \mathbb{R}^{n \times n} $, a scalar $\lambda
 
 $$
 
-Rearranging:$ $(\mathbf{A} - \lambda\mathbf{I})\mathbf{v} = \mathbf{0}$$
+Rearranging: $ $ (\mathbf{A} - \lambda\mathbf{I})\mathbf{v} = \mathbf{0}$$
 
-For a non-trivial solution ($\mathbf{v} \neq \mathbf{0} $) to exist, we need:
+For a non-trivial solution ( $\mathbf{v} \neq \mathbf{0} $) to exist, we need:
 
 $ $\det(\mathbf{A} - \lambda\mathbf{I}) = 0
 
@@ -43,7 +43,7 @@ Solve $ p(\lambda) = 0 $ to find all eigenvalues.
 
 **For a $ 2 \times 2 $ matrix:**$ $\mathbf{A} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\lambda^2 - \text{tr}(\mathbf{A})\lambda + \det(\mathbf{A}) = 0\lambda = \frac{\text{tr}(\mathbf{A}) \pm \sqrt{[\text{tr}(\mathbf{A})]^2 - 4\det(\mathbf{A})}}{2} $$
 
-### 2.2 Properties of Eigenvalues
+# ## 2.2 Properties of Eigenvalues
 
 | Property | Formula |
 |----------|---------|
@@ -61,7 +61,7 @@ Solve $ p(\lambda) = 0 $ to find all eigenvalues.
 
 For each eigenvalue $\lambda $, solve the homogeneous system:
 
-$ $(\mathbf{A} - \lambda\mathbf{I})\mathbf{v} = \mathbf{0}$$
+$ $ (\mathbf{A} - \lambda\mathbf{I})\mathbf{v} = \mathbf{0}$$
 
 The set of all eigenvectors for eigenvalue $\lambda $ (plus $\mathbf{0} $) forms the **eigenspace**$ E_\lambda = \ker(\mathbf{A} - \lambda\mathbf{I}) $.
 
@@ -72,9 +72,9 @@ The set of all eigenvectors for eigenvalue $\lambda $ (plus $\mathbf{0} $) forms
 
 ### 3.1 Algebraic vs Geometric Multiplicity
 
-- **Algebraic multiplicity** ($ m_a $): number of times $\lambda $ appears as a root of $ p(\lambda) $
+- **Algebraic multiplicity** ( $ m_a $): number of times $\lambda $ appears as a root of $ p(\lambda) $
 
-- **Geometric multiplicity** ($ m_g $): dimension of $ E_\lambda $ = number of linearly independent eigenvectors for $\lambda $ Always: $ 1 \leq m_g \leq m_a $**Diagonalizability:**$\mathbf{A} $ is diagonalizable iff $ m_g = m_a $ for every eigenvalue.
+- **Geometric multiplicity** ( $ m_g $): dimension of $ E_\lambda $ = number of linearly independent eigenvectors for $\lambda $ Always: $ 1 \leq m_g \leq m_a $**Diagonalizability:**$\mathbf{A} $ is diagonalizable iff $ m_g = m_a $ for every eigenvalue.
 
 ---
 
@@ -82,7 +82,7 @@ The set of all eigenvectors for eigenvalue $\lambda $ (plus $\mathbf{0} $) forms
 
 ### 4.1 Diagonalization
 
-If $\mathbf{A} $ has $ n $ linearly independent eigenvectors, then $ $\mathbf{A} = \mathbf{P}\mathbf{D}\mathbf{P}^{-1} $$
+If $\mathbf{A} $ has $  n $ linearly independent eigenvectors, then $ $\mathbf{A} = \mathbf{P}\mathbf{D}\mathbf{P}^{-1} $$
 
 where:
 -$\mathbf{P} = [\mathbf{v}_1 | \mathbf{v}_2 | \cdots | \mathbf{v}_n] $ (matrix of eigenvectors)
@@ -104,7 +104,7 @@ Used for solving linear ODE systems: $\dot{\mathbf{x}} = \mathbf{A}\mathbf{x} $.
 
 ### 4.4 Spectral Decomposition
 
-For a symmetric matrix $\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}\mathbf{Q}^T $ (since $\mathbf{Q}^{-1} = \mathbf{Q}^T $ for orthogonal matrices)$ $\mathbf{A} = \sum_{i=1}^n \lambda_i \mathbf{q}_i\mathbf{q}_i^T
+For a symmetric matrix $\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}\mathbf{Q}^T $ (since $\mathbf{Q}^{-1} = \mathbf{Q}^T $ for orthogonal matrices) $ $\mathbf{A} = \sum_{i=1}^n \lambda_i \mathbf{q}_i\mathbf{q}_i^T
 
 $$
 
@@ -125,9 +125,9 @@ Real symmetric matrices have exceptional properties:
 
 **Covariance matrix properties:**
 
-- Symmetric by definition ($\mathbf{C} = \mathbf{C}^T $)
+- Symmetric by definition ( $\mathbf{C} = \mathbf{C}^T $)
 
-- Positive semi-definite ($\lambda_i \geq 0 $)
+- Positive semi-definite ( $\lambda_i \geq 0 $)
 
 - Eigenvalues represent variance along principal directions
 
@@ -185,7 +185,7 @@ where $\mathbf{\Sigma}^+$ replaces each non-zero $\sigma_i $ with $ 1/\sigma_i $
 
 Given the $ 2 \times 2 $ covariance matrix $\mathbf{C} = \begin{pmatrix} \sigma_x^2 & \sigma_{xy} \\ \sigma_{xy} & \sigma_y^2 \end{pmatrix} $:
 
-- **Eigenvalues** $\lambda_1, \lambda_2 $ give the semi-axis lengths: $ a = \sqrt{\lambda_1} $, $ b = \sqrt{\lambda_2} $- **Eigenvectors** give the orientation of the principal axes (rotation angle)
+- **Eigenvalues** $\lambda_1, \lambda_2 $ give the semi-axis lengths: $  a = \sqrt{\lambda_1} $, $  b = \sqrt{\lambda_2} $- **Eigenvectors** give the orientation of the principal axes (rotation angle)
 
 - The error ellipse at confidence level $\alpha $ uses $ k_\alpha\sqrt{\lambda_i} $ (e.g.,$ k_{95\%} \approx 2.447 $ for 2D)
 

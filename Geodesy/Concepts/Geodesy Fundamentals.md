@@ -36,8 +36,8 @@ created: 2026-07-27
 
 | Sub-bidang | Topik Utama |
 |------------|-------------|
-| **Reference Ellipsoid** | [[Reference Ellipsoid]], [[GRS80]], [[WGS84]], flattening $f $, eccentricity $ e $ |
-| **Coordinate Systems** | [[Geodetic Coordinates]] ($\phi,\lambda,h $), [[Geocentric Cartesian ECEF]] ($ X,Y,Z $), [[Local ENU NEU]] |
+| **Reference Ellipsoid** | [[Reference Ellipsoid]], [[GRS80]], [[WGS84]], flattening $f $, eccentricity $  e $ |
+| **Coordinate Systems** | [[Geodetic Coordinates]] ( $\phi,\lambda,h $), [[Geocentric Cartesian ECEF]] ( $ X,Y,Z $), [[Local ENU NEU]] |
 | **Geodesic Problems** | Direct/inverse geodesic, [[Vincenty Formula]], [[GeographicLib]] |
 | **Map Projections** | [[Map Projection]], [[UTM]], [[Transverse Mercator]], [[Mercator]], TM3° (Indonesia) |
 | **Datum & Transformations** | [[Datum]], [[Horizontal Datum]], [[Datum Transformation]], [[Helmert Transformation]] |
@@ -47,7 +47,7 @@ created: 2026-07-27
 
 - **Geodetic ↔ Cartesian**:
 
-$ $ X = (N+h)\cos\phi\cos\lambda,\quad Y = (N+h)\cos\phi\sin\lambda,\quad Z = (N(1-e^2)+h)\sin\phi $$
+$ $  X = (N+h)\cos\phi\cos\lambda,\quad Y = (N+h)\cos\phi\sin\lambda,\quad Z = (N(1-e^2)+h)\sin\phi $$
 
 where $ N = \frac{a}{\sqrt{1-e^2\sin^2\phi}} $ (radius of curvature in prime vertical)
 
@@ -64,11 +64,11 @@ where $ N = \frac{a}{\sqrt{1-e^2\sin^2\phi}} $ (radius of curvature in prime ver
 | **Gravity Anomaly** | $\Delta g = g_P - \gamma_Q $ (Bouguer, free-air, isostatic) |
 | **Geoid** | $ W = W_0 $ (permukaan equipotensial $\approx $ MSL) |
 | **Geoid Undulation** | $ N = \frac{T}{\gamma} $ (Bruns formula) |
-| **Height Systems** | [[Orthometric Height]] $ H $, [[Ellipsoidal Height]] $ h $, [[Vertical Datum]] |
+| **Height Systems** | [[Orthometric Height]] $ H $, [[Ellipsoidal Height]] $  h $, [[Vertical Datum]] |
 
 **Key Formulae**:
 
-- **Bruns Formula**: $ N = \frac{T_P}{\gamma_P} $- **Stokes Integral**: $ N = \frac{R}{4\pi\gamma} \iint \Delta g \, S(\psi) \, d\sigma $- **Fundamental Eq. Physical Geodesy**: $\frac{\partial T}{\partial h} + \frac{2}{R}T = -\Delta g $ (Molodensky)
+- **Bruns Formula**: $ N = \frac{T_P}{\gamma_P} $- **Stokes Integral**: $  N = \frac{R}{4\pi\gamma} \iint \Delta g \, S(\psi) \, d\sigma $- **Fundamental Eq. Physical Geodesy**: $\frac{\partial T}{\partial h} + \frac{2}{R}T = -\Delta g $ (Molodensky)
 
 - **Normal Gravity (GRS80)**: $\gamma(\phi) = \gamma_e \frac{1+k\sin^2\phi}{\sqrt{1-e^2\sin^2\phi}} $---
 
@@ -103,7 +103,7 @@ where $ N = \frac{a}{\sqrt{1-e^2\sin^2\phi}} $ (radius of curvature in prime ver
 
 $ $\phi_{\text{astro}} = \phi_{\text{geod}} + \xi, \quad \lambda_{\text{astro}} = \lambda_{\text{geod}} + \frac{\eta}{\cos\phi} $$
 
-where $\xi, \eta $= deflection of vertical (DOV) dari $ T $.
+where $\xi, \eta $= deflection of vertical (DOV) dari $  T $.
 
 ---
 
@@ -126,7 +126,7 @@ where $\xi, \eta $= deflection of vertical (DOV) dari $ T $.
 | Model | Deskripsi | Parameter Utama |
 |-------|-----------|-----------------|
 | **Sphere** | Bola sempurna | $ R \approx 6371 \text{ km} $ |
-| **Ellipsoid of Revolution** | Elipsoid rotasi (oblate spheroid) | $ a $ (semi-major),$ b $ (semi-minor),$ f = \frac{a-b}{a} $, $ e^2 = 2f - f^2 $ |
+| **Ellipsoid of Revolution** | Elipsoid rotasi (oblate spheroid) | $ a $ (semi-major),$  b $ (semi-minor),$  f = \frac{a-b}{a} $, $ e^2 = 2f - f^2 $ |
 | **Geoid** | Permukaan equipotensial $ W=W_0 $ | $ N(\phi,\lambda) $— undulasi geoid |
 | **Topography** | Permukaan nyata bumi (daratan + laut) | DEM, DTM, DSM |
 | **Quasi-geoid** | Permukaan referensi tinggi normal | $\zeta $— height anomaly |
@@ -154,7 +154,7 @@ where $\xi, \eta $= deflection of vertical (DOV) dari $ T $.
 ### Jenis Koordinat
 | Sistem | Koordinat | Konversi Utama |
 |--------|-----------|----------------|
-| **Geodetic (Curvilinear)** | $\phi $ (lat),$\lambda $ (lon),$ h $ (ht) |$\leftrightarrow $ Cartesian |
+| **Geodetic (Curvilinear)** | $\phi $ (lat),$\lambda $ (lon),$  h $ (ht) |$\leftrightarrow $ Cartesian |
 | **Geocentric Cartesian (ECEF)** | $ X, Y, Z $|$\leftrightarrow $ Geodetic |
 | **Local Tangent Plane (ENU/NEU)** | $ E, N, U $ (atau $ N, E, U $) | Rotasi dari ECEF di titik asal |
 | **Projected (Grid)** | $ E, N $ (easting, northing) | Proyeksi dari geodetic (UTM, TM3) |
@@ -196,7 +196,7 @@ where $\xi, \eta $= deflection of vertical (DOV) dari $ T $.
 
 | Kategori | Rumus Kunci |
 |----------|-------------|
-| **Elipsoid** | $ N = \frac{a}{\sqrt{1-e^2\sin^2\phi}} $, $ M = \frac{a(1-e^2)}{(1-e^2\sin^2\phi)^{3/2}} $ |
+| **Elipsoid** | $ N = \frac{a}{\sqrt{1-e^2\sin^2\phi}} $, $  M = \frac{a(1-e^2)}{(1-e^2\sin^2\phi)^{3/2}} $ |
 | **Geodetic↔Cartesian** | $ X=(N+h)\cos\phi\cos\lambda,\; Y=(N+h)\cos\phi\sin\lambda,\; Z=(N(1-e^2)+h)\sin\phi $ |
 | **Geodesic (Vincenty)** | Iteratif: $\lambda \leftarrow L + (1-C)f\sin\alpha \dots $ |
 | **Height Systems** | $ h = H + N = H^N + \zeta $ |

@@ -38,17 +38,17 @@ Eksplorasi dan pengelolaan data vektor serta raster:
 ### Modul 2: Analisis Overlay
 Operasi spasial gabungan beberapa layer:
 
-- **Intersect** ($A \cap B $): potongan spasial dua layer
+- **Intersect** ( $A \cap B $): potongan spasial dua layer
 
-- **Union** ($ A \cup B $): penggabungan spasial
+- **Union** ( $ A \cup B $): penggabungan spasial
 
-- **Symmetrical Difference** ($ A \Delta B $): selisih spasial
+- **Symmetrical Difference** ( $ A \Delta B $): selisih spasial
 
 - **Clip** (potong layer dengan polygon batas area)
 
 - **Erase**: menghapus bagian overlay dari layer utama
 
-- Buffer zone: penghalusan jarak dari garis/point ($ d $ meter dari simpul)
+- Buffer zone: penghalusan jarak dari garis/point ( $ d $ meter dari simpul)
 
 - Proximity analysis: jarak terdekat ke titik layanan
 
@@ -59,7 +59,7 @@ Optimasi rute dan aksesibilitas menggunakan topologi jaringan:
 
 - **Shortest Path Analysis**: algoritma Dijkstra pada jaringan jalan
 
-$ $ d(v) = \min_{(u,v) \in E}[d(u) + w(u,v)]$ $
+$ $ d(v) = \min_{(u,v) \in E}[d(u) + w(u,v)] $ $
 
 - **Service Area**: waktu tempuh (isochrone) dari titik layanan
 

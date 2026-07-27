@@ -16,7 +16,7 @@ updated: 2026-07-27
 
 ### Snell's Law of Refraction
 
-$n_1 \sin\theta_1 = n_2 \sin\theta_2 $ $ | Medium | Refractive index $$ n $ |
+$n_1 \sin\theta_1 = n_2 \sin\theta_2 $ $ | Medium | Refractive index $ $ n $ |
 |--------|---------------------|
 | Vacuum | 1.0000 |
 | Air (15°C, 101.3 kPa) | 1.000293 |
@@ -37,8 +37,8 @@ Magnification: $ M = -d_i/d_o = h_i/h_o $### Mirrors
 | Surface | Formula |
 |---------|---------|
 | Flat mirror | Virtual image, same size, reversed |
-| Concave | $ \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $, $ f > 0 $ |
-| Convex | $ \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $, $ f < 0 $ |
+| Concave | $ \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $, $  f > 0 $ |
+| Convex | $ \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $, $  f < 0 $ |
 
 ---
 
@@ -48,7 +48,7 @@ Magnification: $ M = -d_i/d_o = h_i/h_o $### Mirrors
 
 When a line of sight passes through the atmosphere, light rays bend. The geodetic refraction coefficient
 
-$ k = \frac{R}{R_e} $ where $ R $ = radius of curvature of the light ray, $ R_e $ = Earth's radius of curvature.
+$ k = \frac{R}{R_e} $ where $  R $ = radius of curvature of the light ray, $ R_e $ = Earth's radius of curvature.
 
 **Typical values:**
 
@@ -67,7 +67,7 @@ $ k = \frac{R}{R_e} $ where $ R $ = radius of curvature of the light ray, $ R_e 
 
 $ $ \Delta h_{ref} \approx \frac{k}{2R} \cdot s^2
 
-$ where $ s $= sight distance. For $ k = 0.14 $ and $ s = 100 $ m: $ \Delta h_{ref} \approx \frac{0.14}{2 \times 6{,}371{,}000} \times 10{,}000 \approx 0.1 $ mm $
+$ where $  s $= sight distance. For $  k = 0.14 $ and $  s = 100 $ m: $ \Delta h_{ref} \approx \frac{0.14}{2 \times 6{,}371{,}000} \times 10{,}000 \approx 0.1 $ mm $
 
 **Rule of thumb:** Equal foresight and backsight distances cancel refraction.
 
@@ -121,7 +121,7 @@ For GNSS, the atmosphere is essentially non-dispersive at microwave frequencies 
 
 $ $ \delta = \frac{1.22\lambda}{D} $$
 
-where $ D $ = aperture diameter,$ \lambda $= wavelength. For $ \lambda = 550 $ nm and $ D = 40 $ mm: $ \delta \approx 1.7 $ arcsec.
+where $ D $ = aperture diameter,$ \lambda $= wavelength. For $ \lambda = 550 $ nm and $  D = 40 $ mm: $ \delta \approx 1.7 $ arcsec.
 
 **EDM prism:** Corner-cube reflector returns light along incident direction regardless of orientation (within ~30°).
 
@@ -164,7 +164,7 @@ where $ D $ = aperture diameter,$ \lambda $= wavelength. For $ \lambda = 550 $ n
 
 1. **Confusing refraction in light vs. radio:** Same physics, very different magnitude — optical refraction is much stronger.
 2. **Assuming refraction is always positive:** Temperature inversions cause negative (abnormal) refraction.
-3. **Ignoring elevation dependence:** Refraction mapping functions diverge at low elevations ($\theta < 10°$).
+3. **Ignoring elevation dependence:** Refraction mapping functions diverge at low elevations ( $\theta < 10°$).
 4. **Using constant $ k $ for all conditions:**$ k$ varies with time, weather, and terrain.
 5. **Mixing up group and phase refraction:** For GNSS, group delay and phase advance are equal magnitude, opposite sign.
 

@@ -23,7 +23,7 @@ $$ x(t) = A\cos(\omega t + \phi) $ $
 | Amplitude | $ A $ | m | Maximum displacement |
 | Angular frequency | $ \omega $ | rad/s | $ \omega = 2\pi f $ |
 | Frequency | $ f $ | Hz = 1/s | Cycles per second |
-| Period | $ T $ | s | $ T = 1/f = 2\pi/\omega $ |
+| Period | $ T $ | s | $  T = 1/f = 2\pi/\omega $ |
 | Phase | $ \phi $ | rad | Initial condition |
 
 **SHM differential equation:*
@@ -40,9 +40,9 @@ $$
 
 | Damping | Condition | Solution |
 |---------|-----------|----------|
-| Underdamped | $ \gamma < \omega_0 $ | $ x = e^{-\gamma t}(A\cos\omega_d t + B\sin\omega_d t) $ |
-| Critically damped | $ \gamma = \omega_0 $ | $ x = (A+Bt)e^{-\omega_0 t} $ |
-| Overdamped | $ \gamma > \omega_0 $ | $ x = Ae^{r_1 t} + Be^{r_2 t} $ |
+| Underdamped | $ \gamma < \omega_0 $ | $  x = e^{-\gamma t}(A\cos\omega_d t + B\sin\omega_d t) $ |
+| Critically damped | $ \gamma = \omega_0 $ | $  x = (A+Bt)e^{-\omega_0 t} $ |
+| Overdamped | $ \gamma > \omega_0 $ | $  x = Ae^{r_1 t} + Be^{r_2 t} $ |
 
 where $ \omega_d = \sqrt{\omega_0^2 - \gamma^2} $.
 
@@ -69,7 +69,7 @@ $ $ \frac{\partial^2 y}{\partial t^2} = v^2 \frac{\partial^2 y}{\partial x^2} $$
 
 Two waves of slightly different frequencies
 
-$ y = 2A\cos\left(\frac{\omega_1 - \omega_2}{2}t\right)\cos\left(\frac{\omega_1 + \omega_2}{2}t\right) $Beat frequency: $ f_{beat} = |f_1 - f_2| $### Doppler Effec
+$ y = 2A\cos\left(\frac{\omega_1 - \omega_2}{2}t\right)\cos\left(\frac{\omega_1 + \omega_2}{2}t\right) $ Beat frequency: $ f_{beat} = |f_1 - f_2| $### Doppler Effec
 t
 
 $ f_{obs} = f_0 \frac{v \pm v_{obs}}{v \mp v_{source}} $ $ **GNSS application:** Satellite motion shifts the received frequency. For GPS satellite velocity ~3.9 km/s $
@@ -168,7 +168,7 @@ peaks when $ \tau $ matches the code delay — used for ranging.
 
 ## Study Problems
 
-1. **Recall:** A mass-spring system has $ k = 100 $ N/m, $ m = 1 $ kg. Find $ \omega_0 $, $ T $, and $ f $. (Answer: $ \omega_0 = 10 $ rad/s, $ T = 0.628 $ s, $ f = 1.59 $ Hz.)
+1. **Recall:** A mass-spring system has $ k = 100 $ N/m, $  m = 1 $ kg. Find $ \omega_0 $, $  T $, and $  f $. (Answer: $ \omega_0 = 10 $ rad/s, $  T = 0.628 $ s, $  f = 1.59 $ Hz.)
 2. **Application:** A tidal record has 30 days at 60 s cadence. Can it resolve M₂ (12.42 h period) from S₂ (12.00 h period)? (Hint: compute Nyquist and frequency resolution.)
 3. **Derivation:** Derive the damped frequency $ \omega_d = \sqrt{\omega_0^2 - \gamma^2} $ from $ \ddot{x} + 2\gamma\dot{x} + \omega_0^2 x = 0$.
 4. **Real-world:** A GNSS signal at L1 propagates through the troposphere. The wet delay varies diurnally. The signal is sampled for 24 hours at 1 Hz. What's the lowest frequency you can resolve, and would you be able to see the diurnal (1 cycle/24h ≈ 116 μHz) component?
@@ -177,7 +177,7 @@ peaks when $ \tau $ matches the code delay — used for ranging.
 
 ## Common Mistakes
 
-1. **Confusing angular frequency $ \omega $ with frequency $ f $:** $ \omega = 2\pi f $, not $ \omega = f$.
+1. **Confusing angular frequency $ \omega $ with frequency $  f $:** $ \omega = 2\pi f $, not $ \omega = f$.
 2. **Sign in Doppler:** Approaching → higher frequency, receding → lower.
 3. **Confusing phase velocity and group velocity** in dispersive media.
 4. **Ignoring leakage** in DFT — always window spectral data unless the observation window is an integer multiple of the period.

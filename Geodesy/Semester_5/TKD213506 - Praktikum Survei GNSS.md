@@ -91,7 +91,7 @@ $ $## Modul 2: Perencanaan Observasi GNSS
 
 - **Konfigurasi**:
  - Elevation mask: $ 15^\circ $
- - Ionosphere: Ionosphere-free linear combination ($ LC $)
+ - Ionosphere: Ionosphere-free linear combination ( $ LC $)
  - Troposphere: Saastamoinen model + estimation
  - Ambiguity: Fix-and-hold (LAMBDA method)
 

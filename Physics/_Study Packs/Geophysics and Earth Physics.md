@@ -39,11 +39,11 @@ updated: 2026-07-27
 
 **Body Waves:**
 
-$v_P = \sqrt{\frac{K + \frac{4}{3}\mu}{\rho}}, \quad v_S = \sqrt{\frac{\mu}{\rho}} $ where $ K $ = bulk modulus,$ \mu $= shear modulus,$ \rho $ = density.
+$v_P = \sqrt{\frac{K + \frac{4}{3}\mu}{\rho}}, \quad v_S = \sqrt{\frac{\mu}{\rho}} $ where $  K $ = bulk modulus,$ \mu $= shear modulus,$ \rho $ = density.
 
 - **P-waves (compressional):** Longitudinal, fastest, travel through all media
 
-- **S-waves (shear):** Transverse, slower, **cannot** travel through liquids ($\mu = 0 $ for fluids)
+- **S-waves (shear):** Transverse, slower, **cannot** travel through liquids ( $\mu = 0 $ for fluids)
 
 **Velocity Ratio:*
 *
@@ -103,7 +103,7 @@ y
 
 $ $ \Delta g_{FA} = g_{\text{obs}} - \gamma_0 + 0.3086h
 
-$ Used in geoid determination (Bruns' formula $ N = \Delta g_{FA}/\gamma $).$
+$ Used in geoid determination (Bruns' formula $  N = \Delta g_{FA}/\gamma $).$
 
 ### Isostasy
 The principle that topographic loads are compensated by density variations at depth.
@@ -112,9 +112,9 @@ The principle that topographic loads are compensated by density variations at de
 
 $ $ h\rho_c = H(\rho_m - \rho_c) $$
 
-- Continental crust ($\rho_c \approx 2,700 $ kg/m³) has **root** $ H = h\rho_c/(\rho_m - \rho_c) \approx 5h $ (root is ~5× topographic height)
+- Continental crust ( $\rho_c \approx 2,700 $ kg/m³) has **root** $  H = h\rho_c/(\rho_m - \rho_c) \approx 5h $ (root is ~5× topographic height)
 
-- Oceanic crust ($\rho_c \approx 3,000 $ kg/m³) has **root** $ H \approx 3.5h $**Pratt Model:** Lateral density variations at fixed depth $ D $:
+- Oceanic crust ( $\rho_c \approx 3,000 $ kg/m³) has **root** $  H \approx 3.5h $**Pratt Model:** Lateral density variations at fixed depth $  D $:
 
 $ $
 
@@ -143,7 +143,7 @@ $$
 
 $ V = a\sum_{n=1}^{\infty}\sum_{m=0}^{n}\left(\frac{a}{r}\right)^{n+1}P_n^m(\cos\theta)[g_n^m\cos m\phi + h_n^m\sin m\phi] $$$
 
-### Main Field Parameters (2025)
+# ## Main Field Parameters (2025)
 | Parameter | Value |
 |-----------|-------|
 | $ B $ at equator | ~30 μT |
@@ -181,7 +181,7 @@ $ V = a\sum_{n=1}^{\infty}\sum_{m=0}^{n}\left(\frac{a}{r}\right)^{n+1}P_n^m(\cos
 ### Surface Heat Flo
 w
 
-$ q = -k\frac{dT}{dz} $ where $ k $ = thermal conductivity, $ dT/dz $= temperature gradient.
+$ q = -k\frac{dT}{dz} $ where $  k $ = thermal conductivity, $ dT/dz $= temperature gradient.
 
 **Measured values:**
 | Region | Heat Flow (mW/m²) |
@@ -199,7 +199,7 @@ $ $ \frac{dT}{dz} = \frac{q}{k} $$
 
 - Continental crust: ~25 K/km (typical)
 
-- Oceanic crust: ~10–15 K/km (higher $ k $, lower $ q $)
+- Oceanic crust: ~10–15 K/km (higher $ k $, lower $  q $)
 
 ### Heat Sources
 
@@ -216,10 +216,10 @@ where $ h_s $ = scale height (~10 km for crustal rocks).
 
 | Isotope | Half-life (Ga) | Contribution |
 |---------|----------------|-------------|
-| $^{238} $ U | 4.47 | ~40% |
-| $^{235} $ U | 0.70 | ~4% |
+| $^{238} $  U | 4.47 | ~40% |
+| $^{235} $  U | 0.70 | ~4% |
 | $^{232} $ Th | 14.05 | ~40% |
-| $^{40} $ K | 1.25 | ~16% |
+| $^{40} $  K | 1.25 | ~16% |
 
 ### Lithospheric Thermal Thickness
 
@@ -237,7 +237,7 @@ Geotherm crosses solidus → defines thermal lithosphere thickness (~100–250 k
 
 - **Slab pull:** Dense subducting plate pulls rest (dominant force, ~$ 10^{13} $ N/m)
 
-- **Ridge push:** Gravitational sliding from elevated ridge ($\sim 3 \times 10^{12} $ N/m)
+- **Ridge push:** Gravitational sliding from elevated ridge ( $\sim 3 \times 10^{12} $ N/m)
 
 - **Basal drag:** Coupling to mantle flow (can drive or resist)
 
@@ -248,7 +248,7 @@ Geotherm crosses solidus → defines thermal lithosphere thickness (~100–250 k
 
 $ $ \dot{\epsilon} = A\sigma^n \exp\left(-\frac{Q}{RT}\right)
 
-$ where $\dot{\epsilon} $ = strain rate,$ \sigma $= stress,$ n $≈ 3–4,$ Q $ = activation energy.$
+$ where $\dot{\epsilon} $ = strain rate,$ \sigma $= stress,$  n $≈ 3–4,$  Q $ = activation energy.$
 
 **Brittle failure — Byerlee's Law:**
 
@@ -256,7 +256,7 @@ $ $ \tau \approx 0.85\sigma_n \quad (\text{for } \sigma_n < 200 \text{ MPa})\tau
 
 $$
 
-### Plate Velocity and Heat Transport
+# ## Plate Velocity and Heat Transport
 
 - Plate velocity ~1–10 cm/yr
 
@@ -306,8 +306,8 @@ $$ - Complete isostatic compensation: $ \Delta g_B \approx 0 $ over long wavelen
 ---
 
 ## Problems
-1. Calculate P- and S-wave velocities for $ \rho = 3,300 $ kg/m³, $ K = 130 $ GPa,$ \mu = 75 $ GPa.
-2. Determine the Bouguer slab correction for a station at 1,000 m elevation on granite ($\rho = 2,670 $ kg/m³).
+1. Calculate P- and S-wave velocities for $ \rho = 3,300 $ kg/m³, $  K = 130 $ GPa,$ \mu = 75 $ GPa.
+2. Determine the Bouguer slab correction for a station at 1,000 m elevation on granite ( $\rho = 2,670 $ kg/m³).
 3. Estimate the depth of the Moho beneath an ocean using a Bouguer anomaly of $-30 $ mGal.
 4. Calculate the heat flow through the continental crust if $ k = 2.5 $ W/(m·K) and $ dT/dz = 25 $ K/km.
 5. Compare slab pull and ridge push forces for a subducting plate with density contrast 50 kg/m³.

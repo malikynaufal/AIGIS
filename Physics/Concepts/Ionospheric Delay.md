@@ -64,7 +64,7 @@ $ $ \nabla\times\vec{E} = -\frac{\partial\vec{B}}{\partial t}, \quad \nabla\time
 $ $ n^2 = 1 - \frac{X}{1 - \frac{Y_T}{2} \pm \sqrt{Y_T^2/4 + X^2}} $$
 
 where:
-- $ X = \left(\frac{f_p}{f}\right)^2 = \frac{\omega_p^2}{\omega^2} = \frac{N_e e^2}{m_e \epsilon_0 \omega^2} $- $ Y = \frac{f_c}{f} = \frac{eB_0}{m_e \omega} $- $ f_c $ = cyclotron frequency ≈ 1.4 MHz at Earth's surface (varies with $ B $)
+- $ X = \left(\frac{f_p}{f}\right)^2 = \frac{\omega_p^2}{\omega^2} = \frac{N_e e^2}{m_e \epsilon_0 \omega^2} $- $  Y = \frac{f_c}{f} = \frac{eB_0}{m_e \omega} $- $ f_c $ = cyclotron frequency ≈ 1.4 MHz at Earth's surface (varies with $  B $)
 
 - $+$ for R-wave (right-hand),$-$ for L-wave (left-hand)
 
@@ -78,9 +78,9 @@ This is the **cold plasma approximation** used for first-order GNSS calculations
 
 ## 3. Refractive Index and Phase/Group Velocity
 
-### First-Order Refractive Index ($ B=0 $)
+### First-Order Refractive Index ( $ B=0 $)
 
-$ $
+$ $ 
 
 n = \sqrt{1 - \frac{f_p^2}{f^2}} \approx 1 - \frac{f_p^2}{2f^2} \quad \text{(for } f \gg f_p\text{)
 }
@@ -94,11 +94,11 @@ v_p = \frac{c}{n} > c \quad \text{(phase leads — superluminal)}v_g = c \cdot n
 
 v_p \cdot v_g = c^2 $$
 
-### Why Code Is Delayed But Phase Is Advanced
+# ## Why Code Is Delayed But Phase Is Advanced
 
-- The **carrier phase** propagates at $ v_p = c/n $; since $ n < 1 $, the phase front moves faster than $ c $→ carrier phase is **advanced** relative to vacuum.
+- The **carrier phase** propagates at $ v_p = c/n $; since $  n < 1 $, the phase front moves faster than $  c $→ carrier phase is **advanced** relative to vacuum.
 
-- The **modulation/code** travels at $ v_g = cn $; since $ n < 1 $, code information lags → code pseudorange is **delayed** relative to vacuum.
+- The **modulation/code** travels at $ v_g = cn $; since $  n < 1 $, code information lags → code pseudorange is **delayed** relative to vacuum.
 
 - Both effects stem from the same plasma, but one gives "advance" and the other "delay."
 
@@ -124,9 +124,9 @@ The excess phase path is
 
 $ $ \Delta\phi = \omega\left(\frac{1}{v_g} - \frac{1}{c}\right) \cdot \text{path} = -\omega(1-n) \int \frac{ds}{c} $$
 
-Converting to range $ $ I = -\lambda \frac{\Delta\phi}{2\pi} = \frac{40.3}{f^2} \int N_e \, ds = \frac{40.3}{f^2}\text{TEC} $$
+Converting to range $ $  I = -\lambda \frac{\Delta\phi}{2\pi} = \frac{40.3}{f^2} \int N_e \, ds = \frac{40.3}{f^2}\text{TEC} $$
 
-### Delay Per TECU at GNSS Frequencies
+# ## Delay Per TECU at GNSS Frequencies
 
 | Frequency | Band | Wavelength | Delay per TECU |
 |-----------|------|------------|----------------|
@@ -156,12 +156,12 @@ n
 
 $ P_{\text{IF}} = \frac{f_1^2 P_1 - f_2^2 P_2}{f_1^2 - f_2^2} $$$
 
-### Phase Combinatio
+# ## Phase Combinatio
 n
 
 $ $ \phi_{\text{IF}} = \frac{f_1^2 \phi_1 - f_2^2 \phi_2}{f_1^2 - f_2^2} $$
 
-### Residual Error
+# ## Residual Error
 
 - Higher-order terms: ~1–2% of TEC
 
@@ -189,7 +189,7 @@ $$ ---
 ### Magnetic Field: $ f_p $ vs $ f_c $
 When the Earth's magnetic field ( $ B_0 \approx 50 \,\mu $ T) is included:
 
-$ n_{\pm}^2 = 1 - X \pm \frac{XY}{2} $ where $ Y = f_c/f $. The $+ $ and $-$ correspond to left- and right-hand circular polarization. The difference between the two polarizations is the **Faraday rotation**.
+$ n_{\pm}^2 = 1 - X \pm \frac{XY}{2} $ where $  Y = f_c/f $. The $+ $ and $-$ correspond to left- and right-hand circular polarization. The difference between the two polarizations is the **Faraday rotation**.
 
 ### Second-Order Correction (Geomagnetic
 )
@@ -346,7 +346,7 @@ During major geomagnetic storms:
 ## 9. Ionospheric Scintillation
 
 ### What is Scintillation?
-Rapid fluctuations in signal amplitude and phase caused by small-scale irregularities in electron density ($\delta N_e/N_e \sim 0.1 $–1 at scales ~100 m).
+Rapid fluctuations in signal amplitude and phase caused by small-scale irregularities in electron density ( $\delta N_e/N_e \sim 0.1 $–1 at scales ~100 m).
 
 ### Occurrence
 
@@ -397,7 +397,7 @@ Rapid fluctuations in signal amplitude and phase caused by small-scale irregular
 ## Problems
 1. Compute the first-order ionospheric delay at L1 for TEC = 100 TECU at the equator.
 2. Derive the ionosphere-free combination from $ P_1 $, $ P_2 $, $ f_1 $, $ f_2 $ (first principles).
-3. Calculate TEC from $ P_1 = 21,500,000 $ m, $ P_2 = 21,503,000 $ m at L1/L2.
+3. Calculate TEC from $ P_1 = 21,500,000 $ m, $ P_2 = 21,503,000 $  m at L1/L2.
 4. Explain why phase advances while code is delayed — trace the physics from plasma frequency.
 5. Estimate the second-order correction for L1 at mid-latitudes (assume $ B_\parallel = 40 \,\mu $ T, $ N_e = 10^{12}$ m⁻³, path 350 km).
 6. Compare Klobuchar vs. IGS GIM performance: explain the 50% removal limitation of Klobuchar.

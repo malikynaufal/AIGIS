@@ -13,15 +13,15 @@ updated: 2026-07-27
 
 The orthometric height of a point $ P $ is
 
-$ $ H = \frac{\overline{W}_0 - \overline{W}_P}{\overline{g}}$$
+$ $  H = \frac{\overline{W}_0 - \overline{W}_P}{\overline{g}}$$
 
-where $\overline{W}_0 $ is the geoid potential,$\overline{W}_P $ is the actual gravity potential at $ P $, and $\overline{g} $ is the mean gravity along the plumb line between geoid and point.
+where $\overline{W}_0 $ is the geoid potential,$\overline{W}_P $ is the actual gravity potential at $  P $, and $\overline{g} $ is the mean gravity along the plumb line between geoid and point.
 
 In practice
 
-$ $ H = h - N $$
+$ $  H = h - N $$
 
-where $ h $ is the [[Ellipsoidal Height]] from [[GNSS]] and $ N $ is the [[Geoid Undulation]] from a geoid model.
+where $ h $ is the [[Ellipsoidal Height]] from [[GNSS]] and $  N $ is the [[Geoid Undulation]] from a geoid model.
 
 ## Determination Methods
 
@@ -59,14 +59,14 @@ The indirect method used today in most surveys:
 
 The most rigorous definition accounts for the actual gravity field
 
-$ $ H = \frac{C}{\overline{g}}, \quad C = W_0 - W_P = \int_{0}^{H} g\,dH $$
+$ $  H = \frac{C}{\overline{g}}, \quad C = W_0 - W_P = \int_{0}^{H} g\,dH $$
 
 where $ C $ is the **geopotential number** and $\overline{g} $ is the mean gravity along the plumb line. This is the approach used in the International Height Reference System (IHRS).
 
 ## Relationship Between Height
 s
 
-$ $ h = H + N $$
+$ $  h = H + N $$
 
 | Symbol | Name | Reference Surface |
 |--------|------|-------------------|
@@ -96,18 +96,18 @@ $ $ h = H + N $$
 
 ## Worked Example
 
-**Problem:** A GNSS survey at a building site gives ellipsoidal height $ h = 243.176 $ m. Using the national geoid model, the geoid undulation at the site is $ N = 41.528 $ m. What is the orthometric height for construction plans?
+**Problem:** A GNSS survey at a building site gives ellipsoidal height $ h = 243.176 $ m. Using the national geoid model, the geoid undulation at the site is $  N = 41.528 $ m. What is the orthometric height for construction plans?
 
 **Solution:*
 *
 
-$ $ H = h - N = 243.176 - 41.528 = 201.648\ \text{m}$$
+$ $  H = h - N = 243.176 - 41.528 = 201.648\ \text{m}$$
 
 This 201.65 m is the value to put on engineering drawings. If the construction crew uses a level (spirit leveling), they will measure 201.65 m from the site benchmark, consistent with the GNSS result.
 
 ## The Orthometric Height Dilemma in GNSS
 
-GNSS gives $ h $ but engineers need $ H $. The conversion requires a geoid model. Key points:
+GNSS gives $ h $ but engineers need $  H $. The conversion requires a geoid model. Key points:
 
 1. **If the geoid model is wrong by 10 cm**, $ H $ is wrong by 10 cm — even with perfect GNSS.
 2. **Local benchmarks** (tide gauge connections) anchor the geoid model.

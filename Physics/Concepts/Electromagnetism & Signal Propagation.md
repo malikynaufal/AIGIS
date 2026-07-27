@@ -34,7 +34,7 @@ $ $ \nabla^2 \mathbf{E} = \mu_0\varepsilon_0 \frac{\partial^2 \mathbf{E}}{\parti
 
 $ c = \frac{1}{\sqrt{\mu_0\varepsilon_0}} \approx 299{,}792{,}458\ \text{m/s} $$$
 
-### Plane Wave Solutio
+# ## Plane Wave Solutio
 n
 
 $ $ \mathbf{E}(\mathbf{r}, t) = \mathbf{E}_0 \exp[i(\mathbf{k} \cdot \mathbf{r} - \omega t)]
@@ -46,7 +46,7 @@ $$
 | Wave vector | $ \mathbf{k} $ | $ |\mathbf{k}| = \frac{2\pi}{\lambda} = \frac{\omega}{c} $ |
 | Angular frequency | $ \omega $ | $ \omega = 2\pi f $ |
 | Wavelength | $ \lambda $ | $ \lambda = c/f $ |
-| Phase velocity | $ v_p $ | $ v_p = c/n $ (in medium with index $ n $) |
+| Phase velocity | $ v_p $ | $ v_p = c/n $ (in medium with index $  n $) |
 
 ### Refraction in Media
 
@@ -89,11 +89,11 @@ For GPS: $ $ f_1 = 1575.42 $ MHz, $ f_2 = 1227.60 $ MHz $
 
 **Carrier frequencies (L-band):**
 
-- L1: 1575.42 MHz ($\lambda \approx 19.05 $ cm)
+- L1: 1575.42 MHz ( $\lambda \approx 19.05 $ cm)
 
-- L2: 1227.60 MHz ($\lambda \approx 24.42 $ cm)
+- L2: 1227.60 MHz ( $\lambda \approx 24.42 $ cm)
 
-- L5: 1176.45 MHz ($\lambda \approx 25.48 $ cm)
+- L5: 1176.45 MHz ( $\lambda \approx 25.48 $ cm)
 
 **Multipath error:**
 If direct signal combines with reflected signal
@@ -116,7 +116,7 @@ $$
 
 $ $ \Phi = \lambda N + \rho + c\delta_{rx} - c\delta_{sat} - \delta_{iono} + \delta_{trop} + \varepsilon_\Phi
 
-$ where $ N $ is the integer ambiguity (key to centimeter-level positioning).$
+$ where $  N $ is the integer ambiguity (key to centimeter-level positioning).$
 
 ### Faraday Rotation in Ionosphere
 
@@ -162,7 +162,7 @@ This affects signal reception quality and is used in geomagnetic studies.
 ## Study Problems
 
 1. **Recall:** Compute the GPS L1 wavelength. How many wavelengths fit in 1 km?
-2. **Application:** A GPS dual-frequency receiver measures $ \rho_1 = 20,000,000.150 $ m and $\rho_2 = 20,000,000.430 $ m. Compute the ionosphere-free range and the ionospheric delay at L1.
+2. **Application:** A GPS dual-frequency receiver measures $ \rho_1 = 20,000,000.150 $  m and $\rho_2 = 20,000,000.430 $ m. Compute the ionosphere-free range and the ionospheric delay at L1.
 3. **Derivation:** Show that the speed of an EM wave in vacuum is $c \approx 3 \times 10^8 $ m/s using $ \mu_0 = 4\pi \times 10^{-7} $ H/m and $\varepsilon_0 = 8.854 \times 10^{-12} $ F/m.
 4. **Real-world:** During a solar storm, TEC increases by a factor of 10. What is the new ionospheric delay at L1 for a zenith signal? What positioning error does this introduce?
 

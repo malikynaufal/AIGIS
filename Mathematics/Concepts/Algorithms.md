@@ -13,7 +13,7 @@ The study of algorithms is fundamentally about **efficiency**: given a problem, 
 
 ## Algorithmic Complexity & Big-O Notation
 
-**Big-O notation** ($O(\cdot) $) describes the upper bound of an algorithm's growth rate as the input size $ n $ grows. Formally,$ f(n) = O(g(n)) $ means there exist positive constants $ c $ and $ n_0 $ such that $ 0 \le f(n) \le c \cdot g(n) $ for all $ n \ge n_0 $.
+**Big-O notation** ( $O(\cdot) $) describes the upper bound of an algorithm's growth rate as the input size $  n $ grows. Formally,$ f(n) = O(g(n)) $ means there exist positive constants $  c $ and $ n_0 $ such that $ 0 \le f(n) \le c \cdot g(n) $ for all $  n \ge n_0 $.
 
 ### Common complexity classes (Kelas kompleksitas umum)
 
@@ -28,7 +28,7 @@ The study of algorithms is fundamentally about **efficiency**: given a problem, 
 | $ O(2^{n}) $ | Exponential | Brute-force TSP (traveling salesman) | Waktu eksponensial |
 | $ O(n!) $ | Factorial | Permutation enumeration | Waktu faktorial |
 
-**Notasi Omega** ($\Omega $) gives the lower bound; **Theta** ($\Theta $) gives a tight bound. For instance:
+**Notasi Omega** ( $\Omega $) gives the lower bound; **Theta** ( $\Theta $) gives a tight bound. For instance:
 
 - Merge sort is $\Theta(n \log n) $— always this efficient.
 
@@ -115,7 +115,7 @@ Numerically more stable than normal equations
 
 $ $\mathbf{A} = \mathbf{Q}\mathbf{R} \implies \hat{\mathbf{x}} = \mathbf{R}^{-1}\mathbf{Q}^T\mathbf{L} $$
 
-## Spatial / Geospatial Algorithms (Algoritma Spasial)
+# # Spatial / Geospatial Algorithms (Algoritma Spasial)
 
 | Algorithm | Complexity | Use case | Bahasa Indonesia |
 |-----------|-----------|----------|------------------|

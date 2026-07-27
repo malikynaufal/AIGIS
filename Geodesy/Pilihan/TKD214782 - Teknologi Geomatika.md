@@ -31,7 +31,7 @@ $$
 
 $$
 
-### 3. Cloud Geospatial
+# ## 3. Cloud Geospatial
 - AWS/Google Cloud for big data
 - XPlanet, Planet.com, Copernicus Data
 - FOSS4G (Free and Open Source for Geospatial)

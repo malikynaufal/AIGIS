@@ -160,7 +160,7 @@ Direct positioning of boundary points using GNSS:
 #### Trapezoidal Rule (Koordinat Method
 )
 
-$ $
+$ $ 
 
 A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i) \right|$ $
 
@@ -174,7 +174,7 @@ A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i) \r
 #### Measured Distance Metho
 d
 
-$ $ A = \frac{1}{2} \sum_{i=1}^{n} d_i \cdot \sin\alpha_i $ $
+$ $  A = \frac{1}{2} \sum_{i=1}^{n} d_i \cdot \sin\alpha_i $ $
 
 where $ d_i $ is the measured distance and $\alpha_i $ is the internal angle.
 

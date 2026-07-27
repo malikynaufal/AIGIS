@@ -608,7 +608,7 @@ From the basic observation equation
 
 $$\rho_i = \sqrt{(X_i - X_u)^2 + (Y_i - Y_u)^2 + (Z_i - Z_u)^2} + c \cdot \delta t_u + \varepsilon_i
 
-$ $ A clock error of δt directly causes a range error of c·δt. But the effect on **position** depends on **satellite geometry**.
+$ $  A clock error of δt directly causes a range error of c·δt. But the effect on **position** depends on **satellite geometry**.
 
 ### 7.2 Satellite Geometry — GDOP
 

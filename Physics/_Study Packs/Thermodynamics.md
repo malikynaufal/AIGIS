@@ -13,7 +13,7 @@ _Expanded: Statistical Mechanics Basics
 ## 1. The Four Laws (Review)
 
 ### Zeroeth Law (Thermal Equilibrium)
-If $A \\leftrightarrow B $ and $ B \\leftrightarrow C $, then $ A \\leftrightarrow C $. Temperature is a state function.
+If $A \\leftrightarrow B $ and $  B \\leftrightarrow C $, then $  A \\leftrightarrow C $. Temperature is a state function.
 
 ### First Law (Energy Conservation)
 
@@ -31,10 +31,10 @@ $ $ S(T=0) = 0 \\quad \\text{(perfect crystal)} $$
 
 | Potential | Definition | Natural Variables | Use |
 |-----------|------------|-------------------|-----|
-| Internal Energy $ U $ | $ U = TS - PV + \\mu N $ | $ (S, V, N) $ | Fundamental |
-| Enthalpy $ H $ | $ H = U + PV $ | $ (S, P, N) $ | Constant $ P $ |
-| Helmholtz $ F $ | $ F = U - TS $ | $ (T, V, N) $ | Constant $ T,V $ |
-| Gibbs $ G $ | $ G = H - TS $ | $ (T, P, N) $ | Constant $ T,P $ |
+| Internal Energy $ U $ | $  U = TS - PV + \\mu N $ | $ (S, V, N) $ | Fundamental |
+| Enthalpy $ H $ | $  H = U + PV $ | $ (S, P, N) $ | Constant $  P $ |
+| Helmholtz $ F $ | $  F = U - TS $ | $ (T, V, N) $ | Constant $ T,V $ |
+| Gibbs $ G $ | $  G = H - TS $ | $ (T, P, N) $ | Constant $ T,P $ |
 
 ### Maxwell Relations (from exact differentials)
 
@@ -70,7 +70,7 @@ $ $ \\eta_{\\text{Carnot}} = 1 - \\frac{T_C}{T_H}
 
 $$
 
-### Other Cycles
+# ## Other Cycles
 
 | Cycle | Description | Efficiency |
 |-------|-------------|------------|
@@ -91,10 +91,10 @@ $ $ \\Omega(E) = \\text{number of microstates at energy } E
 
 S = k_B \\ln \\Omega(E) $$
 
-### Canonical Ensemble
+# ## Canonical Ensemble
 System in thermal contact with heat bath at temperature $ T $:
 
-$ Z = \\sum_i e^{-\\beta E_i}, \\quad \\beta = \\frac{1}{k_B T} $ $ **Partition function $$ Z $ $
+$ Z = \\sum_i e^{-\\beta E_i}, \\quad \\beta = \\frac{1}{k_B T} $ $ **Partition function $ $ Z $ $
 
 encodes all thermodynamic information:**$
 - $ F = -k_B T \\ln Z $

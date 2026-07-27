@@ -32,7 +32,7 @@ $$
 
 $$
 
-### 3. Hazard Types
+# ## 3. Hazard Types
 
 | Hazard | Geodetic Monitoring | Example (Indonesia) |
 |--------|---------------------|---------------------|

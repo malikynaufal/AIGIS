@@ -61,7 +61,7 @@ $$
 
 $$
 
-### 4. Indonesian Case Studies
+# ## 4. Indonesian Case Studies
 
 | Region | Tectonics | GPS Velocity |
 |--------|-----------|-------------|

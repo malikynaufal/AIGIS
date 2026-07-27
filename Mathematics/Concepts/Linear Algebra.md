@@ -18,7 +18,7 @@ Linear algebra studies vectors, matrices, and linear transformations. It is the 
 
 ### 1.1 Definition
 
-A vector space $V $ over field $ F $ satisfies:
+A vector space $V $ over field $  F $ satisfies:
 1. Closure under addition: $\mathbf{u} + \mathbf{v} \in V $ 2. Closure under scalar multiplication: $ c\mathbf{u} \in V $ 3. Associativity, commutativity of addition
 4. Existence of zero vector and inverses
 5. Distributive laws, compatibility
@@ -55,7 +55,7 @@ $ $\det\begin{bmatrix} a & b \\ c & d \end{bmatrix} = ad - bc
 
 $$
 
-### 3.2 Cofactor Expansio
+# ## 3.2 Cofactor Expansio
 n
 
 $ $\det(A) = \sum_{j=1}^n (-1)^{i+j} a_{ij}M_{ij} $$
@@ -64,7 +64,7 @@ where $ M_{ij} $ is the $ (n-1)\times(n-1) $ minor.
 
 ### 3.3 Properties
 
--$\det(A^T) = \det(A) $-$\det(cA) = c^n\det(A) $-$ A $ invertible $\iff \det(A) \neq 0 $### 3.4 Geometric Interpretation $|\det(A)| $= factor by which $ A $ scales $ n $-dimensional volume.
+-$\det(A^T) = \det(A) $-$\det(cA) = c^n\det(A) $-$  A $ invertible $\iff \det(A) \neq 0 $### 3.4 Geometric Interpretation $|\det(A)| $= factor by which $  A $ scales $  n $-dimensional volume.
 
 ## 4. Eigenvalues and Eigenvectors
 
@@ -87,14 +87,16 @@ For each $\lambda $, solve $ (A - \lambda I)\mathbf{v} = \mathbf{0} $### 4.4 Pro
 
 If $ A $ is symmetric with eigenvalues $\lambda_i $ and orthonormal eigenvectors $\mathbf{q}_i $:
 
-$ $ A = Q\Lambda Q^T = \sum_{i=1}^n \lambda_i \mathbf{q}_i\mathbf{q}_i^T $$## 5. Matrix Decompositions
+$ $  A = Q\Lambda Q^T = \sum_{i=1}^n \lambda_i \mathbf{q}_i\mathbf{q}_i^T $$
+
+# # 5. Matrix Decompositions
 
 ### 5.1 LU Decompositio
 n
 
-$ $ A = LU $$
+$ $  A = LU $$
 
-where $ L $ is lower triangular,$ U $ is upper triangular.
+where $ L $ is lower triangular,$  U $ is upper triangular.
 
 **Use**: Solving $ A\mathbf{x} = \mathbf{b} $ efficiently.
 
@@ -102,9 +104,9 @@ where $ L $ is lower triangular,$ U $ is upper triangular.
 
 ### 5.2 QR Decomposition
 
-$ $ A = QR $$
+$ $  A = QR $$
 
-where $ Q $ is orthogonal ($ Q^TQ = I $),$ R $ is upper triangular.
+where $ Q $ is orthogonal ( $ Q^TQ = I $),$  R $ is upper triangular.
 
 **Construction**: Gram-Schmidt process or Householder reflections.
 
@@ -113,13 +115,13 @@ where $ Q $ is orthogonal ($ Q^TQ = I $),$ R $ is upper triangular.
 ### 5.3 Singular Value Decomposition (SVD
 )
 
-$ $ A = U\Sigma V^T $$
+$ $  A = U\Sigma V^T $$
 
 where:
--$ U $: $ m \times m $ orthogonal matrix (left singular vectors)
--$\Sigma $: $ m \times n $ diagonal (singular values $\sigma_1 \geq \sigma_2 \geq \cdots $)
+-$ U $: $  m \times m $ orthogonal matrix (left singular vectors)
+-$\Sigma $: $  m \times n $ diagonal (singular values $\sigma_1 \geq \sigma_2 \geq \cdots $)
 
-- $ V $: $ n \times n $ orthogonal matrix (right singular vectors)
+- $ V $: $  n \times n $ orthogonal matrix (right singular vectors)
 
 **Properties**:
 -$\sigma_i = \sqrt{\lambda_i(A^TA)} $-$ A^TA = V\Sigma^TU^TV\Sigma V^T = V(\Sigma^T\Sigma)V^T $- Rank = number of nonzero singular values
@@ -130,7 +132,7 @@ where:
 
 For symmetric positive definite $ A $:
 
-$ $ A = LL^T $$
+$ $  A = LL^T $$
 
 where $ L $ is lower triangular.
 
@@ -145,14 +147,16 @@ $ $
 A^TA\hat{\mathbf{x}} = A^T\mathbf{b
 }
 
-$$### 6.2 Moore-Penrose Pseudoinverse $ $ A^+ = V\Sigma^+U^T $$
+$$
+
+# ## 6.2 Moore-Penrose Pseudoinverse $ $ A^+ = V\Sigma^+U^T $$
 
 where $\Sigma^+$ has reciprocals of nonzero singular values
 .
 
 $ $\hat{\mathbf{x}} = A^+\mathbf{b} $$
 
-## 7. Practice Problems
+# # 7. Practice Problems
 
 ### Problem 1
 Find eigenvalues of $ A = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} $**Solution**:
@@ -162,10 +166,10 @@ $ $\det(A-\lambda I) = (2-\lambda)^2 - 1 = \lambda^2 - 4\lambda + 3 = (\lambda-1
 $$
 
 $\lambda_1 = 1 $, $\lambda_2 = 3 $ Eigenvectors: $\mathbf{v}_1 = (-1,1)^T $, $\mathbf{v}_2 = (1,1)^T $### Problem 2
-Compute LU decomposition of $ A = \begin{bmatrix} 2 & 1 \\ 6 & 4 \end{bmatrix} $**Solution**: $ R_2 \to R_2 - 3R_1 $: $ U = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix} $, $ L = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix} $ Check: $ LU = \begin{bmatrix} 2 & 1 \\ 6 & 4 \end{bmatrix} $✓
+Compute LU decomposition of $ A = \begin{bmatrix} 2 & 1 \\ 6 & 4 \end{bmatrix} $**Solution**: $ R_2 \to R_2 - 3R_1 $: $  U = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix} $, $  L = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix} $ Check: $ LU = \begin{bmatrix} 2 & 1 \\ 6 & 4 \end{bmatrix} $✓
 
 ### Problem 3
-Find the SVD of $ A = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} $**Solution**: Already diagonal, so $ U = I $, $\Sigma = A $, $ V = I $
+Find the SVD of $ A = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} $**Solution**: Already diagonal, so $  U = I $, $\Sigma = A $, $  V = I $
 
 $ A = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} $## 8. Where Geodesy Uses This
 

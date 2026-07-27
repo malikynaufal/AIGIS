@@ -52,7 +52,7 @@ where:
 -$ c $= speed of light
 -$ dt $= satellite clock error
 -$ dT $= receiver clock error
--$\lambda_i $= wavelength of frequency $ i $-$ N_i $= integer ambiguity
+-$\lambda_i $= wavelength of frequency $  i $-$ N_i $= integer ambiguity
 -$ I_i $= ionospheric delay (negative for phase)
 -$ T_i $= tropospheric delay
 -$\epsilon_i $= multipath and noise
