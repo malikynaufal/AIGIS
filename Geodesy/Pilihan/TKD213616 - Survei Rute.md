@@ -16,15 +16,15 @@ Route surveying is the branch of engineering surveying concerned with the design
 ## Key Topics
 
 ### 1. Horizontal Alignment
-- **Simple Curve:** $T = R\tan(\Delta/2)$, $L = R\Delta\frac{\pi}{180}$
+- **Simple Curve:** $T = R\tan(\Delta/2) $, $ L = R\Delta\frac{\pi}{180}$
 - **Compound/Reverse Curves:** Multiple simple curves
 - **Spiral Transition:** Linear change in curvature (Clothoid)
 
- $$ l = \frac{R \cdot s}{c}, \quad \text{spiral angle } \phi = \frac{l^2}{2RL}$$
+ $ $ l = \frac{R \cdot s}{c}, \quad \text{spiral angle } \phi = \frac{l^2}{2RL}$$
 
 ### 2. Vertical Alignment
-- **Parabolic curves:** $y = ax^2 + bx + c$
-- **Grades:** $g_1, g_2$, rate of change $r = \frac{g_2 - g_1}{L}$
+- **Parabolic curves:** $ y = ax^2 + bx + c $
+- **Grades:** $ g_1, g_2 $, rate of change $ r = \frac{g_2 - g_1}{L}$
 
 ### 3. Surveying Techniques
 - Preliminary surveys (topographic)
@@ -33,7 +33,7 @@ Route surveying is the branch of engineering surveying concerned with the design
 - GNSS-RTK for initial routing
 
 ## Study Problems
-1. Calculate the tangent length of a curve with radius $R = 500$ m and deflection $\Delta = 45°$.
+1. Calculate the tangent length of a curve with radius $R = 500 $ m and deflection $\Delta = 45°$.
 2. Explain the use of clothoid spirals.
 
 ---

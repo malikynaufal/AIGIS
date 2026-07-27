@@ -29,7 +29,7 @@ $$
 \end{equation}
 \text{(Coulomb's law)}
 
-$$
+$ $
 
 $$
 
@@ -38,7 +38,7 @@ $$
 \end{equation}
 \text{(Gauss's law, differential form)}
 
-$$
+$ $
 
 $$
 
@@ -47,7 +47,7 @@ $$
 \end{equation}
 \text{(Gauss's law, integral form)}
 
-$$
+$ $
 
 $$
 
@@ -56,7 +56,7 @@ $$
 \end{equation}
 \text{(Electric potential relation)}
 
-$$
+$ $
 
 $$
 

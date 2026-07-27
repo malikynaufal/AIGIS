@@ -234,7 +234,7 @@ flowchart TD
 
 ### Equations
 
-- **Wave Equation**: $ \nabla^2 \psi - \frac{1}{c^2}\frac{\partial^2\psi}{\partial t^2} = 0$- **Sagnac Effect**: $ \Delta t = \frac{4\omega A}{c^2} $- **Iono Delay**: $ \Delta t_{iono} \propto \frac{f^2}{\cos^2 \text{ (elevation) }}$
+- **Wave Equation**: $ \nabla^2 \psi - \frac{1}{c^2}\frac{\partial^2\psi}{\partial t^2} = 0 $- **Sagnac Effect**: $ \Delta t = \frac{4\omega A}{c^2} $- **Iono Delay**: $ \Delta t_{iono} \propto \frac{f^2}{\cos^2 \text{ (elevation) }}$
 
 ---
 

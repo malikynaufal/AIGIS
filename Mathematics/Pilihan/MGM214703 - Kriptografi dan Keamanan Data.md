@@ -33,13 +33,15 @@ Kriptografi (cryptography) adalah ilmu dan seni mengamankan informasi dengan men
 
 Sistem kriptografi dasar:
 
-$$ P \xrightarrow{\text{Encrypt}(K_e)} C \xrightarrow{\text{Decrypt}(K_d)} P $$ di mana$ P $= plaintext (pesan asli),$C$ = ciphertext (terenkripsi),$K_e$ = kunci enkripsi,$K_d$ = kunci dekripsi.
+$$ P \xrightarrow{\text{Encrypt}(K_e)} C \xrightarrow{\text{Decrypt}(K_d)} P $ $
+
+di mana $ P $= plaintext (pesan asli),$ C $ = ciphertext (terenkripsi),$ K_e $ = kunci enkripsi,$ K_d$ = kunci dekripsi.
 
 ### 1.2 Klasifikasi Berdasarkan Kunci
 
 | Aspek | Simetris | Asimetris (Publik) |
 |-------|---------|---------------------|
-| **Jumlah kunci** | 1 kunci ($K_e = K_d$) | 2 kunci ($K_e \neq K_d$) |
+| **Jumlah kunci** | 1 kunci ($K_e = K_d $) | 2 kunci ($ K_e \neq K_d$) |
 | **Kecepatan** | Sangat cepat (~100× lebih cepat) | Relatif lambat |
 | **Masalah kunci** | Distribusi kunci aman (key exchange) | Tidak ada masalah distribusi |
 | **Ukuran kunci** | 128–256 bit | 2048–4096 bit (RSA) |
@@ -69,7 +71,9 @@ $$ P \xrightarrow{\text{Encrypt}(K_e)} C \xrightarrow{\text{Decrypt}(K_d)} P $$ 
 ### 2.2 3DES (Triple DES
 )
 
-$$ C = E_{K_3}(D_{K_2}(E_{K_1}(P)))$$ Efektif kunci 112 bit (2TDEA) atau 168 bit (3TDEA). Sertifikasi NIST dihentikan pada 2023.
+$ $ C = E_{K_3}(D_{K_2}(E_{K_1}(P)))$$
+
+Efektif kunci 112 bit (2TDEA) atau 168 bit (3TDEA). Sertifikasi NIST dihentikan pada 2023.
 
 ### 2.3 AES (Advanced Encryption Standard)
 
@@ -122,49 +126,49 @@ plaintext = aesgcm.decrypt(nonce, ciphertext, b"station-001")
 
 ### 3.1 RSA (Rivest-Shamir-Adleman, 1977)
 
-Berdasarkan **masalah faktorisasi bilangan besar:** $n = pq $sulit difaktor.
+Berdasarkan **masalah faktorisasi bilangan besar:** $n = pq $ sulit difaktor.
 
 **Key Generation:**
-1. Pilih dua bilangan prima besar $p $dan $q$.
-2. Hitung $n = pq $dan $\phi(n) = (p-1)(q-1) $.
-3. Pilih $e $sehingga $\gcd(e, \phi(n)) = 1 $(umum:$e = 65537 = 2^{16}+1 $).
-4. Hitung $d = e^{-1} \mod \phi(n)$(extended Euclidean algorithm).
+1. Pilih dua bilangan prima besar $p $ dan $q $.
+2. Hitung $ n = pq $dan $\phi(n) = (p-1)(q-1) $.
+3. Pilih $ e $sehingga $\gcd(e, \phi(n)) = 1 $ (umum: $e = 65537 = 2^{16}+1 $).
+4. Hitung $ d = e^{-1} \mod \phi(n) $(extended Euclidean algorithm).
 
 **Enkripsi/Deskripsi:**
 
-$$ C = P^e \mod n \quad \text{(Enkripsi)}P = C^d \mod n \quad \text{(Deskripsi)}$$**Kebenaran:**$P^{ed} = P^{1 + k\phi(n)} \equiv P \pmod{n}$oleh Fermat's Little Theorem.
+$ $ C = P^e \mod n \quad \text{(Enkripsi)}P = C^d \mod n \quad \text{(Deskripsi)}$$**Kebenaran:**$ P^{ed} = P^{1 + k\phi(n)} \equiv P \pmod{n}$oleh Fermat's Little Theorem.
 
 ### 3.2 Contoh RSA Sederhana
 
 | Parameter | Nilai |
 |-----------|-------|
-| $p$ | 61 |
-| $q$ | 53 |
-| $n = pq$ | 3233 |
+| $p $ | 61 |
+| $ q $ | 53 |
+| $ n = pq $ | 3233 |
 | $\phi(n) = (60)(52) $ | 3120 |
-| $e$ | 17 |
-| $d = 17^{-1} \bmod 3120$ | 2753 |
+| $ e $ | 17 |
+| $ d = 17^{-1} \bmod 3120 $ | 2753 |
 
-**Enkripsi pesan $P = 65$:**
+**Enkripsi pesan $ P = 65 $:**
 
-$$
+$ $
 
 C = 65^{17} \mod 3233 = 279
 0
 
-$$**Deskripsi:**$$ P = 2790^{2753} \mod 3233 = 65 \quad \checkmark $$
+$$**Deskripsi:**$ $ P = 2790^{2753} \mod 3233 = 65 \quad \checkmark $$
 
 ### 3.3 ECC (Elliptic Curve Cryptography)
 
 Cryptography berbasis kelompok aditif pada kurva eliptik
 
-$$ y^2 = x^3 + ax + b \pmod{p}$$
+$ $ y^2 = x^3 + ax + b \pmod{p}$$
 
-- Operasi: *point addition*$P + Q $dan *point doubling*$2P$.
+- Operasi: *point addition*$ P + Q $dan *point doubling*$ 2P $.
 
-- *Scalar multiplication:* $kP = \underbrace{P + P + \cdots + P}_{k}$.
+- *Scalar multiplication:* $ kP = \underbrace{P + P + \cdots + P}_{k} $.
 
-- *Elliptic Curve Discrete Logarithm Problem (ECDLP):* Diberikan $P $dan $kP$, cari $k$— sangat sulit secara komputasional.
+- *Elliptic Curve Discrete Logarithm Problem (ECDLP):* Diberikan $ P $dan $ kP $, cari $ k$— sangat sulit secara komputasional.
 
 **Keunggulan:** Kunci lebih pendek dari RSA untuk keamanan setara.
 
@@ -181,37 +185,37 @@ $$ y^2 = x^3 + ax + b \pmod{p}$$
 
 ### 4.1 Fungsi Hash Kriptografis
 
-Properti fungsi hash $H: \{0,1\}^* \to \{0,1\}^n$:
-1. **Preimage resistance:** Diberikan $h$, sulit menemukan $x $dengan $H(x) = h$.
-2. **Second preimage resistance:** Diberikan $x_1$, sulit menemukan $x_2 \neq x_1 $dengan $H(x_1) = H(x_2)$.
-3. **Collision resistance:** Sulit menemukan $x_1 \neq x_2 $dengan $H(x_1) = H(x_2)$.
+Properti fungsi hash $H: \{0,1\}^* \to \{0,1\}^n $:
+1. **Preimage resistance:** Diberikan $ h $, sulit menemukan $ x $dengan $ H(x) = h $.
+2. **Second preimage resistance:** Diberikan $ x_1 $, sulit menemukan $ x_2 \neq x_1 $dengan $ H(x_1) = H(x_2) $.
+3. **Collision resistance:** Sulit menemukan $ x_1 \neq x_2 $dengan $ H(x_1) = H(x_2)$.
 
 ### 4.2 Perbandingan Algoritma Hash
 
 | Algoritma | Output (bit) | Serangan terbaik | Status |
 |-----------|-------------|------------------|--------|
-| MD5 | 128 | Collision: $2^{21}$(30 detik) | ❌ **Tidak aman** |
-| SHA-1 | 160 | Collision: $2^{63}$(Google SHAttered) | ❌ **Tidak aman** |
-| SHA-256 | 256 | Collision: $2^{128}$ | ✅ Aman |
-| SHA-3 (Keccak) | 224-512 | Collision: $2^{n/2}$ | ✅ Aman |
-| BLAKE2 | 256 | Collision: $2^{128}$ | ✅ Aman, cepat |
-| Argon2id | Variabel | Brute force: $2^{256}$ | ✅ Khusus password hashing |
+| MD5 | 128 | Collision: $2^{21} $ (30 detik) | ❌ **Tidak aman** |
+| SHA-1 | 160 | Collision: $2^{63} $ (Google SHAttered) | ❌ **Tidak aman** |
+| SHA-256 | 256 | Collision: $2^{128} $ | ✅ Aman |
+| SHA-3 (Keccak) | 224-512 | Collision: $ 2^{n/2} $ | ✅ Aman |
+| BLAKE2 | 256 | Collision: $ 2^{128} $ | ✅ Aman, cepat |
+| Argon2id | Variabel | Brute force: $ 2^{256} $ | ✅ Khusus password hashing |
 
 ### 4.3 Tanda Tangan Digital
 
-$$\text{Sign}: \sigma = \text{Sign}_{sk}(H(m)) \quad \text{— Penandatangan memproduksi } \sigma\text{Verify}: \text{Verify}_{pk}(m, \sigma) \rightarrow \text{true/false} \quad \text{— Verifikator memeriksa} $$**DSA / ECDSA:**
-1. Pilih random $k$, hitung $R = kG \pmod{p}$, $r = R_x \mod n$.
-2. Hitung $s = k^{-1}(H(m) + d \cdot r) \mod n$.
-3. Tanda tangan: $(r, s)$.
-4. Verifikasi: hitung $u_1, u_2$, cek $R_x' = r$.
+$ $\text{Sign}: \sigma = \text{Sign}_{sk}(H(m)) \quad \text{— Penandatangan memproduksi } \sigma\text{Verify}: \text{Verify}_{pk}(m, \sigma) \rightarrow \text{true/false} \quad \text{— Verifikator memeriksa} $$**DSA / ECDSA:**
+1. Pilih random $ k $, hitung $ R = kG \pmod{p} $, $ r = R_x \mod n $.
+2. Hitung $ s = k^{-1}(H(m) + d \cdot r) \mod n $.
+3. Tanda tangan: $ (r, s) $.
+4. Verifikasi: hitung $ u_1, u_2 $, cek $ R_x' = r $.
 
-**EdDSA (Ed25519):** Lebih cepat, deterministik (tidak perlu kunci $k $random), resisten timing attack.
+**EdDSA (Ed25519):** Lebih cepat, deterministik (tidak perlu kunci $ k $random), resisten timing attack.
 
 ### 4.4 Studi Kasus: Verifikasi Integritas Data GNSS
 
 Untuk menjamin integritas data pengukuran GNSS yang ditransmisikan dari stasiun ke pusat pengolahan:
 
-1. Stasiun menghitung $H = \text{SHA-256}(\text{data observasi})$.
+1. Stasiun menghitung $H = \text{SHA-256}(\text{data observasi}) $.
 2. Stasiun menandatangani $ H$ dengan ECDSA-P256 menggunakan private key.
 3. Pusat pengolahan memverifikasi signature menggunakan public key stasiun.
 4. Integritas terjamin: tidak ada yang dapat memodifikasi data tanpa terdeteksi.

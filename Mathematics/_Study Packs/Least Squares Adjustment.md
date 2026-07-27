@@ -14,7 +14,9 @@ Least squares is the fundamental estimation method in geodesy for finding the be
 
 ## 1. Fundamental Principle
 
-Given observations $\mathbf{l} $with associated weights $\mathbf{P} $, find the parameter estimate $\hat{\mathbf{x}} $that minimizes the weighted sum of squared residuals $$\min_{\mathbf{x}} \, \phi = \mathbf{v}^T\mathbf{P}\mathbf{v} $$ where $\mathbf{v} = \mathbf{l} - \mathbf{f}(\hat{\mathbf{x}}) $is the residual vector and $\mathbf{f}(\hat{\mathbf{x}}) $ is the functional model.
+Given observations $\mathbf{l} $ with associated weights $\mathbf{P} $, find the parameter estimate $\hat{\mathbf{x}} $ that minimizes the weighted sum of squared residuals $ $\min_{\mathbf{x}} \, \phi = \mathbf{v}^T\mathbf{P}\mathbf{v} $$
+
+where $\mathbf{v} = \mathbf{l} - \mathbf{f}(\hat{\mathbf{x}}) $ is the residual vector and $\mathbf{f}(\hat{\mathbf{x}}) $ is the functional model.
 
 **Intuition:** The least-squares solution distributes error across observations proportionally to their weights, producing the "most probable" estimate under the assumption of normally distributed errors.
 
@@ -25,23 +27,29 @@ Given observations $\mathbf{l} $with associated weights $\mathbf{P} $, find the 
 ### 2.1 Observation Equation
 s
 
-$$\mathbf{l} + \mathbf{v} = \mathbf{A}\hat{\mathbf{x}} $$ or equivalently $$\mathbf{v} = \mathbf{A}\hat{\mathbf{x}} - \mathbf{l} $$ where:
--$\mathbf{l} $: $n \times 1 $observation vector (measured values)
--$\mathbf{v} $: $n \times 1 $residual vector (corrections to observations)
--$\mathbf{A} $: $n \times u $design (Jacobian/coefficient) matrix
--$\hat{\mathbf{x}} $: $u \times 1 $unknown parameter vector
+$ $\mathbf{l} + \mathbf{v} = \mathbf{A}\hat{\mathbf{x}} $$
 
-**Requirements:**$n > u$(overdetermined),$\text{rank}(\mathbf{A}) = u $### 2.2 Condition Equations (Alternative Form)
+or equivalently $ $\mathbf{v} = \mathbf{A}\hat{\mathbf{x}} - \mathbf{l} $$
+
+where:
+-$\mathbf{l} $: $ n \times 1 $ observation vector (measured values)
+-$\mathbf{v} $: $ n \times 1 $ residual vector (corrections to observations)
+-$\mathbf{A} $: $ n \times u $ design (Jacobian/coefficient) matrix
+-$\hat{\mathbf{x}} $: $ u \times 1 $ unknown parameter vector
+
+**Requirements:**$ n > u $ (overdetermined),$\text{rank}(\mathbf{A}) = u $### 2.2 Condition Equations (Alternative Form)
 
 Sometimes observations are related through conditions
 
-$$\mathbf{B}\mathbf{v} = \mathbf{w} $$ where $\mathbf{B} $is the condition matrix and $\mathbf{w} $is the misclosure vector. The least-squares solution $$\mathbf{v} = \mathbf{P}^{-1}\mathbf{B}^T(\mathbf{B}\mathbf{P}^{-1}\mathbf{B}^T)^{-1}\mathbf{w} $$
+$ $\mathbf{B}\mathbf{v} = \mathbf{w} $$
+
+where $\mathbf{B} $ is the condition matrix and $\mathbf{w} $ is the misclosure vector. The least-squares solution $ $\mathbf{v} = \mathbf{P}^{-1}\mathbf{B}^T(\mathbf{B}\mathbf{P}^{-1}\mathbf{B}^T)^{-1}\mathbf{w} $$
 
 ### 2.3 Mixed Model
 
 Combines observation equations and condition equations
 
-$$\mathbf{l} + \mathbf{v} = \mathbf{A}\hat{\mathbf{x}}, \quad \mathbf{B}\mathbf{v} = \mathbf{w} $$
+$ $\mathbf{l} + \mathbf{v} = \mathbf{A}\hat{\mathbf{x}}, \quad \mathbf{B}\mathbf{v} = \mathbf{w} $$
 
 ---
 
@@ -49,18 +57,20 @@ $$\mathbf{l} + \mathbf{v} = \mathbf{A}\hat{\mathbf{x}}, \quad \mathbf{B}\mathbf{
 
 Setting $\frac{\partial \phi}{\partial \hat{\mathbf{x}}} = \mathbf{0} $:
 
-$$\mathbf{A}^T\mathbf{P}\mathbf{A}\,\hat{\mathbf{x}} = \mathbf{A}^T\mathbf{P}\mathbf{l}\underbrace{\mathbf{A}^T\mathbf{P}\mathbf{A}}_{\mathbf{N}}\,\hat{\mathbf{x}} = \underbrace{\mathbf{A}^T\mathbf{P}\mathbf{l}}_{\mathbf{t}} $$ where $\mathbf{N} = \mathbf{A}^T\mathbf{P}\mathbf{A} $is the **normal equation matrix** and $\mathbf{t} = \mathbf{A}^T\mathbf{P}\mathbf{l} $ is the right-hand side.
+$ $\mathbf{A}^T\mathbf{P}\mathbf{A}\,\hat{\mathbf{x}} = \mathbf{A}^T\mathbf{P}\mathbf{l}\underbrace{\mathbf{A}^T\mathbf{P}\mathbf{A}}_{\mathbf{N}}\,\hat{\mathbf{x}} = \underbrace{\mathbf{A}^T\mathbf{P}\mathbf{l}}_{\mathbf{t}} $$
+
+where $\mathbf{N} = \mathbf{A}^T\mathbf{P}\mathbf{A} $ is the **normal equation matrix** and $\mathbf{t} = \mathbf{A}^T\mathbf{P}\mathbf{l} $ is the right-hand side.
 
 **Solution:*
 *
 
-$$\hat{\mathbf{x}} = \mathbf{N}^{-1}\mathbf{t} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l} $$**Properties of $\mathbf{N} $:**
+$ $\hat{\mathbf{x}} = \mathbf{N}^{-1}\mathbf{t} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l} $$**Properties of $\mathbf{N} $:**
 
 - Symmetric ($\mathbf{N}^T = \mathbf{N} $)
 
 - Positive definite (if $\text{rank}(\mathbf{A}) = u $)
 
-- Dimension: $u \times u$ (number of unknowns)
+- Dimension: $ u \times u $ (number of unknowns)
 
 ---
 
@@ -68,10 +78,12 @@ $$\hat{\mathbf{x}} = \mathbf{N}^{-1}\mathbf{t} = (\mathbf{A}^T\mathbf{P}\mathbf{
 
 When all observations have equal weight ($\mathbf{P} = \mathbf{I} $):
 
-$$\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{A})^{-1}\mathbf{A}^T\mathbf{l
+$ $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{A})^{-1}\mathbf{A}^T\mathbf{l
 }
 
-$$ The residuals: $$\hat{\mathbf{v}} = \mathbf{A}\hat{\mathbf{x}} - \mathbf{l} = [\mathbf{A}(\mathbf{A}^T\mathbf{A})^{-1}\mathbf{A}^T - \mathbf{I}]\mathbf{l}
+$$
+
+The residuals: $ $\hat{\mathbf{v}} = \mathbf{A}\hat{\mathbf{x}} - \mathbf{l} = [\mathbf{A}(\mathbf{A}^T\mathbf{A})^{-1}\mathbf{A}^T - \mathbf{I}]\mathbf{l}
 
 $$ ---
 
@@ -81,23 +93,27 @@ $$ ---
 
 The weight matrix is the inverse of the covariance matrix (scaled)
 
-$$\mathbf{P} = \sigma_0^2 \mathbf{C}^{-1} = \sigma_0^2 \mathbf{\Sigma}^{-1} $$ where $\sigma_0^2 $ is the **variance of unit weight** (reference variance). In practice,$\mathbf{P} = \mathbf{C}^{-1} $(the $\sigma_0^2 $ cancels).
+$ $\mathbf{P} = \sigma_0^2 \mathbf{C}^{-1} = \sigma_0^2 \mathbf{\Sigma}^{-1} $$
 
-**Example:** If observations have standard deviations $\sigma_1 = 1 $ mm,$\sigma_2 = 2 $ mm,$\sigma_3 = 0.5 $mm $$\mathbf{P} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0.25 & 0 \\ 0 & 0 & 4 \end{pmatrix} = \text{diag}(1, 1/4, 4)
+where $\sigma_0^2 $ is the **variance of unit weight** (reference variance). In practice,$\mathbf{P} = \mathbf{C}^{-1} $ (the $\sigma_0^2 $ cancels).
+
+**Example:** If observations have standard deviations $\sigma_1 = 1 $ mm,$\sigma_2 = 2 $ mm,$\sigma_3 = 0.5 $ mm $ $\mathbf{P} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0.25 & 0 \\ 0 & 0 & 4 \end{pmatrix} = \text{diag}(1, 1/4, 4)
 
 $$
 
-(Precision =$1/\sigma^2 $for uncorrelated observations.)
+(Precision =$ 1/\sigma^2 $ for uncorrelated observations.)
 
 ### 5.2 Solutio
 n
 
-$$\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l} $$
+$ $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l} $$
 
 ### 5.3 Adjusted Observation
 s
 
-$$\hat{\mathbf{l}} = \mathbf{A}\hat{\mathbf{x}} $$ The adjusted observations are the computed values from the estimated parameters, not $\mathbf{l} + \mathbf{v} $.
+$ $\hat{\mathbf{l}} = \mathbf{A}\hat{\mathbf{x}} $$
+
+The adjusted observations are the computed values from the estimated parameters, not $\mathbf{l} + \mathbf{v} $.
 
 ---
 
@@ -105,24 +121,28 @@ $$\hat{\mathbf{l}} = \mathbf{A}\hat{\mathbf{x}} $$ The adjusted observations are
 
 ### 6.1 Cofactor Matrix of Parameters
 
-$$\mathbf{Q}_{\hat{x}\hat{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1} = \mathbf{N}^{-1} $$ This is the **cofactor matrix** (or weight-coefficient matrix) of the estimated parameters.
+$ $\mathbf{Q}_{\hat{x}\hat{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1} = \mathbf{N}^{-1} $$
+
+This is the **cofactor matrix** (or weight-coefficient matrix) of the estimated parameters.
 
 ### 6.2 Covariance Matrix of Parameter
 s
 
-$$\mathbf{C}_{\hat{x}\hat{x}} = \hat{\sigma}_0^2 \, \mathbf{Q}_{\hat{x}\hat{x}} $$ where $\hat{\sigma}_0^2 $ is the a posteriori variance of unit weight.
+$ $\mathbf{C}_{\hat{x}\hat{x}} = \hat{\sigma}_0^2 \, \mathbf{Q}_{\hat{x}\hat{x}} $$
+
+where $\hat{\sigma}_0^2 $ is the a posteriori variance of unit weight.
 
 ### 6.3 Cofactor Matrix of Adjusted Observation
 s
 
-$$\mathbf{Q}_{\hat{l}\hat{l}} = \mathbf{A}\mathbf{N}^{-1}\mathbf{A}^T = \mathbf{A}\mathbf{Q}_{\hat{x}\hat{x}}\mathbf{A}^T
+$ $\mathbf{Q}_{\hat{l}\hat{l}} = \mathbf{A}\mathbf{N}^{-1}\mathbf{A}^T = \mathbf{A}\mathbf{Q}_{\hat{x}\hat{x}}\mathbf{A}^T
 
 $$
 
 ### 6.4 Cofactor Matrix of Residual
 s
 
-$$\mathbf{Q}_{vv} = \mathbf{P}^{-1} - \mathbf{A}\mathbf{N}^{-1}\mathbf{A}^T = \mathbf{P}^{-1} - \mathbf{Q}_{\hat{l}\hat{l}} $$
+$ $\mathbf{Q}_{vv} = \mathbf{P}^{-1} - \mathbf{A}\mathbf{N}^{-1}\mathbf{A}^T = \mathbf{P}^{-1} - \mathbf{Q}_{\hat{l}\hat{l}} $$
 
 ### 6.5 Propagation Summary
 
@@ -140,7 +160,7 @@ $$\mathbf{Q}_{vv} = \mathbf{P}^{-1} - \mathbf{A}\mathbf{N}^{-1}\mathbf{A}^T = \m
 ### 7.1 Residuals (Sisaan
 )
 
-$$\hat{\mathbf{v}} = \mathbf{A}\hat{\mathbf{x}} - \mathbf{l} $$
+$ $\hat{\mathbf{v}} = \mathbf{A}\hat{\mathbf{x}} - \mathbf{l} $$
 
 **Properties:**
 -$\mathbf{A}^T\mathbf{P}\hat{\mathbf{v}} = \mathbf{0} $ (residuals are orthogonal to design matrix)
@@ -149,11 +169,15 @@ $$\hat{\mathbf{v}} = \mathbf{A}\hat{\mathbf{x}} - \mathbf{l} $$
 ### 7.2 Variance of Unit Weight (Simpangan Baku Satuan
 )
 
-$$\hat{\sigma}_0^2 = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\nu} $$ where $\nu = n - u $ is the **degrees of freedom** (redundancy).
+$ $\hat{\sigma}_0^2 = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\nu} $$
+
+where $\nu = n - u $ is the **degrees of freedom** (redundancy).
 
 If the model is correct and observations have the assigned weights
 
-$$ E[\hat{\sigma}_0^2] = \sigma_0^2 $$ The standard deviation of unit weight $$\hat{\sigma}_0 = \sqrt{\frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\nu}} $$
+$ $ E[\hat{\sigma}_0^2] = \sigma_0^2 $$
+
+The standard deviation of unit weight $ $\hat{\sigma}_0 = \sqrt{\frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\nu}} $$
 
 ### 7.3 A Priori vs A Posteriori Variance
 
@@ -165,19 +189,19 @@ $$ E[\hat{\sigma}_0^2] = \sigma_0^2 $$ The standard deviation of unit weight $$\
 
 ### 7.4 Standard Error of Parameters
 
-$$\hat{\sigma}_{x_i} = \hat{\sigma}_0\sqrt{(\mathbf{N}^{-1})_{ii}} = \hat{\sigma}_0\sqrt{q_{\hat{x}_i\hat{x}_i}} $$
+$ $\hat{\sigma}_{x_i} = \hat{\sigma}_0\sqrt{(\mathbf{N}^{-1})_{ii}} = \hat{\sigma}_0\sqrt{q_{\hat{x}_i\hat{x}_i}} $$
 
 ### 7.5 Global Model Test ($\chi^2 $ Test)
 
 Test whether the adjustment is statistically consistent
 
-$$ T = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\sigma_0^2} = \frac{\nu\hat{\sigma}_0^2}{\sigma_0^2} \sim \chi^2(\nu)$$
+$ $ T = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\sigma_0^2} = \frac{\nu\hat{\sigma}_0^2}{\sigma_0^2} \sim \chi^2(\nu)$$
 
 **Decision rule:**
 
-- If $T < \chi^2_{\alpha/2, \nu}$: model is consistent (no gross errors, weights are appropriate)
+- If $ T < \chi^2_{\alpha/2, \nu} $: model is consistent (no gross errors, weights are appropriate)
 
-- If $T > \chi^2_{\alpha/2, \nu}$: model may be inconsistent (gross errors, wrong weights, or wrong functional model)
+- If $ T > \chi^2_{\alpha/2, \nu} $: model may be inconsistent (gross errors, wrong weights, or wrong functional model)
 
 ---
 
@@ -185,14 +209,16 @@ $$ T = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\sigma_0^2} = \frac{\nu\hat{\sigm
 
 ### 8.1 Baarda Data Snooping
 
-Test statistic for individual observation $i$:
+Test statistic for individual observation $ i $:
 
-$$ w_i = \frac{v_i}{\hat{\sigma}_0\sqrt{q_{v_i v_i}}} = \frac{v_i}{\hat{\sigma}_{v_i}}$$ Under$ H_0 $(no outlier):$w_i \sim \mathcal{N}(0, 1) $**Decision:** If $|w_i| > 3.29 $(at $\alpha = 0.001 $), the observation is likely a gross error.
+$ $ w_i = \frac{v_i}{\hat{\sigma}_0\sqrt{q_{v_i v_i}}} = \frac{v_i}{\hat{\sigma}_{v_i}}$$
+
+Under $ H_0 $ (no outlier): $ w_i \sim \mathcal{N}(0, 1) $**Decision:** If $|w_i| > 3.29 $ (at $\alpha = 0.001 $), the observation is likely a gross error.
 
 ### 8.2 Iterative Procedure
 
 1. Perform least-squares adjustment
-2. Compute standardized residuals $w_i $for all observations
+2. Compute standardized residuals $ w_i $ for all observations
 3. If $\max|w_i| $ exceeds the threshold, remove or correct that observation
 4. Re-adjust and repeat until no more outliers are detected
 
@@ -210,11 +236,11 @@ $$ w_i = \frac{v_i}{\hat{\sigma}_0\sqrt{q_{v_i v_i}}} = \frac{v_i}{\hat{\sigma}_
 
 For a nonlinear model $\mathbf{l} + \mathbf{v} = \mathbf{f}(\hat{\mathbf{x}}) $:
 
-1. Choose initial approximation $\mathbf{x}_0 $2. Linearise:$\mathbf{f}(\mathbf{x}_0 + \delta\mathbf{x}) \approx \mathbf{f}(\mathbf{x}_0) + \mathbf{A}\,\delta\mathbf{x} $where $\mathbf{A} = \frac{\partial \mathbf{f}}{\partial \mathbf{x}}\Big|_{\mathbf{x}_0} $3. Form modified observations:$\mathbf{l}^* = \mathbf{l} - \mathbf{f}(\mathbf{x}_0) + \mathbf{A}\mathbf{x}_0 $4. Solve:$\delta\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l}^*$5. Update:$\mathbf{x}_1 = \mathbf{x}_0 + \delta\hat{\mathbf{x}} $6. Iterate until $\ |\delta\hat{\mathbf{x}}\| < \epsilon $### 9.2 Levenberg-Marquardt Method
+1. Choose initial approximation $\mathbf{x}_0 $ 2. Linearise: $\mathbf{f}(\mathbf{x}_0 + \delta\mathbf{x}) \approx \mathbf{f}(\mathbf{x}_0) + \mathbf{A}\,\delta\mathbf{x} $ where $\mathbf{A} = \frac{\partial \mathbf{f}}{\partial \mathbf{x}}\Big|_{\mathbf{x}_0} $ 3. Form modified observations: $\mathbf{l}^* = \mathbf{l} - \mathbf{f}(\mathbf{x}_0) + \mathbf{A}\mathbf{x}_0 $ 4. Solve: $\delta\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l}^*$ 5. Update: $\mathbf{x}_1 = \mathbf{x}_0 + \delta\hat{\mathbf{x}} $ 6. Iterate until $\ |\delta\hat{\mathbf{x}}\| < \epsilon $### 9.2 Levenberg-Marquardt Method
 
 Damped Gauss-Newton for improved convergence
 
-$$
+$ $
 
 (\mathbf{A}^T\mathbf{P}\mathbf{A} + \lambda\mathbf{I})\,\delta\mathbf{x} = \mathbf{A}^T\mathbf{P}\mathbf{l}^*$$
 
@@ -230,25 +256,31 @@ $$
 
 Minimize the trace of $\mathbf{Q}_{\hat{x}\hat{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1} $:
 
-$$\text{minimize } \text{tr}(\mathbf{N}^{-1}) = \sum \sigma_{x_i}^2
+$ $\text{minimize } \text{tr}(\mathbf{N}^{-1}) = \sum \sigma_{x_i}^2
 
-$$ Minimizes the average variance of all parameters.
+$$
+
+Minimizes the average variance of all parameters.
 
 ### 10.2 D-Optimality
 
 Maximize the determinant of $\mathbf{N} $:
 
-$$\text{maximize } \det(\mathbf{A}^T\mathbf{P}\mathbf{A})
+$ $\text{maximize } \det(\mathbf{A}^T\mathbf{P}\mathbf{A})
 
-$$ Minimizes the volume of the confidence ellipsoid.
+$$
+
+Minimizes the volume of the confidence ellipsoid.
 
 ### 10.3 E-Optimality
 
 Maximize the smallest eigenvalue of $\mathbf{N} $:
 
-$$\text{maximize } \lambda_{\min}(\mathbf{N})
+$ $\text{maximize } \lambda_{\min}(\mathbf{N})
 
-$$ Minimizes the semi-major axis of the confidence ellipsoid.
+$$
+
+Minimizes the semi-major axis of the confidence ellipsoid.
 
 ---
 
@@ -262,7 +294,7 @@ $$ Minimizes the semi-major axis of the confidence ellipsoid.
 | **Leveling network** | Condition model | Height differences |
 | **Datum transformation (7-parameter)** | $\mathbf{l} + \mathbf{v} = \mathbf{A}\hat{\mathbf{x}} $ | 3 translations, 1 scale, 3 rotations |
 | **Photogrammetric bundle adjustment** | Nonlinear $\to $ linearised | Interior orientation, exterior orientation |
-| **Gravity field modeling** | Spherical harmonic coefficients | $C_{lm}, S_{lm}$ coefficients |
+| **Gravity field modeling** | Spherical harmonic coefficients | $ C_{lm}, S_{lm} $ coefficients |
 
 ---
 
@@ -273,7 +305,7 @@ $$ Minimizes the semi-major axis of the confidence ellipsoid.
 | $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l} $ | Normal equations | Parameter estimation |
 | $\hat{\sigma}_0^2 = \mathbf{v}^T\mathbf{P}\mathbf{v}/\nu $ | Variance of unit weight | Quality measure |
 | $\mathbf{Q}_{\hat{x}\hat{x}} = \mathbf{N}^{-1} $ | Cofactor matrix | Precision of estimates |
-| $T = \mathbf{v}^T\mathbf{P}\mathbf{v}/\sigma_0^2$ | Global test ($\chi^2 $) | Model validation |
+| $ T = \mathbf{v}^T\mathbf{P}\mathbf{v}/\sigma_0^2 $ | Global test ($\chi^2 $) | Model validation |
 | $ w_i = v_i/\hat{\sigma}_{v_i}$ | Baarda test | Outlier detection |
 
 ---

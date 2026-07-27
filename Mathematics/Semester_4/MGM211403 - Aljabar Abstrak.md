@@ -40,7 +40,7 @@ If $H \leq G $ (subgroup), then $|H|$ divides $|G|$, and:
 
 $ $|G| = |H| \cdot [G:H]
 
-$$
+$ $
 
 where $ [G:H] $ is the **index** (number of cosets).
 
@@ -48,7 +48,7 @@ where $ [G:H] $ is the **index** (number of cosets).
 
 ### 2. First Isomorphism Theorem
 
-If $hi: G o H $ is a group homomorphism:$ $G/\kerhi \cong ext{im}hi $$
+If $ hi: G o H $ is a group homomorphism: $ $ G/\kerhi \cong ext{im}hi $ $
 
 ### 3. Sylow Theorems
 
@@ -62,7 +62,7 @@ For $|G| = p^n \cdot m $ where $ p \nmid m $:
 
 Every finite abelian group is a direct product of cyclic groups of prime-power order:
 
-$ $G \cong \mathbb{Z}_{p_1^{k_1}} imes \mathbb{Z}_{p_2^{k_2}} imes \cdots imes \mathbb{Z}_{p_r^{k_r}}$$
+$ $ G \cong \mathbb{Z}_{p_1^{k_1}} imes \mathbb{Z}_{p_2^{k_2}} imes \cdots imes \mathbb{Z}_{p_r^{k_r}}$ $
 
 ### 5. Fundamental Theorem of Galois Theory
 
@@ -135,7 +135,7 @@ $\mathbb{F}_{p^n} $ exists and is unique for every prime power $ p^n $.
 
 ### RSA
 
-1. Choose primes $ p, q $, compute $ N = pq $, $hi(N) = (p-1)(q-1) $ 2. Choose $ e $ with $\gcd(e, hi(N)) = 1 $ 3. Compute $ d = e^{-1} mod{hi(N)} $ 4. **Encrypt:**$ c = m^e mod{N} $ 5. **Decrypt:**$ m = c^d mod{N} $
+1. Choose primes $ p, q $, compute $ N = pq $, $ hi(N) = (p-1)(q-1) $ 2. Choose $ e $ with $\gcd(e, hi(N)) = 1 $ 3. Compute $ d = e^{-1} mod{hi(N)} $ 4. **Encrypt:**$ c = m^e mod{N} $ 5. **Decrypt:**$ m = c^d mod{N} $
 
 ### Elliptic Curve Cryptography
 

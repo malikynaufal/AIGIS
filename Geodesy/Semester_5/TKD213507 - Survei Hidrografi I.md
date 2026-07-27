@@ -44,16 +44,16 @@ A sounding is a depth measurement from the water surface to the seabed:
 $$ ext{Depth}_{Chart} = ext{Observed Depth} - ext{Tide Correction} + ext{Heel Correction} $ $
 
 where:
--$ext{Observed Depth} $= echo sounder reading
--$ext{Tide Correction} $= difference between water surface and CD
--$ext{Heel Correction} $= ship list correction: $\delta d = d \cdot \sinheta $ for heel angle $heta $### 2.3 Corrections Applied to Soundings
+-$ ext{Observed Depth} $= echo sounder reading
+-$ ext{Tide Correction} $= difference between water surface and CD
+-$ ext{Heel Correction} $= ship list correction: $\delta d = d \cdot \sinheta $ for heel angle $ heta $### 2.3 Corrections Applied to Soundings
 
 1. **Heel correction** — for ship lis
 t
 
-$ $d_{corrected} = \frac{d}{\cosheta}$$2. **Draft correction** — for ship's draft$ $
+$ $ d_{corrected} = \frac{d}{\cosheta}$ $2. **Draft correction** — for ship's draft $ $
 
-d_{corrected} = d - ext{static draft}$$
+d_{corrected} = d - ext{static draft}$ $
 
 3. **Speed correction** — for transducer movement
 4. **Temperature/sound speed correction** — via CTD cast
@@ -67,7 +67,7 @@ d_{corrected} = d - ext{static draft}$$
 
 The single-beam echo sounder (SBES) transmits a single acoustic pulse vertically downward and measures the two-way travel time
 
-$ $d = \frac{c \cdot t}{2}$$
+$ $ d = \frac{c \cdot t}{2}$ $
 
 where:
 -$ d $= depth
@@ -97,7 +97,7 @@ where:
 
 The speed of sound in water varies with **depth**, **salinity**, and **temperature**
 
-$ $c = 1449.2 + 4.6T - 0.055T^2 + 0.00029T^3 + (1.34 - 0.01T)(S - 35) + 0.016z $$
+$ $ c = 1449.2 + 4.6T - 0.055T^2 + 0.00029T^3 + (1.34 - 0.01T)(S - 35) + 0.016z $ $
 
 where:
 -$ T $= temperature (°C)
@@ -110,7 +110,7 @@ A **CTD** ( Conductivity-Temperature-Depth) cast is performed regularly to measu
 
 Because sound speed varies with depth, the acoustic beam path is refracted (curved). The ray-tracing equation:
 
-$ $\frac{\cosheta(z)}{c(z)} = ext{constant} $$
+$ $\frac{\cosheta(z)}{c(z)} = ext{constant} $ $
 
 This causes systematic errors in deep water, especially with steep beam angles.
 
@@ -158,14 +158,14 @@ A nautical chart includes:
 ### 5.1 Coverage Requirement
 s
 
-$ $D_{track} = 3 \cdot d \cdot \sin(\alpha_{max})$$
+$ $ D_{track} = 3 \cdot d \cdot \sin(\alpha_{max})$ $
 
 where $ d $ is the depth and $\alpha_{max} $ is the maximum beam angle. This ensures overlapping tracks for complete coverage.
 
 ### 5.2 Line Spacin
 g
 
-$ $s = D_{swath} - 2 \cdot \Delta $$
+$ $ s = D_{swath} - 2 \cdot \Delta $ $
 
 where:
 -$ D_{swath} $= swath width (at depth $ d $): $ D_{swath} = 2d \cdot an(\alpha_{max}) $-$\Delta $= overlap (typically 10–25%)
@@ -211,7 +211,7 @@ A tide gauge (*pengukur pasang surut*) measures sea surface height relative to a
 - **Pressure gauge** — measures hydrostatic pressure at seabe
 d
 
-$ $P = \rho \cdot g \cdot h + P_{atm}$$
+$ $ P = \rho \cdot g \cdot h + P_{atm}$ $
 
 - **Acoustic tide gauge** — measures water column resonant frequency
 
@@ -256,13 +256,13 @@ $ $P = \rho \cdot g \cdot h + P_{atm}$$
 **Standard Deviation of Depth Error (SDE):*
 *
 
-$ $ext{SDE} = \sqrt{\frac{\sum_{i=1}^{n} (d_i - \bar{d})^2}{n-1}} $$
+$ $ ext{SDE} = \sqrt{\frac{\sum_{i=1}^{n} (d_i - \bar{d})^2}{n-1}} $ $
 
 where $ d_i $ are the difference between sounding and predicted depth from a digital terrain model.
 
 **Requirements:**
--$ext{SDE} \leq 0.25 $ m for Order 1
--$ext{SDE} \leq 0.5 $ m for Order 2/3
+-$ ext{SDE} \leq 0.25 $ m for Order 1
+-$ ext{SDE} \leq 0.5 $ m for Order 2/3
 
 ---
 

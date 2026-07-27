@@ -31,22 +31,22 @@ Teori graf (graph theory) adalah cabang matematika yang mempelajari struktur rel
 
 ### 1.1 Definisi Formal
 
-**Graf tidak terarah:** $G = (V, E) $di mana $V $adalah himpunan simpul dan $E \subseteq \binom{V}{2} $ (himpunan pasangan tak-terurut).
+**Graf tidak terarah:** $G = (V, E) $ di mana $V $ adalah himpunan simpul dan $E \subseteq \binom{V}{2} $ (himpunan pasangan tak-terurut).
 
-**Graf terarah (digraf):**$G = (V, E)$dengan $E \subseteq V \times V$(urutan penting: $e = (u, v)$).
+**Graf terarah (digraf):**$ G = (V, E) $dengan $ E \subseteq V \times V $(urutan penting: $ e = (u, v)$).
 
 ### 1.2 Istilah Penting
 
 | Istilah | Definisi | Notasi |
 |---------|----------|--------|
 | **Derajat** | Jumlah sisi yang bersisian dengan simpul | $\deg(v) $ |
-| **Derajat masuk** (digraf) | Jumlah sisi masuk ke $v$ | $\deg^-(v) $ |
-| **Derajat keluar** (digraf) | Jumlah sisi keluar dari $v$ | $\deg^+(v) $ |
-| **Jalur (path)** | Urutan simpul berurutan terhubung | $P = (v_0, v_1, \dots, v_k)$ |
-| **Siklus (cycle)** | Jalur tertutup tanpa simpul ulangan (kecuali awal=akhir) | $C_k$ |
-| **Graf terhubung** | Ada jalur antara setiap pasangan simpul | $G $connected |
-| **Graf lengkap** | Setiap pasangan simpul terhubung | $K_n$ |
-| **Bipartit** | $V = V_1 \cup V_2$, sisanya antara $V_1 $dan $V_2$ | $G = (V_1, V_2, E)$ |
+| **Derajat masuk** (digraf) | Jumlah sisi masuk ke $ v $ | $\deg^-(v) $ |
+| **Derajat keluar** (digraf) | Jumlah sisi keluar dari $ v $ | $\deg^+(v) $ |
+| **Jalur (path)** | Urutan simpul berurutan terhubung | $ P = (v_0, v_1, \dots, v_k) $ |
+| **Siklus (cycle)** | Jalur tertutup tanpa simpul ulangan (kecuali awal=akhir) | $ C_k $ |
+| **Graf terhubung** | Ada jalur antara setiap pasangan simpul | $ G $connected |
+| **Graf lengkap** | Setiap pasangan simpul terhubung | $ K_n $ |
+| **Bipartit** | $ V = V_1 \cup V_2 $, sisanya antara $ V_1 $dan $ V_2 $ | $ G = (V_1, V_2, E) $ |
 | **Pohon (tree)** | Graf terhubung tanpa siklus | $|E| = |V| - 1 $ |
 | **Forest** | Graf tanpa siklus (kumpulan pohon) | — |
 
@@ -55,24 +55,24 @@ Teori graf (graph theory) adalah cabang matematika yang mempelajari struktur rel
 **Lemma jabat tangan (Handshaking Lemma):*
 *
 
-$$\sum_{v \in V} \deg(v) = 2|E| $$
+$ $\sum_{v \in V} \deg(v) = 2|E| $$
 
 **Korolari:** Jumlah simpul berderajat ganjil selalu genap.
 
-**Teorema (Graf bipartit):**$G $adalah graf bipartit $\iff $ $G $tidak mengandung siklus ganjil.
+**Teorema (Graf bipartit):**$ G $adalah graf bipartit $\iff $ $ G $tidak mengandung siklus ganjil.
 
-**Teorema (Graf pohon):** Untuk graf $G $dengan $n $simpul
+**Teorema (Graf pohon):** Untuk graf $ G $dengan $ n $simpul
 
-$$ G \text{ adalah pohon} \iff G \text{ terhubung dan } |E| = n - 1 \iff G \text{ terhubung dan tanpa siklus} \iff G \text{ tidak ada siklus dan } |E| = n - 1 $$
+$ $ G \text{ adalah pohon} \iff G \text{ terhubung dan } |E| = n - 1 \iff G \text{ terhubung dan tanpa siklus} \iff G \text{ tidak ada siklus dan } |E| = n - 1 $$
 
 ### 1.4 Representasi Graf
 
 | Representasi | Kompleksitas Ruang | Akses Edge | Cocok Untuk |
 |--------------|---------------------|------------|-------------|
-| **Matriks Ketetanggaan**$A_{n \times n}$ | $O(n^2)$ | $O(1)$ | Graf padat (dense) |
-| **List Ketetanggaan** | $O(|V| + |E|)$ | $O(\deg(v))$ | Graf langka (sparse) |
-| **Edge List** | $O(|E|)$ | $O(|E|)$ | Algoritma Kruskal |
-| **Matriks Insidensi** | $O(|V| \times |E|)$ | — | Analisis struktural |
+| **Matriks Ketetanggaan**$A_{n \times n} $ | $ O(n^2) $ | $ O(1) $ | Graf padat (dense) |
+| **List Ketetanggaan** | $ O(|V| + |E|) $ | $ O(\deg(v)) $ | Graf langka (sparse) |
+| **Edge List** | $ O(|E|) $ | $ O(|E|) $ | Algoritma Kruskal |
+| **Matriks Insidensi** | $ O(|V| \times |E|)$ | — | Analisis struktural |
 
 ---
 
@@ -84,7 +84,7 @@ $$ G \text{ adalah pohon} \iff G \text{ terhubung dan } |E| = n - 1 \iff G \text
 
 **Teorema Euler (1736, Königsberg):**
 
-Sebuah graf terhubung $G $memiliki **Eulerian circuit**$\iff $ setiap simpul memiliki derajat genap.$G $memiliki **Eulerian trail** (bukan circuit) $\iff $ tepat ada dua simpul berderajat ganjil (kedua ujung trail).
+Sebuah graf terhubung $G $ memiliki **Eulerian circuit**$\iff $ setiap simpul memiliki derajat genap.$ G $memiliki **Eulerian trail** (bukan circuit) $\iff $ tepat ada dua simpul berderajat ganjil (kedua ujung trail).
 
 **Algoritma Hierholzer** untuk menemukan Eulerian circuit:
 1. Mulai dari sembarang simpul, ikuti sisi-sisi tak-terpakai.
@@ -99,18 +99,18 @@ Kompleksitas: $O(|E|)$.
 
 **Kondisi Cukup:**
 
-- **Theorem Dirac (1952):** Jika $\deg(v) \geq n/2 $untuk setiap $v \in V $, maka $G $Hamilton.
+- **Theorem Dirac (1952):** Jika $\deg(v) \geq n/2 $ untuk setiap $v \in V $, maka $ G $Hamilton.
 
-- **Theorem Ore (1960):** Jika $\deg(u) + \deg(v) \geq n $untuk setiap pasangan takberdekatan $u, v $, maka $G $Hamilton.
+- **Theorem Ore (1960):** Jika $\deg(u) + \deg(v) \geq n $ untuk setiap pasangan takberdekatan $u, v $, maka $ G $Hamilton.
 
-- **Theorem Bondy-Chvátal:** Tutup (closure) dari $G $adalah $K_n \implies G $Hamilton.
+- **Theorem Bondy-Chvátal:** Tutup (closure) dari $ G $adalah $ K_n \implies G $Hamilton.
 
 | Sifat | Graf Euler | Graf Hamilton |
 |-------|-----------|---------------|
 | **Objek** | Sisi (edges) | Simpul (vertices) |
 | **Uji keberadaan** | Kriteria derajat, O(|E|) | NP-complete |
 | **Aplikasi** | Rute pengantaran surat, jembatan Königsberg | Traveling Salesman, routing drone |
-| **Algoritma** | Hierholzer $O(|E|)$ | Brute force $O(n!)$, DP Held-Karp $O(n^2 2^n)$ |
+| **Algoritma** | Hierholzer $O(|E|) $ | Brute force $ O(n!) $, DP Held-Karp $ O(n^2 2^n)$ |
 
 ---
 
@@ -125,38 +125,38 @@ Diberikan graf terhubung berbobot $G = (V, E, w)$, MST adalah subgraf pohon yang
 2. Ambil sisi terkecil yang tidak membentuk siklus (union-find).
 3. Lanjutkan hingga $|V| - 1 $ sisi terpilih.
 
-Kompleksitas: $O(|E| \log |E|)$.
+Kompleksitas: $ O(|E| \log |E|)$.
 
 **Algoritma Prim:**
 1. Mulai dari sembarang simpul.
 2. Selalu tambahkan sisi terkecil yang menghubungkan himpunan visited ke unvisited (priority queue).
 3. Lanjutkan hingga semua simpul masuk.
 
-Kompleksitas: $O(|E| \log |V|)$dengan binary heap.
+Kompleksitas: $O(|E| \log |V|) $ dengan binary heap.
 
 **Teorema (Cut Property):** Untuk sembarang cut $(S, V \setminus S)$, sisi berbobot minimum yang melintasi cut tersebut pasti ada di MST.
 
 ### 3.2 Pohon Biner dan Pohon Pencarian Biner (BST)
 
-Pohon biner di mana setiap node $x $memenuhi:
+Pohon biner di mana setiap node $x $ memenuhi:
 
-- Semua key di subtree kiri $\leq x.key $- Semua key di subtree kanan $\geq x.key $Operasi dasar (pencarian, sisip, hapus):$O(h) $dengan $h $= tinggi pohon.
+- Semua key di subtree kiri $\leq x.key $- Semua key di subtree kanan $\geq x.key $ Operasi dasar (pencarian, sisip, hapus): $O(h) $ dengan $h $= tinggi pohon.
 
 **Penyeimbangan (Balancing):**
 
 | Struktur | Jaminan Tinggi | Operasi |
 |----------|----------------|---------|
-| **BST biasa** | $O(n)$terburuk | — |
-| **AVL** (1962) | $h \leq 1.44 \log_2(n+2)$ | Rotasi LR/RL |
-| **Red-Black Tree** (1978) | $h \leq 2\log_2(n+1)$ | Warna merah/hitam, rotasi |
-| **Splay Tree** (1985) | Amortized $O(\log n)$ | Splay (rotate to root) |
-| **B-Tree** (1972) | $O(\log n)$, tinggi rendah | Digunakan di basis data disk |
+| **BST biasa** | $O(n) $ terburuk | — |
+| **AVL** (1962) | $h \leq 1.44 \log_2(n+2) $ | Rotasi LR/RL |
+| **Red-Black Tree** (1978) | $ h \leq 2\log_2(n+1) $ | Warna merah/hitam, rotasi |
+| **Splay Tree** (1985) | Amortized $ O(\log n) $ | Splay (rotate to root) |
+| **B-Tree** (1972) | $ O(\log n)$, tinggi rendah | Digunakan di basis data disk |
 
 ### 3.3 Prefix Tree (Trie)
 
 **Trie** menyimpan string sebagai jalur dari root ke leaf. Setiap edge mewakili satu karakter.
 
-Operasi: insert, search, prefix query — semuanya $O(m)$di mana $m$ = panjang kata.
+Operasi: insert, search, prefix query — semuanya $O(m) $ di mana $m$ = panjang kata.
 
 Aplikasi dalam georeferencing: kompresi himpunan koordinat awalan untuk indexing spasial.
 
@@ -166,13 +166,13 @@ Aplikasi dalam georeferencing: kompresi himpunan koordinat awalan untuk indexing
 
 ### 4.1 Algoritma Dijkstra
 
-Untuk graf dengan bobot non-negatif $w(e) \geq 0$:
-1. Inisialisasi $d(s) = 0$, $d(v) = \infty $untuk $v \neq s$.
-2. Pilih simpul $u $dengan $d(u)$minimum yang belum di-finalisasi.
-3. Relax semua edge $(u, v)$: $d(v) = \min(d(v), d(u) + w(u, v))$.
+Untuk graf dengan bobot non-negatif $w(e) \geq 0 $:
+1. Inisialisasi $ d(s) = 0 $, $ d(v) = \infty $untuk $ v \neq s $.
+2. Pilih simpul $ u $dengan $ d(u) $minimum yang belum di-finalisasi.
+3. Relax semua edge $ (u, v) $: $ d(v) = \min(d(v), d(u) + w(u, v)) $.
 4. Ulangi hingga semua simpul difinalisasi.
 
-Kompleksitas: $O((|V| + |E|) \log |V|)$dengan min-heap.
+Kompleksitas: $ O((|V| + |E|) \log |V|)$dengan min-heap.
 
 ### 4.2 Algoritma Bellman-Ford
 
@@ -180,13 +180,15 @@ Menangani bobot negatif (dapat mendeteksi negative cycle):
 1. Relax semua edge $|V| - 1 $ kali.
 2. Relax tambahan ke-$|V| $: jika ada perubahan $\implies $ negative cycle ada.
 
-Kompleksitas: $O(|V| \cdot |E|)$.
+Kompleksitas: $ O(|V| \cdot |E|) $.
 
 ### 4.3 Floyd-Warshall (Semua-pasangan shortest path)
 
 Dinamika pemrograman:
 
-$$ d_{ij}^{(k)} = \min\left(d_{ij}^{(k-1)}, \, d_{ik}^{(k-1)} + d_{kj}^{(k-1)}\right)$$ Kompleksitas:$ O(|V|^3) $. Cocok untuk graf padat kecil.
+$ $ d_{ij}^{(k)} = \min\left(d_{ij}^{(k-1)}, \, d_{ik}^{(k-1)} + d_{kj}^{(k-1)}\right)$$
+
+Kompleksitas: $ O(|V|^3) $. Cocok untuk graf padat kecil.
 
 ### 4.4 Studi Kasus: Routing Jaringan Transportasi
 
@@ -208,7 +210,7 @@ Sebuah kota memiliki 6 persimpangan (A–F) dengan jarak (km):
 
 *Penyelesaian Dijkstra:*
 
-| Iterasi | Finalisasi | $d(A)$ | $d(B)$ | $d(C)$ | $d(D)$ | $d(E)$ | $d(F)$ |
+| Iterasi | Finalisasi | $d(A) $ | $ d(B) $ | $ d(C) $ | $ d(D) $ | $ d(E) $ | $ d(F)$ |
 |---------|-----------|--------|--------|--------|--------|--------|--------|
 | 0 | — | 0 | ∞ | ∞ | ∞ | ∞ | ∞ |
 | 1 | A | 0 | 7 | 9 | ∞ | ∞ | 14 |
@@ -237,27 +239,27 @@ Sebuah kota memiliki 6 persimpangan (A–F) dengan jarak (km):
 **Max-Flow Min-Cut Theorem (Ford-Fulkerson, 1956):*
 *
 
-$$\text{max flow}(s, t) = \text{min cut capacity}(s, t)
+$ $\text{max flow}(s, t) = \text{min cut capacity}(s, t)
 
 $$
 
 *Algoritma Ford-Fulkerson:*
-1. Inisialisasi flow $f(e) = 0$.
+1. Inisialisasi flow $ f(e) = 0$.
 2. Cari augmenting path di residual graph.
 3. Tambah flow sebesar bottleneck capacity.
 4. Ulangi hingga tidak ada augmenting path.
 
-Kompleksitas: $O(|E| \cdot |f^*|)$dengan $ f^*$= max flow. Edmonds-Karp (BFS): $O(|V| \cdot |E|^2)$.
+Kompleksitas: $O(|E| \cdot |f^*|) $ dengan $ f^*$= max flow. Edmonds-Karp (BFS): $ O(|V| \cdot |E|^2)$.
 
 ### 5.2 Indeks Konektivitas (Centrality Measures)
 
 | Ukuran | Rumus | Intepretasi |
 |--------|-------|-------------|
-| **Degree centrality** | $C_D(v) = \deg(v)$ | Jumlah koneksi langsung |
-| **Betweenness centrality** | $C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}}$ | Fraksi jalur terpendek yang melewati $v$ |
-| **Closeness centrality** | $C_C(v) = \frac{n-1}{\sum_{u \neq v} d(v, u)}$ | Kekinian terhadap semua simpul |
+| **Degree centrality** | $C_D(v) = \deg(v) $ | Jumlah koneksi langsung |
+| **Betweenness centrality** | $ C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}} $ | Fraksi jalur terpendek yang melewati $ v $ |
+| **Closeness centrality** | $ C_C(v) = \frac{n-1}{\sum_{u \neq v} d(v, u)} $ | Kekinian terhadap semua simpul |
 | **Eigenvector centrality** | $\mathbf{Ax} = \lambda_1 \mathbf{x} $ | Pengaruh dalam jaringan (PageRank terinspirasi) |
-| **Clustering coefficient** | $C(v) = \frac{2|\{e_{ij} : v_i, v_j \in N(v)\}|}{\deg(v)(\deg(v)-1)}$ | Seberapa terhubung tetangga $v$ |
+| **Clustering coefficient** | $ C(v) = \frac{2|\{e_{ij} : v_i, v_j \in N(v)\}|}{\deg(v)(\deg(v)-1)} $ | Seberapa terhubung tetangga $ v$ |
 
 ### 5.3 Studi Kasus: Analisis Jaringan Posisi Stasiun GNSS
 
@@ -279,7 +281,7 @@ Sebuah jaringan 8 stasiun GNSS dengan koneksi baseline (edge weight = jarak):
 
 ### Latihan 1: Apakah graf berikut Eulerian?
 
-Graf $G $memiliki 5 simpul $\{1,2,3,4,5\} $dan 7 sisi:$(1,2), (1,3), (2,3), (2,4), (3,4), (3,5), (4,5) $.
+Graf $G $ memiliki 5 simpul $\{1,2,3,4,5\} $ dan 7 sisi: $(1,2), (1,3), (2,3), (2,4), (3,4), (3,5), (4,5) $.
 
 Derajat:
 
@@ -293,13 +295,13 @@ Derajat:
 
 ### Latihan 2: MST dengan Kruskal
 
-Sisi diurutkan: $(A,C):2, \, (B,D):3, \, (A,B):5, \, (C,D):6, \, (B,C):7, \, (A,D):10, \, (B,E):8$ Langkah:
-1.$(A,C):2$— no cycle, accept.
-2.$(B,D):3$— no cycle, accept.
-3.$(A,B):5$— no cycle (A,C dan B,D terpisah, hubungkan), accept.
-4.$(C,D):6$— C dan D sudah terhubung via A. **Cycle! Skip.**
-5.$(B,C):7$— B dan C sudah terhubung. **Cycle! Skip.**
-6.$(B,E):8$— E baru, accept.
+Sisi diurutkan: $(A,C):2, \, (B,D):3, \, (A,B):5, \, (C,D):6, \, (B,C):7, \, (A,D):10, \, (B,E):8 $ Langkah:
+1.$ (A,C):2 $— no cycle, accept.
+2.$ (B,D):3 $— no cycle, accept.
+3.$ (A,B):5 $— no cycle (A,C dan B,D terpisah, hubungkan), accept.
+4.$ (C,D):6 $— C dan D sudah terhubung via A. **Cycle! Skip.**
+5.$ (B,C):7 $— B dan C sudah terhubung. **Cycle! Skip.**
+6.$ (B,E):8$— E baru, accept.
 7. Total MST weight = 2+3+5+8 = 18.
 
 ---
@@ -320,11 +322,11 @@ Sisi diurutkan: $(A,C):2, \, (B,D):3, \, (A,B):5, \, (C,D):6, \, (B,C):7, \, (A,
 
 | Istilah | Definisi |
 |---------|----------|
-| $K_n$ | Graf lengkap (complete graph) |
-| $C_n$ | Siklus sederhana panjang $n$ |
-| $K_{m,n}$ | Graf bipartit lengkap |
-| $W_n$ | Wheel graph (siklus + hub pusat) |
-| $P_n$ | Path graph |
+| $K_n $ | Graf lengkap (complete graph) |
+| $ C_n $ | Siklus sederhana panjang $ n $ |
+| $ K_{m,n} $ | Graf bipartit lengkap |
+| $ W_n $ | Wheel graph (siklus + hub pusat) |
+| $ P_n $ | Path graph |
 | $\chi(G) $ | Kromatik (chromatic number) |
 | $\kappa(G) $ | Vertex connectivity |
 | $\lambda(G) $ | Edge connectivity |

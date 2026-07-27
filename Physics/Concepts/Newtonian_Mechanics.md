@@ -70,14 +70,16 @@ created: 2026-07-27
 **Starting point:** Newton's second law with gravitational force
 
 $$
+
 \begin{equation}
 \mathbf{F} = m\mathbf{g}
 \end{equation}
 \Rightarrow m\frac{d^2\mathbf{r}}{dt^2} = m\mathbf{g}
 \Rightarrow \frac{d^2\mathbf{r}}{dt^2} = \mathbf{g}
-$$
 
-**Result:** $ \mathbf{r}(t) = \frac{1}{2}\mathbf{g}t^2 + \mathbf{v}_0t + \mathbf{r}_0$
+$ $
+
+**Result:** $ \mathbf{r}(t) = \frac{1}{2}\mathbf{g}t^2 + \mathbf{v}_0t + \mathbf{r}_0 $
 
 ---
 
@@ -105,17 +107,17 @@ $$
 
 ### Problem 1: Satellite Launch Velocity
 
-**Given:** Earth's mass $M_{\\oplus} = 5.972 \\times 10^{24}$kg, Earth's radius $R_{\\oplus} = 6.371 \\times 10^6 $m
+**Given:** Earth's mass $ M_{\\oplus} = 5.972 \\times 10^{24} $ kg, Earth's radius $ R_{\\oplus} = 6.371 \\times 10^6 $ m
 
 **Find:** Minimum orbital velocity at Earth's surface
 
 **Solution:**
 
 1. **Identify principle:** Centripetal force equals gravitational force
-2. **Set up equations:** $\\frac{mv^2}{R_{\\oplus}} = \\frac{GM_{\\oplus}m}{R_{\\oplus}^2} $ 3. **Solve:** $v = \\sqrt{\\frac{GM_{\\oplus}}{R_{\\oplus}}} = \\sqrt{\\frac{3.986\\times10^{14}}{6.371\\times10^6}} = 7,905 $m/s
+2. **Set up equations:** $\\frac{mv^2}{R_{\\oplus}} = \\frac{GM_{\\oplus}m}{R_{\\oplus}^2} $ 3. **Solve:** $ v = \\sqrt{\\frac{GM_{\\oplus}}{R_{\\oplus}}} = \\sqrt{\\frac{3.986\\times10^{14}}{6.371\\times10^6}} = 7,905 $m/s
 4. **Check:** Altitude required for stable orbit
 
-**Answer:** $v_\\text{orbital} = 7,905 $m/s
+**Answer:** $ v_\\text{orbital} = 7,905 $ m/s
 
 ---
 

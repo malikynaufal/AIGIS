@@ -42,8 +42,8 @@ f(E) = \\frac{g(E)}{Z} e^{-\\beta E}
 | Statistics | Distribution | Application |
 |------------|-------------|-------------|
 | Maxwell-Boltzmann | $f(v) = 4\\pi n\\left(\\frac{m}{2\\pi k_BT}\\right)^{3/2} v^2 e^{-mv^2/2k_BT} $ | Classical gas |
-| Bose-Einstein | $f(E) = \\frac{1}{e^{(E-\\mu)/k_BT} - 1}$ | Photons, phonons |
-| Fermi-Dirac | $f(E) = \\frac{1}{e^{(E-\\mu)/k_BT} + 1}$ | Electrons |
+| Bose-Einstein | $ f(E) = \\frac{1}{e^{(E-\\mu)/k_BT} - 1} $ | Photons, phonons |
+| Fermi-Dirac | $ f(E) = \\frac{1}{e^{(E-\\mu)/k_BT} + 1}$ | Electrons |
 
 ---
 

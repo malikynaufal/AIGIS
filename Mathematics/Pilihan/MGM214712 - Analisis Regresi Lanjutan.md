@@ -25,7 +25,7 @@ Analisis Regresi Lanjutan melampaui OLS (Ordinary Least Squares) dasar. Mata kul
 
 ## 1. Regresi Linear Berganda (MLR)
 
-$$ Y = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k + \varepsilon $$- **Asumsi:** Linearitas, Homoskedastisitas, Independensi, Normalitas.
+$$ Y = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k + \varepsilon $ $- **Asumsi:** Linearitas, Homoskedastisitas, Independensi, Normalitas.
 
 - **Masalah:** Multikolinearitas (cek VIF).
 
@@ -39,9 +39,9 @@ $$ Y = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k + \varepsilon $$- **Asumsi:**
 
 Untuk mencegah overfitting dan menangani multikolinearitas:
 
-- **Ridge:** Penalty $L_2$ ($\sum \beta^2 $).
+- **Ridge:** Penalty $L_2 $ ($\sum \beta^2 $).
 
-- **LASSO:** Penalty $L_1$ ($\sum |\beta| $); dapat melakukan pemilihan fitur (beberapa $\beta \to 0$).
+- **LASSO:** Penalty $ L_1 $ ($\sum |\beta| $); dapat melakukan pemilihan fitur (beberapa $\beta \to 0$).
 
 ## 4. Referensi
 

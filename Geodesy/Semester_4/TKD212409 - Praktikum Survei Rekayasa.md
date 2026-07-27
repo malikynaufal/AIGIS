@@ -21,16 +21,16 @@ $$ ext{Error Horizontal} = \sqrt{(1")^2 + (1 ext{ ppm})^2 imes D}ext{Error Verti
 
 Dimana:
 -$ 1"$= akurasi sudut
--$ 1 $ppm = akurasi jarak
+-$ 1 $ ppm = akurasi jarak
 -$ D $= jarak pengukuran (meter)
 
 #### 2. Digital Level
 **Akurasi Perhitungan:*
 *
 
-$ $ext{Precision} = \sqrt{\sum_{i=1}^{n} \frac{(h_i - \bar{h})^2}{2n(n-1)}}
+$ $ ext{Precision} = \sqrt{\sum_{i=1}^{n} \frac{(h_i - \bar{h})^2}{2n(n-1)}}
 
-$$3. GPS/GNSS RTK
+$ $3. GPS/GNSS RTK
 **Akurasi RTK:**$ $
 
 # 3. GPS/GNSS RTK
@@ -39,7 +39,7 @@ $$3. GPS/GNSS RTK
 ### # 3. GPS/GNSS RTK
 **Akurasi RTK:**ext{Horizontal Error} = \sqrt{(10 ext{ mm} + 1 ext{ ppm} imes D)^2}ext{Vertical Error} = \sqrt{(15 ext{ mm} + 1.5 ext{ ppm} imes D)^2}
 
-$$
+$ $
 
 Metode Setting Out
 
@@ -62,7 +62,7 @@ $ $## Metode Setting Out
 ### # Formula Setting Out:\begin{aligned}
 ext{Distance} &= \sqrt{(N_P - N_A)^2 + (E_P - E_A)^2} \\
 ext{Azimuth} &= \arctan\left(\frac{E_P - E_A}{N_P - N_A}\right) + ext{correction}
-\end{aligned}$$
+\end{aligned}$ $
 
 # ## Metode Setting Out
 
@@ -95,7 +95,7 @@ $ $## Precision Levelling
 5. Loop closure check
 
 **Persyaratan Akurasi:*
-*ext{Max Misclosure} = m 3\sqrt{K} ext{ mm}$$
+*ext{Max Misclosure} = m 3\sqrt{K} ext{ mm}$ $
 
 # ## Precision Levelling
 **Prosedur:**

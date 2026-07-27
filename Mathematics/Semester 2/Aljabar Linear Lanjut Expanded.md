@@ -29,8 +29,8 @@ Advanced Linear Algebra extends basic matrix algebra to inner product spaces, sp
 **Examples**: $\mathbb{R}^n $, $\mathbb{C}^n $, $\mathcal{C}[a,b] $, $\mathcal{P}_n $ (polynomials of degree $\leq n $).
 
 #### 1.2 Subspaces
-$ W \subseteq V $is a subspace if:
-1.$ 0 \in W $2.$ u, v \in W $→$ u+v \in W $3.$ v \in W $, $ c \in F $→$ cv \in W $**Span**: $ext{span}\\{v_1,\ldots,v_k\\} = \\{\sum c_i v_i : c_i \in F\\} $#### 1.3 Linear Independence $\\{v_1,\ldots,v_k\\} $ is linearly independent if $\sum c_i v_i = 0 $→$ c_1 = \cdots = c_k = 0 $.
+$ W \subseteq V $ is a subspace if:
+1.$ 0 \in W $ 2.$ u, v \in W $→$ u+v \in W $ 3.$ v \in W $, $ c \in F $→$ cv \in W $**Span**: $ ext{span}\\{v_1,\ldots,v_k\\} = \\{\sum c_i v_i : c_i \in F\\} $#### 1.3 Linear Independence $\\{v_1,\ldots,v_k\\} $ is linearly independent if $\sum c_i v_i = 0 $→$ c_1 = \cdots = c_k = 0 $.
 
 #### 1.4 Basis and Dimension
 Basis = linearly independent spanning set. All bases of a vector space have same cardinality = dimension.
@@ -40,15 +40,15 @@ Basis = linearly independent spanning set. All bases of a vector space have same
 ### Weeks 3-4: Linear Transformations
 
 #### 2.1 Definition
-$ T: V o W $is linear if $ T(u+v)=T(u)+T(v) $and $ T(cv)=cT(v) $.
+$ T: V o W $ is linear if $ T(u+v)=T(u)+T(v) $ and $ T(cv)=cT(v) $.
 
 #### 2.2 Kernel and Image
 
-- $ext{Ker}(T) = \\{v: Tv=0\\} $-$ext{Im}(T) = \\{Tv: v \in V\\} $- **Rank-Nullity**: $\dim(ext{Ker}(T)) + \dim(ext{Im}(T)) = \dim(V) $#### 2.3 Matrix Representation
+- $ ext{Ker}(T) = \\{v: Tv=0\\} $-$ ext{Im}(T) = \\{Tv: v \in V\\} $- **Rank-Nullity**: $\dim(ext{Ker}(T)) + \dim(ext{Im}(T)) = \dim(V) $#### 2.3 Matrix Representation
 
-Every linear $ T: V o W $with bases $ B, C $has matrix $ [T]_{C\leftarrow B} $.
+Every linear $ T: V o W $ with bases $ B, C $ has matrix $ [T]_{C\leftarrow B} $.
 
-$ [T(v)]_C = [T]_{C\leftarrow B}[v]_B $#### 2.4 Change of Basis $ P_{B\leftarrow C} $= transition matrix from basis $ C $to basis $ B $.
+$ [T(v)]_C = [T]_{C\leftarrow B}[v]_B $#### 2.4 Change of Basis $ P_{B\leftarrow C} $= transition matrix from basis $ C $ to basis $ B $.
 
 $ [v]_B = P_{B\leftarrow C}[v]_C $### Weeks 5-6: Inner Product Spaces
 
@@ -56,33 +56,33 @@ $ [v]_B = P_{B\leftarrow C}[v]_C $### Weeks 5-6: Inner Product Spaces
 
 $ $\langle u, v \rangle
 
-$$
+$ $
 
-**Properties**: Symmetry, linearity in first argument, positive definiteness ($\langle v,v\rangle \geq 0 $, $=0 $ iff $v=0 $).
+**Properties**: Symmetry, linearity in first argument, positive definiteness ($\langle v,v\rangle \geq 0 $, $=0 $ iff $ v=0 $).
 
-**Standard**: $\langle u,v\rangle = u^T v $ in $\mathbb{R}^n $, $\langle f,g\rangle = \int_a^b f(x)g(x)\,dx $ in $L^2 $.
+**Standard**: $\langle u,v\rangle = u^T v $ in $\mathbb{R}^n $, $\langle f,g\rangle = \int_a^b f(x)g(x)\,dx $ in $ L^2 $.
 
 #### 3.2 Norm and Distance
 
-$ $\\|v\\| = \sqrt{\langle v,v\rangle}d(u,v) = \\|u-v\\| $$
+$ $\\|v\\| = \sqrt{\langle v,v\rangle}d(u,v) = \\|u-v\\| $ $
 
 ### # 3.3 Orthogonality
 
 **Cauchy-Schwarz**: $|\langle u,v\rangle| \leq \\|u\\|\\|v\\| $**Pythagorean**: If $ u \erp v $, $\\|u+v\\|^2 = \\|u\\|^2 + \\|v\\|^2 $#### 3.4 Gram-Schmidt Process
 Given $\\{v_1,\ldots,v_k\\} $, produce orthonormal $\\{u_1,\ldots,u_k\\} $:
 
-$ $u_1 = \frac{v_1}{\\|v_1\\|}w_k = v_k - \sum_{i=1}^{k-1} \langle v_k,u_i\rangle u_i, \\quad u_k = \frac{w_k}{\\|w_k\\|}$$### # 3.5 Orthogonal Complement $ W^\erp = \\{v: \langle v,w\rangle = 0 \, \\forall w \in W\\} $
+$ $ u_1 = \frac{v_1}{\\|v_1\\|}w_k = v_k - \sum_{i=1}^{k-1} \langle v_k,u_i\rangle u_i, \\quad u_k = \frac{w_k}{\\|w_k\\|}$ $### # 3.5 Orthogonal Complement $ W^\erp = \\{v: \langle v,w\rangle = 0 \, \\forall w \in W\\} $
 
 $\dim(W) + \dim(W^\erp) = \dim(V) $### Weeks 7-8: Least Squares
 
 #### 4.1 Best Approximation
 **Best approximation theorem**: Unique vector $\hat{y} \in W $ minimizing $\\|y-\hat{y}\\| $.
 
-$\hat{y} = ext{proj}_W(y) $ (orthogonal projection onto $W $)
+$\hat{y} = ext{proj}_W(y) $ (orthogonal projection onto $ W $)
 
 #### 4.2 Normal Equations
 
-For $ A\hat{x} \approx b $: $ A^TA\hat{x} = A^Tb $When $ A $has full column rank: $\hat{x} = (A^TA)^{-1}A^Tb $#### 4.3 Orthogonal Projection Matrix $ P_W = A(A^TA)^{-1}A^T $(projects onto $ext{Col}(A) $)
+For $ A\hat{x} \approx b $: $ A^TA\hat{x} = A^Tb $ When $ A $ has full column rank: $\hat{x} = (A^TA)^{-1}A^Tb $#### 4.3 Orthogonal Projection Matrix $ P_W = A(A^TA)^{-1}A^T $ (projects onto $ ext{Col}(A) $)
 
 Properties: $ P_W = P_W^T $, $ P_W^2 = P_W $, $\hat{y} = P_W y $.
 
@@ -90,19 +90,19 @@ Properties: $ P_W = P_W^T $, $ P_W^2 = P_W $, $\hat{y} = P_W y $.
 
 #### 5.1 Characteristic Polynomial
 
-$ p(\lambda) = \det(A-\lambda I) $#### 5.2 Diagonalization $ A = PDP^{-1} $where $ D $is diagonal and $ P $contains eigenvectors.$ A $is diagonalizable $\\iff $ $ A $has $ n $independent eigenvectors.
+$ p(\lambda) = \det(A-\lambda I) $#### 5.2 Diagonalization $ A = PDP^{-1} $ where $ D $ is diagonal and $ P $ contains eigenvectors.$ A $ is diagonalizable $\\iff $ $ A $ has $ n $ independent eigenvectors.
 
 **Criterion**: Distinct eigenvalues → diagonalizable.
 
 #### 5.3 Spectral Decomposition
 
-For symmetric $ A $: $ A = Q\Lambda Q^T $with $ Q $orthogonal.$ A = \sum_{i=1}^n \lambda_i q_i q_i^T $#### 5.4 Quadratic Forms $ Q(x) = x^TAx $— sign determined by eigenvalues.
+For symmetric $ A $: $ A = Q\Lambda Q^T $ with $ Q $ orthogonal.$ A = \sum_{i=1}^n \lambda_i q_i q_i^T $#### 5.4 Quadratic Forms $ Q(x) = x^TAx $— sign determined by eigenvalues.
 
 ### Weeks 11-12: Applications
 
-#### 6.1 Singular Value Decomposition $ A = U\Sigma V^T $Used for: pseudoinverse, low-rank approximation, condition number.
+#### 6.1 Singular Value Decomposition $ A = U\Sigma V^T $ Used for: pseudoinverse, low-rank approximation, condition number.
 
-#### 6.2 QR Decomposition $ A = QR $, with $ Q $orthogonal,$ R $upper triangular.
+#### 6.2 QR Decomposition $ A = QR $, with $ Q $ orthogonal,$ R $ upper triangular.
 
 Used for: stable least squares, Gram-Schmidt computation.
 
@@ -112,10 +112,10 @@ Used for: stable least squares, Gram-Schmidt computation.
 
 ## Practice Problems
 
-1. Find the orthogonal projection of $ (1,2,3) $onto the span of $ (1,2,-1) $and $ (2,1,1) $.
-2. Diagonalize $ A = \begin{bmatrix}3&1\\\\1&3\end{bmatrix} $.
-3. Find the SVD of $ A = \begin{bmatrix}2&1\\\\1&2\end{bmatrix} $.
-4. Solve $\hat{x} $ in the least squares sense: $\begin{bmatrix}1&1\\\\1&2\\\\1&3\end{bmatrix}x = \begin{bmatrix}1\\\\3\\\\5\end{bmatrix} $.
+1. Find the orthogonal projection of $ (1,2,3) $ onto the span of $ (1,2,-1) $ and $ (2,1,1) $.
+2. Diagonalize $ A = \begin{bmatrix}3&1\\1&3\end{bmatrix} $.
+3. Find the SVD of $ A = \begin{bmatrix}2&1\\1&2\end{bmatrix} $.
+4. Solve $\hat{x} $ in the least squares sense: $\begin{bmatrix}1&1\\1&2\\1&3\end{bmatrix}x = \begin{bmatrix}1\\3\\5\end{bmatrix} $.
 
 ---
 

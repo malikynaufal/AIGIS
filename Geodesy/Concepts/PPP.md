@@ -17,14 +17,14 @@ updated: 2026-07-27
 
 The undifferenced (single‑station) carrier‑phase observation equation:
 
-$$\Phi_{r,f}^s = \rho_r^s + c\bigl(\delta t_r - \delta t^s\bigr) + \lambda_f N_{r,f}^s + I_{r,f}^s + T_r^s + \Delta_{r,f}^s + \varepsilon_{\Phi} $$ | Symbol | Meaning | How handled in PPP |
+$$\Phi_{r,f}^s = \rho_r^s + c\bigl(\delta t_r - \delta t^s\bigr) + \lambda_f N_{r,f}^s + I_{r,f}^s + T_r^s + \Delta_{r,f}^s + \varepsilon_{\Phi} $ $ | Symbol | Meaning | How handled in PPP |
 |--------|---------|---------------------|
 | $\rho_r^s $ | Geometric range | Solved for in the position |
 | $\delta t^s $ | Satellite clock | **Precise IGS clock product** (0.1 ns) |
 | $\delta t_r $ | Receiver clock | Estimated as an unknown (or differenced out) |
-| $N_{r,f}^s$ | Integer ambiguity | Float or integer (PPP‑AR) |
-| $I_{r,f}^s$ | Ionospheric delay | Removed via ionosphere‑free (IF) combination |
-| $T_r^s$ | Tropospheric delay | Estimated (zenith + mapping function) |
+| $ N_{r,f}^s $ | Integer ambiguity | Float or integer (PPP‑AR) |
+| $ I_{r,f}^s $ | Ionospheric delay | Removed via ionosphere‑free (IF) combination |
+| $ T_r^s $ | Tropospheric delay | Estimated (zenith + mapping function) |
 | $\Delta_{r,f}^s $ | Phase centre offsets | IGS ANTEX model |
 | $\varepsilon_{\Phi} $ | Noise + multipath | ~1 mm (carrier phase) |
 
@@ -94,13 +94,13 @@ Uses real‑time orbit, clock, code bias, and atmospheric corrections:
 
 The troposphere cannot be differenced out in PPP and must be estimated:
 
-$$ T_r^s = m_h^s(\text{elev})\cdot Z_h + m_w^s(\text{elev})\cdot Z_w $$
+$ $ T_r^s = m_h^s(\text{elev})\cdot Z_h + m_w^s(\text{elev})\cdot Z_w $$
 
 | Component | Mapping Function | Typical Value |
 |-----------|------------------|---------------|
-| Zenith hydrostatic ($Z_h$) | VMF3 / GMF | ~2.3 m (reduced) |
-| Zenith wet ($Z_w$) | VMF3 / GMF | ~0.1–0.3 m |
-| Mapping function $m_h$ | VMF3, GMF, NMF | 1/cos(z) approx |
+| Zenith hydrostatic ($ Z_h $) | VMF3 / GMF | ~2.3 m (reduced) |
+| Zenith wet ($ Z_w $) | VMF3 / GMF | ~0.1–0.3 m |
+| Mapping function $ m_h $ | VMF3, GMF, NMF | 1/cos(z) approx |
 
 VMF3 (Vienna Mapping Function) is the current state‑of‑the‑art, derived from ECMWF NWP model data.
 

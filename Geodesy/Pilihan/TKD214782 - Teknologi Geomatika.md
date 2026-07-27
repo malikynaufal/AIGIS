@@ -26,7 +26,9 @@ Emerging technologies in geomatics: UAV photogrammetry, mobile mapping (MMS), we
 ### 2. Mobile Mapping Systems (MMS)
 
 $$
+
 \text{Trajectory} = f(\text{GNSS}, \text{IMU}, \text{Odometer}, \text{LiDAR})
+
 $$
 
 ### 3. Cloud Geospatial

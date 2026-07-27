@@ -42,11 +42,11 @@ $ $
 
 Logistic Regression
 
-$$## Logistic RegressionP(y=1|x) = \sigma(w^T x) = \frac{1}{1 + e^{-w^T x}}$ $
+$ $## Logistic RegressionP(y=1|x) = \sigma(w^T x) = \frac{1}{1 + e^{-w^T x}} $ $
 
 # ## Logistic RegressionP(y=1|x) = \sigma(w^T x) = \frac{1}{1 + e^{-w^T x}}Neural Network (Single Layer)
 
-$$## Neural Network (Single Layer)h = \sigma(Wx + b), \quad ext{output} = \sigma(W' h + b')$ $
+$ $## Neural Network (Single Layer)h = \sigma(Wx + b), \quad ext{output} = \sigma(W' h + b') $ $
 
 # ## Neural Network (Single Layer)h = \sigma(Wx + b), \quad ext{output} = \sigma(W' h + b')where $\sigma(z) = \frac{1}{1+e^{-z}} $ is the sigmoid function.
 

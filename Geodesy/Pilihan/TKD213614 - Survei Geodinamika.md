@@ -27,14 +27,19 @@ Geodynamic surveying monitors Earth's crustal motion using repeated high-accurac
 ### 2. Velocity Field Estimation
 
 **Simple velocity model:**
+
 $$
+
 \begin{pmatrix} v_E \\ v_N \end{pmatrix} = \frac{1}{n} \sum_{i=1}^{n} \frac{\Delta \mathbf{r}_i}{\Delta t_i}
-$$
+
+$ $
 
 ### 3. Strain Rate Analysis
 
 **Strain rate tensor:**
+
 $$
+
 \dot{\epsilon} =
 \begin{pmatrix}
 \epsilon_{xx} & \epsilon_{xy} \\
@@ -45,11 +50,15 @@ $$
 2\frac{\partial v_E}{\partial x} & \frac{\partial v_E}{\partial y} + \frac{\partial v_N}{\partial x} \\
 \frac{\partial v_E}{\partial y} + \frac{\partial v_N}{\partial x} & 2\frac{\partial v_N}{\partial y}
 \end{pmatrix}
-$$
+
+$ $
 
 **Maximum shear strain:**
+
 $$
+
 \dot{\gamma}_{max} = \sqrt{(\dot{\epsilon}_{xx} - \dot{\epsilon}_{yy})^2 + 4\dot{\epsilon}_{xy}^2}
+
 $$
 
 ### 4. Indonesian Case Studies

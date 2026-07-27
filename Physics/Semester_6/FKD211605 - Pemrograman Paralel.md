@@ -44,11 +44,11 @@ $$ ext{Speedup} = \frac{T_{ext{serial}}}{T_{ext{parallel}}}
 
 $ $
 
-$$ ext{Efficiency} = \frac{ext{Speedup}}{N_{ext{processors}}}
+$ $ ext{Efficiency} = \frac{ext{Speedup}}{N_{ext{processors}}}
 
 $ $
 
-$$ ext{Amdahl's law: } ext{Speedup}_{\max} = \frac{1}{(1 - p) + \frac{p}{N}}
+$ $ ext{Amdahl's law: } ext{Speedup}_{\max} = \frac{1}{(1 - p) + \frac{p}{N}}
 
 $ $
 
@@ -128,7 +128,7 @@ Unit 2: Shared-Memory Parallelism (Weeks 5–9)
 
 ## 🔬 Key Algorithms
 
-$$## Unit 2: Shared-Memory Parallelism (Weeks 5–9)
+$ $## Unit 2: Shared-Memory Parallelism (Weeks 5–9)
 
 - **OpenMP:** compiler directives for loop parallelization
  ```c
@@ -202,7 +202,7 @@ $$## Unit 2: Shared-Memory Parallelism (Weeks 5–9)
 
 ---
 
-## 🔬 Key Algorithms ext{Amdahl's law: } ext{Speedup}_{\max} = \frac{1}{(1-p) + \frac{p}{N}}$ $
+## 🔬 Key Algorithms ext{Amdahl's law: } ext{Speedup}_{\max} = \frac{1}{(1-p) + \frac{p}{N}} $ $
 
 # ## Unit 2: Shared-Memory Parallelism (Weeks 5–9)
 
@@ -280,16 +280,16 @@ $$## Unit 2: Shared-Memory Parallelism (Weeks 5–9)
 
 ## 🔬 Key Algorithms ext{Amdahl's law: } ext{Speedup}_{\max} = \frac{1}{(1-p) + \frac{p}{N}}
 
-$$ ext{MapReduce: Split} o ext{Map} o ext{Shuffle} o ext{Reduce}
+$ $ ext{MapReduce: Split} o ext{Map} o ext{Shuffle} o ext{Reduce}
 
 $ $
 
-$$ ext{Parallel sum: Tree reduction, work efficiency} = O\!\left(\frac{N}{p} + \log p
+$ $ ext{Parallel sum: Tree reduction, work efficiency} = O\!\left(\frac{N}{p} + \log p
 ight)
 
 $ $
 
-$$ ext{GPU kernel: 1 thread per data point, blocks of} \sim 256 ext{ threads}
+$ $ ext{GPU kernel: 1 thread per data point, blocks of} \sim 256 ext{ threads}
 
 $$
 

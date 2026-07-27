@@ -104,9 +104,11 @@ To convert coordinates from a local datum to WGS84/ITRF:
 
 ### Example: SAD69 → WGS84 (Epicentre Helmert)
 
-$$ T_x = +66.87 \;\text{m},\; T_y = -4.37 \;\text{m},\; T_z = +38.52 \;\text{m}\omega_x = \omega_y = \omega_z = 0,\quad s = -0.27\;\text{ppm}$$ For a point in Jakarta ($\varphi = -6.2°$):
+$$ T_x = +66.87 \;\text{m},\; T_y = -4.37 \;\text{m},\; T_z = +38.52 \;\text{m}\omega_x = \omega_y = \omega_z = 0,\quad s = -0.27\;\text{ppm}$ $
 
-$$\Delta X \approx 66.87,\; \Delta Y \approx -4.37,\; \Delta Z \approx 38.52\;\text{m} $$**Residuals** after the 7‑parameter fit may reach 5–10 m across Indonesia.
+For a point in Jakarta ($\varphi = -6.2°$):
+
+$ $\Delta X \approx 66.87,\; \Delta Y \approx -4.37,\; \Delta Z \approx 38.52\;\text{m} $$**Residuals** after the 7‑parameter fit may reach 5–10 m across Indonesia.
 
 ---
 

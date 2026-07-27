@@ -28,24 +28,24 @@ $ $
 where:
 -$\alpha_n $= angle from nadir (swath perpendicular)
 -$\Delta\alpha $= beam width (typically 0.5°–1°)
--$hi $= roll angle
+-$ hi $= roll angle
 -$ n $= beam number (0 = nadir)
 
 **Swath width:*
 *
 
-$ $W = 2 d \cdot an(\alpha_{\max})$$
+$ $ W = 2 d \cdot an(\alpha_{\max})$ $
 
 **Number of beams:*
 *
 
 $ $
 
-N_{ext{beams}} = \frac{2\alpha_{\max}}{\Delta\alpha} + 1 $$ For a typical MBES with $\alpha_{\max} = 60°$ and $\Delta\alpha = 1°$:
+N_{ext{beams}} = \frac{2\alpha_{\max}}{\Delta\alpha} + 1 $ $ For a typical MBES with $\alpha_{\max} = 60°$ and $\Delta\alpha = 1°$:
 
-$ $N = 121 ext{ beams per swath}
+$ $ N = 121 ext{ beams per swath}
 
-$$2.2 MBES Frequency vs. Depth Range
+$ $2.2 MBES Frequency vs. Depth Range
 
 | Frequency | Depth Range | Beam Angle | Resolution |
 |-----------|-------------|------------|------------|
@@ -67,7 +67,7 @@ $ $## 2.2 MBES Frequency vs. Depth Range
 
 ### 2.3 Motion Compensation
 
-The MBES measures along the acoustic beam, requiring compensation for vessel motion\vec{r}_{ext{corrected}} = \vec{r}_{ext{raw}} - R_z(si) \cdot R_y(heta) \cdot R_x(hi) \cdot \vec{r}_{ext{transducer}}$$
+The MBES measures along the acoustic beam, requiring compensation for vessel motion\vec{r}_{ext{corrected}} = \vec{r}_{ext{raw}} - R_z(si) \cdot R_y(heta) \cdot R_x(hi) \cdot \vec{r}_{ext{transducer}}$ $
 
 # ## 2.2 MBES Frequency vs. Depth Range
 
@@ -108,7 +108,7 @@ Patch test procedure:
 
 Side-scan sonar (SSS) maps the **acoustic seafloor reflectivity** (backscatter), providing imagery of the seabed that complements bathymetric data
 
-$ $R = \frac{P_r}{P_t} \cdot \left(\frac{c}{2}\right)^{2\cdot r}$$
+$ $ R = \frac{P_r}{P_t} \cdot \left(\frac{c}{2}\right)^{2\cdot r}$ $
 
 where $ R $ is reflectivity,$ P_r $= received power,$ P_t $= transmitted power,$ r $= slant range.
 
@@ -151,11 +151,11 @@ Tides can be decomposed into harmonic constituents
 
 $ $\eta(t) = Z_0 + \sum_{i=1}^{N} R_i \cos(\omega_i t - hi_i) + \epsilon(t)
 
-$$
+$ $
 
 where:
 -$\eta(t) $= water surface elevation at time $ t $-$ Z_0 $= mean water level
--$ R_i $= amplitude of constituent $ i $-$\omega_i $= angular frequency of constituent $ i $-$hi_i $= phase lag
+-$ R_i $= amplitude of constituent $ i $-$\omega_i $= angular frequency of constituent $ i $-$ hi_i $= phase lag
 -$\epsilon(t) $= residual
 
 ### 4.2 Major Tidal Constituents
@@ -174,7 +174,7 @@ For a given epoch $ t $:
 
 $ $\eta(t) = Z_0 + \sum_{i=1}^{N} R_i \cos(\omega_i t - hi_i)
 
-$$**Chart datum** typically corresponds to **Lowest Astronomical Tide (LAT)** — the lowest predictable tidal level.
+$ $**Chart datum** typically corresponds to **Lowest Astronomical Tide (LAT)** — the lowest predictable tidal level.
 
 ### 4.4 Indonesian Tidal Regimes
 
@@ -190,7 +190,7 @@ s
 
 $ $
 
-d_{CD} = d_{ext{observed}} - (ext{HT} - ext{RT})$$
+d_{CD} = d_{ext{observed}} - (ext{HT} - ext{RT})$ $
 
 where:
 
@@ -220,7 +220,7 @@ where:
 
 $ $\Delta d = \frac{v^2}{2g}(C_B - C_B^2)
 
-$$
+$ $
 
 where $ v $= vessel speed,$ g $= gravity,$ C_B $= block coefficient.
 
@@ -257,7 +257,7 @@ Raw depth (time stamp → UTC)
 **Standard Deviation of Depth Error (SDE):*
 *
 
-$ $ext{SDE} = \sqrt{\frac{1}{n}\sum_{i=1}^n (z_{obs,i} - z_{grid,i})^2} $$
+$ $ ext{SDE} = \sqrt{\frac{1}{n}\sum_{i=1}^n (z_{obs,i} - z_{grid,i})^2} $ $
 
 **IHO S-44 requirements:**
 | Order | SDE |
@@ -354,7 +354,7 @@ The Indonesian hydrographic fleet uses:
 
 $ $
 
-d \approx f(\lambda_{green}, \lambda_{nearext{-}IR})$$
+d \approx f(\lambda_{green}, \lambda_{nearext{-}IR})$ $
 
 Green light penetrates water to ~30 m depth; near-IR reflects from surface.
 
@@ -370,7 +370,7 @@ Green light penetrates water to ~30 m depth; near-IR reflects from surface.
 
 Airborne LiDAR with green laser penetrates water surface
 
-$ $z_{bottom} = z_{surface} - \frac{c}{2} \cdot t_{water}$$
+$ $ z_{bottom} = z_{surface} - \frac{c}{2} \cdot t_{water}$ $
 
 - **Depth penetration:** 0–50 m (clear water)
 
@@ -390,7 +390,7 @@ $ $z_{bottom} = z_{surface} - \frac{c}{2} \cdot t_{water}$$
 | Number of beams | $ N = \frac{2\alpha_{\max}}{\Delta\alpha} + 1 $ |
 | Tide prediction | $\eta(t) = Z_0 + \sum R_i \cos(\omega_i t - hi_i) $ |
 | Heel correction | $ d_{corr} = d / \cosheta $ |
-| SDE | $ext{SDE} = \sqrt{\frac{1}{n}\sum(z_{obs}-z_{grid})^2} $ |
+| SDE | $ ext{SDE} = \sqrt{\frac{1}{n}\sum(z_{obs}-z_{grid})^2} $ |
 | Backscatter (relative) | $ R = \frac{P_r}{P_t} \cdot \left(\frac{c}{2}\right)^{2r}$ |
 
 ---

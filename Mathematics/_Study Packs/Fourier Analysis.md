@@ -19,41 +19,43 @@ Fourier analysis decomposes functions and signals into sums of sinusoids. It is 
 
 Jean-Baptiste Joseph Fourier (1807) proposed that any periodic function can be represented as a sum of sines and cosines:
 
-$$ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos\left(\frac{2\pi nx}{T}\right) + b_n\sin\left(\frac{2\pi nx}{T}\right)\right)$$ This was revolutionary — even discontinuous functions can be represented!
+$$ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos\left(\frac{2\pi nx}{T}\right) + b_n\sin\left(\frac{2\pi nx}{T}\right)\right)$ $
+
+This was revolutionary — even discontinuous functions can be represented!
 
 ---
 
 ## 2. Fourier Series
 
-### 2.1 Definition (Period $2\pi$)
+### 2.1 Definition (Period $ 2\pi $)
 
-$$
+$ $
 
 f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}(a_n\cos nx + b_n\sin nx
 )
 
-$$### 2.2 Fourier Coefficients $$ a_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos(nx)\,dxb_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\sin(nx)\,d
+$$### 2.2 Fourier Coefficients $ $ a_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos(nx)\,dxb_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\sin(nx)\,d
 x
 
-$$### 2.3 Orthogonality (Key Property) $$\int_{-\pi}^{\pi}\cos(mx)\cos(nx)\,dx = \begin{cases} \pi & m=n \\ 0 & m \neq n \end{cases}\int_{-\pi}^{\pi}\sin(mx)\sin(nx)\,dx = \begin{cases} \pi & m=n \\ 0 & m \neq n \end{cases}\int_{-\pi}^{\pi}\cos(mx)\sin(nx)\,dx = 0 \\quad \\forall m,n
+$$### 2.3 Orthogonality (Key Property) $ $\int_{-\pi}^{\pi}\cos(mx)\cos(nx)\,dx = \begin{cases} \pi & m=n \\ 0 & m \neq n \end{cases}\int_{-\pi}^{\pi}\sin(mx)\sin(nx)\,dx = \begin{cases} \pi & m=n \\ 0 & m \neq n \end{cases}\int_{-\pi}^{\pi}\cos(mx)\sin(nx)\,dx = 0 \\quad \\forall m,n
 
-$$ ### 2.4 Fourier Series on$ [-L, L]$
+$$ ### 2.4 Fourier Series on $ [-L, L] $
 
-$$ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos\frac{n\pi x}{L} + b_n\sin\frac{n\pi x}{L}\right)a_n = \frac{1}{L}\int_{-L}^{L}f(x)\cos\frac{n\pi x}{L}\,dx $$---
+$ $ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos\frac{n\pi x}{L} + b_n\sin\frac{n\pi x}{L}\right)a_n = \frac{1}{L}\int_{-L}^{L}f(x)\cos\frac{n\pi x}{L}\,dx $$---
 
 ## 3. Worked Examples
 
-### Example 1: Square Wave $f(x) = \begin{cases} 1 & 0 < x < \pi \\ -1 & -\pi < x < 0 \end{cases}$, periodic with period $2\pi$.
+### Example 1: Square Wave $ f(x) = \begin{cases} 1 & 0 < x < \pi \\ -1 & -\pi < x < 0 \end{cases} $, periodic with period $ 2\pi $.
 
-This is an odd function, so $a_n = 0 $for all $n$.
+This is an odd function, so $ a_n = 0 $ for all $ n $.
 
-$$ b_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)\,dx = \frac{2}{\pi}\int_0^{\pi}\sin(nx)\,dx= \frac{2}{\pi}\left[-\frac{\cos(nx)}{n}\right]_0^{\pi} = \frac{2}{n\pi}(1-\cos n\pi) = \frac{2}{n\pi}(1-(-1)^n)b_n = \begin{cases} \frac{4}{n\pi} & n \text{ odd} \\ 0 & n \text{ even} \end{cases}f(x) = \frac{4}{\pi}\left(\sin x + \frac{\sin 3x}{3} + \frac{\sin 5x}{5} + \cdots\right)$$### Example 2: Sawtooth Wave$ f(x) = x $for $x \in (-\pi, \pi) $, periodic with period $2\pi$.
+$ $ b_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)\,dx = \frac{2}{\pi}\int_0^{\pi}\sin(nx)\,dx= \frac{2}{\pi}\left[-\frac{\cos(nx)}{n}\right]_0^{\pi} = \frac{2}{n\pi}(1-\cos n\pi) = \frac{2}{n\pi}(1-(-1)^n)b_n = \begin{cases} \frac{4}{n\pi} & n \text{ odd} \\ 0 & n \text{ even} \end{cases}f(x) = \frac{4}{\pi}\left(\sin x + \frac{\sin 3x}{3} + \frac{\sin 5x}{5} + \cdots\right)$$### Example 2: Sawtooth Wave $ f(x) = x $ for $ x \in (-\pi, \pi) $, periodic with period $ 2\pi $.
 
-$a_n = 0$(odd function).
+$ a_n = 0 $ (odd function).
 
-$$ b_n = \frac{2}{\pi}\int_0^{\pi}x\sin(nx)\,dx = \frac{2}{\pi}\left[-\frac{x\cos nx}{n}\bigg|_0^{\pi} + \frac{1}{n}\int_0^{\pi}\cos nx\,dx\right]= \frac{2}{\pi}\left[-\frac{\pi\cos n\pi}{n} + 0\right] = \frac{-2(-1)^n}{n} = \frac{2(-1)^{n+1}}{n}f(x) = 2\left(\sin x - \frac{\sin 2x}{2} + \frac{\sin 3x}{3} - \cdots\right)$$
+$ $ b_n = \frac{2}{\pi}\int_0^{\pi}x\sin(nx)\,dx = \frac{2}{\pi}\left[-\frac{x\cos nx}{n}\bigg|_0^{\pi} + \frac{1}{n}\int_0^{\pi}\cos nx\,dx\right]= \frac{2}{\pi}\left[-\frac{\pi\cos n\pi}{n} + 0\right] = \frac{-2(-1)^n}{n} = \frac{2(-1)^{n+1}}{n}f(x) = 2\left(\sin x - \frac{\sin 2x}{2} + \frac{\sin 3x}{3} - \cdots\right)$$
 
-**Gibbs phenomenon**: At jump discontinuity ($x = \pm\pi$), the partial sums overshoot by ~9% regardless of number of terms. The overshoot never converges to zero — only the width shrinks.
+**Gibbs phenomenon**: At jump discontinuity ($ x = \pm\pi $), the partial sums overshoot by ~9% regardless of number of terms. The overshoot never converges to zero — only the width shrinks.
 
 ---
 
@@ -61,12 +63,12 @@ $$ b_n = \frac{2}{\pi}\int_0^{\pi}x\sin(nx)\,dx = \frac{2}{\pi}\left[-\frac{x\co
 
 ### 4.1 Exponential Form
 
-$$
+$ $
 
 f(x) = \sum_{n=-\infty}^{\infty} c_n e^{inx}c_n = \frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)e^{-inx}\,d
 x
 
-$$### 4.2 Parseval's Theorem $$\frac{1}{2\pi}\int_{-\pi}^{\pi}|f(x)|^2\,dx = \sum_{n=-\infty}^{\infty}|c_n|^2
+$$### 4.2 Parseval's Theorem $ $\frac{1}{2\pi}\int_{-\pi}^{\pi}|f(x)|^2\,dx = \sum_{n=-\infty}^{\infty}|c_n|^2
 
 $$**Physical meaning**: Total energy = sum of energies of each harmonic.
 
@@ -76,20 +78,22 @@ $$**Physical meaning**: Total energy = sum of energies of each harmonic.
 
 ### 5.1 Pointwise Convergence (Dirichlet Conditions)
 
-If $f $is piecewise smooth (has finitely many maxima/minima and jump discontinuities in one period)
+If $ f $ is piecewise smooth (has finitely many maxima/minima and jump discontinuities in one period)
 
-$$\lim_{N\to\infty}S_N(x) = \frac{f(x^+) + f(x^-)}{2} $$ At continuous points: converges to $ f(x) $.
+$ $\lim_{N\to\infty}S_N(x) = \frac{f(x^+) + f(x^-)}{2} $$
+
+At continuous points: converges to $ f(x) $.
 At jumps: converges to the average of left and right limits.
 
 ### 5.2 Uniform Convergence
 
-If $f $is continuous AND periodic, and piecewise smooth → convergence is uniform.
+If $ f $ is continuous AND periodic, and piecewise smooth → convergence is uniform.
 
-### 5.3 $L^2 $Convergence
+### 5.3 $ L^2 $ Convergence
 
-For any $f \in L^2[-\pi,\pi]$, the Fourier series converges in mean-square:
+For any $ f \in L^2[-\pi,\pi] $, the Fourier series converges in mean-square:
 
-$$\lim_{N\to\infty}\int|f(x) - S_N(x)|^2\,dx = 0
+$ $\lim_{N\to\infty}\int|f(x) - S_N(x)|^2\,dx = 0
 
 $$---
 
@@ -98,43 +102,43 @@ $$---
 ### 6.1 Definitio
 n
 
-$$\hat{f}(\omega) = \int_{-\infty}^{\infty}f(x)e^{-i\omega x}\,dx
+$ $\hat{f}(\omega) = \int_{-\infty}^{\infty}f(x)e^{-i\omega x}\,dx
 
 $$
 
 ### 6.2 Invers
 e
 
-$$ f(x) = \frac{1}{2\pi}\int_{-\infty}^{\infty}\hat{f}(\omega)e^{i\omega x}\,d\omega $$
+$ $ f(x) = \frac{1}{2\pi}\int_{-\infty}^{\infty}\hat{f}(\omega)e^{i\omega x}\,d\omega $$
 
 ### 6.3 Key Properties
 
 | Property | Time Domain | Frequency Domain |
 |----------|------------|-----------------|
-| Linearity | $af+bg$ | $a\hat{f}+b\hat{g}$ |
-| Shift | $f(x-a)$ | $e^{-i\omega a}\hat{f}(\omega)$ |
-| Scaling | $f(ax)$ | $\frac{1}{|a|}\hat{f}(\omega/a) $ |
-| Differentiation | $f'(x)$ | $i\omega\hat{f}(\omega)$ |
-| Convolution | $f*g$ | $\hat{f}\cdot\hat{g} $ |
-| Product | $f\cdot g$ | $\frac{1}{2\pi}\hat{f}*\hat{g} $ |
+| Linearity | $ af+bg $ | $ a\hat{f}+b\hat{g} $ |
+| Shift | $ f(x-a) $ | $ e^{-i\omega a}\hat{f}(\omega) $ |
+| Scaling | $ f(ax) $ | $\frac{1}{|a|}\hat{f}(\omega/a) $ |
+| Differentiation | $ f'(x) $ | $ i\omega\hat{f}(\omega) $ |
+| Convolution | $ f*g $ | $\hat{f}\cdot\hat{g} $ |
+| Product | $ f\cdot g $ | $\frac{1}{2\pi}\hat{f}*\hat{g} $ |
 | Parseval | $\int|f|^2 $|$\frac{1}{2\pi}\int|\hat{f}|^2 $ |
 
 ### 6.4 Important Transforms
 
-| $f(x)$ | $\hat{f}(\omega) $ |
+| $ f(x) $ | $\hat{f}(\omega) $ |
 |---------|-------------------|
-| $e^{-\\|x\\|}$ | $\frac{2}{1+\omega^2} $ |
-| $e^{-x^2/2}$ | $\sqrt{2\pi}e^{-\omega^2/2} $ |
-| $\text{rect}(x/2a) $| $a\cdot\text{sinc}(a\omega)$ |
-| $\delta(x) $|$1$ |
-| $1$ | $2\pi\delta(\omega)$ |
+| $ e^{-\\|x\\|} $ | $\frac{2}{1+\omega^2} $ |
+| $ e^{-x^2/2} $ | $\sqrt{2\pi}e^{-\omega^2/2} $ |
+| $\text{rect}(x/2a) $| $ a\cdot\text{sinc}(a\omega) $ |
+| $\delta(x) $|$ 1 $ |
+| $ 1 $ | $ 2\pi\delta(\omega) $ |
 
-**Gaussian**: $e^{-x^2/2} \\xrightarrow{\mathcal{F}} \sqrt{2\pi}e^{-\omega^2/2}$The Gaussian is an eigenfunction of the Fourier transform!
+**Gaussian**: $ e^{-x^2/2} \\xrightarrow{\mathcal{F}} \sqrt{2\pi}e^{-\omega^2/2} $ The Gaussian is an eigenfunction of the Fourier transform!
 
 ### 6.5 Uncertainty Principl
 e
 
-$$\Delta x \cdot \Delta \omega \geq \frac{1}{2} $$ A function cannot be simultaneously localized in both time and frequency. This is a fundamental property of the Fourier transform, not a measurement limitation.
+$ $\Delta x \cdot \Delta \omega \geq \frac{1}{2} $$ A function cannot be simultaneously localized in both time and frequency. This is a fundamental property of the Fourier transform, not a measurement limitation.
 
 ---
 
@@ -142,21 +146,21 @@ $$\Delta x \cdot \Delta \omega \geq \frac{1}{2} $$ A function cannot be simultan
 
 ### 7.1 Definition
 
-For $N $samples $x_0, x_1, \ldots, x_{N-1}$:
+For $ N $ samples $ x_0, x_1, \ldots, x_{N-1} $:
 
-$$
+$ $
 
 X_k = \sum_{n=0}^{N-1} x_n e^{-i2\pi kn/N}, \\quad k = 0, 1, \ldots, N-
 1
 
-$$### 7.2 Inverse DFT $$ x_n = \frac{1}{N}\sum_{k=0}^{N-1}X_k e^{i2\pi kn/N}$$
+$$### 7.2 Inverse DFT $ $ x_n = \frac{1}{N}\sum_{k=0}^{N-1}X_k e^{i2\pi kn/N}$$
 
 ### 7.3 Fast Fourier Transform (FFT)
 
-The FFT computes the DFT in $O(N\log N)$operations instead of $O(N^2)$.
+The FFT computes the DFT in $ O(N\log N) $ operations instead of $ O(N^2) $.
 
 **Cooley-Tukey algorithm** (1965):
-1. Split $N$-point DFT into two $N/2$-point DFTs
+1. Split $ N $-point DFT into two $ N/2 $-point DFTs
 2. Recursively apply
 3. Combine results (butterfly operations)
 
@@ -193,7 +197,9 @@ power_pos = power[positive_mask]
 
 ### 9.1 Heat Equation
 
-$$\frac{\partial u}{\partial t} = k\frac{\partial^2 u}{\partial x^2} $$ Solution: Fourier series of initial condition, each term evolves as $ e^{-k(n\pi/L)^2 t} $.
+$ $\frac{\partial u}{\partial t} = k\frac{\partial^2 u}{\partial x^2} $$
+
+Solution: Fourier series of initial condition, each term evolves as $ e^{-k(n\pi/L)^2 t} $.
 
 ### 9.2 Signal Processing
 
@@ -227,44 +233,50 @@ $$\frac{\partial u}{\partial t} = k\frac{\partial^2 u}{\partial x^2} $$ Solution
 ## 10. Practice Problems
 
 ### Problem 1
-Compute the Fourier series of $ f(x) = |x| $on$[-\pi, \pi] $.
+Compute the Fourier series of $ f(x) = |x| $ on $ [-\pi, \pi] $.
 
 **Solution**:
-Even function, so $b_n = 0$.
+Even function, so $ b_n = 0 $.
 
-$$ a_0 = \frac{2}{\pi}\int_0^{\pi}x\,dx = \pia_n = \frac{2}{\pi}\int_0^{\pi}x\cos(nx)\,dx = \frac{2}{\pi}\left[\frac{x\sin nx}{n}\bigg|_0^{\pi} - \frac{1}{n}\int_0^{\pi}\sin nx\,dx\right] = \frac{2}{\pi}\left[0 + \frac{\cos n\pi - 1}{n^2}\right]a_n = \frac{2((-1)^n-1)}{\pi n^2}$$
+$ $ a_0 = \frac{2}{\pi}\int_0^{\pi}x\,dx = \pia_n = \frac{2}{\pi}\int_0^{\pi}x\cos(nx)\,dx = \frac{2}{\pi}\left[\frac{x\sin nx}{n}\bigg|_0^{\pi} - \frac{1}{n}\int_0^{\pi}\sin nx\,dx\right] = \frac{2}{\pi}\left[0 + \frac{\cos n\pi - 1}{n^2}\right]a_n = \frac{2((-1)^n-1)}{\pi n^2}$$
 
-$a_n = 0 $for $n $even,$a_n = \frac{-4}{\pi n^2}$for $n $odd
+$ a_n = 0 $ for $ n $ even,$ a_n = \frac{-4}{\pi n^2} $ for $ n $ odd
 .
 
-$$|x| = \frac{\pi}{2} - \frac{4}{\pi}\sum_{k=0}^{\infty}\frac{\cos(2k+1)x}{(2k+1)^2} $$
+$ $|x| = \frac{\pi}{2} - \frac{4}{\pi}\sum_{k=0}^{\infty}\frac{\cos(2k+1)x}{(2k+1)^2} $$
 
 ### Problem 2
-Find the Fourier transform of $f(x) = e^{-|x|}$.
+Find the Fourier transform of $ f(x) = e^{-|x|} $.
 
 **Solution**:
 
-$$\hat{f}(\omega) = \int_{-\infty}^{\infty}e^{-|x|}e^{-i\omega x}\,dx = \int_0^{\infty}e^{-x(1+i\omega)}\,dx + \int_{-\infty}^{0}e^{x(1-i\omega)}\,dx= \frac{1}{1+i\omega} + \frac{1}{1-i\omega} = \frac{(1-i\omega)+(1+i\omega)}{1+\omega^2} = \frac{2}{1+\omega^2} $$
+$ $\hat{f}(\omega) = \int_{-\infty}^{\infty}e^{-|x|}e^{-i\omega x}\,dx = \int_0^{\infty}e^{-x(1+i\omega)}\,dx + \int_{-\infty}^{0}e^{x(1-i\omega)}\,dx= \frac{1}{1+i\omega} + \frac{1}{1-i\omega} = \frac{(1-i\omega)+(1+i\omega)}{1+\omega^2} = \frac{2}{1+\omega^2} $$
 
 ### Problem 3
 Parseval's theorem check: $\frac{1}{\pi}\int_{-\pi}^{\pi}|x|^2\,dx = \frac{2\pi^2}{3} $?
 
-$$\frac{1}{\pi}\int_{-\pi}^{\pi}x^2\,dx = \frac{1}{\pi}\cdot\frac{2\pi^3}{3} = \frac{2\pi^2}{3}\sum_{n=0}^{\infty}|c_n|^2 = \frac{\pi^2}{4} + \sum_{k=0}^{\infty}\frac{16}{\pi^2(2k+1)^4} $$ Since $\sum_{k=0}^{\infty}\frac{1}{(2k+1)^4} = \frac{\pi^4}{96} $:
+$ $\frac{1}{\pi}\int_{-\pi}^{\pi}x^2\,dx = \frac{1}{\pi}\cdot\frac{2\pi^3}{3} = \frac{2\pi^2}{3}\sum_{n=0}^{\infty}|c_n|^2 = \frac{\pi^2}{4} + \sum_{k=0}^{\infty}\frac{16}{\pi^2(2k+1)^4} $$
 
-$$= \frac{\pi^2}{4} + \frac{16}{\pi^2}\cdot\frac{\pi^4}{96} = \frac{\pi^2}{4} + \frac{\pi^2}{6} = \frac{5\pi^2}{12} $$ Hmm, this doesn't match directly — the normalization differs. Parseval in this convention:$\frac{1}{2\pi}\int|f|^2 = \sum|c_n|^2 $.
+Since $\sum_{k=0}^{\infty}\frac{1}{(2k+1)^4} = \frac{\pi^4}{96} $:
 
-$$\frac{1}{2\pi}\cdot\frac{2\pi^3}{3} = \frac{\pi^2}{3}\frac{a_0^2}{4} + \frac{1}{2}\sum(a_n^2+b_n^2) = \frac{\pi^2}{4}+\frac{1}{2}\cdot\frac{16}{\pi^2}\cdot\frac{\pi^4}{96}\cdot 2 = \frac{\pi^2}{4}+\frac{\pi^2}{6} = \frac{5\pi^2}{12} $$ Need to use real Fourier convention:$\frac{1}{\pi}\int_{-\pi}^{\pi}x^2\,dx = \frac{2\pi^2}{3} $
+$ $= \frac{\pi^2}{4} + \frac{16}{\pi^2}\cdot\frac{\pi^4}{96} = \frac{\pi^2}{4} + \frac{\pi^2}{6} = \frac{5\pi^2}{12} $$
 
-$$= \frac{a_0^2}{4}+\frac{1}{2}\sum a_n^2 = \frac{\pi^2}{4}+\frac{8}{\pi^2}\sum\frac{1}{(2k+1)^4} = \frac{\pi^2}{4}+\frac{8}{\pi^2}\cdot\frac{\pi^4}{96} = \frac{\pi^2}{4}+\frac{\pi^2}{12} = \frac{\pi^2}{3} $$✓
+Hmm, this doesn't match directly — the normalization differs. Parseval in this convention: $\frac{1}{2\pi}\int|f|^2 = \sum|c_n|^2 $.
+
+$ $\frac{1}{2\pi}\cdot\frac{2\pi^3}{3} = \frac{\pi^2}{3}\frac{a_0^2}{4} + \frac{1}{2}\sum(a_n^2+b_n^2) = \frac{\pi^2}{4}+\frac{1}{2}\cdot\frac{16}{\pi^2}\cdot\frac{\pi^4}{96}\cdot 2 = \frac{\pi^2}{4}+\frac{\pi^2}{6} = \frac{5\pi^2}{12} $$
+
+Need to use real Fourier convention: $\frac{1}{\pi}\int_{-\pi}^{\pi}x^2\,dx = \frac{2\pi^2}{3} $
+
+$ $= \frac{a_0^2}{4}+\frac{1}{2}\sum a_n^2 = \frac{\pi^2}{4}+\frac{8}{\pi^2}\sum\frac{1}{(2k+1)^4} = \frac{\pi^2}{4}+\frac{8}{\pi^2}\cdot\frac{\pi^4}{96} = \frac{\pi^2}{4}+\frac{\pi^2}{12} = \frac{\pi^2}{3} $$✓
 
 ### Problem 4
-What is the DFT of the signal $[1, 0, 1, 0]$ (4 samples)?
+What is the DFT of the signal $ [1, 0, 1, 0] $ (4 samples)?
 
-**Solution**: $X_k = \sum_{n=0}^3 x_n e^{-i\pi kn/2}$-$X_0 = 1+0+1+0 = 2$-$X_1 = 1\cdot 1 + 0\cdot e^{-i\pi/2} + 1\cdot e^{-i\pi} + 0 = 1 + 0 + (-1) + 0 = 0$-$X_2 = 1+0+1+0 = 2$(wait: $e^{-i\pi k}=(-1)^k$, so $X_2 = 1+0+(-1)+0 = 0$)
+**Solution**: $ X_k = \sum_{n=0}^3 x_n e^{-i\pi kn/2} $-$ X_0 = 1+0+1+0 = 2 $-$ X_1 = 1\cdot 1 + 0\cdot e^{-i\pi/2} + 1\cdot e^{-i\pi} + 0 = 1 + 0 + (-1) + 0 = 0 $-$ X_2 = 1+0+1+0 = 2 $ (wait: $ e^{-i\pi k}=(-1)^k $, so $ X_2 = 1+0+(-1)+0 = 0 $)
 
 Let me redo:
 
-- $X_0 = 1+0+1+0 = 2$-$X_1 = 1+0+1\cdot e^{-i\pi}+0 = 1-1 = 0$-$X_2 = 1+0+1\cdot e^{-2i\pi}+0 = 1+1 = 2 $Hmm: $e^{-i2\pi\cdot 2\cdot 2/4} = e^{-i2\pi}=1$-$X_0 = 2$-$X_1 = 1+0-1+0 = 0$-$X_2 = 1+0+1+0 = 2 $Actually: $X_k = \sum_{n=0}^3 x_n e^{-i2\pi kn/4}$-$k=0$: $X_0 = 1+0+1+0 = 2$-$k=1$: $X_1 = 1+0+1\cdot e^{-i2\pi\cdot 1\cdot 2/4}+0 = 1+1\cdot e^{-i\pi} = 1-1 = 0$-$k=2$: $X_2 = 1+0+1\cdot e^{-i2\pi\cdot 2\cdot 2/4}+0 = 1+e^{-i2\pi} = 1+1 = 2$-$k=3$: $X_3 = 1+0+1\cdot e^{-i2\pi\cdot 3\cdot 2/4}+0 = 1+e^{-i3\pi} = 1-1 = 0 $DFT: $[2, 0, 2, 0]$— two strong peaks (DC and Nyquist), zero at other frequencies.
+- $ X_0 = 1+0+1+0 = 2 $-$ X_1 = 1+0+1\cdot e^{-i\pi}+0 = 1-1 = 0 $-$ X_2 = 1+0+1\cdot e^{-2i\pi}+0 = 1+1 = 2 $ Hmm: $ e^{-i2\pi\cdot 2\cdot 2/4} = e^{-i2\pi}=1 $-$ X_0 = 2 $-$ X_1 = 1+0-1+0 = 0 $-$ X_2 = 1+0+1+0 = 2 $ Actually: $ X_k = \sum_{n=0}^3 x_n e^{-i2\pi kn/4} $-$ k=0 $: $ X_0 = 1+0+1+0 = 2 $-$ k=1 $: $ X_1 = 1+0+1\cdot e^{-i2\pi\cdot 1\cdot 2/4}+0 = 1+1\cdot e^{-i\pi} = 1-1 = 0 $-$ k=2 $: $ X_2 = 1+0+1\cdot e^{-i2\pi\cdot 2\cdot 2/4}+0 = 1+e^{-i2\pi} = 1+1 = 2 $-$ k=3 $: $ X_3 = 1+0+1\cdot e^{-i2\pi\cdot 3\cdot 2/4}+0 = 1+e^{-i3\pi} = 1-1 = 0 $ DFT: $ [2, 0, 2, 0] $— two strong peaks (DC and Nyquist), zero at other frequencies.
 
 ---
 
@@ -272,11 +284,11 @@ Let me redo:
 
 | Formula | Expression |
 |---------|-----------|
-| Fourier coefficients | $a_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos(nx)\,dx$ |
-| Complex coefficients | $c_n = \frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)e^{-inx}\,dx$ |
+| Fourier coefficients | $ a_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos(nx)\,dx $ |
+| Complex coefficients | $ c_n = \frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)e^{-inx}\,dx $ |
 | Parseval | $\frac{1}{2\pi}\int|f|^2 = \sum|c_n|^2 $ |
 | FT | $\hat{f}(\omega) = \int f(x)e^{-i\omega x}\,dx $ |
-| Inverse FT | $f(x) = \frac{1}{2\pi}\int \hat{f}(\omega)e^{i\omega x}\,d\omega$ |
+| Inverse FT | $ f(x) = \frac{1}{2\pi}\int \hat{f}(\omega)e^{i\omega x}\,d\omega $ |
 | Convolution thm | $\\widehat{f*g} = \hat{f}\cdot\hat{g} $ |
 | Differentiation | $\\widehat{f'} = i\omega\hat{f} $ |
 | Uncertainty | $\Delta x\cdot\Delta\omega \geq 1/2$ |

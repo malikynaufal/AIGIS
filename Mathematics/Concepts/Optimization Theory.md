@@ -22,21 +22,21 @@ $$
 & h_i(x) = 0, \quad i = 1, \dots, p
 \end{aligned}
 
-$$
+$ $
 
 | Category | Conditions |
 |----------|------------|
-| **Linear Programming (LP)** | $f_i$ linear, $x \in \mathbb{R}^n$ |
-| **Quadratic (QP)** | $f_0$ quadratic, constraints linear |
-| **Convex** | $f_i$ convex, $h_i$ affine |
+| **Linear Programming (LP)** | $ f_i $ linear, $ x \in \mathbb{R}^n $ |
+| **Quadratic (QP)** | $ f_0 $ quadratic, constraints linear |
+| **Convex** | $ f_i $ convex, $ h_i $ affine |
 | **Non-convex** | General nonlinear |
-| **Integer** | $x_i \in \mathbb{Z}$ (MILP, MINLP) |
+| **Integer** | $ x_i \in \mathbb{Z} $ (MILP, MINLP) |
 
 ## 2. Convex Optimization
 
-A function $f$ is **convex** if:
+A function $ f $ is **convex** if:
 
-$$ f(\theta x + (1-\theta)y) \leq \theta f(x) + (1-\theta)f(y), \quad \forall x, y, \theta \in [0,1]$$
+$ $ f(\theta x + (1-\theta)y) \leq \theta f(x) + (1-\theta)f(y), \quad \forall x, y, \theta \in [0,1]$$
 
 ### Key Properties
 
@@ -48,28 +48,28 @@ $$ f(\theta x + (1-\theta)y) \leq \theta f(x) + (1-\theta)f(y), \quad \forall x,
 
 | Function | Domain | Convex? |
 |----------|--------|---------|
-| $x^2$ | $\mathbb{R} $ | Yes |
-| $e^x$ | $\mathbb{R} $ | Yes |
+| $ x^2 $ | $\mathbb{R} $ | Yes |
+| $ e^x $ | $\mathbb{R} $ | Yes |
 | $-\log x $|$\mathbb{R}_{++} $ | Yes |
-| $\|x\|_p $ ($p \geq 1$) | $\mathbb{R}^n $ | Yes |
-| $x^T P x$ ($P \succeq 0$) | $\mathbb{R}^n $ | Yes |
+| $\|x\|_p $ ($ p \geq 1 $) | $\mathbb{R}^n $ | Yes |
+| $ x^T P x $ ($ P \succeq 0 $) | $\mathbb{R}^n $ | Yes |
 
 ## 3. Unconstrained Optimization
 
 ### First-Order Necessary Condition
 
-If $ x^*$is a local minimizer and $ f $is differentiable:$$\nabla f(x^*) = 0
+If $ x^*$ is a local minimizer and $ f $ is differentiable:$ $\nabla f(x^*) = 0
 
 $$
 
 ### Second-Order Conditions
 
 - **Necessary:** $\nabla^2 f(x^*) \succeq 0 $ (positive semidefinite)
-- **Sufficient:** $\nabla f(x^*) = 0 $and $\nabla^2 f(x^*) \succ 0 $ (positive definite)
+- **Sufficient:** $\nabla f(x^*) = 0 $ and $\nabla^2 f(x^*) \succ 0 $ (positive definite)
 
 ### Gradient Descent
 
-$$ x_{k+1} = x_k - \alpha_k \nabla f(x_k)$$
+$ $ x_{k+1} = x_k - \alpha_k \nabla f(x_k)$$
 
 ```mermaid
 flowchart TD
@@ -86,29 +86,31 @@ flowchart TD
 ```
 
 **Convergence rates:**
-- Convex, Lipschitz gradient: $O(1/k)$
-- Strongly convex: Linear ($O(\rho^k)$, $\rho < 1 $)
+- Convex, Lipschitz gradient: $ O(1/k) $
+- Strongly convex: Linear ($ O(\rho^k) $, $\rho < 1 $)
 
 ### Newton's Method
 
-$$ x_{k+1} = x_k - [\nabla^2 f(x_k)]^{-1} \nabla f(x_k)$$ Quadratic convergence near solution, but requires Hessian inversion.
+$ $ x_{k+1} = x_k - [\nabla^2 f(x_k)]^{-1} \nabla f(x_k)$$
+
+Quadratic convergence near solution, but requires Hessian inversion.
 
 ## 4. Constrained Optimization
 
 ### Lagrange Multipliers (Equality Constraints)
 
-Minimize $f(x)$ subject to $h(x) = 0$.
+Minimize $ f(x) $ subject to $ h(x) = 0 $.
 
 **Lagrangian:** $\mathcal{L}(x, \nu) = f(x) + \nu^T h(x) $
 
 **KKT Conditions (Necessary):**
 1. $\nabla_x \mathcal{L}(x^*, \nu^*) = 0 $ (stationarity)
-2. $h(x^*) = 0$ (primal feasibility)
+2. $ h(x^*) = 0 $ (primal feasibility)
 
 ### KKT Conditions (Inequality Constraints)
 
-For $f_i(x) \leq 0$:
-1. **Stationarity:** $\nabla f_0(x^*) + \sum_i \lambda_i \nabla f_i(x^*) + \sum_j \nu_j \nabla h_j(x^*) = 0 $ 2. **Primal feasibility:**$f_i(x^*) \leq 0, \; h_j(x^*) = 0$ 3. **Dual feasibility:**$\lambda_i \geq 0 $ 4. **Complementary slackness:**$\lambda_i f_i(x^*) = 0 $
+For $ f_i(x) \leq 0 $:
+1. **Stationarity:** $\nabla f_0(x^*) + \sum_i \lambda_i \nabla f_i(x^*) + \sum_j \nu_j \nabla h_j(x^*) = 0 $ 2. **Primal feasibility:**$ f_i(x^*) \leq 0, \; h_j(x^*) = 0 $ 3. **Dual feasibility:**$\lambda_i \geq 0 $ 4. **Complementary slackness:**$\lambda_i f_i(x^*) = 0 $
 
 ```mermaid
 flowchart LR
@@ -122,9 +124,9 @@ flowchart LR
 
 ### Duality
 
-**Dual function:** $g(\lambda, \nu) = \inf_x \mathcal{L}(x, \lambda, \nu)$
+**Dual function:** $ g(\lambda, \nu) = \inf_x \mathcal{L}(x, \lambda, \nu) $
 
-**Dual problem:** Maximize $g(\lambda, \nu)$ s.t. $\lambda \geq 0 $.
+**Dual problem:** Maximize $ g(\lambda, \nu) $ s.t. $\lambda \geq 0 $.
 
 **Weak duality:** $ p^* \geq d^*$ always holds.
 
@@ -134,7 +136,7 @@ flowchart LR
 
 **Standard form:**
 
-$$
+$ $
 
 \begin{aligned}
 \text{minimize} \quad & c^T x \\
@@ -150,19 +152,19 @@ Moves along vertices of the feasible polyhedron. Polynomial-time in practice, ex
 
 ### Interior Point Methods
 
-Follow the central path through the interior. Polynomial-time ($O(\sqrt{n} L)$).
+Follow the central path through the interior. Polynomial-time ($ O(\sqrt{n} L) $).
 
 ### Duality in LP
 
-Primal: min $c^T x$, s.t. $Ax = b, x \geq 0$
-Dual: max $b^T y$, s.t. $A^T y \leq c$
+Primal: min $ c^T x $, s.t. $ Ax = b, x \geq 0 $
+Dual: max $ b^T y $, s.t. $ A^T y \leq c $
 
 ## 6. Geodesy Applications
 
 | Problem | Optimization Formulation |
 |---------|--------------------------|
 | **Least Squares Adjustment** | $\min \|Ax - b\|^2_{W} $ (weighted norm) |
-| **Constrained Adjustment** | LS + equality constraints $Cx = d$ |
+| **Constrained Adjustment** | LS + equality constraints $ Cx = d $ |
 | **Network Design** | Minimize $\text{tr}(Q_{xx}) $ subject to budget |
 | **Outlier Detection** | Minimize robust cost (Huber, Tukey) |
 | **GNSS Integer Ambiguity** | Integer least squares (LAMBDA method) |
@@ -171,14 +173,14 @@ Dual: max $b^T y$, s.t. $A^T y \leq c$
 
 | Method | Update | Best For |
 |--------|--------|----------|
-| **SGD** | $x_{k+1} = x_k - \alpha \nabla f_{i_k}(x_k)$ | Large-scale, ML |
-| **Momentum** | $v = \beta v + \nabla f; x = x - \alpha v$ | Accelerating SGD |
+| **SGD** | $ x_{k+1} = x_k - \alpha \nabla f_{i_k}(x_k) $ | Large-scale, ML |
+| **Momentum** | $ v = \beta v + \nabla f; x = x - \alpha v $ | Accelerating SGD |
 | **Adam** | Adaptive moment estimation | Deep learning default |
 | **L-BFGS** | Quasi-Newton, limited memory | Medium-scale smooth |
 
 ## Practice Problems
 
-1. Solve $\min x^2 + y^2 $subject to $ x + y = 1 $ using Lagrange multipliers.
+1. Solve $\min x^2 + y^2 $ subject to $ x + y = 1 $ using Lagrange multipliers.
 2. Derive the dual of $\min \|Ax - b\|^2 + \lambda \|x\|_1 $ (LASSO).
 3. Show that $ f(x) = \log \sum e^{x_i}$ is convex.
 4. Implement gradient descent for logistic regression.

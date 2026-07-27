@@ -34,7 +34,7 @@ Semester 5 is the most technically demanding semester, covering physical geodesy
 
 $$\nabla^2 W = -4\pi G\rho
 
-$$
+$ $
 
 - Normal gravity ([[GRS80]] Somigliana formula)
 - [[Geoid]] determination methods:

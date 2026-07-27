@@ -31,31 +31,35 @@ Analisis Fourier (Fourier Analysis) adalah cabang matematika yang mempelajari re
 
 ### 1.1 Definisi dan Konvergensi
 
-Untuk fungsi periodik $f(x) $dengan periode$2\pi$(atau$2L$), deret Fourier didefinisikan sebagai:
+Untuk fungsi periodik $f(x) $ dengan periode $2\pi$ (atau $2L$), deret Fourier didefinisikan sebagai:
 
-$$
+$ $
 
 f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} \left[ a_n \cos\left(\frac{n\pi x}{L}\right) + b_n \sin\left(\frac{n\pi x}{L}\right) \right
 ]
 
-$$ di mana koefisien Fourier dihitung dengan: $$ a_0 = \frac{1}{L} \int_{-L}^{L} f(x) \, dxa_n = \frac{1}{L} \int_{-L}^{L} f(x) \cos\left(\frac{n\pi x}{L}\right) \, dxb_n = \frac{1}{L} \int_{-L}^{L} f(x) \sin\left(\frac{n\pi x}{L}\right) \, dx $$ **Teorema Konvergensi Dirichlet:** Jika $f(x)$piecewise-continuous dan memiliki turunan piecewise-continuous pada $[-L, L]$, maka deret Fourier konvergen ke $f(x)$di titik kontinuitas, dan ke rata-rata limit kiri-kanan di titik diskontinuitas.
+$$
+
+di mana koefisien Fourier dihitung dengan: $ $ a_0 = \frac{1}{L} \int_{-L}^{L} f(x) \, dxa_n = \frac{1}{L} \int_{-L}^{L} f(x) \cos\left(\frac{n\pi x}{L}\right) \, dxb_n = \frac{1}{L} \int_{-L}^{L} f(x) \sin\left(\frac{n\pi x}{L}\right) \, dx $$ **Teorema Konvergensi Dirichlet:** Jika $ f(x) $piecewise-continuous dan memiliki turunan piecewise-continuous pada $ [-L, L] $, maka deret Fourier konvergen ke $ f(x)$di titik kontinuitas, dan ke rata-rata limit kiri-kanan di titik diskontinuitas.
 
 ### 1.2 Bentuk Eksponensial Kompleks
 
-Menggunakan rumus Euler $e^{i\theta} = \cos\theta + i\sin\theta$, deret Fourier dapat ditulis lebih ringkas:
+Menggunakan rumus Euler $e^{i\theta} = \cos\theta + i\sin\theta $, deret Fourier dapat ditulis lebih ringkas:
 
-$$
+$ $
 
 f(x) \sim \sum_{n=-\infty}^{\infty} c_n e^{i n \pi x / L
 }
 
-$$ dengan:$$ c_n = \frac{1}{2L} \int_{-L}^{L} f(x) e^{-i n \pi x / L} \, dx $$
+$$
+
+dengan:$ $ c_n = \frac{1}{2L} \int_{-L}^{L} f(x) e^{-i n \pi x / L} \, dx $$
 
 ### 1.3 Parseval's Identity (Identitas Parseval)
 
 Energi total sinyal dalam domain waktu sama dengan energi dalam domain frekuensi
 
-$$\frac{1}{2L} \int_{-L}^{L} |f(x)|^2 \, dx = \frac{|a_0|^2}{4} + \frac{1}{2} \sum_{n=1}^{\infty} (|a_n|^2 + |b_n|^2) = \sum_{n=-\infty}^{\infty} |c_n|^2
+$ $\frac{1}{2L} \int_{-L}^{L} |f(x)|^2 \, dx = \frac{|a_0|^2}{4} + \frac{1}{2} \sum_{n=1}^{\infty} (|a_n|^2 + |b_n|^2) = \sum_{n=-\infty}^{\infty} |c_n|^2
 
 $$
 
@@ -65,9 +69,9 @@ $$
 
 ### 2.1 Definisi untuk Sinyal Non-Periodik
 
-Untuk sinyal $f(t) \in L^1(\mathbb{R})$, transformasi Fourier dan inversnya:
+Untuk sinyal $f(t) \in L^1(\mathbb{R}) $, transformasi Fourier dan inversnya:
 
-$$\mathcal{F}\{f(t)\} = F(\omega) = \int_{-\infty}^{\infty} f(t) e^{-i\omega t} \, dt\mathcal{F}^{-1}\{F(\omega)\} = f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{i\omega t} \, d\omega
+$ $\mathcal{F}\{f(t)\} = F(\omega) = \int_{-\infty}^{\infty} f(t) e^{-i\omega t} \, dt\mathcal{F}^{-1}\{F(\omega)\} = f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{i\omega t} \, d\omega
 
 $$
 
@@ -75,48 +79,54 @@ $$
 
 | Sifat | Domain Waktu | Domain Frekuensi |
 |-------|--------------|------------------|
-| **Linearitas** | $a f(t) + b g(t)$ | $a F(\omega) + b G(\omega)$ |
-| **Pergeseran Waktu** | $f(t - t_0)$ | $e^{-i\omega t_0} F(\omega)$ |
-| **Pergeseran Frekuensi** | $e^{i\omega_0 t} f(t)$ | $F(\omega - \omega_0)$ |
-| **Skalasi** | $f(at)$ | $\frac{1}{|a|} F(\frac{\omega}{a}) $ |
-| **Diferensiasi** | $f'(t)$ | $i\omega F(\omega)$ |
+| **Linearitas** | $a f(t) + b g(t) $ | $ a F(\omega) + b G(\omega) $ |
+| **Pergeseran Waktu** | $ f(t - t_0) $ | $ e^{-i\omega t_0} F(\omega) $ |
+| **Pergeseran Frekuensi** | $ e^{i\omega_0 t} f(t) $ | $ F(\omega - \omega_0) $ |
+| **Skalasi** | $ f(at) $ | $\frac{1}{|a|} F(\frac{\omega}{a}) $ |
+| **Diferensiasi** | $ f'(t) $ | $ i\omega F(\omega) $ |
 | **Integrasi** | $\int_{-\infty}^t f(\tau) d\tau $|$\frac{F(\omega)}{i\omega} + \pi F(0)\delta(\omega) $ |
-| **Konvolusi** | $(f * g)(t)$ | $F(\omega) G(\omega)$ |
-| **Perkalian** | $f(t) g(t)$ | $\frac{1}{2\pi} (F * G)(\omega) $ |
+| **Konvolusi** | $ (f * g)(t) $ | $ F(\omega) G(\omega) $ |
+| **Perkalian** | $ f(t) g(t) $ | $\frac{1}{2\pi} (F * G)(\omega) $ |
 
 ### 2.3 Transformasi Fourier Diskrit (DFT)
 
-Untuk sinyal diskrit $x[n]$panjang $N$:
+Untuk sinyal diskrit $ x[n] $panjang $ N $:
 
-$$
+$ $
 
 X[k] = \sum_{n=0}^{N-1} x[n] e^{-i 2\pi k n / N}, \quad k = 0, 1, \dots, N-
 1
 
-$$ Invers DFT: $$ x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k] e^{i 2\pi k n / N}$$ ---
+$$
+
+Invers DFT: $ $ x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k] e^{i 2\pi k n / N}$$ ---
 
 ## 3. Fast Fourier Transform (FFT)
 
 ### 3.1 Algoritma Cooley-Tukey
 
-FFT mengurangi kompleksitas DFT dari $O(N^2)$menjadi $O(N \log N)$dengan memanfaatkan simetri dan periodisitas twiddle factors $W_N = e^{-i 2\pi / N}$.
+FFT mengurangi kompleksitas DFT dari $O(N^2) $ menjadi $O(N \log N) $ dengan memanfaatkan simetri dan periodisitas twiddle factors $W_N = e^{-i 2\pi / N} $.
 
 **Struktur Radix-2 DIT (Decimation-in-Time):**
 
-- Bagi $N $menjadi dua subsequences genap/ganjil
+- Bagi $ N $menjadi dua subsequences genap/ganjil
 
-- Rekursif hingga $N=2$(butterfly operation)
+- Rekursif hingga $ N=2 $(butterfly operation)
 
 - Gabungkan hasil dengan twiddle factors
 
 ### 3.2 Operasi Butterfly
 
-Untuk $N=2$:
+Untuk $ N=2 $:
 
-$$\begin{bmatrix} X[0] \\ X[1] \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \begin{bmatrix} x[0] \\ x[1] \end{bmatrix
+$ $\begin{bmatrix} X[0] \\ X[1] \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \begin{bmatrix} x[0] \\ x[1] \end{bmatrix
 }
 
-$$ Untuk umum:$$ X[k] = E[k] + W_N^k O[k]X[k + N/2] = E[k] - W_N^k O[k]$$ di mana$ E[k] $dan $O[k] $ adalah DFT subsequences genap dan ganjil.
+$$
+
+Untuk umum:$ $ X[k] = E[k] + W_N^k O[k]X[k + N/2] = E[k] - W_N^k O[k]$$
+
+di mana $ E[k] $ dan $O[k] $ adalah DFT subsequences genap dan ganjil.
 
 ### 3.3 Zero-Padding dan Spectral Leakage
 
@@ -153,15 +163,17 @@ f, Pxx = periodogram(north, fs=1.0, window='hann', scaling='spectrum')
 
 Total Electron Content (TEC) dari data GNSS dual-fase GNSS global dianalisis dengan Fourier 2D untuk memodelkan variasi spasial-temporal ionosfer
 
-$$\mathrm{TEC}(\phi, \lambda, t) \approx \sum_{m,n} C_{mn}(t) Y_{mn}(\phi, \lambda)
+$ $\mathrm{TEC}(\phi, \lambda, t) \approx \sum_{m,n} C_{mn}(t) Y_{mn}(\phi, \lambda)
 
-$$ di mana$ Y_{mn} $ adalah harmonik bola (spherical harmonics) — generalisasi Fourier ke bola.
+$$
+
+di mana $ Y_{mn} $ adalah harmonik bola (spherical harmonics) — generalisasi Fourier ke bola.
 
 ### 4.3 Desain Filter Digital
 
 Filter Butterworth/Chebyshev dirancang di domain frekuensi lalu diimplementasikan via IFFT
 
-$$ H(\omega) = \frac{1}{\sqrt{1 + (\omega/\omega_c)^{2n}}} \quad \text{(Butterworth low-pass)}$$
+$ $ H(\omega) = \frac{1}{\sqrt{1 + (\omega/\omega_c)^{2n}}} \quad \text{(Butterworth low-pass)}$$
 
 ### 4.4 Studi Kasus: Dekomposisi Gelombang Laut (Ocean Tide Analysis)
 
@@ -181,21 +193,23 @@ Data ketinggian air (tide gauge) 1 tahun dianalisis untuk ekstraksi konstituen a
 
 ## 5. Worked Example / Contoh Terstruktur
 
-### Soal: Hitung koefisien Fourier untuk $f(x) = x $pada $[-\pi, \pi]$**Langkah 1:** Identifikasi sifat fungsi.$f(x) = x$ adalah fungsi **ganjil** ($f(-x) = -f(x)$), sehingga $a_n = 0 $untuk semua $n$(termasuk $a_0$).
+### Soal: Hitung koefisien Fourier untuk $f(x) = x $ pada $[-\pi, \pi] $**Langkah 1:** Identifikasi sifat fungsi.$ f(x) = x $ adalah fungsi **ganjil** ($ f(-x) = -f(x) $), sehingga $ a_n = 0 $untuk semua $ n $(termasuk $ a_0 $).
 
-**Langkah 2:** Hitung $b_n$:
+**Langkah 2:** Hitung $ b_n $:
 
-$$ b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} x \sin(nx) \, dx $$ Integrasi parsial:$ u = x, dv = \sin(nx)dx \Rightarrow du = dx, v = -\frac{1}{n}\cos(nx) $
+$ $ b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} x \sin(nx) \, dx $$
 
-$$
+Integrasi parsial: $ u = x, dv = \sin(nx)dx \Rightarrow du = dx, v = -\frac{1}{n}\cos(nx) $
+
+$ $
 
 b_n = \frac{1}{\pi} \left[ -\frac{x}{n}\cos(nx) \Big|_{-\pi}^{\pi} + \frac{1}{n}\int_{-\pi}^{\pi} \cos(nx) \, dx \right]= \frac{1}{\pi} \left[ -\frac{\pi}{n}\cos(n\pi) + \frac{\pi}{n}\cos(-n\pi) + 0 \right]= \frac{2}{n} (-1)^{n+1
 }
 
-$$**Hasil:** $$ f(x) = 2 \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} \sin(nx) = 2\left(\sin x - \frac{\sin 2x}{2} + \frac{\sin 3x}{3} - \cdots\right
+$$**Hasil:** $ $ f(x) = 2 \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} \sin(nx) = 2\left(\sin x - \frac{\sin 2x}{2} + \frac{\sin 3x}{3} - \cdots\right
 )
 
-$$ **Verifikasi Parseval:** $$\frac{1}{2\pi}\int_{-\pi}^{\pi} x^2 dx = \frac{\pi^2}{3} = 2\sum_{n=1}^{\infty} \frac{1}{n^2} = 2 \cdot \frac{\pi^2}{6} \quad \checkmark
+$$ **Verifikasi Parseval:** $ $\frac{1}{2\pi}\int_{-\pi}^{\pi} x^2 dx = \frac{\pi^2}{3} = 2\sum_{n=1}^{\infty} \frac{1}{n^2} = 2 \cdot \frac{\pi^2}{6} \quad \checkmark
 
 $$ ---
 
@@ -216,8 +230,8 @@ $$ ---
 | Notasi | Artian |
 |--------|--------|
 | $\mathcal{F}, \mathcal{F}^{-1} $ | Transformasi Fourier & Invers |
-| $F(\omega), X[k]$ | Spektrum frekuensi (kontinu/diskrit) |
-| $W_N = e^{-i2\pi/N}$ | Twiddle factor FFT |
+| $ F(\omega), X[k] $ | Spektrum frekuensi (kontinu/diskrit) |
+| $ W_N = e^{-i2\pi/N} $ | Twiddle factor FFT |
 | $\delta(\omega) $ | Dirac delta function |
 | $*$ | Konvolusi |
 | $\star $ | Korelasi silang |

@@ -40,29 +40,29 @@ If $X_1, X_2, \dots $ are i.i.d. with $ E[X_i] = \mu $:
 
 $ $\frac{1}{n}\sum_{i=1}^{n} X_i \xrightarrow{p} \mu \quad ext{(Weak LLN)}
 
-$$
+$ $
 
 $ $\frac{1}{n}\sum_{i=1}^{n} X_i \xrightarrow{a.s.} \mu \quad ext{(Strong LLN)}
 
-$$
+$ $
 
 ### 2. Central Limit Theorem (CLT)
 
-If $ X_1, \dots, X_n $ are i.i.d. with $ E[X_i] = \mu $, $ext{Var}(X_i) = \sigma^2 $:
+If $ X_1, \dots, X_n $ are i.i.d. with $ E[X_i] = \mu $, $ ext{Var}(X_i) = \sigma^2 $:
 
 $ $\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \xrightarrow{d} N(0, 1)
 
-$$
+$ $
 
 More generally: $\sqrt{n}(\bar{X}_n - \mu) \xrightarrow{d} N(0, \sigma^2) $.
 
 ### 3. Cramér-Rao Inequality
 
-For any unbiased estimator $\hat{heta} $ of $heta $:
+For any unbiased estimator $\hat{heta} $ of $ heta $:
 
-$ $ext{Var}(\hat{heta}) \geq \frac{1}{nI(heta)}
+$ $ ext{Var}(\hat{heta}) \geq \frac{1}{nI(heta)}
 
-$$
+$ $
 
 where $ I(heta) = E\left[\left(\frac{artial}{artial heta} \log f(X;heta)\right)^2\right] $ is the **Fisher information**.
 
@@ -72,7 +72,7 @@ The most powerful test for $ H_0: heta = heta_0 $ vs $ H_1: heta = heta_1 $ reje
 
 $ $\frac{L(heta_1)}{L(heta_0)} > k
 
-$$
+$ $
 
 where $ L $ is the likelihood function and $ k $ is chosen to achieve significance level $\alpha $.
 
@@ -84,22 +84,22 @@ Given data $ x_1, \dots, x_n $:
 
 $ $\hat{heta}_{MLE} = \arg\max_{heta} L(heta) = \arg\max_{heta} rod_{i=1}^n f(x_i; heta)
 
-$$**Log-likelihood:**$\ell(heta) = \sum_{i=1}^n \log f(x_i; heta) $**Score equation:**$\frac{artial \ell}{artial heta} = 0 $
+$ $**Log-likelihood:**$\ell(heta) = \sum_{i=1}^n \log f(x_i; heta) $**Score equation:**$\frac{artial \ell}{artial heta} = 0 $
 
 ### Method of Moments (MOM)
 
 Set sample moments equal to population moments:
 
-$ $E[X^k] = \frac{1}{n}\sum_{i=1}^n X_i^k $$
+$ $ E[X^k] = \frac{1}{n}\sum_{i=1}^n X_i^k $ $
 
 ### Properties of Estimators
 
 | Property | Definition |
 |----------|-----------|
-| **Bias** | $ext{Bias}(\hat{heta}) = E[\hat{heta}] - heta $ |
+| **Bias** | $ ext{Bias}(\hat{heta}) = E[\hat{heta}] - heta $ |
 | **Consistency** | $\hat{heta} \xrightarrow{p} heta $ |
-| **Efficiency** | $ext{Var}(\hat{heta}) $ achieves Cramér-Rao bound |
-| **Sufficiency** | $ T(X) $ contains all info about $heta $ (Factorization Theorem) |
+| **Efficiency** | $ ext{Var}(\hat{heta}) $ achieves Cramér-Rao bound |
+| **Sufficiency** | $ T(X) $ contains all info about $ heta $ (Factorization Theorem) |
 
 ## 🧪 Hypothesis Testing
 
@@ -134,7 +134,7 @@ $ $E[X^k] = \frac{1}{n}\sum_{i=1}^n X_i^k $$
 
 $ $\hat{heta} m z_{\alpha/2} \cdot ext{SE}(\hat{heta})
 
-$$
+$ $
 
 ### Examples
 
@@ -142,21 +142,21 @@ $$
 
 $ $\bar{x} m z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}
 
-$$**Normal mean (unknown $\sigma $):**
+$ $**Normal mean (unknown $\sigma $):**
 
 $ $\bar{x} m t_{\alpha/2, n-1} \cdot \frac{s}{\sqrt{n}}
 
-$$**Variance:**$ $\frac{(n-1)s^2}{\chi^2_{\alpha/2, n-1}} < \sigma^2 < \frac{(n-1)s^2}{\chi^2_{1-\alpha/2, n-1}}
+$ $**Variance:**$ $\frac{(n-1)s^2}{\chi^2_{\alpha/2, n-1}} < \sigma^2 < \frac{(n-1)s^2}{\chi^2_{1-\alpha/2, n-1}}
 
-$$# 🔄 Bayesian Inference$ $
+$ $# 🔄 Bayesian Inference $ $
 
 # # 🔄 Bayesian Inferenceext{Posterior} ropto ext{Likelihood} imes ext{Prior}
 
-$$
+$ $
 
 $ $
 
-p(heta | x) = \frac{p(x | heta) p(heta)}{p(x)}$$
+p(heta | x) = \frac{p(x | heta) p(heta)}{p(x)}$ $
 
 **Conjugate priors:** Posterior is in same family as prior.
 
@@ -174,15 +174,15 @@ p(heta | x) = \frac{p(x | heta) p(heta)}{p(x)}$$
 
 $ $\ell(\mu, \sigma^2) = -\frac{n}{2}\log(2i) - \frac{n}{2}\log(\sigma^2) - \frac{1}{2\sigma^2}\sum(x_i - \mu)^2
 
-$$
+$ $
 
-Taking derivatives and setting to zero:$ $\frac{artial \ell}{artial \mu} = \frac{1}{\sigma^2}\sum(x_i - \mu) = 0 \implies \hat{\mu} = \bar{x}
+Taking derivatives and setting to zero: $ $\frac{artial \ell}{artial \mu} = \frac{1}{\sigma^2}\sum(x_i - \mu) = 0 \implies \hat{\mu} = \bar{x}
 
-$$
+$ $
 
 $ $\frac{artial \ell}{artial \sigma^2} = -\frac{n}{2\sigma^2} + \frac{1}{2(\sigma^2)^2}\sum(x_i - \mu)^2 = 0 \implies \hat{\sigma}^2 = \frac{1}{n}\sum(x_i - \bar{x})^2
 
-$$
+$ $
 
 ## 📐 Geodesy Application: Error Ellipses
 
@@ -190,9 +190,9 @@ For 2D position estimates $ (X, Y) $ with covariance matrix:
 
 $ $\Sigma = \begin{bmatrix} \sigma_X^2 & \sigma_{XY} \\ \sigma_{XY} & \sigma_Y^2 \end{bmatrix}
 
-$$
+$ $
 
-The error ellipse at confidence level $ P $ has semi-axes:$ $a, b = \sqrt{\lambda_{1,2} \cdot \chi^2_{2,P}}$$
+The error ellipse at confidence level $ P $ has semi-axes: $ $ a, b = \sqrt{\lambda_{1,2} \cdot \chi^2_{2,P}}$ $
 
 where $\lambda_1, \lambda_2 $ are eigenvalues of $\Sigma $.
 
@@ -202,7 +202,7 @@ where $\lambda_1, \lambda_2 $ are eigenvalues of $\Sigma $.
 2. **CLT:** Approximate $ P(\sum_{i=1}^{100} X_i > 55) $ where $ X_i \sim ext{Exp}(1) $.
 3. **Hypothesis Test:** Test $ H_0: \mu = 100 $ vs $ H_1: \mu > 100 $ with $ n=25, \bar{x}=103, s=8 $.
 4. **Confidence Interval:** Construct a 95% CI for the mean given $ n=30, \bar{x}=50, s=12 $.
-5. **Bayesian:** With prior $heta \sim ext{Beta}(2,3)$ and data 7 successes out of 20, find the posterior.
+5. **Bayesian:** With prior $ heta \sim ext{Beta}(2,3)$ and data 7 successes out of 20, find the posterior.
 
 ## 📖 References
 

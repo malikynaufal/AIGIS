@@ -377,14 +377,14 @@ $$
 f_ext{angular} = \sum\beta - (2n-4)imes90
 °
 
-$ $**Linear closure:**$$
+$ $**Linear closure:**$ $
 
 f_ext{linear} = \sqrt{f_x^2+f_y^2
 }
 
-$ $**Relative precision:**$$ ext{RP} = \frac{f_ext{linear}}{ext{perimeter}}
+$ $**Relative precision:**$ $ ext{RP} = \frac{f_ext{linear}}{ext{perimeter}}
 
-$ $10.2 GPS Coordinate Transformations
+$ $ 10.2 GPS Coordinate Transformations
 
 **UTM conversion:**
 ```python
@@ -399,7 +399,7 @@ def utm_to_latlon(easting, northing, zone, north, a=6378137, e=0.0818191908):
 **Trapezoid rule:*
 *
 
-$$## 10.2 GPS Coordinate Transformations
+$ $## 10.2 GPS Coordinate Transformations
 
 **UTM conversion:**
 ```python
@@ -415,7 +415,7 @@ def utm_to_latlon(easting, northing, zone, north, a=6378137, e=0.0818191908):
 *
 
 A = \frac{1}{2} \sum_{i=1}^{n} x_i y_{i+1} - x_{i+1} y_
-i$ $
+i $ $
 
 # ## 10.2 GPS Coordinate Transformations
 
@@ -433,7 +433,7 @@ def utm_to_latlon(easting, northing, zone, north, a=6378137, e=0.0818191908):
 *
 
 A = \frac{1}{2} \sum_{i=1}^{n} x_i y_{i+1} - x_{i+1} y_
-i**Trigonometric method:**$$
+i**Trigonometric method:**$ $
 
 A = \frac{1}{2} \sum d_i \sin\alpha_i $$
 

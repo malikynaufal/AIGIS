@@ -21,26 +21,26 @@ Advanced atmospheric physics (fisika atmosfer lanjutan) extends the foundational
 
 ### 1.1 The Radiative Transfer Equation
 
-The specific intensity $I_\nu $along a path $ s$ through the atmosphere satisfies $$ \frac{dI_\nu}{ds} = -\kappa_\nu I_\nu + j_\nu
+The specific intensity $I_\nu $ along a path $ s $ through the atmosphere satisfies $ $ \frac{dI_\nu}{ds} = -\kappa_\nu I_\nu + j_\nu
 
-$where $\kappa_\nu $is the absorption coefficient (koefisien absorpsi) and $j_\nu $is the emission coefficient. In terms of optical depth$ \tau_\nu$:
+$ where $\kappa_\nu $ is the absorption coefficient (koefisien absorpsi) and $j_\nu $ is the emission coefficient. In terms of optical depth $ \tau_\nu$:
 
-$$ \frac{dI_\nu}{d\tau_\nu} = I_\nu - S_\nu
+$ $ \frac{dI_\nu}{d\tau_\nu} = I_\nu - S_\nu
 
-$where $S_\nu = j_\nu / \kappa_\nu $is the source function (fungsi sumber). Under local thermodynamic equilibrium (LTE), $S_\nu = B_\nu(T) $is the Planck function.
+$ where $S_\nu = j_\nu / \kappa_\nu $ is the source function (fungsi sumber). Under local thermodynamic equilibrium (LTE), $S_\nu = B_\nu(T) $ is the Planck function.
 
 ### 1.2 Beer–Lambert Law and Optical Depth
 
-For a homogeneous layer of thickness$ \Delta z$:
+For a homogeneous layer of thickness $ \Delta z$:
 
-$$
+$ $
 
 I_\nu = I_{\nu,0} \exp(-\tau_\nu) = I_{\nu,0} \exp(-\kappa_\nu \cdot \rho \cdot \Delta z
 )
 
-$The optical depth is: $$
+$ The optical depth is: $$
 
-\tau_\nu = \int_0^z \kappa_\nu(z') \rho(z')\, dz' $$
+\tau_\nu = \int_0^z \kappa_\nu(z') \rho(z')\, dz' $ $
 
 ### 1.3 Thermal Radiation Budget
 
@@ -48,11 +48,11 @@ The outgoing longwave radiation (OLR) at the top of atmosphere is
 
 $$ \text{OLR} = \int_0^\infty \int_0^{2\pi} \int_0^{\pi/2} I_\nu \cos\theta \sin\theta \, d\theta \, d\phi \, d\nu
 
-$For a grey atmosphere with emissivity$ \varepsilon$:
+$For a grey atmosphere with emissivity $ \varepsilon$:
 
-$$ \text{OLR} = \varepsilon \sigma T_s^4
+$ $ \text{OLR} = \varepsilon \sigma T_s^4
 
-$where $\sigma = 5.67 \times 10^{-8} $W m⁻² K⁻⁴ is the Stefan–Boltzmann constant and $T_s $is surface temperature.
+$ where $\sigma = 5.67 \times 10^{-8} $ W m⁻² K⁻⁴ is the Stefan–Boltzmann constant and $T_s $ is surface temperature.
 
 | Radiation Component | Approximate Value (W/m²) |
 |---|---|
@@ -72,21 +72,21 @@ $where $\sigma = 5.67 \times 10^{-8} $W m⁻² K⁻⁴ is the Stefan–Boltzmann
 
 The Chapman cycle describes stratospheric ozone (ozon) formation and destruction:
 
-1. $O_2 + h\nu (\lambda < 242\;\text{nm}) \rightarrow 2O$ 2. $O + O_2 + M \rightarrow O_3 + M$ 3. $O_3 + h\nu \rightarrow O_2 + O$ 4. $O + O_3 \rightarrow 2O_2 $Catalytic destruction by $HO_x$, $NO_x$, and $ClO_x $species accelerates ozone loss. The steady-state ozone concentration is
+1. $O_2 + h\nu (\lambda < 242\;\text{nm}) \rightarrow 2O $ 2. $ O + O_2 + M \rightarrow O_3 + M $ 3. $ O_3 + h\nu \rightarrow O_2 + O $ 4. $ O + O_3 \rightarrow 2O_2 $Catalytic destruction by $ HO_x $, $ NO_x $, and $ ClO_x $species accelerates ozone loss. The steady-state ozone concentration is
 
-$$ [O_3]_{ss} = \frac{J_1 [O_2] [M]}{k_4 [O]} $$
+$ $ [O_3]_{ss} = \frac{J_1 [O_2] [M]}{k_4 [O]} $$
 
 ### 2.2 Greenhouse Gas Radiative Forcing
 
-The radiative forcing$ \Delta F $due to CO₂ concentration change is approximated $$ \Delta F = 5.35 \ln\left(\frac{C}{C_0}\right) \;\text{W/m}^2
+The radiative forcing $ \Delta F $ due to CO₂ concentration change is approximated $ $ \Delta F = 5.35 \ln\left(\frac{C}{C_0}\right) \;\text{W/m}^2
 
-$For a doubling from $C_0 = 280 $ppm to $C = 560 $ppm:$ \Delta F \approx 3.7 $W/m².
+$ For a doubling from $C_0 = 280 $ ppm to $C = 560 $ ppm: $ \Delta F \approx 3.7 $ W/m².
 
-For methane ($ \text{CH}_4$):
+For methane ($ \text{CH}_4 $):
 
-$$ \Delta F_{\text{CH}_4} = 0.036 \left(\sqrt{M} - \sqrt{M_0}\right) \;\text{W/m}^2
+$ $ \Delta F_{\text{CH}_4} = 0.036 \left(\sqrt{M} - \sqrt{M_0}\right) \;\text{W/m}^2
 
-$where $M$ is CH₄ concentration in ppb.
+$ where $M$ is CH₄ concentration in ppb.
 
 ---
 
@@ -96,9 +96,9 @@ $where $M$ is CH₄ concentration in ppb.
 
 GCMs solve the primitive equations of atmospheric dynamics on a discretized grid:
 
-**Momentum equations** (horizontal, $p$-coordinates):
+**Momentum equations** (horizontal, $p $-coordinates):
 
-$$ \frac{\partial u}{\partial t} = -(u \cdot \nabla) u + fv - \frac{\partial \Phi}{\partial x} + F_
+$ $ \frac{\partial u}{\partial t} = -(u \cdot \nabla) u + fv - \frac{\partial \Phi}{\partial x} + F_
 x
 
 **Thermodynamic equation:**
@@ -134,9 +134,9 @@ For Indonesia's complex archipelago, statistical and dynamical downscaling (penu
 
 In the tropics, organized deep convection (konveksi) transports heat and moisture vertically. The Arakawa–Schubert parameterization assumes quasi-equilibrium between convection and large-scale forcing
 
-$$ \frac{\partial \overline{q}}{\partial t} + \text{advection} = P - E + \int G(b_e) \Delta_q(b_e)\, db_e
+$ $ \frac{\partial \overline{q}}{\partial t} + \text{advection} = P - E + \int G(b_e) \Delta_q(b_e)\, db_e
 
-$where $G(b_e) $is the cloud work function and $\Delta_q $is moisture detrainment.
+$where $ G(b_e) $is the cloud work function and $\Delta_q $ is moisture detrainment.
 
 ### 4.2 Case Study: Indonesian Maritime Continent
 

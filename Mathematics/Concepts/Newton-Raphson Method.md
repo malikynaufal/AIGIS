@@ -15,9 +15,13 @@ updated: 2026-07-27
 
 Starting from Taylor expansion around $x_n $:
 
-$$ f(x_{n+1}) = f(x_n) + f'(x_n)(x_{n+1} - x_n) + O((x_{n+1}-x_n)^2)$$ Set$ f(x_{n+1}) = 0 $and neglect higher-order terms:$$0 \approx f(x_n) + f'(x_n)(x_{n+1} - x_n)$$ Solving for $ x_{n+1} $:
+$ $ f(x_{n+1}) = f(x_n) + f'(x_n)(x_{n+1} - x_n) + O((x_{n+1}-x_n)^2)$$
 
-$$ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
+Set $ f(x_{n+1}) = 0 $ and neglect higher-order terms:$ $0 \approx f(x_n) + f'(x_n)(x_{n+1} - x_n)$$
+
+Solving for $ x_{n+1} $:
+
+$ $ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
 
 ---
 
@@ -47,26 +51,28 @@ Raise "Did not converge"
 
 ### Quadratic Convergence
 
-If $f'(r) \neq 0$ and $f$ is $C^2$ near root $r$:
+If $ f'(r) \neq 0 $ and $ f $ is $ C^2 $ near root $ r $:
 
-$$|x_{n+1} - r| \approx \frac{|f''(r)|}{2|f'(r)|} |x_n - r|^2
+$ $|x_{n+1} - r| \approx \frac{|f''(r)|}{2|f'(r)|} |x_n - r|^2
 
-$$ Error squares each iteration — **doubles correct digits**.
+$$
+
+Error squares each iteration — **doubles correct digits**.
 
 ### Conditions for Quadratic Convergence
 
 | Condition | Why |
 |-----------|-----|
-| $f'(r) \neq 0$ | Simple root (not multiple) |
-| $f \in C^2$ | Second derivative exists |
-| $x_0$ sufficiently close | Basin of attraction |
+| $ f'(r) \neq 0 $ | Simple root (not multiple) |
+| $ f \in C^2 $ | Second derivative exists |
+| $ x_0 $ sufficiently close | Basin of attraction |
 | $ f'$ bounded away from 0 | No flat spots near root |
 
 ### Multiple Roots
 
-If $f(x) = (x-r)^m g(x)$ with $g(r) \neq 0$:
-- Convergence becomes **linear** with rate $1 - \frac{1}{m}$
-- Modified Newton: $x_{n+1} = x_n - m \frac{f(x_n)}{f'(x_n)}$ restores quadratic
+If $ f(x) = (x-r)^m g(x) $ with $ g(r) \neq 0 $:
+- Convergence becomes **linear** with rate $ 1 - \frac{1}{m} $
+- Modified Newton: $ x_{n+1} = x_n - m \frac{f(x_n)}{f'(x_n)} $ restores quadratic
 
 ---
 
@@ -74,9 +80,9 @@ If $f(x) = (x-r)^m g(x)$ with $g(r) \neq 0$:
 
 | Failure Mode | Cause | Fix |
 |--------------|-------|-----|
-| Divergence | $x_0$ outside basin of attraction | Hybrid methods, better initial guess |
+| Divergence | $ x_0 $ outside basin of attraction | Hybrid methods, better initial guess |
 | Oscillation | $ f'$ near zero, periodic function | Damping, secant fallback |
-| Division by zero | $f'(x_n) = 0$ | Check derivative, perturb |
+| Division by zero | $ f'(x_n) = 0 $ | Check derivative, perturb |
 | Slow convergence | Multiple root | Modified Newton, or use deflation |
 
 ---
@@ -84,9 +90,9 @@ If $f(x) = (x-r)^m g(x)$ with $g(r) \neq 0$:
 ## 5. Geometric Interpretation
 
 Each iteration:
-1. Draw tangent line to $f(x)$ at $(x_n, f(x_n))$
+1. Draw tangent line to $ f(x) $ at $ (x_n, f(x_n)) $
 2. Find where tangent crosses x-axis
-3. That x-intercept is $x_{n+1}$
+3. That x-intercept is $ x_{n+1} $
 
 ```mermaid
 graph LR
@@ -101,11 +107,13 @@ graph LR
 
 ## 6. Multidimensional Newton
 
-For system $F(x) = 0$ where $F: \mathbb{R}^n \to \mathbb{R}^n$:
+For system $ F(x) = 0 $ where $ F: \mathbb{R}^n \to \mathbb{R}^n $:
 
-$$ x_{k+1} = x_k - J_F(x_k)^{-1} F(x_k)$$ where $ J_F $is the$ n \times n $ Jacobian matrix.
+$ $ x_{k+1} = x_k - J_F(x_k)^{-1} F(x_k)$$
 
-**Cost:** $O(n^3)$ per iteration for linear solve — use quasi-Newton (Broyden) for large $n$.
+where $ J_F $ is the $ n \times n $ Jacobian matrix.
+
+**Cost:** $ O(n^3) $ per iteration for linear solve — use quasi-Newton (Broyden) for large $ n $.
 
 ---
 
@@ -151,7 +159,9 @@ Solving for translation, rotation, scale:
 
 ### GNSS Pseudorange Linearization
 
-$$ f(\mathbf{x}) = \sqrt{(x-x_i)^2 + (y-y_i)^2 + (z-z_i)^2} - \rho_i $$ Newton-Raphson on system of 4+ satellites for positioning.
+$ $ f(\mathbf{x}) = \sqrt{(x-x_i)^2 + (y-y_i)^2 + (z-z_i)^2} - \rho_i $$
+
+Newton-Raphson on system of 4+ satellites for positioning.
 
 ---
 

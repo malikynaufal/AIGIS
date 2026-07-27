@@ -27,7 +27,9 @@ Application of [[GIS]], [[Remote Sensing]], and geodetic monitoring to natural d
 ### 2. Risk Assessment
 
 $$
+
 \text{Risk} = \text{Hazard} \times \text{Vulnerability} \times \text{Exposure}
+
 $$
 
 ### 3. Hazard Types

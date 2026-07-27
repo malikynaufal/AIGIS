@@ -50,12 +50,12 @@ $ -\hbar ^2/(2m) d^2ψ/dx^2 + Vψ = Eψ$
 
 - **Infinite square well (particle in a box):**
  ψ_n(x) = √(2/L) sin(nπx/L)
-$ E_$n = n$^2\pi ^2\hbar ^2/(2mL^2)$
+$ E_$ n = n $^2\pi ^2\hbar ^2/(2mL^2) $
 
 - **Finite potential well:** tunneling solutions
 
 - **Harmonic oscillator:**
-$ ψ_n(x) = H_n(x) exp(-mωx^2/(2\hbar ))$
+$ ψ_n(x) = H_n(x) exp(-mωx^2/(2\hbar )) $
 $ E_n = (n+½)\hbar ω$
 
 - **Step potentials** and scattering/reflection
@@ -101,14 +101,14 @@ $ E_n = (n+½)\hbar ω$
 
 ## 🔬 Key Equations
 
-$Schrödinger (time-dependent): i\hbar \partial ψ/\partial t = Ĥψ$
+$ Schrödinger (time-dependent): i\hbar \partial ψ/\partial t = Ĥψ$
 Schrödinger (time-independent): Ĥψ = Eψ
-$Uncertainty: Δx·Δp ≥ \hbar /2$
+$ Uncertainty: Δx·Δp ≥ \hbar /2 $
 de Broglie: λ = h/p
-$Harmonic oscillator: E_n = (n+½)\hbar ω$
+$ Harmonic oscillator: E_n = (n+½)\hbar ω$
 Hydrogen atom: E_n = -13.6 eV / n²
-$Angular momentum: L^2 = l(l+1)\hbar ^2$
-$Commutator: [x, p] = i\hbar $
+$ Angular momentum: L^2 = l(l+1)\hbar ^2 $
+$ Commutator: [x, p] = i\hbar $
 
 ---
 

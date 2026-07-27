@@ -105,8 +105,8 @@ Bisection: bracket root, halve interval each step
 Newton-Raphson: x_{n+1} = x_n - f(x_n)/f'(x_n) (quadratic convergence)
 Euler (ODE): y_{n+1} = y_n + h·f(x_n, y_n) (first-order)
 RK4 (ODE): see formulas above (fourth-order, O(h⁴) local error)
-$Trapezoidal: \int f dx ≈ Δx/2 · (f₀ + 2f₁ + 2f₂ + ... + f_N)$
-$Simpson: \int f dx ≈ Δx/3 · (f₀ + 4f₁ + 2f₂ + 4f₃ + ... + f_N)$
+$Trapezoidal: \int f dx ≈ Δx/2 · (f₀ + 2f₁ + 2f₂ + ... + f_N) $
+$ Simpson: \int f dx ≈ Δx/3 · (f₀ + 4f₁ + 2f₂ + 4f₃ + ... + f_N)$
 Monte Carlo: I ≈ (b-a)/N · Σ f(x_i), x_i ~ Uniform(a,b)
 
 ---

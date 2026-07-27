@@ -90,7 +90,7 @@ Teknik kuantitatif dan kualitatif untuk analisis data:
 
 - Validasi model: RMSE, MAE,$ R^2 $
 
-$ $RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i - y_i)^2}I = \frac{n}{S_0}\frac{\sum_i\sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2}$$
+$ $ RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i - y_i)^2}I = \frac{n}{S_0}\frac{\sum_i\sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2}$$
 
 ### Modul 6: Penulisan Ilmiah
 Komposisi karya tulis ilmiah yang terstandar:

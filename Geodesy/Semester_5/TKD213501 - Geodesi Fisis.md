@@ -14,7 +14,7 @@ Geodesi Fisis mempelajari gravitasi Bumi, permukaan equipotensial (geoid), dan k
 
 - **Gravitasi potensial** $W = U + T $:
 
-$ $W(\mathbf{r}) = \frac{GM}{r} + \frac{1}{2}J_2\frac{GMa^2}{r^3}(1-3\sin^2\varphi) + ext{harmonic terms} + T(\mathbf{r})$$-$ U $= normal potential (ellipsoid)
+$ $ W(\mathbf{r}) = \frac{GM}{r} + \frac{1}{2}J_2\frac{GMa^2}{r^3}(1-3\sin^2\varphi) + ext{harmonic terms} + T(\mathbf{r})$ $-$ U $= normal potential (ellipsoid)
 -$ T $= disturbing potential (anomalous)
 
 ### 2. Gravity Anomalies
@@ -24,7 +24,7 @@ $ $W(\mathbf{r}) = \frac{GM}{r} + \frac{1}{2}J_2\frac{GMa^2}{r^3}(1-3\sin^2\varp
 - **Isostatic anomaly**: $\Delta g_I = \Delta g_B + \delta g_{ext{compensation}} $### 3. Stokes' Integra
 l
 
-$ $N = \frac{R}{4i\gamma}\iint_{\sigma} S(si)\Delta g(\varphi',\lambda')\,d\sigma $$
+$ $ N = \frac{R}{4i\gamma}\iint_{\sigma} S(si)\Delta g(\varphi',\lambda')\,d\sigma $ $
 
 - Dirjenjikan langsung dari anomali gravitasi → geoid undulation
 

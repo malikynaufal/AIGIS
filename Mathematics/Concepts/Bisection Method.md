@@ -13,9 +13,9 @@ updated: 2026-07-27
 
 ## 1. The Idea
 
-To find a root of $f(x) = 0 $on an interval$ [a, b] $where $ f(a)f(b) < 0 $ (sign change):
+To find a root of $f(x) = 0 $ on an interval $ [a, b] $ where $ f(a)f(b) < 0 $ (sign change):
 
-1. Evaluate midpoint $c = \frac{a+b}{2}$
+1. Evaluate midpoint $ c = \frac{a+b}{2} $
 2. Check which subinterval has the sign change
 3. Repeat on that subinterval
 
@@ -50,21 +50,23 @@ Return c (approximate root)
 
 ### Error Bound
 
-After $n$ iterations:
+After $ n $ iterations:
 
-$$|c_n - r| \leq \frac{b - a}{2^n}
+$ $|c_n - r| \leq \frac{b - a}{2^n}
 
-$$ where $ r $ is the true root.
+$$
+
+where $ r $ is the true root.
 
 ### Iterations for Desired Accuracy
 
 To achieve error $< \varepsilon $:
 
-$$ n \geq \frac{\log(b-a) - \log(\varepsilon)}{\log 2}$$
+$ $ n \geq \frac{\log(b-a) - \log(\varepsilon)}{\log 2}$$
 
 ### Rate
 
-- **Linear convergence** (rate $1/2$)
+- **Linear convergence** (rate $ 1/2 $)
 - One bit of accuracy per iteration
 - Slower than Newton, but **unconditionally convergent**
 
@@ -74,7 +76,7 @@ $$ n \geq \frac{\log(b-a) - \log(\varepsilon)}{\log 2}$$
 
 | Method | Convergence | Requirements | Reliability |
 |--------|-------------|--------------|-------------|
-| Bisection | Linear ($1/2$) | Sign change only | **Guaranteed** |
+| Bisection | Linear ($ 1/2 $) | Sign change only | **Guaranteed** |
 | Newton | Quadratic | $ f'$ known, good guess | Can diverge |
 | Secant | Superlinear (1.618) | Two initial guesses | No guarantee |
 | Brent | Superlinear | Bracketing interval | Best of both worlds |

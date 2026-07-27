@@ -35,7 +35,7 @@ A geodetic datum specifies:
 |-----------|-------|
 | Ellipsoid | GRS80-based |
 | Semi-major axis $a $ | 6,378,137.0 m (exact) |
-| Flattening $f$ | 1/298.257223563 |
+| Flattening $ f $ | 1/298.257223563 |
 | Origin | Earth's center of mass (geocentric) |
 | Z-axis | Conventional Terrestrial Pole (CTP) |
 | X-axis | Intersection of CTP and Greenwich meridian |
@@ -48,21 +48,21 @@ A geodetic datum specifies:
 ### 7-Parameter Helmert Transformatio
 n
 
-$$\begin{bmatrix} X_T \\ Y_T \\ Z_T \end{bmatrix} = \begin{bmatrix} 1 & -r_Z & r_Y \\ r_Z & 1 & -r_X \\ -r_Y & r_X & 1 + \delta\mu \end{bmatrix} \begin{bmatrix} X_s \\ Y_s \\ Z_s \end{bmatrix} + \begin{bmatrix} T_X \\ T_Y \\ T_Z \end{bmatrix} $$
+$ $\begin{bmatrix} X_T \\ Y_T \\ Z_T \end{bmatrix} = \begin{bmatrix} 1 & -r_Z & r_Y \\ r_Z & 1 & -r_X \\ -r_Y & r_X & 1 + \delta\mu \end{bmatrix} \begin{bmatrix} X_s \\ Y_s \\ Z_s \end{bmatrix} + \begin{bmatrix} T_X \\ T_Y \\ T_Z \end{bmatrix} $$
 
 | Parameter | Meaning | Unit |
 |-----------|----------|------|
-| $T_X, T_Y, T_Z$ | Translation | m |
-| $r_X, r_Y, r_Z$ | Rotation | arcseconds |
+| $ T_X, T_Y, T_Z $ | Translation | m |
+| $ r_X, r_Y, r_Z $ | Rotation | arcseconds |
 | $\delta\mu $ | Scale change | ppm |
 
 ### Molodensky Transformation (Geodetic)
 
-Works directly in geodetic coordinates $(\phi, \lambda, h)$ without converting to ECEF. More practical for small-area transformations.
+Works directly in geodetic coordinates $ (\phi, \lambda, h) $ without converting to ECEF. More practical for small-area transformations.
 
 **Formulas** (simplified):
 
-$$\Delta\phi = \frac{1}{M}\left[-a_X\cos\phi\sin\lambda + a_Y\cos\phi\cos\lambda + a_Z\sin\phi\right]\Delta\lambda = \frac{1}{N\cos\phi}\left[-a_X\sin\lambda + a_Y\cos\lambda\right]\Delta h = -a_X\cos\phi\cos\lambda - a_Y\cos\phi\sin\lambda + a_Z\sin\phi + \text{scale terms} $$---
+$ $\Delta\phi = \frac{1}{M}\left[-a_X\cos\phi\sin\lambda + a_Y\cos\phi\cos\lambda + a_Z\sin\phi\right]\Delta\lambda = \frac{1}{N\cos\phi}\left[-a_X\sin\lambda + a_Y\cos\lambda\right]\Delta h = -a_X\cos\phi\cos\lambda - a_Y\cos\phi\sin\lambda + a_Z\sin\phi + \text{scale terms} $$---
 
 ## Common Datums
 
@@ -102,8 +102,8 @@ $$\Delta\phi = \frac{1}{M}\left[-a_X\cos\phi\sin\lambda + a_Y\cos\phi\cos\lambda
 
 | Parameter | Value |
 |-----------|-------|
-| $T_X, T_Y, T_Z$ | ~0 m (nearly identical) |
-| $r_X, r_Y, r_Z$ | ~0–1 arcsec |
+| $ T_X, T_Y, T_Z $ | ~0 m (nearly identical) |
+| $ r_X, r_Y, r_Z $ | ~0–1 arcsec |
 | $\delta\mu $ | ~0 ppm |
 
 In practice, for many applications, WGS84 ≈ DGN95 (difference < 0.1 m).

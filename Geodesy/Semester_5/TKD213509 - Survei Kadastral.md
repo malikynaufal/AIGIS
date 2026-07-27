@@ -113,9 +113,9 @@ Boundary determination is based on **5 evidences** (*5 alat bukti*), listed in o
 
 For each boundary point, observe angles to two or more known points:
 
-$$ d = \frac{a \cdot \sin A}{\sin(A+B+C)}$ $
+$$ d = \frac{a \cdot \sin A}{\sin(A+B+C)} $ $
 
-where $ a $ is the distance between known points, and $A, B, C $ are the observed angles.
+where $ a $ is the distance between known points, and $ A, B, C $ are the observed angles.
 
 **Advantages:** Does not require linear measurement, efficient for urban parcels
 **Disadvantages:** Requires line-of-sight, error propagation
@@ -129,14 +129,14 @@ $ $
 x_B = x_A + d \cdot \cos\alphay_B = y_A + d \cdot \sin\alph
 a
 
-$$**Angular misclosure check:**$ $
+$ $**Angular misclosure check:**$ $
 
 f_{ext{angular}} = \sum\beta - (2n - 4) \cdot 90
 °
 
-$$**Linear misclosure:**$ $
+$ $**Linear misclosure:**$ $
 
-f_{ext{linear}} = \sqrt{(f_x)^2 + (f_y)^2}ext{Relative precision} = \frac{f_{ext{linear}}}{ext{perimeter}}$$**Required precision for cadastral surveys:**
+f_{ext{linear}} = \sqrt{(f_x)^2 + (f_y)^2}ext{Relative precision} = \frac{f_{ext{linear}}}{ext{perimeter}}$ $**Required precision for cadastral surveys:**
 | Survey Class | Relative Precision |
 |-------------|-------------------|
 | Class I (urban) | 1:20,000 or better |
@@ -162,19 +162,19 @@ Direct positioning of boundary points using GNSS:
 
 $ $
 
-A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i) \right|$$
+A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i) \right|$ $
 
 **Requirements:**
 
 - Coordinates must be in a local or UTM system
 
 - Points must be in sequence (clockwise or counterclockwise)
--$ x_{n+1} = x_1 $, $ y_{n+1} = y_1 $(closing the polygon)
+-$ x_{n+1} = x_1 $, $ y_{n+1} = y_1 $ (closing the polygon)
 
 #### Measured Distance Metho
 d
 
-$ $A = \frac{1}{2} \sum_{i=1}^{n} d_i \cdot \sin\alpha_i $$
+$ $ A = \frac{1}{2} \sum_{i=1}^{n} d_i \cdot \sin\alpha_i $ $
 
 where $ d_i $ is the measured distance and $\alpha_i $ is the internal angle.
 
@@ -257,7 +257,7 @@ Land redistribution program that targets:
 ### 6.3 Map Standard Specification
 s
 
-$ $ext{Plan accuracy} = \frac{ext{Plan accuracy (cm)}}{ext{Map scale denominator}} imes 100 = ext{cm per meter} $$
+$ $ ext{Plan accuracy} = \frac{ext{Plan accuracy (cm)}}{ext{Map scale denominator}} imes 100 = ext{cm per meter} $ $
 
 Example: 1:1000 scale with ±5 cm plan accuracy = 0.05 cm/100 cm = 0.05%
 

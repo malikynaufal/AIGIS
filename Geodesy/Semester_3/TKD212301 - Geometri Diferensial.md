@@ -24,13 +24,13 @@ Dalam konteks geodesi, geometri differensial digunakan untuk memahami bentuk bum
 
 - **Tensor metrik pertama** (first fundamental form)
 
-$ $I = ds^2 = E\,du^2 + 2F\,du\,dv + G\,dv^2 $$- **Tensor metrik kedua** (second fundamental form)
+$ $ I = ds^2 = E\,du^2 + 2F\,du\,dv + G\,dv^2 $ $- **Tensor metrik kedua** (second fundamental form)
 
 $ $
 
-II = L\,du^2 + 2M\,du\,dv + N\,dv^2 $$- **Kurevatur Gaussian** dari tensor metrik
+II = L\,du^2 + 2M\,du\,dv + N\,dv^2 $ $- **Kurevatur Gaussian** dari tensor metrik
 
-$ $K = \frac{LN-M^2}{EG-F^2}$$
+$ $ K = \frac{LN-M^2}{EG-F^2}$ $
 
 - **Koneksi Levi-Civita** dan simbol Christoffel
 

@@ -25,14 +25,18 @@ Spatial Data Structures covers the representation, storage, and management of sp
 
 ### 2. Spatial Indexing
 
-**R-tree:** $O(\log N)$ search, $O(N \log N)$ build
+**R-tree:** $O(\log N) $ search, $ O(N \log N) $ build
 
-$$
+$ $
+
 \text{MBB}(R_i) = (x_{\min}, y_{\min}, x_{\max}, y_{\max}) \quad \text{(Minimum Bounding Rectangle)}
+
 $$
 
 **Grid index:**
-$$ x_{cell} = \left\lfloor x / w_{cell} \right\rfloor, \quad y_{cell} = \left\lfloor y / h_{cell} \right\rfloor
+
+$ $ x_{cell} = \left\lfloor x / w_{cell} \right\rfloor, \quad y_{cell} = \left\lfloor y / h_{cell} \right\rfloor
+
 $$
 
 ### 3. Topological Data Structures
@@ -45,8 +49,11 @@ $$
 | Order | Directional relationships | River networks |
 
 **Planar enforcement:** All polygon boundaries are shared between features:
-$$
+
+$ $
+
 \bigcup A_i = \text{complete coverage}, \quad A_i \cap A_j = \emptyset \quad (i \neq j)
+
 $$
 
 ### 4. Raster Data

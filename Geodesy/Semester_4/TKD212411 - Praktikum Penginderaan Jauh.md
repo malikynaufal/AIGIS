@@ -36,7 +36,7 @@ $$
 L_{corrected} = \frac{L_{sensor} - L_{min}}{L_{max} - L_{min}} imes (Digital Number_{max} - Digital Number_{min}
 )
 
-$ $2. Geometric Correction $$
+$ $ 2. Geometric Correction $ $
 
 # 2. Geometric Correction
 
@@ -45,7 +45,7 @@ $ $2. Geometric Correction $$
 \begin{bmatrix} X_{ground} \\ Y_{ground} \end{bmatrix} = \begin{bmatrix} a_1 & a_2 \\ b_1 & b_2 \end{bmatrix} \begin{bmatrix} X_{pixel} \\ Y_{pixel} \end{bmatrix} + \begin{bmatrix} a_3 \\ b_3 \end{bmatrix
 }
 
-$ $3. Atmospheric Correction $$
+$ $ 3. Atmospheric Correction $ $
 
 # 3. Atmospheric Correction
 
@@ -69,7 +69,7 @@ Klasifikasi mengelompokkan piksel berdasarkan karakteristik spektral:
 ### Accuracy Assessment
 Evaluasi akurasi menggunakan confusion matrix:
 
-$$## Klasifikasi Citra
+$ $## Klasifikasi Citra
 Klasifikasi mengelompokkan piksel berdasarkan karakteristik spektral:
 
 1. **Supervised Classification**

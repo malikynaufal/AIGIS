@@ -23,12 +23,12 @@ Advanced GNSS technology (teknologi GNSS lanjutan) builds on fundamental satelli
 
 ### 1.1 Signal Structure
 
-Each GNSS satellite broadcasts on multiple carrier frequencies. The observables (pengamatan) for a receiver at epoch $t$ include:
+Each GNSS satellite broadcasts on multiple carrier frequencies. The observables (pengamatan) for a receiver at epoch $t $ include:
 
 **Carrier phase (fase pembawa):*
 *
 
-$$ \Phi_{L_i}(t) = \rho(t) + c\left[\delta t_r(t) - \delta t^s(t)\right] + \lambda_i N_i - I_{L_i}(t) + T(t) + \epsilon_{\Phi,i
+$ $ \Phi_{L_i}(t) = \rho(t) + c\left[\delta t_r(t) - \delta t^s(t)\right] + \lambda_i N_i - I_{L_i}(t) + T(t) + \epsilon_{\Phi,i
 }
 
 **Pseudorange (semua jarak):**
@@ -44,15 +44,19 @@ P_{L_i}(t) = \rho(t) + c\left[\delta t_r(t) - \delta t^s(t)\right] + I_{L_i}(t) 
 
 ### 1.2 Ionosphere-Free Linear Combination
 
-The first-order ionospheric delay is frequency-dependent ( $I \propto f^{-2}$). The ionosphere-free combination eliminates >99.9% of the ionospheric error:
+The first-order ionospheric delay is frequency-dependent ( $I \propto f^{-2} $). The ionosphere-free combination eliminates >99.9% of the ionospheric error:
 
-$$ \Phi_{IF} = \frac{f_1^2 \Phi_1 - f_2^2 \Phi_2}{f_1^2 - f_2^2} $$ This combination is standard for precise orbit determination and PPP, but amplifies measurement noise by a factor $ \approx 2.98 $for GPS L1/L2.
+$ $ \Phi_{IF} = \frac{f_1^2 \Phi_1 - f_2^2 \Phi_2}{f_1^2 - f_2^2} $$
+
+This combination is standard for precise orbit determination and PPP, but amplifies measurement noise by a factor $ \approx 2.98 $ for GPS L1/L2.
 
 ### 1.3 Wide-Lane and Narrow-Lane Combinations
 
-**Wide-lane** ($\lambda_{WL} \approx 86.2 $cm for GPS): $$ \Phi_{WL} = \Phi_1 - \Phi_2, \quad \lambda_{WL} = \frac{c}{f_1 - f_2} $$
+**Wide-lane** ($\lambda_{WL} \approx 86.2 $ cm for GPS): $ $ \Phi_{WL} = \Phi_1 - \Phi_2, \quad \lambda_{WL} = \frac{c}{f_1 - f_2} $$
 
-**Narrow-lane** ($\lambda_{NL} \approx 10.7 $cm) $$ \Phi_{NL} = \frac{f_1 \Phi_1 + f_2 \Phi_2}{f_1 + f_2}, \quad \lambda_{NL} = \frac{c}{f_1 + f_2} $$ The wide-lane ambiguity $$ N_{WL} = N_1 - N_2 $is easier to resolve due to its long wavelength and is often solved first in the ambiguity resolution cascade.$
+**Narrow-lane** ($\lambda_{NL} \approx 10.7 $ cm) $ $ \Phi_{NL} = \frac{f_1 \Phi_1 + f_2 \Phi_2}{f_1 + f_2}, \quad \lambda_{NL} = \frac{c}{f_1 + f_2} $$
+
+The wide-lane ambiguity $ $ N_{WL} = N_1 - N_2 $ is easier to resolve due to its long wavelength and is often solved first in the ambiguity resolution cascade.$
 
 ---
 
@@ -62,9 +66,11 @@ $$ \Phi_{IF} = \frac{f_1^2 \Phi_1 - f_2^2 \Phi_2}{f_1^2 - f_2^2} $$ This combina
 
 PPP uses a single receiver with precise satellite orbit and clock products (from IGS) to achieve cm-level positioning. The undifferenced phase observation
 
-$$ \Phi = \rho + c(\delta t_r - \delta t^s) + T - I + N\lambda + \text{tides} + \text{PCO/PCV} + \epsilon
+$ $ \Phi = \rho + c(\delta t_r - \delta t^s) + T - I + N\lambda + \text{tides} + \text{PCO/PCV} + \epsilon
 
-$$ Key corrections (koreksi) applied:
+$$
+
+Key corrections (koreksi) applied:
 
 | Correction (Koreksi) | Source | Magnitude |
 |---|---|---|
@@ -89,9 +95,9 @@ PPP requires a convergence period (waktu konvergensi) for integer ambiguities an
 
 A permanent GNSS station at Jakarta coast (BIG站 CUTO) is processed in PPP mode using the CSRS-PPP service (Natural Resources Canada). Over 5 years of daily PPP solutions:
 
-- Horizontal velocity: $v_E = 32.4 \pm 1.2 $mm/yr, $v_N = -5.1 \pm 1.5 $mm/yr
+- Horizontal velocity: $v_E = 32.4 \pm 1.2 $ mm/yr, $v_N = -5.1 \pm 1.5 $ mm/yr
 
-- Vertical velocity: $v_U = -4.8 \pm 2.1 $mm/yr (including subsidence)
+- Vertical velocity: $v_U = -4.8 \pm 2.1 $ mm/yr (including subsidence)
 
 - Corrected relative sea-level rise: ~7 mm/yr (combining land subsidence + eustatic rise)
 
@@ -101,11 +107,11 @@ A permanent GNSS station at Jakarta coast (BIG站 CUTO) is processed in PPP mode
 
 ### 3.1 Differential Observation Equations
 
-RTK uses a base station (stasiun base) and rover separated by $<40 $km. Single-differenced (antenna-to-antenna) observations eliminate satellite clock errors $$ \Delta\Phi_{ij}^k = \Delta\rho_{ij}^k + T_{ij}^k - I_{ij}^k + \lambda N_{ij}^k + \epsilon
+RTK uses a base station (stasiun base) and rover separated by $<40 $ km. Single-differenced (antenna-to-antenna) observations eliminate satellite clock errors $ $ \Delta\Phi_{ij}^k = \Delta\rho_{ij}^k + T_{ij}^k - I_{ij}^k + \lambda N_{ij}^k + \epsilon
 
-$Double-differencing (satellite-to-satellite) also eliminates receiver clock $$ \nabla\Delta\Phi = \nabla\Delta\rho + \nabla\Delta T - \nabla\Delta I + \lambda \nabla\Delta N + \epsilon$
+$ Double-differencing (satellite-to-satellite) also eliminates receiver clock $$ \nabla\Delta\Phi = \nabla\Delta\rho + \nabla\Delta T - \nabla\Delta I + \lambda \nabla\Delta N + \epsilon $
 
-$$
+$ $
 
 ### 3.2 RTK Positioning Precision
 
@@ -128,9 +134,9 @@ Network RTK interpolates atmospheric corrections from a CORS network (jaringan C
 
 The most widely used method for integer ambiguity resolution (IAR) is the Least-squares AMBiguity Decorrelation Adjustment (LAMBDA):
 
-1. **Float solution**: Solve$ \hat{a}_f $ and $\Sigma_{\hat{a}}$ in the real domain
-2. **Decorrelation**: Transform$ \hat{z} = U^{-1}\hat{a}_f $using Z-transform to decorrelate ambiguities
-3. **Integer search**: Search integer grid points near$ \hat{z}$within an ellipsoidal confidence region $$ \chi^2 = (\hat{z} - z)^T Q_{\hat{z}}^{-1}(\hat{z} - z) \leq \chi^2_{\alpha} $$
+1. **Float solution**: Solve $ \hat{a}_f $ and $\Sigma_{\hat{a}} $ in the real domain
+2. **Decorrelation**: Transform$ \hat{z} = U^{-1}\hat{a}_f $ using Z-transform to decorrelate ambiguities
+3. **Integer search**: Search integer grid points near $ \hat{z}$ within an ellipsoidal confidence region $ $ \chi^2 = (\hat{z} - z)^T Q_{\hat{z}}^{-1}(\hat{z} - z) \leq \chi^2_{\alpha} $$
 
 4. **Rounding-back**: Transform best candidate back to original ambiguity space
 
@@ -138,7 +144,7 @@ The most widely used method for integer ambiguity resolution (IAR) is the Least-
 
 The ambiguity resolution success rate is bounded by
 
-$P_s \leq 1 - F_{\chi^2}(f, \chi^2_{\alpha}) $ where $f$ is the number of ambiguity parameters and $F_{\chi^2}$ is the chi-squared CDF. For practical geodetic surveys,$P_s > 99.9\%$is targeted.
+$P_s \leq 1 - F_{\chi^2}(f, \chi^2_{\alpha}) $ where $ f $ is the number of ambiguity parameters and $ F_{\chi^2} $ is the chi-squared CDF. For practical geodetic surveys,$ P_s > 99.9\%$is targeted.
 
 ---
 
@@ -148,24 +154,27 @@ $P_s \leq 1 - F_{\chi^2}(f, \chi^2_{\alpha}) $ where $f$ is the number of ambigu
 
 The zenith total delay (ZTD, penundaan zenith total) has hydrostatic (dry) and wet components
 
-$$
+$ $
+
  \text{ZTD} = \text{ZHD} + \text{ZWD} $$
 
-**Saastamoinen model** for ZHD $$
+**Saastamoinen model** for ZHD $ $
 
- \text{ZHD} = \frac{0.0022768 \cdot P}{1 - 0.00266\cos(2\phi) - 0.00028h} $ where $P$ is surface pressure (hPa),$ \phi $is latitude (rad), and $h$ is height (km).$
+ \text{ZHD} = \frac{0.0022768 \cdot P}{1 - 0.00266\cos(2\phi) - 0.00028h} $ where $ P $ is surface pressure (hPa),$ \phi $ is latitude (rad), and $h $ is height (km).$
 
 ### 5.2 Mapping Functions
 
-The slant delay is obtained using a mapping function $m(E) $:
+The slant delay is obtained using a mapping function $ m(E) $:
 
-$$ \Delta_{\text{slant}} = \text{ZHD} \cdot m_H(E) + \text{ZWD} \cdot m_W(E)
+$ $ \Delta_{\text{slant}} = \text{ZHD} \cdot m_H(E) + \text{ZWD} \cdot m_W(E)
 
-$$ VMF3 (Vienna Mapping Function 3) is the current state-of-the-art, based on numerical weather model output.
+$$
+
+VMF3 (Vienna Mapping Function 3) is the current state-of-the-art, based on numerical weather model output.
 
 ### 5.3 Case Study: GPS-PWV over Jakarta
 
-GPS-derived precipitable water vapor (PWV) at Jakarta's CORS stations shows strong correlation with rainfall ( $r = 0.72$, $p < 0.01$). During the January 2020 Jakarta floods, PWV exceeded 70 mm for 5 consecutive days — a significant predictor for heavy rainfall events, useful for BMKG's early warning (peringatan dini) systems.
+GPS-derived precipitable water vapor (PWV) at Jakarta's CORS stations shows strong correlation with rainfall ( $r = 0.72 $, $ p < 0.01$). During the January 2020 Jakarta floods, PWV exceeded 70 mm for 5 consecutive days — a significant predictor for heavy rainfall events, useful for BMKG's early warning (peringatan dini) systems.
 
 ---
 

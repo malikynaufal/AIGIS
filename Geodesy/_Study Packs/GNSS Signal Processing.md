@@ -19,7 +19,7 @@ GNSS positioning relies on measuring the **travel time** of electromagnetic sign
 | Observable | Symbol | Noise level | Ambiguity | Key challenge |
 |------------|--------|-------------|-----------|---------------|
 | **Code pseudorange** | $P $ | 0.3–1.0 m | None | Multipath, ionosphere |
-| **Carrier phase** | $\Phi $| 1–2 mm | Integer $N$ (cycles) | Cycle slips, ambiguity resolution |
+| **Carrier phase** | $\Phi $| 1–2 mm | Integer $ N $ (cycles) | Cycle slips, ambiguity resolution |
 
 The signal structure for modern multi‑frequency GNSS:
 
@@ -43,12 +43,12 @@ The signal structure for modern multi‑frequency GNSS:
 ### 2.1. Code Pseudorang
 e
 
-$$ P_{r,f}^s = \rho_r^s + c(\delta t_r - \delta t^s) + I_{r,f}^s + T_r^s + d_{r,f}^s + d_f^s + \varepsilon_P $$
+$ $ P_{r,f}^s = \rho_r^s + c(\delta t_r - \delta t^s) + I_{r,f}^s + T_r^s + d_{r,f}^s + d_f^s + \varepsilon_P $$
 
 ### 2.2. Carrier Phas
 e
 
-$$\Phi_{r,f}^s = \rho_r^s + c(\delta t_r - \delta t^s) - I_{r,f}^s + T_r^s + \lambda_f N_{r,f}^s + \delta_{r,f}^s + \delta_f^s + \varepsilon_\Phi
+$ $\Phi_{r,f}^s = \rho_r^s + c(\delta t_r - \delta t^s) - I_{r,f}^s + T_r^s + \lambda_f N_{r,f}^s + \delta_{r,f}^s + \delta_f^s + \varepsilon_\Phi
 
 $$
 
@@ -56,10 +56,10 @@ $$
 |------|-------------|---------------------|
 | $\rho_r^s $ | Geometric range | None |
 | $\delta t_r, \delta t^s $ | Receiver & satellite clock | None |
-| $I_{r,f}^s$ | Ionospheric delay | $\propto 1/f^2 $ |
-| $T_r^s$ | Tropospheric delay | None (non‑dispersive) |
+| $ I_{r,f}^s $ | Ionospheric delay | $\propto 1/f^2 $ |
+| $ T_r^s $ | Tropospheric delay | None (non‑dispersive) |
 | $\lambda_f N $| Ambiguity term (phase only) |$\propto 1/f $ |
-| $d_{r,f}, d_f^s$ | Code/phase hardware delays | Hardware-specific |
+| $ d_{r,f}, d_f^s $ | Code/phase hardware delays | Hardware-specific |
 | $\varepsilon $ | Thermal noise + multipath | Varies |
 
 ---
@@ -68,11 +68,11 @@ $$
 
 ### 3.1. Ionospheric Delay
 
-The ionosphere is a dispersive medium. For frequency $f$:
+The ionosphere is a dispersive medium. For frequency $ f $:
 
-$$ I_{r,f}^s = \frac{\alpha \cdot \text{STEC}_r^s}{f^2} \quad \text{where } \alpha = \frac{40.3}{c} \;\text{m}^3\text{s}^{-2}$$- **STEC** = Slant Total Electron Content (electrons/m² along the ray path).
+$ $ I_{r,f}^s = \frac{\alpha \cdot \text{STEC}_r^s}{f^2} \quad \text{where } \alpha = \frac{40.3}{c} \;\text{m}^3\text{s}^{-2}$$- **STEC** = Slant Total Electron Content (electrons/m² along the ray path).
 
-- Vertical TEC (VTEC) relates via mapping function: $\text{STEC} = \text{VTEC} \cdot M(z') $, where $M(z') = \frac{1}{\cos z'}$for thin‑shell model at height ~350 km.
+- Vertical TEC (VTEC) relates via mapping function: $\text{STEC} = \text{VTEC} \cdot M(z') $, where $ M(z') = \frac{1}{\cos z'} $ for thin‑shell model at height ~350 km.
 
 **Models for correction:**
 | Model | Type | Accuracy | Use case |
@@ -87,7 +87,7 @@ $$ I_{r,f}^s = \frac{\alpha \cdot \text{STEC}_r^s}{f^2} \quad \text{where } \alp
 
 Non‑dispersive delay split into hydrostatic and wet components
 
-$$ T_r^s = T_h^s + T_w^s = m_h(e) ZHD + m_w(e) ZWD $$
+$ $ T_r^s = T_h^s + T_w^s = m_h(e) ZHD + m_w(e) ZWD $$
 
 | Component | Zenith delay | Mapping function |
 |-----------|--------------|------------------|
@@ -105,7 +105,7 @@ $$ T_r^s = T_h^s + T_w^s = m_h(e) ZHD + m_w(e) ZWD $$
 | Name | Formula | Wavelength | Noise |
 |------|---------|------------|-------|
 | L1/L2 phase IF | $\Phi_{IF} = \frac{f_1^2}{f_1^2-f_2^2}\Phi_1 - \frac{f_2^2}{f_1^2-f_2^2}\Phi_2 $ | **Non‑integer** | ~3× single freq |
-| L1/L2 code IF | $P_{IF} = \frac{f_1^2}{f_1^2-f_2^2}P_1 - \frac{f_2^2}{f_1^2-f_2^2}P_2$ | — | ~3× single freq |
+| L1/L2 code IF | $ P_{IF} = \frac{f_1^2}{f_1^2-f_2^2}P_1 - \frac{f_2^2}{f_1^2-f_2^2}P_2 $ | — | ~3× single freq |
 
 ### 4.2. Wide‑Lane (WL) and Narrow‑Lane (NL)
 
@@ -122,13 +122,13 @@ $$ T_r^s = T_h^s + T_w^s = m_h(e) ZHD + m_w(e) ZWD $$
 ### 5.1. The Integer Least Squares Proble
 m
 
-$$\hat{\mathbf{a}}_{\text{int}} = \underset{\mathbf{a} \in \mathbb{Z}^n}{\arg\min} \; (\mathbf{a} - \hat{\mathbf{a}}_{\text{float}})^\top \mathbf{Q}_{\hat{\mathbf{a}}}^{-1} (\mathbf{a} - \hat{\mathbf{a}}_{\text{float}})
+$ $\hat{\mathbf{a}}_{\text{int}} = \underset{\mathbf{a} \in \mathbb{Z}^n}{\arg\min} \; (\mathbf{a} - \hat{\mathbf{a}}_{\text{float}})^\top \mathbf{Q}_{\hat{\mathbf{a}}}^{-1} (\mathbf{a} - \hat{\mathbf{a}}_{\text{float}})
 
 $$
 
 ### 5.2. LAMBDA Method
 
-1. **Decorrelation**: Find unimodular matrix $\mathbf{Z} $such that $\mathbf{Z}\mathbf{Q}_{\hat{\mathbf{a}}}\mathbf{Z}^\top $ is nearly diagonal.
+1. **Decorrelation**: Find unimodular matrix $\mathbf{Z} $ such that $\mathbf{Z}\mathbf{Q}_{\hat{\mathbf{a}}}\mathbf{Z}^\top $ is nearly diagonal.
 2. **Search**: Integer search in transformed space (ellipsoidal region).
 3. **Back‑transform**: $\hat{\mathbf{a}}_{\text{int}} = \mathbf{Z}^{-1} \hat{\mathbf{z}}_{\text{int}} $.
 4. **Validation**: Ratio test or Difference test.
@@ -202,7 +202,7 @@ Stack observations from all systems, estimate:
 | 1 | Load RINEX 3.04 obs + nav | `gfzrnx`, `teqc` |
 | 2 | Compute satellite positions (broadcast eph) | $\mathbf{X}^s(t) = f(\text{eph}) $ |
 | 3 | Form IF code + phase | $\Phi_{IF} = \alpha_1\Phi_1 + \alpha_2\Phi_2 $ |
-| 4 | Estimate troposphere (VMF3) | $ZTD = ZHD + ZWD$ |
+| 4 | Estimate troposphere (VMF3) | $ ZTD = ZHD + ZWD $ |
 | 5 | Float solution (Kalman filter) | $\hat{\mathbf{x}}_{\text{float}} $ |
 | 6 | MW WL ambiguity resolution | $\hat{N}_{WL} \in \mathbb{Z} $ |
 | 7 | NL ambiguity resolution (LAMBDA) | $\hat{N}_{NL} \in \mathbb{Z} $ |
@@ -269,7 +269,7 @@ Stack observations from all systems, estimate:
 ## 11. Practice Problems
 
 1. **Derive the ionosphere‑free combination** for Galileo E1 (1575.42 MHz) and E5a (1191.795 MHz). What is the wavelength?
-2. **Compute the WL ambiguity** for GPS L1/L2: if $\Phi_1 = 2\,456\,123.4 $ cycles,$\Phi_2 = 1\,987\,654.3 $cycles, what is $\Phi_{WL} $ in cycles?
+2. **Compute the WL ambiguity** for GPS L1/L2: if $\Phi_1 = 2\,456\,123.4 $ cycles,$\Phi_2 = 1\,987\,654.3 $ cycles, what is $\Phi_{WL} $ in cycles?
 3. **Cycle slip detection**: Given 30‑second epoch interval, satellite elevation 45°, a geometry‑free phase change of 12.3 cycles between epochs — is this a slip or ionosphere?
 4. **Ambiguity validation**: Ratio test yields 2.8. Should you fix? What additional checks would you perform?
 5. **ISB estimation**: Explain how to estimate inter‐system bias between GPS and Galileo in a combined PPP solution.

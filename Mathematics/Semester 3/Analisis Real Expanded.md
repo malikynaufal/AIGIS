@@ -57,13 +57,13 @@ Real analysis provides the rigorous foundation of calculus. This course covers s
 
 - **Continuous functions**: $\lim_{xo a} f(x) = f(a) $- **Characterization**: Continuous function maps connected sets to connected sets
 
-- **Intermediate Value Theorem**: For continuous $ f $on $ [a,b] $- **Extreme Value Theorem**: Continuous $ f $ on compact set attains max/min
+- **Intermediate Value Theorem**: For continuous $ f $ on $ [a,b] $- **Extreme Value Theorem**: Continuous $ f $ on compact set attains max/min
 
 ### Unit 5: Differentiability and Integration
 
-- **$ C^1 $and $ C^2 $functions**: Continuously differentiable
+- **$ C^1 $ and $ C^2 $ functions**: Continuously differentiable
 
-- **Mean Value Theorem**: $ f(b)-f(a) = f'(c)(b-a) $for some $ c\in(a,b) $- **L'Hôpital's rule**: $ 0/0 $and $\infty/\infty $ limits
+- **Mean Value Theorem**: $ f(b)-f(a) = f'(c)(b-a) $ for some $ c\in(a,b) $- **L'Hôpital's rule**: $ 0/0 $ and $\infty/\infty $ limits
 
 - **Taylor's theorem**: With remainder $ R_n $- **Riemann integrals**: Definition and properties
 
@@ -93,11 +93,11 @@ Real analysis provides the rigorous foundation of calculus. This course covers s
 
 ## Key Theorems
 
-1. **Heine-Borel**: $ S \subset \mathbb{R}^n $is compact $\\iff $ S closed and bounded
+1. **Heine-Borel**: $ S \subset \mathbb{R}^n $ is compact $\\iff $ S closed and bounded
 2. **Bolzano-Weierstrass**: Every bounded sequence in $\mathbb{R}^n $ has convergent subsequence
-3. **Intermediate Value**: Continuous $ f $on $ [a,b] $ hits all intermediate values
-4. **Extreme Value**: Continuous $ f $on compact $ K $ attains max/min
-5. **Mean Value**: $ f(b)-f(a) = f'(c)(b-a) $6. **Weierstrass Approximation**: Polynomials are dense in $ C[a,b]$
+3. **Intermediate Value**: Continuous $ f $ on $ [a,b] $ hits all intermediate values
+4. **Extreme Value**: Continuous $ f $ on compact $ K $ attains max/min
+5. **Mean Value**: $ f(b)-f(a) = f'(c)(b-a) $ 6. **Weierstrass Approximation**: Polynomials are dense in $ C[a,b]$
 7. **Contraction Mapping**: Unique fixed point for contraction on complete metric space
 
 ---

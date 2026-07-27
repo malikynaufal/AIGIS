@@ -29,7 +29,7 @@ $$
 \end{equation}
 \text{(Biot-Savart law)}
 
-$$
+$ $
 
 $$
 
@@ -38,7 +38,7 @@ $$
 \end{equation}
 \text{(Ampère's law, differential form)}
 
-$$
+$ $
 
 $$
 
@@ -47,7 +47,7 @@ $$
 \end{equation}
 \text{(Ampère's law, integral form)}
 
-$$
+$ $
 
 $$
 

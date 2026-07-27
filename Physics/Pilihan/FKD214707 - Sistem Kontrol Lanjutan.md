@@ -24,40 +24,40 @@ Advanced control systems (sistem kontrol lanjutan) provide the theoretical and p
 
 The proportional-integral-derivative (PID) controller generates a control signal $u(t) $:
 
-$$
+$ $
 
 u(t) = K_p e(t) + K_i \int_0^t e(\tau)\,d\tau + K_d \frac{de(t)}{dt
 }
 
-$In the Laplace domain: $$ C(s) = K_p + \frac{K_i}{s} + K_d s $$
+$ In the Laplace domain: $$ C(s) = K_p + \frac{K_i}{s} + K_d s $ $
 
 | Term (Suku) | Action (Aksi) | Effect (Efek) | Drawback |
 |---|---|---|---|
-| Proportional ( $K_p$) | Proportional to error | Reduces rise time | Steady-state error remains |
-| Integral ( $K_i$) | Integral of error | Eliminates steady-state error | Overshoot, windup |
-| Derivative ( $K_d$) | Rate of change | Reduces overshoot, adds damping | Amplifies high-frequency noise |
+| Proportional ( $ K_p $) | Proportional to error | Reduces rise time | Steady-state error remains |
+| Integral ( $ K_i $) | Integral of error | Eliminates steady-state error | Overshoot, windup |
+| Derivative ( $ K_d$) | Rate of change | Reduces overshoot, adds damping | Amplifies high-frequency noise |
 
 ### 1.2 Ziegler–Nichols Tuning
 
-For a system with critical gain $K_u$(at sustained oscillation) and critical period $T_u$:
+For a system with critical gain $K_u $ (at sustained oscillation) and critical period $T_u $:
 
-| Controller | $K_p$ | $K_i$ | $K_d$ |
+| Controller | $ K_p $ | $ K_i $ | $ K_d $ |
 |---|---|---|---|
-| P | $0.5 K_u$ | — | — |
-| PI | $0.45 K_u$ | $1.2 K_p / T_u$ | — |
-| PID | $0.6 K_u$ | $2 K_p / T_u$ | $K_p T_u / 8$ |
+| P | $ 0.5 K_u $ | — | — |
+| PI | $ 0.45 K_u $ | $ 1.2 K_p / T_u $ | — |
+| PID | $ 0.6 K_u $ | $ 2 K_p / T_u $ | $ K_p T_u / 8 $ |
 
 ### 1.3 Anti-Windup (Pencegahan Windup)
 
-When the actuator saturates ( $u_{\min} \leq u \leq u_{\max}$), the integral term accumulates (windup). Anti-windup strategies include:
+When the actuator saturates ( $ u_{\min} \leq u \leq u_{\max}$), the integral term accumulates (windup). Anti-windup strategies include:
 
-**Conditional integration**: Stop integrating when $u = u_{\text{sat}} $and $\text{error} \cdot u_{\text{sat}} > 0$.
+**Conditional integration**: Stop integrating when $u = u_{\text{sat}} $ and $\text{error} \cdot u_{\text{sat}} > 0 $.
 
 **Back-calculation**:
 
-$$ \dot{x}_i = \frac{1}{T_t}(u_{\text{sat}} - u) + e(t)
+$ $ \dot{x}_i = \frac{1}{T_t}(u_{\text{sat}} - u) + e(t)
 
-$where $T_t $is the tracking time constant.
+$ where $T_t $ is the tracking time constant.
 
 ---
 
@@ -65,15 +65,15 @@ $where $T_t $is the tracking time constant.
 
 ### 2.1 State Equations
 
-A linear time-invariant (LTI) system of order $n$:
+A linear time-invariant (LTI) system of order $n $:
 
-$$ \dot{\mathbf{x}}(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t)\mathbf{y}(t) = \mathbf{C}\mathbf{x}(t) + \mathbf{D}\mathbf{u}(t)
+$ $ \dot{\mathbf{x}}(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t)\mathbf{y}(t) = \mathbf{C}\mathbf{x}(t) + \mathbf{D}\mathbf{u}(t)
 
-$where $\mathbf{x} \in \mathbb{R}^n $is the state vector,$ \mathbf{u} \in \mathbb{R}^m $is the input, and $\mathbf{y} \in \mathbb{R}^p $is the output.
+$where $\mathbf{x} \in \mathbb{R}^n $ is the state vector,$ \mathbf{u} \in \mathbb{R}^m $ is the input, and $\mathbf{y} \in \mathbb{R}^p $ is the output.
 
 **Discrete-time form** (used in digital control)
 
-$$ \mathbf{x}[k+1] = \mathbf{A}_d \mathbf{x}[k] + \mathbf{B}_d \mathbf{u}[k]
+$ $ \mathbf{x}[k+1] = \mathbf{A}_d \mathbf{x}[k] + \mathbf{B}_d \mathbf{u}[k]
 
 $$
 
@@ -81,19 +81,21 @@ $$
 
 **Controllability matrix**
 
-$$ \mathcal{C} = [\mathbf{B} \;\; \mathbf{A}\mathbf{B} \;\; \mathbf{A}^2\mathbf{B} \;\; \cdots \;\; \mathbf{A}^{n-1}\mathbf{B}]
+$ $ \mathcal{C} = [\mathbf{B} \;\; \mathbf{A}\mathbf{B} \;\; \mathbf{A}^2\mathbf{B} \;\; \cdots \;\; \mathbf{A}^{n-1}\mathbf{B}]
 
-$System is controllable (terkendali) if$ \text{rank}(\mathcal{C}) = n$.
+$System is controllable (terkendali) if $ \text{rank}(\mathcal{C}) = n$.
 
 **Observability matrix**:
 
-$$ \mathcal{O} = \begin{bmatrix} \mathbf{C} \\ \mathbf{C}\mathbf{A} \\ \mathbf{C}\mathbf{A}^2 \\ \vdots \\ \mathbf{C}\mathbf{A}^{n-1} \end{bmatrix} $$ System is observable (teramati) if$ \text{rank}(\mathcal{O}) = n$.
+$ $ \mathcal{O} = \begin{bmatrix} \mathbf{C} \\ \mathbf{C}\mathbf{A} \\ \mathbf{C}\mathbf{A}^2 \\ \vdots \\ \mathbf{C}\mathbf{A}^{n-1} \end{bmatrix} $$
+
+System is observable (teramati) if $ \text{rank}(\mathcal{O}) = n$.
 
 ### 2.3 Pole Placement (Penempatan Kutub)
 
-Full-state feedback$ \mathbf{u} = -\mathbf{K}\mathbf{x} $places closed-loop poles at desired locations. The Ackermann formula for SISO systems $$ \mathbf{K} = [0 \;\; 0 \;\; \cdots \;\; 1] \cdot \mathcal{C}^{-1} \cdot \alpha_d(\mathbf{A})
+Full-state feedback $ \mathbf{u} = -\mathbf{K}\mathbf{x} $ places closed-loop poles at desired locations. The Ackermann formula for SISO systems $ $ \mathbf{K} = [0 \;\; 0 \;\; \cdots \;\; 1] \cdot \mathcal{C}^{-1} \cdot \alpha_d(\mathbf{A})
 
-$where $\alpha_d(s) = \prod_{i=1}^{n}(s - \lambda_i) $is the desired characteristic polynomial with poles$ \lambda_i$.
+$ where $\alpha_d(s) = \prod_{i=1}^{n}(s - \lambda_i) $ is the desired characteristic polynomial with poles $ \lambda_i$.
 
 ---
 
@@ -103,9 +105,11 @@ $where $\alpha_d(s) = \prod_{i=1}^{n}(s - \lambda_i) $is the desired characteris
 
 When not all states are measured, a Luenberger observer estimates the state:
 
-$$ \dot{\hat{\mathbf{x}}} = \mathbf{A}\hat{\mathbf{x}} + \mathbf{B}\mathbf{u} + \mathbf{L}(\mathbf{y} - \mathbf{C}\hat{\mathbf{x}})
+$ $ \dot{\hat{\mathbf{x}}} = \mathbf{A}\hat{\mathbf{x}} + \mathbf{B}\mathbf{u} + \mathbf{L}(\mathbf{y} - \mathbf{C}\hat{\mathbf{x}})
 
-$The observer gain $ \mathbf{L}$is designed so that the estimation error $ \mathbf{e} = \mathbf{x} - \hat{\mathbf{x}} $decays $$ \dot{\mathbf{e}} = (\mathbf{A} - \mathbf{L}\mathbf{C})\mathbf{e} $$ Poles of $ (\mathbf{A} - \mathbf{L}\mathbf{C}) $are placed 2–5× faster than the controller poles.
+$The observer gain $ \mathbf{L} $ is designed so that the estimation error $ \mathbf{e} = \mathbf{x} - \hat{\mathbf{x}} $ decays $ $ \dot{\mathbf{e}} = (\mathbf{A} - \mathbf{L}\mathbf{C})\mathbf{e} $$
+
+Poles of $ (\mathbf{A} - \mathbf{L}\mathbf{C}) $ are placed 2–5× faster than the controller poles.
 
 ### 3.2 Kalman Filter
 
@@ -113,12 +117,12 @@ The Kalman filter is the optimal state estimator for linear systems with Gaussia
 
 **Prediction** (prediksi):
 
-$$ \hat{\mathbf{x}}_{k|k-1} = \mathbf{A}\hat{\mathbf{x}}_{k-1|k-1} + \mathbf{B}\mathbf{u}_{k-1}\mathbf{P}_{k|k-1} = \mathbf{A}\mathbf{P}_{k-1|k-1}\mathbf{A}^T + \mathbf{Q
+$ $ \hat{\mathbf{x}}_{k|k-1} = \mathbf{A}\hat{\mathbf{x}}_{k-1|k-1} + \mathbf{B}\mathbf{u}_{k-1}\mathbf{P}_{k|k-1} = \mathbf{A}\mathbf{P}_{k-1|k-1}\mathbf{A}^T + \mathbf{Q
 }
 
 $$ **Update** (pembaruan):
 
-$$ \mathbf{K}_k = \mathbf{P}_{k|k-1}\mathbf{C}^T(\mathbf{C}\mathbf{P}_{k|k-1}\mathbf{C}^T + \mathbf{R})^{-1}\hat{\mathbf{x}}_{k|k} = \hat{\mathbf{x}}_{k|k-1} + \mathbf{K}_k(\mathbf{y}_k - \mathbf{C}\hat{\mathbf{x}}_{k|k-1})\mathbf{P}_{k|k} = (\mathbf{I} - \mathbf{K}_k\mathbf{C})\mathbf{P}_{k|k-1}
+$ $ \mathbf{K}_k = \mathbf{P}_{k|k-1}\mathbf{C}^T(\mathbf{C}\mathbf{P}_{k|k-1}\mathbf{C}^T + \mathbf{R})^{-1}\hat{\mathbf{x}}_{k|k} = \hat{\mathbf{x}}_{k|k-1} + \mathbf{K}_k(\mathbf{y}_k - \mathbf{C}\hat{\mathbf{x}}_{k|k-1})\mathbf{P}_{k|k} = (\mathbf{I} - \mathbf{K}_k\mathbf{C})\mathbf{P}_{k|k-1}
 
 $$ ---
 
@@ -126,23 +130,25 @@ $$ ---
 
 ### 4.1 Lyapunov Stability
 
-For the autonomous system$ \dot{\mathbf{x}} = f(\mathbf{x}) $with equilibrium at the origin:
+For the autonomous system $ \dot{\mathbf{x}} = f(\mathbf{x}) $ with equilibrium at the origin:
 
-A system is stable if there exists a positive-definite function $V(\mathbf{x}) > 0 $such that:
+A system is stable if there exists a positive-definite function $V(\mathbf{x}) > 0 $ such that:
 
-$$ \dot{V}(\mathbf{x}) = \frac{\partial V}{\partial \mathbf{x}} f(\mathbf{x}) \leq 0
+$ $ \dot{V}(\mathbf{x}) = \frac{\partial V}{\partial \mathbf{x}} f(\mathbf{x}) \leq 0
 
 $$
 
-$ \dot{V} < 0$→ asymptotically stable (stabil asimtotik).
+$ \dot{V} < 0 $→ asymptotically stable (stabil asimtotik).
 
-**Lyapunov function for linear systems**: For $ \dot{\mathbf{x}} = \mathbf{A}\mathbf{x} $, choose $V = \mathbf{x}^T\mathbf{P}\mathbf{x} $where $\mathbf{P} $solves $$ \mathbf{A}^T\mathbf{P} + \mathbf{P}\mathbf{A} = -\mathbf{Q} $$ The Lyapunov equation for positive$ \mathbf{Q}$has a positive-definite solution$ \mathbf{P}$iff all eigenvalues of $ \mathbf{A}$have negative real parts.
+**Lyapunov function for linear systems**: For $ \dot{\mathbf{x}} = \mathbf{A}\mathbf{x} $, choose $ V = \mathbf{x}^T\mathbf{P}\mathbf{x} $where $\mathbf{P} $ solves $ $ \mathbf{A}^T\mathbf{P} + \mathbf{P}\mathbf{A} = -\mathbf{Q} $$
+
+The Lyapunov equation for positive $ \mathbf{Q}$ has a positive-definite solution $ \mathbf{P}$ iff all eigenvalues of $ \mathbf{A}$ have negative real parts.
 
 ### 4.2 Nyquist Criterion
 
-The Nyquist criterion relates open-loop behavior to closed-loop stability. For a system with open-loop transfer function $L(s)$, the number of unstable closed-loop poles:
+The Nyquist criterion relates open-loop behavior to closed-loop stability. For a system with open-loop transfer function $L(s) $, the number of unstable closed-loop poles:
 
-$Z = P - N $where $P$ is the number of unstable open-loop poles and $N$ is the number of clockwise encirclements of $ (-1, 0) $.
+$ Z = P - N $where $ P $ is the number of unstable open-loop poles and $ N $ is the number of clockwise encirclements of $ (-1, 0) $.
 
 ### 4.3 Gain and Phase Margins
 
@@ -158,13 +164,13 @@ $Z = P - N $where $P$ is the number of unstable open-loop poles and $N$ is the n
 
 Active isolation platforms for seismometers use PID + state-space control to reject ground vibrations above 0.1 Hz. The plant model:
 
-$$ m\ddot{x} + c\dot{x} + kx = F_{\text{actuator}} + F_{\text{ground}} $$ A 3-DOF state-space controller with acceleration feedback achieves >40 dB attenuation above 0.1 Hz.
+$ $ m\ddot{x} + c\dot{x} + kx = F_{\text{actuator}} + F_{\text{ground}} $$ A 3-DOF state-space controller with acceleration feedback achieves >40 dB attenuation above 0.1 Hz.
 
 ### 5.2 Case Study: Satellite Attitude Control (Kontrol Sikap Satelit)
 
 Indonesia's LAPAN-A2 satellite uses a reaction wheel + magnetorquer attitude control system. The Euler equations:
 
-$$ \mathbf{J}\dot{\boldsymbol{\omega}} + \boldsymbol{\omega} \times (\mathbf{J}\boldsymbol{\omega}) = \boldsymbol{\tau}_{\text{control}} + \boldsymbol{\tau}_{\text{disturbance}} $$ A PID controller with Kalman filter state estimation achieves pointing accuracy of ±0.1° for the multispectral camera, critical for land-use mapping (pemetaan penggunaan lahan) of the Indonesian archipelago.
+$ $ \mathbf{J}\dot{\boldsymbol{\omega}} + \boldsymbol{\omega} \times (\mathbf{J}\boldsymbol{\omega}) = \boldsymbol{\tau}_{\text{control}} + \boldsymbol{\tau}_{\text{disturbance}} $$ A PID controller with Kalman filter state estimation achieves pointing accuracy of ±0.1° for the multispectral camera, critical for land-use mapping (pemetaan penggunaan lahan) of the Indonesian archipelago.
 
 ---
 

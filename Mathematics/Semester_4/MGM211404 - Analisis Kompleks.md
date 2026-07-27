@@ -40,17 +40,17 @@ If $f $ is holomorphic in a simply connected domain $ D $ and $\gamma $ is a clo
 
 $ $\oint_\gamma f(z) \, dz = 0
 
-$$
+$ $
 
 ### 2. Cauchy's Integral Formula
 
 If $ f $ is holomorphic inside and on $\gamma $, and $ a $ is inside $\gamma $:
 
-$ $f(a) = \frac{1}{2i i} \oint_\gamma \frac{f(z)}{z - a} \, dz $$**Generalized:**$ f^{(n)}(a) = \frac{n!}{2i i} \oint_\gamma \frac{f(z)}{(z-a)^{n+1}} \, dz $### 3. Residue Theorem
+$ $ f(a) = \frac{1}{2i i} \oint_\gamma \frac{f(z)}{z - a} \, dz $ $**Generalized:**$ f^{(n)}(a) = \frac{n!}{2i i} \oint_\gamma \frac{f(z)}{(z-a)^{n+1}} \, dz $### 3. Residue Theorem
 
 $ $\oint_\gamma f(z) \, dz = 2i i \sum_{k} ext{Res}(f, z_k)
 
-$$
+$ $
 
 ### 4. Maximum Modulus Principle
 
@@ -60,13 +60,13 @@ If $ f $ is holomorphic and non-constant on a domain $ D $, then $|f|$ has no ma
 
 ### Simple Pole ($ n = 1 $)
 
-$ $ext{Res}(f, z_0) = \lim_{z o z_0} (z - z_0)f(z)
+$ $ ext{Res}(f, z_0) = \lim_{z o z_0} (z - z_0)f(z)
 
-$$### Pole of Order $ m $
+$ $### Pole of Order $ m $
 
-$ $ext{Res}(f, z_0) = \frac{1}{(m-1)!} \lim_{z o z_0} \frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^m f(z)]
+$ $ ext{Res}(f, z_0) = \frac{1}{(m-1)!} \lim_{z o z_0} \frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^m f(z)]
 
-$$### Removable Singularity $ext{Res}(f, z_0) = 0 $
+$ $### Removable Singularity $ ext{Res}(f, z_0) = 0 $
 
 ### Essential Singularity
 Must compute Laurent series and extract $ a_{-1} $ coefficient.
@@ -79,17 +79,17 @@ Must compute Laurent series and extract $ a_{-1} $ coefficient.
 
 **Solution:** Poles at $ z=0 $ (simple) and $ z=1 $ (simple), both inside $|z|=2 $.
 
-$ $ext{Res}(f, 0) = \lim_{z o 0} z \cdot \frac{e^z}{z(z-1)} = \lim_{z o 0} \frac{e^z}{z-1} = -1
+$ $ ext{Res}(f, 0) = \lim_{z o 0} z \cdot \frac{e^z}{z(z-1)} = \lim_{z o 0} \frac{e^z}{z-1} = -1
 
-$$
+$ $
 
-$ $ext{Res}(f, 1) = \lim_{z o 1} (z-1) \cdot \frac{e^z}{z(z-1)} = \lim_{z o 1} \frac{e^z}{z} = e
+$ $ ext{Res}(f, 1) = \lim_{z o 1} (z-1) \cdot \frac{e^z}{z(z-1)} = \lim_{z o 1} \frac{e^z}{z} = e
 
-$$
+$ $
 
 $ $\oint = 2i i(-1 + e) = 2i i(e-1)
 
-$$
+$ $
 
 ### Example 2: Real Integral
 
@@ -97,11 +97,11 @@ $$
 
 **Solution:** Consider $ f(z) = \frac{e^{iz}}{z^2+1} $ over a semicircular contour in the upper half-plane.
 
-Pole at $ z = i $: $ext{Res}(f, i) = \frac{e^{i \cdot i}}{2i} = \frac{e^{-1}}{2i} $
+Pole at $ z = i $: $ ext{Res}(f, i) = \frac{e^{i \cdot i}}{2i} = \frac{e^{-1}}{2i} $
 
 $ $\int_{-\infty}^{\infty} \frac{e^{ix}}{x^2+1}dx = 2i i \cdot \frac{e^{-1}}{2i} = \frac{i}{e}
 
-$$
+$ $
 
 Taking real part: $\int_0^{\infty} \frac{\cos x}{x^2+1}dx = \frac{i}{2e} $
 

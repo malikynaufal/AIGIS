@@ -82,7 +82,7 @@ $ $
 
 - **Hamilton's equations (canonical equations):**
 
-$$ \dot{q}_i = \frac{artial H}{artial p_i}, \quad \dot{p}_i = -\frac{artial H}{artial q_i}
+$ $ \dot{q}_i = \frac{artial H}{artial p_i}, \quad \dot{p}_i = -\frac{artial H}{artial q_i}
 
 $ $
 
@@ -102,32 +102,32 @@ $ $
 
 ## 🔬 Key Equations
 
-$$ ext{Euler-Lagrange: } \frac{d}{dt}\left(\frac{artial L}{artial \dot{q}}
+$ $ ext{Euler-Lagrange: } \frac{d}{dt}\left(\frac{artial L}{artial \dot{q}}
 ight) - \frac{artial L}{artial q} = 0
 
 $ $
 
-$$ ext{Lagrangian: } L = T - V
+$ $ ext{Lagrangian: } L = T - V
 
 $ $
 
-$$ ext{Noether: Symmetry} o ext{Conserved Quantity}
+$ $ ext{Noether: Symmetry} o ext{Conserved Quantity}
 
 $ $
 
-$$ ext{Hamiltonian: } H = T + V ext{ (for natural systems)}
+$ $ ext{Hamiltonian: } H = T + V ext{ (for natural systems)}
 
 $ $
 
-$$ ext{Hamilton's Eq: } \dot{q} = \frac{artial H}{artial p}, \quad \dot{p} = -\frac{artial H}{artial q}
+$ $ ext{Hamilton's Eq: } \dot{q} = \frac{artial H}{artial p}, \quad \dot{p} = -\frac{artial H}{artial q}
 
 $ $
 
-$$ ext{Poisson Bracket: } \{A, B\} = \frac{artial A}{artial q}\frac{artial B}{artial p} - \frac{artial A}{artial p}\frac{artial B}{artial q}
+$ $ ext{Poisson Bracket: } \{A, B\} = \frac{artial A}{artial q}\frac{artial B}{artial p} - \frac{artial A}{artial p}\frac{artial B}{artial q}
 
 $ $
 
-$$ ext{Kepler's 3rd: } T^2 = \frac{4i^2}{GM}a^3
+$ $ ext{Kepler's 3rd: } T^2 = \frac{4i^2}{GM}a^3
 
 $$
 

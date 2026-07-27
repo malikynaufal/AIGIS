@@ -14,7 +14,7 @@ created: 2026-07-27
 
 ## 📚 Core Concept
 
-> **Core idea in one sentence:** Hamiltonian mechanics reformulates classical mechanics in phase space, using $H(q,p) $to describe total energy.
+> **Core idea in one sentence:** Hamiltonian mechanics reformulates classical mechanics in phase space, using $H(q,p) $ to describe total energy.
 
 > **Geodesy Connection:** Phase space analysis for orbital mechanics and perturbation theory.
 
@@ -22,7 +22,7 @@ created: 2026-07-27
 
 ## 🧮 Key Equations
 
-$$
+$ $
 
 \begin{equation}
 H = \sum_i p_i \dot{q}_i - \mathcal{L}
@@ -31,7 +31,7 @@ H = \sum_i p_i \dot{q}_i - \mathcal{L}
 
 $$
 
-$$
+$ $
 
 \begin{equation}
 \dot{q}_i = \frac{\partial H}{\partial p_i}, \quad \dot{p}_i = -\frac{\partial H}{\partial q_i}
@@ -40,7 +40,7 @@ $$
 
 $$
 
-$$
+$ $
 
 \begin{equation}
 \{f, g\} = \sum_i \left(\frac{\partial f}{\partial q_i}\frac{\partial g}{\partial p_i} - \frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}\right)

@@ -73,18 +73,18 @@ $ $
 NDVI = \frac{NIR - RED}{NIR + RED
 }
 
-$$- NDWI (Normalized Difference Water Index) untuk deteksi air:
+$ $- NDWI (Normalized Difference Water Index) untuk deteksi air:
 
 $ $
 
 NDWI = \frac{GREEN - NIR}{GREEN + NIR
 }
 
-$$- EVI (Enhanced Vegetasi Index) untuk vegetasi padat:
+$ $- EVI (Enhanced Vegetasi Index) untuk vegetasi padat:
 
 $ $
 
-EVI = 2.5 imes \frac{NIR - RED}{NIR + 6 imes RED - 7.5 imes BLUE + 1}$$
+EVI = 2.5 imes \frac{NIR - RED}{NIR + 6 imes RED - 7.5 imes BLUE + 1}$ $
 
 - Pita rasio dan indeks tekstur
 
@@ -99,7 +99,7 @@ Teknik pengelompokan piksel berdasarkan spektrum:
 
 - **Unsupervised**: K-means clustering, ISODATA
 
-- Training samples: homogenitas, representativitas, jumlah minimal ($ n \geq 10 imes p $dimensi)
+- Training samples: homogenitas, representativitas, jumlah minimal ($ n \geq 10 imes p $ dimensi)
 
 - Deep learning: Convolutional Neural Networks (CNN) untuk klasifikasi citra
 

@@ -39,7 +39,7 @@ The design of a geodetic network must balance:
 
 #### Strength of Figure
 
-For a triangle network, the **strength ratio** $R $ determines error propagation$ $R = \frac{ext{product of non-adjusted sides}}{ext{product of adjusted sides}}$$
+For a triangle network, the **strength ratio** $R $ determines error propagation $ $ R = \frac{ext{product of non-adjusted sides}}{ext{product of adjusted sides}}$ $
 
 A smaller $ R $ indicates better geometric strength. For first-order networks,$ R < 1.5 imes 10^{-4} $.
 
@@ -56,15 +56,15 @@ A smaller $ R $ indicates better geometric strength. For first-order networks,$ 
 
 ### 2.4 Redundancy
 
-The **redundancy** $ r $of a network
+The **redundancy** $ r $ of a network
 
-$ $r = n - u $$
+$ $ r = n - u $ $
 
-where $ n $ is the number of observations and $u $ is the number of unknowns.
+where $ n $ is the number of observations and $ u $ is the number of unknowns.
 
-For a 2D network with $ p $points
+For a 2D network with $ p $ points
 
-$ $u = 2p - 2 \quad ext{(fixing 2 degrees of freedom)}$$
+$ $ u = 2p - 2 \quad ext{(fixing 2 degrees of freedom)}$ $
 
 ---
 
@@ -85,13 +85,13 @@ Measurement of **horizontal angles** from network stations:
 
 $ $
 
-m_{ext{angle}} = \frac{1.5}{\sqrt{2}} \cdot c \; ext{for first-order}$$ where $ c $ is the micrometer reading accuracy of the theodolite (typically 0.01").
+m_{ext{angle}} = \frac{1.5}{\sqrt{2}} \cdot c \; ext{for first-order}$ $ where $ c $ is the micrometer reading accuracy of the theodolite (typically 0.01").
 
 ### 3.2 Trilateration (*Trilaterasi*)
 
 Direct measurement of **distances** between stations using EDM (Electronic Distance Measurement)
 
-$ $\sigma = \sqrt{(a)^2 + (b \cdot d)^2} $$
+$ $\sigma = \sqrt{(a)^2 + (b \cdot d)^2} $ $
 
 where:
 -$ a $= constant error (mm)
@@ -196,11 +196,11 @@ Modern geodetic surveys combine:
 
 ### 5.1 Fundamental Equation
 
-For a system of $ n $observations and $ u $unknowns, the least squares solution
+For a system of $ n $ observations and $ u $ unknowns, the least squares solution
 
 $ $\hat{x} = (A^T P A)^{-1} A^T P l
 
-$$
+$ $
 
 where:
 -$\hat{x} $= vector of unknown parameters
@@ -213,23 +213,23 @@ where:
 **Residual vector:*
 *
 
-$ $v = A\hat{x} - l $$
+$ $ v = A\hat{x} - l $ $
 
 **Standard error of unit weight:*
 *
 
-$ $\sigma_0 = \sqrt{\frac{v^T P v}{n - u}} $$
+$ $\sigma_0 = \sqrt{\frac{v^T P v}{n - u}} $ $
 
 **Standard error of parameters:*
 *
 
 $ $\Sigma_{\hat{x}} = \sigma_0^2 (A^T P A)^{-1}
 
-$$5.3 Chi-Square Tes
+$ $5.3 Chi-Square Tes
 t
 
 $ $## 5.3 Chi-Square Tes
-t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)$$
+t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)$ $
 
 # ## 5.3 Chi-Square Tes
 t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)If $\chi^2 > \chi^2_{0.95}(n-u) $, the model may be inadequate or outliers may exist.
@@ -238,7 +238,7 @@ t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)If $\chi^2 > \chi^2_{0.95
 
 **Horizontal 2D network:**
 
-- Unknowns: coordinates $ (x_i, y_i) $of $ p $points
+- Unknowns: coordinates $ (x_i, y_i) $ of $ p $ points
 
 - If 2 points fixed: $ u = 2(p-2) $**3D network:**
 
@@ -342,7 +342,7 @@ t\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)If $\chi^2 > \chi^2_{0.95
 - **Baarda data snooping** test for outlier detectio
 n
 
-$ $|v_i| > k_{\alpha} \cdot \sigma_{v_i} $$
+$ $|v_i| > k_{\alpha} \cdot \sigma_{v_i} $ $
 
 - **Chi-square test** for global model adequacy
 
@@ -351,9 +351,9 @@ n
 
 $ $\Sigma_{f} = B \cdot \Sigma_{\hat{x}} \cdot B^T
 
-$$
+$ $
 
-where $ B $ is the Jacobian of the function $f(\hat{x}) $ with respect to the adjusted parameters.
+where $ B $ is the Jacobian of the function $ f(\hat{x}) $ with respect to the adjusted parameters.
 
 ### 9.3 Reliability
 
@@ -361,7 +361,7 @@ where $ B $ is the Jacobian of the function $f(\hat{x}) $ with respect to the ad
 **External reliability:** Impact of undetected blunders on the solutio
 n
 
-$ $ext{Detectability} \geq \Delta_0 \cdot \sigma_{ext{observation}} $$
+$ $ ext{Detectability} \geq \Delta_0 \cdot \sigma_{ext{observation}} $ $
 
 ---
 

@@ -39,15 +39,15 @@ Modul 2: Perencanaan Observasi GNSS
 - **PDOP prediction**: Menggunakan software planning (RTKLIB, Trimble Planning
 )
 
-$$## Modul 2: Perencanaan Observasi GNSS
+$ $## Modul 2: Perencanaan Observasi GNSS
 
 - **PDOP prediction**: Menggunakan software planning (RTKLIB, Trimble Planning
-)PDOP < 6 ext{ (minimal)}, < 4 ext{ (optimal)}$ $
+)PDOP < 6 ext{ (minimal)}, < 4 ext{ (optimal)} $ $
 
 # ## Modul 2: Perencanaan Observasi GNSS
 
 - **PDOP prediction**: Menggunakan software planning (RTKLIB, Trimble Planning
-)PDOP < 6 ext{ (minimal)}, < 4 ext{ (optimal)}- **Elevation mask**: $ 10^\circ $–$ 15^\circ $(standard Indonesia)
+)PDOP < 6 ext{ (minimal)}, < 4 ext{ (optimal)}- **Elevation mask**: $ 10^\circ $–$ 15^\circ $ (standard Indonesia)
 
 - **Session planning**: Baseline < 10 km → 15–30 menit; Baseline 10–50 km → 1–2 jam
 
@@ -103,7 +103,7 @@ $$## Modul 2: Perencanaan Observasi GNSS
 
 - **RMS error**: Bandingkan koordinat dengan titik kontrol
 
-$ $RMS = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - x_{ext{ref}})^2}$$
+$ $ RMS = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - x_{ext{ref}})^2}$$
 
 - **Cycle slip detection**: Analisis MW (Melbourne-Wübbena) combination
 

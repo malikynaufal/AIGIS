@@ -50,11 +50,11 @@ identity = gpd.overlay(gdf1, gdf2, how='identity')
 
 #### Raster Overlay (Map Algebra)
 
-$$ C = f(A, B)$ $
+$$ C = f(A, B) $ $
 
 where $ f $ can be:
 
-- **Arithmetic:**$ A + B $, $ A - B $, $ A imes B $, $ A / B $- **Logical:**$ A ext{ AND } B $, $ A ext{ OR } B $, $ext{NOT } A $- **Relational:**$ A > B $, $ A == B $, $ A < B $```python
+- **Arithmetic:**$ A + B $, $ A - B $, $ A imes B $, $ A / B $- **Logical:**$ A ext{ AND } B $, $ A ext{ OR } B $, $ ext{NOT } A $- **Relational:**$ A > B $, $ A == B $, $ A < B $```python
 import rasterio
 from rasterio.enums import Resampling
 
@@ -124,7 +124,7 @@ grid = griddata(points, values, (xi, yi), method='linear') # 'nearest', 'cubic'
 
 Uses variogram to model spatial autocorrelation
 
-$$\gamma(h) = \frac{1}{2N(h)} \sum_{i=1}^{N(h)} [z(x_i) - z(x_i + h)]^2
+$ $\gamma(h) = \frac{1}{2N(h)} \sum_{i=1}^{N(h)} [z(x_i) - z(x_i + h)]^2
 
 $ $
 
@@ -206,7 +206,7 @@ acc = grid.accumulation(flowdir)
 
 Tests for complete spatial randomness (CSR)
 
-$$\chi^2 = \sum_{i=1}^{q} \frac{(O_i - E)^2}{E} $ $
+$ $\chi^2 = \sum_{i=1}^{q} \frac{(O_i - E)^2}{E} $ $
 
 where $ O_i $= observed points in quadrat $ i $,$ E = n/q $= expected.
 
@@ -215,7 +215,7 @@ where $ O_i $= observed points in quadrat $ i $,$ E = n/q $= expected.
 **Clark-Evans index:*
 *
 
-$ $R = \frac{\bar{r}_{obs}}{\bar{r}_{exp}} = \frac{\frac{1}{n}\sum r_i}{0.5\sqrt{A/n}}$$|$ R $ Value | Pattern |
+$ $ R = \frac{\bar{r}_{obs}}{\bar{r}_{exp}} = \frac{\frac{1}{n}\sum r_i}{0.5\sqrt{A/n}}$ $|$ R $ Value | Pattern |
 |-----------|---------|
 | $ R \approx 1 $ | Random |
 | $ R < 1 $ | Clustered |
@@ -234,7 +234,7 @@ R = r_obs / r_exp
 #### Ripley's K Functio
 n
 
-$ $K(d) = \frac{A}{n^2} \sum_{i \neq j} \frac{I(d_{ij} \leq d)}{w_{ij}}$$
+$ $ K(d) = \frac{A}{n^2} \sum_{i \neq j} \frac{I(d_{ij} \leq d)}{w_{ij}}$ $
 
 ```python
 from pointpats import K_function
@@ -249,7 +249,7 @@ I
 
 $ $
 
-I = \frac{n}{S_0} \frac{\sum_i \sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2}$$ where $ S_0 = \sum_i \sum_j w_{ij} $.
+I = \frac{n}{S_0} \frac{\sum_i \sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2}$ $ where $ S_0 = \sum_i \sum_j w_{ij} $.
 
 ```python
 from esda.moran import Moran
@@ -272,9 +272,9 @@ gdf['significant'] = lisa.p_sim < 0.05
 
 #### Geary's C
 
-$ $C = \frac{(n-1)}{2S_0} \frac{\sum_i \sum_j w_{ij}(x_i - x_j)^2}{\sum_i (x_i - \bar{x})^2}
+$ $ C = \frac{(n-1)}{2S_0} \frac{\sum_i \sum_j w_{ij}(x_i - x_j)^2}{\sum_i (x_i - \bar{x})^2}
 
-$$3.3 Spatial Regression
+$ $3.3 Spatial Regression
 
 **OLS (Ordinary Least Squares):*
 *
@@ -282,7 +282,7 @@ $$3.3 Spatial Regression
 $ $## 3.3 Spatial Regression
 
 **OLS (Ordinary Least Squares):*
-*y = X\beta + \epsilon $$
+*y = X\beta + \epsilon $ $
 
 # ## 3.3 Spatial Regression
 
@@ -294,12 +294,12 @@ $ $## 3.3 Spatial Regression
 
 $ $
 
-y = \rho W y + X\beta + \epsilon $$
+y = \rho W y + X\beta + \epsilon $ $
 
 **Spatial Error Model (SEM):*
 *
 
-$ $y = X\beta + \epsilon, \quad \epsilon = \lambda W \epsilon + u $$
+$ $ y = X\beta + \epsilon, \quad \epsilon = \lambda W \epsilon + u $ $
 
 ```python
 from spreg import ML_Lag, ML_Error
@@ -382,7 +382,7 @@ from rsgislib.imageutils import viewshed
 | Derivative | Formula | Unit |
 |------------|---------|------|
 | **Slope** | $\alpha = \arctan\sqrt{(artial z/artial x)^2 + (artial z/artial y)^2} $ | degrees/% |
-| **Aspect** | $heta = \arctan2(-artial z/artial x, artial z/artial y) $ | 0–360° |
+| **Aspect** | $ heta = \arctan2(-artial z/artial x, artial z/artial y) $ | 0–360° |
 | **Curvature (profile)** | $ k_p = \frac{z_{xx}z_x^2 + 2z_{xy}z_xz_y + z_{yy}z_y^2}{(z_x^2 + z_y^2)^{3/2}} $ | 1/m |
 | **Curvature (plan)** | $ k_{pl} = \frac{z_{xx}z_y^2 - 2z_{xy}z_xz_y + z_{yy}z_x^2}{(z_x^2 + z_y^2)^{3/2}} $ | 1/m |
 
@@ -426,7 +426,7 @@ aspect = (aspect + 360) % 360
 
 Multi-criteria evaluation (MCE) using **AHP** (Analytic Hierarchy Process)
 
-$ $S = \sum_{i=1}^{n} w_i \cdot x_i $$
+$ $ S = \sum_{i=1}^{n} w_i \cdot x_i $ $
 
 where $ w_i $ are weights from pairwise comparison matrix.
 

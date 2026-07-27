@@ -44,12 +44,12 @@ These describe how spread out the data is.
 | Measure | Formula | Notes |
 |---------|---------|-------|
 | **Range** | $\max(x_i) - \min(x_i) $ | Simple but sensitive to outliers |
-| **Interquartile Range (IQR)** | $Q_3 - Q_1$ | Robust to outliers |
-| **Variance** | $s^2 = \frac{1}{n-1}\sum(x_i - \bar{x})^2$ | Sample variance (unbiased) |
-| **Std Deviation** | $s = \sqrt{s^2}$ | Same units as data |
-| **CV (Koefisien Variasi)** | $CV = s/\bar{x}$ | Dimensionless relative spread |
+| **Interquartile Range (IQR)** | $ Q_3 - Q_1 $ | Robust to outliers |
+| **Variance** | $ s^2 = \frac{1}{n-1}\sum(x_i - \bar{x})^2 $ | Sample variance (unbiased) |
+| **Std Deviation** | $ s = \sqrt{s^2} $ | Same units as data |
+| **CV (Koefisien Variasi)** | $ CV = s/\bar{x} $ | Dimensionless relative spread |
 
-**Degrees of freedom:**$n-1 $in sample variance corrects for the bias of estimating the mean from the same data.
+**Degrees of freedom:**$ n-1 $ in sample variance corrects for the bias of estimating the mean from the same data.
 
 **Geodesy application:** The standard deviation of GNSS height residuals tells how precisely height observations cluster around the estimated surface.
 
@@ -57,13 +57,13 @@ These describe how spread out the data is.
 
 ## Percentiles and Quartiles
 
-- **Quartiles:**$Q_1$(25th percentile),$Q_2$(median),$Q_3$(75th percentile)
+- **Quartiles:**$ Q_1 $ (25th percentile),$ Q_2 $ (median),$ Q_3 $ (75th percentile)
 
-- **IQR** =$Q_3 - Q_1$— the middle 50% of the data
+- **IQR** =$ Q_3 - Q_1 $— the middle 50% of the data
 
-- **Box plot:** Visualisation using min,$Q_1$, median, $Q_3$, max (with outlier detection)
+- **Box plot:** Visualisation using min,$ Q_1 $, median, $ Q_3 $, max (with outlier detection)
 
-- **Outlier rule:** Data point is an outlier if it lies beyond $Q_1 - 1.5\times\text{IQR}$or $Q_3 + 1.5\times\text{IQR}$---
+- **Outlier rule:** Data point is an outlier if it lies beyond $ Q_1 - 1.5\times\text{IQR} $ or $ Q_3 + 1.5\times\text{IQR} $---
 
 ## Measures of Shape (Ukuran Bentuk)
 
@@ -71,7 +71,7 @@ These describe how spread out the data is.
 
 Measures asymmetry of the distribution
 
-$$\gamma_1 = \frac{1}{n}\sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^3
+$ $\gamma_1 = \frac{1}{n}\sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^3
 
 $$
 
@@ -87,7 +87,7 @@ $$
 
 Measures tail heaviness and peakedness (excess kurtosis)
 
-$$\gamma_2 = \frac{1}{n}\sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^4 - 3
+$ $\gamma_2 = \frac{1}{n}\sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^4 - 3
 
 $$
 
@@ -105,7 +105,7 @@ $$
 
 **Covariance:** measures how two variables vary together
 
-$$\text{Cov}(X, Y) = \frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})
+$ $\text{Cov}(X, Y) = \frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})
 
 $$
 
@@ -115,13 +115,13 @@ $$
 
 - Covariance magnitude depends on scales (hard to interpret directly)
 
-**Correlation coefficient** (Pearson's $r$):
+**Correlation coefficient** (Pearson's $ r $):
 
-$$ r = \frac{\text{Cov}(X, Y)}{s_X s_Y}, \quad -1 \leq r \leq 1 $$-$r = \pm 1$: perfect linear relationship
+$ $ r = \frac{\text{Cov}(X, Y)}{s_X s_Y}, \quad -1 \leq r \leq 1 $$-$ r = \pm 1 $: perfect linear relationship
 
-- $r = 0$: no linear relationship
+- $ r = 0 $: no linear relationship
 
-- $r > 0.7$: strong positive correlation
+- $ r > 0.7 $: strong positive correlation
 
 **Geodesy application:** Correlation between East and North coordinate estimates from GNSS reveals network geometry quality.
 
@@ -157,7 +157,7 @@ $$ r = \frac{\text{Cov}(X, Y)}{s_X s_Y}, \quad -1 \leq r \leq 1 $$-$r = \pm 1$: 
 | Equation | Name | Purpose |
 |----------|------|---------|
 | $\bar{x} = \frac{1}{n}\sum x_i $ | Sample mean | Centre |
-| $s^2 = \frac{1}{n-1}\sum(x_i-\bar{x})^2$ | Sample variance | Spread |
+| $ s^2 = \frac{1}{n-1}\sum(x_i-\bar{x})^2 $ | Sample variance | Spread |
 | $\gamma_1 = \frac{1}{n}\sum((x_i-\bar{x})/s)^3 $ | Skewness | Asymmetry |
 | $\gamma_2 = \frac{1}{n}\sum((x_i-\bar{x})/s)^4 - 3 $ | Excess kurtosis | Tail weight |
 | $ r = \text{Cov}(X,Y)/(s_X s_Y)$ | Correlation | Association |

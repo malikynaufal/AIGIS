@@ -48,7 +48,7 @@ $ G $ is planar $\iff $ contains no subdivision of $ K_5 $ or $ K_{3,3} $.
 
 $ $\max_{f} |f| = \min_{(S,T)} c(S,T)
 
-$$
+$ $
 
 ### 5. Menger's Theorem
 The maximum number of vertex-disjoint $ s $-$ t $ paths equals the minimum size of an $ s $-$ t $ vertex cut.

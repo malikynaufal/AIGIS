@@ -20,9 +20,9 @@ Understanding the geospatial industry ecosystem — market segments (surveying, 
 | Sector | Market Size (2024) | Growth | Key Players |
 |--------|------------------|--------|-------------|
 | Surveying | $X B | ~8% | Topcon, Trimble, Leica |
-| GIS | $X B | ~10% | Esri, QGIS, Google |
+| GIS | $ X B | ~10% | Esri, QGIS, Google |
 | Remote Sensing | $X B | ~12% | Planet, Maxar, Airbus |
-| GNSS | $X B | ~7% | Trimble, u-blox, Septentrio |
+| GNSS | $ X B | ~7% | Trimble, u-blox, Septentrio |
 
 ### 2. Indonesian Geospatial Industry
 - BIG, BPN, KLHK as main employers

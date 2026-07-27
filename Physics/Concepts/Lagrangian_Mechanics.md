@@ -31,7 +31,7 @@ $$
 \end{equation}
 \text{(Lagrangian)}
 
-$$
+$ $
 
 $$
 
@@ -40,7 +40,7 @@ $$
 \end{equation}
 \text{(Euler-Lagrange equations)}
 
-$$
+$ $
 
 ---
 
@@ -58,9 +58,9 @@ $$
 
 **Solution:**
 
-1. $T = \frac{1}{2}m\dot{x}^2$
-2. $V = \frac{1}{2}kx^2$
-3. $ \mathcal{L} = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}kx^2$4. Apply Euler-Lagrange:$m\ddot{x} + kx = 0$
+1. $ T = \frac{1}{2}m\dot{x}^2 $
+2. $ V = \frac{1}{2}kx^2 $
+3. $ \mathcal{L} = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}kx^2 $ 4. Apply Euler-Lagrange: $ m\ddot{x} + kx = 0$
 
 ---
 

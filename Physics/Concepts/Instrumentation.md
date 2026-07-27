@@ -14,7 +14,7 @@ updated: 2026-07-27
 
 ## 1. Measurement Chain Overview
 
-$$ \text{Physical Quantity} \xrightarrow{\text{Sensor}} \text{Analog Signal} \xrightarrow{\text{Conditioning}} \text{Digital Signal} \xrightarrow{\text{Processing}} \text{Result} $$
+$$ \text{Physical Quantity} \xrightarrow{\text{Sensor}} \text{Analog Signal} \xrightarrow{\text{Conditioning}} \text{Digital Signal} \xrightarrow{\text{Processing}} \text{Result} $ $
 
 ### Key Blocks
 1. **Sensor / Transducer:** Converts physical quantity to electrical signal
@@ -33,13 +33,13 @@ s
 
 $$ \text{Sensitivity } S = \frac{\Delta V_{\text{out}}}{\Delta Q_{\text{in}}} \quad [\text{V/unit of quantity}]
 
-$$
+$ $
 
 ### Sensor Types and Examples
 
 | Type | Principle | Examples | Typical Range |
 |------|-----------|----------|---------------|
-| **Resistive** | Resistance change with measured quantity | RTD (Pt100), strain gauge | -200°C to 850°C, strain $10^{-6}$ |
+| **Resistive** | Resistance change with measured quantity | RTD (Pt100), strain gauge | -200°C to 850°C, strain $ 10^{-6} $ |
 | **Capacitive** | Capacitance change | Pressure sensor, displacement | 0–100 kHz bandwidth |
 | **Inductive** | Inductance change | LVDT displacement | ±1 mm, 0–100 Hz |
 | **Piezoelectric** | Charge from mechanical stress | Accelerometer, force transducer | High frequency (>1 kHz) |
@@ -65,22 +65,22 @@ $$
 **First-order sensor:*
 *
 
-$$ \tau\frac{dy}{dt} + y = K x(t)
+$ $ \tau\frac{dy}{dt} + y = K x(t)
 
 $$
 
--$ \tau$= time constant (response speed)
--$K$ = static sensitivity
+-$ \tau $= time constant (response speed)
+-$ K $ = static sensitivity
 
 - Amplitude ratio: $ \frac{|Y|}{|X|} = \frac{1}{\sqrt{1+(\omega\tau)^2}} $- Phase lag: $ \phi = -\arctan(\omega\tau) $**Second-order sensor:*
 *
 
-$$ \ddot{y} + 2\zeta\omega_n\dot{y} + \omega_n^2 y = \omega_n^2 K x(t)
+$ $ \ddot{y} + 2\zeta\omega_n\dot{y} + \omega_n^2 y = \omega_n^2 K x(t)
 
 $$
 
--$ \omega_n$= natural frequency
--$ \zeta$= damping ratio
+-$ \omega_n $= natural frequency
+-$ \zeta $= damping ratio
 
 ---
 
@@ -89,7 +89,7 @@ $$
 ### Amplificatio
 n
 
-$V_{\text{out}} = G \cdot V_{\text{in}} $$$
+$ V_{\text{out}} = G \cdot V_{\text{in}} $$$
 
 - **Instrumentation amplifier:** High CMRR, low drift
  - CMRR = Common-Mode Rejection Ratio
@@ -101,28 +101,28 @@ $V_{\text{out}} = G \cdot V_{\text{in}} $$$
 #### Low-Pass Filter (1st order, RC
 )
 
-$$ H(f) = \frac{1}{1 + j(f/f_c)} $$
+$ $ H(f) = \frac{1}{1 + j(f/f_c)} $$
 
-- $f_c = 1/(2\pi RC) $= cutoff frequency
+- $ f_c = 1/(2\pi RC) $= cutoff frequency
 
-- Attenuation: $-20 $dB/decade above $f_c$- **Phase delay:**$ \phi = -\arctan(f/f_c) $#### Band-Pass Filter
+- Attenuation: $-20 $ dB/decade above $ f_c $- **Phase delay:**$ \phi = -\arctan(f/f_c) $#### Band-Pass Filter
 Series combination of low-pass and high-pass filters.
 
 #### Anti-Aliasing Filter
 Must be placed **before** ADC
 
-$f_{\text{cutoff}} < \frac{f_s}{2}$ where $f_s$ = sampling frequency.
+$ f_{\text{cutoff}} < \frac{f_s}{2} $ where $ f_s $ = sampling frequency.
 
 ### Analog-to-Digital Conversion (ADC)
 **Quantization:*
 *
 
-$V_{\text{out}} = \frac{V_{\text{ref}}}{2^N} \cdot \text{code}$ where $N$ = number of bits.
+$ V_{\text{out}} = \frac{V_{\text{ref}}}{2^N} \cdot \text{code} $ where $ N $ = number of bits.
 
-**Quantization error:**$ \pm \frac{1}{2}$LSB =$ \pm \frac{V_{\text{ref}}}{2^{N+1}} $**Quantization noise power:*
+**Quantization error:**$ \pm \frac{1}{2} $ LSB =$ \pm \frac{V_{\text{ref}}}{2^{N+1}} $**Quantization noise power:*
 *
 
-$$ \sigma_q^2 = \frac{\Delta^2}{12}, \quad \Delta = \frac{2V_{\text{ref}}}{2^N} $$
+$ $ \sigma_q^2 = \frac{\Delta^2}{12}, \quad \Delta = \frac{2V_{\text{ref}}}{2^N} $$
 
 | ADC Resolution | LSB (for 0–5 V) | Quantization Noise RMS |
 |----------------|------------------|--------------------------|
@@ -135,9 +135,9 @@ $$ \sigma_q^2 = \frac{\Delta^2}{12}, \quad \Delta = \frac{2V_{\text{ref}}}{2^N} 
 **Nyquist-Shannon Sampling Theorem:*
 *
 
-$f_s \geq 2 f_{\text{max}}$If$ f_s < 2f_{\text{max}} $: **aliasing** — frequencies fold back into the recorded band.
+$ f_s \geq 2 f_{\text{max}} $ If $ f_s < 2f_{\text{max}} $: **aliasing** — frequencies fold back into the recorded band.
 
-**Oversampling:** Sampling at $f_s = n \cdot f_{\text{Nyquist}} $improves SNR by $(10/2)\log_{10} n $dB and allows simpler analog filter design.
+**Oversampling:** Sampling at $ f_s = n \cdot f_{\text{Nyquist}} $ improves SNR by $ (10/2)\log_{10} n $ dB and allows simpler analog filter design.
 
 ---
 
@@ -146,17 +146,17 @@ $f_s \geq 2 f_{\text{max}}$If$ f_s < 2f_{\text{max}} $: **aliasing** — frequen
 ### Calibration Model (Polynomial
 )
 
-$y_{\text{true}} = c_0 + c_1 x + c_2 x^2 + c_3 x^3 + \cdots $$$
+$ y_{\text{true}} = c_0 + c_1 x + c_2 x^2 + c_3 x^3 + \cdots $$$
 
 where:
--$x$ = raw measurement value
--$y$ = calibrated (physical) value
-- $c_i$ = calibration coefficients
+-$ x $ = raw measurement value
+-$ y $ = calibrated (physical) value
+- $ c_i $ = calibration coefficients
 
 ### Two-Point Calibratio
 n
 
-$y = (x - x_0) \cdot \frac{y_1 - y_0}{x_1 - x_0} + y_0 $$$
+$ y = (x - x_0) \cdot \frac{y_1 - y_0}{x_1 - x_0} + y_0 $$$
 
 ### Multi-Point Calibration
 
@@ -177,7 +177,7 @@ $y = (x - x_0) \cdot \frac{y_1 - y_0}{x_1 - x_0} + y_0 $$$
 ### Traceability
 Every measurement should be traceable to SI units through an unbroken chain of calibrations
 
-$$ \text{Instrument} \leftarrow \text{Calibration} \leftarrow \text{Primary Standard} \leftarrow \text{Kibble Balance / Atomic Standards} $$
+$ $ \text{Instrument} \leftarrow \text{Calibration} \leftarrow \text{Primary Standard} \leftarrow \text{Kibble Balance / Atomic Standards} $$
 
 ### Key Calibration Parameters
 
@@ -203,24 +203,24 @@ $$ \text{Instrument} \leftarrow \text{Calibration} \leftarrow \text{Primary Stan
 ### Standard Uncertainty
 **Type A** (standard deviation of mean)
 
-$$ u_A = \frac{s}{\sqrt{n}} = \frac{1}{\sqrt{n(n-1)}}\sqrt{\sum_{i=1}^n (x_i - \bar{x})^2
+$ $ u_A = \frac{s}{\sqrt{n}} = \frac{1}{\sqrt{n(n-1)}}\sqrt{\sum_{i=1}^n (x_i - \bar{x})^2
 }
 
 $$ **Type B** (estimated bounds):
 
-$u_B = \frac{a}{\sqrt{3}} \quad \text{(uniform distribution)}u_B = \frac{a}{2} \quad \text{(triangular distribution)}$ where $a$ = half-width of bounds.
+$ u_B = \frac{a}{\sqrt{3}} \quad \text{(uniform distribution)}u_B = \frac{a}{2} \quad \text{(triangular distribution)} $ where $ a $ = half-width of bounds.
 
 ### Combined Standard Uncertaint
 y
 
-$u_c = \sqrt{\sum_{i=1}^{N} \left(\frac{\partial f}{\partial x_i}\right)^2 u^2(x_i)}$ where $f(x_1, \ldots, x_N) $= measurement function.
+$ u_c = \sqrt{\sum_{i=1}^{N} \left(\frac{\partial f}{\partial x_i}\right)^2 u^2(x_i)} $ where $ f(x_1, \ldots, x_N) $= measurement function.
 
 This is the **law of propagation of uncertainty** (also called GUM — Guide to the Expression of Uncertainty in Measurement).
 
 ### Expanded Uncertaint
 y
 
-$U = k \cdot u_c $ where $k$ = coverage factor (typically $k = 2 $for ~95% confidence level).
+$ U = k \cdot u_c $ where $ k $ = coverage factor (typically $ k = 2 $ for ~95% confidence level).
 
 ### Error Budget Example (GNSS Baseline Measurement)
 
@@ -238,10 +238,10 @@ $U = k \cdot u_c $ where $k$ = coverage factor (typically $k = 2 $for ~95% confi
 ### Relative Uncertaint
 y
 
-$$ \text{Relative uncertainty} = \frac{u}{|x|} \times 100\% $$
+$ $ \text{Relative uncertainty} = \frac{u}{|x|} \times 100\% $$
 
 ### Resolution-Limited Uncertainty
-Instrument resolution$ \Delta $contributes$ u_{\text{res}} = \frac{\Delta}{\sqrt{12}}$For a digital scale with resolution 1 g:$u_{\text{res}} = 0.29 $g
+Instrument resolution $ \Delta $ contributes $ u_{\text{res}} = \frac{\Delta}{\sqrt{12}} $ For a digital scale with resolution 1 g: $ u_{\text{res}} = 0.29 $ g
 
 ---
 
@@ -270,15 +270,17 @@ Instrument resolution$ \Delta $contributes$ u_{\text{res}} = \frac{\Delta}{\sqrt
 **Code (pseudorange) measurement noise:*
 *
 
-$$ \sigma_{P} = \sqrt{\sigma_{\text{iono}}^2 + \sigma_{\text{tropo}}^2 + \sigma_{\text{receiver}}^2} $$
+$ $ \sigma_{P} = \sqrt{\sigma_{\text{iono}}^2 + \sigma_{\text{tropo}}^2 + \sigma_{\text{receiver}}^2} $$
 
 **Carrier phase measurement noise:*
 *
 
-$$ \sigma_{\phi} = \sqrt{\sigma_{\text{thermal}}^2 + \sigma_{\text{noise}}^2} $$ Typically:$ \sigma_P \approx 1 $m (code),$ \sigma_\phi \approx 1 $mm (phase) for survey-grade receivers.
+$ $ \sigma_{\phi} = \sqrt{\sigma_{\text{thermal}}^2 + \sigma_{\text{noise}}^2} $$
+
+Typically: $ \sigma_P \approx 1 $ m (code),$ \sigma_\phi \approx 1 $ mm (phase) for survey-grade receivers.
 
 ### Integer Ambiguity Resolution
-Carrier phase: $ \phi = \frac{\rho}{\lambda} + N + \varepsilon $ where $N$ = integer number of wavelengths (ambiguity). Resolving $N$ correctly → mm accuracy.
+Carrier phase: $ \phi = \frac{\rho}{\lambda} + N + \varepsilon $ where $ N $ = integer number of wavelengths (ambiguity). Resolving $ N $ correctly → mm accuracy.
 
 ---
 
@@ -286,12 +288,12 @@ Carrier phase: $ \phi = \frac{\rho}{\lambda} + N + \varepsilon $ where $N$ = int
 
 | Formula | Name | Use |
 |---------|------|-----|
-| $V_{\text{out}} = G \cdot V_{\text{in}}$ | Amplification | Signal conditioning |
-| $f_s \geq 2f_{\text{max}}$ | Nyquist theorem | Sampling rate |
+| $ V_{\text{out}} = G \cdot V_{\text{in}} $ | Amplification | Signal conditioning |
+| $ f_s \geq 2f_{\text{max}} $ | Nyquist theorem | Sampling rate |
 | $ \sigma = V_{\text{ref}}/(2^N) $ | Quantization step | ADC resolution |
-| $u_c = \sqrt{\sum(\partial f/\partial x_i)^2 u^2(x_i)}$ | Propagation of uncertainty | Combined uncertainty |
-| $U = k \cdot u_c$ | Expanded uncertainty | Coverage interval |
-| $ \tau\frac{dy}{dt} + y = K x$ | First-order sensor model | Dynamic response |
+| $ u_c = \sqrt{\sum(\partial f/\partial x_i)^2 u^2(x_i)} $ | Propagation of uncertainty | Combined uncertainty |
+| $ U = k \cdot u_c $ | Expanded uncertainty | Coverage interval |
+| $ \tau\frac{dy}{dt} + y = K x $ | First-order sensor model | Dynamic response |
 
 ---
 
@@ -301,7 +303,7 @@ Carrier phase: $ \phi = \frac{\rho}{\lambda} + N + \varepsilon $ where $N$ = int
 3. Compute the Nyquist rate for a GNSS L1 signal (1.575 GHz carrier, 2 MHz bandwidth).
 4. A GNSS receiver has code noise 1 m RMS, tropospheric 1 cm, ionospheric residual 1 cm. What is the combined uncertainty?
 5. Estimate the standard uncertainty of a digital scale with resolution 0.1 g and rectangular distribution.
-6. Derive the uncertainty propagation for $f = \sqrt{x^2 + y^2} $given independent uncertainties $u_x $ and $u_y$.
+6. Derive the uncertainty propagation for $ f = \sqrt{x^2 + y^2} $ given independent uncertainties $ u_x $ and $ u_y$.
 7. Design an anti-aliasing filter for 10 Hz data acquisition: what cutoff frequency?
 
 ---

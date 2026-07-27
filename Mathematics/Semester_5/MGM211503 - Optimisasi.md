@@ -46,7 +46,7 @@ For $\min f(x) $ subject to $ h(x) = 0 $:
 
 $ $\mathcal{L}(x, \lambda) = f(x) + \lambda^T h(x)
 
-$$
+$ $
 
 ### KKT Conditions
 
@@ -61,15 +61,15 @@ For inequality constraints:
 
 $ $\nabla_x \|Ax - b\|^2 = 2A^T(Ax - b) = 0
 
-$$
+$ $
 
 $ $
 
-A^T A x = A^T b $$
+A^T A x = A^T b $ $
 
 $ $\hat{x} = (A^T A)^{-1} A^T b
 
-$$
+$ $
 
 This is the normal equation — foundation of [[Least Squares Adjustment]].
 
@@ -84,7 +84,7 @@ ext{subject to} \quad & \sum c_i l_i \leq B \quad ext{(budget)} \\
 & l_i \geq 0 \quad ext{(non-negative baselines)}
 \end{aligned}
 
-$$
+$ $
 
 ## 🎯 Practice Problems
 

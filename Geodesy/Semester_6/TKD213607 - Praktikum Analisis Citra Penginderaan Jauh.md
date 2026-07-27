@@ -52,21 +52,21 @@ Menghitung dan menginterpretasikan indeks dari citra:
 
 - NDVI untuk pemetaan vegetasi
 
-$$
+$ $
 
-NDVI = \frac{Band5 - Band4}{Band5 + Band4} \quad (ext{Landsat 8})$ $
+NDVI = \frac{Band5 - Band4}{Band5 + Band4} \quad (ext{Landsat 8}) $ $
 
 - NDWI untuk deteksi badan air
 
 - SAVI (Soil Adjusted Vegetation Index) untuk lahan terbuka
 
-$$ SAVI = \frac{(NIR - Red)(1 + L)}{NIR + Red + L}$ $
+$ $ SAVI = \frac{(NIR - Red)(1 + L)}{NIR + Red + L} $ $
 
 - EVI untuk koreksi atmosferik setengah
 
 - Color slicing dan thresholding untuk pemisahan kelas
 
-- Tugas: membuat peta NDVI Pulau Bali dengan threshold $ NDVI < 0.2 $lahan terbuka,$ 0.2 < NDVI < 0.6 $vegetasi jarang,$ NDVI > 0.6 $vegetasi lebat
+- Tugas: membuat peta NDVI Pulau Bali dengan threshold $ NDVI < 0.2 $ lahan terbuka,$ 0.2 < NDVI < 0.6 $ vegetasi jarang,$ NDVI > 0.6 $ vegetasi lebat
 
 ### Modul 4: Klasifikasi Terbimbing (Supervised)
 Teknik klasifikasi piksel berbasis training sample:
@@ -75,7 +75,7 @@ Teknik klasifikasi piksel berbasis training sample:
 
 - Klasifikasi Maximum Likelihood
 
-$ $p(\omega_i|x) = \frac{p(x|\omega_i)P(\omega_i)}{p(x)}$$
+$ $ p(\omega_i|x) = \frac{p(x|\omega_i)P(\omega_i)}{p(x)}$ $
 
 - Support Vector Machine (SVM) dengan kernel RBF
 

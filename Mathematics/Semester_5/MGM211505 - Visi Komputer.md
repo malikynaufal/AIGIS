@@ -44,7 +44,7 @@ where $ K $= intrinsic,$ [R|t] $ = extrinsic parameters.
 
 ### Fundamental Matrix
 
-$ $x'^T F x = 0 $$
+$ $ x'^T F x = 0 $ $
 
 relates corresponding points in stereo images.
 

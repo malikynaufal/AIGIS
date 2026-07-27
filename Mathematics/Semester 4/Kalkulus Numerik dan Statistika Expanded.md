@@ -33,7 +33,7 @@ This course introduces numerical methods for solving mathematical problems that 
 
 - **Fixed-point iteration**: $x = g(x) $ conversion
 
-**Example**: Find $\sqrt{2} $ using Newton: $x_{n+1} = \frac{1}{2}(x_n + \frac{2}{x_n}) $#### 1.2 Interpolation and Approximation
+**Example**: Find $\sqrt{2} $ using Newton: $ x_{n+1} = \frac{1}{2}(x_n + \frac{2}{x_n}) $#### 1.2 Interpolation and Approximation
 
 - **Linear interpolation**: Connecting data points
 

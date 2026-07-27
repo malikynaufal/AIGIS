@@ -189,7 +189,7 @@ float read_temperature() {
 
 ### 3.3 Timing Requirements
 
-For a seismic data acquisition system sampling at $f_s = 200 $Hz:$T_{\text{sample}} = \frac{1}{f_s} = 5\;\text{ms} $$$
+For a seismic data acquisition system sampling at $f_s = 200 $ Hz: $T_{\text{sample}} = \frac{1}{f_s} = 5\;\text{ms} $$$
 
 Within this 5 ms window, the MCU must:
 

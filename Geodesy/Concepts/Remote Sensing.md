@@ -28,7 +28,7 @@ updated: 2026-07-27
 
 ### NDVI — Normalized Difference Vegetation Index
 
-$$ NDVI = \frac{NIR - Red}{NIR + Red}$$
+$$ NDVI = \frac{NIR - Red}{NIR + Red}$ $
 
 | NDVI Value | Land Cover |
 |------------|------------|
@@ -40,13 +40,15 @@ $$ NDVI = \frac{NIR - Red}{NIR + Red}$$
 
 ### NDWI — Normalized Difference Water Index
 
-$$ NDWI = \frac{Green - NIR}{Green + NIR}$$
+$$
+
+NDWI = \frac{Green - NIR}{Green + NIR}$ $
 
 ### Other Indices
 
 | Index | Formula | Use |
 |-------|---------|-----|
-| SAVI | $\frac{NIR-Red}{NIR+Red+L}(1+L) $, $L=0.5$ | Soil-adjusted vegetation |
+| SAVI | $\frac{NIR-Red}{NIR+Red+L}(1+L) $, $ L=0.5 $ | Soil-adjusted vegetation |
 | MNDWI | $\frac{Green-SWIR}{Green+SWIR} $ | Modified water index |
 | BSI | $\frac{(SWIR+Red)-(NIR+Blue)}{(SWIR+Red)+(NIR+Blue)} $ | Bare soil index |
 
@@ -76,11 +78,11 @@ $$ NDWI = \frac{Green - NIR}{Green + NIR}$$
 
 ### SAR (Synthetic Aperture Radar)
 
-$$\text{Resolution}_{range} = \frac{c}{2B} = \frac{c}{2f_{chirp}}
+$ $\text{Resolution}_{range} = \frac{c}{2B} = \frac{c}{2f_{chirp}}
 
 $$
 
-$$\text{Resolution}_{azimuth} = \frac{D_{antenna}}{2}
+$ $\text{Resolution}_{azimuth} = \frac{D_{antenna}}{2}
 
 $$
 
@@ -93,7 +95,7 @@ $$
 
 ### LiDAR (Light Detection and Ranging)
 
-$$\text{Range} = \frac{c \cdot \Delta t}{2}
+$ $\text{Range} = \frac{c \cdot \Delta t}{2}
 
 $$
 
@@ -121,7 +123,7 @@ $$
 
 ## Study Problems
 
-1. Compute NDVI given $NIR = 0.35$ and $ Red = 0.08$.
+1. Compute NDVI given $ NIR = 0.35 $ and $ Red = 0.08$.
 2. Explain the difference between multispectral and hyperspectral sensors.
 3. Why is L-band SAR better than X-band for forest monitoring?
 4. Calculate the range resolution of a SAR with bandwidth 150 MHz.

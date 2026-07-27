@@ -33,7 +33,9 @@ created: 2026-07-27
 
 Each plate moves as a rigid body on the sphere. The Euler pole (rotation vector) describes the motion:
 
-$$\mathbf{v} = \boldsymbol{\omega} \times \mathbf{r} $$ where $\mathbf{v} $ is the velocity at a station on the surface,$\boldsymbol{\omega} $is the angular velocity vector, and $\mathbf{r} $ is the position vector.
+$$\mathbf{v} = \boldsymbol{\omega} \times \mathbf{r} $ $
+
+where $\mathbf{v} $ is the velocity at a station on the surface,$\boldsymbol{\omega} $ is the angular velocity vector, and $\mathbf{r} $ is the position vector.
 
 | Plate | Angular velocity $\omega $ (°/Myr) | Euler pole (°N, °E) |
 |-------|-----------------------------------|----------------------|
@@ -48,7 +50,9 @@ $$\mathbf{v} = \boldsymbol{\omega} \times \mathbf{r} $$ where $\mathbf{v} $ is t
 
 At a locked subduction zone (e.g., Sunda Trench), the overriding plate is compressed and pushed upward
 
-$$ v_{\text{int}} = A \cdot e^{-x/\xi} + B $$ where $ x $is distance from the trench, and $\xi $ is the locking depth parameter.
+$ $ v_{\text{int}} = A \cdot e^{-x/\xi} + B $$
+
+where $ x $ is distance from the trench, and $\xi $ is the locking depth parameter.
 
 ---
 
@@ -56,16 +60,16 @@ $$ v_{\text{int}} = A \cdot e^{-x/\xi} + B $$ where $ x $is distance from the tr
 
 ### 3.1. Coseismic displacement (Okada elastic half‑space model)
 
-The displacement at a point $(x,y)$ on the surface due to a rectangular dislocation (fault) is given by the **Okada (1985)** equations. Key parameters:
+The displacement at a point $ (x,y) $ on the surface due to a rectangular dislocation (fault) is given by the **Okada (1985)** equations. Key parameters:
 
 | Parameter | Symbol | Meaning |
 |-----------|--------|---------|
-| Length | $L$ | Along‑strike extent of fault |
-| Width | $W$ | Down‑dip extent |
+| Length | $ L $ | Along‑strike extent of fault |
+| Width | $ W $ | Down‑dip extent |
 | Strike | $\phi $ | Azimuth of fault trace |
 | Dip | $\delta $ | Inclination of fault plane |
 | Rake | $\lambda $ | Direction of slip on fault |
-| Slip | $D$ | Amount of displacement |
+| Slip | $ D $ | Amount of displacement |
 | Depth | $ d$ | Depth to top of fault |
 
 The 3D displacement field involves analytical solutions in terms of trigonometric and logarithmic functions (Okada 1985, 1992). The vertical displacement field is often the largest for shallow thrust events.

@@ -45,7 +45,7 @@ GPS Time started at 00:00:00 UTC on January 6, 1980, and does not include leap s
 
 $$\text{GPS Time} = \text{UTC} + 18 \text{ s}
 
-$$
+$ $
 
 ### GPS Week Number
 
@@ -53,11 +53,11 @@ GPS time is expressed as a week number and seconds-of-week:
 
 $$\text{GPS Week} = \text{floor}\left(\frac{\text{GPS seconds since epoch}}{604\,800}\right)
 
-$$
+$ $
 
 $$\text{Seconds of week} = \text{GPS seconds} \mod 604\,800
 
-$$
+$ $
 
 ### Week Number Rollover
 
@@ -76,7 +76,7 @@ Leap seconds are inserted into UTC to keep it within 0.9 s of UT1 (Earth-rotatio
 
 $$\text{UTC} = \text{UT1} + \text{Leap Seconds}
 
-$$
+$ $
 
 ### Historical Leap Seconds
 
@@ -110,11 +110,15 @@ UT1 is astronomical solar time based on Earth's rotation:
 
 $$\text{UT1} = \text{UTC} + \text{UT1-UTC}
 
-$$ The UT1-UTC difference is monitored by [[IERS]] and published in the IERS Bulletin A: $$\text{UT1-UTC} = -0.050\,868 \text{ s} \quad \text{(as of 2024-01-01)}
+$ $
 
-$$ ### Greenwich Sidereal Time $$\theta = 24110.54841 + 8640184.812866 \cdot T + 0.093104 \cdot T^2 - 6.2e-6 \cdot T^3 \quad \text{(seconds)}
+The UT1-UTC difference is monitored by [[IERS]] and published in the IERS Bulletin A: $$\text{UT1-UTC} = -0.050\,868 \text{ s} \quad \text{(as of 2024-01-01)}
 
-$$ where $ T $ is Julian centuries since J2000.0.
+$ $ ### Greenwich Sidereal Time $$\theta = 24110.54841 + 8640184.812866 \cdot T + 0.093104 \cdot T^2 - 6.2e-6 \cdot T^3 \quad \text{(seconds)}
+
+$ $
+
+where $ T $ is Julian centuries since J2000.0.
 
 ## In [[Geodesy]] Context
 
@@ -122,9 +126,11 @@ $$ where $ T $ is Julian centuries since J2000.0.
 
 GPS pseudorange equation:
 
-$$\rho = c \cdot (\tau_{GPS} - t_{GPS}) + c \cdot \delta t_{sat} - c \cdot \delta t_{rec} + \epsilon_{ion} + \epsilon_{tropo}
+$ $\rho = c \cdot (\tau_{GPS} - t_{GPS}) + c \cdot \delta t_{sat} - c \cdot \delta t_{rec} + \epsilon_{ion} + \epsilon_{tropo}
 
-$$ where $\tau_{GPS}$ is the signal transmission time in GPS Time.
+$$
+
+where $\tau_{GPS}$ is the signal transmission time in GPS Time.
 
 ### Time Conversion for Indonesian Surveys
 

@@ -426,18 +426,18 @@ Keep this visible while studying:
 
 | Symbol | Value | Unit | Meaning |
 |--------|-------|------|---------|
-| $c$ | 299,792,458 | m/s | Speed of light |
-| $G$ | 6.674×10⁻¹¹ | m³/(kg·s²) | Gravitational constant |
-| $M_⊕$ | 5.972×10²⁴ | kg | Earth's mass |
-| $R_⊕$ | 6,371,008.8 | m | Earth's mean radius |
-| $f$ | 1/298.257223563 | — | Earth's flattening |
+| $c $ | 299,792,458 | m/s | Speed of light |
+| $ G $ | 6.674×10⁻¹¹ | m³/(kg·s²) | Gravitational constant |
+| $ M_⊕$ | 5.972×10²⁴ | kg | Earth's mass |
+| $ R_⊕$ | 6,371,008.8 | m | Earth's mean radius |
+| $ f $ | 1/298.257223563 | — | Earth's flattening |
 | $ω$ | 7.292115×10⁻⁵ | rad/s | Earth's rotation rate |
-| $GM$ | 3.986004418×10¹⁴ | m³/s² | Geocentric gravitational constant |
-| $ \mu s/day$ | 38 | μs/day | Relativistic clock offset (GPS) |
-| $k_B$ | 1.380649×10⁻²³ | J/K | Boltzmann constant |
-| $h$ | 6.62607015×10⁻³⁴ | J·s | Planck constant |
-| $e$ | 1.602176634×10⁻¹⁹ | C | Elementary charge |
-| $ \varepsilon_0$ | 8.8541878128×10⁻¹² | F/m | Vacuum permittivity |
+| $ GM $ | 3.986004418×10¹⁴ | m³/s² | Geocentric gravitational constant |
+| $ \mu s/day $ | 38 | μs/day | Relativistic clock offset (GPS) |
+| $ k_B $ | 1.380649×10⁻²³ | J/K | Boltzmann constant |
+| $ h $ | 6.62607015×10⁻³⁴ | J·s | Planck constant |
+| $ e $ | 1.602176634×10⁻¹⁹ | C | Elementary charge |
+| $ \varepsilon_0 $ | 8.8541878128×10⁻¹² | F/m | Vacuum permittivity |
 | $ \mu_0$ | 4π×10⁻⁷ | H/m | Vacuum permeability |
 
 ---

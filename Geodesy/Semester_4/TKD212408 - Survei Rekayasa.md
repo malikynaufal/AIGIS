@@ -14,7 +14,7 @@ Survei Rekayasa mempelajari teknik-teknik survei presisi tinggi untuk proyek rek
 
 - **Alinement horizontal**: circular curves, spiral transitions, clothoid
 
-$$ T = Ran\frac{\Delta}{2} \quad L = R\frac{i\Delta}{180°}$ $- **Alinement vertikal**: parabolic vertical curves, grades, sight distance
+$$ T = Ran\frac{\Delta}{2} \quad L = R\frac{i\Delta}{180°} $ $- **Alinement vertikal**: parabolic vertical curves, grades, sight distance
 
 - **Setting out**: stake-out menggunakan total station / RTK-GNSS
 
@@ -48,7 +48,7 @@ $$ T = Ran\frac{\Delta}{2} \quad L = R\frac{i\Delta}{180°}$ $- **Alinement vert
 
 ### 5. Deformasi Struktur
 
-- **Precise levelling**: $ 0.3 $mm/km
+- **Precise levelling**: $ 0.3 $ mm/km
 
 - **RTK GNSS**: 5–15 mm horizontal (real-time)
 

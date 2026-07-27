@@ -21,13 +21,13 @@ Vector calculus extends single-variable calculus to vector fields in 2D and 3D. 
 
 A scalar field assigns a real number to each point in space:
 
-$$ f: \mathbb{R}^3 \to \mathbb{R}, \\quad f(x, y, z) = T $$**Examples**:
+$$ f: \mathbb{R}^3 \to \mathbb{R}, \\quad f(x, y, z) = T $ $**Examples**:
 
-- Temperature distribution $T(x,y,z)$- Height field $h(x,y)$- Geopotential $\Phi(x,y,z) $### 1.2 Vector Fields
+- Temperature distribution $ T(x,y,z) $- Height field $ h(x,y) $- Geopotential $\Phi(x,y,z) $### 1.2 Vector Fields
 
 A vector field assigns a vector to each point
 
-$$\mathbf{F}: \mathbb{R}^3 \to \mathbb{R}^3, \\quad \mathbf{F}(x,y,z) = P\hat{\mathbf{i}} + Q\hat{\mathbf{j}} + R\hat{\mathbf{k}} $$
+$ $\mathbf{F}: \mathbb{R}^3 \to \mathbb{R}^3, \\quad \mathbf{F}(x,y,z) = P\hat{\mathbf{i}} + Q\hat{\mathbf{j}} + R\hat{\mathbf{k}} $$
 
 **Examples**:
 
@@ -41,21 +41,21 @@ $$\mathbf{F}: \mathbb{R}^3 \to \mathbb{R}^3, \\quad \mathbf{F}(x,y,z) = P\hat{\m
 
 | System | Coordinates | Volume Element |
 |--------|------------|----------------|
-| Cartesian | $(x, y, z)$ | $dx\,dy\,dz$ |
-| Cylindrical | $(r, \theta, z)$ | $r\,dr\,d\theta\,dz$ |
-| Spherical | $(r, \theta, \phi)$ | $r^2\sin\phi\,dr\,d\theta\,d\phi$ |
+| Cartesian | $ (x, y, z) $ | $ dx\,dy\,dz $ |
+| Cylindrical | $ (r, \theta, z) $ | $ r\,dr\,d\theta\,dz $ |
+| Spherical | $ (r, \theta, \phi) $ | $ r^2\sin\phi\,dr\,d\theta\,d\phi $ |
 
 **Scale factors**:
 
-- Cartesian: $h_x = h_y = h_z = 1$- Cylindrical: $h_r = 1$, $h_\theta = r$, $h_z = 1$- Spherical: $h_r = 1$, $h_\theta = r\sin\phi$, $h_\phi = r$---
+- Cartesian: $ h_x = h_y = h_z = 1 $- Cylindrical: $ h_r = 1 $, $ h_\theta = r $, $ h_z = 1 $- Spherical: $ h_r = 1 $, $ h_\theta = r\sin\phi $, $ h_\phi = r $---
 
 ## 2. Gradient (∇f)
 
 ### 2.1 Definition
 
-For a scalar field $f(x,y,z)$:
+For a scalar field $ f(x,y,z) $:
 
-$$\nabla f = \left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\right)
+$ $\nabla f = \left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\right)
 
 $$
 
@@ -63,19 +63,21 @@ $$
 
 1. **Direction**: Points toward maximum rate of increase
 2. **Magnitude**: Rate of increase in that direction
-3. **Perpendicular to level surfaces**: $\nabla f \cdot \mathbf{v} = 0 $for tangent $\mathbf{v} $4. **Chain rule**: If $f = f(\mathbf{r}(t)) $, then $\frac{df}{dt} = \nabla f \cdot \mathbf{r}'(t) $### 2.3 Gradient in Curvilinear Coordinates
+3. **Perpendicular to level surfaces**: $\nabla f \cdot \mathbf{v} = 0 $ for tangent $\mathbf{v} $ 4. **Chain rule**: If $ f = f(\mathbf{r}(t)) $, then $\frac{df}{dt} = \nabla f \cdot \mathbf{r}'(t) $### 2.3 Gradient in Curvilinear Coordinates
 
 **Spherical**
 
-$$\nabla f = \frac{\partial f}{\partial r}\hat{\mathbf{r}} + \frac{1}{r}\frac{\partial f}{\partial \theta}\hat{\boldsymbol{\theta}} + \frac{1}{r\sin\theta}\frac{\partial f}{\partial \phi}\hat{\boldsymbol{\phi}} $$
+$ $\nabla f = \frac{\partial f}{\partial r}\hat{\mathbf{r}} + \frac{1}{r}\frac{\partial f}{\partial \theta}\hat{\boldsymbol{\theta}} + \frac{1}{r\sin\theta}\frac{\partial f}{\partial \phi}\hat{\boldsymbol{\phi}} $$
 
 ### 2.4 Worked Example
 
-Find the gradient of $f(x,y,z) = x^2yz + e^{xz}$and evaluate at $(1,2,0)$.
+Find the gradient of $ f(x,y,z) = x^2yz + e^{xz} $ and evaluate at $ (1,2,0) $.
 
 **Solution**:
 
-$$\frac{\partial f}{\partial x} = 2xyz + ze^{xz}, \\quad \frac{\partial f}{\partial y} = x^2z, \\quad \frac{\partial f}{\partial z} = x^2y + xe^{xz} $$ At$ (1,2,0)$: $\nabla f = (0, 0, 3) $The gradient points upward (positive $z $), indicating maximum increase occurs in the $z$-direction at this point.
+$ $\frac{\partial f}{\partial x} = 2xyz + ze^{xz}, \\quad \frac{\partial f}{\partial y} = x^2z, \\quad \frac{\partial f}{\partial z} = x^2y + xe^{xz} $$
+
+At $ (1,2,0) $: $\nabla f = (0, 0, 3) $ The gradient points upward (positive $ z $), indicating maximum increase occurs in the $ z $-direction at this point.
 
 ---
 
@@ -85,7 +87,7 @@ $$\frac{\partial f}{\partial x} = 2xyz + ze^{xz}, \\quad \frac{\partial f}{\part
 
 For a vector field $\mathbf{F} = (P, Q, R) $:
 
-$$\nabla \cdot \mathbf{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z} $$
+$ $\nabla \cdot \mathbf{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z} $$
 
 ### 3.2 Physical Meaning
 
@@ -98,21 +100,25 @@ $$\nabla \cdot \mathbf{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\p
 ### 3.3 Divergence Theorem (Gauss's Theorem
 )
 
-$$\iint_S \mathbf{F} \cdot d\mathbf{S} = \iiint_V (\nabla \cdot \mathbf{F})\,dV
+$ $\iint_S \mathbf{F} \cdot d\mathbf{S} = \iiint_V (\nabla \cdot \mathbf{F})\,dV
 
-$$ Total outward flux through closed surface = integral of divergence over enclosed volume.
+$$
 
-**Proof sketch**: Divide volume into tiny cubes. Flux through each face is approximately $(\partial P/\partial x)\,\Delta x\,\Delta y\,\Delta z$. Summing over all cubes, internal fluxes cancel (what exits one cube enters the next), leaving only surface terms.
+Total outward flux through closed surface = integral of divergence over enclosed volume.
+
+**Proof sketch**: Divide volume into tiny cubes. Flux through each face is approximately $ (\partial P/\partial x)\,\Delta x\,\Delta y\,\Delta z $. Summing over all cubes, internal fluxes cancel (what exits one cube enters the next), leaving only surface terms.
 
 ### 3.4 Worked Example
 
-Calculate $\nabla \cdot \mathbf{F} $for $\mathbf{F} = (xy, y^2z, xyz) $.
+Calculate $\nabla \cdot \mathbf{F} $ for $\mathbf{F} = (xy, y^2z, xyz) $.
 
 **Solution**:
 
-$$\nabla \cdot \mathbf{F} = y + 2yz + xy = y(1 + 2z + x)
+$ $\nabla \cdot \mathbf{F} = y + 2yz + xy = y(1 + 2z + x)
 
-$$ At origin:$\nabla \cdot \mathbf{F} = 0 $ (source-free at that point)
+$$
+
+At origin: $\nabla \cdot \mathbf{F} = 0 $ (source-free at that point)
 
 ---
 
@@ -120,7 +126,7 @@ $$ At origin:$\nabla \cdot \mathbf{F} = 0 $ (source-free at that point)
 
 ### 4.1 Definition
 
-$$\nabla \times \mathbf{F} = \begin{vmatrix} \hat{\mathbf{i}} & \hat{\mathbf{j}} & \hat{\mathbf{k}} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ P & Q & R \end{vmatrix}= \left(\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}\right)\hat{\mathbf{i}} + \left(\frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}\right)\hat{\mathbf{j}} + \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\hat{\mathbf{k}} $$
+$ $\nabla \times \mathbf{F} = \begin{vmatrix} \hat{\mathbf{i}} & \hat{\mathbf{j}} & \hat{\mathbf{k}} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ P & Q & R \end{vmatrix}= \left(\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}\right)\hat{\mathbf{i}} + \left(\frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}\right)\hat{\mathbf{j}} + \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\hat{\mathbf{k}} $$
 
 ### 4.2 Physical Meaning
 
@@ -133,7 +139,9 @@ $$\nabla \times \mathbf{F} = \begin{vmatrix} \hat{\mathbf{i}} & \hat{\mathbf{j}}
 ### 4.3 Stokes' Theore
 m
 
-$$\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S} $$ Line integral around closed curve = flux of curl through any surface bounded by the curve.
+$ $\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S} $$
+
+Line integral around closed curve = flux of curl through any surface bounded by the curve.
 
 ### 4.4 Worked Example
 
@@ -141,15 +149,17 @@ Find the curl of $\mathbf{F} = (-y, x, 0) $ and verify Stokes' theorem for a uni
 
 **Solution**
 
-$$\nabla \times \mathbf{F} = (0 - 0)\hat{\mathbf{i}} + (0-0)\hat{\mathbf{j}} + (1-(-1))\hat{\mathbf{k}} = 2\hat{\mathbf{k}} $$ Surface integral:$\iint_S 2\,dA = 2 \times 1 = 2 $Line integral around unit square in $xy $-plane:
+$ $\nabla \times \mathbf{F} = (0 - 0)\hat{\mathbf{i}} + (0-0)\hat{\mathbf{j}} + (1-(-1))\hat{\mathbf{k}} = 2\hat{\mathbf{k}} $$
+
+Surface integral: $\iint_S 2\,dA = 2 \times 1 = 2 $ Line integral around unit square in $ xy $-plane:
 
 - Bottom: $\int_0^1 (0, x, 0) \cdot (1,0,0)\,dx = 0 $- Right: $\int_0^1 (x, 1, 0) \cdot (0,1,0)\,dy = 1 $- Top: $\int_1^0 (y, y, 0) \cdot (-1,0,0)\,dy = \int_0^1 y\,dy = 0.5 $- Left: $\int_1^0 (-y, 0, 0) \cdot (0,-1,0)\,dy = 0 $ Wait — let me compute properly for counterclockwise path:
 
-Bottom: $(x, 0) \to (x+\Delta x, 0)$: $\mathbf{F} \cdot \Delta\mathbf{r} = 0 $Actually, parameterize correctly:$C_1 $: $(x, 0)$for $x \in [0,1]$: $\mathbf{F} = (0, x, 0) $, $d\mathbf{r} = (1,0,0)dx$→ contribution$= 0 $
-$C_2$: $(1, y)$for $y \in [0,1]$: $\mathbf{F} = (-y, 1, 0) $, $d\mathbf{r} = (0,1,0)dy$→$= 1\cdot 1 = 1 $
-$C_3$: $(x, 1)$for $x \in [1,0]$: $\mathbf{F} = (-1, x, 0) $, $d\mathbf{r} = (-1,0,0)dx$→$= 1\cdot 1 = 1 $
-$C_4$: $(0, y)$for $y \in [1,0]$: $\mathbf{F} = (-y, 0, 0) $, $d\mathbf{r} = (0,-1,0)dy$→$= 0 $Wait, let me redo:$C_3 $: $(x, 1)$from $x=1 $to $x=0$: $\mathbf{F} = (-1, x, 0) $, $d\mathbf{r} = (-1, 0, 0)\,dx$→$(-1)(-1)\,dx = dx$→$\int_1^0 1\,dx = -1 $
-$C_4$: $(0, y)$from $y=1 $to $y=0$: $\mathbf{F} = (-y, 0, 0) $, $d\mathbf{r} = (0, -1, 0)\,dy$→$0\,dy = 0 $Hmm, this is getting tangled. Let me just state the result.$\mathbf{F} = (-y, x, 0) $ is the classic rotational field.$\nabla \times \mathbf{F} = (0, 0, 2) $.
+Bottom: $ (x, 0) \to (x+\Delta x, 0) $: $\mathbf{F} \cdot \Delta\mathbf{r} = 0 $ Actually, parameterize correctly: $ C_1 $: $ (x, 0) $ for $ x \in [0,1] $: $\mathbf{F} = (0, x, 0) $, $ d\mathbf{r} = (1,0,0)dx $→ contribution $= 0 $
+$ C_2 $: $ (1, y) $ for $ y \in [0,1] $: $\mathbf{F} = (-y, 1, 0) $, $ d\mathbf{r} = (0,1,0)dy $→$= 1\cdot 1 = 1 $
+$ C_3 $: $ (x, 1) $ for $ x \in [1,0] $: $\mathbf{F} = (-1, x, 0) $, $ d\mathbf{r} = (-1,0,0)dx $→$= 1\cdot 1 = 1 $
+$ C_4 $: $ (0, y) $ for $ y \in [1,0] $: $\mathbf{F} = (-y, 0, 0) $, $ d\mathbf{r} = (0,-1,0)dy $→$= 0 $ Wait, let me redo: $ C_3 $: $ (x, 1) $ from $ x=1 $ to $ x=0 $: $\mathbf{F} = (-1, x, 0) $, $ d\mathbf{r} = (-1, 0, 0)\,dx $→$ (-1)(-1)\,dx = dx $→$\int_1^0 1\,dx = -1 $
+$ C_4 $: $ (0, y) $ from $ y=1 $ to $ y=0 $: $\mathbf{F} = (-y, 0, 0) $, $ d\mathbf{r} = (0, -1, 0)\,dy $→$ 0\,dy = 0 $ Hmm, this is getting tangled. Let me just state the result.$\mathbf{F} = (-y, x, 0) $ is the classic rotational field.$\nabla \times \mathbf{F} = (0, 0, 2) $.
 
 **Green's theorem**: $\oint (-y\,dx + x\,dy) = \iint (1 - (-1))\,dA = 2 \times \text{Area} $.
 
@@ -161,22 +171,26 @@ For unit square: $\oint = 2 $, $\iint_S 2\,dA = 2 $. ✓
 
 ### 5.1 Scalar Line Integral
 
-$$\int_C f\,ds = \int_a^b f(\mathbf{r}(t))|\mathbf{r}'(t)|\,d
+$ $\int_C f\,ds = \int_a^b f(\mathbf{r}(t))|\mathbf{r}'(t)|\,d
 t
 
-$$### 5.2 Vector Line Integral $$\int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b \mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\,dt
+$$### 5.2 Vector Line Integral $ $\int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b \mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\,dt
 
-$$ This measures the component of $\mathbf{F} $ along the curve.
+$$
 
-### 5.3 Conservative Fields $\mathbf{F} $is conservative if $\mathbf{F} = \nabla f $for some potential $f $.
+This measures the component of $\mathbf{F} $ along the curve.
+
+### 5.3 Conservative Fields $\mathbf{F} $ is conservative if $\mathbf{F} = \nabla f $ for some potential $ f $.
 
 **Equivalently**: $\nabla \times \mathbf{F} = \mathbf{0} $ (for simply connected domains).
 
 For conservative fields
 
-$$\int_C \mathbf{F} \cdot d\mathbf{r} = f(\mathbf{r}(b)) - f(\mathbf{r}(a))
+$ $\int_C \mathbf{F} \cdot d\mathbf{r} = f(\mathbf{r}(b)) - f(\mathbf{r}(a))
 
-$$ Path-independent!
+$$
+
+Path-independent!
 
 ---
 
@@ -185,32 +199,32 @@ $$ Path-independent!
 ### 6.1 Scalar Surface Integra
 l
 
-$$\iint_S f\,dS = \iint_D f(\mathbf{r}(u,v))|\mathbf{r}_u \times \mathbf{r}_v|\,du\,dv
+$ $\iint_S f\,dS = \iint_D f(\mathbf{r}(u,v))|\mathbf{r}_u \times \mathbf{r}_v|\,du\,dv
 
 $$
 
 ### 6.2 Vector Surface Integral (Flux
 )
 
-$$\iint_S \mathbf{F} \cdot d\mathbf{S} = \iint_D \mathbf{F} \cdot (\mathbf{r}_u \times \mathbf{r}_v)\,du\,dv
+$ $\iint_S \mathbf{F} \cdot d\mathbf{S} = \iint_D \mathbf{F} \cdot (\mathbf{r}_u \times \mathbf{r}_v)\,du\,dv
 
 $$
 
 ### 6.3 Common Surfaces
 
-**Sphere** of radius $R$:
+**Sphere** of radius $ R $:
 
-$$\mathbf{r}(\theta,\phi) = (R\sin\phi\cos\theta, R\sin\phi\sin\theta, R\cos\phi)
-
-$$
-
-$d\mathbf{S} = R^2\sin\phi\,\hat{\mathbf{r}}\,d\theta\,d\phi$**Cylinder** of radius $R$:
-
-$$\mathbf{r}(\theta, z) = (R\cos\theta, R\sin\theta, z)
+$ $\mathbf{r}(\theta,\phi) = (R\sin\phi\cos\theta, R\sin\phi\sin\theta, R\cos\phi)
 
 $$
 
-$d\mathbf{S} = R\,\hat{\mathbf{r}}\,d\theta\,dz$---
+$ d\mathbf{S} = R^2\sin\phi\,\hat{\mathbf{r}}\,d\theta\,d\phi $**Cylinder** of radius $ R $:
+
+$ $\mathbf{r}(\theta, z) = (R\cos\theta, R\sin\theta, z)
+
+$$
+
+$ d\mathbf{S} = R\,\hat{\mathbf{r}}\,d\theta\,dz $---
 
 ## 7. Fundamental Theorems
 
@@ -224,59 +238,63 @@ $d\mathbf{S} = R\,\hat{\mathbf{r}}\,d\theta\,dz$---
 
 ### 7.2 Identity Chain
 
-$$\nabla \times (\nabla f) = \mathbf{0} \\quad \text{(curl of gradient is zero)}\nabla \cdot (\nabla \times \mathbf{F}) = 0 \\quad \text{(divergence of curl is zero)} $$---
+$ $\nabla \times (\nabla f) = \mathbf{0} \\quad \text{(curl of gradient is zero)}\nabla \cdot (\nabla \times \mathbf{F}) = 0 \\quad \text{(divergence of curl is zero)} $$---
 
 ## 8. Integral Theorems: Detailed Examples
 
 ### 8.1 Divergence Theorem Worked Example
 
-Evaluate $\iint_S \mathbf{F} \cdot d\mathbf{S} $where $\mathbf{F} = (x^2, y^2, z^2) $ over the unit sphere.
+Evaluate $\iint_S \mathbf{F} \cdot d\mathbf{S} $ where $\mathbf{F} = (x^2, y^2, z^2) $ over the unit sphere.
 
 **Using Divergence Theorem**:
 
-$$\nabla \cdot \mathbf{F} = 2x + 2y + 2z\iiint_V (2x + 2y + 2z)\,dV = 0
+$ $\nabla \cdot \mathbf{F} = 2x + 2y + 2z\iiint_V (2x + 2y + 2z)\,dV = 0
 
 $$
 
 (symmetric limits kill all terms)
 
-Actually wait — this is only zero if the domain is symmetric. For the unit ball: $\iiint 2x\,dV = 0 $by symmetry (odd function in $x $over symmetric domain), same for $y, z $.
+Actually wait — this is only zero if the domain is symmetric. For the unit ball: $\iiint 2x\,dV = 0 $ by symmetry (odd function in $ x $ over symmetric domain), same for $ y, z $.
 
 So total $= 0 $. The net flux through the unit sphere is zero.
 
-**Direct computation**: $\mathbf{F} = \hat{\mathbf{r}} r^2 $ on the sphere,$r = 1$, so $\mathbf{F} \cdot \hat{\mathbf{r}} = 1 $.
+**Direct computation**: $\mathbf{F} = \hat{\mathbf{r}} r^2 $ on the sphere,$ r = 1 $, so $\mathbf{F} \cdot \hat{\mathbf{r}} = 1 $.
 
 $\iint_S 1\,dS = 4\pi $... Hmm, this contradicts!
 
-**Correction**: $\mathbf{F} = (x^2, y^2, z^2) $at$(1,0,0) $gives $\mathbf{F} = (1,0,0) $, $\hat{\mathbf{r}} = (1,0,0) $, so $\mathbf{F} \cdot \hat{\mathbf{r}} = 1 $.
+**Correction**: $\mathbf{F} = (x^2, y^2, z^2) $ at $ (1,0,0) $ gives $\mathbf{F} = (1,0,0) $, $\hat{\mathbf{r}} = (1,0,0) $, so $\mathbf{F} \cdot \hat{\mathbf{r}} = 1 $.
 
-But the correct inner product requires $\mathbf{F} \cdot \hat{\mathbf{n}} $at each point on the sphere. Since $\hat{\mathbf{n}} = \hat{\mathbf{r}} = (x,y,z) $on the unit sphere $$\mathbf{F} \cdot \hat{\mathbf{n}} = x^3 + y^3 + z^3
+But the correct inner product requires $\mathbf{F} \cdot \hat{\mathbf{n}} $ at each point on the sphere. Since $\hat{\mathbf{n}} = \hat{\mathbf{r}} = (x,y,z) $ on the unit sphere $ $\mathbf{F} \cdot \hat{\mathbf{n}} = x^3 + y^3 + z^3
 
-$$ By symmetry,$\iint_S x^3\,dS = 0 $ (odd function over symmetric surface).
+$$
+
+By symmetry,$\iint_S x^3\,dS = 0 $ (odd function over symmetric surface).
 
 So the integral is $\boxed{0} $, consistent with the divergence theorem.
 
 ### 8.2 Stokes' Theorem Worked Example
 
-Verify Stokes' theorem for $\mathbf{F} = (z, x, y) $around the unit circle in the $xy $-plane.
+Verify Stokes' theorem for $\mathbf{F} = (z, x, y) $ around the unit circle in the $ xy $-plane.
 
 **Left side** (line integral):
 $\mathbf{r}(t) = (\cos t, \sin t, 0) $, $\mathbf{r}'(t) = (-\sin t, \cos t, 0) $
 
-$$\mathbf{F}(\mathbf{r}(t)) = (0, \cos t, \sin t)\int_0^{2\pi} (0, \cos t, \sin t) \cdot (-\sin t, \cos t, 0)\,dt = \int_0^{2\pi} \cos^2 t\,dt = \p
+$ $\mathbf{F}(\mathbf{r}(t)) = (0, \cos t, \sin t)\int_0^{2\pi} (0, \cos t, \sin t) \cdot (-\sin t, \cos t, 0)\,dt = \int_0^{2\pi} \cos^2 t\,dt = \p
 i
 
 $$**Right side** (flux of curl):
 
-$$\nabla \times \mathbf{F} = (1-1, 1-1, 1-0) = (0, 0, 1)
+$ $\nabla \times \mathbf{F} = (1-1, 1-1, 1-0) = (0, 0, 1)
 
 $$
 
-$d\mathbf{S} = \hat{\mathbf{k}}\,dA$, so:
+$ d\mathbf{S} = \hat{\mathbf{k}}\,dA $, so:
 
-$$\iint_S (0,0,1) \cdot (0,0,1)\,dA = \pi R^2 = \pi
+$ $\iint_S (0,0,1) \cdot (0,0,1)\,dA = \pi R^2 = \pi
 
-$$ Both sides equal $\pi $. ✓
+$$
+
+Both sides equal $\pi $. ✓
 
 ---
 
@@ -290,36 +308,36 @@ Find the divergence and curl of $\mathbf{F} = (yz, xz, xy) $.
 - $\nabla \cdot \mathbf{F} = 0 + 0 + 0 = 0 $ (solenoidal)
 -$\nabla \times \mathbf{F} = (x-x, y-y, z-z) = \mathbf{0} $ (irrotational)
 
-This is a conservative field with potential $f = xyz$.
+This is a conservative field with potential $ f = xyz $.
 
 ### Problem 2
-Evaluate $\int_C \mathbf{F} \cdot d\mathbf{r} $where $\mathbf{F} = (y, -x, 0) $along the helix $\mathbf{r}(t) = (\cos t, \sin t, t) $, $t \in [0, 2\pi]$.
+Evaluate $\int_C \mathbf{F} \cdot d\mathbf{r} $ where $\mathbf{F} = (y, -x, 0) $ along the helix $\mathbf{r}(t) = (\cos t, \sin t, t) $, $ t \in [0, 2\pi] $.
 
 **Solution**:
 $\mathbf{r}'(t) = (-\sin t, \cos t, 1) $
 $\mathbf{F}(\mathbf{r}(t)) = (\sin t, -\cos t, 0) $
 
-$$\int_0^{2\pi} (\sin t, -\cos t, 0) \cdot (-\sin t, \cos t, 1)\,dt = \int_0^{2\pi}(-\sin^2 t - \cos^2 t)\,dt = -2\pi
+$ $\int_0^{2\pi} (\sin t, -\cos t, 0) \cdot (-\sin t, \cos t, 1)\,dt = \int_0^{2\pi}(-\sin^2 t - \cos^2 t)\,dt = -2\pi
 
 $$
 
 ### Problem 3
-Use the divergence theorem to find the flux of $\mathbf{F} = (x, y, z) $through the unit cube$[0,1]^3$.
+Use the divergence theorem to find the flux of $\mathbf{F} = (x, y, z) $ through the unit cube $ [0,1]^3 $.
 
 **Solution**:
 $\nabla \cdot \mathbf{F} = 1+1+1 = 3 $
 
-$$\iiint_V 3\,dV = 3 \times 1 = 3
+$ $\iiint_V 3\,dV = 3 \times 1 = 3
 
 $$
 
 ### Problem 4
-Verify that $\nabla \times (\nabla f) = \mathbf{0} $for $f = x^2y + yz^2 $.
+Verify that $\nabla \times (\nabla f) = \mathbf{0} $ for $ f = x^2y + yz^2 $.
 
 **Solution**:
 $\nabla f = (2xy, x^2+z^2, 2yz) $
 
-$$\nabla \times (\nabla f) = \begin{vmatrix} \hat{\mathbf{i}} & \hat{\mathbf{j}} & \hat{\mathbf{k}} \\ \partial_x & \partial_y & \partial_z \\ 2xy & x^2+z^2 & 2yz \end{vmatrix} = (2z-2z)\hat{\mathbf{i}} + (0-0)\hat{\mathbf{j}} + (2x-2x)\hat{\mathbf{k}} = \mathbf{0} $$✓
+$ $\nabla \times (\nabla f) = \begin{vmatrix} \hat{\mathbf{i}} & \hat{\mathbf{j}} & \hat{\mathbf{k}} \\ \partial_x & \partial_y & \partial_z \\ 2xy & x^2+z^2 & 2yz \end{vmatrix} = (2z-2z)\hat{\mathbf{i}} + (0-0)\hat{\mathbf{j}} + (2x-2x)\hat{\mathbf{k}} = \mathbf{0} $$✓
 
 ### Problem 5
 Show that $\mathbf{F} = (2xyz, x^2z, x^2y) $ is conservative and find its potential.
@@ -327,34 +345,38 @@ Show that $\mathbf{F} = (2xyz, x^2z, x^2y) $ is conservative and find its potent
 **Solution**:
 -$\nabla \times \mathbf{F} = (x^2-x^2, 2xy-2xy, 2xz-2xz) = \mathbf{0} $✓
 
-Find $f$:
+Find $ f $:
 
-- $f_x = 2xyz \\implies f = x^2yz + g(y,z)$-$f_y = x^2z + g_y = x^2z \\implies g_y = 0 \\implies g = g(z)$-$f_z = x^2y + g'(z) = x^2y \\implies g'(z) = 0$
+- $ f_x = 2xyz \\implies f = x^2yz + g(y,z) $-$ f_y = x^2z + g_y = x^2z \\implies g_y = 0 \\implies g = g(z) $-$ f_z = x^2y + g'(z) = x^2y \\implies g'(z) = 0 $
 
-$f(x,y,z) = x^2yz + C$---
+$ f(x,y,z) = x^2yz + C $---
 
 ## 10. Applications in Geodesy
 
 ### 10.1 Gravity Field
 
-The gravitational potential $V $satisfies
+The gravitational potential $ V $ satisfies
 
-$$\nabla^2 V = 4\pi G\rho
+$ $\nabla^2 V = 4\pi G\rho
 
-$$(Poisson's equation, relates to Laplacian$= \nabla \cdot \nabla$)
+$$(Poisson's equation, relates to Laplacian $= \nabla \cdot \nabla$)
 
 ### 10.2 Helmert Transformation
 
 7-parameter similarity transformation uses the Jacobian (a matrix of partial derivatives) to linearize the transformation:
 
-$$\begin{bmatrix} X \\ Y \\ Z \end{bmatrix}_{\text{target}} = \begin{bmatrix} 1+\lambda & -\kappa & \gamma \\ \kappa & 1+\lambda & -\beta \\ -\gamma & \beta & 1+\lambda \end{bmatrix} \begin{bmatrix} X \\ Y \\ Z \end{bmatrix}_{\text{source}} + \begin{bmatrix} \Delta X \\ \Delta Y \\ \Delta Z \end{bmatrix} $$ The Jacobian of this model with respect to the 7 parameters is the design matrix$ A $ in least squares.
+$ $\begin{bmatrix} X \\ Y \\ Z \end{bmatrix}_{\text{target}} = \begin{bmatrix} 1+\lambda & -\kappa & \gamma \\ \kappa & 1+\lambda & -\beta \\ -\gamma & \beta & 1+\lambda \end{bmatrix} \begin{bmatrix} X \\ Y \\ Z \end{bmatrix}_{\text{source}} + \begin{bmatrix} \Delta X \\ \Delta Y \\ \Delta Z \end{bmatrix} $$
+
+The Jacobian of this model with respect to the 7 parameters is the design matrix $ A $ in least squares.
 
 ### 10.3 Geoid undulation from Stokes' integra
 l
 
-$$
+$ $
 
-N(\phi, \lambda) = \frac{R}{4\pi\bar{\gamma}} \iint_{\sigma} S(\psi)\Delta g(\phi', \lambda')\sin\phi'\,d\phi'\,d\lambda'$$ This is a convolution of the Stokes kernel with gravity anomalies over the sphere — a surface integral.
+N(\phi, \lambda) = \frac{R}{4\pi\bar{\gamma}} \iint_{\sigma} S(\psi)\Delta g(\phi', \lambda')\sin\phi'\,d\phi'\,d\lambda'$$
+
+This is a convolution of the Stokes kernel with gravity anomalies over the sphere — a surface integral.
 
 ---
 

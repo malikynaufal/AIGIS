@@ -135,11 +135,11 @@ Upon completion, students will be able to:
 ## 🧪 Worked Examples
 
 ### Example 1: Gauss's Law — Infinite Line Charge
-Find the electric field from an infinite line charge with linear density $ \lambda$.
+Find the electric field from an infinite line charge with linear density $ \lambda $.
 
 **Choose Gaussian surface:** Cylinder of radius $ r $, length $ L $, coaxial with line.
 
-$ $ \oint ec{E} \cdot dec{A} = E(2i r L) = rac{\lambda L}{\epsilon_0}E = rac{\lambda}{2i\epsilon_0 r} $$
+$ $ \oint ec{E} \cdot dec{A} = E(2i r L) = rac{\lambda L}{\epsilon_0}E = rac{\lambda}{2i\epsilon_0 r} $ $
 
 **Dimensional check:**$ [\lambda] = C/m $,$ [\epsilon_0] = F/m $,$ [r] = m $
 
@@ -153,23 +153,23 @@ A 10 μF capacitor charges through a 1 MΩ resistor from a 12 V source.
 **Voltage across capacitor:*
 *
 
-$ V_C(t) = 12(1 - e^{-t/10}) 	ext{ V} $ $ **At $ t = 10 $ s (one time constant):** $ V_C = 12(1 - e^{-1}) = 12(0.632) = 7.59 $V$
+$ V_C(t) = 12(1 - e^{-t/10}) 	ext{ V} $ $ **At $ t = 10 $ s (one time constant):** $ V_C = 12(1 - e^{-1}) = 12(0.632) = 7.59 $ V $
 
-**At $ t = 30 $ s (three time constants):** $ V_C = 12(0.950) = 11.4 $V
+**At $ t = 30 $ s (three time constants):** $ V_C = 12(0.950) = 11.4 $ V
 
 ### Example 3: Magnetic Field of a Solenoid
 A solenoid has 500 turns, length 0.5 m, carrying 2 A.
 
-$ B = \mu_0 n I = (4i 	imes 10^{-7})(500/0.5)(2) = 4i 	imes 10^{-7} 	imes 1000 	imes 2 = 2.51 	ext{ mT} $ $$
+$ B = \mu_0 n I = (4i 	imes 10^{-7})(500/0.5)(2) = 4i 	imes 10^{-7} 	imes 1000 	imes 2 = 2.51 	ext{ mT} $ $ $
 
 ### Example 4: Motional EMF
-A conducting bar ( $ L = 0.3 $m) moves at $ v = 5 $m/s through $ B = 0.5 $T
+A conducting bar ( $ L = 0.3 $ m) moves at $ v = 5 $ m/s through $ B = 0.5 $ T
 .
 
-$ arepsilon = BLv = (0.5)(0.3)(5) = 0.75 	ext{ V} $ $$
+$ arepsilon = BLv = (0.5)(0.3)(5) = 0.75 	ext{ V} $ $ $
 
 ### Example 5: Inductance and Energy
-An inductor $ L = 0.5 $H carries current $ I = 4 $A.
+An inductor $ L = 0.5 $ H carries current $ I = 4 $ A.
 
 **Energy stored:**
 

@@ -17,8 +17,10 @@ Active Remote Sensing focuses on Synthetic Aperture Radar (SAR) and LiDAR system
 ### 1. SAR Principles
 
 $$
+
 \text{Range resolution: } \Delta r = \frac{c}{2B}, \quad \text{Azimuth resolution: } \Delta a = \frac{\lambda R}{2L_{SAR}}
-$$
+
+$ $
 
 - **Backscatter:** $\sigma^0 = \frac{P_r (4\pi)^3 R^4}{P_t G^2 \lambda^2 A}$
 - **Penetration by band:** X (< 2 cm), C (< 5 cm), L (< 25 cm), P (< 70 cm)
@@ -26,15 +28,21 @@ $$
 ### 2. SAR Interferometry (InSAR)
 
 **Phase difference:**
-$$
+
+$ $
+
 \Delta\phi = \frac{4\pi}{\lambda} \Delta r + \phi_{atm} + \phi_{noise}
+
 $$
 
-**DEM generation:** $z = h - \frac{\lambda R \sin\theta}{4\pi B_\perp} \Delta\phi$
+**DEM generation:** $ z = h - \frac{\lambda R \sin\theta}{4\pi B_\perp} \Delta\phi $
 
 **Deformation mapping:**
-$$
+
+$ $
+
 d = \frac{\lambda}{4\pi} \cdot \Delta\phi_{def}
+
 $$
 
 | Technique | Accuracy | Application |
@@ -46,8 +54,10 @@ $$
 
 ### 3. LiDAR Principles
 
-$$
+$ $
+
 \text{Range: } R = \frac{c \Delta t}{2}
+
 $$
 
 | LiDAR Type | Penetration | Application |

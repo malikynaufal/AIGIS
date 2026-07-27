@@ -869,7 +869,7 @@ class SystemMonitor:
 |---------|---------|
 | LADM Core Packages | Party, Role, RRR, SpatialUnit, BAUnit, SpatialSource |
 | Percentage Calculations | $\frac{ext{Part}}{ext{Whole}} imes 100 $ |
-| Certificate Validity | $ext{Expiry} = ext{Issue Date} + ext{Years} imes 365 $ |
+| Certificate Validity | $ ext{Expiry} = ext{Issue Date} + ext{Years} imes 365 $ |
 | Area Unit Conversion | $ 1 ext{ha} = 10,000 ext{m}^2 $ |
 | API Request Rate | $\frac{ext{Requests}}{ext{Time Window}} $ |
 

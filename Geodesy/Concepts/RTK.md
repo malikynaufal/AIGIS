@@ -15,34 +15,38 @@ updated: 2026-07-27
 
 ## 1. Basic Principle
 
-The raw carrier‑phase measurement on frequency $f $from satellite $s $at receiver $r $:
+The raw carrier‑phase measurement on frequency $f $ from satellite $ s $ at receiver $ r $:
 
-$$\Phi_{r,f}^s = \rho_r^s + c(\delta t_r - \delta t^s) + \lambda_f N_{r,f}^s + I_r^s + T_r^s + \epsilon_{\Phi} $$ | Symbol | Meaning |
+$ $\Phi_{r,f}^s = \rho_r^s + c(\delta t_r - \delta t^s) + \lambda_f N_{r,f}^s + I_r^s + T_r^s + \epsilon_{\Phi} $$ | Symbol | Meaning |
 |--------|---------|
 | $\rho_r^s $ | Geometric range |
-| $c$ | Speed of light |
+| $ c $ | Speed of light |
 | $\delta t_r, \delta t^s $ | Receiver & satellite clock errors |
-| $\lambda_f $| Wavelength of frequency $f$ |
-| $N_{r,f}^s$ | **Integer ambiguity** (cycles) |
-| $I_r^s$ | Ionospheric delay |
-| $T_r^s$ | Tropospheric delay |
+| $\lambda_f $| Wavelength of frequency $ f $ |
+| $ N_{r,f}^s $ | **Integer ambiguity** (cycles) |
+| $ I_r^s $ | Ionospheric delay |
+| $ T_r^s $ | Tropospheric delay |
 | $\epsilon_{\Phi} $ | Measurement noise (~1 mm) |
 
-The key difference from code pseudorange is the **integer ambiguity**$N$. Once $N $is resolved,$\Phi $ becomes an extremely precise range measurement (mm noise).
+The key difference from code pseudorange is the **integer ambiguity**$ N $. Once $ N $ is resolved,$\Phi $ becomes an extremely precise range measurement (mm noise).
 
 ---
 
 ## 2. Single‑Difference and Double‑Difference
 
-### 2.1. Single Difference (between rover $r $and base $b $for the same satellite $s$)
+### 2.1. Single Difference (between rover $ r $ and base $ b $ for the same satellite $ s $)
 
-$$\nabla\Phi_{rb,f}^s = \Phi_{r,f}^s - \Phi_{b,f}^s = \nabla\rho_{rb}^s + c(\delta t_r - \delta t_b) + \lambda_f \nabla N_{rb,f}^s + \nabla I_{rb}^s + \nabla T_{rb}^s
+$ $\nabla\Phi_{rb,f}^s = \Phi_{r,f}^s - \Phi_{b,f}^s = \nabla\rho_{rb}^s + c(\delta t_r - \delta t_b) + \lambda_f \nabla N_{rb,f}^s + \nabla I_{rb}^s + \nabla T_{rb}^s
 
-$$ Common errors (satellite clock, ephemeris, atmospheric delays for short baselines) **cancel out**.
+$$
 
-### 2.2. Double Difference (between two satellites $s_1, s_2$)
+Common errors (satellite clock, ephemeris, atmospheric delays for short baselines) **cancel out**.
 
-$$\Delta\nabla\Phi_{rb,f}^{s_1s_2} = \nabla\Phi_{rb,f}^{s_1} - \nabla\Phi_{rb,f}^{s_2} = \Delta\nabla\rho_{rb}^{s_1s_2} + \lambda_f \Delta\nabla N_{rb,f}^{s_1s_2} + \Delta\nabla I_{rb}^{s_1s_2} + \Delta\nabla T_{rb}^{s_1s_2} $$ Receiver clock terms also cancel. **Double‑difference carrier phase** is the standard RTK observable.
+### 2.2. Double Difference (between two satellites $ s_1, s_2 $)
+
+$ $\Delta\nabla\Phi_{rb,f}^{s_1s_2} = \nabla\Phi_{rb,f}^{s_1} - \nabla\Phi_{rb,f}^{s_2} = \Delta\nabla\rho_{rb}^{s_1s_2} + \lambda_f \Delta\nabla N_{rb,f}^{s_1s_2} + \Delta\nabla I_{rb}^{s_1s_2} + \Delta\nabla T_{rb}^{s_1s_2} $$
+
+Receiver clock terms also cancel. **Double‑difference carrier phase** is the standard RTK observable.
 
 ---
 
@@ -52,15 +56,19 @@ The goal is to find integer ambiguities $\Delta\nabla N \in \mathbb{Z} $.
 
 ### 3.1. Float solution
 
-First, solve for $\Delta\nabla N $as real numbers using least squares $$\hat{\mathbf{a}}_{\text{float}} = (\mathbf{A}^\top\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^\top\mathbf{P}\boldsymbol{\ell} $$ with covariance $\mathbf{Q}_{\hat{\mathbf{a}}} $.
+First, solve for $\Delta\nabla N $ as real numbers using least squares $ $\hat{\mathbf{a}}_{\text{float}} = (\mathbf{A}^\top\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^\top\mathbf{P}\boldsymbol{\ell} $$
+
+with covariance $\mathbf{Q}_{\hat{\mathbf{a}}} $.
 
 ### 3.2. Integer least‑squares (ILS)
 
 Search the integer grid:
 
-$$\hat{\mathbf{a}}_{\text{int}} = \underset{\mathbf{a}\in\mathbb{Z}^n}{\arg\min} \quad (\mathbf{a} - \hat{\mathbf{a}}_{\text{float}})^\top \mathbf{Q}_{\hat{\mathbf{a}}}^{-1} (\mathbf{a} - \hat{\mathbf{a}}_{\text{float}})
+$ $\hat{\mathbf{a}}_{\text{int}} = \underset{\mathbf{a}\in\mathbb{Z}^n}{\arg\min} \quad (\mathbf{a} - \hat{\mathbf{a}}_{\text{float}})^\top \mathbf{Q}_{\hat{\mathbf{a}}}^{-1} (\mathbf{a} - \hat{\mathbf{a}}_{\text{float}})
 
-$$ Standard search algorithms:
+$$
+
+Standard search algorithms:
 
 - **LAMBDA** (Least‑squares AMBiguity Decorrelation Adjustment) – decorrelates $\mathbf{Q} $ before integer search (Teunissen, 1995).
 
@@ -69,7 +77,9 @@ $$ Standard search algorithms:
 ### 3.3. Validation – Ratio tes
 t
 
-$$\text{Ratio} = \frac{\text{Second‑best quadratic form}}{\text{Best quadratic form}} $$ If $\text{Ratio} > \text{threshold} $ (typically 3 or 4), the fix is accepted.
+$ $\text{Ratio} = \frac{\text{Second‑best quadratic form}}{\text{Best quadratic form}} $$
+
+If $\text{Ratio} > \text{threshold} $ (typically 3 or 4), the fix is accepted.
 
 ---
 
@@ -88,7 +98,7 @@ For larger areas (> 10–20 km baseline), single‑base RTK degrades due to spat
 
 ## 5. Worked Example – Baseline Resolution
 
-**Scenario:** Base at $X_b, Y_b, Z_b$ (known). Rover measures carrier phase on GPS L1 ($\lambda = 0.19029367 $ m) and L2 ($\lambda = 0.24421021 $ m) to 6 satellites.
+**Scenario:** Base at $ X_b, Y_b, Z_b $ (known). Rover measures carrier phase on GPS L1 ($\lambda = 0.19029367 $ m) and L2 ($\lambda = 0.24421021 $ m) to 6 satellites.
 
 Double‑difference float ambiguities (after least squares, cycles):
 
@@ -102,7 +112,9 @@ Double‑difference float ambiguities (after least squares, cycles):
 
 Decorrelate with LAMBDA → integer candidates → best candidate
 
-$$\hat{\mathbf{a}}_{\text{int}} = [12, -6, 23, 8, -17] \text{ cycles (L1)} $$ Ratio test = 5.2 > 3.0 → **FIXED**.
+$ $\hat{\mathbf{a}}_{\text{int}} = [12, -6, 23, 8, -17] \text{ cycles (L1)} $$
+
+Ratio test = 5.2 > 3.0 → **FIXED**.
 
 Position precision after fixing:
 

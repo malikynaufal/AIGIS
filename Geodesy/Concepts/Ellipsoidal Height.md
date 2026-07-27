@@ -15,34 +15,38 @@ Every point on Earth has three distinct height values:
 
 | Symbol | Name | Reference Surface | How It Is Obtained |
 |--------|------|-------------------|--------------------|
-| $h$ | Ellipsoidal height | [[Reference Ellipsoid]] | GNSS/GPS directly |
-| $H$ | [[Orthometric Height]] | [[Geoid]] (mean sea level) | Spirit leveling |
-| $N$ | [[Geoid Undulation]] | Separation (geoid − ellipsoid) | Geoid model output |
+| $ h $ | Ellipsoidal height | [[Reference Ellipsoid]] | GNSS/GPS directly |
+| $ H $ | [[Orthometric Height]] | [[Geoid]] (mean sea level) | Spirit leveling |
+| $ N $ | [[Geoid Undulation]] | Separation (geoid − ellipsoid) | Geoid model output |
 
 ### Fundamental Relatio
 n
 
-$$ h = H + N $$ This simple equation is the bridge between satellite-based positioning (ellipsoidal) and traditional surveying (orthometric). For a GNSS survey: measure$ h $via satellite, subtract $N $from a geoid model, obtain $H $ usable for mapping and engineering.
+$ $ h = H + N $$
+
+This simple equation is the bridge between satellite-based positioning (ellipsoidal) and traditional surveying (orthometric). For a GNSS survey: measure $ h $ via satellite, subtract $ N $ from a geoid model, obtain $ H $ usable for mapping and engineering.
 
 ## Geometric Meaning
 
-At a point $P $with geodetic latitude $\phi $and longitude $\lambda $:
+At a point $ P $ with geodetic latitude $\phi $ and longitude $\lambda $:
 
-- The ellipsoidal height $h $extends along the *ellipsoidal normal* (the line perpendicular to the ellipsoid at $\phi, \lambda $).
+- The ellipsoidal height $ h $ extends along the *ellipsoidal normal* (the line perpendicular to the ellipsoid at $\phi, \lambda $).
 
 - This line does **not** pass through Earth's center of mass (except at the equator and poles), unlike the geocentric radius.
 
 - The point's ECEF coordinates are:
 
-$$ X = (N + h)\cos\phi\cos\lambdaY = (N + h)\cos\phi\sin\lambdaZ = \left(N(1 - e^2) + h\right)\sin\phi $$ where $ N = \frac{a}{\sqrt{1 - e^2\sin^2\phi}} $ is the radius of curvature in the prime vertical.
+$ $ X = (N + h)\cos\phi\cos\lambdaY = (N + h)\cos\phi\sin\lambdaZ = \left(N(1 - e^2) + h\right)\sin\phi $$
+
+where $ N = \frac{a}{\sqrt{1 - e^2\sin^2\phi}} $ is the radius of curvature in the prime vertical.
 
 ## Physical Interpretation
 
 - **Ellipsoidal height is geometric**, not physical.
 
-- Because the [[Reference Ellipsoid]] is a smooth mathematical surface,$h$ takes no account of gravity, topography, or mass distributions.
+- Because the [[Reference Ellipsoid]] is a smooth mathematical surface,$ h $ takes no account of gravity, topography, or mass distributions.
 
-- Values range from about $-100 $m (ocean trenches relative to ellipsoid) to $+9000 $ m (Mt. Everest ellipsoidal height).
+- Values range from about $-100 $ m (ocean trenches relative to ellipsoid) to $+9000 $ m (Mt. Everest ellipsoidal height).
 
 ## Typical Values at Selected Locations (WGS84)
 
@@ -53,7 +57,7 @@ $$ X = (N + h)\cos\phi\cos\lambdaY = (N + h)\cos\phi\sin\lambdaZ = \left(N(1 - e
 | Indian Ocean | 0° | 80°E | 0 | ~−105 | −105 |
 | North Atlantic | 50°N | 10°W | 0 | ~+50 | 50 |
 
-The geoid undulation $N $varies by ±110 m globally, causing significant differences between $h $and $H$.
+The geoid undulation $ N $ varies by ±110 m globally, causing significant differences between $ h $ and $ H $.
 
 ## Accuracy Considerations
 
@@ -67,23 +71,25 @@ The geoid undulation $N $varies by ±110 m globally, causing significant differe
 
 ## The Curse of Ellipsoidal Height in Practice
 
-- **No direct physical meaning** — a water surface does not follow a constant-$h $surface.
+- **No direct physical meaning** — a water surface does not follow a constant-$ h $ surface.
 
 - **Requires geoid model** to convert to orthometric height for civil engineering.
 
-- **Datum-dependent** — the same point has different $h $on different ellipsoids (e.g., WGS84 vs. GRS80 differ by ~1 mm, but NAD27 vs. WGS84 differ by tens of meters).
+- **Datum-dependent** — the same point has different $ h $ on different ellipsoids (e.g., WGS84 vs. GRS80 differ by ~1 mm, but NAD27 vs. WGS84 differ by tens of meters).
 
 ## Relationship to Gravity
 
 The gradient of ellipsoidal height with respect to gravity potential is
 
-$$\frac{dh}{dW} = -\frac{1}{\gamma} $$ where $\gamma $ is normal gravity at the ellipsoid. This connects height systems with [[Physical Geodesy]] and the [[Gravity Field]].
+$ $\frac{dh}{dW} = -\frac{1}{\gamma} $$
+
+where $\gamma $ is normal gravity at the ellipsoid. This connects height systems with [[Physical Geodesy]] and the [[Gravity Field]].
 
 ## See also
 
 - [[Orthometric Height]] — The physically meaningful height above sea level
 
-- [[Geoid Undulation]] — The conversion factor $N$
+- [[Geoid Undulation]] — The conversion factor $ N $
 
 - [[Geodetic Coordinates]] — Complete position representation ($\phi, \lambda, h $)
 

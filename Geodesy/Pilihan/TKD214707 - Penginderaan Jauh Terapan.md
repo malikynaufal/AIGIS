@@ -27,13 +27,19 @@ Advanced applications of [[Remote Sensing]] data for environmental monitoring, r
 ### 2. Time Series Analysis
 
 **NDVI time series for phenology:**
-$$
-NDVI(t) = a + b \sin(2\pi t) + c \cos(2\pi t)
+
 $$
 
+NDVI(t) = a + b \sin(2\pi t) + c \cos(2\pi t)
+
+$ $
+
 **Change detection:**
+
 $$
+
 \Delta NDVI = NDVI_{t2} - NDVI_{t1}
+
 $$
 
 ### 3. Land Cover/Land Use

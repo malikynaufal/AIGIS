@@ -21,36 +21,48 @@ Precession is the slow (~26,000-year) circular motion of Earth's rotational axis
 |-----------|------|--------|
 | General precession in longitude | $\psi \approx 50.26"$ /yr | ~25,772 years |
 | Obliquity of ecliptic | $\varepsilon \approx 23.44°$ | 41,000-year oscillation |
-| Axial tilt change | $d\varepsilon/dt \approx -0.0047"$ /yr | — |
+| Axial tilt change | $ d\varepsilon/dt \approx -0.0047"$ /yr | — |
 
 ### Precession Matrix
 
-The precession matrix $P$ transforms from the mean equator of date to the mean equator of J2000.0:
+The precession matrix $ P $ transforms from the mean equator of date to the mean equator of J2000.0:
 
-$$
+$ $
+
 P = R_3(\zeta_A) \cdot R_2(\theta_A) \cdot R_3(-z_A)
-$$ where:
 
 $$
+
+where:
+
+$ $
+
 \zeta_A = 2.5976176" + 0.0028469"t + 0.0000050"t^2
-$$
 
 $$
+
+$ $
+
 \theta_A = 20.043109" - 0.0085330"t - 0.0000934"t^2
+
 $$
 
-$$ z_A = -2.5976176" + 0.0028469"t + 0.0000050"t^2
+$ $ z_A = -2.5976176" + 0.0028469"t + 0.0000050"t^2
+
 $$
 
-$$ t = (JD_{date} - 2451545.0) / 36525 \quad \text{(Julian centuries from J2000.0)}
+$ $ t = (JD_{date} - 2451545.0) / 36525 \quad \text{(Julian centuries from J2000.0)}
+
 $$
 
 ### Rotation Matrices
 
-$$ R_3(\alpha) = \begin{pmatrix} \cos\alpha & \sin\alpha & 0 \\ -\sin\alpha & \cos\alpha & 0 \\ 0 & 0 & 1 \end{pmatrix}
+$ $ R_3(\alpha) = \begin{pmatrix} \cos\alpha & \sin\alpha & 0 \\ -\sin\alpha & \cos\alpha & 0 \\ 0 & 0 & 1 \end{pmatrix}
+
 $$
 
-$$ R_2(\alpha) = \begin{pmatrix} \cos\alpha & 0 & \sin\alpha \\ 0 & 1 & 0 \\ -\sin\alpha & 0 & \cos\alpha \end{pmatrix}
+$ $ R_2(\alpha) = \begin{pmatrix} \cos\alpha & 0 & \sin\alpha \\ 0 & 1 & 0 \\ -\sin\alpha & 0 & \cos\alpha \end{pmatrix}
+
 $$
 
 ## Nutation
@@ -61,34 +73,42 @@ Nutation is the short-period wobble of Earth's axis superimposed on precession, 
 
 | Parameter | Symbol | Value | Period |
 |-----------|--------|-------|--------|
-| Obliquity nutation | $\Delta\varepsilon$ | $\pm 9.21"$ | 18.6 years |
-| Longitude nutation | $\Delta\psi$ | $\pm 17.23"$ | 18.6 years |
+| Obliquity nutation | $\Delta\varepsilon $ | $\pm 9.21"$ | 18.6 years |
+| Longitude nutation | $\Delta\psi $ | $\pm 17.23"$ | 18.6 years |
 | IAU 2000A terms | — | 678 terms | Various |
 
 ### Nutation Matrix
 
-$$
+$ $
+
 N = R_1(-\varepsilon_0) \cdot R_3(\Delta\psi) \cdot R_1(+\varepsilon_0 + \Delta\varepsilon)
-$$ where $\varepsilon_0$ is the mean obliquity of the ecliptic.
+
+$$
+
+where $\varepsilon_0 $ is the mean obliquity of the ecliptic.
 
 ### IAU 2000A Fundamental Arguments
 
 | Argument | Period | Value at J2000.0 |
 |----------|--------|-------------------|
-| Mean anomaly of Sun $M$ | 1 yr | 357.51716° |
-| Mean anomaly of Moon $M'$ | 27.32 days | 134.96340° |
-| Argument of latitude $F$ | 27.32 days | 93.27209° |
-| Elongation of Moon $D$ | 27.32 days | 297.85020° |
-| Longitude of ascending node $\Omega$ | 18.6 years | 125.04452° |
+| Mean anomaly of Sun $ M $ | 1 yr | 357.51716° |
+| Mean anomaly of Moon $ M'$ | 27.32 days | 134.96340° |
+| Argument of latitude $ F $ | 27.32 days | 93.27209° |
+| Elongation of Moon $ D $ | 27.32 days | 297.85020° |
+| Longitude of ascending node $\Omega $ | 18.6 years | 125.04452° |
 
 ## Combined: Precession-Nutation (IAU 2000A)
 
-$$
+$ $
+
 \mathbf{r}_{true} = N \cdot P \cdot \mathbf{r}_{J2000.0}
-$$
 
 $$
+
+$ $
+
 \begin{pmatrix} x \\ y \\ z \end{pmatrix}_{true} = N \cdot P \cdot \begin{pmatrix} x \\ y \\ z \end{pmatrix}_{J2000.0}
+
 $$
 
 ## Earth Rotation and EOP
@@ -96,16 +116,20 @@ $$
 | Parameter | Symbol | Range | IERS Publication |
 |-----------|--------|-------|------------------|
 | UT1-UTC | ΔUT1 | ±0.9 s | Bulletin A |
-| Polar motion | $(x_p, y_p)$ | ±0.4" | Bulletin A |
-| Nutation corrections | $\Delta\varepsilon, \Delta\psi$ | ±0.01" | Bulletin B |
+| Polar motion | $ (x_p, y_p) $ | ±0.4" | Bulletin A |
+| Nutation corrections | $\Delta\varepsilon, \Delta\psi $ | ±0.01" | Bulletin B |
 | LOD (Length of Day) | LOD | 86164 ± 0.001 s | Bulletin A |
 
 ### Polar Motion
 
-$$
+$ $
+
 x_{ITRF} = x_p + \text{tidal terms}
+
 $$
-$$ y_{ITRF} = -y_p + \text{tidal terms}
+
+$ $ y_{ITRF} = -y_p + \text{tidal terms}
+
 $$
 
 ## In [[Geodesy]] Context
@@ -121,7 +145,10 @@ $$
 
 ### Julian Date Calculation
 
-$$ JD = 2451545.0 + 367Y - \text{int}(7(Y + \text{int}((M+9)/12))/4) + \text{int}(275M/9) + D + 1721013.5
+$ $
+
+JD = 2451545.0 + 367Y - \text{int}(7(Y + \text{int}((M+9)/12))/4) + \text{int}(275M/9) + D + 1721013.5
+
 $$
 
 ## Study Problems

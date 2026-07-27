@@ -31,7 +31,7 @@ $$
 \end{equation}
 \text{(Gauss's law for E)}
 
-$$
+$ $
 
 $$
 
@@ -40,7 +40,7 @@ $$
 \end{equation}
 \text{(Gauss's law for B)}
 
-$$
+$ $
 
 $$
 
@@ -49,7 +49,7 @@ $$
 \end{equation}
 \text{(Faraday's law)}
 
-$$
+$ $
 
 $$
 
@@ -65,7 +65,7 @@ $$
 \end{equation}
 \text{(EM wave equation)}
 
-$$
+$ $
 
 $$
 
@@ -74,7 +74,7 @@ $$
 \end{equation}
 \text{(Poynting vector)}
 
-$$
+$ $
 
 $$
 

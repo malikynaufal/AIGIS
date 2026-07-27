@@ -48,13 +48,13 @@ k_4 &= f(t_n + h, y_n + h k_3) \\
 y_{n+1} &= y_n + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4)
 \end{aligned}
 
-$$**Accuracy:**$ O(h^4) $ local error,$ O(h^4) $ global error.
+$ $**Accuracy:**$ O(h^4) $ local error,$ O(h^4) $ global error.
 
 ### SVD (Singular Value Decomposition)
 
 Any $ m imes n $ matrix $ A $:
 
-$ $A = U \Sigma V^T $$
+$ $ A = U \Sigma V^T $ $
 
 where $ U \in \mathbb{R}^{m imes m} $, $\Sigma = ext{diag}(\sigma_1, \dots, \sigma_p) $, $ V \in \mathbb{R}^{n imes n} $.
 
@@ -73,13 +73,13 @@ The **LAMBDA method** for integer ambiguity resolution:
 
 $ $\hat{N} = \arg\min_{N \in \mathbb{Z}^n} \|N - \hat{N}_{float}\|_{Q_N}^2
 
-$$
+$ $
 
 ## 🎯 Practice Problems
 
 1. Solve $ y' = -2y + t, y(0) = 1 $ using RK4 with $ h=0.1 $.
 2. Implement GMRES for a sparse system $ Ax = b $ from surveying data.
-3. Apply Monte Carlo integration to estimate $i$ and compare with Simpson's rule.
+3. Apply Monte Carlo integration to estimate $ i$ and compare with Simpson's rule.
 4. Perform SVD on a design matrix and identify ill-conditioning.
 5. Implement interior-point method for a linear programming problem.
 

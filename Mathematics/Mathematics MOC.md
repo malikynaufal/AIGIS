@@ -193,20 +193,22 @@ graph TD
 $$
 
 \\begin{aligned}
-X &= (N + h)\\cos\\phi\\cos\\lambda \\\\
-Y &= (N + h)\\cos\\phi\\sin\\lambda \\\\
+X &= (N + h)\\cos\\phi\\cos\\lambda \\
+Y &= (N + h)\\cos\\phi\\sin\\lambda \\
 Z &= (N(1-e^2) + h)\\sin\\phi
 \\end{aligned}
 
-$$ where $ N = \\frac{a}{\\sqrt{1-e^2\\sin^2\\phi}} $, $e^2 = 2f - f^2$.
+$ $
+
+where $ N = \\frac{a}{\\sqrt{1-e^2\\sin^2\\phi}} $, $ e^2 = 2f - f^2 $.
 
 ### Least Squares Normal Equations
 
-$$\\hat{x} = (A^T W A)^{-1} A^T W b, \\quad Q_{xx} = (A^T W A)^{-1}
+$ $\\hat{x} = (A^T W A)^{-1} A^T W b, \\quad Q_{xx} = (A^T W A)^{-1}
 
-$$### Error Propagation $$\\Sigma_z = J \\Sigma_x J^T
+$$### Error Propagation $ $\\Sigma_z = J \\Sigma_x J^T
 
-$$### Stokes' Integral (Geoid)$$ N(P) = \\frac{R}{4\\pi\\gamma} \\iint_\\sigma \\Delta g \\cdot S(\\psi) \\, d\\sigma $$
+$$### Stokes' Integral (Geoid)$ $ N(P) = \\frac{R}{4\\pi\\gamma} \\iint_\\sigma \\Delta g \\cdot S(\\psi) \\, d\\sigma $$
 
 ## 📖 Recommended Textbooks (Free)
 

@@ -13,16 +13,18 @@ updated: 2026-07-27
 
 ## 1. Definition
 
-If $Z_1, Z_2, \ldots, Z_n $are independent standard normal random variables, then:$$\chi^2_n = Z_1^2 + Z_2^2 + \cdots + Z_n^2
+If $Z_1, Z_2, \ldots, Z_n $ are independent standard normal random variables, then:$ $\chi^2_n = Z_1^2 + Z_2^2 + \cdots + Z_n^2
 
-$$ has a **chi-square distribution** with $ n $ degrees of freedom.
+$$
+
+has a **chi-square distribution** with $ n $ degrees of freedom.
 
 ### Parameters
 
 | Symbol | Name | Value |
 |--------|------|-------|
-| $n$ or $k$ | Degrees of freedom | Positive integer |
-| $f(x) = \frac{x^{n/2-1} e^{-x/2}}{2^{n/2} \Gamma(n/2)}$ | PDF | For $x > 0$ |
+| $ n $ or $ k $ | Degrees of freedom | Positive integer |
+| $ f(x) = \frac{x^{n/2-1} e^{-x/2}}{2^{n/2} \Gamma(n/2)} $ | PDF | For $ x > 0 $ |
 
 ---
 
@@ -30,10 +32,10 @@ $$ has a **chi-square distribution** with $ n $ degrees of freedom.
 
 | Property | Formula |
 |----------|---------|
-| Mean | $E[\chi^2_n] = n$ |
+| Mean | $ E[\chi^2_n] = n $ |
 | Variance | $\text{Var}[\chi^2_n] = 2n $ |
 | Skewness | $\sqrt{8/n} $ |
-| MGF | $M(t) = (1-2t)^{-n/2}$, $t < 1/2$ |
+| MGF | $ M(t) = (1-2t)^{-n/2} $, $ t < 1/2 $ |
 | Additivity | $\chi^2_m + \chi^2_n \sim \chi^2_{m+n} $ |
 
 ---
@@ -42,13 +44,13 @@ $$ has a **chi-square distribution** with $ n $ degrees of freedom.
 
 ### Fisher's Theorem
 
-$$\frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}
+$ $\frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}
 
 $$### Distribution as $ n \to \infty $
 
-$$\frac{\chi^2_n - n}{\sqrt{2n}} \xrightarrow{d} \mathcal{N}(0,1) \quad (\text{CLT})
+$ $\frac{\chi^2_n - n}{\sqrt{2n}} \xrightarrow{d} \mathcal{N}(0,1) \quad (\text{CLT})
 
-$$### Relationship to Gamma $$\chi^2_n \sim \text{Gamma}(n/2, 2)
+$$### Relationship to Gamma $ $\chi^2_n \sim \text{Gamma}(n/2, 2)
 
 $$
 
@@ -60,15 +62,19 @@ $$
 
 In [[Least Squares Adjustment]], the quadratic form follows $\chi^2 $:
 
-$$\Omega = \hat{v}^T P \hat{v} = v^T P v \sim \chi^2_{n-t}
+$ $\Omega = \hat{v}^T P \hat{v} = v^T P v \sim \chi^2_{n-t}
 
-$$ where $ n $= observations,$t$ = parameters.
+$$
+
+where $ n $= observations,$ t $ = parameters.
 
 ### 4.2 Baarda Data Snooping
 
 Test statistic for outlier detection:
 
-$$ T_i = \frac{|w_i|}{\sqrt{(q_{w_i})}} \sim \mathcal{N}(0,1) $$ or equivalently:$$ \frac{w_i^2}{q_{w_i}} \sim \chi^2_1
+$ $ T_i = \frac{|w_i|}{\sqrt{(q_{w_i})}} \sim \mathcal{N}(0,1) $$
+
+or equivalently:$ $ \frac{w_i^2}{q_{w_i}} \sim \chi^2_1
 
 $$
 
@@ -84,7 +90,7 @@ Detect phase discontinuities using chi-square test on consecutive observations.
 
 ## 5. Critical Values Table
 
-| $n$ (df) | $\chi^2_{0.05} $|$\chi^2_{0.01} $|$\chi^2_{0.005} $ |
+| $ n $ (df) | $\chi^2_{0.05} $|$\chi^2_{0.01} $|$\chi^2_{0.005} $ |
 |----------|-----------------|-----------------|-------------------|
 | 1 | 3.841 | 6.635 | 7.879 |
 | 2 | 5.991 | 9.210 | 10.597 |
@@ -100,7 +106,7 @@ Detect phase discontinuities using chi-square test on consecutive observations.
 
 In a geodetic adjustment with 20 observations and 3 parameters:
 
-**Model:** $\chi^2_{17} $-$v^T P v = 15.2$, df = 17
+**Model:** $\chi^2_{17} $-$ v^T P v = 15.2 $, df = 17
 - $\chi^2_{17, 0.05} = 27.587 $- Since $ 15.2 < 27.587$, **model passes** the goodness-of-fit test
 
 ```mermaid
