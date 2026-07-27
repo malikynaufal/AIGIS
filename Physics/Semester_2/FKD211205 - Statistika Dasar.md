@@ -52,9 +52,7 @@ Statistics is the essential tool for analyzing experimental data in physics. Thi
  - Approximation of binomial for large n, small p
 
 - **Normal (Gaussian) distribution:**
- ```
  f(x) = (1/σ√(2π)) exp(-(x-μ)²/(2σ²))
- ```
  - 68-95-99.7 rule (±1σ, ±2σ, ±3σ)
  - Central Limit Theorem: sums of i.i.d. variables → Gaussian
 
@@ -101,13 +99,11 @@ Statistics is the essential tool for analyzing experimental data in physics. Thi
 
 ## 🔬 Key Formulas
 
-```
 Mean: μ = Σx_i/N (population) x̄ = Σx_i/n (sample)
 Variance: σ² = Σ(x_i - μ)²/N
 Gaussian: f(x) = (1/σ√(2π)) exp(-(x-μ)²/(2σ²))
-Uncertainty propagation: σ_z² = (∂f/∂x)²σ_x² + (∂f/∂y)²σ_y²
+$Uncertainty propagation: σ_z^2 = (\partial f/\partial x)^2σ_x^2 + (\partial f/\partial y)^2σ_y^2$
 Regression slope: m = Σ(x_i-x̄)(y_i-ȳ) / Σ(x_i-x̄)²
-```
 
 ---
 

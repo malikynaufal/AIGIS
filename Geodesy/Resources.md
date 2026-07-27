@@ -126,4 +126,17 @@ updated: 2026-07-27
 
 *Page last updated: 2026-07-27 | AIGIS Content™*
 
+## 7. Latest arXiv Preprints (2026-07-24)
+
+| Paper | Authors | Date | Categories | Link |
+|-------|---------|------|------------|------|
+| Diffusion-guided optimization for full waveform inversion | Shen, Chen, Engquist | 2026-07-24 | physics.geo-ph | https://arxiv.org/abs/2607.21987 |
+| Anomalous-diffusion synthesis of non-Gaussian reservoir anomalies | Nogueira et al. | 2026-07-23 | physics.geo-ph | https://arxiv.org/abs/2607.21854 |
+| Latent Variable-Mediated Cross-Learning for Few-Shot Acoustic Impedance | Peng et al. | 2026-07-23 | cs.CV, physics.geo-ph | https://arxiv.org/abs/2607.20989 |
+| Juxtaposition of Shallow Reservoir-Triggered Seismicity | Zhou et al. | 2026-07-21 | physics.geo-ph, cs.AI | https://arxiv.org/abs/2607.19606 |
+| AGENTS4GEOS: agentic platform for open-source multi-physics simulation | Côrtes et al. | 2026-07-20 | physics.geo-ph | https://arxiv.org/abs/2607.18557 |
+| Richards' equation as a hydrodynamic limit | Rigon | 2026-07-19 | cond-mat.stat-mech, physics.geo-ph | https://arxiv.org/abs/2607.17358 |
+| Estimation of Elastic Parameters with Guidance-based Diffusion model | — | 2026-07-14 | physics.geo-ph | https://arxiv.org/abs/2607.13207 |
+| A Unified Conceptual Framework for Gravitational Instabilities | — | 2026-07-16 | physics.geo-ph | https://arxiv.org/abs/2607.14831 |
+
 See also: [[Geodesy MOC]], [[Sources/Geodesy - Vermeer 2018]], [[Sources/Kurikulum Teknik Geodesi]]

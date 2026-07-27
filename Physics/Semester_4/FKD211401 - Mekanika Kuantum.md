@@ -43,28 +43,20 @@ Quantum mechanics — the most successful physical theory ever devised. This cou
 ### Unit 2: The Schrödinger Equation (Weeks 5–9)
 
 - **Time-dependent Schrödinger equation (TDSE):**
- ```
- iℏ ∂ψ/∂t = -ℏ²/(2m) ∂²ψ/∂x² + Vψ
- ```
+$ i\hbar  \partial ψ/\partial t = -\hbar ^2/(2m) \partial ^2ψ/\partial x^2 + Vψ$
 
 - **Time-independent Schrödinger equation (TISE):**
- ```
- -ℏ²/(2m) d²ψ/dx² + Vψ = Eψ
- ```
+$ -\hbar ^2/(2m) d^2ψ/dx^2 + Vψ = Eψ$
 
 - **Infinite square well (particle in a box):**
- ```
  ψ_n(x) = √(2/L) sin(nπx/L)
- E_n = n²π²ℏ²/(2mL²)
- ```
+$ E_$n = n$^2\pi ^2\hbar ^2/(2mL^2)$
 
 - **Finite potential well:** tunneling solutions
 
 - **Harmonic oscillator:**
- ```
- ψ_n(x) = H_n(x) exp(-mωx²/(2ℏ))
- E_n = (n+½)ℏω
- ```
+$ ψ_n(x) = H_n(x) exp(-mωx^2/(2\hbar ))$
+$ E_n = (n+½)\hbar ω$
 
 - **Step potentials** and scattering/reflection
 
@@ -109,16 +101,14 @@ Quantum mechanics — the most successful physical theory ever devised. This cou
 
 ## 🔬 Key Equations
 
-```
-Schrödinger (time-dependent): iℏ∂ψ/∂t = Ĥψ
+$Schrödinger (time-dependent): i\hbar \partial ψ/\partial t = Ĥψ$
 Schrödinger (time-independent): Ĥψ = Eψ
-Uncertainty: Δx·Δp ≥ ℏ/2
+$Uncertainty: Δx·Δp ≥ \hbar /2$
 de Broglie: λ = h/p
-Harmonic oscillator: E_n = (n+½)ℏω
+$Harmonic oscillator: E_n = (n+½)\hbar ω$
 Hydrogen atom: E_n = -13.6 eV / n²
-Angular momentum: L² = l(l+1)ℏ²
-Commutator: [x, p] = iℏ
-```
+$Angular momentum: L^2 = l(l+1)\hbar ^2$
+$Commutator: [x, p] = i\hbar $
 
 ---
 

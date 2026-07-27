@@ -66,7 +66,7 @@ $$ \vec{F}_{\text{net}} = m\vec{a} = \frac{d\vec{p}}{dt} $$ Net force equals mas
 ### Component Form (Cartesian
 )
 
-$F_x = m\ddot{x}, \quad F_y = m\ddot{y}, \quad F_z = m\ddot{z} $$
+$$F_x = m\ddot{x}, \quad F_y = m\ddot{y}, \quad F_z = m\ddot{z} $$
 
 ### Important Force Types
 | Force | Expression | Origin |
@@ -89,7 +89,7 @@ $F_x = m\ddot{x}, \quad F_y = m\ddot{y}, \quad F_z = m\ddot{z} $$
 **Vector Form for Geodesy (3D):*
 *
 
-$m \begin{bmatrix} \ddot{x} \\ \ddot{y} \\ \ddot{z} \end{bmatrix} = \vec{F}_{\text{gravity}} + \vec{F}_{\text{drag}} + \vec{F}_{\text{solar rad}} + \vec{F}_{\text{thrust}} $$
+$$m \begin{bmatrix} \ddot{x} \\ \ddot{y} \\ \ddot{z} \end{bmatrix} = \vec{F}_{\text{gravity}} + \vec{F}_{\text{drag}} + \vec{F}_{\text{solar rad}} + \vec{F}_{\text{thrust}} $$
 
 ---
 
@@ -131,7 +131,7 @@ $$ \vec{F}_{12} = -\vec{F}_{21} $$ For every action, there's an equal and opposi
 ### Lagrangian Framework (Preview)
 For constrained systems, introduce generalized coordinates $q_i$:
 
-$L = T - V\frac{d}{dt}\frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i} = 0 $$
+$$L = T - V\frac{d}{dt}\frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i} = 0 $$
 
 This is equivalent to Newton's laws but handles constraints naturally.
 

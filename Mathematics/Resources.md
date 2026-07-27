@@ -116,4 +116,17 @@ updated: 2026-07-27
 
 *Page last updated: 2026-07-27 | AIGIS Content™*
 
+## 5. Latest arXiv Preprints (Math - 2026-07-24)
+
+| Paper | Authors | Date | Link |
+|-------|---------|------|------|
+| The fractional Kontorovich-Lebedev transform | Semyon Yakubovich | 2026-07-24 | https://arxiv.org/abs/2607.22343 |
+| Gelfand-type problem for turbulent jets: sharp $L^\infty$ bound | Czemerinski et al. | 2026-07-24 | https://arxiv.org/abs/2607.22306 |
+| Characterization of the boundedness of the segment multiplier | Barea-Fernández et al. | 2026-07-24 | https://arxiv.org/abs/2607.22277 |
+| Equality problem for generalized quasiarithmetic means | Kiss, Pasteczka | 2026-07-24 | https://arxiv.org/abs/2607.22266 |
+| Fourier decay and non-decay for pseudo-affine self-conformal measures | Algom et al. | 2026-07-24 | https://arxiv.org/abs/2607.22001 |
+| Variable Hardy spaces in the Dunkl Setting | Jian Tan | 2026-07-24 | https://arxiv.org/abs/2607.21992 |
+| Dual spaces and T1 theorem of variable Dunkl--Hardy spaces | Jian Tan | 2026-07-24 | https://arxiv.org/abs/2607.21942 |
+| Bourgain-Ruzsa Type Estimates for Littlewood Cosine polynomials | Tamás Erdélyi | 2026-07-24 | https://arxiv.org/abs/2607.21877 |
+
 See also: [[Mathematics MOC]], [[Mathematics_Curriculum_Guide]], [[Mathematics_Sources.md]]
