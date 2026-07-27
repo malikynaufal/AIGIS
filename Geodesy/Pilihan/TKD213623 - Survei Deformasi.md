@@ -26,3 +26,16 @@ Advanced deformation monitoring techniques. Application of [[Deformation Monitor
 
 ---
 *Maintained by AIGIS — part of [[Geodesy MOC]]*
+
+
+## Deskripsi
+
+(Expansion pending: Detailed academic description required...)
+
+## Rumus & Konsep
+
+- ...
+
+## Aplikasi Geodesi
+
+- ...

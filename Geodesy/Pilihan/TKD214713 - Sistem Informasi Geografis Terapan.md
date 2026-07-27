@@ -39,3 +39,16 @@ where $ w_i $ = criterion weight, $ x_{ij}$ = standardized score.
 
 ---
 *Maintained by AIGIS — part of [[Geodesy MOC]]*
+
+
+## Deskripsi
+
+(Expansion pending: Detailed academic description required...)
+
+## Rumus & Konsep
+
+- ...
+
+## Aplikasi Geodesi
+
+- ...

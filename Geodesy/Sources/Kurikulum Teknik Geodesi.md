@@ -28,3 +28,16 @@ See [[Kurikulum Overview]] for semester-by-semester mapping.
 
 ---
 *Maintained by AIGIS — part of [[Geodesy MOC]]*
+
+
+## Deskripsi
+
+(Expansion pending: Detailed academic description required...)
+
+## Rumus & Konsep
+
+- ...
+
+## Aplikasi Geodesi
+
+- ...

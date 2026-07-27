@@ -42,3 +42,15 @@ Use this space to capture new learning materials, assignments, and notes.
 - [ ] Textbook chapter to read:
 - [ ] Paper to review:
 - [ ] Online course to complete:
+
+## Deskripsi
+
+(Expansion pending: Detailed academic description required...)
+
+## Rumus & Konsep
+
+- ...
+
+## Aplikasi Geodesi
+
+- ...

@@ -16,3 +16,16 @@ This is the capture zone for geodesy-related notes, ideas, and resources.
 - New items go below this line (oldest at top).
 
 ---
+
+
+## Deskripsi
+
+(Expansion pending: Detailed academic description required...)
+
+## Rumus & Konsep
+
+- ...
+
+## Aplikasi Geodesi
+
+- ...

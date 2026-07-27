@@ -33,3 +33,16 @@ Principles of land valuation, market analysis, property assessment, and GIS-base
 
 ---
 *Maintained by AIGIS — part of [[Geodesy MOC]]*
+
+
+## Deskripsi
+
+(Expansion pending: Detailed academic description required...)
+
+## Rumus & Konsep
+
+- ...
+
+## Aplikasi Geodesi
+
+- ...

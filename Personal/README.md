@@ -14,3 +14,16 @@ AIGIS keeps the two worlds cleanly separated:
 - **Study / geodesy / career** -> H: (maliky.naufal@gmail)
 
 - **Personal / day-to-day**   -> G: (nauf99.weeb@gmail)
+
+
+## Deskripsi
+
+(Expansion pending: Detailed academic description required...)
+
+## Rumus & Konsep
+
+- ...
+
+## Aplikasi Geodesi
+
+- ...
