@@ -39,11 +39,11 @@ Kalkulus II extends single-variable calculus into infinite series, parametric cu
 - **Series notation:** Σ_{n=1}∞ a_n, partial sums S_N = Σ_{n=1}^{N} a_n
 
 - **Convergence tests:**
-  - Divergence test (nth term test)
-  - Integral test
-  - Comparison test and Limit comparison test
-  - Ratio test: lim |a_{n+1}/a_n| = L
-  - Root test: lim (|a_n|)^{1/n} = L
+ - Divergence test (nth term test)
+ - Integral test
+ - Comparison test and Limit comparison test
+ - Ratio test: lim |a_{n+1}/a_n| = L
+ - Root test: lim (|a_n|)^{1/n} = L
 
 - **Absolutely vs. conditionally convergent** series
 
@@ -62,12 +62,12 @@ Kalkulus II extends single-variable calculus into infinite series, parametric cu
 - **Maclaurin series:** Taylor series at a = 0
 
 - Key Maclaurin expansions:
-  ```
-  eˣ = Σ xⁿ/n!                    (all x)
-  sin(x) = Σ (-1)ⁿ x^{2n+1}/(2n+1)!  (all x)
-  cos(x) = Σ (-1)ⁿ x^{2n}/(2n)!      (all x)
-  1/(1-x) = Σ xⁿ       (|x| < 1)
-  ```
+ ```
+ eˣ = Σ xⁿ/n! (all x)
+ sin(x) = Σ (-1)ⁿ x^{2n+1}/(2n+1)! (all x)
+ cos(x) = Σ (-1)ⁿ x^{2n}/(2n)! (all x)
+ 1/(1-x) = Σ xⁿ (|x| < 1)
+ ```
 
 - **Term-by-term differentiation and integration** of power series
 
@@ -103,8 +103,8 @@ Kalkulus II extends single-variable calculus into infinite series, parametric cu
 eˣ = 1 + x + x²/2! + x³/3! + ...
 sin(x) = x - x³/3! + x⁵/5! - x⁷/7! + ...
 cos(x) = 1 - x²/2! + x⁴/4! - x⁶/6! + ...
-ln(1+x) = x - x²/2 + x³/3 - x⁴/4 + ...  (|x| < 1)
-1/(1-x) = Σ_{n=0}∞ xⁿ                   (|x| < 1)
+ln(1+x) = x - x²/2 + x³/3 - x⁴/4 + ... (|x| < 1)
+1/(1-x) = Σ_{n=0}∞ xⁿ (|x| < 1)
 arctan(x) = x - x³/3 + x⁵/5 - ...
 ```
 

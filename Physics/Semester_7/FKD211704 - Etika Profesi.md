@@ -27,70 +27,70 @@ Ethics for scientists and engineers — the moral and professional responsibilit
 - **What is ethics?** Moral philosophy applied to professional practice
 
 - **Ethical frameworks:**
-  - **Deontology:** duties and rules (Kant's categorical imperative)
-  - **Consequentialism/Utilitarianism:** greatest good for the greatest number
-  - **Virtue ethics:** cultivating good character traits (Aristotle)
-  - **Ethics of care:** relationships and context
+ - **Deontology:** duties and rules (Kant's categorical imperative)
+ - **Consequentialism/Utilitarianism:** greatest good for the greatest number
+ - **Virtue ethics:** cultivating good character traits (Aristotle)
+ - **Ethics of care:** relationships and context
 
 - **Professional codes of ethics:**
-  - American Physical Society (APS) Code of Ethics
-  - IEEE Code of Ethics
-  - Indonesian Professional Engineering Organizations
+ - American Physical Society (APS) Code of Ethics
+ - IEEE Code of Ethics
+ - Indonesian Professional Engineering Organizations
 
 - **Case studies in physics ethics:**
-  - Cold fusion controversy (1989)
-  - Data fabrication scandals (Bell Labs, Schon 2002)
-  - Nuclear weapons physicists and moral responsibility
+ - Cold fusion controversy (1989)
+ - Data fabrication scandals (Bell Labs, Schon 2002)
+ - Nuclear weapons physicists and moral responsibility
 
 ### Unit 2: Research Integrity (Weeks 5–8)
 
 - **Honesty in science:**
-  - Falsification, fabrication, plagiarism (FFP)
-  - Proper attribution and citation practices
-  - Authorship ethics: who deserves to be a co-author?
+ - Falsification, fabrication, plagiarism (FFP)
+ - Proper attribution and citation practices
+ - Authorship ethics: who deserves to be a co-author?
 
 - **Reproducibility crisis:** why it happens and how to address it
 
 - **Open science:** preprints, open data, open source
 
 - **Peer review ethics:**
-  - Confidentiality
-  - Constructive criticism vs. gatekeeping
-  - Conflicts of interest
+ - Confidentiality
+ - Constructive criticism vs. gatekeeping
+ - Conflicts of interest
 
 - **Responsible conduct of research (RCR):**
-  - Mentoring and trainee responsibilities
-  - Human subjects and animal welfare (even in physics research involving human participants)
+ - Mentoring and trainee responsibilities
+ - Human subjects and animal welfare (even in physics research involving human participants)
 
 ### Unit 3: Technology, Society, and Environment (Weeks 9–12)
 
 - **Dual-use technology:** physics knowledge that can be used for both good and harm
-  - Nuclear energy vs. nuclear weapons
-  - Surveillance technology vs. privacy
-  - AI/ML in decision-making vs. bias
+ - Nuclear energy vs. nuclear weapons
+ - Surveillance technology vs. privacy
+ - AI/ML in decision-making vs. bias
 
 - **Environmental responsibility:**
-  - Energy consumption of large physics facilities (LHC: ~1.2 TWh/year)
-  - Chemical waste in laboratories
-  - Carbon footprint of scientific computing
-  - Sustainable development goals (SDGs) and physics
+ - Energy consumption of large physics facilities (LHC: ~1.2 TWh/year)
+ - Chemical waste in laboratories
+ - Carbon footprint of scientific computing
+ - Sustainable development goals (SDGs) and physics
 
 - **Global impacts of technology:**
-  - Digital divide and technological equity
-  - Impact of GPS/geodetic technology on developing nations
-  - Climate change and the physicist's role
+ - Digital divide and technological equity
+ - Impact of GPS/geodetic technology on developing nations
+ - Climate change and the physicist's role
 
 ### Unit 4: Professional Life and Indonesian Context (Weeks 13–16)
 
 - **Workplace ethics:**
-  - Labor rights and working conditions in STEM
-  - Diversity, equity, and inclusion in physics
-  - Workplace safety (radiation protection, chemical handling)
+ - Labor rights and working conditions in STEM
+ - Diversity, equity, and inclusion in physics
+ - Workplace safety (radiation protection, chemical handling)
 
 - **Indonesian regulations:**
-  - Kode Etik Profesi Fisika Indonesia
-  - Undang-Undang Keterbukaan Informasi Publik
-  - Environmental protection laws
+ - Kode Etik Profesi Fisika Indonesia
+ - Undang-Undang Keterbukaan Informasi Publik
+ - Environmental protection laws
 
 - **Case discussions:** Indonesia-specific examples
 

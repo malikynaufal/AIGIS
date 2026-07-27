@@ -2,7 +2,7 @@
 
 ## UGM Geodesy Mathematics Progression
 
-**Purpose:** Structured learning path for mathematics as applied to geodesy  
+**Purpose:** Structured learning path for mathematics as applied to geodesy 
 **Duration:** 4 semesters (Semester 1–4 of UGM Geodesy program)
 
 ---
@@ -186,9 +186,9 @@
 ### Weekly Self-Assessment:
 | Week | Topic Mastery (1-5) | Problems Solved | Gaps Identified | Next Week Focus |
 |------|---------------------|----------------|-----------------|-----------------|
-| 1    |                    |                |                 |                 |
-| 2    |                    |                |                 |                 |
-| ...  |                    |                |                 |                 |
+| 1 | | | | |
+| 2 | | | | |
+| ... | | | | |
 
 ### Monthly Review:
 1. What can I now solve that I couldn't at start of month?

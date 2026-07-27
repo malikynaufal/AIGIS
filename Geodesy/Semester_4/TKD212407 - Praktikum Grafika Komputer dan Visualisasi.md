@@ -1,8 +1,8 @@
 # Praktikum Grafika Komputer dan Visualisasi
 
-**Kode:** TKD212407  
-**Sifat:** Wajib  
-**SKS:** 1  
+**Kode:** TKD212407 
+**Sifat:** Wajib 
+**SKS:** 1 
 
 ## Deskripsi
 
@@ -35,9 +35,9 @@ QgsProject.instance().addMapLayer(layer)
 # Symbolisasi
 from qgis.core import QgsMarkerSymbol
 symbol = QgsMarkerSymbol.createSimple({
-    'name': 'circle',
-    'color': 'red',
-    'size': '3.0'
+ 'name': 'circle',
+ 'color': 'red',
+ 'size': '3.0'
 })
 layer.renderer().setSymbol(symbol)
 ```
@@ -52,28 +52,28 @@ var map = L.map('map').setView([-6.2088, 106.8456], 10);
 
 // Add tile layer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors',
-    maxZoom: 19
+ attribution: '© OpenStreetMap contributors',
+ maxZoom: 19
 }).addTo(map);
 
 // Add marker
 L.marker([-6.2088, 106.8456]).addTo(map)
-    .bindPopup('Kantor UGM')
-    .openPopup();
+ .bindPopup('Kantor UGM')
+ .openPopup();
 ```
 
 #### Coordinate System Handling
 ```javascript
 // WGS84 to UTM conversion
 function wgs84ToUtm(lat, lon) {
-    var zoneNumber = Math.floor((lon + 180) / 6) + 1;
-    var isNorth = lat >= 0;
-    
-    // Simplified UTM conversion
-    var x = lon * 111320;
-    var y = Math.log(Math.tan((45 + lat/2) * Math.PI / 180)) * 6378137;
-    
-    return { easting: x, northing: y };
+ var zoneNumber = Math.floor((lon + 180) / 6) + 1;
+ var isNorth = lat >= 0;
+ 
+ // Simplified UTM conversion
+ var x = lon * 111320;
+ var y = Math.log(Math.tan((45 + lat/2) * Math.PI / 180)) * 6378137;
+ 
+ return { easting: x, northing: y };
 }
 ```
 
@@ -87,31 +87,30 @@ var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 
 function createTerrainFromDem(demData) {
-    var geometry = new THREE.PlaneGeometry(100, 100, demData.width-1, demData.height-1);
-    var vertices = geometry.attributes.position.array;
-    
-    for (var i = 0; i < demData.height; i++) {
-        for (var j = 0; j < demData.width; j++) {
-            var idx = (i * demData.width + j);
-            var elevation = demData.values[i][j];
-            vertices[idx * 3 + 2] = elevation; // Z coordinate = elevation
-        }
-    }
-    
-    geometry.computeVertexNormals();
-    return new THREE.Mesh(geometry, new THREE.MeshPhongMaterial({ color: 0x00ff00 }));
+ var geometry = new THREE.PlaneGeometry(100, 100, demData.width-1, demData.height-1);
+ var vertices = geometry.attributes.position.array;
+ 
+ for (var i = 0; i < demData.height; i++) {
+ for (var j = 0; j < demData.width; j++) {
+ var idx = (i * demData.width + j);
+ var elevation = demData.values[i][j];
+ vertices[idx * 3 + 2] = elevation; // Z coordinate = elevation
+ }
+ }
+ 
+ geometry.computeVertexNormals();
+ return new THREE.Mesh(geometry, new THREE.MeshPhongMaterial({ color: 0x00ff00 }));
 }
 ```
 
 ### Integrasi Data Geospasial
 
 #### Menghubungkan Citra dengan Koordinat
-$$
 
-\begin{aligned}
+$$\begin{aligned}
 X_{gis} &= X_{origin} + col \times pixel\_size \\
 Y_{gis} &= Y_{origin} - row \times pixel\_size
-\end{aligned}$$#### Coordinate Transformation Example
+\end{aligned} $$#### Coordinate Transformation Example
 ```python
 
 # Proses transformasi koordinat untuk visualisasi
@@ -130,19 +129,19 @@ print(f"UTM Coordinates: {x_utm:.3f}, {y_utm:.3f}")
 ```javascript
 // Update lokasi real-time
 function updateMarkerPosition(marker, newPosition) {
-    marker.setLatLng([newPosition.lat, newPosition.lng]);
-    marker.bindPopup(`
-        <h3>Posisi Saat Ini</h3>
-        <p>Lat:${newPosition.lat.toFixed(6)}</p>
-        <p>Lon: ${newPosition.lng.toFixed(6)}</p>
-        <p>Time: ${new Date().toLocaleTimeString()}</p>
-    `);
+ marker.setLatLng([newPosition.lat, newPosition.lng]);
+ marker.bindPopup(`
+ <h3>Posisi Saat Ini</h3>
+ <p>Lat:${newPosition.lat.toFixed(6)}</p>
+ <p>Lon: ${newPosition.lng.toFixed(6)}</p>
+ <p>Time: ${new Date().toLocaleTimeString()}</p>
+ `);
 }
 
 // Set interval update
 setInterval(function() {
-    var newPos = getCurrentPosition(); // Fungsi untuk mendapatkan posisi
-    updateMarkerPosition(myMarker, newPos);
+ var newPos = getCurrentPosition(); // Fungsi untuk mendapatkan posisi
+ updateMarkerPosition(myMarker, newPos);
 }, 5000);
 ```
 

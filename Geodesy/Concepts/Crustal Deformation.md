@@ -32,11 +32,10 @@ created: 2026-07-27
 ### 2.1. Plate motion in ITRF
 
 Each plate moves as a rigid body on the sphere. The Euler pole (rotation vector) describes the motion:
-$$
 
-\mathbf{v} = \boldsymbol{\omega} \times \mathbf{r}$$where$\mathbf{v}$is the velocity at a station on the surface,$\boldsymbol{\omega}$is the angular velocity vector, and$\mathbf{r}$is the position vector.
+$$\mathbf{v} = \boldsymbol{\omega} \times \mathbf{r} $$where $\mathbf{v} $is the velocity at a station on the surface,$\boldsymbol{\omega} $is the angular velocity vector, and $\mathbf{r} $is the position vector.
 
-| Plate | Angular velocity$\omega$(°/Myr) | Euler pole (°N, °E) |
+| Plate | Angular velocity $\omega$(°/Myr) | Euler pole (°N, °E) |
 |-------|-----------------------------------|----------------------|
 | Eurasian | 0.96 | 50.6, −91.4 |
 | Indo‑Australian | 0.68 | 33.9, 39.4 |
@@ -47,7 +46,10 @@ $$
 
 ### 2.2. Interseismic deformation
 
-At a locked subduction zone (e.g., Sunda Trench), the overriding plate is compressed and pushed upward:$$v_{\text{int}} = A \cdot e^{-x/\xi} + B$$where$x$is distance from the trench, and$\xi$is the locking depth parameter.
+At a locked subduction zone (e.g., Sunda Trench), the overriding plate is compressed and pushed upward
+:
+
+$$v_{\text{int}} = A \cdot e^{-x/\xi} + B$$where $x$is distance from the trench, and $\xi $is the locking depth parameter.
 
 ---
 
@@ -55,17 +57,17 @@ At a locked subduction zone (e.g., Sunda Trench), the overriding plate is compre
 
 ### 3.1. Coseismic displacement (Okada elastic half‑space model)
 
-The displacement at a point$(x,y)$on the surface due to a rectangular dislocation (fault) is given by the **Okada (1985)** equations. Key parameters:
+The displacement at a point$(x,y) $on the surface due to a rectangular dislocation (fault) is given by the **Okada (1985)** equations. Key parameters:
 
 | Parameter | Symbol | Meaning |
 |-----------|--------|---------|
-| Length |$L$| Along‑strike extent of fault |
-| Width |$W$| Down‑dip extent |
-| Strike |$\phi$| Azimuth of fault trace |
-| Dip |$\delta$| Inclination of fault plane |
-| Rake |$\lambda$| Direction of slip on fault |
-| Slip |$D$| Amount of displacement |
-| Depth |$d$ | Depth to top of fault |
+| Length | $L$ | Along‑strike extent of fault |
+| Width | $W$ | Down‑dip extent |
+| Strike | $\phi$ | Azimuth of fault trace |
+| Dip | $\delta$ | Inclination of fault plane |
+| Rake | $\lambda$ | Direction of slip on fault |
+| Slip | $D$ | Amount of displacement |
+| Depth | $d$ | Depth to top of fault |
 
 The 3D displacement field involves analytical solutions in terms of trigonometric and logarithmic functions (Okada 1985, 1992). The vertical displacement field is often the largest for shallow thrust events.
 
@@ -125,42 +127,42 @@ Interpretation:
 ## 7. Diagram – Subduction Zone Deformation Cycle
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="700" height="300">
-  <rect width="700" height="300" fill="#1a1a2e" rx="8"/>
-  <text x="350" y="25" fill="#fff" font-size="14" font-family="sans-serif" text-anchor="middle">Subduction Zone Deformation Cycle</text>
-  <!-- Ocean plate -->
-  <path d="M 50 200 Q 200 210, 300 220 L 300 280 L 50 280 Z" fill="#118ab2" opacity="0.7"/>
-  <text x="150" y="260" fill="#fff" font-size="11" font-family="sans-serif" text-anchor="middle">Oceanic Plate (Indo‑Aus)</text>
-  <!-- Overriding plate -->
-  <path d="M 300 160 Q 450 150, 650 145 L 650 280 L 300 280 Z" fill="#06d6a0" opacity="0.6"/>
-  <text x="480" y="250" fill="#fff" font-size="11" font-family="sans-serif" text-anchor="middle">Continental Plate (Eurasian)</text>
-  <!-- Trench -->
-  <path d="M 300 140 L 300 280" stroke="#f9c74f" stroke-width="2" stroke-dasharray="5,3"/>
-  <text x="280" y="145" fill="#f9c74f" font-size="10" font-family="sans-serif" text-anchor="end">Trench</text>
-  <!-- Arrows showing plate motion -->
-  <g stroke="#4cc9f0" stroke-width="2" marker-end="url(#a4)">
-    <line x1="100" y1="220" x2="250" y2="230"/>
-  </g>
-  <text x="170" y="215" fill="#4cc9f0" font-size="9" font-family="sans-serif">Subduction</text>
-  <!-- Locking zone -->
-  <path d="M 320 200 Q 360 190, 400 195" stroke="#f72585" stroke-width="3" fill="none"/>
-  <text x="360" y="185" fill="#f72585" font-size="9" font-family="sans-serif" text-anchor="middle">Locked zone</text>
-  <!-- GPS station -->
-  <circle cx="450" cy="155" r="6" fill="#ff9f1c"/>
-  <text x="450" y="148" fill="#ff9f1c" font-size="9" font-family="sans-serif" text-anchor="middle">GPS</text>
-  <!-- Deformed GPS vectors -->
-  <g stroke="#ff9f1c" stroke-width="2" marker-end="url(#a5)">
-    <line x1="450" y1="150" x2="430" y2="138"/>
-  </g>
-  <text x="435" y="133" fill="#ff9f1c" font-size="8" font-family="sans-serif">Interseismic</text>
-  <text x="435" y="125" fill="#ff9f1c" font-size="8" font-family="sans-serif">velocity</text>
-  <defs>
-    <marker id="a4" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#4cc9f0"/></marker>
-    <marker id="a5" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#ff9f1c"/></marker>
-  </defs>
-  <!-- Legend -->
-  <text x="50" y="45" fill="#ccc" font-size="10" font-family="sans-serif">Coseismic: seconds to minutes (earthquake)</text>
-  <text x="50" y="60" fill="#ccc" font-size="10" font-family="sans-serif">Interseismic: decades to centuries (strain build‑up)</text>
-  <text x="50" y="75" fill="#ccc" font-size="10" font-family="sans-serif">Postseismic: years to decades (relaxation after quake)</text>
+ <rect width="700" height="300" fill="#1a1a2e" rx="8"/>
+ <text x="350" y="25" fill="#fff" font-size="14" font-family="sans-serif" text-anchor="middle">Subduction Zone Deformation Cycle</text>
+ <!-- Ocean plate -->
+ <path d="M 50 200 Q 200 210, 300 220 L 300 280 L 50 280 Z" fill="#118ab2" opacity="0.7"/>
+ <text x="150" y="260" fill="#fff" font-size="11" font-family="sans-serif" text-anchor="middle">Oceanic Plate (Indo‑Aus)</text>
+ <!-- Overriding plate -->
+ <path d="M 300 160 Q 450 150, 650 145 L 650 280 L 300 280 Z" fill="#06d6a0" opacity="0.6"/>
+ <text x="480" y="250" fill="#fff" font-size="11" font-family="sans-serif" text-anchor="middle">Continental Plate (Eurasian)</text>
+ <!-- Trench -->
+ <path d="M 300 140 L 300 280" stroke="#f9c74f" stroke-width="2" stroke-dasharray="5,3"/>
+ <text x="280" y="145" fill="#f9c74f" font-size="10" font-family="sans-serif" text-anchor="end">Trench</text>
+ <!-- Arrows showing plate motion -->
+ <g stroke="#4cc9f0" stroke-width="2" marker-end="url(#a4)">
+ <line x1="100" y1="220" x2="250" y2="230"/>
+ </g>
+ <text x="170" y="215" fill="#4cc9f0" font-size="9" font-family="sans-serif">Subduction</text>
+ <!-- Locking zone -->
+ <path d="M 320 200 Q 360 190, 400 195" stroke="#f72585" stroke-width="3" fill="none"/>
+ <text x="360" y="185" fill="#f72585" font-size="9" font-family="sans-serif" text-anchor="middle">Locked zone</text>
+ <!-- GPS station -->
+ <circle cx="450" cy="155" r="6" fill="#ff9f1c"/>
+ <text x="450" y="148" fill="#ff9f1c" font-size="9" font-family="sans-serif" text-anchor="middle">GPS</text>
+ <!-- Deformed GPS vectors -->
+ <g stroke="#ff9f1c" stroke-width="2" marker-end="url(#a5)">
+ <line x1="450" y1="150" x2="430" y2="138"/>
+ </g>
+ <text x="435" y="133" fill="#ff9f1c" font-size="8" font-family="sans-serif">Interseismic</text>
+ <text x="435" y="125" fill="#ff9f1c" font-size="8" font-family="sans-serif">velocity</text>
+ <defs>
+ <marker id="a4" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#4cc9f0"/></marker>
+ <marker id="a5" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#ff9f1c"/></marker>
+ </defs>
+ <!-- Legend -->
+ <text x="50" y="45" fill="#ccc" font-size="10" font-family="sans-serif">Coseismic: seconds to minutes (earthquake)</text>
+ <text x="50" y="60" fill="#ccc" font-size="10" font-family="sans-serif">Interseismic: decades to centuries (strain build‑up)</text>
+ <text x="50" y="75" fill="#ccc" font-size="10" font-family="sans-serif">Postseismic: years to decades (relaxation after quake)</text>
 </svg>
 
 ---

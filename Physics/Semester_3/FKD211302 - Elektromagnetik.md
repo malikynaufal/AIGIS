@@ -31,8 +31,8 @@ Electromagnetism is arguably the most successful physical theory — Maxwell's e
 - **Curl:** ∇×**E** = determinant expression — rotation/circulation density
 
 - **Integral theorems:**
-  - Divergence theorem: ∫∫∫ (∇·**A**) dV = ∮∮ **A**·d**A**
-  - Stokes' theorem: ∫∫ (∇×**A**)·d**A** = ∮ **A**·d**l**
+ - Divergence theorem: ∫∫∫ (∇·**A**) dV = ∮∮ **A**·d**A**
+ - Stokes' theorem: ∫∫ (∇×**A**)·d**A** = ∮ **A**·d**l**
 
 ### Unit 2: Electrostatics and Magnetostatics (Weeks 4–8)
 
@@ -57,10 +57,10 @@ Electromagnetism is arguably the most successful physical theory — Maxwell's e
 - **Faraday's law:** ∇×**E** = -∂**B**/∂t
 
 - **Maxwell's equations (complete, in vacuum):**
-  ```
-  ∇·E = 0         ∇×E = -∂B/∂t
-  ∇·B = 0         ∇×B = μ₀ε₀ ∂E/∂t
-  ```
+ ```
+ ∇·E = 0 ∇×E = -∂B/∂t
+ ∇·B = 0 ∇×B = μ₀ε₀ ∂E/∂t
+ ```
 
 - **Wave equation:** ∇²**E** = μ₀ε₀ ∂²**E**/∂t²
 
@@ -84,7 +84,7 @@ Electromagnetism is arguably the most successful physical theory — Maxwell's e
 
 - **Radiation from accelerating charges:** Larmor formula
 
-- **Power radiated:** P = (μ₀/6πc) (|ä|)²  (Larmor)
+- **Power radiated:** P = (μ₀/6πc) (|ä|)² (Larmor)
 
 - **Antenna basics:** dipole antenna, radiation pattern
 
@@ -95,10 +95,10 @@ Electromagnetism is arguably the most successful physical theory — Maxwell's e
 ## 🔬 Key Equations (Maxwell's Complete Set)
 
 ```
-Maxwell I:     ∇·D = ρ_f         (Gauss)
-Maxwell II:    ∇·B = 0            (No magnetic monopoles)
-Maxwell III:   ∇×E = -∂B/∂t       (Faraday)
-Maxwell IV:   ∇×H = J_f + ∂D/∂t  (Ampere-Maxwell)
+Maxwell I: ∇·D = ρ_f (Gauss)
+Maxwell II: ∇·B = 0 (No magnetic monopoles)
+Maxwell III: ∇×E = -∂B/∂t (Faraday)
+Maxwell IV: ∇×H = J_f + ∂D/∂t (Ampere-Maxwell)
 
 Wave equation: ∇²E - μ₀ε₀∂²E/∂t² = 0
 Phase velocity: c = 1/√(μ₀ε₀) ≈ 2.998×10⁸ m/s

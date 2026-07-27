@@ -29,11 +29,15 @@ Praktikum ini melatih mahasiswa dalam pengoperasian receiver GNSS geodetik, pere
 - **Aksesoris**: Tribrach, tripod, kabel data, battery
 
 - **Pengukuran tinggi antena**: Slant height → vertical height
-$$
 
-h_{\text{vert}} = \sqrt{h_{\text{slant}}^2 - r_{\text{antenna}}^2}$$### Modul 2: Perencanaan Observasi GNSS
+$$h_{\text{vert}} = \sqrt{h_{\text{slant}}^2 - r_{\text{antenna}}^2} $$### Modul 2: Perencanaan Observasi GNSS
 
-- **PDOP prediction**: Menggunakan software planning (RTKLIB, Trimble Planning)$$PDOP < 6 \text{ (minimal)}, < 4 \text{ (optimal)}$$- **Elevation mask**:$10^\circ$–$15^\circ$(standard Indonesia)
+- **PDOP prediction**: Menggunakan software planning (RTKLIB, Trimble Planning
+)
+
+$$PDOP < 6 \text{ (minimal)}, < 4 \text{ (optimal)} $$
+
+- **Elevation mask**:$10^\circ$–$15^\circ$(standard Indonesia)
 
 - **Session planning**: Baseline < 10 km → 15–30 menit; Baseline 10–50 km → 1–2 jam
 
@@ -42,10 +46,10 @@ h_{\text{vert}} = \sqrt{h_{\text{slant}}^2 - r_{\text{antenna}}^2}$$### Modul 2:
 ### Modul 3: Metode Statik (Static Surveying)
 
 - **Prosedur lapangan**:
-  1. Setup receiver di titik yang akan diukur
-  2. Catat tinggi antena (sebelum & sesudah)
-  3. Log sheet: station ID, receiver S/N, antena type, start/stop time, weather
-  4. Durasi: 45–120 menit (tergantung baseline)
+ 1. Setup receiver di titik yang akan diukur
+ 2. Catat tinggi antena (sebelum & sesudah)
+ 3. Log sheet: station ID, receiver S/N, antena type, start/stop time, weather
+ 4. Durasi: 45–120 menit (tergantung baseline)
 
 - **Data format**: RINEX 3.03 / 3.04 (.obs, .nav, .glo, .gal)
 
@@ -76,10 +80,10 @@ h_{\text{vert}} = \sqrt{h_{\text{slant}}^2 - r_{\text{antenna}}^2}$$### Modul 2:
 - **RTKPOST**: Post-processing baseline (static, kinematic, PPP)
 
 - **Konfigurasi**:
-  - Elevation mask:$15^\circ$
-  - Ionosphere: Ionosphere-free linear combination ($LC$)
-  - Troposphere: Saastamoinen model + estimation
-  - Ambiguity: Fix-and-hold (LAMBDA method)
+ - Elevation mask:$15^\circ$
+ - Ionosphere: Ionosphere-free linear combination ($LC$)
+ - Troposphere: Saastamoinen model + estimation
+ - Ambiguity: Fix-and-hold (LAMBDA method)
 
 - **Output**: .pos (coordinate), .stat (quality), .res (residual)
 
@@ -88,7 +92,8 @@ h_{\text{vert}} = \sqrt{h_{\text{slant}}^2 - r_{\text{antenna}}^2}$$### Modul 2:
 - **Residual analysis**: Plot residual vs epoch
 
 - **RMS error**: Bandingkan koordinat dengan titik kontrol
-$$RMS = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - x_{\text{ref}})^2}$$
+
+$$RMS = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - x_{\text{ref}})^2} $$
 
 - **Cycle slip detection**: Analisis MW (Melbourne-Wübbena) combination
 

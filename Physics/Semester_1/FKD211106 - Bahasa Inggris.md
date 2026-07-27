@@ -33,12 +33,12 @@ English for Physics — developing the reading, writing, and communication skill
 - Quantitative expressions: units, magnitudes, comparisons
 
 - **Example physics terms:**
-  ```
-  kinematics → kinematika        dynamics → dinamika
-  electromagnetism → elektromagnetika    thermodynamics → termodinamika
-  wavelength → panjang gelombang        frequency → frekuensi
-  gravitational potential → potensi gravitasi   geoid → geoid
-  ```
+ ```
+ kinematics → kinematika dynamics → dinamika
+ electromagnetism → elektromagnetika thermodynamics → termodinamika
+ wavelength → panjang gelombang frequency → frekuensi
+ gravitational potential → potensi gravitasi geoid → geoid
+ ```
 
 ### Unit 2: Reading Scientific Papers (Weeks 5–8)
 
@@ -49,11 +49,11 @@ English for Physics — developing the reading, writing, and communication skill
 - Understanding abstracts and formulating questions
 
 - Vocabulary building: Greek/Latin roots in physics
-  ```
-  -philic = loving, -phobic = fearing
-  -metry = measurement, -scope = viewing
-  geo- = Earth, astro- = star, -sphere = ball
-  ```
+ ```
+ -philic = loving, -phobic = fearing
+ -metry = measurement, -scope = viewing
+ geo- = Earth, astro- = star, -sphere = ball
+ ```
 
 - Critical reading: identifying assumptions, evaluating evidence
 

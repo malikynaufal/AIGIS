@@ -28,15 +28,11 @@ created: 2026-07-27
 | **Sea Surface Topography** | SST | Dynamic topography relative to geoid (same as MDT) | Geoid |
 | **Absolute Dynamic Topography** | ADT | SSH relative to geoid in absolute (geocentric) frame | Geoid (ITRF-referenced) |
 
-### Fundamental Relations$$SSH = h_{\text{sat}} - \rho_{\text{radar}} - \text{corrections}
-$$
+### Fundamental Relations
 
-$$\overline{SSH} = N + MDT = N + SST$$
-
-$$
-ADT = SSH - N$$Where:
--$h_{\text{sat}}$= satellite altitude above reference ellipsoid (from orbit)
--$\rho_{\text{radar}}$= radar range from satellite to sea surface
+$$SSH = h_{\text{sat}} - \rho_{\text{radar}} - \text{corrections}\overline{SSH} = N + MDT = N + SSTADT = SSH - N$$Where:
+-$h_{\text{sat}} $= satellite altitude above reference ellipsoid (from orbit)
+-$\rho_{\text{radar}} $= radar range from satellite to sea surface
 -$N$= [[Geoid Undulation]]
 -$MDT$= Mean Dynamic Topography (dynamic ocean topography)
 -$ADT$= Absolute Dynamic Topography
@@ -45,10 +41,12 @@ ADT = SSH - N$$Where:
 
 ## 🔭 Satellite Altimetry Fundamentals (Dasar Altimetri Satelit)
 
-### Measurement Principle$$\rho = \frac{c \cdot \Delta t}{2}$$The radar altimeter on a satellite transmits a microwave pulse downward and measures the two-way travel time$\Delta t$. The sea surface height is then:
-$$
+### Measurement Principl
+e
 
-SSH_{\text{altimetry}} = h_{\text{orbit}} - \rho - \text{dry tropo} - \text{wet tropo} - \text{ionosphere} - \text{sea state bias (SSB)} + \text{solid Earth tide} + \text{ocean tide}$$### Key Corrections in Altimetry
+$$\rho = \frac{c \cdot \Delta t}{2} $$The radar altimeter on a satellite transmits a microwave pulse downward and measures the two-way travel time $\Delta t$. The sea surface height is then:
+
+$$SSH_{\text{altimetry}} = h_{\text{orbit}} - \rho - \text{dry tropo} - \text{wet tropo} - \text{ionosphere} - \text{sea state bias (SSB)} + \text{solid Earth tide} + \text{ocean tide} $$### Key Corrections in Altimetry
 
 | Correction | Source | Typical Magnitude |
 |------------|--------|-------------------|
@@ -62,7 +60,12 @@ SSH_{\text{altimetry}} = h_{\text{orbit}} - \rho - \text{dry tropo} - \text{wet 
 | **Pole tide** | Earth rotation model | cm |
 | **Atmospheric loading** | Pressure model | cm |
 
-### Altimeter Range Equation$$\rho_{\text{corrected}} = \rho_{\text{raw}} + \delta\rho_{\text{wet}} + \delta\rho_{\text{dry}} + \delta\rho_{\text{iono}} + \delta\rho_{\text{SSB}} - \delta\rho_{\text{tide}} - \delta\rho_{\text{solid}}$$---
+### Altimeter Range Equatio
+n
+
+$$\rho_{\text{corrected}} = \rho_{\text{raw}} + \delta\rho_{\text{wet}} + \delta\rho_{\text{dry}} + \delta\rho_{\text{iono}} + \delta\rho_{\text{SSB}} - \delta\rho_{\text{tide}} - \delta\rho_{\text{solid}} $$
+
+---
 
 ## 🛰️ Major Satellite Altimetry Missions
 
@@ -93,7 +96,12 @@ SSH_{\text{altimetry}} = h_{\text{orbit}} - \rho - \text{dry tropo} - \text{wet 
 | **CFOSat** | Scatterometer + altimeter | Wind/wave + SSH |
 | **HY-2D** | Radar altimeter | Ocean monitoring |
 
-### Mission Orbit Geometry$$\text{Repeat period} = \frac{\text{orbital period}}{N_{\text{rev}} - N_{\text{nodal}}}$$Jason-type orbits:$i \approx 66°$→ covers ocean between$\pm 66°$latitude.
+### Mission Orbit Geometr
+y
+
+$$\text{Repeat period} = \frac{\text{orbital period}}{N_{\text{rev}} - N_{\text{nodal}}} $$
+
+Jason-type orbits:$i \approx 66°$→ covers ocean between $\pm 66°$latitude.
 Sentinel-3 orbits:$i \approx 98.65°$(sun-synchronous) → global coverage including polar.
 
 ---
@@ -102,16 +110,21 @@ Sentinel-3 orbits:$i \approx 98.65°$(sun-synchronous) → global coverage inclu
 
 ### Global Mean Sea Level (GMSL)
 
-- **Rate**:$\sim 3.7 \pm 0.5 \text{ mm/year}$(2006–2018, IPCC AR6)
+- **Rate**:$\sim 3.7 \pm 0.5 \text{ mm/year} $(2006–2018, IPCC AR6)
 
 - **Acceleration**:$\sim 0.084 \pm 0.025 \text{ mm/year}^2$- **Contribution breakdown (2006–2018)**:
-  - Thermal expansion:$1.4 \text{ mm/yr}$(38%)
-  - Glaciers:$0.6 \text{ mm/yr}$(17%)
-  - Greenland:$0.7 \text{ mm/yr}$(20%)
-  - Antarctica:$0.4 \text{ mm/yr}$(11%)
-  - Land water storage:$0.3 \text{ mm/yr}$(8%)
+ - Thermal expansion:$1.4 \text{ mm/yr} $(38%)
+ - Glaciers:$0.6 \text{ mm/yr} $(17%)
+ - Greenland:$0.7 \text{ mm/yr} $(20%)
+ - Antarctica:$0.4 \text{ mm/yr} $(11%)
+ - Land water storage:$0.3 \text{ mm/yr} $(8%)
 
-### Regional Variations$$\text{SSH}_{\text{regional}} = \text{GMSL} + \text{regional trends} + \text{interannual variability}$$Regional variations (not uniform) due to:
+### Regional Variation
+s
+
+$$\text{SSH}_{\text{regional}} = \text{GMSL} + \text{regional trends} + \text{interannual variability} $$
+
+Regional variations (not uniform) due to:
 
 - Ocean circulation changes (ENSO, PDO, AMO)
 
@@ -126,7 +139,7 @@ Sentinel-3 orbits:$i \approx 98.65°$(sun-synchronous) → global coverage inclu
 ### Indonesia Sea Level Context
 | Indicator | Value |
 |-----------|-------|
-| **Trend (Indonesia waters)** |$\sim 3.5–5.0 \text{ mm/year}$|
+| **Trend (Indonesia waters)** | $\sim 3.5–5.0 \text{ mm/year} $ |
 | **Dominant driver** | Thermal expansion + ocean heat content |
 | **Critical areas** | Jakarta (subsidence + sea level rise), small islands |
 | **Impact** | Coastal flooding, saltwater intrusion, infrastructure risk |
@@ -135,17 +148,27 @@ Sentinel-3 orbits:$i \approx 98.65°$(sun-synchronous) → global coverage inclu
 
 ## 🔄 Sea Surface Topography & Ocean Circulation
 
-### Mean Dynamic Topography (MDT)$$MDT = \overline{SSH} - N$$-$N$from geoid model (e.g., EGM2008, GOCE)
--$\overline{SSH}$from altimetry (multi-year mean)
+### Mean Dynamic Topography (MDT
+)
 
-- MDT$\sim$0 to 1.5 m (global range)
+$$MDT = \overline{SSH} - N$$
+
+-$N $from geoid model (e.g., EGM2008, GOCE)
+-$\overline{SSH} $from altimetry (multi-year mean)
+
+- MDT $\sim$0 to 1.5 m (global range)
 
 ### Geostrophic Currents from ADT
-Ocean surface currents are derived from the gradient of Absolute Dynamic Topography:$$\vec{u}_g = \frac{g}{f} \hat{k} \times \nabla_{\text{horiz}} ADT$$Where:
+Ocean surface currents are derived from the gradient of Absolute Dynamic Topography
+:
+
+$$\vec{u}_g = \frac{g}{f} \hat{k} \times \nabla_{\text{horiz}} ADT$$
+
+Where:
 -$g$= gravitational acceleration
 -$f = 2\Omega\sin\phi$= Coriolis parameter
--$\hat{k}$= vertical unit vector
--$ADT$= Absolute Dynamic Topography =$SSH - N$**Zonal component**:$u_g = -\frac{g}{f}\frac{\partial ADT}{\partial y}$**Meridional component**:$v_g = \frac{g}{f}\frac{\partial ADT}{\partial x}$### Major Ocean Circulation Patterns (Indonesian Waters)
+-$\hat{k} $= vertical unit vector
+-$ADT$= Absolute Dynamic Topography =$SSH - N$**Zonal component**:$u_g = -\frac{g}{f}\frac{\partial ADT}{\partial y} $**Meridional component**:$v_g = \frac{g}{f}\frac{\partial ADT}{\partial x} $### Major Ocean Circulation Patterns (Indonesian Waters)
 | Current | Region | Significance |
 |---------|--------|-------------|
 | **Indonesian Throughflow (ITF)** | Makassar Strait, Maluku Sea | Transport of Pacific → Indian Ocean |
@@ -159,10 +182,18 @@ Ocean surface currents are derived from the gradient of Absolute Dynamic Topogra
 ## 🌍 Geocentric Sea Surface & Geoid
 
 ### Geocentric SSH
-In the ITRF/ECEF frame, SSH is referenced to the ellipsoid:$$h_{\text{sea}} = h_{\text{sat}} - \rho_{\text{altimeter}} = N + ADT$$where$h_{\text{sea}}$is the ellipsoidal height of the sea surface.
+In the ITRF/ECEF frame, SSH is referenced to the ellipsoid
+:
+
+$$h_{\text{sea}} = h_{\text{sat}} - \rho_{\text{altimeter}} = N + ADT$$where $h_{\text{sea}} $is the ellipsoidal height of the sea surface.
 
 ### Geoid from Altimetry (Marine Geoid)
-Altimetry provides direct measurement of the sea surface. In the absence of currents (ideal ocean):$$SSH_{\text{equilibrium}} = N + MDT_{\text{equilibrium}} \approx N$$**For geoid determination**:
+Altimetry provides direct measurement of the sea surface. In the absence of currents (ideal ocean)
+:
+
+$$SSH_{\text{equilibrium}} = N + MDT_{\text{equilibrium}} \approx N$$
+
+**For geoid determination**:
 
 - Use long-term mean SSH from altimetry
 
@@ -170,11 +201,11 @@ Altimetry provides direct measurement of the sea surface. In the absence of curr
 
 - Result:$N = \overline{SSH} - MDT$**Accuracy limitations**:
 
-- Altimetric SSH:$\pm 2–4 \text{ cm}$ (along-track)
+- Altimetric SSH:$\pm 2–4 \text{ cm} $ (along-track)
 
-- Geoid ($N$) from EGM2008/GOCE: $\pm 5–10 \text{ cm}$(global),$\pm 2–3 \text{ cm}$(regional with local data)
+- Geoid ($N$) from EGM2008/GOCE: $\pm 5–10 \text{ cm} $(global),$\pm 2–3 \text{ cm} $(regional with local data)
 
-- MDT residual:$\sim 1–2 \text{ cm}$(dominant error source for coastal zones)
+- MDT residual:$\sim 1–2 \text{ cm} $(dominant error source for coastal zones)
 
 ---
 
@@ -182,11 +213,11 @@ Altimetry provides direct measurement of the sea surface. In the absence of curr
 
 | Product | Source | Resolution | Latency |
 |---------|--------|------------|---------|
-| **AVISO / CNES** | Multi-mission altimetry |$1/4° \times 1/4°$(gridded), along-track | 3–10 days |
-| **Copernicus Marine (CMEMS)** | Sentinel-3, Jason |$1/8°$(regional), global grids | Near-real-time |
+| **AVISO / CNES** | Multi-mission altimetry | $1/4° \times 1/4°$(gridded), along-track | 3–10 days |
+| **Copernicus Marine (CMEMS)** | Sentinel-3, Jason | $1/8°$(regional), global grids | Near-real-time |
 | **NASA PODAAC** | Jason, Sentinel-3 | Along-track, gridded | 3–10 days |
-| **Jason-3 GDR** | Jason-3 (Reference Mission) | Along-track,$1\text{ Hz}$| NRT, operational |
-| **DUACS** | Multi-mission processing |$1/4°$(gridded) | 3–10 days |
+| **Jason-3 GDR** | Jason-3 (Reference Mission) | Along-track,$1\text{ Hz} $ | NRT, operational |
+| **DUACS** | Multi-mission processing | $1/4°$(gridded) | 3–10 days |
 
 ---
 
@@ -208,18 +239,25 @@ Altimetry provides direct measurement of the sea surface. In the absence of curr
 
 ## 📐 Practical Formulas
 
-### SSH Time Series Analysis$$SSH(t) = \text{MSL} + \text{trend} \cdot t + \text{seasonal} + \text{residual}
-$$
+### SSH Time Series Analysis
 
-$$
-\text{trend} = \frac{\sum(t_i - \bar{t})(SSH_i - \overline{SSH})}{\sum(t_i - \bar{t})^2}$$### Sea Level Trend (Linear)$$\text{MSL}(t) = a_0 + a_1 (t - t_0) + \varepsilon$$where$a_1$= trend (mm/year),$t_0$= reference epoch.
+$$SSH(t) = \text{MSL} + \text{trend} \cdot t + \text{seasonal} + \text{residual}\text{trend} = \frac{\sum(t_i - \bar{t})(SSH_i - \overline{SSH})}{\sum(t_i - \bar{t})^2
+}
 
-### Altimeter Accuracy Budget$$\sigma_{\text{SSH}}^2 = \sigma_{\text{orbit}}^2 + \sigma_{\text{range}}^2 + \sigma_{\text{wet}}^2 + \sigma_{\text{iono}}^2 + \sigma_{\text{SSB}}^2 + \sigma_{\text{tide}}^2$$Typical values (Jason-3):$\sigma_{\text{orbit}} \approx 1.5 \text{ cm}$, $\sigma_{\text{range}} \approx 1.5 \text{ cm}$, others 1–2 cm each → $\sigma_{\text{SSH}} \approx 2.5 \text{ cm}$.
+$$### Sea Level Trend (Linear)$$
+
+\text{MSL}(t) = a_0 + a_1 (t - t_0) + \varepsilon$$where $a_1$= trend (mm/year),$t_0$= reference epoch.
+
+### Altimeter Accuracy Budge
+t
+
+$$\sigma_{\text{SSH}}^2 = \sigma_{\text{orbit}}^2 + \sigma_{\text{range}}^2 + \sigma_{\text{wet}}^2 + \sigma_{\text{iono}}^2 + \sigma_{\text{SSB}}^2 + \sigma_{\text{tide}}^2$$
+
+Typical values (Jason-3):$\sigma_{\text{orbit}} \approx 1.5 \text{ cm} $,$\sigma_{\text{range}} \approx 1.5 \text{ cm} $, others 1–2 cm each →$\sigma_{\text{SSH}} \approx 2.5 \text{ cm} $.
 
 ### Geostrophic Current from SSH
-$$
 
-u = -\frac{g}{f}\frac{\partial SSH}{\partial y}, \quad v = \frac{g}{f}\frac{\partial SSH}{\partial x}$$---
+$$u = -\frac{g}{f}\frac{\partial SSH}{\partial y}, \quad v = \frac{g}{f}\frac{\partial SSH}{\partial x} $$---
 
 ## 🔗 Related Notes
 

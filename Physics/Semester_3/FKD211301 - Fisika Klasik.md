@@ -33,15 +33,15 @@ Advanced classical mechanics using the Lagrangian and Hamiltonian formalisms —
 - **Lagrangian:** L = T - V (kinetic minus potential energy)
 
 - **Euler-Lagrange equation:**
-  ```
-  d/dt(∂L/∂q̇_i) - ∂L/∂q_i = 0
-  ```
+
+$$\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}
+ight) - \frac{\partial L}{\partial q_i} = 0$$
 
 - Applications:
-  - Simple pendulum (θ as generalized coordinate)
-  - Double pendulum
-  - Atwood machine
-  - Sliding bead on a wire
+ - Simple pendulum (θ as generalized coordinate)
+ - Double pendulum
+ - Atwood machine
+ - Sliding bead on a wire
 
 - **Constraints:** holonomic vs. non-holonomic
 
@@ -50,9 +50,9 @@ Advanced classical mechanics using the Lagrangian and Hamiltonian formalisms —
 ### Unit 2: Symmetries and Conservation Laws (Weeks 6–8)
 
 - **Noether's theorem:** Every continuous symmetry → conserved quantity
-  - Translational symmetry → conservation of linear momentum
-  - Rotational symmetry → conservation of angular momentum
-  - Time-translation symmetry → conservation of energy
+ - Translational symmetry → conservation of linear momentum
+ - Rotational symmetry → conservation of angular momentum
+ - Time-translation symmetry → conservation of energy
 
 - **Cyclic coordinates:** when ∂L/∂q = 0, then p_q is conserved
 
@@ -65,8 +65,8 @@ Advanced classical mechanics using the Lagrangian and Hamiltonian formalisms —
 - **Effective potential:** V_eff(r) = V(r) + L²/(2mr²)
 
 - **Orbits in gravitational field:**
-  - Conic sections: circles, ellipses, parabolas, hyperbolas
-  - Kepler's laws as consequences of 1/r potential
+ - Conic sections: circles, ellipses, parabolas, hyperbolas
+ - Kepler's laws as consequences of 1/r potential
 
 - **Scattering:** Rutherford scattering formula
 
@@ -79,15 +79,14 @@ Advanced classical mechanics using the Lagrangian and Hamiltonian formalisms —
 - **Hamiltonian:** H = Σ p_i q̇_i - L
 
 - **Hamilton's equations (canonical equations):**
-  ```
-  q̇_i = ∂H/∂p_i    ṗ_i = -∂H/∂q_i
-  ```
+
+$$\dot{q}_i = \frac{\partial H}{\partial p_i}, \quad \dot{p}_i = -\frac{\partial H}{\partial q_i}$$
 
 - **Phase space** and the geometry of dynamics
 
 - **Poisson brackets:** {A, B} = Σ (∂A/∂q_i ∂B/∂p_i - ∂A/∂p_i ∂B/∂q_i)
-  - Canonical transformations preserve Poisson bracket structure
-  - Liouville's theorem: phase space volume is conserved
+ - Canonical transformations preserve Poisson bracket structure
+ - Liouville's theorem: phase space volume is conserved
 
 - **Generating functions** for canonical transformations
 
@@ -99,15 +98,20 @@ Advanced classical mechanics using the Lagrangian and Hamiltonian formalisms —
 
 ## 🔬 Key Equations
 
-```
-Euler-Lagrange:     d/dt(∂L/∂q̇) - ∂L/∂q = 0
-Lagrangian:         L = T - V
-Noether:            Symmetry → Conserved Quantity
-Hamiltonian:        H = T + V  (for natural systems)
-Hamilton's Eq:      q̇ = ∂H/∂p,  ṗ = -∂H/∂q
-Poisson Bracket:    {A, B} = ∂A/∂q ∂B/∂p - ∂A/∂p ∂B/∂q
-Kepler's 3rd:       T² = (4π²/GM)a³
-```
+$$\text{Euler-Lagrange: } \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}
+ight) - \frac{\partial L}{\partial q} = 0$$
+
+$$\text{Lagrangian: } L = T - V$$
+
+$$\text{Noether: Symmetry} \to \text{Conserved Quantity}$$
+
+$$\text{Hamiltonian: } H = T + V \text{ (for natural systems)}$$
+
+$$\text{Hamilton's Eq: } \dot{q} = \frac{\partial H}{\partial p}, \quad \dot{p} = -\frac{\partial H}{\partial q}$$
+
+$$\text{Poisson Bracket: } \{A, B\} = \frac{\partial A}{\partial q}\frac{\partial B}{\partial p} - \frac{\partial A}{\partial p}\frac{\partial B}{\partial q}$$
+
+$$\text{Kepler's 3rd: } T^2 = \frac{4\pi^2}{GM}a^3$$
 
 ---
 

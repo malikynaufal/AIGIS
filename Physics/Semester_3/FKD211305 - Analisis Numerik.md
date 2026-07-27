@@ -37,12 +37,12 @@ Numerical analysis provides the mathematical framework for solving problems that
 ### Unit 2: Root Finding (Weeks 4–7)
 
 - **Bisection method:** guaranteed convergence, but linear
-  - Error bound: |b_n - a_n| = 2^{-n}(b-a)
+ - Error bound: |b_n - a_n| = 2^{-n}(b-a)
 
 - **Newton-Raphson method:**
-  - x_{n+1} = x_n - f(x_n)/f'(x_n)
-  - Quadratic convergence near simple roots
-  - Pitfalls: zero derivative, cycling, divergence
+ - x_{n+1} = x_n - f(x_n)/f'(x_n)
+ - Quadratic convergence near simple roots
+ - Pitfalls: zero derivative, cycling, divergence
 
 - **Secant method:** derivative-free, superlinear convergence (order ~1.618)
 
@@ -53,36 +53,36 @@ Numerical analysis provides the mathematical framework for solving problems that
 ### Unit 3: Numerical Interpolation and Integration (Weeks 8–12)
 
 - **Polynomial interpolation:**
-  - Lagrange interpolation formula
-  - Newton's divided differences
-  - Runge's phenomenon — equidistant nodes can diverge!
-  - **Chebyshev nodes** for stable interpolation
+ - Lagrange interpolation formula
+ - Newton's divided differences
+ - Runge's phenomenon — equidistant nodes can diverge!
+ - **Chebyshev nodes** for stable interpolation
 
 - **Splines:** cubic splines for smooth interpolation
 
 - **Numerical differentiation:**
-  - Forward difference: f'(x) = (f(x+h)-f(x))/h + O(h)
-  - Central difference: f'(x) = (f(x+h)-f(x-h))/(2h) + O(h²)
+ - Forward difference: f'(x) = (f(x+h)-f(x))/h + O(h)
+ - Central difference: f'(x) = (f(x+h)-f(x-h))/(2h) + O(h²)
 
 - **Numerical integration (quadrature):**
-  - Trapezoidal rule: ∫f dx ≈ (h/2)[f₀ + 2f₁ + ... + f_N]
-  - **Simpson's 1/3 rule:** ∫f dx ≈ (h/3)[f₀ + 4f₁ + 2f₂ + 4f₃ + ... + f_N]
-  - **Gaussian quadrature:** optimal node placement for polynomials up to degree 2N-1
+ - Trapezoidal rule: ∫f dx ≈ (h/2)[f₀ + 2f₁ + ... + f_N]
+ - **Simpson's 1/3 rule:** ∫f dx ≈ (h/3)[f₀ + 4f₁ + 2f₂ + 4f₃ + ... + f_N]
+ - **Gaussian quadrature:** optimal node placement for polynomials up to degree 2N-1
 
 ### Unit 4: ODE Solving and Matrix Methods (Weeks 13–16)
 
 - **ODE initial value problems:**
-  - Euler method (first-order)
-  - **Runge-Kutta methods** (2nd and 4th order)
-  - **Multistep methods:** Adams-Bashforth, Adams-Moulton
-  - **Stiff equations** and implicit methods (brief treatment)
+ - Euler method (first-order)
+ - **Runge-Kutta methods** (2nd and 4th order)
+ - **Multistep methods:** Adams-Bashforth, Adams-Moulton
+ - **Stiff equations** and implicit methods (brief treatment)
 
 - **Boundary value problems:** shooting method, finite differences
 
 - **Numerical linear algebra:**
-  - LU decomposition for solving Ax = b
-  - **Iterative methods:** Jacobi, Gauss-Seidel for large sparse systems
-  - Eigenvalue algorithms: power method, QR algorithm (overview)
+ - LU decomposition for solving Ax = b
+ - **Iterative methods:** Jacobi, Gauss-Seidel for large sparse systems
+ - Eigenvalue algorithms: power method, QR algorithm (overview)
 
 - **Applications:** solving the Schrödinger equation numerically, N-body problem
 
@@ -91,12 +91,12 @@ Numerical analysis provides the mathematical framework for solving problems that
 ## 🔬 Key Algorithms
 
 ```
-Bisection:          e_{n+1} = (1/2)e_n  (linear convergence)
-Newton-Raphson:     x_{n+1} = x_n - f(x_n)/f'(x_n)  (quadratic)
-Trapezoidal:        Error = O(h²)  (global)
-Simpson's:          Error = O(h⁴)  (global)
-RK4:                Local error = O(h⁵), global error = O(h⁴)
-Gaussian Quad:      Exact for polynomials up to degree 2N-1
+Bisection: e_{n+1} = (1/2)e_n (linear convergence)
+Newton-Raphson: x_{n+1} = x_n - f(x_n)/f'(x_n) (quadratic)
+Trapezoidal: Error = O(h²) (global)
+Simpson's: Error = O(h⁴) (global)
+RK4: Local error = O(h⁵), global error = O(h⁴)
+Gaussian Quad: Exact for polynomials up to degree 2N-1
 ```
 
 ---

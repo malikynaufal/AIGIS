@@ -85,20 +85,20 @@ This foundational course introduces the principles of classical mechanics — th
 ## 🔬 Key Equations
 
 ```
-Kinematics:         v = v₀ + at
-                    x = x₀ + v₀t + ½at²
-                    v² = v₀² + 2a(x - x₀)
+Kinematics: v = v₀ + at
+ x = x₀ + v₀t + ½at²
+ v² = v₀² + 2a(x - x₀)
 
-Newton's 2nd:       F_net = ma = m(dv/dt)
+Newton's 2nd: F_net = ma = m(dv/dt)
 
-Work-Energy:        W = ∫ F·dr = ΔKE
+Work-Energy: W = ∫ F·dr = ΔKE
 
-Conservation:       KE_i + PE_i = KE_f + PE_f
+Conservation: KE_i + PE_i = KE_f + PE_f
 
-Momentum:           p = mv
-                    F = dp/dt
+Momentum: p = mv
+ F = dp/dt
 
-Circular:           a_c = v²/r = ω²r
+Circular: a_c = v²/r = ω²r
 ```
 
 ---
@@ -151,33 +151,44 @@ Upon completion, students will be able to:
 ## 🧪 Worked Examples
 
 ### Example 1: Projectile with Air Resistance (Linear)
-A ball is thrown at $v_0 = 20$m/s at$45°$with linear drag force$ec{F}_D = -bv$.
+A ball is thrown at $v_0 = 20 $m/s at$45°$with linear drag force $ec{F}_D = -bv$.
 
 **Equations of motion:**
-$$m\ddot{x} = -b\dot{x}, \quad m\ddot{y} = -mg - b\dot{y}$$
+
+$$m\ddot{x} = -b\dot{x}, \quad m\ddot{y} = -mg - b\dot{y} $$
 
 For small drag ($b \ll mg/v_0$), first-order correction:
-$$x(t) = rac{mv_0\cos	heta}{b}(1 - e^{-bt/m})$$
 
-$$y(t) = rac{1}{b}\left(mv_0\sin	heta + rac{m^2g}{b}
-ight)(1 - e^{-bt/m}) - rac{mgt}{b}$$
+$$x(t) = rac{mv_0\cos	heta}{b}(1 - e^{-bt/m})y(t) = rac{1}{b}\left(mv_0\sin	heta + rac{m^2g}{b}
+ight)(1 - e^{-bt/m}) - rac{mgt}{b} $$
 
 The range is reduced compared to vacuum and the trajectory is no longer symmetric.
 
 ### Example 2: Inelastic Collision on Frictionless Surface
-Block A ($m_1 = 3$kg,$v_1 = 4$ m/s) collides with Block B ($m_2 = 1$kg,$v_2 = -2$m/s). Perfectly inelastic (stick together).
+Block A ($m_1 = 3 $kg,$v_1 = 4$ m/s) collides with Block B ($m_2 = 1 $kg,$v_2 = -2 $m/s). Perfectly inelastic (stick together).
 
-**Conservation of momentum:**$$m_1 v_1 + m_2 v_2 = (m_1 + m_2) v_f
-$$
+**Conservation of momentum:**
 
-$$3(4) + 1(-2) = 4 v_f$$
+$$m_1 v_1 + m_2 v_2 = (m_1 + m_2) v_f3(4) + 1(-2) = 4 v_f10 = 4 v_f \implies v_f = 2.5 	ext{ m/s
+}
 
-$$
-10 = 4 v_f \implies v_f = 2.5 	ext{ m/s}$$**Energy lost:**$$\Delta K = rac{1}{2}(3)(16) + rac{1}{2}(1)(4) - rac{1}{2}(4)(6.25) = 24 + 2 - 12.5 = 13.5 	ext{ J}$$### Example 3: Satellite Orbit from Newton's Second Law
-A satellite orbits Earth at altitude$h = 200$km above the surface. Find the orbital speed.
+$$**Energy lost:**$$
 
-**Given:**$R_E = 6371$km,$GM = 3.986 	imes 10^{14}$m³/s²,$r = R_E + h = 6571$km.$$v = \sqrt{rac{GM}{r}} = \sqrt{rac{3.986 	imes 10^{14}}{6.571 	imes 10^6}} = 7784 	ext{ m/s} pprox 7.8 	ext{ km/s}$$**Period:**$T = rac{2\pi r}{v} = rac{2\pi(6571)}{7784} = 5.32 	imes 10^3 	ext{ s} pprox 89 	ext{ min}$### Example 4: Work Done by Variable Force
-A force$F(x) = 3x^2 + 2x$acts on a 2 kg particle from$x = 0$to$x = 3$m.$$W = \int_0^3 (3x^2 + 2x)\,dx = [x^3 + x^2]_0^3 = 27 + 9 = 36 	ext{ J}$$By work-energy theorem:$W = \Delta K$, so $v_f = \sqrt{2W/m} = \sqrt{72/2} = 6$m/s (if$v_i = 0$).
+\Delta K = rac{1}{2}(3)(16) + rac{1}{2}(1)(4) - rac{1}{2}(4)(6.25) = 24 + 2 - 12.5 = 13.5 	ext{ J} $$### Example 3: Satellite Orbit from Newton's Second Law
+A satellite orbits Earth at altitude $h = 200 $km above the surface. Find the orbital speed.
+
+**Given:**$R_E = 6371 $km,$GM = 3.986 	imes 10^{14} $m³/s²,$r = R_E + h = 6571 $km
+.
+
+$$v = \sqrt{rac{GM}{r}} = \sqrt{rac{3.986 	imes 10^{14}}{6.571 	imes 10^6}} = 7784 	ext{ m/s} pprox 7.8 	ext{ km/s} $$
+
+**Period:**$T = rac{2\pi r}{v} = rac{2\pi(6571)}{7784} = 5.32 	imes 10^3 	ext{ s} pprox 89 	ext{ min} $### Example 4: Work Done by Variable Force
+A force $F(x) = 3x^2 + 2x $acts on a 2 kg particle from $x = 0 $to $x = 3 $m
+.
+
+$$W = \int_0^3 (3x^2 + 2x)\,dx = [x^3 + x^2]_0^3 = 27 + 9 = 36 	ext{ J} $$
+
+By work-energy theorem:$W = \Delta K$, so $v_f = \sqrt{2W/m} = \sqrt{72/2} = 6 $m/s (if $v_i = 0$).
 
 ---
 

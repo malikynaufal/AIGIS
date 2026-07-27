@@ -75,11 +75,11 @@ This document summarizes the complete UGM Physics curriculum across all 8 semest
 
 ```
 Mathematics (Calculus, Linear Algebra, Diff Eq)
-    ├── Classical Mechanics (Newton → Lagrange → Hamilton)
-    ├── Electromagnetism → EM Waves → Optics
-    ├── Thermodynamics → Statistical Physics
-    ├── Quantum Mechanics → Atomic → Band Theory
-    └── Relativity → Field Theory
+ ├── Classical Mechanics (Newton → Lagrange → Hamilton)
+ ├── Electromagnetism → EM Waves → Optics
+ ├── Thermodynamics → Statistical Physics
+ ├── Quantum Mechanics → Atomic → Band Theory
+ └── Relativity → Field Theory
 
 Physics + Computation → Simulation, Signal Processing, Parallel Computing
 Physics + Applications → Geodesy, Atmosphere, Materials, Instrumentation

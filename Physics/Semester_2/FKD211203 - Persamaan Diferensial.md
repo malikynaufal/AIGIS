@@ -29,39 +29,39 @@ Differential equations are the language of physics — every fundamental law is 
 - **Separable equations:** dy/dx = g(x)h(y) → ∫ dy/h(y) = ∫ g(x)dx
 
 - **Linear first-order:** dy/dx + P(x)y = Q(x)
-  - Integrating factor method: μ(x) = exp(∫ P(x)dx)
-  - Solution: y = (1/μ(x)) ∫ μ(x)Q(x)dx
+ - Integrating factor method: μ(x) = exp(∫ P(x)dx)
+ - Solution: y = (1/μ(x)) ∫ μ(x)Q(x)dx
 
 - **Exact equations:** M(x,y)dx + N(x,y)dy = 0
-  - Condition: ∂M/∂y = ∂N/∂x
-  - Finding implicit solution F(x,y) = C
+ - Condition: ∂M/∂y = ∂N/∂x
+ - Finding implicit solution F(x,y) = C
 
 - **Substitution methods:** homogeneous equations, Bernoulli equation
 
 - **Physical examples:**
-  - Radioactive decay: dN/dt = -λN → N(t) = N₀e^{-λt}
-  - Newton's cooling: dT/dt = -k(T - T_env)
-  - RC circuit: dq/dt + q/(RC) = ε/R
+ - Radioactive decay: dN/dt = -λN → N(t) = N₀e^{-λt}
+ - Newton's cooling: dT/dt = -k(T - T_env)
+ - RC circuit: dq/dt + q/(RC) = ε/R
 
 ### Unit 2: Second-Order Linear ODEs (Weeks 6–10)
 
 - **General form:** a(x)y'' + b(x)y' + c(x)y = f(x)
 
 - **Homogeneous equations with constant coefficients:**
-  - Characteristic equation: ar² + br + c = 0
-  - Three cases: distinct real roots, repeated root, complex roots
-  - Solution forms: e^{r₁x}, xe^{rx}, e^{αx}(C₁cos(βx) + C₂sin(βx))
+ - Characteristic equation: ar² + br + c = 0
+ - Three cases: distinct real roots, repeated root, complex roots
+ - Solution forms: e^{r₁x}, xe^{rx}, e^{αx}(C₁cos(βx) + C₂sin(βx))
 
 - **Method of undetermined coefficients** for particular solutions
 
 - **Variation of parameters** as general method
 
 - **Physical applications:**
-  - **Simple harmonic oscillator:** m(d²x/dt²) + kx = 0
-    → ω = √(k/m), x(t) = A cos(ωt + φ)
-  - **Damped oscillator:** m\ddot{x} + b\dot{x} + kx = 0
-    → Underdamped, critically damped, overdamped
-  - **Driven/forced oscillator:** resonance, quality factor Q
+ - **Simple harmonic oscillator:** m(d²x/dt²) + kx = 0
+ → ω = √(k/m), x(t) = A cos(ωt + φ)
+ - **Damped oscillator:** m\ddot{x} + b\dot{x} + kx = 0
+ → Underdamped, critically damped, overdamped
+ - **Driven/forced oscillator:** resonance, quality factor Q
 
 ### Unit 3: Special Equations and Techniques (Weeks 11–14)
 
@@ -72,9 +72,9 @@ Differential equations are the language of physics — every fundamental law is 
 - **Power series solutions** (Frobenius method)
 
 - **Sturm-Liouville problems** — eigenvalue problems in physics:
-  - y'' + λρ(x)y = 0 with boundary conditions
-  - Orthogonality of eigenfunctions
-  - Applications: quantum mechanics, heat conduction
+ - y'' + λρ(x)y = 0 with boundary conditions
+ - Orthogonality of eigenfunctions
+ - Applications: quantum mechanics, heat conduction
 
 ### Unit 4: Systems of ODEs (Weeks 15–16)
 
@@ -91,12 +91,12 @@ Differential equations are the language of physics — every fundamental law is 
 ## 🔬 Key ODEs
 
 ```
-Radioactive decay:    dN/dt = -λN → N = N₀e^{-λt}
-Harmonic oscillator:  m\ddot{x} + kx = 0 → ω = √(k/m)
-RL Circuit:           L(dI/dt) + RI = ε → τ = L/R
-RC Circuit:           R(dq/dt) + q/C = ε → τ = RC
-Damped oscillator:    \ddot{x} + 2γ\dot{x} + ω₀²x = 0
-Resonance:            \ddot{x} + 2γ\dot{x} + ω₀²x = F₀cos(ωt)/m
+Radioactive decay: dN/dt = -λN → N = N₀e^{-λt}
+Harmonic oscillator: m\ddot{x} + kx = 0 → ω = √(k/m)
+RL Circuit: L(dI/dt) + RI = ε → τ = L/R
+RC Circuit: R(dq/dt) + q/C = ε → τ = RC
+Damped oscillator: \ddot{x} + 2γ\dot{x} + ω₀²x = 0
+Resonance: \ddot{x} + 2γ\dot{x} + ω₀²x = F₀cos(ωt)/m
 ```
 
 ---

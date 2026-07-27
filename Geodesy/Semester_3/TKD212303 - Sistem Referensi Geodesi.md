@@ -13,12 +13,8 @@ Mata kuliah ini mempelajari sistem koordinat geodetik, ellipsoid referensi, datu
 ### 1. Sistem Koordinat
 
 **Geodetik** $(\varphi, \lambda, h)$:
-$$X = (N+h)\cos\varphi\cos\lambda$$
 
-$$Y = (N+h)\cos\varphi\sin\lambda$$
-
-$$
-Z = (N(1-e^2)+h)\sin\varphi$$**Geosentrik Kartesian (ECEF)**$(X,Y,Z)$:
+$$X = (N+h)\cos\varphi\cos\lambdaY = (N+h)\cos\varphi\sin\lambdaZ = (N(1-e^2)+h)\sin\varphi$$**Geosentrik Kartesian (ECEF)**$(X,Y,Z)$:
 
 - Dihitung dari ellipsoid referensi
 

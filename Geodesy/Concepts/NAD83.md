@@ -59,9 +59,8 @@ NAD83 and ITRF diverge because NAD83 is fixed to the North American plate (≈WG
 ### Transformation: NAD83(2011) ↔ ITRF2008
 
 At epoch $t$:
-$$
 
-\mathbf{X}_{ITRF2008}(t) = \mathbf{T}(t) + (1+s)\,\mathbf{R}(t)\,\mathbf{X}_{NAD83}(t)$$| Parameter |$T_x$|$T_y$|$T_z$|$s$|$R_x$|$R_y$|$R_z$|
+$$\mathbf{X}_{ITRF2008}(t) = \mathbf{T}(t) + (1+s)\,\mathbf{R}(t)\,\mathbf{X}_{NAD83}(t)$$| Parameter | $T_x$| $T_y$| $T_z$| $s$| $R_x$| $R_y$| $R_z$ |
 |-----------|-------|-------|-------|-----|-------|-------|-------|
 | Translation (m) | −0.993 | 1.907 | −0.514 | — | — | — | — |
 | Scale (ppb) | — | — | — | 0.809 | — | — | — |
@@ -102,8 +101,9 @@ Converting from [[NAD27]] to NAD83 is not a simple 7-parameter Helmert. The reco
 
 ### Approximate Helmert (NAD27→NAD83)
 
-For quick checks only (±10 m accuracy):$$T_x \approx −6\ \text{m}, T_y \approx 158\ \text{m}, T_z \approx −176\ \text{m}
-$$
+For quick checks only (±10 m accuracy):
+
+$$T_x \approx −6\ \text{m}, T_y \approx 158\ \text{m}, T_z \approx −176\ \text{m} $$
 
 ## Usage and EPSG Codes
 

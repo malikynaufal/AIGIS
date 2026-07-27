@@ -1,8 +1,8 @@
 # 📚 Semester 1: Dasar-Dasar Geomatika Geodesi
 
-**Kode:** TKD211201  
-**Sifat:** Wajib  
-**SKS:** 2  
+**Kode:** TKD211201 
+**Sifat:** Wajib 
+**SKS:** 2 
 
 ## Deskripsi Mata Kuliah
 Mata kuliah ini memperkenalkan konsep-konsep dasar teori geodesi dan aplikasinya dalam pekerjaan lapangan, teori pengukuran, serta penjelasan tentang sistem pengukuran geodesi dan komponen-komponennya.

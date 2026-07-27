@@ -5,7 +5,10 @@ sks: 4
 semester: 1
 program: S.Kom
 university: Universitas Gadjah Mada (UGM)
-tags: [mathematics, linear algebra, vectors, matrices]
+tags:
+ - mathematics
+ - vectors
+ - matrices
 ---
 
 # MGM211102 — Aljabar Linear (Linear Algebra)

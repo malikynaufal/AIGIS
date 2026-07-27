@@ -1,33 +1,58 @@
 ---
-tags: [math, curriculum, semester, aigis]
-aliases: [Semester 8, Sem 8]
-created: 2026-07-12
+tags: [math, curriculum, semester-8]
+aliases: [Semester 8 Mathematics]
+created: 2026-07-13
+updated: 2026-07-27
 ---
 
-# 📘 Semester 8 - Mathematics
+# 📋 Semester 8 — Mathematics
 
-## Course
+> *"Capstone semester: synthesis of mathematical knowledge and thesis completion."*
 
-| Course | SKS | Topics |
-|--------|-----|--------|
-| Skripsi (Final Project) | 4 | Scientific research, methodology, thesis writing |
+---
 
-## Key Concepts
+## 1. Courses
 
-- [[ResearchMethodology]]
+| Code | Course | SKS | Focus |
+|------|--------|-----|-------|
+| MGM211801 | Skripsi Matematika | 6 | Mathematical research thesis |
+| UNV4801 | Kuliah Kerja Nyata (KKN) | 2 | Community service |
 
-- [[Mathematics MOC]]
+**Total: 8 SKS**
 
-- [[ThesisWriting]]
+---
 
-## Resources
+## 2. Thesis Topics
 
-### Thesis Guidelines
+### Pure Mathematics
+- Advanced topics in analysis/algebra/topology
+- Proof development and generalization
+- Applications to related fields
 
-- UGM Thesis Manual
+### Applied Mathematics
+- Mathematical modeling for geodesy/geophysics
+- Numerical algorithm development
+- Optimization and data science applications
 
-- Academic Writing Guide
+### Statistics
+- Statistical methodology for geodetic data
+- Bayesian inference for spatial data
+- Machine learning with mathematical rigor
 
-## Back
+---
 
-[[Semester 7]] · [[Mathematics_Curriculum_Guide]]
+## 3. Learning Outcomes
+
+- Complete independent mathematical research
+- Write rigorous mathematical proofs and papers
+- Present results professionally in English/Indonesian
+- Prepare for graduate studies or professional career
+
+---
+
+## 4. Cross-links
+
+- Related: [[Calculus]], [[Linear Algebra]], [[Real Analysis]], [[Probability Foundations]]
+- Previous: [[Semester_7/README|Semester 7 — Advanced Courses]]
+
+*Page last updated: 2026-07-27 | AIGIS Content™*

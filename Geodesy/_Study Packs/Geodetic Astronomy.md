@@ -31,8 +31,8 @@ Historically the only way to establish coordinates of points, geodetic astronomy
 
 | System | Origin | Axes | Use |
 |--------|--------|------|-----|
-| **Geodetic**$(\varphi, \lambda, h)$| Centre of ellipsoid | Latitude, longitude, height above [[Reference Ellipsoid]] | Standard for GNSS/GIS |
-| **Astronomical**$(\varphi^*, \lambda^*)$| Local plumb line | Measured by star observations | Provides local gravity direction |
+| **Geodetic**$(\varphi, \lambda, h)$ | Centre of ellipsoid | Latitude, longitude, height above [[Reference Ellipsoid]] | Standard for GNSS/GIS |
+| **Astronomical**$(\varphi^*, \lambda^*)$ | Local plumb line | Measured by star observations | Provides local gravity direction |
 | **Local ENU** | Station point | East, North, Up | Surveying (see [[Local ENU NEU]]) |
 
 ### 2.2. Celestial Coordinates
@@ -52,7 +52,7 @@ The celestial sphere is an imaginary sphere of infinite radius centred on the ob
 \sin\delta &= \sin\varphi \sin h + \cos\varphi \cos h \cos A \\
 \cos\delta \cos\alpha &= \cos\varphi \cos h \sin A - \sin\varphi\cos\delta\sin\alpha \\
 \cos\delta\sin\alpha &= \cos h \cos A
-\end{aligned}$$where$A$= azimuth,$h$= altitude,$\alpha$= right ascension,$\delta$= declination,$\varphi$= latitude.
+\end{aligned} $$where $A$= azimuth,$h$= altitude,$\alpha$= right ascension,$\delta$= declination,$\varphi$= latitude.
 
 ---
 
@@ -83,33 +83,42 @@ For geodetic work, the most useful are:
 Observe a star crossing the **local meridian** (the great circle through zenith and celestial poles).$$\begin{aligned}
 \varphi^* &= \delta + (90° - h_{\text{max}}) \\
 \lambda^* &= \text{LST} - \alpha
-\end{aligned}$$where LST = Local Sidereal Time, and$\delta$, $\alpha$are from the star catalogue.
+\end{aligned} $$where LST = Local Sidereal Time, and $\delta$,$\alpha $are from the star catalogue.
 
 ### 4.2. Circumpolar Stars (Dome Star)
 
 For high latitudes, use stars that never set. The **Dome (Kozai) star method**:
 1. Observe the same star at two positions on the great circle through the pole.
-2. Measure altitudes$h_1$, $h_2$and the azimuth difference.
-3. Compute latitude:$$\varphi^* = \delta \pm \arccos\left(\frac{\cos h_1 + \cos h_2}{2\cos(p/2)\cos\delta}\right)$$where$p$is the hour angle difference.
+2. Measure altitudes $h_1$, $h_2 $and the azimuth difference.
+3. Compute latitude
+:
 
-### 4.3. Polaris (North Star)$$\varphi^* = h + \epsilon \cos H$$where$h$= measured altitude of Polaris,$\epsilon \approx 0.6696°$(Polaris' angular distance from the pole), and$H$= hour angle (from ephemeris).
+$$\varphi^* = \delta \pm \arccos\left(\frac{\cos h_1 + \cos h_2}{2\cos(p/2)\cos\delta}\right)$$where $p$is the hour angle difference.
 
-### 4.4. Time Determination (Longitude)$$\lambda^* = \alpha_{\text{star}} - \text{LST} + 12h$$Requires accurate time (GPS provides time to ns accuracy).
+### 4.3. Polaris (North Star
+)
+
+$$\varphi^* = h + \epsilon \cos H$$where $h$= measured altitude of Polaris,$\epsilon \approx 0.6696°$(Polaris' angular distance from the pole), and $H$= hour angle (from ephemeris).
+
+### 4.4. Time Determination (Longitude
+)
+
+$$\lambda^* = \alpha_{\text{star}} - \text{LST} + 12h$$
+
+Requires accurate time (GPS provides time to ns accuracy).
 
 ---
 
 ## 5. Deflection of the Vertical (DOV)
 
-The **deflection of the vertical** (plumb‑line anomaly)$\xi, \eta$:
-$$\xi = \varphi^* - \varphi$$
+The **deflection of the vertical** (plumb‑line anomaly) $\xi, \eta$:
 
-$$
-\eta = (\lambda^* - \lambda)\cos\varphi$$where$\varphi, \lambda$are the geodetic coordinates from GNSS/leveling.
+$$\xi = \varphi^* - \varphi\eta = (\lambda^* - \lambda)\cos\varphi$$where $\varphi, \lambda $are the geodetic coordinates from GNSS/leveling.
 
 | Component | Direction | Typical magnitude |
 |-----------|-----------|-------------------|
-|$\xi$(meridional) | North–South | 0.1–5″ (arc‑seconds) |
-|$\eta$(prime vertical) | East–West | 0.1–5″ (arc‑seconds) |
+| $\xi$(meridional) | North–South | 0.1–5″ (arc‑seconds) |
+| $\eta$(prime vertical) | East–West | 0.1–5″ (arc‑seconds) |
 
 **Why DOV matters:**
 
@@ -118,16 +127,20 @@ $$
 - In mountainous areas, DOV can be **5–30″** (e.g., Himalayas, Andes).
 
 - DOV is the link between the geoid and the [[Reference Ellipsoid]]:
-  -$\xi \approx -\frac{1}{M\gamma}\frac{\partial N}{\partial\varphi}$-$\eta \approx -\frac{1}{N\gamma\cos\varphi}\frac{\partial N}{\partial\lambda}$---
+ -$\xi \approx -\frac{1}{M\gamma}\frac{\partial N}{\partial\varphi} $-$\eta \approx -\frac{1}{N\gamma\cos\varphi}\frac{\partial N}{\partial\lambda} $---
 
 ## 6. Worked Example — Determining Latitude from Polaris
 
-**Observed:** Polaris at transit (hour angle$H = 0$), altitude $h = 45° 32' 15.4″$.
+**Observed:** Polaris at transit (hour angle $H = 0$), altitude $h = 45° 32' 15.4″$.
 
 **Given:** $\epsilon = 0° 40' 16.6″$(Polaris angular distance from pole),$H = 0$.
-$$
 
-\varphi^* = h + \epsilon \cos H = 45° 32' 15.4″ + 0° 40' 16.6″ = 46° 12' 32.0″$$Cross‑check with GNSS: GNSS latitude = 46° 12' 30.5″.$$\xi = \varphi^* - \varphi = 1.5″$$This suggests the plumb line is deflected 1.5″ northward — consistent with nearby topographic mass to the south.
+$$\varphi^* = h + \epsilon \cos H = 45° 32' 15.4″ + 0° 40' 16.6″ = 46° 12' 32.0
+″
+
+$$Cross‑check with GNSS: GNSS latitude = 46° 12' 30.5″.$$
+
+\xi = \varphi^* - \varphi = 1.5″$$This suggests the plumb line is deflected 1.5″ northward — consistent with nearby topographic mass to the south.
 
 ---
 
@@ -158,8 +171,8 @@ $$
 ## 9. Practice Problems
 
 1. Compute the latitude from Polaris at altitude 35° 12' 05″, hour angle 18h 30m.
-2. Determine longitude: if a star with$\alpha = 14h\; 35m\; 20.3s$transits the local meridian when GPS time reads 02h 10m 15.2s UT1, what is the local longitude?
-3. Compute DOV components: GNSS gives$\varphi = -6°\; 12'\; 48.0″$, $\lambda = 106°\; 50'\; 15.0″$. Astronomical gives $\varphi^* = -6°\; 12'\; 46.5″$, $\lambda^* = 106°\; 50'\; 13.8″$(cos$\varphi = 0.994$). What are $\xi$and$\eta$?
+2. Determine longitude: if a star with $\alpha = 14h\; 35m\; 20.3s $transits the local meridian when GPS time reads 02h 10m 15.2s UT1, what is the local longitude?
+3. Compute DOV components: GNSS gives $\varphi = -6°\; 12'\; 48.0″$, $\lambda = 106°\; 50'\; 15.0″$. Astronomical gives $\varphi^* = -6°\; 12'\; 46.5″$, $\lambda^* = 106°\; 50'\; 13.8″$(cos $\varphi = 0.994$). What are $\xi $and $\eta$?
 4. Explain why the plumb line deviates from the ellipsoid normal, and relate this to the geoid undulation gradient.
 
 ---

@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Advanced Object-Oriented Programming
 
-**Course Code:** MGM214706  
-**SKS:** 3 (2-1)  
-**Semester:** 5  
-**Prerequisites:** Pemrograman Dasar, Dasar-Dasar OOP  
+**Course Code:** MGM214706 
+**SKS:** 3 (2-1) 
+**Semester:** 5 
+**Prerequisites:** Pemrograman Dasar, Dasar-Dasar OOP 
 
 ---
 
@@ -41,18 +41,18 @@ Encapsulation bukan sekadar *getter/setter*. Ini tentang melindungi *invariants*
 
 ```java
 public class Coordinate {
-    private double lat, lon; // Private field
+ private double lat, lon; // Private field
 
-    public Coordinate(double lat, double lon) {
-        setLat(lat); // Validasi di constructor
-        setLon(lon);
-    }
+ public Coordinate(double lat, double lon) {
+ setLat(lat); // Validasi di constructor
+ setLon(lon);
+ }
 
-    public void setLat(double lat) {
-        if (lat < -90 || lat > 90) throw new IllegalArgumentException("Invalid latitude");
-        this.lat = lat;
-    }
-    // ...
+ public void setLat(double lat) {
+ if (lat < -90 || lat > 90) throw new IllegalArgumentException("Invalid latitude");
+ this.lat = lat;
+ }
+ // ...
 }
 ```
 
@@ -116,20 +116,20 @@ Misalkan kita membangun library GIS:
 
 ```java
 public interface IGeoReader {
-    List<Geometry> read();
+ List<Geometry> read();
 }
 
 public class GISProcessor {
-    private final IGeoReader reader; // Inversion of control
+ private final IGeoReader reader; // Inversion of control
 
-    public GISProcessor(IGeoReader reader) {
-        this.reader = reader;
-    }
+ public GISProcessor(IGeoReader reader) {
+ this.reader = reader;
+ }
 
-    public void process() {
-        List<Geometry> data = reader.read();
-        // ...
-    }
+ public void process() {
+ List<Geometry> data = reader.read();
+ // ...
+ }
 }
 ```
 
@@ -142,9 +142,9 @@ Generics meningkatkan type safety.
 ```java
 // Java/C# style
 public class DataContainer<T> {
-    private T item;
-    public void set(T item) { this.item = item; }
-    public T get() { return item; }
+ private T item;
+ public void set(T item) { this.item = item; }
+ public T get() { return item; }
 }
 
 // Penggunaan untuk koordinat 2D/3D

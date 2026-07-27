@@ -1,8 +1,8 @@
 # Praktikum Survei Kadastral
 
-**Kode:** TKD213510  
-**Sifat:** Wajib  
-**SKS:**   
+**Kode:** TKD213510 
+**Sifat:** Wajib 
+**SKS:** 
 
 ## Deskripsi
 
@@ -67,23 +67,23 @@ Aspek hukum survei kadastral di Indonesia:
 ## Prosedur Lapangan
 
 1. **Persiapan Pra-Lapangan**
-   - Penelitian literatur tentang wilayah survei
-   - Koordinasi dengan pemerintah daerah dan masyarakat lokal
-   - Penentuan pendekatan survei dan alokasi anggaran waktu
-   - Pemeriksaan kewenangan dan koordinasi dengan BPN
+ - Penelitian literatur tentang wilayah survei
+ - Koordinasi dengan pemerintah daerah dan masyarakat lokal
+ - Penentuan pendekatan survei dan alokasi anggaran waktu
+ - Pemeriksaan kewenangan dan koordinasi dengan BPN
 
 2. **Eksekusi Lapangan**
-   - Pengiriman tim survei ke lokasi (2-3 hari kerja)
-   - Pemotivasian masyarakat dan penjelasan tujuan survei
-   - Pembentukan titik tetap primer dan sekunder
-   - Pengukuran sengketa sudut dan jarak
-   - Pemeriksaan silang data untuk memastikan akurasi
+ - Pengiriman tim survei ke lokasi (2-3 hari kerja)
+ - Pemotivasian masyarakat dan penjelasan tujuan survei
+ - Pembentukan titik tetap primer dan sekunder
+ - Pengukuran sengketa sudut dan jarak
+ - Pemeriksaan silang data untuk memastikan akurasi
 
 3. **Pemrosesan Pasca-Lapangan**
-   - Reduksi jaringan koordinat untuk mengidentifikasi outlier
-   - Pembuatan sketsa batas dan peta situasi
-   - Pemeriksaan legalitas dokumen pendukung (AJB, sertifikat)
-   - Pelaporan hasil awal kepada tim导师指导
+ - Reduksi jaringan koordinat untuk mengidentifikasi outlier
+ - Pembuatan sketsa batas dan peta situasi
+ - Pemeriksaan legalitas dokumen pendukung (AJB, sertifikat)
+ - Pelaporan hasil awal kepada tim导师指导
 
 ## Laporan Praktikum
 
@@ -167,7 +167,7 @@ Laporan harus diserahkan dalam bentuk:
 
 - Laporan cetak (10 salinan) + report disket CDROM
 
-- Presentasi to the faculty (10 menit + 5 pertanyaan)  
+- Presentasi to the faculty (10 menit + 5 pertanyaan) 
 
 - Presentasi kelompok sehingga setiap anggota bagian laporan
 

@@ -33,35 +33,35 @@ Database management for physics and experimental data — this course covers rel
 - **Keys:** primary keys, foreign keys, candidate keys
 
 - **Entity-Relationship (ER) modeling:**
-  - Entities (tables) and relationships
-  - Cardinality: 1:1, 1:N, M:N
-  - ER diagrams for physics data (e.g., experiment → measurements → parameters)
+ - Entities (tables) and relationships
+ - Cardinality: 1:1, 1:N, M:N
+ - ER diagrams for physics data (e.g., experiment → measurements → parameters)
 
 - **Normalization:**
-  - 1NF: atomic values
-  - 2NF: no partial dependencies
-  - 3NF: no transitive dependencies
-  - Normalization trade-offs: when to denormalize for performance
+ - 1NF: atomic values
+ - 2NF: no partial dependencies
+ - 3NF: no transitive dependencies
+ - Normalization trade-offs: when to denormalize for performance
 
 ### Unit 2: SQL (Weeks 6–10)
 
 - **DDL (Data Definition Language):**
-  ```sql
-  CREATE TABLE measurements (
-    id SERIAL PRIMARY KEY,
-    station TEXT NOT NULL,
-    timestamp TIMESTAMP NOT NULL,
-    x REAL,
-    y REAL,
-    z REAL,
-    quality REAL
-  );
-  ```
+ ```sql
+ CREATE TABLE measurements (
+ id SERIAL PRIMARY KEY,
+ station TEXT NOT NULL,
+ timestamp TIMESTAMP NOT NULL,
+ x REAL,
+ y REAL,
+ z REAL,
+ quality REAL
+ );
+ ```
 
 - **DML (Data Manipulation Language):**
-  ```sql
-  INSERT, SELECT, UPDATE, DELETE
-  ```
+ ```sql
+ INSERT, SELECT, UPDATE, DELETE
+ ```
 
 - **SELECT queries:** WHERE, JOIN (INNER, LEFT, RIGHT, FULL)
 
@@ -76,18 +76,18 @@ Database management for physics and experimental data — this course covers rel
 ### Unit 3: Database Design for Physics Data (Weeks 11–14)
 
 - **Design patterns for science data:**
-  - Station/time-series tables for GNSS observations
-  - Hierarchical structure: experiment → run → measurement
-  - File storage: binary large objects (BLOBs) vs. file system pointers
+ - Station/time-series tables for GNSS observations
+ - Hierarchical structure: experiment → run → measurement
+ - File storage: binary large objects (BLOBs) vs. file system pointers
 
 - **Spatial data** (PostGIS extension):
-  ```sql
-  CREATE TABLE stations (
-    id SERIAL PRIMARY KEY,
-    name TEXT,
-    location GEOMETRY(Point, 4326)
-  );
-  ```
+ ```sql
+ CREATE TABLE stations (
+ id SERIAL PRIMARY KEY,
+ name TEXT,
+ location GEOMETRY(Point, 4326)
+ );
+ ```
 
 - **Time series databases** vs. relational for time-tagged data
 

@@ -43,8 +43,8 @@ The physics of materials — exploring how atomic and electronic structure deter
 - **Phonon dispersion:** ω vs. k relation, acoustic vs. optical branches
 
 - **Phonon heat capacity:** Einstein vs. Debye models
-  - Debye model: C_v = 9Nk_B(T/θ_D)³ ∫₀^{θ_D/T} x⁴eˣ/(eˣ-1)² dx
-  - Low T limit: C_v ∝ T³
+ - Debye model: C_v = 9Nk_B(T/θ_D)³ ∫₀^{θ_D/T} x⁴eˣ/(eˣ-1)² dx
+ - Low T limit: C_v ∝ T³
 
 - **Thermal expansion** and lattice anharmonicity
 
@@ -61,9 +61,9 @@ The physics of materials — exploring how atomic and electronic structure deter
 - **Classification:** metals (no gap), semiconductors (small gap), insulators (large gap)
 
 - **Semiconductor physics:**
-  - Intrinsic: n = p = N_c exp(-E_g/2kT)
-  - Extrinsic (doped): n-type (donors), p-type (acceptors)
-  - Carrier mobility and conductivity: σ = nᵧqμ
+ - Intrinsic: n = p = N_c exp(-E_g/2kT)
+ - Extrinsic (doped): n-type (donors), p-type (acceptors)
+ - Carrier mobility and conductivity: σ = nᵧqμ
 
 - **Hall effect:** R_H = 1/(nq) — measuring carrier type and concentration
 
@@ -74,28 +74,28 @@ The physics of materials — exploring how atomic and electronic structure deter
 - **Ferroelectricity** and spontaneous polarization
 
 - **Magnetic materials:** dia-, para-, ferro-, antiferro-, ferrimagnetic
-  - Curie temperature: ferromagnetic → paramagnetic transition
+ - Curie temperature: ferromagnetic → paramagnetic transition
 
 - **Optical materials:** direct vs. indirect band gap, photodetectors, LEDs
 
 - **Material science for geodetic instruments:**
-  - Semiconductor-based sensors (accelerometers in IMUs)
-  - Piezoelectric sensors in gravimeters
-  - Optical materials in laser interferometers
-  - Temperature-stable materials for precision metrology
+ - Semiconductor-based sensors (accelerometers in IMUs)
+ - Piezoelectric sensors in gravimeters
+ - Optical materials in laser interferometers
+ - Temperature-stable materials for precision metrology
 
 ---
 
 ## 🔬 Key Concepts
 
 ```
-Bragg:              2d sin θ = nλ
+Bragg: 2d sin θ = nλ
 Debye heat capacity: C_v ∝ T³ (low T)
-Band gap:           E_g (eV) — material classification
-Hall effect:        R_H = 1/nq
-Conductivity:       σ = nqμ
-Doping:             n-type (group V), p-type (group III)
-Resistivity:        ρ(T) = ρ₀ + aT + bT²
+Band gap: E_g (eV) — material classification
+Hall effect: R_H = 1/nq
+Conductivity: σ = nqμ
+Doping: n-type (group V), p-type (group III)
+Resistivity: ρ(T) = ρ₀ + aT + bT²
 ```
 
 ---

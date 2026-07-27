@@ -148,7 +148,7 @@ Goal: Develop skills in mathematical modeling, simulation, and optimization.
 | Pemikiran Sistem (2) | Perancangan sistem, machine learning, autonomous system | [[SystemsThinking]] · [[AutonomousSystems]] |
 
 ---
-Next:  · Back: [[Semester 4]] · Back: [[Mathematics_Curriculum_Guide]]
+Next: · Back: [[Semester 4]] · Back: [[Mathematics_Curriculum_Guide]]
 
 ## Semester 6 — Rekayasa Perangkat Lunak Dan Komunikasi
 

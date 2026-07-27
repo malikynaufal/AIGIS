@@ -5,9 +5,9 @@ This study plan is designed to help you navigate the Geodesy Engineering curricu
 
 ## How to Use This Vault
 1. **Semester Folders**: Each semester (Semester 1 through Semester 8) contains:
-   - A `README.md` with semester overview and course list
-   - Individual course notes files (named `KODE - Nama Mata Kuliah.md`)
-   - Use these files to take lecture notes, summarize concepts, and store assignments
+ - A `README.md` with semester overview and course list
+ - Individual course notes files (named `KODE - Nama Mata Kuliah.md`)
+ - Use these files to take lecture notes, summarize concepts, and store assignments
 
 2. **Electives Folder**: The `Pilihan` folder contains all elective courses. Choose based on your interests and career goals.
 
@@ -34,8 +34,8 @@ This study plan is designed to help you navigate the Geodesy Engineering curricu
 2. **Weekly Review**: Spend 30 minutes each Sunday reviewing notes from the week and linking related concepts.
 3. **Monthly Synthesis**: At the end of each month, create a summary note in the Concepts folder linking ideas across courses.
 4. **Exam Preparation**: 
-   - Two weeks before exams: Review notes and create flashcards for key concepts.
-   - One week before: Do practice problems and past exams.
+ - Two weeks before exams: Review notes and create flashcards for key concepts.
+ - One week before: Do practice problems and past exams.
 
 ### Active Learning Techniques
 

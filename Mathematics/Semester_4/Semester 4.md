@@ -1,63 +1,88 @@
 ---
-tags: [math, curriculum, semester, aigis]
-aliases: [Semester 4, Sem 4]
-created: 2026-07-12
+title: Semester 4 Overview
+type: semester-overview
+semester: 4
+tags: [mathematics, semester-4, curriculum]
+created: 2026-07-27
 ---
 
-# 📘 Semester 4 - Mathematics
+# Semester 4 — Computational Methods
 
-## Courses
+> *"Computation is the new mathematics."* — Part of [[Mathematics MOC]]
+> Building on the foundations of calculus and linear algebra, Semester 4 develops computational tools essential for geodesy, data analysis, and machine learning.
 
-| Course | SKS | Topics |
-|--------|-----|--------|
-| Metoda Numerik Lanjutan (Advanced) | 3 | False position, Newton-Raphson, least squares |
-| Algoritma Jaringan | 2 | Sorting, searching, graph algorithms |
-| Statistika Data Science | 3 | Data mining, predictive modeling |
-| Desain Sistem Informatika | 3 | System design, data structures |
-| Teori Game dan Negosiasi | 2 | Nash equilibrium, game theory |
+## 📚 Course List
 
-## Resources
+| Code | Course | SKS | Core Concepts |
+|------|--------|-----|---------------|
+| MGM211401 | [[Kalkulus Numerik]] (Numerical Methods) | 3 | Root-finding, interpolation, numerical integration |
+| MGM211402 | [[Statistika Matematika]] (Math Statistics) | 3 | Estimation, hypothesis testing, Bayesian inference |
+| MGM211403 | [[Aljabar Abstrak]] (Abstract Algebra) | 3 | Groups, rings, fields, Galois theory |
+| MGM211404 | [[Analisis Kompleks]] (Complex Analysis) | 3 | Analytic functions, residues, conformal mappings |
+| MGM211405 | Pemrograman Web (Web Programming) | 3 | HTML, CSS, JavaScript |
+| MGM211406 | Rekayasa Perangkat Lunak (Software Engineering) | 3 | SDLC, testing, documentation |
 
-### Textbooks
+**Total SKS: 18**
 
-- Chapra & Canale. Numerical Methods for Engineers
+## 🗺️ Concept Map
 
-- Sedgewick & Wayne. Algorithms
+```mermaid
+flowchart TD
+    Numerical[Numerical Methods] --> Root[Root Finding]
+    Numerical --> Interp[Interpolation]
+    Numerical --> Integrat[Numerical Integration]
+    Numerical --> LinAlg[Numerical Linear Algebra]
+    StatMath[Statistical Methods] --> Est[Estimation Theory]
+    StatMath --> HypTest[Hypothesis Testing]
+    StatMath --> Bayes[Bayesian Inference]
+    AbsAlg[Abstract Algebra] --> Groups[Group Theory]
+    AbsAlg --> Ring[Ring Theory]
+    AbsAlg --> Finite[Finite Fields]
+    CompAnal[Complex Analysis] --> Res[Residue Theory]
+    CompAnal --> Conf[Conformal Mapping]
+    
+    Root --> |Newton-Raphson| LeastSquares[Least Squares [[Least Squares Adjustment]]]
+    LinAlg --> |Eigenvalues| AbsAlg
+    HypTest --> |Confidence Intervals| GNSS[GNSS Positioning]
+    Conf --> |Fluid Flow| Geodesy[Geodesy [[Geodesy MOC]]]
+```
 
-- Hastie, Tibshirani. Introduction to Machine Learning
+## 🎯 Learning Outcomes
 
-- Rajan. System Design and Data Structures
+By the end of this semester, you should be able to:
 
-## Key Concepts
+1. **Numerical Methods:** Implement root-finding, interpolation, and numerical integration algorithms
+2. **Statistical Inference:** Derive MLE, construct confidence intervals, perform hypothesis tests
+3. **Abstract Algebra:** Work with groups, rings, and finite fields; apply Galois theory
+4. **Complex Analysis:** Evaluate complex integrals using residues; find conformal mappings
 
-- [[Bisection Method]]
+## 📐 Key Connections to Geodesy
 
-- [[NewtonMethod]]
+| Course | Geodesy Application |
+|--------|-------------------|
+| Numerical Methods | Solving nonlinear least-squares adjustment |
+| Statistical Inference | Error ellipses, network quality analysis |
+| Abstract Algebra | Cryptographic protocols for GNSS |
+| Complex Analysis | Potential theory, geoid modeling |
 
-- [[Least Squares Adjustment]]
+## 📚 Required Reading
 
-- [[Algorithms]]
+- Burden & Faires, *Numerical Analysis* (MGM211401)
+- Casella & Berger, *Statistical Inference* (MGM211402)
+- Dummit & Foote, *Abstract Algebra* (MGM211403)
+- Ahlfors, *Complex Analysis* (MGM211404)
 
-- [[Algorithms]]
+## ⏰ Study Rhythm
 
-- [[Algorithms]]
+| Day | Focus | Duration |
+|-----|-------|----------|
+| Mon | Numerical Methods — new topic | 2 hrs |
+| Tue | Statistical Methods — new topic | 2 hrs |
+| Wed | Abstract Algebra — new topic | 2 hrs |
+| Thu | Complex Analysis — new topic | 2 hrs |
+| Fri | Problem sets (all 4 courses) | 3 hrs |
+| Sat | Review + cross-course connections | 2 hrs |
+| Sun | Rest + light preview | 1 hr |
 
-- [[DataMining]]
-
-- [[PredictiveModeling]]
-
-- [[SystemsAnalysis]]
-
-- [[SystemDesign]]
-
-- [[GameTheory]]
-
-- [[NashEquilibrium]]
-
-## Next
-
-[[Semester 5]] · [[Mathematics_Curriculum_Guide]]
-
-## Back
-
-[[Semester 3]] · [[Mathematics MOC]]
+---
+*See also: [[Mathematics MOC]], [[Study Plan]], [[Semester 3/Semester 3]], [[Semester 5/Semester 5]]*

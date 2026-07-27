@@ -17,18 +17,26 @@ updated: 2026-07-27
 ### Structure of the Ionosphere
 | Layer | Altitude (km) | Max $N_e$(m⁻³) | Ionizing Source |
 |-------|---------------|------------------|-----------------|
-| D | 60–90 |$10^8$–$10^{10}$| X-ray absorption |
-| E | 90–150 |$10^{11}$| EUV, particle precipitation |
-| F₁ | 150–200 |$10^{11}$–$10^{12}$| EUV |
-| F₂ | 200–400 |$5\times 10^{11}$–$2\times 10^{12}$| EUV (dominant F layer) |
+| D | 60–90 | $10^8$–$10^{10} $ | X-ray absorption |
+| E | 90–150 | $10^{11} $ | EUV, particle precipitation |
+| F₁ | 150–200 | $10^{11} $–$10^{12} $ | EUV |
+| F₂ | 200–400 | $5\times 10^{11} $–$2\times 10^{12} $ | EUV (dominant F layer) |
 
-### Plasma Frequency (Critical Frequency)$$f_p = \frac{1}{2\pi}\sqrt{\frac{N_e e^2}{m_e \epsilon_0}} = 9\sqrt{N_e} \text{ Hz}$$where$N_e$is electron density in m⁻³.
+### Plasma Frequency (Critical Frequency
+)
 
-- At$N_e = 10^{12}$m⁻³:$f_p \approx 9$MHz
+$$f_p = \frac{1}{2\pi}\sqrt{\frac{N_e e^2}{m_e \epsilon_0}} = 9\sqrt{N_e} \text{ Hz} $$where $N_e $is electron density in m⁻³.
+
+- At $N_e = 10^{12} $m⁻³:$f_p \approx 9 $MHz
 
 - GNSS signals (L-band) at ~1.5 GHz pass through without reflection, but are delayed.
 
-### Key Parameter: Total Electron Content (TEC)$$\text{TEC} = \int_{\text{path}} N_e(s) \, ds \quad [\text{electrons/m}^2]$$- 1 TECU =$10^{16}$electrons/m²
+### Key Parameter: Total Electron Content (TEC
+)
+
+$$\text{TEC} = \int_{\text{path}} N_e(s) \, ds \quad [\text{electrons/m}^2]$$
+
+- 1 TECU =$10^{16} $electrons/m²
 
 - Typical values: 1–300 TECU (depends on solar cycle, latitude, local time)
 
@@ -38,13 +46,29 @@ updated: 2026-07-27
 
 Starting from the equation of motion for electrons in the ionosphere (ignoring collisions, ion motion):
 
-**Electron equation of motion:**$$m_e \frac{d\vec{v}}{dt} = -e\vec{E} - e\vec{v}\times\vec{B}$$**Applying Maxwell's equations:**$$\nabla\times\vec{E} = -\frac{\partial\vec{B}}{\partial t}, \quad \nabla\times\vec{B} = \mu_0\epsilon_0\frac{\partial\vec{E}}{\partial t} + \mu_0\vec{J}$$**Resulting dispersion relation (Appleton-Hartree):**$$n^2 = 1 - \frac{X}{1 - \frac{Y_T}{2} \pm \sqrt{Y_T^2/4 + X^2}}$$where:
--$X = \left(\frac{f_p}{f}\right)^2 = \frac{\omega_p^2}{\omega^2} = \frac{N_e e^2}{m_e \epsilon_0 \omega^2}$-$Y = \frac{f_c}{f} = \frac{eB_0}{m_e \omega}$-$f_c$= cyclotron frequency ≈ 1.4 MHz at Earth's surface (varies with$B$)
+**Electron equation of motion:*
+*
+
+$$m_e \frac{d\vec{v}}{dt} = -e\vec{E} - e\vec{v}\times\vec{B} $$
+
+**Applying Maxwell's equations:*
+*
+
+$$\nabla\times\vec{E} = -\frac{\partial\vec{B}}{\partial t}, \quad \nabla\times\vec{B} = \mu_0\epsilon_0\frac{\partial\vec{E}}{\partial t} + \mu_0\vec{J} $$
+
+**Resulting dispersion relation (Appleton-Hartree):*
+*
+
+$$n^2 = 1 - \frac{X}{1 - \frac{Y_T}{2} \pm \sqrt{Y_T^2/4 + X^2}} $$
+
+where:
+-$X = \left(\frac{f_p}{f}\right)^2 = \frac{\omega_p^2}{\omega^2} = \frac{N_e e^2}{m_e \epsilon_0 \omega^2} $-$Y = \frac{f_c}{f} = \frac{eB_0}{m_e \omega} $-$f_c$= cyclotron frequency ≈ 1.4 MHz at Earth's surface (varies with $B$)
 
 - $+$for R-wave (right-hand),$-$for L-wave (left-hand)
 
-### Limiting Case:$B = 0$(No Magnetic Field)$$n^2 = 1 - \frac{f_p^2}{f^2}
-$$
+### Limiting Case:$B = 0$(No Magnetic Field)
+
+$$n^2 = 1 - \frac{f_p^2}{f^2} $$
 
 This is the **cold plasma approximation** used for first-order GNSS calculations.
 
@@ -53,17 +77,22 @@ This is the **cold plasma approximation** used for first-order GNSS calculations
 ## 3. Refractive Index and Phase/Group Velocity
 
 ### First-Order Refractive Index ($B=0$)
-$$
 
-n = \sqrt{1 - \frac{f_p^2}{f^2}} \approx 1 - \frac{f_p^2}{2f^2} \quad \text{(for } f \gg f_p\text{)}$$### Phase Velocity vs Group Velocity$$v_p = \frac{c}{n} > c \quad \text{(phase leads — superluminal)}
-$$
+$$n = \sqrt{1 - \frac{f_p^2}{f^2}} \approx 1 - \frac{f_p^2}{2f^2} \quad \text{(for } f \gg f_p\text{)
+}
 
-$$
-v_g = c \cdot n < c \quad \text{(group — signals travel at this speed)}$$**Inverse relationship:**$$v_p \cdot v_g = c^2$$### Why Code Is Delayed But Phase Is Advanced
+$$### Phase Velocity vs Group Velocity$$
 
-- The **carrier phase** propagates at$v_p = c/n$; since $n < 1$, the phase front moves faster than $c$→ carrier phase is **advanced** relative to vacuum.
+v_p = \frac{c}{n} > c \quad \text{(phase leads — superluminal)}v_g = c \cdot n < c \quad \text{(group — signals travel at this speed)
+}
 
-- The **modulation/code** travels at$v_g = cn$; since $n < 1$, code information lags → code pseudorange is **delayed** relative to vacuum.
+$$**Inverse relationship:**$$
+
+v_p \cdot v_g = c^2$$### Why Code Is Delayed But Phase Is Advanced
+
+- The **carrier phase** propagates at $v_p = c/n$; since $n < 1$, the phase front moves faster than $c$→ carrier phase is **advanced** relative to vacuum.
+
+- The **modulation/code** travels at $v_g = cn$; since $n < 1$, code information lags → code pseudorange is **delayed** relative to vacuum.
 
 - Both effects stem from the same plasma, but one gives "advance" and the other "delay."
 
@@ -73,16 +102,25 @@ v_g = c \cdot n < c \quad \text{(group — signals travel at this speed)}$$**Inv
 
 ### Code (Pseudorange) Delay
 The first-order ionospheric range delay:
-$$
 
-\Delta_{\text{ion}} = \frac{40.3}{f^2} \cdot \text{TEC} \quad [\text{meters}]$$where:
+$$\Delta_{\text{ion}} = \frac{40.3}{f^2} \cdot \text{TEC} \quad [\text{meters}]$$where:
 -$f$= signal frequency in Hz
 
-- TEC = Total Electron Content along slant path, in electrons/m² (divide by$10^{16}$to get TECU, then multiply by$40.3 \times 10^{16}$TECU⁻¹ m³/s²)
+- TEC = Total Electron Content along slant path, in electrons/m² (divide by$10^{16} $to get TECU, then multiply by$40.3 \times 10^{16} $TECU⁻¹ m³/s²)
 
 **Detailed derivation:**
 
-The excess phase path is:$$\Delta\phi = \omega\left(\frac{1}{v_g} - \frac{1}{c}\right) \cdot \text{path} = -\omega(1-n) \int \frac{ds}{c}$$Converting to range:$$I = -\lambda \frac{\Delta\phi}{2\pi} = \frac{40.3}{f^2} \int N_e \, ds = \frac{40.3}{f^2}\text{TEC}$$### Delay Per TECU at GNSS Frequencies
+The excess phase path is
+:
+
+$$\Delta\phi = \omega\left(\frac{1}{v_g} - \frac{1}{c}\right) \cdot \text{path} = -\omega(1-n) \int \frac{ds}{c} $$
+
+Converting to range
+:
+
+$$I = -\lambda \frac{\Delta\phi}{2\pi} = \frac{40.3}{f^2} \int N_e \, ds = \frac{40.3}{f^2}\text{TEC} $$
+
+### Delay Per TECU at GNSS Frequencies
 
 | Frequency | Band | Wavelength | Delay per TECU |
 |-----------|------|------------|----------------|
@@ -94,9 +132,8 @@ The excess phase path is:$$\Delta\phi = \omega\left(\frac{1}{v_g} - \frac{1}{c}\
 
 ### Frequency Dependence
 The delay scales as$1/f^2$:
-$$
 
-\frac{I_{\text{L1}}}{I_{\text{L2}}} = \left(\frac{f_2}{f_1}\right)^2 \approx \left(\frac{1228}{1575}\right)^2 \approx 0.606$$This means L1 delay is ~1.65× the L2 delay for the same TEC.
+$$\frac{I_{\text{L1}}}{I_{\text{L2}}} = \left(\frac{f_2}{f_1}\right)^2 \approx \left(\frac{1228}{1575}\right)^2 \approx 0.606$$This means L1 delay is ~1.65× the L2 delay for the same TEC.
 
 ---
 
@@ -104,7 +141,17 @@ $$
 
 Using two frequencies, the ionospheric delay cancels:
 
-### Code Combination$$P_{\text{IF}} = \frac{f_1^2 P_1 - f_2^2 P_2}{f_1^2 - f_2^2}$$### Phase Combination$$\phi_{\text{IF}} = \frac{f_1^2 \phi_1 - f_2^2 \phi_2}{f_1^2 - f_2^2}$$### Residual Error
+### Code Combinatio
+n
+
+$$P_{\text{IF}} = \frac{f_1^2 P_1 - f_2^2 P_2}{f_1^2 - f_2^2} $$
+
+### Phase Combinatio
+n
+
+$$\phi_{\text{IF}} = \frac{f_1^2 \phi_1 - f_2^2 \phi_2}{f_1^2 - f_2^2} $$
+
+### Residual Error
 
 - Higher-order terms: ~1–2% of TEC
 
@@ -113,21 +160,34 @@ Using two frequencies, the ionospheric delay cancels:
 - Typical residual: **0.5–1 cm** for dual-frequency processing (after first-order removal)
 
 ### Derivation of TEC from Dual-Frequency Observations
-From code measurements at L1 and L2:$$P_1 = \rho + \frac{40.3}{f_1^2}\text{TEC} + \varepsilon_1, \quad P_2 = \rho + \frac{40.3}{f_2^2}\text{TEC} + \varepsilon_2$$Taking the combination:$$P_2 - P_1 = 40.3 \cdot \text{TEC}\cdot\frac{f_1^2 - f_2^2}{f_1^2 f_2^2}
-$$
+From code measurements at L1 and L2
+:
 
-$$
-\text{TEC} = \frac{f_1^2 f_2^2}{40.3(f_1^2 - f_2^2)}(P_2 - P_1)$$Or in normalized form:$$\text{TEC} = \frac{\lambda_1^2\lambda_2^2}{40.3\times 4\pi^2}(\phi_1 - \phi_2) \quad \text{(from phase, noisier)}$$---
+$$P_1 = \rho + \frac{40.3}{f_1^2}\text{TEC} + \varepsilon_1, \quad P_2 = \rho + \frac{40.3}{f_2^2}\text{TEC} + \varepsilon_
+2
+
+$$Taking the combination:$$
+
+P_2 - P_1 = 40.3 \cdot \text{TEC}\cdot\frac{f_1^2 - f_2^2}{f_1^2 f_2^2}\text{TEC} = \frac{f_1^2 f_2^2}{40.3(f_1^2 - f_2^2)}(P_2 - P_1
+)
+
+$$Or in normalized form:$$
+
+\text{TEC} = \frac{\lambda_1^2\lambda_2^2}{40.3\times 4\pi^2}(\phi_1 - \phi_2) \quad \text{(from phase, noisier)} $$---
 
 ## 6. Higher-Order Ionospheric Effects
 
-### Magnetic Field:$f_p$vs$f_c$
-When the Earth's magnetic field ($B_0 \approx 50 \,\mu$T) is included:
-$$
+### Magnetic Field:$f_p $vs $f_c$
+When the Earth's magnetic field ($B_0 \approx 50 \,\mu $T) is included:
 
-n_{\pm}^2 = 1 - X \pm \frac{XY}{2}$$where$Y = f_c/f$. The $+$and$-$correspond to left- and right-hand circular polarization. The difference between the two polarizations is the **Faraday rotation**.
+$$n_{\pm}^2 = 1 - X \pm \frac{XY}{2} $$where $Y = f_c/f$. The$+$and$-$correspond to left- and right-hand circular polarization. The difference between the two polarizations is the **Faraday rotation**.
 
-### Second-Order Correction (Geomagnetic)$$\Delta_{\text{ion}}^{(2)} \approx -\frac{7527}{f^3} \int N_e B_{\parallel} \, ds$$**Magnitude (GPS L1):**
+### Second-Order Correction (Geomagnetic
+)
+
+$$\Delta_{\text{ion}}^{(2)} \approx -\frac{7527}{f^3} \int N_e B_{\parallel} \, ds$$
+
+**Magnitude (GPS L1):**
 
 - Mid-latitudes: 1–2 cm RMS
 
@@ -135,10 +195,16 @@ n_{\pm}^2 = 1 - X \pm \frac{XY}{2}$$where$Y = f_c/f$. The $+$and$-$correspond to
 
 - Nighttime: negligible
 
-### Third-Order$$\Delta_{\text{ion}}^{(3)} \propto \frac{1}{f^4}$$Negligible (<1 mm for all GNSS applications).
+### Third-Orde
+r
 
-### Faraday Rotation$$\Omega_F = \frac{e^3}{2\epsilon_0 m_e^2 c^2}\int N_e B_{\parallel} \frac{ds}{f^2}
-$$
+$$\Delta_{\text{ion}}^{(3)} \propto \frac{1}{f^4} $$
+
+Negligible (<1 mm for all GNSS applications).
+
+### Faraday Rotation
+
+$$\Omega_F = \frac{e^3}{2\epsilon_0 m_e^2 c^2}\int N_e B_{\parallel} \frac{ds}{f^2} $$
 
 - Significant for L-band at low elevation angles
 
@@ -181,11 +247,12 @@ The signal path is not straight in a refracting medium. Lateral gradient of TEC 
 
 - Covers 100–2000 km altitude
 
-- Inputs: latitude, longitude, day-of-year, UT, solar activity ($F_{10.7}$)
+- Inputs: latitude, longitude, day-of-year, UT, solar activity ($F_{10.7} $)
 
-- Outputs: $N_e(h)$profile, TEC,$f_oF2$, $M(3000)F2$, foF2 etc.
+- Outputs: $N_e(h) $profile, TEC,$f_oF2$, $M(3000)F2$, foF2 etc.
 
 **International Reference Ionosphere Model (IRI)**
+
 $$N_e(h) = \sum_i A_i(h) \exp\left[ -\frac{(h-h_{mi})^2}{2\Delta h_i^2}\right]$$
 
 Peaks at D, E, and F layer altitudes.
@@ -294,13 +361,13 @@ Rapid fluctuations in signal amplitude and phase caused by small-scale irregular
 
 | Formula | Description |
 |---------|-------------|
-| $\Delta_{\text{ion}} = \frac{40.3}{f^2}\text{TEC}$| First-order delay (code) |
-|$n^2 = 1 - \frac{f_p^2}{f^2}$| Cold plasma refractive index |
-|$v_g = cn$, $v_p = c/n$| Group and phase velocities |
-|$P_{\text{IF}} = \frac{f_1^2 P_1 - f_2^2 P_2}{f_1^2 - f_2^2}$| Iono-free code combination |
-|$\text{TEC} = \frac{f_1^2 f_2^2}{40.3(f_1^2 - f_2^2)}(P_2 - P_1)$| TEC from dual-frequency |
-|$\Delta_{\text{ion}}^{(2)} \propto \frac{1}{f^3}\int N_e B_\parallel\,ds$| Second-order (geomagnetic) |
-|$\Omega_F \propto \frac{1}{f^2}\int N_e B_\parallel\,ds$| Faraday rotation |
+| $\Delta_{\text{ion}} = \frac{40.3}{f^2}\text{TEC} $ | First-order delay (code) |
+| $n^2 = 1 - \frac{f_p^2}{f^2} $ | Cold plasma refractive index |
+| $v_g = cn$, $v_p = c/n$ | Group and phase velocities |
+| $P_{\text{IF}} = \frac{f_1^2 P_1 - f_2^2 P_2}{f_1^2 - f_2^2} $ | Iono-free code combination |
+| $\text{TEC} = \frac{f_1^2 f_2^2}{40.3(f_1^2 - f_2^2)}(P_2 - P_1)$ | TEC from dual-frequency |
+| $\Delta_{\text{ion}}^{(2)} \propto \frac{1}{f^3}\int N_e B_\parallel\,ds$ | Second-order (geomagnetic) |
+| $\Omega_F \propto \frac{1}{f^2}\int N_e B_\parallel\,ds$ | Faraday rotation |
 
 ---
 
@@ -318,10 +385,10 @@ Rapid fluctuations in signal amplitude and phase caused by small-scale irregular
 
 ## Problems
 1. Compute the first-order ionospheric delay at L1 for TEC = 100 TECU at the equator.
-2. Derive the ionosphere-free combination from$P_1$, $P_2$, $f_1$, $f_2$(first principles).
-3. Calculate TEC from$P_1 = 21,500,000$m,$P_2 = 21,503,000$m at L1/L2.
+2. Derive the ionosphere-free combination from $P_1$, $P_2$, $f_1$, $f_2$(first principles).
+3. Calculate TEC from $P_1 = 21,500,000 $m,$P_2 = 21,503,000 $m at L1/L2.
 4. Explain why phase advances while code is delayed — trace the physics from plasma frequency.
-5. Estimate the second-order correction for L1 at mid-latitudes (assume$B_\parallel = 40 \,\mu$T, $N_e = 10^{12}$ m⁻³, path 350 km).
+5. Estimate the second-order correction for L1 at mid-latitudes (assume $B_\parallel = 40 \,\mu $T, $N_e = 10^{12} $ m⁻³, path 350 km).
 6. Compare Klobuchar vs. IGS GIM performance: explain the 50% removal limitation of Klobuchar.
 7. Describe the physical origin of equatorial scintillation and its impact on PPP convergence.
 

@@ -74,19 +74,19 @@ Two types under **PP 24/1997**:
 
 ```
 1. Permohonan Pendaftaran (Application for Registration)
-   ↓
+ ↓
 2. Pemeriksaan Berkas (Document Review)
-   ↓
+ ↓
 3. Pemeriksaan Tanah (Land Examination)
-   - Survei Pengukuran (Boundary Survey)
-   - Pemeriksaan Hukum (Legal Examination)
-   ↓
+ - Survei Pengukuran (Boundary Survey)
+ - Pemeriksaan Hukum (Legal Examination)
+ ↓
 4. Penetapan Batas (Boundary Determination)
-   ↓
+ ↓
 5. Pembuatan Peta Survei (Map Production)
-   ↓
+ ↓
 6. Penyelesaian Peralihan (Resolution of Disputes)
-   ↓
+ ↓
 7. Penerbitan Sertipikat (Certificate Issuance)
 ```
 
@@ -118,7 +118,8 @@ A cadastral survey is the process of identifying and mapping land boundaries for
 ### 4.3 Area Calculation Methods
 
 - **Koordinat (Trapezoidal Rule):**
-$$A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i y_{i+1} - x_{i+1} y_i) \right|$$
+
+$$A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i y_{i+1} - x_{i+1} y_i) \right| $$
 
 - **Measured Distances:** Using traverse or intersection methods
 
@@ -175,11 +176,11 @@ PPAT operates within one administrative district (*kabupaten/kota*) or one sub-d
 
 ```
 Kementerian Agraria dan Tata Ruang / BPN (National)
-  ↓
+ ↓
 Kantor Pertanahan Provinsi (Provincial)
-  ↓
+ ↓
 Kantor Pertanahan Kabupaten/Kota (District/City)
-  ↓
+ ↓
 Kantor Pertanahan Kecamatan (Sub-district)
 ```
 

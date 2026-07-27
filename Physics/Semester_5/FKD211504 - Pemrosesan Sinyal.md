@@ -39,21 +39,21 @@ Signal processing is the art of extracting information from measurements. This c
 ### Unit 2: Fourier Analysis (Weeks 5–9)
 
 - **Fourier series:** represent periodic signals as sum of sines/cosines
-  ```
-  x(t) = a₀/2 + Σ_{n=1}∞ [a_n cos(nω₀t) + b_n sin(nω₀t)]
-  ```
-  - Coefficients from orthogonality of trigonometric functions
+ ```
+ x(t) = a₀/2 + Σ_{n=1}∞ [a_n cos(nω₀t) + b_n sin(nω₀t)]
+ ```
+ - Coefficients from orthogonality of trigonometric functions
 
 - **Fourier transform (FT):**
-  ```
-  X(ω) = ∫_{-∞}^{∞} x(t) e^{-iωt} dt
-  x(t) = (1/2π) ∫_{-∞}^{∞} X(ω) e^{iωt} dω
-  ```
+ ```
+ X(ω) = ∫_{-∞}^{∞} x(t) e^{-iωt} dt
+ x(t) = (1/2π) ∫_{-∞}^{∞} X(ω) e^{iωt} dω
+ ```
 
 - **Key Fourier transform pairs:**
-  - δ(t) ↔ 1 (impulse contains all frequencies)
-  - rect(t) ↔ sinc(ω/2) — rectangular ↔ sinc function
-  - e^{-at}u(t) ↔ 1/(a + iω) (exponential decay)
+ - δ(t) ↔ 1 (impulse contains all frequencies)
+ - rect(t) ↔ sinc(ω/2) — rectangular ↔ sinc function
+ - e^{-at}u(t) ↔ 1/(a + iω) (exponential decay)
 
 - **Properties:** linearity, time shift (= phase shift), frequency shift, scaling, duality
 
@@ -62,13 +62,13 @@ Signal processing is the art of extracting information from measurements. This c
 ### Unit 3: Sampling and Discrete-Time Processing (Weeks 10–13)
 
 - **Sampling theorem (Nyquist-Shannon):** need f_s > 2f_max
-  - **Nyquist rate:** f_N = 2f_max
-  - Aliasing: if undersampled, high frequencies masquerade as low
+ - **Nyquist rate:** f_N = 2f_max
+ - Aliasing: if undersampled, high frequencies masquerade as low
 
 - **Discrete-time Fourier transform (DTFT):** X(Ω) = Σ x[n] e^{-iΩn}
 
 - **Discrete Fourier transform (DFT):** for finite-length sequences
-  - X[k] = Σ_{n=0}^{N-1} x[n] e^{-i2πkn/N}, k = 0,...,N-1
+ - X[k] = Σ_{n=0}^{N-1} x[n] e^{-i2πkn/N}, k = 0,...,N-1
 
 - **Fast Fourier Transform (FFT):** O(N log N) algorithm vs. O(N²) for DFT
 
@@ -77,32 +77,32 @@ Signal processing is the art of extracting information from measurements. This c
 ### Unit 4: Filtering and Applications (Weeks 14–16)
 
 - **Filter types:**
-  - Low-pass, high-pass, band-pass, band-stop
-  - **Butterworth filters:** maximally flat passband
-  - Chebyshev and elliptic filters (steeper roll-off, ripple in passband)
+ - Low-pass, high-pass, band-pass, band-stop
+ - **Butterworth filters:** maximally flat passband
+ - Chebyshev and elliptic filters (steeper roll-off, ripple in passband)
 
 - **Digital filter design:**
-  - FIR (finite impulse response): always stable, linear phase
-  - IIR (infinite impulse response): more efficient, can be unstable
+ - FIR (finite impulse response): always stable, linear phase
+ - IIR (infinite impulse response): more efficient, can be unstable
 
 - **Measurement noise:** distinguishing signal from noise
-  - Signal-to-noise ratio (SNR) and filtering trade-offs
+ - Signal-to-noise ratio (SNR) and filtering trade-offs
 
 - **Applications in physics:**
-  - GNSS signal processing: correlation, acquisition, tracking
-  - Seismic data filtering
-  - Instrument response correction
-  - Time series smoothing and prediction
+ - GNSS signal processing: correlation, acquisition, tracking
+ - Seismic data filtering
+ - Instrument response correction
+ - Time series smoothing and prediction
 
 ---
 
 ## 🔬 Key Operations
 
 ```
-Convolution:        y(t) = x(t) * h(t) = ∫x(τ)h(t-τ)dτ
-Fourier:            X(ω) = ∫x(t)e^{-iωt}dt
-Nyquist:            f_s ≥ 2f_max
-DFT:                X[k] = Σ x[n]e^{-i2πkn/N}
+Convolution: y(t) = x(t) * h(t) = ∫x(τ)h(t-τ)dτ
+Fourier: X(ω) = ∫x(t)e^{-iωt}dt
+Nyquist: f_s ≥ 2f_max
+DFT: X[k] = Σ x[n]e^{-i2πkn/N}
 Real convolution in time = multiplication in frequency
 Real multiplication in time = convolution in frequency
 ```

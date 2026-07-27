@@ -25,7 +25,7 @@ IGS Website: https://igs.org/
 | Product | Description | Link |
 |---------|-------------|------|
 | **ITRF2020 coordinates + velocities** | 1800+ station positions | https://itrf.ign.fr/en/solutions/ |
-| **EOP (Earth Orientation Parameters)** | $x_p, y_p, UT1-UTC, LOD | https://datacenter.iers.org/ |
+| **EOP (Earth Orientation Parameters)** | $x_p, y_p, UT1-UTC, LOD | https://datacenter.iers.org/ |$
 | **IERS Conventions 2010** | Tidal models, atmosphere models | https://www.iers.org/ |
 | **IGS realizations** | Annual solution SINEX | https://itrf.ign.fr/ |
 

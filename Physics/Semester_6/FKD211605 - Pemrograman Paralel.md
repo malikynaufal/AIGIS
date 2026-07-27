@@ -27,33 +27,34 @@ High-performance computing for physics — parallel algorithms and architectures
 - **Why parallel computing?** Amdahl's law, GPU revolution, big data in physics
 
 - **Parallel architectures:**
-  - Shared memory (multi-core CPU)
-  - Distributed memory (cluster computing)
-  - **GPU computing:** many simple cores for data parallelism
+ - Shared memory (multi-core CPU)
+ - Distributed memory (cluster computing)
+ - **GPU computing:** many simple cores for data parallelism
 
 - **Concurrency vs. parallelism:** threads, processes, tasks
 
 - **Python parallelism:**
-  - `multiprocessing` module (separate processes)
-  - `threading` (limited by GIL — Global Interpreter Lock)
-  - `concurrent.futures` for task parallelism
+ - `multiprocessing` module (separate processes)
+ - `threading` (limited by GIL — Global Interpreter Lock)
+ - `concurrent.futures` for task parallelism
 
 - **Performance metrics:** speedup, efficiency, scalability
-  ```
-  Speedup = T_serial / T_parallel
-  Efficiency = Speedup / N_processors
-  Amdahl's law: Speedup_max = 1 / ((1-p) + p/N)
-  ```
+
+$$\text{Speedup} = \frac{T_{\text{serial}}}{T_{\text{parallel}}}$$
+
+$$\text{Efficiency} = \frac{\text{Speedup}}{N_{\text{processors}}}$$
+
+$$\text{Amdahl's law: } \text{Speedup}_{\max} = \frac{1}{(1 - p) + \frac{p}{N}}$$
 
 ### Unit 2: Shared-Memory Parallelism (Weeks 5–9)
 
 - **OpenMP:** compiler directives for loop parallelization
-  ```c
-  #pragma omp parallel for reduction(+:sum)
-  for (int i = 0; i < N; i++) {
-      sum += a[i] * b[i];
-  }
-  ```
+ ```c
+ #pragma omp parallel for reduction(+:sum)
+ for (int i = 0; i < N; i++) {
+ sum += a[i] * b[i];
+ }
+ ```
 
 - **Critical sections** and race conditions
 
@@ -62,52 +63,52 @@ High-performance computing for physics — parallel algorithms and architectures
 - **NumPy vectorization** — Python's "implicit parallelism"
 
 - **Scientific Python parallelism:**
-  - `joblib` for embarrassingly parallel loops
-  - `dask` for larger-than-memory computation
-  - `scipy` for optimized BLAS/LAPACK routines (multi-threaded by default)
+ - `joblib` for embarrassingly parallel loops
+ - `dask` for larger-than-memory computation
+ - `scipy` for optimized BLAS/LAPACK routines (multi-threaded by default)
 
 ### Unit 3: GPU Computing with CUDA (Weeks 10–13)
 
 - **GPU architecture:** SMs, threads, warps, memory hierarchy
 
 - **CUDA programming model:**
-  ```python
-  from numba import cuda
-  @cuda.jit
-  def vec_add(a, b, c, N):
-      i = cuda.grid(1)
-      if i < N:
-          c[i] = a[i] + b[i]
-  
-  threadsperblock = 256
-  blockspergrid = (N + 255) // 256
-  vec_add[blockspergrid, threadsperblock](a, b, c, N)
-  ```
+ ```python
+ from numba import cuda
+ @cuda.jit
+ def vec_add(a, b, c, N):
+ i = cuda.grid(1)
+ if i < N:
+ c[i] = a[i] + b[i]
+ 
+ threadsperblock = 256
+ blockspergrid = (N + 255) // 256
+ vec_add[blockspergrid, threadsperblock](a, b, c, N)
+ ```
 
 - **Memory management:** global, shared, constant, register memory
 
 - **Memory coalescing** — efficient global memory access patterns
 
 - **GPUs in physics:**
-  - N-body gravitational simulation on GPU
-  - Monte Carlo methods with millions of particles
-  - MD force calculations (LAMMPS-GPU)
+ - N-body gravitational simulation on GPU
+ - Monte Carlo methods with millions of particles
+ - MD force calculations (LAMMPS-GPU)
 
 - **OpenCL** overview (cross-platform alternative to CUDA)
 
 ### Unit 4: Distributed Computing and Applications (Weeks 14–16)
 
 - **MPI (Message Passing Interface):** for cluster computing
-  - `mpi4py` in Python:
-    ```python
-    from mpi4py import MPI
-    comm = MPI.COMM_WORLD
-    rank = comm.Get_rank()
-    size = comm.Get_size()
-    data = scatter_data(root=0)  # Send chunks to each process
-    local_result = compute_local(data)
-    result = comm.reduce(local_result, op=MPI.SUM, root=0)
-    ```
+ - `mpi4py` in Python:
+ ```python
+ from mpi4py import MPI
+ comm = MPI.COMM_WORLD
+ rank = comm.Get_rank()
+ size = comm.Get_size()
+ data = scatter_data(root=0) # Send chunks to each process
+ local_result = compute_local(data)
+ result = comm.reduce(local_result, op=MPI.SUM, root=0)
+ ```
 
 - **MPI collectives:** reduce, gather, scatter, broadcast, barrier
 
@@ -121,12 +122,14 @@ High-performance computing for physics — parallel algorithms and architectures
 
 ## 🔬 Key Algorithms
 
-```
-Amdahl's law:     Speedup_max = 1/((1-p) + p/N)
-MapReduce:        Split → Map → Shuffle → Reduce
-Parallel sum:     Tree reduction, work efficiency = O(N/p + log p)
-GPU kernel:       1 thread per data point, blocks of ~256 threads
-```
+$$\text{Amdahl's law: } \text{Speedup}_{\max} = \frac{1}{(1-p) + \frac{p}{N}}$$
+
+$$\text{MapReduce: Split} \to \text{Map} \to \text{Shuffle} \to \text{Reduce}$$
+
+$$\text{Parallel sum: Tree reduction, work efficiency} = O\!\left(\frac{N}{p} + \log p
+ight)$$
+
+$$\text{GPU kernel: 1 thread per data point, blocks of} \sim 256 \text{ threads}$$
 
 ---
 

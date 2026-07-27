@@ -25,13 +25,13 @@ EOP is the set of parameters that transforms between the Earth-fixed frame and t
 
 | Parameter | Symbol | Meaning | Typical Range |
 |-----------|--------|---------|---------------|
-| **X-polar motion** | $x_p$| Polar motion X-component | ±0.5″ ≈ ±15 m |
-| **Y-polar motion** |$y_p$| Polar motion Y-component | ±0.5″ ≈ ±15 m |
-| **UT1 − UTC** |$\Delta$UT1 | Earth rotation angle offset | −0.5 to +0.5 s ≈ −225 to +225 m at equator |
+| **X-polar motion** | $x_p$ | Polar motion X-component | ±0.5″ ≈ ±15 m |
+| **Y-polar motion** | $y_p$ | Polar motion Y-component | ±0.5″ ≈ ±15 m |
+| **UT1 − UTC** | $\Delta $UT1 | Earth rotation angle offset | −0.5 to +0.5 s ≈ −225 to +225 m at equator |
 | **UT1 − TAI** | — | Earth rotation angle offset | Continuous |
-| **LOD** | $\Delta$L | Length of day | 0.001–0.004 s variation |
-| **Nut X** | $\epsilon_X$| Nutation X (long-term) | — |
-| **Nut Y** |$\epsilon_Y$| Nutation Y (long-term) | — |
+| **LOD** | $\Delta $L | Length of day | 0.001–0.004 s variation |
+| **Nut X** | $\epsilon_X$ | Nutation X (long-term) | — |
+| **Nut Y** | $\epsilon_Y$ | Nutation Y (long-term) | — |
 
 ### Relationship to GNSS
 
@@ -73,7 +73,7 @@ The **IERS Conventions** (latest: 2010, updated annually) define standards for:
 
 | Item | Value/Model | Source |
 |------|-------------|--------|
-| Earth Rotation Angle (ERA) |$0.7790572732640 + 1.00273781191135448 T_U$ (turns) | IERS Conventions |
+| Earth Rotation Angle (ERA) | $0.7790572732640 + 1.00273781191135448 T_U$ (turns) | IERS Conventions |
 | Precession | P03 model (Capitaine et al.) | IERS 2010 |
 | Nutation | IERS 2010A (MHB2000) | IERS 2010 |
 | Free core nutation | Variable, ~0.7 yr period | IERS monitoring |

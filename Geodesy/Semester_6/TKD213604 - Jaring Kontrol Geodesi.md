@@ -39,7 +39,10 @@ The design of a geodetic network must balance:
 
 #### Strength of Figure
 
-For a triangle network, the **strength ratio** $R$determines error propagation:$$R = \frac{\text{product of non-adjusted sides}}{\text{product of adjusted sides}}$$A smaller$R$indicates better geometric strength. For first-order networks,$R < 1.5 \times 10^{-4}$.
+For a triangle network, the **strength ratio** $R $determines error propagation
+:
+
+$$R = \frac{\text{product of non-adjusted sides}}{\text{product of adjusted sides}} $$A smaller $R$indicates better geometric strength. For first-order networks,$R < 1.5 \times 10^{-4} $.
 
 ### 2.3 Geometric Criteria
 
@@ -54,9 +57,17 @@ For a triangle network, the **strength ratio** $R$determines error propagation:$
 
 ### 2.4 Redundancy
 
-The **redundancy** $r$of a network:$$r = n - u$$where$n$is the number of observations and$u$is the number of unknowns.
+The **redundancy** $r $of a network
+:
 
-For a 2D network with$p$points:$$u = 2p - 2 \quad \text{(fixing 2 degrees of freedom)}$$---
+$$r = n - u$$where $n$is the number of observations and $u $is the number of unknowns.
+
+For a 2D network with $p $points
+:
+
+$$u = 2p - 2 \quad \text{(fixing 2 degrees of freedom)} $$
+
+---
 
 ## 3. Observation Methods
 
@@ -70,11 +81,19 @@ Measurement of **horizontal angles** from network stations:
 | **Dreyer** | 12 observations (6 FL + 6 FR) | Second-order |
 | **Schumacher** | 8 observations (4 FL + 4 FR) | Third-order |
 
-**Angular accuracy requirements:**$$m_{\text{angle}} = \frac{1.5}{\sqrt{2}} \cdot c \; \text{for first-order}$$where$c$is the micrometer reading accuracy of the theodolite (typically 0.01").
+**Angular accuracy requirements:*
+*
+
+$$m_{\text{angle}} = \frac{1.5}{\sqrt{2}} \cdot c \; \text{for first-order} $$where $c$is the micrometer reading accuracy of the theodolite (typically 0.01").
 
 ### 3.2 Trilateration (*Trilaterasi*)
 
-Direct measurement of **distances** between stations using EDM (Electronic Distance Measurement):$$\sigma = \sqrt{(a)^2 + (b \cdot d)^2}$$where:
+Direct measurement of **distances** between stations using EDM (Electronic Distance Measurement)
+:
+
+$$\sigma = \sqrt{(a)^2 + (b \cdot d)^2} $$
+
+where:
 -$a$= constant error (mm)
 -$b$= proportional error (ppm)
 -$d$= distance (km)
@@ -123,52 +142,52 @@ Modern geodetic surveys combine:
 
 ```
 1. Reconnaissance (pemetaan awal)
-   - Identify stations and intervisibility
-   - Plan observation schedules
-   ↓
+ - Identify stations and intervisibility
+ - Plan observation schedules
+ ↓
 2. Monumentation (penentuan tonggak)
-   - Establish permanent marks
-   - Include identification plates
-   ↓
+ - Establish permanent marks
+ - Include identification plates
+ ↓
 3. Station observation (pengamatan stasiun)
-   - Angular measurements (face left, face right)
-   - Multiple rounds of observations
-   ↓
+ - Angular measurements (face left, face right)
+ - Multiple rounds of observations
+ ↓
 4. Baseline measurement
-   - Measure baseline with EDM
-   - Apply atmospheric corrections
-   ↓
+ - Measure baseline with EDM
+ - Apply atmospheric corrections
+ ↓
 5. Data processing
-   - Preliminary adjustment
-   - Error analysis
-   ↓
+ - Preliminary adjustment
+ - Error analysis
+ ↓
 6. Final adjustment
-   - Least squares adjustment
-   - Quality indicators
+ - Least squares adjustment
+ - Quality indicators
 ```
 
 ### 4.2 GNSS Survey
 
 ```
 1. Reconnaissance (pemetaan)
-   ↓
+ ↓
 2. Monumentation (penentuan tonggak)
-   ↓
+ ↓
 3. Observation (pengamatan)
-   - Static sessions
-   - Field logging
-   ↓
+ - Static sessions
+ - Field logging
+ ↓
 4. Data processing
-   - RINEX → baseline vectors
-   - Ambiguity resolution
-   ↓
+ - RINEX → baseline vectors
+ - Ambiguity resolution
+ ↓
 5. Network adjustment
-   - Least squares
-   - Quality checks
-   ↓
+ - Least squares
+ - Quality checks
+ ↓
 6. Coordinate transformation
-   - UTM projection
-   - Height transformation
+ - UTM projection
+ - Height transformation
 ```
 
 ---
@@ -177,21 +196,44 @@ Modern geodetic surveys combine:
 
 ### 5.1 Fundamental Equation
 
-For a system of$n$observations and$u$unknowns, the least squares solution:$$\hat{x} = (A^T P A)^{-1} A^T P l$$where:
--$\hat{x}$= vector of unknown parameters
+For a system of $n $observations and $u $unknowns, the least squares solution
+:
+
+$$\hat{x} = (A^T P A)^{-1} A^T P l$$
+
+where:
+-$\hat{x} $= vector of unknown parameters
 -$A$= design matrix (partial derivatives of observations w.r.t. parameters)
--$P$ = weight matrix ($P = \sigma_0^2 \Sigma^{-1}$, where $\Sigma$is covariance matrix)
+-$P$ = weight matrix ($P = \sigma_0^2 \Sigma^{-1} $, where $\Sigma $is covariance matrix)
 -$l$= observation vector (observed minus computed values)
 
 ### 5.2 Residuals and Quality
 
-**Residual vector:**$$v = A\hat{x} - l$$**Standard error of unit weight:**$$\sigma_0 = \sqrt{\frac{v^T P v}{n - u}}$$**Standard error of parameters:**$$\Sigma_{\hat{x}} = \sigma_0^2 (A^T P A)^{-1}$$### 5.3 Chi-Square Test$$\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)$$If$\chi^2 > \chi^2_{0.95}(n-u)$, the model may be inadequate or outliers may exist.
+**Residual vector:*
+*
+
+$$v = A\hat{x} - l$$
+
+**Standard error of unit weight:*
+*
+
+$$\sigma_0 = \sqrt{\frac{v^T P v}{n - u}} $$
+
+**Standard error of parameters:*
+*
+
+$$\Sigma_{\hat{x}} = \sigma_0^2 (A^T P A)^{-1} $$
+
+### 5.3 Chi-Square Tes
+t
+
+$$\chi^2 = \frac{v^T P v}{\sigma_0^2} \sim \chi^2(n - u)$$If $\chi^2 > \chi^2_{0.95}(n-u)$, the model may be inadequate or outliers may exist.
 
 ### 5.4 Network Types and Unknowns
 
 **Horizontal 2D network:**
 
-- Unknowns: coordinates $(x_i, y_i)$of$p$points
+- Unknowns: coordinates $(x_i, y_i) $of $p $points
 
 - If 2 points fixed:$u = 2(p-2)$**3D network:**
 
@@ -292,24 +334,37 @@ For a system of$n$observations and$u$unknowns, the least squares solution:$$\hat
 
 ### 9.1 Blunder Detection
 
-- **Baarda data snooping** test for outlier detection$$|v_i| > k_{\alpha} \cdot \sigma_{v_i}$$- **Chi-square test** for global model adequacy
+- **Baarda data snooping** test for outlier detectio
+n
 
-### 9.2 Error Propagation$$\Sigma_{f} = B \cdot \Sigma_{\hat{x}} \cdot B^T$$where$B$is the Jacobian of the function$f(\hat{x})$with respect to the adjusted parameters.
+$$|v_i| > k_{\alpha} \cdot \sigma_{v_i} $$
+
+- **Chi-square test** for global model adequacy
+
+### 9.2 Error Propagatio
+n
+
+$$\Sigma_{f} = B \cdot \Sigma_{\hat{x}} \cdot B^T$$where $B$is the Jacobian of the function $f(\hat{x}) $with respect to the adjusted parameters.
 
 ### 9.3 Reliability
 
 **Internal reliability:** Ability to detect blunders within the observation set
-**External reliability:** Impact of undetected blunders on the solution$$\text{Detectability} \geq \Delta_0 \cdot \sigma_{\text{observation}}$$---
+**External reliability:** Impact of undetected blunders on the solutio
+n
+
+$$\text{Detectability} \geq \Delta_0 \cdot \sigma_{\text{observation}} $$
+
+---
 
 ## 10. Key Formulas Summary
 
 | Formula | Application |
 |---------|-------------|
-|$\hat{x} = (A^TPA)^{-1}A^TPl$| Least squares |
-|$\sigma_0 = \sqrt{\frac{v^T P v}{n-u}}$| Unit weight error |
-|$\Sigma_{\hat{x}} = \sigma_0^2 (A^TPA)^{-1}$| Covariance matrix |
-|$d = c \cdot t/2$| EDM distance |
-|$m = \sqrt{a^2 + (b \cdot d)^2}$ | EDM error budget |
+| $\hat{x} = (A^TPA)^{-1}A^TPl$ | Least squares |
+| $\sigma_0 = \sqrt{\frac{v^T P v}{n-u}} $ | Unit weight error |
+| $\Sigma_{\hat{x}} = \sigma_0^2 (A^TPA)^{-1} $ | Covariance matrix |
+| $d = c \cdot t/2$ | EDM distance |
+| $m = \sqrt{a^2 + (b \cdot d)^2} $ | EDM error budget |
 
 ---
 

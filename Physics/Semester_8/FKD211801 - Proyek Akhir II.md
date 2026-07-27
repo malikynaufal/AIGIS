@@ -27,14 +27,14 @@ The second and final phase of the capstone project — completing data collectio
 - **Completing measurements** or running full simulations
 
 - **Data processing pipelines:**
-  - Raw data → calibration → quality control → analysis
-  - Python/NumPy/SciPy data analysis workflow
-  - Statistical analysis of results with uncertainty
+ - Raw data → calibration → quality control → analysis
+ - Python/NumPy/SciPy data analysis workflow
+ - Statistical analysis of results with uncertainty
 
 - **Result interpretation:**
-  - What do the results mean in context of the literature?
-  - How do results compare with previous work?
-  - What are the limitations and assumptions?
+ - What do the results mean in context of the literature?
+ - How do results compare with previous work?
+ - What are the limitations and assumptions?
 
 - **Problem solving:** adapting methodology when things go wrong
 
@@ -45,26 +45,26 @@ The second and final phase of the capstone project — completing data collectio
 ### Phase 2: Thesis Writing (Weeks 5–12)
 
 - **Thesis structure:**
-  ```
-  1.  Cover page and title
-  2.  Abstract (Indonesian and English)
-  3.  Acknowledgments
-  4.  Table of Contents
-  5.  Chapter 1: Introduction (20-30 pages)
-      - Background, motivation, objectives, thesis outline
-  6.  Chapter 2: Literature Review (20-30 pages)
-      - Comprehensive review of relevant work
-  7.  Chapter 3: Methodology (15-20 pages)
-      - Detailed description of experiments/computations
-  8.  Chapter 4: Results (15-20 pages)
-      - Figures, tables, data presentation
-  9.  Chapter 5: Discussion (15-20 pages)
-      - Interpretation, comparison, implications
-  10. Chapter 6: Conclusions (5-10 pages)
-      - Summary, contributions, future work
-  11. References (minimum 40 peer-reviewed sources)
-  12. Appendices: supplementary data, code, derivations
-  ```
+ ```
+ 1. Cover page and title
+ 2. Abstract (Indonesian and English)
+ 3. Acknowledgments
+ 4. Table of Contents
+ 5. Chapter 1: Introduction (20-30 pages)
+ - Background, motivation, objectives, thesis outline
+ 6. Chapter 2: Literature Review (20-30 pages)
+ - Comprehensive review of relevant work
+ 7. Chapter 3: Methodology (15-20 pages)
+ - Detailed description of experiments/computations
+ 8. Chapter 4: Results (15-20 pages)
+ - Figures, tables, data presentation
+ 9. Chapter 5: Discussion (15-20 pages)
+ - Interpretation, comparison, implications
+ 10. Chapter 6: Conclusions (5-10 pages)
+ - Summary, contributions, future work
+ 11. References (minimum 40 peer-reviewed sources)
+ 12. Appendices: supplementary data, code, derivations
+ ```
 
 - **Writing techniques:** scientific English, clarity, structure
 
@@ -85,12 +85,12 @@ The second and final phase of the capstone project — completing data collectio
 - **Pre-seminar** (seminar ilmiah): presenting results to physics department
 
 - **Public defense** (seminar sidang):
-  ```
-  - Presentation: 20-30 minutes
-  - Questions from examiners: 15-30 minutes
-  - Examiner committee: 2-3 faculty members
-  - Grading: presentation (40%), thesis quality (40%), Q&A (20%)
-  ```
+ ```
+ - Presentation: 20-30 minutes
+ - Questions from examiners: 15-30 minutes
+ - Examiner committee: 2-3 faculty members
+ - Grading: presentation (40%), thesis quality (40%), Q&A (20%)
+ ```
 
 - **Post-defense revisions:** addressing examiner comments
 

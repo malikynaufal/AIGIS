@@ -25,11 +25,11 @@ General relativity — Einstein's geometric theory of gravity describing spaceti
 ### Unit 1: Special Relativity (Weeks 1–3)
 
 - **Lorentz transformations:** x′ = γ(x - vt), t′ = γ(t - vx/c²)
-  - γ = 1/√(1 - v²/c²)
+ - γ = 1/√(1 - v²/c²)
 
 - **Spacetime interval:** (Δs)² = (cΔt)² - (Δx)² - (Δy)² - (Δz)²
-  - Timelike (Δt² > Δx² + Δy² + Δz²): causally connected
-  - Spacelike: not causally connected
+ - Timelike (Δt² > Δx² + Δy² + Δz²): causally connected
+ - Spacelike: not causally connected
 
 - **Four-vectors:** 4-position (ct, x, y, z), 4-momentum (E/c, p_x, p_y, p_z)
 
@@ -42,46 +42,46 @@ General relativity — Einstein's geometric theory of gravity describing spaceti
 - **Equivalence principle:** locally, gravity is indistinguishable from acceleration
 
 - **Metric tensor g_μν:** fundamental object encoding geometry
-  - For flat spacetime (Minkowski): ds² = -c²dt² + dx² + dy² + dz²
+ - For flat spacetime (Minkowski): ds² = -c²dt² + dx² + dy² + dz²
 
 - **Covariant vs. contravariant** vectors and tensors
 
 - **Christoffel symbols** Γ^ρ_μν — connection coefficients
-  - Measure how basis vectors change from point to point
+ - Measure how basis vectors change from point to point
 
 - **Geodesic equation:** d²x^μ/dτ² + Γ^μ_νρ dx^ν/dτ dx^ρ/dτ = 0
-  - Free-fall paths = geodesics in curved spacetime
+ - Free-fall paths = geodesics in curved spacetime
 
 - **Riemann curvature tensor** R^ρ_σμν — measure of curvature
-  - If R = 0 everywhere, spacetime is flat
+ - If R = 0 everywhere, spacetime is flat
 
 ### Unit 3: Einstein Field Equations (Weeks 9–12)
 
 - **The Einstein Field Equations (EFE):**
-  ```
-  G_μν = R_μν - ½g_μνR = (8πG/c⁴) T_μν
-  ```
-  - G_μν = Einstein tensor (geometry)
-  - T_μν = Stress-energy tensor (matter/energy content)
-  - G_μν is automatically divergenceless (Bianchi identity)
+ ```
+ G_μν = R_μν - ½g_μνR = (8πG/c⁴) T_μν
+ ```
+ - G_μν = Einstein tensor (geometry)
+ - T_μν = Stress-energy tensor (matter/energy content)
+ - G_μν is automatically divergenceless (Bianchi identity)
 
 - **Newtonian limit:** EFE reduces to Poisson's equation ∇²Φ = 4πGρ for weak fields
 
 - **Schwarzschild solution** (static, spherically symmetric mass):
-  ```
-  ds² = -(1-2GM/rc²)c²dt² + (1-2GM/rc²)⁻¹dr² + r²dΩ²
-  ```
-  - Event horizon at r_s = 2GM/c² (Schwarzschild radius)
-  - Gravitational time dilation: τ = t√(1-2GM/rc²)
+ ```
+ ds² = -(1-2GM/rc²)c²dt² + (1-2GM/rc²)⁻¹dr² + r²dΩ²
+ ```
+ - Event horizon at r_s = 2GM/c² (Schwarzschild radius)
+ - Gravitational time dilation: τ = t√(1-2GM/rc²)
 
 ### Unit 4: Applications (Weeks 13–16)
 
 - **Black holes:**
-  - Schwarzschild black hole: singularity + event horizon
-  - Kerr (rotating) black hole: ergosphere, frame-dragging
+ - Schwarzschild black hole: singularity + event horizon
+ - Kerr (rotating) black hole: ergosphere, frame-dragging
 
 - **Gravitational redshift:** light loses energy escaping a gravitational well
-  - GPS correction: ~45 μs/day from GR (combined with SR: total ~38 μs/day)
+ - GPS correction: ~45 μs/day from GR (combined with SR: total ~38 μs/day)
 
 - **Perihelion precession** of Mercury (43 arcseconds/century)
 
@@ -96,12 +96,12 @@ General relativity — Einstein's geometric theory of gravity describing spaceti
 ## 🔬 Key Equations
 
 ```
-Interval:           ds² = -(c²)dt² + dx² + dy² + dz²  (flat)
-Geodesic eqn:       d²x^μ/dτ² + Γ^μ_νρ (dx^ν/dτ)(dx^ρ/dτ) = 0
-Einstein field:     G_μν + Λg_μν = (8πG/c⁴)T_μν
-Schwarzschild:      r_s = 2GM/c²
-GR time dilation:   τ = t·√(1 - r_s/r)
-GPS corrections:    SR: -7 μs/day, GR: +45 μs/day, Net: +38 μs/day
+Interval: ds² = -(c²)dt² + dx² + dy² + dz² (flat)
+Geodesic eqn: d²x^μ/dτ² + Γ^μ_νρ (dx^ν/dτ)(dx^ρ/dτ) = 0
+Einstein field: G_μν + Λg_μν = (8πG/c⁴)T_μν
+Schwarzschild: r_s = 2GM/c²
+GR time dilation: τ = t·√(1 - r_s/r)
+GPS corrections: SR: -7 μs/day, GR: +45 μs/day, Net: +38 μs/day
 ```
 
 ---

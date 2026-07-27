@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Digital Entrepreneurship
 
-**Course Code:** MGM214717  
-**SKS:** 3 (3-0)  
-**Semester:** 6  
-**Prerequisites:** Manajemen Pemasaran Dasar, Komunikasi Bisnis  
+**Course Code:** MGM214717 
+**SKS:** 3 (3-0) 
+**Semester:** 6 
+**Prerequisites:** Manajemen Pemasaran Dasar, Komunikasi Bisnis 
 
 ---
 

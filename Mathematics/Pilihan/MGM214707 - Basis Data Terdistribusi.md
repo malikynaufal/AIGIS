@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Distributed Databases
 
-**Course Code:** MGM214707  
-**SKS:** 3 (2-1)  
-**Semester:** 5  
-**Prerequisites:** Basis Data Dasar, Sistem Operasi, Jaringan Komputer  
+**Course Code:** MGM214707 
+**SKS:** 3 (2-1) 
+**Semester:** 5 
+**Prerequisites:** Basis Data Dasar, Sistem Operasi, Jaringan Komputer 
 
 ---
 
@@ -113,10 +113,10 @@ Sistem pengolahan data ribuan stasiun GNSS per detik:
 - **Tuntutan:** High Write (data observasi), Read-intensive (pemrosesan real-time).
 
 - **Arsitektur:**
-    - **Cassandra (AP):** Write cepat, toleransi kegagalan node (karena data stasiun independen).
-    - **Replikasi:** 3 node di lokasi berbeda.
-    - **Consistency:** Eventual (tidak masalah jika data stasiun A delay 1 detik).
-    - **Sharding:** Partition key = `station_id` + `date_hour`.
+ - **Cassandra (AP):** Write cepat, toleransi kegagalan node (karena data stasiun independen).
+ - **Replikasi:** 3 node di lokasi berbeda.
+ - **Consistency:** Eventual (tidak masalah jika data stasiun A delay 1 detik).
+ - **Sharding:** Partition key = `station_id` + `date_hour`.
 
 ---
 

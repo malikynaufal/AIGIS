@@ -31,41 +31,41 @@ Thermodynamics describes energy transfer, entropy, and the direction of natural 
 - **Thermal equilibrium** and the concept of temperature
 
 - **First Law:** ΔU = Q - W (or ΔU = Q + W, depending on convention)
-  - Internal energy as a state function
-  - Heat (Q) and work (W) as path functions
-  - Specific heats: C_p vs. C_v, and C_p - C_v = nR (ideal gas)
+ - Internal energy as a state function
+ - Heat (Q) and work (W) as path functions
+ - Specific heats: C_p vs. C_v, and C_p - C_v = nR (ideal gas)
 
 - **Work done by gas:** W = ∫ P dV
-  - Work in isothermal, isobaric, isochoric, adiabatic processes
+ - Work in isothermal, isobaric, isochoric, adiabatic processes
 
 - **Enthalpy:** H = U + PV, and its usefulness at constant pressure
 
 ### Unit 2: Entropy and the Second Law (Weeks 5–9)
 
 - **Second Law of Thermodynamics:**
-  - Clausius statement: heat cannot spontaneously flow from cold to hot
-  - Kelvin-Planck statement: no engine can convert heat completely to work
-  - These statements are equivalent
+ - Clausius statement: heat cannot spontaneously flow from cold to hot
+ - Kelvin-Planck statement: no engine can convert heat completely to work
+ - These statements are equivalent
 
 - **Entropy:** dS ≥ δQ/T (Clausius inequality)
-  - Entropy as a state function: ΔS = ∫ δQ_rev/T
-  - Entropy is non-decreasing: ΔS_universe ≥ 0
+ - Entropy as a state function: ΔS = ∫ δQ_rev/T
+ - Entropy is non-decreasing: ΔS_universe ≥ 0
 
 - **Reversible vs. irreversible processes**
 
 - **Entropy and disorder:** statistical interpretation — Ω = microstates
-  ```
-  S = k_B ln Ω  (Boltzmann)
-  ```
+ ```
+ S = k_B ln Ω (Boltzmann)
+ ```
 
 - **Ideal gas entropy change:** ΔS = nC_v ln(T₂/T₁) + nR ln(V₂/V₁)
 
 ### Unit 3: Heat Engines and Refrigerators (Weeks 10–13)
 
 - **Carnot cycle** (four-step: isothermal expansion → adiabatic expansion → isothermal compression → adiabatic compression)
-  ```
-  η_Carnot = 1 - T_cold/T_hot  (maximum efficiency)
-  ```
+ ```
+ η_Carnot = 1 - T_cold/T_hot (maximum efficiency)
+ ```
 
 - **Carnot's theorem:** no engine is more efficient than a Carnot engine
 
@@ -86,8 +86,8 @@ Thermodynamics describes energy transfer, entropy, and the direction of natural 
 - **Maxwell relations:** thermodynamic identities connecting partial derivatives
 
 - **Phase transitions:** first-order (latent heat) and second-order (continuous)
-  - Water: solid → liquid → gas
-  - Liquid-gas critical point
+ - Water: solid → liquid → gas
+ - Liquid-gas critical point
 
 - **Clausius-Clapeyron equation:** dP/dT = L/(TΔV)
 
@@ -96,15 +96,15 @@ Thermodynamics describes energy transfer, entropy, and the direction of natural 
 ## 🔬 Key Equations
 
 ```
-First Law:              ΔU = Q - W
-Ideal Gas:              PV = nRT
-Entropy Change:         ΔS = ∫δQ_rev/T
-Boltzmann:              S = k_B ln Ω
-Carnot Efficiency:      η = 1 - T_C/T_H
-Free Energy:            F = U - TS
-Gibbs Energy:           G = H - TS = U + PV - TS
-Clausius-Clapeyron:     dP/dT = L/(TΔV)
-Specific Heat:          C_p - C_v = nR
+First Law: ΔU = Q - W
+Ideal Gas: PV = nRT
+Entropy Change: ΔS = ∫δQ_rev/T
+Boltzmann: S = k_B ln Ω
+Carnot Efficiency: η = 1 - T_C/T_H
+Free Energy: F = U - TS
+Gibbs Energy: G = H - TS = U + PV - TS
+Clausius-Clapeyron: dP/dT = L/(TΔV)
+Specific Heat: C_p - C_v = nR
 ```
 
 ---

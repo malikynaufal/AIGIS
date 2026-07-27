@@ -1,8 +1,8 @@
 # Kuliah Kerja Nyata (KKN)
 
-**Kode:** UNV4801  
-**Sifat:** Wajib  
-**SKS:** 3  
+**Kode:** UNV4801 
+**Sifat:** Wajib 
+**SKS:** 3 
 
 ## Deskripsi
 

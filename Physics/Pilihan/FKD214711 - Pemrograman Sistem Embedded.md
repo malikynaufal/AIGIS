@@ -2,11 +2,11 @@
 title: "Pemrograman Sistem Embedded"
 subject: "Fisika Pilihan"
 tags:
-  - embedded-systems
-  - Arduino
-  - STM32
-  - RTOS
-  - SKS: 3
+ - embedded-systems
+ - Arduino
+ - STM32
+ - RTOS
+ - SKS: 3
 ---
 
 # FKD214711 — Pemrograman Sistem Embedded
@@ -46,24 +46,24 @@ const float V_REF = 5.0;
 const float TC_SENSITIVITY = 0.041; // V/°C (Type K)
 
 void setup() {
-    Serial.begin(9600);
-    SD.begin(10);
-    analogReference(EXTERNAL); // Use 1.1V for precision
+ Serial.begin(9600);
+ SD.begin(10);
+ analogReference(EXTERNAL); // Use 1.1V for precision
 }
 
 void loop() {
-    int raw = analogRead(TC_PIN);
-    float voltage = raw * 1.1 / 1023.0;
-    float temperature = voltage / TC_SENSITIVITY;
-    
-    File f = SD.open("data.csv", FILE_WRITE);
-    if (f) {
-        f.print(millis());
-        f.print(",");
-        f.println(temperature);
-        f.close();
-    }
-    delay(1000); // 1 Hz sampling
+ int raw = analogRead(TC_PIN);
+ float voltage = raw * 1.1 / 1023.0;
+ float temperature = voltage / TC_SENSITIVITY;
+ 
+ File f = SD.open("data.csv", FILE_WRITE);
+ if (f) {
+ f.print(millis());
+ f.print(",");
+ f.println(temperature);
+ f.close();
+ }
+ delay(1000); // 1 Hz sampling
 }
 ```
 
@@ -88,16 +88,16 @@ The STM32F407 (used in higher-performance instrumentation):
 uint16_t adc_buffer[256]; // Circular buffer
 
 void start_adc_dma(void) {
-    HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buffer, 256);
+ HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buffer, 256);
 }
 
 // DMA complete callback (called automatically)
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
-    // Process 256 samples — runs in ISR context
-    for (int i = 0; i < 256; i++) {
-        float voltage = adc_buffer[i] * 3.3f / 4096.0f;
-        process_sample(voltage); // User-defined DSP
-    }
+ // Process 256 samples — runs in ISR context
+ for (int i = 0; i < 256; i++) {
+ float voltage = adc_buffer[i] * 3.3f / 4096.0f;
+ process_sample(voltage); // User-defined DSP
+ }
 }
 ```
 
@@ -108,7 +108,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
 | Clock speed | 16 MHz | 168 MHz | 240 MHz |
 | Power consumption | 15 mA | 100 mA | 80 mA |
 | ADC resolution | 10-bit | 12-bit | 12-bit |
-| Cost (module) | $5 | $8 | $3 |
+| Cost (module) | 5 USD | 8 USD | 3 USD |
 | Best for | Prototyping | Precision control | Wireless IoT |
 | Learning curve | Low | Medium | Medium |
 
@@ -135,25 +135,25 @@ FreeRTOS is the dominant RTOS for microcontrollers. Core concepts:
 ```cpp
 // FreeRTOS task creation on ESP32/STM32
 void sensor_task(void* param) {
-    while (1) {
-        float temp = read_sensor();
-        xQueueSend(data_queue, &temp, portMAX_DELAY);
-        vTaskDelay(pdMS_TO_TICKS(100)); // 10 Hz
-    }
+ while (1) {
+ float temp = read_sensor();
+ xQueueSend(data_queue, &temp, portMAX_DELAY);
+ vTaskDelay(pdMS_TO_TICKS(100)); // 10 Hz
+ }
 }
 
 void logging_task(void* param) {
-    float temp;
-    while (1) {
-        if (xQueueReceive(data_queue, &temp, portMAX_DELAY)) {
-            log_to_sd(temp);
-        }
-    }
+ float temp;
+ while (1) {
+ if (xQueueReceive(data_queue, &temp, portMAX_DELAY)) {
+ log_to_sd(temp);
+ }
+ }
 }
 
 void setup() {
-    xTaskCreatePinnedToCore(sensor_task, "Sensor", 2048, NULL, 2, NULL, 0);
-    xTaskCreatePinnedToCore(logging_task, "Logger", 4096, NULL, 1, NULL, 1);
+ xTaskCreatePinnedToCore(sensor_task, "Sensor", 2048, NULL, 2, NULL, 0);
+ xTaskCreatePinnedToCore(logging_task, "Logger", 4096, NULL, 1, NULL, 1);
 }
 ```
 
@@ -188,21 +188,22 @@ void setup() {
 #define BME280_ADDR 0x76
 
 float read_temperature() {
-    Wire.beginTransmission(BME280_ADDR);
-    Wire.write(0xFA); // Temperature register
-    Wire.endTransmission();
-    Wire.requestFrom(BME280_ADDR, 3);
-    
-    uint32_t raw = (Wire.read() << 12) | (Wire.read() << 4) | (Wire.read() >> 4);
-    float temp = raw / 65536.0 * 200.0 - 50.0; // Simplified conversion
-    return temp;
+ Wire.beginTransmission(BME280_ADDR);
+ Wire.write(0xFA); // Temperature register
+ Wire.endTransmission();
+ Wire.requestFrom(BME280_ADDR, 3);
+ 
+ uint32_t raw = (Wire.read() << 12) | (Wire.read() << 4) | (Wire.read() >> 4);
+ float temp = raw / 65536.0 * 200.0 - 50.0; // Simplified conversion
+ return temp;
 }
 ```
 
 ### 3.3 Timing Requirements
 
-For a seismic data acquisition system sampling at $f_s = 200$Hz:$$T_{\text{sample}} = \frac{1}{f_s} = 5\;\text{ms}
-$$
+For a seismic data acquisition system sampling at $f_s = 200$ Hz:
+
+$$T_{\text{sample}} = \frac{1}{f_s} = 5\;\text{ms} $$
 
 Within this 5 ms window, the MCU must:
 1. Read ADC (DMA, ~0.1 ms)
@@ -223,19 +224,19 @@ Using hardware timer interrupts for precise sampling:
 ```cpp
 // Timer interrupt for precise 1 kHz sampling
 void setup_timer_1kHz() {
-    TIM2->PSC = 84 - 1;       // 84 MHz / 84 = 1 MHz
-    TIM2->ARR = 1000 - 1;     // 1 MHz / 1000 = 1 kHz
-    TIM2->DIER |= TIM_DIER_UIE; // Enable update interrupt
-    NVIC_EnableIRQ(TIM2_IRQn);
-    TIM2->CR1 |= TIM_CR1_CIE; // Start timer
+ TIM2->PSC = 84 - 1; // 84 MHz / 84 = 1 MHz
+ TIM2->ARR = 1000 - 1; // 1 MHz / 1000 = 1 kHz
+ TIM2->DIER |= TIM_DIER_UIE; // Enable update interrupt
+ NVIC_EnableIRQ(TIM2_IRQn);
+ TIM2->CR1 |= TIM_CR1_CIE; // Start timer
 }
 
 void TIM2_IRQHandler(void) {
-    if (TIM2->SR & TIM_SR_UIF) {
-        TIM2->SR &= ~TIM_SR_UIF; // Clear flag
-        uint16_t adc_val = ADC1->DR; // Read ADC (no blocking call)
-        ring_buffer_push(&adc_ring, adc_val); // Lock-free ring buffer
-    }
+ if (TIM2->SR & TIM_SR_UIF) {
+ TIM2->SR &= ~TIM_SR_UIF; // Clear flag
+ uint16_t adc_val = ADC1->DR; // Read ADC (no blocking call)
+ ring_buffer_push(&adc_ring, adc_val); // Lock-free ring buffer
+ }
 }
 ```
 
@@ -257,7 +258,7 @@ An ocean-bottom seismometer (OBS, seismometer dasar laut) deployment off Mentawa
 
 - **Data volume**: ~60 GB per station
 
-- **Total system cost**: ~$15,000 (vs. $100,000+ for commercial OBS)
+- **Total system cost**: ~15,000 USD (vs. 100,000+ USD for commercial OBS)
 
 The firmware implements a state machine: *SLEEP → ACQUIRE → STORE → TELEMETRY*, switching every 10 minutes. During ACQUIRE, DMA transfers sensor data to a circular buffer while the main core applies a 2-pole Butterworth anti-aliasing filter in software before SD card writes.
 

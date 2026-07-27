@@ -44,24 +44,24 @@ Study of Pancasila as the philosophical foundation of the Indonesian state. This
 ### The Five Principles (Sila)
 
 - **Sila 1 — Ketuhanan Yang Maha Esa**: Monotheism and religious pluralism
-  - Freedom of religion and its boundaries
-  - Harmony among religious communities
+ - Freedom of religion and its boundaries
+ - Harmony among religious communities
 
 - **Sila 2 — Kemanusiaan yang Adil dan Beradab**: Human dignity and justice
-  - Human rights in the Indonesian context
-  - Social justice and equality
+ - Human rights in the Indonesian context
+ - Social justice and equality
 
 - **Sila 3 — Persatuan Indonesia**: National unity
-  - Unity in diversity (Bhinneka Tunggal Ika)
-  - National integration and regional autonomy
+ - Unity in diversity (Bhinneka Tunggal Ika)
+ - National integration and regional autonomy
 
 - **Sila 4 — Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan**: Democracy
-  - Deliberation (musyawarah) and consensus (mufakat)
-  - Representative democracy in Indonesia
+ - Deliberation (musyawarah) and consensus (mufakat)
+ - Representative democracy in Indonesia
 
 - **Sila 5 — Keadilan Sosial bagi Seluruh Rakyat Indonesia**: Social justice
-  - Economic equity and welfare
-  - Distribution of national prosperity
+ - Economic equity and welfare
+ - Distribution of national prosperity
 
 ### Pancasila and Technology Ethics
 

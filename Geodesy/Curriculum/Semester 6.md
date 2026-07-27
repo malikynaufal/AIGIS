@@ -1,29 +1,62 @@
 ---
-title: Geodesy Semester 6 - Analysis & Networks
-tags: [geodesy, curriculum, analysis, networks]
+tags: [aigis, curriculum, geodesy, semester-6, ugm]
+created: 2026-07-27
+updated: 2026-07-27
 ---
 
-# 🏮 Semester 6: Advanced Analysis & Professional Practice
+# Semester 6 — Analysis and Application
 
 ## Overview
-Integrating all geodetic knowledge to solve complex engineering and research problems.
 
-## ✍️ Core Courses
+Semester 6 focuses on research methodology and applied geospatial analysis — combining all prior knowledge into practical skills for land management, geospatial intelligence, and advanced spatial analysis.
 
-### 1. Jaring Kontrol Geodesi (Geodetic Control Networks)
+## Required Courses (9 mata kuliah, total ~25 SKS)
 
-- **Topics**: Design, optimization, and maintenance of national zero-order and first-order networks.
+| Code | Course | SKS | Type |
+|------|--------|-----|------|
+| TKD213601 | Metodologi Penelitian | 3 | Research |
+| TKD213602 | Perancangan Sistem Informasi Pertanahan | 3 | Core |
+| TKD213603 | Penetapan dan Penegasan Batas Wilayah | 3 | Core |
+| TKD213604 | Jaring Kontrol Geodesi | 3 | Core |
+| TKD213605 | Survei Hidrografi II | 3 | Core |
+| TKD213606 | Analisis Citra Penginderaan Jauh | 3 | Core |
+| TKD213607 | Praktikum Analisis Citra | 1 | Lab |
+| TKD213608 | Analisis Geospasial | 3 | Core |
+| TKD213609 | Praktikum Analisis Geospasial | 1 | Lab |
 
-- **Focus**: Reliability and precision criteria.
+## Key Topics
 
-### 2. Analisis Geospasial (Geospatial Analysis)
+### TKD213604 — Jaring Kontrol Geodesi (Geodetic Control Network)
+- Network design (class order, geometry, observation plan)
+- [[Least Squares Adjustment]] for network adjustment
+- Error ellipse computation:
+  
+$$E_p = \sigma_0^2 \cdot Q_{\hat{X}\hat{X}}$$
 
-- **Advanced GIS**: Network analysis, cost-path modeling, and spatial statistics.
+- Quality control criteria
+- Vertical control network
 
-### 3. Survei Hidrografi II (Advanced Hydrography)
+### TKD213608 — Analisis Geospasial (Geospatial Analysis)
+- Spatial interpolation: IDW, kriging, spline
+- Raster analysis: slope, aspect, hillshade
+- [[GIS]] analytical methods
+- [[Model Terrain Digital]] derived products
+- Hydrological modeling
 
-- **Techniques**: Multibeam Echosounder (MBES), Side Scan Sonar, and underwater positioning.
+### TKD213603 — Penetapan dan Penegasan Batas Wilayah
+- Boundary dispute resolution
+- Legal framework (PP, Permen ATR/BPN)
+- Field measurements and data management
+- Documentation and certificate issuance
 
-### 4. Metodologi Penelitian (Research Methodology)
+## Elective Choices (choose from Pilihan)
+- TKD213623 **Survei Deformasi** — highly recommended
+- TKD213610 **Infrastruktur Informasi Geospasial** — recommended
+- TKD214707 **Penginderaan Jauh Terapan**
 
-- **Focus**: Preparing the Proposal for the final thesis (Skripsi).
+## Study Pack
+➡️ Semester 6 study pack consolidates: [[Jaring Kontrol Geodesi]], [[Least Squares Adjustment]], [[Model Terrain Digital]], [[Remote Sensing]], spatial analysis
+
+---
+
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

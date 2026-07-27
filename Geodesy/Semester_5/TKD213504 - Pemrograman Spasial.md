@@ -50,7 +50,7 @@ gt = ds.GetGeoTransform()
 
 # gt = (top_left_x, pixel_width, rotation_x,
 
-#       top_left_y, rotation_y, pixel_height)
+# top_left_y, rotation_y, pixel_height)
 ```
 
 ### 2.3 Coordinate Reference System (CRS)
@@ -60,10 +60,10 @@ from osgeo import osr
 
 # Define source and target CRS
 srs_src = osr.SpatialReference()
-srs_src.ImportFromEPSG(4326)  # WGS84
+srs_src.ImportFromEPSG(4326) # WGS84
 
 srs_dst = osr.SpatialReference()
-srs_dst.ImportFromEPSG(32648)  # UTM Zone 48S
+srs_dst.ImportFromEPSG(32648) # UTM Zone 48S
 
 # Create coordinate transformation
 coord_trans = osr.CoordinateTransformation(srs_src, srs_dst)
@@ -76,10 +76,10 @@ point = coord_trans.TransformPoint(lon, lat)
 
 # Warp (reproject) raster
 ds_warped = gdal.Warp(
-    'output.tif',
-    'input.tif',
-    dstSRS='EPSG:32648',
-    resampleAlg=gdal.GRA_Bilinear
+ 'output.tif',
+ 'input.tif',
+ dstSRS='EPSG:32648',
+ resampleAlg=gdal.GRA_Bilinear
 )
 ```
 
@@ -90,16 +90,16 @@ from osgeo import ogr
 
 # Open vector
 driver = ogr.GetDriverByName('ESRI Shapefile')
-ds = driver.Open('boundary.shp', 0)  # 0 = read-only
+ds = driver.Open('boundary.shp', 0) # 0 = read-only
 layer = ds.GetLayer()
 
 # Iterate features
 for feature in layer:
-    geom = feature.GetGeometryRef()
-    fid = feature.GetFID()
-    attrs = {field: feature.GetField(field)
-             for field in ['id', 'name', 'area']}
-    print(f"Feature {fid}: {attrs}")
+ geom = feature.GetGeometryRef()
+ fid = feature.GetFID()
+ attrs = {field: feature.GetField(field)
+ for field in ['id', 'name', 'area']}
+ print(f"Feature {fid}: {attrs}")
 
 # Create new feature
 new_feature = ogr.Feature(layer.GetLayerDefn())
@@ -147,7 +147,7 @@ poly = Polygon(ext, [hole])
 ```python
 
 # Buffer
-buffered = poly.buffer(100)  # 100m buffer
+buffered = poly.buffer(100) # 100m buffer
 
 # Intersection
 intersection = poly1.intersection(poly2)
@@ -279,8 +279,8 @@ clipped = gdf.clip(mask_polygon)
 
 ```python
 from qgis.core import (
-    QgsProject, QgsVectorLayer, QgsRasterLayer,
-    QgsVectorFileWriter, QgsField, QgsFields
+ QgsProject, QgsVectorLayer, QgsRasterLayer,
+ QgsVectorFileWriter, QgsField, QgsFields
 )
 
 # Load vector layer
@@ -302,10 +302,10 @@ layers = QgsProject.instance().mapLayersByName('Parcels')
 # Iterate features
 layer.startEditing()
 for feature in layer.getFeatures():
-    geom = feature.geometry()
-    area = geom.area()
-    # Update field
-    layer.changeAttributeValue(feature.id(), 2, area)  # field 2 = area
+ geom = feature.geometry()
+ area = geom.area()
+ # Update field
+ layer.changeAttributeValue(feature.id(), 2, area) # field 2 = area
 layer.commitChanges()
 
 # Add new feature
@@ -324,17 +324,17 @@ import processing
 
 # Buffer
 result = processing.run("native:buffer", {
-    'INPUT': layer,
-    'DISTANCE': 100,
-    'SEGMENTS': 5,
-    'OUTPUT': 'memory:'
+ 'INPUT': layer,
+ 'DISTANCE': 100,
+ 'SEGMENTS': 5,
+ 'OUTPUT': 'memory:'
 })
 
 # Clip
 result = processing.run("native:clip", {
-    'INPUT': layer,
-    'OVERLAY': mask_layer,
-    'OUTPUT': 'memory:'
+ 'INPUT': layer,
+ 'OVERLAY': mask_layer,
+ 'OUTPUT': 'memory:'
 })
 ```
 
@@ -349,13 +349,13 @@ import serial
 import pynmea2
 
 def read_gps(port='/dev/ttyUSB0', baud=9600):
-    ser = serial.Serial(port, baudrate=baud, timeout=1)
-    while True:
-        line = ser.readline().decode('ascii', errors='replace')
-        if line.startswith('$GPGGA'):
-            msg = pynmea2.parse(line)
-            print(f"Lat: {msg.latitude}, Lon: {msg.longitude}")
-            print(f"Time: {msg.timestamp}, Alt: {msg.altitude}")
+ ser = serial.Serial(port, baudrate=baud, timeout=1)
+ while True:
+ line = ser.readline().decode('ascii', errors='replace')
+ if line.startswith('$GPGGA'):
+ msg = pynmea2.parse(line)
+ print(f"Lat: {msg.latitude}, Lon: {msg.longitude}")
+ print(f"Time: {msg.timestamp}, Alt: {msg.altitude}")
 ```
 
 ### 6.2 RINEX Data Processing
@@ -367,14 +367,14 @@ import subprocess
 
 # Convert RINEX to observation
 cmd = ['rnx2rtk', '-o', 'solution.txt',
-       'base.obs', 'rover.obs', 'base.nav']
+ 'base.obs', 'rover.obs', 'base.nav']
 subprocess.run(cmd)
 
 # Parse solution
 import pandas as pd
 sol = pd.read_csv('solution.txt', comment='%',
-                  sep='\s+', header=None,
-                  names=['date', 'time', 'lat', 'lon', 'height'])
+ sep='\s+', header=None,
+ names=['date', 'time', 'lat', 'lon', 'height'])
 ```
 
 ### 6.3 GNSS Quality Analysis
@@ -383,18 +383,18 @@ sol = pd.read_csv('solution.txt', comment='%',
 import numpy as np
 
 def pdop(sat_positions, receiver_pos):
-    """Calculate Position Dilution of Precision."""
-    n = len(sat_positions)
-    H = np.zeros((n, 4))
-    for i, sat in enumerate(sat_positions):
-        dx = sat[0] - receiver_pos[0]
-        dy = sat[1] - receiver_pos[1]
-        dz = sat[2] - receiver_pos[2]
-        dist = np.sqrt(dx**2 + dy**2 + dz**2)
-        H[i] = [-dx/dist, -dy/dist, -dz/dist, 1]
-    Q = np.linalg.inv(H.T @ H)
-    pdop = np.sqrt(np.trace(Q[:3, :3]))
-    return pdop
+ """Calculate Position Dilution of Precision."""
+ n = len(sat_positions)
+ H = np.zeros((n, 4))
+ for i, sat in enumerate(sat_positions):
+ dx = sat[0] - receiver_pos[0]
+ dy = sat[1] - receiver_pos[1]
+ dz = sat[2] - receiver_pos[2]
+ dist = np.sqrt(dx**2 + dy**2 + dz**2)
+ H[i] = [-dx/dist, -dy/dist, -dz/dist, 1]
+ Q = np.linalg.inv(H.T @ H)
+ pdop = np.sqrt(np.trace(Q[:3, :3]))
+ return pdop
 ```
 
 ---
@@ -411,20 +411,20 @@ m = folium.Map(location=[-7.7975, 110.3695], zoom_start=12)
 
 # Add GeoJSON
 folium.GeoJson('parcels.geojson',
-               name='Parcels',
-               style_function=lambda x: {
-                   'fillColor': 'green',
-                   'color': 'black',
-                   'weight': 1,
-                   'fillOpacity': 0.4
-               }).add_to(m)
+ name='Parcels',
+ style_function=lambda x: {
+ 'fillColor': 'green',
+ 'color': 'black',
+ 'weight': 1,
+ 'fillOpacity': 0.4
+ }).add_to(m)
 
 # Add markers
 for idx, row in gdf.iterrows():
-    folium.Marker(
-        location=[row.geometry.y, row.geometry.x],
-        popup=row['name']
-    ).add_to(m)
+ folium.Marker(
+ location=[row.geometry.y, row.geometry.x],
+ popup=row['name']
+ ).add_to(m)
 
 m.save('map.html')
 ```
@@ -472,9 +472,9 @@ result = dask_gdf.sjoin(other_gdf).compute()
 
 # Process in chunks
 for i in range(0, len(gdf), 1000):
-    chunk = gdf.iloc[i:i+1000]
-    result = process_chunk(chunk)
-    # Save result
+ chunk = gdf.iloc[i:i+1000]
+ result = process_chunk(chunk)
+ # Save result
 ```
 
 ---

@@ -7,8 +7,8 @@ tags: [mathematics, numerical, statistics, semester-4, aigis, geodesy-applied]
 
 # Semester 4 — Kalkulus Numerik dan Statistika (Expanded)
 
-**Course**: MGM211204 — Kalkulus Numerik dan Statistika  
-**Credits**: 3 SKS  
+**Course**: MGM211204 — Kalkulus Numerik dan Statistika 
+**Credits**: 3 SKS 
 **Prerequisites**: [[Kalkulus II Expanded]], [[Persamaan Diferensial]]
 
 ---
@@ -31,9 +31,9 @@ This course introduces numerical methods for solving mathematical problems that 
 
 - **Secant method**: Bisection-like, does not require derivative
 
-- **Fixed-point iteration**: $x = g(x)$conversion
+- **Fixed-point iteration**: $x = g(x) $conversion
 
-**Example**: Find$\\sqrt{2}$using Newton:$x_{n+1} = \\frac{1}{2}(x_n + \\frac{2}{x_n})$#### 1.2 Interpolation and Approximation
+**Example**: Find $\sqrt{2} $using Newton:$x_{n+1} = \frac{1}{2}(x_n + \frac{2}{x_n})$#### 1.2 Interpolation and Approximation
 
 - **Linear interpolation**: Connecting data points
 
@@ -45,7 +45,7 @@ This course introduces numerical methods for solving mathematical problems that 
 
 #### 1.3 Numerical Integration
 
-- **Trapezoidal rule**:$\\int_a^b f(x)dx \\approx \\frac{h}{2}[f(a)+2\\sum f(x_i)+f(b)]$- **Simpson's rule**:$\\int_a^b f(x)dx \\approx \\frac{h}{3}[f(a)+4\\sum f(\\text{odd})+2\\sum f(\\text{even})+f(b)]$
+- **Trapezoidal rule**:$\int_a^b f(x)dx \approx \frac{h}{2}[f(a)+2\sum f(x_i)+f(b)]$- **Simpson's rule**:$\int_a^b f(x)dx \approx \frac{h}{3}[f(a)+4\sum f(\text{odd})+2\sum f(\text{even})+f(b)]$
 
 - **Gaussian quadrature**: Weighted sums with optimal nodes
 

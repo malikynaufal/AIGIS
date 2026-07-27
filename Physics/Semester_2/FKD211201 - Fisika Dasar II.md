@@ -31,7 +31,7 @@ This course introduces the fundamental principles of electricity and magnetism �
 - **Electric field:** E = F/q, field lines, superposition
 
 - **Gauss's Law:** ∮ E·dA = Q_enc/ε₀
-  - Applications: infinite line charge, infinite plane, spherical shell
+ - Applications: infinite line charge, infinite plane, spherical shell
 
 - **Electric potential:** V = -∫E·dr, potential energy U = qV
 
@@ -46,10 +46,10 @@ This course introduces the fundamental principles of electricity and magnetism �
 - **Power:** P = IV = I²R = V²/R
 
 - **DC circuit analysis:**
-  - Kirchhoff's rules: junction rule (ΣI_in = ΣI_out) and loop rule (ΣΔV = 0)
-  - Series and parallel resistors
-  - Wheatstone bridge
-  - RC circuits: charging (q = Cε(1-e^{-t/RC})), discharging
+ - Kirchhoff's rules: junction rule (ΣI_in = ΣI_out) and loop rule (ΣΔV = 0)
+ - Series and parallel resistors
+ - Wheatstone bridge
+ - RC circuits: charging (q = Cε(1-e^{-t/RC})), discharging
 
 - **Internal resistance and emf:** ε = V + Ir
 
@@ -66,7 +66,7 @@ This course introduces the fundamental principles of electricity and magnetism �
 - **Magnetic field of a current:** Biot-Savart law
 
 - **Ampere's Law:** ∮ B·dl = μ₀I_enc
-  - Applications: solenoid (B = μ₀nI), toroid, infinite wire
+ - Applications: solenoid (B = μ₀nI), toroid, infinite wire
 
 - **Magnetic force on a current-carrying wire:** F = IL × B
 
@@ -97,15 +97,15 @@ This course introduces the fundamental principles of electricity and magnetism �
 ## 🔬 Key Equations
 
 ```
-Coulomb:          F = k(q₁q₂/r²)  k = 1/(4πε₀) = 8.99×10⁹ N·m²/C²
-Electric Field:   E = F/q = kq/r² 
-Gauss's Law:      ∮ E·dA = Q_enc/ε₀
-Potential:        V = kq/r, ΔV = -∫E·dr
-Ohm's Law:        V = IR
-Power:            P = IV
-Biot-Savart:      dB = μ₀/4π · (Idl × r̂)/r²
-Ampere's Law:     ∮ B·dl = μ₀I_enc
-Faraday:          ε = -dΦ_B/dt
+Coulomb: F = k(q₁q₂/r²) k = 1/(4πε₀) = 8.99×10⁹ N·m²/C²
+Electric Field: E = F/q = kq/r² 
+Gauss's Law: ∮ E·dA = Q_enc/ε₀
+Potential: V = kq/r, ΔV = -∫E·dr
+Ohm's Law: V = IR
+Power: P = IV
+Biot-Savart: dB = μ₀/4π · (Idl × r̂)/r²
+Ampere's Law: ∮ B·dl = μ₀I_enc
+Faraday: ε = -dΦ_B/dt
 ```
 
 ---
@@ -138,33 +138,40 @@ Upon completion, students will be able to:
 Find the electric field from an infinite line charge with linear density $\lambda$.
 
 **Choose Gaussian surface:** Cylinder of radius $r$, length $L$, coaxial with line.
-$$\oint ec{E} \cdot dec{A} = E(2\pi r L) = rac{\lambda L}{\epsilon_0}$$
 
-$$
-E = rac{\lambda}{2\pi\epsilon_0 r}$$**Dimensional check:**$[\lambda] = C/m$, $[\epsilon_0] = F/m$, $[r] = m$
-$$
+$$\oint ec{E} \cdot dec{A} = E(2\pi r L) = rac{\lambda L}{\epsilon_0}E = rac{\lambda}{2\pi\epsilon_0 r} $$**Dimensional check:**$[\lambda] = C/m$,$[\epsilon_0] = F/m$,$[r] = m$
 
-rac{C/m}{(F/m)(m)} = rac{C}{F\cdot m} = rac{V}{m}$$✓
+$$rac{C/m}{(F/m)(m)} = rac{C}{F\cdot m} = rac{V}{m} $$✓
 
 ### Example 2: RC Circuit Charging
 A 10 μF capacitor charges through a 1 MΩ resistor from a 12 V source.
 
-**Time constant:**$	au = RC = (10^6)(10^{-5}) = 10$s
+**Time constant:**$au = RC = (10^6)(10^{-5}) = 10 $s
 
-**Voltage across capacitor:**$$V_C(t) = 12(1 - e^{-t/10}) 	ext{ V}$$**At$t = 10$s (one time constant):**$V_C = 12(1 - e^{-1}) = 12(0.632) = 7.59$V
+**Voltage across capacitor:*
+*
 
-**At$t = 30$s (three time constants):**$V_C = 12(0.950) = 11.4$V
+$$V_C(t) = 12(1 - e^{-t/10}) 	ext{ V} $$**At $t = 10 $s (one time constant):**$V_C = 12(1 - e^{-1}) = 12(0.632) = 7.59 $V
+
+**At $t = 30 $s (three time constants):**$V_C = 12(0.950) = 11.4 $V
 
 ### Example 3: Magnetic Field of a Solenoid
-A solenoid has 500 turns, length 0.5 m, carrying 2 A.$$B = \mu_0 n I = (4\pi 	imes 10^{-7})(500/0.5)(2) = 4\pi 	imes 10^{-7} 	imes 1000 	imes 2 = 2.51 	ext{ mT}
-$$
+A solenoid has 500 turns, length 0.5 m, carrying 2 A.
+
+$$B = \mu_0 n I = (4\pi 	imes 10^{-7})(500/0.5)(2) = 4\pi 	imes 10^{-7} 	imes 1000 	imes 2 = 2.51 	ext{ mT} $$
 
 ### Example 4: Motional EMF
-A conducting bar ($L = 0.3$m) moves at$v = 5$m/s through$B = 0.5$T.$$arepsilon = BLv = (0.5)(0.3)(5) = 0.75 	ext{ V}$$### Example 5: Inductance and Energy
-An inductor$L = 0.5$H carries current$I = 4$A.
+A conducting bar ($L = 0.3 $m) moves at $v = 5 $m/s through $B = 0.5 $T
+.
 
-**Energy stored:**$$U = rac{1}{2}LI^2 = rac{1}{2}(0.5)(16) = 4 	ext{ J}
-$$
+$$arepsilon = BLv = (0.5)(0.3)(5) = 0.75 	ext{ V} $$
+
+### Example 5: Inductance and Energy
+An inductor $L = 0.5 $H carries current $I = 4 $A.
+
+**Energy stored:**
+
+$$U = rac{1}{2}LI^2 = rac{1}{2}(0.5)(16) = 4 	ext{ J} $$
 
 ---
 

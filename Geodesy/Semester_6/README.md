@@ -5,7 +5,7 @@ subject: Geodesy
 
 # 📗 Semester 6 — Geodetic Networks, Hydrography & Geospatial Analysis
 
-**SKS:** 20 (Compulsory)  
+**SKS:** 20 (Compulsory) 
 **Focus:** Design and adjustment of geodetic networks, advanced hydrography, spatial analysis, and preparation for the capstone project.
 
 ## 📚 Course List & Descriptions

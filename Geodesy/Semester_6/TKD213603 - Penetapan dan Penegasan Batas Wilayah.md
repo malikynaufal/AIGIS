@@ -215,19 +215,19 @@ Verify boundary features through:
 import gpnexter
 
 class BoundarySurveyor:
-    def __init__(self, base_stations):
-        self.base_stations = base_stations
-        self.observations = []
-        
-    def collect_observations(self, points):
-        for point in points:
-            # Collect satellite observations
-            obs = self.get_rtk_fix(point['location'])
-            self.observations.append(obs)
-            
-    def generate_boundary_report(self):
-        # Process and generate technical report
-        pass
+ def __init__(self, base_stations):
+ self.base_stations = base_stations
+ self.observations = []
+ 
+ def collect_observations(self, points):
+ for point in points:
+ # Collect satellite observations
+ obs = self.get_rtk_fix(point['location'])
+ self.observations.append(obs)
+ 
+ def generate_boundary_report(self):
+ # Process and generate technical report
+ pass
 ```
 
 **Advantages:** High precision, rapid data collection, digital documentation
@@ -371,22 +371,38 @@ class BoundarySurveyor:
 ### 10.1 Boundary Traverse Calculations
 
 **Angular closure error:**
-$$
 
-f_\text{angular} = \sum\beta - (2n-4)\times90°$$**Linear closure:**$$f_\text{linear} = \sqrt{f_x^2+f_y^2}$$**Relative precision:**$$\text{RP} = \frac{f_\text{linear}}{\text{perimeter}}$$### 10.2 GPS Coordinate Transformations
+$$f_\text{angular} = \sum\beta - (2n-4)\times90
+°
+
+$$**Linear closure:**$$
+
+f_\text{linear} = \sqrt{f_x^2+f_y^2
+}
+
+$$**Relative precision:**$$
+
+\text{RP} = \frac{f_\text{linear}}{\text{perimeter}} $$### 10.2 GPS Coordinate Transformations
 
 **UTM conversion:**
 ```python
 def utm_to_latlon(easting, northing, zone, north, a=6378137, e=0.0818191908):
-    # Transverse Mercator projection inverse
-    # Implementation using Bowring's method
-    pass
+ # Transverse Mercator projection inverse
+ # Implementation using Bowring's method
+ pass
 ```
 
 ### 10.3 Area Calculations
 
-**Trapezoid rule:**$$A = \frac{1}{2} \sum_{i=1}^{n} x_i y_{i+1} - x_{i+1} y_i$$**Trigonometric method:**$$A = \frac{1}{2} \sum d_i \sin\alpha_i
-$$
+**Trapezoid rule:*
+*
+
+$$A = \frac{1}{2} \sum_{i=1}^{n} x_i y_{i+1} - x_{i+1} y_
+i
+
+$$**Trigonometric method:**$$
+
+A = \frac{1}{2} \sum d_i \sin\alpha_i$$
 
 ---
 

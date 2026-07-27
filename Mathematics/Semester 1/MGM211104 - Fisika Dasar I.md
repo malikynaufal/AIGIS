@@ -5,7 +5,9 @@ sks: 4
 semester: 1
 program: S.Kom
 university: Universitas Gadjah Mada (UGM)
-tags: [physics, mechanics, classical physics]
+tags:
+ - physics
+ - mechanics
 ---
 
 # MGM211104 — Fisika Dasar I (Basic Physics I)

@@ -35,10 +35,10 @@ Statistical physics bridges the microscopic world of atoms and molecules with ma
 - **Stirling's approximation:** ln N! ≈ N ln N - N
 
 - **The Einstein solid:** N oscillators, q quanta
-  ```
-  Ω(N,q) = (q+N-1)!/(q!(N-1)!)
-  S = k_B [(N+q)ln(N+q) - N ln N - q ln q]
-  ```
+ ```
+ Ω(N,q) = (q+N-1)!/(q!(N-1)!)
+ S = k_B [(N+q)ln(N+q) - N ln N - q ln q]
+ ```
 
 - **Temperature as a statistical concept:** 1/T = ∂S/∂U
 
@@ -47,37 +47,37 @@ Statistical physics bridges the microscopic world of atoms and molecules with ma
 - **Microcanonical ensemble:** fixed U, V, N — the most fundamental
 
 - **Canonical ensemble:** fixed T, V, N (Boltzmann distribution)
-  - **Partition function:** Z = Σ_i e^{-βE_i}
-  - **Boltzmann factor:** P_i = e^{-βE_i}/Z
-  - **Connection to thermodynamics:**
-    - F = -k_B T ln Z (Helmholtz free energy)
-    - U = ⟨E⟩ = -∂ ln Z/∂β
-    - S = k_B(ln Z + β⟨E⟩)
+ - **Partition function:** Z = Σ_i e^{-βE_i}
+ - **Boltzmann factor:** P_i = e^{-βE_i}/Z
+ - **Connection to thermodynamics:**
+ - F = -k_B T ln Z (Helmholtz free energy)
+ - U = ⟨E⟩ = -∂ ln Z/∂β
+ - S = k_B(ln Z + β⟨E⟩)
 
 - **Grand canonical ensemble:** fixed μ, V, T (variable particle number)
-  - Grand partition function: Ξ = Σ_N Σ_i e^{-β(E_i - μN)}
-  - Fluctuations in particle number
+ - Grand partition function: Ξ = Σ_N Σ_i e^{-β(E_i - μN)}
+ - Fluctuations in particle number
 
 ### Unit 3: Statistical Thermodynamics (Weeks 11–14)
 
 - Equipartition theorem: each quadratic degree of freedom gets ½k_B T of energy
 
 - **Ideal gases:**
-  - Maxwell-Boltzmann distribution of speeds:
-    f(v) = 4π (m/2πkT)^{3/2} v² exp(-mv²/(2kT))
-  - Sackur-Tetrode equation for monatomic ideal gas entropy
+ - Maxwell-Boltzmann distribution of speeds:
+ f(v) = 4π (m/2πkT)^{3/2} v² exp(-mv²/(2kT))
+ - Sackur-Tetrode equation for monatomic ideal gas entropy
 
 - **Photon gas (blackbody radiation):** Planck distribution, Stefan-Boltzmann law
 
 - **Phonons in solids:** Debye model T³ law at low temperatures
 
 - **Fermi-Dirac statistics** (fermions, Pauli exclusion principle)
-  - f(E) = 1/(e^{(E-μ)/kT} + 1)
-  - Fermi energy, electron gas in metals
+ - f(E) = 1/(e^{(E-μ)/kT} + 1)
+ - Fermi energy, electron gas in metals
 
 - **Bose-Einstein statistics** (bosons)
-  - f(E) = 1/(e^{(E-μ)/kT} - 1)
-  - Bose-Einstein condensation
+ - f(E) = 1/(e^{(E-μ)/kT} - 1)
+ - Bose-Einstein condensation
 
 ### Unit 4: Phase Transitions (Weeks 15–16)
 
@@ -90,8 +90,8 @@ Statistical physics bridges the microscopic world of atoms and molecules with ma
 - **Order parameters:** magnetization for ferromagnet, density for liquid-gas
 
 - **Landau theory** of phase transitions:
-  - Free energy expansion in powers of order parameter
-  - Critical exponents and universality
+ - Free energy expansion in powers of order parameter
+ - Critical exponents and universality
 
 - **Ising model** and exact solution in 1D (brief)
 
@@ -100,14 +100,14 @@ Statistical physics bridges the microscopic world of atoms and molecules with ma
 ## 🔬 Key Formulas
 
 ```
-Boltzmann:          S = k_B ln Ω
-Partition fn:       Z = Σ e^{-βE_i}
-Free energy:        F = -k_B T ln Z
-Equipartition:      ⟨E⟩ = ½k_B T per quadratic DOF
-Maxwell-Boltzmann:  f(v) = 4π(m/2πkT)^{3/2} v² e^{-mv²/(2kT)}
-Fermi-Dirac:        f(E) = 1/(e^{(E-μ)/kT} + 1)
-Bose-Einstein:      f(E) = 1/(e^{(E-μ)/kT} - 1)
-Planck:             u(ω) = (ℏω³/π²c³)/(e^{ℏω/kT} - 1)
+Boltzmann: S = k_B ln Ω
+Partition fn: Z = Σ e^{-βE_i}
+Free energy: F = -k_B T ln Z
+Equipartition: ⟨E⟩ = ½k_B T per quadratic DOF
+Maxwell-Boltzmann: f(v) = 4π(m/2πkT)^{3/2} v² e^{-mv²/(2kT)}
+Fermi-Dirac: f(E) = 1/(e^{(E-μ)/kT} + 1)
+Bose-Einstein: f(E) = 1/(e^{(E-μ)/kT} - 1)
+Planck: u(ω) = (ℏω³/π²c³)/(e^{ℏω/kT} - 1)
 ```
 
 ---

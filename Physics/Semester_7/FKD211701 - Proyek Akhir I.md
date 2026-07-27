@@ -25,45 +25,45 @@ The first phase of the final capstone project — students select a research top
 ### Phase 1: Topic Selection and Proposal (Weeks 1–4)
 
 - **Selecting a research area:**
-  - Geophysics and Earth observation
-  - Atmospheric physics and remote sensing
-  - Nuclear/particle physics and instrumentation
-  - Computational physics and simulation
-  - Materials science and sensor development
+ - Geophysics and Earth observation
+ - Atmospheric physics and remote sensing
+ - Nuclear/particle physics and instrumentation
+ - Computational physics and simulation
+ - Materials science and sensor development
 
 - **Finding a supervisor:** approaching faculty, matching interests
 
 - **Narrowing the topic:** from broad area to specific question
 
 - **Writing a research proposal:**
-  ```
-  1. Introduction (2-3 pages): background, motivation, research questions
-  2. Literature review (5-8 pages): state of the art, gaps
-  3. Methodology (3-5 pages): experiments/simulation/computation
-  4. Timeline (1 page): weekly milestones
-  5. Expected outcomes and significance
-  6. References (minimum 20 peer-reviewed sources)
-  ```
+ ```
+ 1. Introduction (2-3 pages): background, motivation, research questions
+ 2. Literature review (5-8 pages): state of the art, gaps
+ 3. Methodology (3-5 pages): experiments/simulation/computation
+ 4. Timeline (1 page): weekly milestones
+ 5. Expected outcomes and significance
+ 6. References (minimum 20 peer-reviewed sources)
+ ```
 
 - **Proposal defense:** presenting to a panel of 2-3 faculty members
 
 ### Phase 2: Literature Review and Methods (Weeks 5–10)
 
 - **Literature review techniques:**
-  - Database searches: Google Scholar, arXiv, Scopus, Web of Science
-  - Citation tracking: forward and backward searching
-  - Critical reading: evaluating methodology, identifying limitations
-  - Reference management: Zotero, Mendeley
+ - Database searches: Google Scholar, arXiv, Scopus, Web of Science
+ - Citation tracking: forward and backward searching
+ - Critical reading: evaluating methodology, identifying limitations
+ - Reference management: Zotero, Mendeley
 
 - **Research design:**
-  - Experimental design: controls, variables, sample size
-  - Computational design: validation, verification, benchmarking
-  - Analytical design: assumptions, approximations, error bounds
+ - Experimental design: controls, variables, sample size
+ - Computational design: validation, verification, benchmarking
+ - Analytical design: assumptions, approximations, error bounds
 
 - **Data collection planning:**
-  - Equipment and materials list
-  - Data storage and backup protocols
-  - Timeline for measurements
+ - Equipment and materials list
+ - Data storage and backup protocols
+ - Timeline for measurements
 
 - **Ethical considerations** in physics research
 
@@ -80,17 +80,17 @@ The first phase of the final capstone project — students select a research top
 - **Progress presentations** to research group
 
 - **Milestone reporting:**
-  - Literature review draft
-  - Methodology document
-  - Initial results (even if negative — document everything!)
+ - Literature review draft
+ - Methodology document
+ - Initial results (even if negative — document everything!)
 
 - **Final report of Phase 1:**
-  ```
-  Updated proposal with preliminary data
-  Refined methodology based on pilot work
-  Literature review (minimum 25 references)
-  Phase 2 work plan with specific weekly tasks
-  ```
+ ```
+ Updated proposal with preliminary data
+ Refined methodology based on pilot work
+ Literature review (minimum 25 references)
+ Phase 2 work plan with specific weekly tasks
+ ```
 
 ---
 
@@ -98,11 +98,11 @@ The first phase of the final capstone project — students select a research top
 
 ```
 Research cycle:
-  Question → Hypothesis → Method → Data → Analysis → Conclusion → New questions
+ Question → Hypothesis → Method → Data → Analysis → Conclusion → New questions
 
-Experimental:    Control → Treat → Measure → Analyze
-Computational:   Model → Implement → Validate → Run → Analyze
-Observational:   Identify → Observe → Collect → Analyze → Interpret
+Experimental: Control → Treat → Measure → Analyze
+Computational: Model → Implement → Validate → Run → Analyze
+Observational: Identify → Observe → Collect → Analyze → Interpret
 ```
 
 ---

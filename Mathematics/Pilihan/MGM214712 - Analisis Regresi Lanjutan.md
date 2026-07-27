@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Advanced Regression Analysis
 
-**Course Code:** MGM214712  
-**SKS:** 3 (3-0)  
-**Semester:** 6  
-**Prerequisites:** Statistika Dasar, Aljabar Linear  
+**Course Code:** MGM214712 
+**SKS:** 3 (3-0) 
+**Semester:** 6 
+**Prerequisites:** Statistika Dasar, Aljabar Linear 
 
 ---
 
@@ -24,9 +24,8 @@ language: "id-ID"
 Analisis Regresi Lanjutan melampaui OLS (Ordinary Least Squares) dasar. Mata kuliah ini membahas model untuk data multivariat, data kategorik (Logistik), serta teknik regularisasi untuk data dimensi tinggi (Ridge/LASSO). Fokus utama adalah pemilihan model, diagnostik residual, dan akurasi prediksi untuk model geodetik yang kompleks.
 
 ## 1. Regresi Linear Berganda (MLR)
-$$
 
-Y = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k + \varepsilon$$- **Asumsi:** Linearitas, Homoskedastisitas, Independensi, Normalitas.
+$$Y = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k + \varepsilon$$- **Asumsi:** Linearitas, Homoskedastisitas, Independensi, Normalitas.
 
 - **Masalah:** Multikolinearitas (cek VIF).
 
@@ -40,9 +39,9 @@ Y = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k + \varepsilon$$- **Asumsi:** Lin
 
 Untuk mencegah overfitting dan menangani multikolinearitas:
 
-- **Ridge:** Penalty$L_2$ ($\sum \beta^2$).
+- **Ridge:** Penalty $L_2$ ($\sum \beta^2$).
 
-- **LASSO:** Penalty $L_1$ ($\sum |\beta|$); dapat melakukan pemilihan fitur (beberapa $\beta \to 0$).
+- **LASSO:** Penalty $L_1$ ($\sum |\beta| $); dapat melakukan pemilihan fitur (beberapa $\beta \to 0$).
 
 ## 4. Referensi
 

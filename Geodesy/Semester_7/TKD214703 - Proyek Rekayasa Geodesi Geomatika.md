@@ -1,8 +1,8 @@
 # Proyek Rekayasa Geodesi Geomatika
 
-**Kode:** TKD214703  
-**Sifat:** Wajib  
-**SKS:** 4  
+**Kode:** TKD214703 
+**Sifat:** Wajib 
+**SKS:** 4 
 
 ## Deskripsi
 
@@ -38,8 +38,8 @@ Setelah menyelesaikan proyek ini, mahasiswa mampu:
 #### A. Survei dan Pengumpulan Data
 
 - Implementasi metodologi survei:
-  - Survei terestris: penentuan titik kontrol, leveling, total station, GPS/GNSS
-  - Survei udara: pemetaan drone/fotogrametri
+ - Survei terestris: penentuan titik kontrol, leveling, total station, GPS/GNSS
+ - Survei udara: pemetaan drone/fotogrametri
 
 - Dokumentasi metadata dan catatan lapangan
 

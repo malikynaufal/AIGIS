@@ -27,10 +27,10 @@ Chemistry for physics students — understanding atomic structure, chemical bond
 - **Historical development:** Thomson, Rutherford, Bohr models
 
 - **Quantum numbers:** n, l, m_l, m_s — describing electron states
-  - n = 1,2,3,... (energy/shell)
-  - l = 0,1,...,n-1 (shape: s,p,d,f)
-  - m_l = -l,...,+l (orientation)
-  - m_s = ±½ (spin)
+ - n = 1,2,3,... (energy/shell)
+ - l = 0,1,...,n-1 (shape: s,p,d,f)
+ - m_l = -l,...,+l (orientation)
+ - m_s = ±½ (spin)
 
 - **Electron configuration** and the Aufbau principle
 
@@ -71,9 +71,9 @@ Chemistry for physics students — understanding atomic structure, chemical bond
 - From molecules to solids: **formation of energy bands**
 
 - **Band theory of solids:** conductors, semiconductors, insulators
-  - Valence band, conduction band, band gap (Eg)
-  - Intrinsic vs. extrinsic semiconductors (n-type, p-type)
-  - Fermi level and its role in conductivity
+ - Valence band, conduction band, band gap (Eg)
+ - Intrinsic vs. extrinsic semiconductors (n-type, p-type)
+ - Fermi level and its role in conductivity
 
 - Application: why silicon is the basis of modern electronics
 
@@ -94,16 +94,16 @@ Chemistry for physics students — understanding atomic structure, chemical bond
 ## 🔬 Key Concepts
 
 ```
-Energy levels:      E_n = -13.6 eV · Z²/n²  (hydrogen)
-Bragg's law:        nλ = 2d sinθ
-Band gap:           Eg (eV) → determines material class
-Fermi-Dirac:        f(E) = 1/(exp((E-EF)/kT) + 1)
+Energy levels: E_n = -13.6 eV · Z²/n² (hydrogen)
+Bragg's law: nλ = 2d sinθ
+Band gap: Eg (eV) → determines material class
+Fermi-Dirac: f(E) = 1/(exp((E-EF)/kT) + 1)
 
 Quantum numbers:
-  n = 1,2,3,...
-  l = 0,...,n-1
-  m_l = -l,...,+l
-  m_s = ±½
+ n = 1,2,3,...
+ l = 0,...,n-1
+ m_l = -l,...,+l
+ m_s = ±½
 ```
 
 ---

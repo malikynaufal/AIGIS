@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Decision Science
 
-**Course Code:** MGM214715  
-**SKS:** 3 (3-0)  
-**Semester:** 6  
-**Prerequisites:** Statistika Dasar, Aljabar Linear  
+**Course Code:** MGM214715 
+**SKS:** 3 (3-0) 
+**Semester:** 6 
+**Prerequisites:** Statistika Dasar, Aljabar Linear 
 
 ---
 
@@ -32,14 +32,12 @@ Pengambilan Keputusan (Decision Science) adalah disiplin yang menggabungkan stat
 Struktur pohon yang menggambarkan keputusan (decision nodes), kejadian (chance nodes), dan hasil (end nodes).
 
 ### 1.1 Expected Monetary Value (EMV)
-$$
 
-\text{EMV} = \sum_i P_i \cdot V_i$$di mana$P_i$ = probabilitas hasil ke-$i$, $V_i$ = nilai hasil ke-$i$.
+$$\text{EMV} = \sum_i P_i \cdot V_i$$di mana $P_i$= probabilitas hasil ke-$i$,$V_i$= nilai hasil ke-$i$.
 
 ### 1.2 Expected Value of Perfect Information (EVPI)
-$$
 
-\text{EVPI} = \text{EVPI}_{\text{with PI}} - \text{EVPI}_{\text{without PI}}$$Nilai maksimum yang harus dikeluarkan untuk informasi sempurna.
+$$\text{EVPI} = \text{EVPI}_{\text{with PI}} - \text{EVPI}_{\text{without PI}} $$Nilai maksimum yang harus dikeluarkan untuk informasi sempurna.
 
 ## 2. AHP (Analytical Hierarchy Process)
 
@@ -47,7 +45,7 @@ Metode Saaty untuk keputusan multi-kriteria.
 
 ### 2.1 Matriks Perbandingan
 
-Bangun matriks berpasangan$A$di mana$a_{ij}$= tingkat penting kriteria$i$relatif terhadap$i$.
+Bangun matriks berpasangan $A $di mana $a_{ij} $= tingkat penting kriteria $i $relatif terhadap $i$.
 
 | Skor | Makna |
 |------|-------|
@@ -61,7 +59,7 @@ Bangun matriks berpasangan$A$di mana$a_{ij}$= tingkat penting kriteria$i$relatif
 
 - Hitung vek eigen dominan (bobot kriteria).
 
-- Cek konsistensi: $\text{CR} = \frac{CI}{RI} < 0.1$(di mana$CI = \frac{\lambda_{\max} - n}{n-1}$).
+- Cek konsistensi: $\text{CR} = \frac{CI}{RI} < 0.1$(di mana $CI = \frac{\lambda_{\max} - n}{n-1} $).
 
 ## 3. TOPSIS (Technique for Order Preference)
 
@@ -71,7 +69,7 @@ Bangun matriks berpasangan$A$di mana$a_{ij}$= tingkat penting kriteria$i$relatif
 2. Hitung matriks terbobot.
 3. Tentukan solusi ideal positif (PIS) dan negatif (NIS).
 4. Hitung jarak ke PIS ($S^+$) dan NIS ($S^-$).
-5. Hitung skor: $C^* = \frac{S^-}{S^+ + S^-}$(semakin dekat ke 1, semakin baik).
+5. Hitung skor: $C^* = \frac{S^-}{S^+ + S^-} $(semakin dekat ke 1, semakin baik).
 
 ## 4. Aplikasi Geospasial
 

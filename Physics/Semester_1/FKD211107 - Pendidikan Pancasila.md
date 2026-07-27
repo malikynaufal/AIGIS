@@ -39,11 +39,11 @@ Study of Pancasila as the philosophical foundation of the Indonesian state — t
 ### Unit 2: The Five Principles (Weeks 5–10)
 
 - **Silas (Pillars):**
-  1. **Ketuhanan Yang Maha Esa** — Belief in the One and Only God
-  2. **Kemanusiaan yang Adil dan Beradab** — Just and Civilized Humanity
-  3. **Persatuan Indonesia** — Unity of Indonesia
-  4. **Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan** — Democracy guided by wisdom in deliberation/representation
-  5. **Keadilan Sosial bagi Seluruh Rakyat Indonesia** — Social Justice for All Indonesians
+ 1. **Ketuhanan Yang Maha Esa** — Belief in the One and Only God
+ 2. **Kemanusiaan yang Adil dan Beradab** — Just and Civilized Humanity
+ 3. **Persatuan Indonesia** — Unity of Indonesia
+ 4. **Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan** — Democracy guided by wisdom in deliberation/representation
+ 5. **Keadilan Sosial bagi Seluruh Rakyat Indonesia** — Social Justice for All Indonesians
 
 - Each Sila in depth: philosophical origins, interpretations, applications
 

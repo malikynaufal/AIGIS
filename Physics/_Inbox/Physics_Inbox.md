@@ -84,9 +84,9 @@ created: 2026-07-27
 
 **Damped oscillator response:**
 ```
-ω_d = √(ω₀² - γ²)   (damped frequency)
-Q = ω₀/(2γ)          (quality factor)
-τ = 1/γ              (decay time constant)
+ω_d = √(ω₀² - γ²) (damped frequency)
+Q = ω₀/(2γ) (quality factor)
+τ = 1/γ (decay time constant)
 ```
 Check against my Python simulation — was getting τ wrong.
 

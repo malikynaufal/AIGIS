@@ -61,23 +61,23 @@ Introduction to programming using Python — the dominant language in scientific
 ### Unit 3: Scientific Python (Weeks 9–12)
 
 - **NumPy:** arrays, vectorized operations, linear algebra
-  ```python
-  import numpy as np
-  a = np.array([1, 2, 3])
-  b = np.array([4, 5, 6])
-  print(np.dot(a, b))  # 32
-  ```
+ ```python
+ import numpy as np
+ a = np.array([1, 2, 3])
+ b = np.array([4, 5, 6])
+ print(np.dot(a, b)) # 32
+ ```
 
 - **Matplotlib:** plotting data, customizing graphs
-  ```python
-  import matplotlib.pyplot as plt
-  x = np.linspace(0, 2*np.pi, 100)
-  plt.plot(x, np.sin(x))
-  plt.xlabel('x')
-  plt.ylabel('sin(x)')
-  plt.title('Sine Wave')
-  plt.show()
-  ```
+ ```python
+ import matplotlib.pyplot as plt
+ x = np.linspace(0, 2*np.pi, 100)
+ plt.plot(x, np.sin(x))
+ plt.xlabel('x')
+ plt.ylabel('sin(x)')
+ plt.title('Sine Wave')
+ plt.show()
+ ```
 
 - Reading/writing data files (CSV, text)
 
@@ -86,15 +86,15 @@ Introduction to programming using Python — the dominant language in scientific
 ### Unit 4: Physics Applications (Weeks 13–16)
 
 - **Projectile motion simulation:**
-  ```python
-  import numpy as np
-  g = 9.81
-  v0, theta = 50, np.radians(45)
-  t = np.linspace(0, 2*v0*np.sin(theta)/g, 100)
-  x = v0 * np.cos(theta) * t
-  y = v0 * np.sin(theta) * t - 0.5 * g * t**2
-  plt.plot(x, y)
-  ```
+ ```python
+ import numpy as np
+ g = 9.81
+ v0, theta = 50, np.radians(45)
+ t = np.linspace(0, 2*v0*np.sin(theta)/g, 100)
+ x = v0 * np.cos(theta) * t
+ y = v0 * np.sin(theta) * t - 0.5 * g * t**2
+ plt.plot(x, y)
+ ```
 
 - Numerical integration (trapezoidal rule)
 

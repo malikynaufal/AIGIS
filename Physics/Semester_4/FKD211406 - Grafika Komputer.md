@@ -45,8 +45,8 @@ Computer graphics for physics — transforming data and mathematical models into
 - **Translation and scaling in 3D** using 4×4 homogeneous coordinates
 
 - **Projections:**
-  - Orthographic projection (parallel lines remain parallel)
-  - Perspective projection (foreshortening)
+ - Orthographic projection (parallel lines remain parallel)
+ - Perspective projection (foreshortening)
 
 - **View frustum** and aspect ratio
 
@@ -55,14 +55,14 @@ Computer graphics for physics — transforming data and mathematical models into
 ### Unit 3: Scientific Visualization (Weeks 9–12)
 
 - **Scalar field visualization:**
-  - Color maps (colormaps for physics: 'viridis', 'inferno', 'coolwarm')
-  - Contour plots and filled contours
-  - Isosurfaces (marching cubes) for 3D scalar fields
+ - Color maps (colormaps for physics: 'viridis', 'inferno', 'coolwarm')
+ - Contour plots and filled contours
+ - Isosurfaces (marching cubes) for 3D scalar fields
 
 - **Vector field visualization:**
-  - Arrow plots, quiver plots
-  - Streamlines and flow lines
-  - Vector field topology
+ - Arrow plots, quiver plots
+ - Streamlines and flow lines
+ - Vector field topology
 
 - **Surface rendering:** wireframe, shaded, texture-mapped
 
@@ -75,14 +75,14 @@ Computer graphics for physics — transforming data and mathematical models into
 - **3D interactive plotting** with `plotly`, `mayavi`
 
 - **Using Python's graphics libraries:**
-  - `matplotlib.animation` — physics simulations
-  - `ipywidgets` — interactive parameter exploration
-  - `numpy-stl` — 3D mesh processing
+ - `matplotlib.animation` — physics simulations
+ - `ipywidgets` — interactive parameter exploration
+ - `numpy-stl` — 3D mesh processing
 
 - **Geophysical data visualization:**
-  - DEM (digital elevation model) rendering
-  - Terrain shading and slope maps
-  - Heat maps for gravity data
+ - DEM (digital elevation model) rendering
+ - Terrain shading and slope maps
+ - Heat maps for gravity data
 
 - **Color theory** for scientific communication (e.g., perceptually uniform colormaps)
 
@@ -93,13 +93,13 @@ Computer graphics for physics — transforming data and mathematical models into
 ## 🔬 Key Transformations
 
 ```
-2D Rotation:     [x']   [cosθ  -sinθ] [x]
-                 [y'] = [sinθ   cosθ] [y]
+2D Rotation: [x'] [cosθ -sinθ] [x]
+ [y'] = [sinθ cosθ] [y]
 
-3D Homogeneous:  T = [1 0 0 tx]    Rx = [1   0    0  0]
-                      [0 1 0 ty]         [0 cosθ -sinθ 0]
-                      [0 0 1 tz]         [0 sinθ  cosθ 0]
-                      [0 0 0  1]         [0   0    0  1]
+3D Homogeneous: T = [1 0 0 tx] Rx = [1 0 0 0]
+ [0 1 0 ty] [0 cosθ -sinθ 0]
+ [0 0 1 tz] [0 sinθ cosθ 0]
+ [0 0 0 1] [0 0 0 1]
 
 Perspective projection: x' = x·d/z, y' = y·d/z
 ```

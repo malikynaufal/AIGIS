@@ -2,11 +2,11 @@
 title: "Sensor dan Aktuator"
 subject: "Fisika Pilihan"
 tags:
-  - sensors
-  - actuators
-  - microcontrollers
-  - calibration
-  - SKS: 3
+ - sensors
+ - actuators
+ - microcontrollers
+ - calibration
+ - SKS: 3
 ---
 
 # FKD214706 — Sensor dan Aktuator
@@ -22,21 +22,35 @@ Sensors (sensor) and actuators (aktuator) form the critical interface between ph
 
 ### 1.1 Static Characteristics
 
-The relationship between input (stimulus) $x$and output (response)$y$is characterized by:
+The relationship between input (stimulus) $x $and output (response) $y $is characterized by:
 
-**Sensitivity** (sensitivitas): Rate of change of output with respect to input:$$S = \frac{\partial y}{\partial x} \bigg|_{x_0}$$Example: A thermocouple with$S = 41\;\mu\text{V/°C}$produces 41 μV per degree change.
+**Sensitivity** (sensitivitas): Rate of change of output with respect to input
+:
 
-**Linearity** (linearitas): Maximum deviation from ideal linear response:$$\text{Linearity} = \frac{\max|y_i - (mx_i + b)|}{y_{\text{FS}}} \times 100\%$$**Hysteresis** (histeresis): Difference in output for increasing vs. decreasing input:$$H = \frac{\max|y_{\uparrow}(x) - y_{\downarrow}(x)|}{y_{\text{FS}}} \times 100\%$$### 1.2 Dynamic Characteristics
+$$S = \frac{\partial y}{\partial x} \bigg|_{x_0} $$Example: A thermocouple with $S = 41\;\mu\text{V/°C} $produces 41 μV per degree change.
 
-A sensor's response to time-varying inputs is modeled as a differential equation. First-order sensor:$$\tau \frac{dy}{dt} + y = K \cdot x(t)$$where$\tau$is the time constant (konstanta waktu) and$K$is the steady-state gain. For a step input$x(t) = u_0 \cdot u(t)$:
-$$
+**Linearity** (linearitas): Maximum deviation from ideal linear response
+:
 
-y(t) = K u_0 \left(1 - e^{-t/\tau}\right)$$A sensor reaches 99% of final value at$t = 5\tau$.
+$$\text{Linearity} = \frac{\max|y_i - (mx_i + b)|}{y_{\text{FS}}} \times 100\%$$
+
+**Hysteresis** (histeresis): Difference in output for increasing vs. decreasing input
+:
+
+$$H = \frac{\max|y_{\uparrow}(x) - y_{\downarrow}(x)|}{y_{\text{FS}}} \times 100\%$$
+
+### 1.2 Dynamic Characteristics
+
+A sensor's response to time-varying inputs is modeled as a differential equation. First-order sensor
+:
+
+$$\tau \frac{dy}{dt} + y = K \cdot x(t)$$where $\tau $is the time constant (konstanta waktu) and $K $is the steady-state gain. For a step input $x(t) = u_0 \cdot u(t)$:
+
+$$y(t) = K u_0 \left(1 - e^{-t/\tau}\right)$$A sensor reaches 99% of final value at $t = 5\tau$.
 
 Second-order sensor (model umum):
-$$
 
-\frac{1}{\omega_n^2}\ddot{y} + \frac{2\zeta}{\omega_n}\dot{y} + y = K \cdot x(t)$$where$\omega_n$is the natural frequency (frekuensi alami) and$\zeta$is the damping ratio (rasio redaman).
+$$\frac{1}{\omega_n^2}\ddot{y} + \frac{2\zeta}{\omega_n}\dot{y} + y = K \cdot x(t)$$where $\omega_n $is the natural frequency (frekuensi alami) and $\zeta $is the damping ratio (rasio redaman).
 
 ---
 
@@ -56,22 +70,27 @@ $$
 
 ### 2.2 Piezoelectric Sensors
 
-The piezoelectric effect (efek piezoelektrik) generates charge$q$proportional to applied force$F$:
-$$
+The piezoelectric effect (efek piezoelektrik) generates charge $q $proportional to applied force $F$:
 
-q = d \cdot F$$where$d$is the piezoelectric constant (typically 2–500 pC/N). The open-circuit voltage:$$V = \frac{q}{C_p} = \frac{d \cdot F}{C_p}$$where$C_p$is the sensor capacitance. Piezoelectric sensors cannot measure DC signals due to charge leakage through$R_p$:
-$$
+$$q = d \cdot F$$where $d $is the piezoelectric constant (typically 2–500 pC/N). The open-circuit voltage
+:
 
-V(t) = V_0 e^{-t/(R_p C_p)}$$The low-frequency cutoff:$f_{\text{low}} = 1/(2\pi R_p C_p)$. For seismic sensors, charge amplifiers extend this to very low frequencies.
+$$V = \frac{q}{C_p} = \frac{d \cdot F}{C_p} $$where $C_p $is the sensor capacitance. Piezoelectric sensors cannot measure DC signals due to charge leakage through $R_p$:
+
+$$V(t) = V_0 e^{-t/(R_p C_p)} $$The low-frequency cutoff:$f_{\text{low}} = 1/(2\pi R_p C_p)$. For seismic sensors, charge amplifiers extend this to very low frequencies.
 
 ### 2.3 MEMS Accelerometers
 
 MEMS (Micro-Electro-Mechanical Systems) accelerometers use a suspended proof mass with capacitive sensing:
-$$
 
-\Delta C = C_0 \frac{\Delta x}{d_0}$$Sensitivity depends on mass-spring design:$$\Delta x = \frac{ma}{k} = \frac{a}{\omega_n^2}$$Modern MEMS accelerometers (e.g., Analog Devices ADXL355) achieve:
+$$\Delta C = C_0 \frac{\Delta x}{d_0
+}
 
-- Noise density:$25\;\mu g/\sqrt{\text{Hz}}$- Bias stability:$0.25\;\text{mg}$over temperature
+$$Sensitivity depends on mass-spring design:$$
+
+\Delta x = \frac{ma}{k} = \frac{a}{\omega_n^2} $$Modern MEMS accelerometers (e.g., Analog Devices ADXL355) achieve:
+
+- Noise density:$25\;\mu g/\sqrt{\text{Hz}} $- Bias stability:$0.25\;\text{mg} $over temperature
 
 - Bandwidth: DC to 1.5 kHz
 
@@ -81,13 +100,39 @@ $$
 
 ### 3.1 Fundamental Noise Sources
 
-**Thermal (Johnson–Nyquist) noise**:$$V_n = \sqrt{4 k_B T R \Delta f}$$where$k_B = 1.38 \times 10^{-23}$J/K,$T$is temperature (K),$R$is resistance (Ω), and$\Delta f$is bandwidth (Hz).
+**Thermal (Johnson–Nyquist) noise**
+:
 
-**Shot noise** (noise tembakan):$$i_n = \sqrt{2 e I \Delta f}$$where$e = 1.6 \times 10^{-19}$C and$I$ is the average current.
+$$V_n = \sqrt{4 k_B T R \Delta f} $$where $k_B = 1.38 \times 10^{-23} $J/K,$T $is temperature (K),$R $is resistance (Ω), and $\Delta f $is bandwidth (Hz).
 
-**1/$f$(flicker) noise** (noise kedip):$$V_{1/f}^2 = \frac{K_f}{f^n} \Delta f, \quad n \approx 1$$### 3.2 Signal-to-Noise Ratio$$\text{SNR} = 10\log_{10}\left(\frac{P_{\text{signal}}}{P_{\text{noise}}}\right) \;\text{dB}$$### 3.3 Noise Figure and Equivalent Input Noise
+**Shot noise** (noise tembakan)
+:
 
-The noise figure (NF) quantifies degradation by a signal chain:$$\text{NF} = 10\log_{10}(F), \quad F = \frac{\text{SNR}_{\text{in}}}{\text{SNR}_{\text{out}}}$$For cascaded stages, the Friis formula:$$F_{\text{total}} = F_1 + \frac{F_2 - 1}{G_1} + \frac{F_3 - 1}{G_1 G_2} + \cdots$$This shows the first stage dominates the system noise — the rationale for low-noise amplifiers (LNA) as the front end.
+$$i_n = \sqrt{2 e I \Delta f} $$where $e = 1.6 \times 10^{-19} $C and $I$ is the average current.
+
+**1/$f$(flicker) noise** (noise kedip)
+:
+
+$$V_{1/f}^2 = \frac{K_f}{f^n} \Delta f, \quad n \approx 1$$
+
+### 3.2 Signal-to-Noise Rati
+o
+
+$$\text{SNR} = 10\log_{10}\left(\frac{P_{\text{signal}}}{P_{\text{noise}}}\right) \;\text{dB} $$
+
+### 3.3 Noise Figure and Equivalent Input Noise
+
+The noise figure (NF) quantifies degradation by a signal chain
+:
+
+$$\text{NF} = 10\log_{10}(F), \quad F = \frac{\text{SNR}_{\text{in}}}{\text{SNR}_{\text{out}}} $$
+
+For cascaded stages, the Friis formula
+:
+
+$$F_{\text{total}} = F_1 + \frac{F_2 - 1}{G_1} + \frac{F_3 - 1}{G_1 G_2} + \cdots$$
+
+This shows the first stage dominates the system noise — the rationale for low-noise amplifiers (LNA) as the front end.
 
 ---
 
@@ -95,7 +140,10 @@ The noise figure (NF) quantifies degradation by a signal chain:$$\text{NF} = 10\
 
 ### 4.1 Calibration Methods
 
-**Comparison method**: Compare sensor output against a reference standard under controlled conditions.$$y = a_0 + a_1 x + a_2 x^2 + \cdots + \epsilon$$Calibration coefficients$a_i$determined by least-squares regression.
+**Comparison method**: Compare sensor output against a reference standard under controlled conditions
+.
+
+$$y = a_0 + a_1 x + a_2 x^2 + \cdots + \epsilon$$Calibration coefficients $a_i $determined by least-squares regression.
 
 **Substitution method**: Replace the DUT (device under test) with a calibrated standard and compare readings.
 
@@ -103,7 +151,12 @@ The noise figure (NF) quantifies degradation by a signal chain:$$\text{NF} = 10\
 
 ### 4.2 Calibration Uncertainty
 
-The combined standard uncertainty from calibration:$$u_c = \sqrt{u_{\text{ref}}^2 + u_{\text{repeatability}}^2 + u_{\text{hysteresis}}^2 + u_{\text{environment}}^2}$$Expanded uncertainty at 95% confidence:$U = k \cdot u_c$where$k = 2$for normal distribution.
+The combined standard uncertainty from calibration
+:
+
+$$u_c = \sqrt{u_{\text{ref}}^2 + u_{\text{repeatability}}^2 + u_{\text{hysteresis}}^2 + u_{\text{environment}}^2} $$
+
+Expanded uncertainty at 95% confidence:$U = k \cdot u_c $where $k = 2 $for normal distribution.
 
 ---
 
@@ -111,7 +164,10 @@ The combined standard uncertainty from calibration:$$u_c = \sqrt{u_{\text{ref}}^
 
 ### 5.1 ADC Considerations
 
-The ADC resolution (resolusi ADC) determines the minimum detectable signal change:$$\text{LSB} = \frac{V_{\text{ref}}}{2^n}$$For a 12-bit ADC with$V_{\text{ref}} = 3.3$V: LSB = 0.81 mV.
+The ADC resolution (resolusi ADC) determines the minimum detectable signal change
+:
+
+$$\text{LSB} = \frac{V_{\text{ref}}}{2^n} $$For a 12-bit ADC with $V_{\text{ref}} = 3.3 $V: LSB = 0.81 mV.
 
 | Microcontroller | ADC Bits | Sample Rate | Interface |
 |---|---|---|---|
@@ -132,7 +188,7 @@ A tiltmeter (inklinometer) network on Mount Merapi uses MEMS accelerometers (Ana
 
 - Accuracy: 1 μrad tilt change detection
 
-- Cost per station: <$200 (vs. $5,000+ for commercial systems)
+- Cost per station: <$200 (vs.$5,000+ for commercial systems)
 
 The network provides real-time tilt data to BPPTKG (Pusat Vulkanologi dan Mitigasi Bencana Geologi) for Merapi eruption early warning.
 

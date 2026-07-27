@@ -77,14 +77,14 @@ Linear algebra provides the mathematical language for describing spaces, transfo
 ## 🔬 Key Concepts
 
 ```
-Dot Product:        a · b = a₁b₁ + a₂b₂ + a₃b₃
-Cross Product:      a × b = |i  j  k |
-                            |a₁ a₂ a₃|
-                            |b₁ b₂ b₃|
+Dot Product: a · b = a₁b₁ + a₂b₂ + a₃b₃
+Cross Product: a × b = |i j k |
+ |a₁ a₂ a₃|
+ |b₁ b₂ b₃|
 
 Eigenvalue Problem: Av = λv
-Determinant:        det(A) = Σ sign(σ) ∏ a_{i,σ(i)}
-Matrix Inverse:     A⁻¹ = adj(A)/det(A)
+Determinant: det(A) = Σ sign(σ) ∏ a_{i,σ(i)}
+Matrix Inverse: A⁻¹ = adj(A)/det(A)
 ```
 
 ---

@@ -25,13 +25,13 @@ Advanced programming for scientific computing — extending Python skills with d
 ### Unit 1: Advanced Python (Weeks 1–4)
 
 - **Object-Oriented Programming:**
-  - Classes, `__init__`, `self`, inheritance, polymorphism
-  - Encapsulation, abstraction, and composition
-  - Example: `class Particle: def __init__(self, x, y, z, mass): ...`
+ - Classes, `__init__`, `self`, inheritance, polymorphism
+ - Encapsulation, abstraction, and composition
+ - Example: `class Particle: def __init__(self, x, y, z, mass): ...`
 
 - **Decorators and generators**
-  - `@timer`, `@cached` decorators
-  - Generator functions with `yield`
+ - `@timer`, `@cached` decorators
+ - Generator functions with `yield`
 
 - **File I/O:** binary files, JSON serialization, CSV writing
 
@@ -60,28 +60,28 @@ Advanced programming for scientific computing — extending Python skills with d
 ### Unit 3: Numerical Methods (Weeks 10–14)
 
 - **Numerical integration:**
-  - Trapezoidal rule, Simpson's rule
-  - Monte Carlo integration (random sampling)
+ - Trapezoidal rule, Simpson's rule
+ - Monte Carlo integration (random sampling)
 
 - **Root finding:**
-  - Bisection method
-  - Newton-Raphson method: x_{n+1} = x_n - f(x_n)/f'(x_n)
-  - Secant method (derivative-free)
+ - Bisection method
+ - Newton-Raphson method: x_{n+1} = x_n - f(x_n)/f'(x_n)
+ - Secant method (derivative-free)
 
 - **Numerical differentiation:**
-  - Forward difference: f'(x) ≈ (f(x+h) - f(x))/h
-  - Central difference (more accurate): f'(x) ≈ (f(x+h) - f(x-h))/(2h)
+ - Forward difference: f'(x) ≈ (f(x+h) - f(x))/h
+ - Central difference (more accurate): f'(x) ≈ (f(x+h) - f(x-h))/(2h)
 
 - **Numerical ODE solvers:**
-  - Euler method: y_{n+1} = y_n + h·f(x_n, y_n)
-  - **Runge-Kutta 4th order (RK4):**
-    ```python
-    k1 = h*f(x_n, y_n)
-    k2 = h*f(x_n + h/2, y_n + k1/2)
-    k3 = h*f(x_n + h/2, y_n + k2/2)
-    k4 = h*f(x_n + h, y_n + k3)
-    y_{n+1} = y_n + (k1 + 2k2 + 2k3 + k4)/6
-    ```
+ - Euler method: y_{n+1} = y_n + h·f(x_n, y_n)
+ - **Runge-Kutta 4th order (RK4):**
+ ```python
+ k1 = h*f(x_n, y_n)
+ k2 = h*f(x_n + h/2, y_n + k1/2)
+ k3 = h*f(x_n + h/2, y_n + k2/2)
+ k4 = h*f(x_n + h, y_n + k3)
+ y_{n+1} = y_n + (k1 + 2k2 + 2k3 + k4)/6
+ ```
 
 - **Linear algebra** with NumPy/SciPy: `np.linalg.solve(A, b)`, eigenvalues
 
@@ -102,13 +102,13 @@ Advanced programming for scientific computing — extending Python skills with d
 ## 🔬 Key Algorithms
 
 ```
-Bisection:           bracket root, halve interval each step
-Newton-Raphson:      x_{n+1} = x_n - f(x_n)/f'(x_n)  (quadratic convergence)
-Euler (ODE):         y_{n+1} = y_n + h·f(x_n, y_n)  (first-order)
-RK4 (ODE):           see formulas above (fourth-order, O(h⁴) local error)
-Trapezoidal:         ∫f dx ≈ Δx/2 · (f₀ + 2f₁ + 2f₂ + ... + f_N)
-Simpson:             ∫f dx ≈ Δx/3 · (f₀ + 4f₁ + 2f₂ + 4f₃ + ... + f_N)
-Monte Carlo:         I ≈ (b-a)/N · Σ f(x_i), x_i ~ Uniform(a,b)
+Bisection: bracket root, halve interval each step
+Newton-Raphson: x_{n+1} = x_n - f(x_n)/f'(x_n) (quadratic convergence)
+Euler (ODE): y_{n+1} = y_n + h·f(x_n, y_n) (first-order)
+RK4 (ODE): see formulas above (fourth-order, O(h⁴) local error)
+Trapezoidal: ∫f dx ≈ Δx/2 · (f₀ + 2f₁ + 2f₂ + ... + f_N)
+Simpson: ∫f dx ≈ Δx/3 · (f₀ + 4f₁ + 2f₂ + 4f₃ + ... + f_N)
+Monte Carlo: I ≈ (b-a)/N · Σ f(x_i), x_i ~ Uniform(a,b)
 ```
 
 ---

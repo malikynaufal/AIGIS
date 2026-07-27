@@ -33,30 +33,30 @@ Statistics is the essential tool for analyzing experimental data in physics. Thi
 - **Independence:** P(A∩B) = P(A)P(B)
 
 - **Discrete random variables:**
-  - Probability mass function (PMF)
-  - Expected value: E[X] = Σ x·P(x)
-  - Variance: Var(X) = E[X²] - (E[X])²
+ - Probability mass function (PMF)
+ - Expected value: E[X] = Σ x·P(x)
+ - Variance: Var(X) = E[X²] - (E[X])²
 
 - **Continuous random variables:**
-  - Probability density function (PDF)
-  - Cumulative distribution function (CDF): F(x) = P(X≤x)
-  - E[X] = ∫ x·f(x)dx, Var(X) = ∫ (x-μ)²f(x)dx
+ - Probability density function (PDF)
+ - Cumulative distribution function (CDF): F(x) = P(X≤x)
+ - E[X] = ∫ x·f(x)dx, Var(X) = ∫ (x-μ)²f(x)dx
 
 ### Unit 2: Important Distributions (Weeks 6–9)
 
 - **Binomial distribution:** P(k; n,p) = C(n,k)p^k(1-p)^{n-k}
-  - Mean = np, Variance = np(1-p)
+ - Mean = np, Variance = np(1-p)
 
 - **Poisson distribution:** P(k; λ) = λ^k e^{-λ}/k!
-  - Mean = λ, Variance = λ
-  - Approximation of binomial for large n, small p
+ - Mean = λ, Variance = λ
+ - Approximation of binomial for large n, small p
 
 - **Normal (Gaussian) distribution:**
-  ```
-  f(x) = (1/σ√(2π)) exp(-(x-μ)²/(2σ²))
-  ```
-  - 68-95-99.7 rule (±1σ, ±2σ, ±3σ)
-  - Central Limit Theorem: sums of i.i.d. variables → Gaussian
+ ```
+ f(x) = (1/σ√(2π)) exp(-(x-μ)²/(2σ²))
+ ```
+ - 68-95-99.7 rule (±1σ, ±2σ, ±3σ)
+ - Central Limit Theorem: sums of i.i.d. variables → Gaussian
 
 - **Exponential distribution:** f(x) = λe^{-λx}, for decay processes
 
@@ -65,19 +65,19 @@ Statistics is the essential tool for analyzing experimental data in physics. Thi
 ### Unit 3: Data Analysis and Error (Weeks 10–13)
 
 - **Measurement uncertainty:**
-  - Random vs. systematic error
-  - Standard deviation of the mean: σ̄ = σ/√N
-  - Propagation of uncertainty: if z = f(x,y), then
-    σ_z = √[(∂f/∂x)²σ_x² + (∂f/∂y)²σ_y²]
+ - Random vs. systematic error
+ - Standard deviation of the mean: σ̄ = σ/√N
+ - Propagation of uncertainty: if z = f(x,y), then
+ σ_z = √[(∂f/∂x)²σ_x² + (∂f/∂y)²σ_y²]
 
 - **Significant figures** and rounding rules
 
 - **Graphical analysis:** linearization, log-log and semi-log plots
 
 - **Least-squares linear regression:**
-  - Finding best-fit line y = mx + b
-  - Slope uncertainty and correlation coefficient r
-  - χ² minimization for nonlinear fits
+ - Finding best-fit line y = mx + b
+ - Slope uncertainty and correlation coefficient r
+ - χ² minimization for nonlinear fits
 
 ### Unit 4: Hypothesis Testing and Inference (Weeks 14–16)
 
@@ -102,9 +102,9 @@ Statistics is the essential tool for analyzing experimental data in physics. Thi
 ## 🔬 Key Formulas
 
 ```
-Mean:       μ = Σx_i/N  (population)  x̄ = Σx_i/n (sample)
-Variance:   σ² = Σ(x_i - μ)²/N
-Gaussian:   f(x) = (1/σ√(2π)) exp(-(x-μ)²/(2σ²))
+Mean: μ = Σx_i/N (population) x̄ = Σx_i/n (sample)
+Variance: σ² = Σ(x_i - μ)²/N
+Gaussian: f(x) = (1/σ√(2π)) exp(-(x-μ)²/(2σ²))
 Uncertainty propagation: σ_z² = (∂f/∂x)²σ_x² + (∂f/∂y)²σ_y²
 Regression slope: m = Σ(x_i-x̄)(y_i-ȳ) / Σ(x_i-x̄)²
 ```

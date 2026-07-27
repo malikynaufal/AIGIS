@@ -47,7 +47,7 @@ Fluid mechanics describes the behavior of liquids and gases — from oceanic cur
 - **Material derivative:** D/Dt = ∂/∂t + (v·∇)
 
 - **Continuity equation:** ∂ρ/∂t + ∇·(ρv) = 0 (mass conservation)
-  - For incompressible flow: ∇·v = 0 (divergence-free velocity)
+ - For incompressible flow: ∇·v = 0 (divergence-free velocity)
 
 - **Acceleration field:** a = Dv/Dt = ∂v/∂t + (v·∇)v
 
@@ -56,21 +56,21 @@ Fluid mechanics describes the behavior of liquids and gases — from oceanic cur
 - **Euler's equation** (inviscid flow): ρ Dv/Dt = -∇P + ρg
 
 - **Bernoulli's equation** (for steady, inviscid, along streamline):
-  - P + ½ρv² + ρgz = constant
-  - Applications: Venturi meter, Pitot tube, lift on wings
+ - P + ½ρv² + ρgz = constant
+ - Applications: Venturi meter, Pitot tube, lift on wings
 
 - **Vorticity:** ω = ∇×v
-  - Kelvin's circulation theorem: for inviscid flow, circulation is conserved
+ - Kelvin's circulation theorem: for inviscid flow, circulation is conserved
 
 - **Potential flow:** φ such that v = ∇φ, ∇²φ = 0
 
 - **Boundary layer concept** — Prandtl's great insight
 
 - **Navier-Stokes equation (viscous flow):**
-  ```
-  ρ(∂v/∂t + (v·∇)v) = -∇P + μ∇²v + ρg
-  ```
-  - One of the most important/famous PDEs in all of physics
+ ```
+ ρ(∂v/∂t + (v·∇)v) = -∇P + μ∇²v + ρg
+ ```
+ - One of the most important/famous PDEs in all of physics
 
 - **Reynolds number:** Re = ρUL/μ — laminar (Re < ~2000) vs. turbulent flow
 
@@ -89,22 +89,22 @@ Fluid mechanics describes the behavior of liquids and gases — from oceanic cur
 - **Turbulence:** (intro): energy cascade (Kolmogorov), dissipation
 
 - **Geophysical fluid dynamics:**
-  - Coriolis effect and Rossby number
-  - Ocean currents, atmospheric circulation
-  - Tidal dynamics
+ - Coriolis effect and Rossby number
+ - Ocean currents, atmospheric circulation
+ - Tidal dynamics
 
 ---
 
 ## 🔬 Key Equations
 
 ```
-Continuity:         ∂ρ/∂t + ∇·(ρv) = 0
-Bernoulli:          P + ½ρv² + ρgz = const
-Euler:              ρ Dv/Dt = -∇P + ρg
-Navier-Stokes:      ρ Dv/Dt = -∇P + μ∇²v + ρg
-Poiseuille:         Q = πΔPR⁴/(8μL)
-Reynolds number:    Re = ρUL/μ
-Drag:               F_d = ½ρC_dAv²
+Continuity: ∂ρ/∂t + ∇·(ρv) = 0
+Bernoulli: P + ½ρv² + ρgz = const
+Euler: ρ Dv/Dt = -∇P + ρg
+Navier-Stokes: ρ Dv/Dt = -∇P + μ∇²v + ρg
+Poiseuille: Q = πΔPR⁴/(8μL)
+Reynolds number: Re = ρUL/μ
+Drag: F_d = ½ρC_dAv²
 ```
 
 ---

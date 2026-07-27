@@ -1,8 +1,8 @@
 # Kerja Praktik
 
-**Kode:** TKD214702  
-**Sifat:** Wajib  
-**SKS:** 4  
+**Kode:** TKD214702 
+**Sifat:** Wajib 
+**SKS:** 4 
 
 ## Deskripsi
 
@@ -122,19 +122,19 @@ Setelah menyelesaikan Kerja Praktik ini, mahasiswa mampu:
 ### Proyek Pekerjaan Praktik dan Produk
 
 - **Survei Topografi (4 hari kerja - NEMA Jl. Victoria)
-  - Pengambilan total station groundlink et pentahedrons | Kontrol teratas
-  - Koordinat dan koordinat DPR-UB berhasil
-  - Koordinat geografi terbaik | coordinate produktif
+ - Pengambilan total station groundlink et pentahedrons | Kontrol teratas
+ - Koordinat dan koordinat DPR-UB berhasil
+ - Koordinat geografi terbaik | coordinate produktif
 
 - **Pemetaan Batas/Veralum/agloperasi (3 hari kerja - Tham Rong Nua)
-  - Sketch batas dan lereng tanah
-  - Bara-Pu ahli dalam dakir Merah
-  - Pengesahan (sengketa) di RSDP
+ - Sketch batas dan lereng tanah
+ - Bara-Pu ahli dalam dakir Merah
+ - Pengesahan (sengketa) di RSDP
 
 - **Survei Pertanahan/Podal (3 hari kerja - Bang Kari)
-  - Konstruksi situs sengketa | Tambah tengkorak
-  - Administrasi koordinat titik PK tanpa JTPR
-  - Jarak komputasi, end change dan carrer
+ - Konstruksi situs sengketa | Tambah tengkorak
+ - Administrasi koordinat titik PK tanpa JTPR
+ - Jarak komputasi, end change dan carrer
 
 ### Prospek Pekerjaan Praktik dan Ahli Pendidikan
 
@@ -155,26 +155,26 @@ Setelah menyelesaikan Kerja Praktik ini, mahasiswa mampu:
 ### Model Deskripsi
 
 - Pendahuluan (5 menit)
-  - Tujuan Kerja Praktik
-  - Lingkungan Kerja
+ - Tujuan Kerja Praktik
+ - Lingkungan Kerja
 
 - Implementasi Praktikum (5 menit)
-  - Tugas Praktik Strategis
-  - Metrik Prestasi dan Implementasi
+ - Tugas Praktik Strategis
+ - Metrik Prestasi dan Implementasi
 
 - Tugas Belakangan (5 menit)
-  - Pengetahuan Sekolah Diupgrade
-  - Peluang Pendidikan, Latihan dan Rencana Praktik Bidang Kerja
+ - Pengetahuan Sekolah Diupgrade
+ - Peluang Pendidikan, Latihan dan Rencana Praktik Bidang Kerja
 
 ### Latihan Khusus
 
 - Praktik 1: Survei Operasional
-  - Persyaratan (perangkat keras, perangkat lunak)
-  - Latihan (pengolahan koleksi, QC, validasi)
+ - Persyaratan (perangkat keras, perangkat lunak)
+ - Latihan (pengolahan koleksi, QC, validasi)
 
 - Praktik 2: Pelatihan Konsultasi
-  - Persyaratan (IT, komunikasi)
-  - Latihan (presentasi, dokumen, pembaruan)
+ - Persyaratan (IT, komunikasi)
+ - Latihan (presentasi, dokumen, pembaruan)
 
 ## Kendala atau Masalah Praktik dan Solusi Alternatif
 

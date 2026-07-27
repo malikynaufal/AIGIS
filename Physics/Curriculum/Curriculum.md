@@ -1,156 +1,257 @@
 ---
-code: N/A
-name: UGM Physics Curriculum Roadmap
-tags: [curriculum, physics, ugm, roadmap, semester-plan]
+tags: [physics, curriculum, roadmap, aigis]
+aliases: [Physics Curriculum, Master Roadmap]
 created: 2026-07-27
 ---
 
-# 🎯 UGM Physics — Curriculum Roadmap
+# 📚 Physics Curriculum — Master Roadmap
 
-## Complete 8-Semester Course Plan
-
-This document provides the full UGM Physics curriculum roadmap covering all 8 required semesters. Each course is linked to its detailed note file.
-
----
-
-## Semester 1 — Foundations
-
-| Code | Course | SKS | Topic | File |
-|------|-------|-----|-------|------|
-| FKD211101 | Fisika Dasar I | 3 | Classical Mechanics, Kinematics, Newton's Laws | [[Semester_1/FKD211101 - Fisika Dasar I\|Fisika Dasar I]] |
-| FKD211102 | Kalkulus I | 4 | Limits, Derivatives, Integrals | [[Semester_1/FKD211102 - Kalkulus I\|Kalkulus I]] |
-| FKD211103 | Aljabar Linear | 2 | Vectors, Matrices, Linear Maps | [[Semester_1/FKD211103 - Aljabar Linear\|Aljabar Linear]] |
-| FKD211104 | Pengantar Geodesi | 2 | Earth Shape, Gravity, Coordinates | [[Semester_1/FKD211104 - Pengantar Geodesi\|Pengantar Geodesi]] |
-| FKD211105 | Pengantar Pemrograman | 2 | Python for Physics | [[Semester_1/FKD211105 - Pengantar Pemrograman\|Pengantar Pemrograman]] |
-| FKD211106 | Bahasa Inggris | 2 | Physics Terminology | [[Semester_1/FKD211106 - Bahasa Inggris\|Bahasa Inggris]] |
-| FKD211107 | Pendidikan Pancasila | 2 | Civic Philosophy | [[Semester_1/FKD211107 - Pendidikan Pancasila\|Pendidikan Pancasila]] |
-
-**Total SKS: 17**
+> **The definitive roadmap** linking all 8 semesters, 24 concepts, and geodesy applications.
+> **Part of:** [[Physics MOC]] · [[Study Plan]]
 
 ---
 
-## Semester 2 — Intermediate Physics & Mathematics
+## 🗺️ Full Curriculum Overview
 
-| Code | Course | SKS | Topic | File |
-|------|-------|-----|-------|------|
-| FKD211201 | Fisika Dasar II | 3 | Electromagnetism, Circuits | [[Semester_2/FKD211201 - Fisika Dasar II\|Fisika Dasar II]] |
-| FKD211202 | Kalkulus II | 3 | Series, Multivariable Intro | [[Semester_2/FKD211202 - Kalkulus II\|Kalkulus II]] |
-| FKD211203 | Persamaan Diferensial | 3 | ODEs for Physics | [[Semester_2/FKD211203 - Persamaan Diferensial\|Persamaan Diferensial]] |
-| FKD211204 | Kimia Dasar | 2 | Atomic Structure, Bonding | [[Semester_2/FKD211204 - Kimia Dasar\|Kimia Dasar]] |
-| FKD211205 | Statistika Dasar | 2 | Data Analysis for Physics | [[Semester_2/FKD211205 - Statistika Dasar\|Statistika Dasar]] |
-| FKD211206 | Pemrograman Lanjutan | 3 | Scientific Computing | [[Semester_2/FKD211206 - Pemrograman Lanjutan\|Pemrograman Lanjutan]] |
-
-**Total SKS: 16**
-
----
-
-## Semester 3 — Classical Field & Thermal Physics
-
-| Code | Course | SKS | Topic | File |
-|------|-------|-----|-------|------|
-| FKD211301 | Fisika Klasik | 3 | Lagrangian, Hamiltonian | [[Semester_3/FKD211301 - Fisika Klasik\|Fisika Klasik]] |
-| FKD211302 | Elektromagnetik | 4 | Maxwell's Equations, EM Waves | [[Semester_3/FKD211302 - Elektromagnetik\|Elektromagnetik]] |
-| FKD211303 | Termodinamika | 3 | Laws, Entropy, Heat Engines | [[Semester_3/FKD211303 - Termodinamika\|Termodinamika]] |
-| FKD211304 | Optika | 3 | Geometric & Physical Optics | [[Semester_3/FKD211304 - Optika\|Optika]] |
-| FKD211305 | Analisis Numerik | 3 | Numerical Methods for Physics | [[Semester_3/FKD211305 - Analisis Numerik\|Analisis Numerik]] |
-| FKD211306 | Laboratorium Fisika Dasar I | 2 | Mechanics Experiments | [[Semester_3/FKD211306 - Laboratorium Fisika Dasar I\|Lab Fisika Dasar I]] |
-
-**Total SKS: 18**
-
----
-
-## Semester 4 — Quantum & Advanced Physics
-
-| Code | Course | SKS | Topic | File |
-|------|-------|-----|-------|------|
-| FKD211401 | Mekanika Kuantum | 3 | Schrödinger, Probability | [[Semester_4/FKD211401 - Mekanika Kuantum\|Mekanika Kuantum]] |
-| FKD211402 | Statistika Fisika | 3 | Boltzmann, Phase Transitions | [[Semester_4/FKD211402 - Statistika Fisika\|Statistika Fisika]] |
-| FKD211403 | Fisika Material | 3 | Crystal Structure, Properties | [[Semester_4/FKD211403 - Fisika Material\|Fisika Material]] |
-| FKD211404 | Mekanika Fluida | 3 | Navier-Stokes, Turbulence | [[Semester_4/FKD211404 - Mekanika Fluida\|Mekanika Fluida]] |
-| FKD211405 | Laboratorium Fisika Dasar II | 2 | EM Experiments | [[Semester_4/FKD211405 - Laboratorium Fisika Dasar II\|Lab Fisika Dasar II]] |
-| FKD211406 | Grafika Komputer | 2 | 3D Rendering, Visualization | [[Semester_4/FKD211406 - Grafika Komputer\|Grafika Komputer]] |
-
-**Total SKS: 16**
-
----
-
-## Semester 5 — Specialized Physics
-
-| Code | Course | SKS | Topic | File |
-|------|-------|-----|-------|------|
-| FKD211501 | Relativitas Umum | 3 | Spacetime, Black Holes | [[Semester_5/FKD211501 - Relativitas Umum\|Relativitas Umum]] |
-| FKD211502 | Fisika Inti dan Partikel | 3 | Nuclear Structure, Quarks | [[Semester_5/FKD211502 - Fisika Inti dan Partikel\|Fisika Inti & Partikel]] |
-| FKD211503 | Fisika Atmosfer | 3 | Atmospheric Layers, Weather | [[Semester_5/FKD211503 - Fisika Atmosfer\|Fisika Atmosfer]] |
-| FKD211504 | Pemrosesan Sinyal | 3 | Fourier, Filtering | [[Semester_5/FKD211504 - Pemrosesan Sinyal\|Pemrosesan Sinyal]] |
-| FKD211505 | Basis Data | 2 | Data Management for Experiments | [[Semester_5/FKD211505 - Basis Data\|Basis Data]] |
-
-**Total SKS: 14**
+```mermaid
+graph TD
+    A[Semester 1: Foundations] --> B[Semester 2: Thermodynamics & Waves]
+    B --> C[Semester 3: Electromagnetism & Modern Physics]
+    C --> D[Semester 4: Advanced Applications]
+    D --> E[Semester 5: Physical Geodesy]
+    E --> F[Semester 6: Remote Sensing]
+    F --> G[Semester 7: Specialization]
+    G --> H[Semester 8: Skripsi]
+    
+    A --> A1[Newtonian Mechanics]
+    A --> A2[Work Energy Power]
+    A --> A3[Fluid Statics]
+    A --> A4[Waves]
+    
+    B --> B1[Thermodynamics]
+    B --> B2[Statistical Mechanics]
+    B --> B3[Optics]
+    
+    C --> C1[Electrostatics]
+    C --> C2[Magnetostatics]
+    C --> C3[Special Relativity]
+    C --> C4[Quantum Foundations]
+    
+    D --> D1[Atmospheric Physics]
+    D --> D2[Laser Physics]
+    D --> D3[Quantum Applications]
+    
+    E --> E1[Gravitational Potential Theory]
+    E --> E2[Spherical Harmonics]
+    E --> E3[Orbital Mechanics]
+    
+    F --> F1[EM Wave Propagation]
+    F --> F2[Gravity Gradiometry]
+    
+    G --> G1[Research Methods]
+    G --> G2[Nuclear Physics]
+    
+    H --> H1[Capstone Integration]
+    
+    A1 --> A1a[[Geodesy: Coordinate Systems]]
+    A2 --> A2a[[Geodesy: Energy Methods]]
+    A4 --> A4a[[Geodesy: GNSS Signals]]
+    C3 --> C3a[[Geodesy: Relativistic Corrections]]
+    E1 --> E1a[[Geodesy: Geoid Modeling]]
+    E3 --> E3a[[Geodesy: Satellite Orbits]]
+    F1 --> F1a[[Geodesy: Signal Delay]]
+```
 
 ---
 
-## Semester 6 — Frontier Physics & Methods
+## 📊 Semester-by-Semester Breakdown
 
-| Code | Course | SKS | Topic | File |
-|------|-------|-----|-------|------|
-| FKD211601 | Fisika Lintas Batas | 3 | Biophysics, Nanophysics | [[Semester_6/FKD211601 - Fisika Lintas Batas\|Fisika Lintas Batas]] |
-| FKD211602 | Simulasi Fisika | 3 | Monte Carlo, MD, N-Body | [[Semester_6/FKD211602 - Simulasi Fisika\|Simulasi Fisika]] |
-| FKD211603 | Fisika Medan | 3 | GR, Gauge Theories | [[Semester_6/FKD211603 - Fisika Medan\|Fisika Medan]] |
-| FKD211604 | Instrumentasi | 3 | Sensors, Detectors | [[Semester_6/FKD211604 - Instrumentasi\|Instrumentasi]] |
-| FKD211605 | Pemrograman Paralel | 3 | HPC, GPU Computing | [[Semester_6/FKD211605 - Pemrograman Paralel\|Pemrograman Paralel]] |
+### Semester 1 — Foundations of Classical Physics
+**Focus:** Mechanics, waves, thermodynamics fundamentals
+**Credits:** 14 SKS
+**Key Courses:** Fisika Dasar I (Mekanika), Kalkulus I, Pengantar Geodesi
 
-**Total SKS: 15**
-
----
-
-## Semester 7 — Capstone I & Professional Skills
-
-| Code | Course | SKS | Topic | File |
-|------|-------|-----|-------|------|
-| FKD211701 | Proyek Akhir I | 3 | Research Phase 1 | [[Semester_7/FKD211701 - Proyek Akhir I\|Proyek Akhir I]] |
-| FKD211702 | Topik Khusus Fisika | 3 | Specialized Topics | [[Semester_7/FKD211702 - Topik Khusus Fisika\|Topik Khusus Fisika]] |
-| FKD211703 | Kewirausahaan | 2 | Tech Entrepreneurship | [[Semester_7/FKD211703 - Kewirausahaan\|Kewirausahaan]] |
-| FKD211704 | Etika Profesi | 2 | Ethics in Science | [[Semester_7/FKD211704 - Etika Profesi\|Etika Profesi]] |
-
-**Total SKS: 10**
+| Topic | Concept Note | Study Pack | Geodesy Link |
+|-------|-------------|------------|--------------|
+| Kinematics & Dynamics | [[Newtonian_Mechanics]] | [[Semester_1_Study_Pack]] | Coordinate systems, surveying |
+| Work & Energy | [[Newtonian_Mechanics]] | [[Semester_1_Study_Pack]] | Potential theory |
+| Conservation Laws | [[Newtonian_Mechanics]] | [[Semester_1_Study_Pack]] | Energy methods |
+| Gravitation | [[Central_Force_Motion]] | [[Semester_1_Study_Pack]] | Gravity field |
+| Fluid Statics | [[Fluid_Mechanics]] | [[Semester_1_Study_Pack]] | Hydrographic surveying |
+| Waves | [[EM_Wave_Propagation]] | [[Semester_1_Study_Pack]] | Wave propagation |
 
 ---
 
-## Semester 8 — Capstone II
+### Semester 2 — Thermodynamics & Waves
+**Focus:** Heat, entropy, wave physics, optics
+**Credits:** 15 SKS
+**Key Courses:** Fisika Dasar II (Termodinamika), Fisika Dasar III (Gelombang & Optika)
 
-| Code | Course | SKS | Topic | File |
-|------|-------|-----|-------|------|
-| FKD211801 | Proyek Akhir II | 4 | Research Phase 2 | [[Semester_8/FKD211801 - Proyek Akhir II\|Proyek Akhir II]] |
-
-**Total SKS: 4**
-
----
-
-## 📦 Total Program: ~110 SKS (Physics Component)
-
-| Semester | SKS |
-|----------|-----|
-| 1 | 17 |
-| 2 | 16 |
-| 3 | 18 |
-| 4 | 16 |
-| 5 | 14 |
-| 6 | 15 |
-| 7 | 10 |
-| 8 | 4 |
-| **Total** | **110** |
-
-*(Remaining SKS typically covered by general education, electives, and specialization courses outside this physics core.)*
+| Topic | Concept Note | Study Pack | Geodesy Link |
+|-------|-------------|------------|--------------|
+| Thermodynamic Laws | [[Thermodynamics]] | [[Semester_2_Study_Pack]] | Atmospheric modeling |
+| Entropy & Engines | [[Thermodynamics]] | [[Semester_2_Study_Pack]] | Heat engines |
+| Statistical Mechanics | [[Statistical_Mechanics]] | [[Semester_2_Study_Pack]] | Statistical physics |
+| Mechanical Waves | [[EM_Wave_Propagation]] | [[Semester_2_Study_Pack]] | Wave propagation |
+| Geometric Optics | [[Optics]] | [[Semester_2_Study_Pack]] | Surveying instruments |
+| Wave Optics | [[Optics]] | [[Semester_2_Study_Pack]] | Interference, diffraction |
 
 ---
 
-## Quick Links
+### Semester 3 — Electromagnetism & Modern Physics
+**Focus:** EM theory, relativity, quantum foundations
+**Credits:** 16 SKS
+**Key Courses:** Fisika Klasik Lanjutan, Elektromagnetika, Fisika Modern
 
-- Back: [[Physics MOC]]
+| Topic | Concept Note | Study Pack | Geodesy Link |
+|-------|-------------|------------|--------------|
+| Analytic Mechanics | [[Lagrangian_Mechanics]] | [[Semester_3_Study_Pack]] | Perturbation theory |
+| Maxwell's Equations | [[Electrodynamics]] | [[Semester_3_Study_Pack]] | EM theory |
+| EM Waves | [[EM_Wave_Propagation]] | [[Semester_3_Study_Pack]] | GNSS signals |
+| Special Relativity | [[Special_Relativity]] | [[Semester_3_Study_Pack]] | Clock corrections |
+| Quantum Foundations | [[Quantum_Foundations]] | [[Semester_3_Study_Pack]] | Quantum sensors |
+| Atomic Physics | [[Quantum_Systems]] | [[Semester_3_Study_Pack]] | Atomic clocks |
 
-- Summary: [[Semester_8/Summary|Summary]]
+---
 
-- Sources: [[Physics MOC]]
+### Semester 4 — Advanced Physics & Applications
+**Focus:** Atmospheric physics, lasers, advanced quantum
+**Credits:** 13 SKS
+**Key Courses:** Fisika Atmosfer, Optika dan Photonik, Mekanika Kuantum Lanjutan
 
-- Resources: [[Resources]]
+| Topic | Concept Note | Study Pack | Geodesy Link |
+|-------|-------------|------------|--------------|
+| Atmospheric Physics | [[Atmospheric_Physics]] | [[Semester_4_Study_Pack]] | Signal delay |
+| Laser Physics | [[Optics]] | [[Semester_4_Study_Pack]] | LiDAR, interferometry |
+| Quantum Applications | [[Quantum_Applications]] | [[Semester_4_Study_Pack]] | Quantum sensors |
+| Statistical Physics | [[Statistical_Mechanics]] | [[Semester_4_Study_Pack]] | Phase transitions |
+| Phase Transitions | [[Statistical_Mechanics]] | [[Semester_4_Study_Pack]] | Material properties |
 
-- Inbox: [[_Inbox/Physics_Inbox|Physics Inbox]]
+---
+
+### Semester 5 — Physical Geodesy & Field Measurement
+**Focus:** Gravity field, potential theory, orbital mechanics
+**Credits:** 12 SKS
+**Key Courses:** Geodesi Fisik, Instrumen Geodesi, Mekanika Orbital
+
+| Topic | Concept Note | Study Pack | Geodesy Link |
+|-------|-------------|------------|--------------|
+| Potential Theory | [[Gravitational_Potential_Theory]] | [[Semester_5_Study_Pack]] | Geoid modeling |
+| Spherical Harmonics | [[Gravitational_Potential_Theory]] | [[Semester_5_Study_Pack]] | Gravity models |
+| Geoid & Heights | [[Gravitational_Potential_Theory]] | [[Semester_5_Study_Pack]] | Vertical datums |
+| Gravity Instruments | [[Gravitational_Potential_Theory]] | [[Semester_5_Study_Pack]] | Gravimetry |
+| Orbital Mechanics | [[Orbital_Mechanics]] | [[Semester_5_Study_Pack]] | Satellite orbits |
+| GNSS Positioning | [[EM_Wave_Propagation]] | [[Semester_5_Study_Pack]] | GPS positioning |
+
+---
+
+### Semester 6 — Remote Sensing & Advanced Instrumentation
+**Focus:** EM remote sensing, gravity gradiometry, spatial databases
+**Credits:** 13 SKS
+**Key Courses:** Remote Sensing, Penginderaan Jauh Lanjutan, Pemetaan Gravitasi
+
+| Topic | Concept Note | Study Pack | Geodesy Link |
+|-------|-------------|------------|--------------|
+| EM Interaction | [[EM_Wave_Propagation]] | [[Semester_6_Study_Pack]] | Remote sensing |
+| Spectral Analysis | [[Nuclear_Particle_Physics]] | [[Semester_6_Study_Pack]] | Spectral signatures |
+| Gravity Gradiometry | [[Gravitational_Potential_Theory]] | [[Semester_6_Study_Pack]] | GOCE mission |
+| Spatial Databases | [[Nuclear_Particle_Physics]] | [[Semester_6_Study_Pack]] | GIS integration |
+| Control Systems | [[Nuclear_Particle_Physics]] | [[Semester_6_Study_Pack]] | Instrument control |
+
+---
+
+### Semester 7 — Specialization & Research Methods
+**Focus:** Research methodology, advanced instrumentation, professional practice
+**Credits:** 12 SKS
+**Key Courses:** Kriptografi, Metode Khusus Jarak, Pemodelan & Simulasi
+
+| Topic | Concept Note | Study Pack | Geodesy Link |
+|-------|-------------|------------|--------------|
+| Research Methods | [[Nuclear_Particle_Physics]] | [[Semester_7_Study_Pack]] | Thesis methodology |
+| EDM & Lidar | [[EM_Wave_Propagation]] | [[Semester_7_Study_Pack]] | Distance measurement |
+| Monte Carlo | [[Statistical_Mechanics]] | [[Semester_7_Study_Pack]] | Stochastic modeling |
+| Stochastic Processes | [[Statistical_Mechanics]] | [[Semester_7_Study_Pack]] | Error analysis |
+| Professional Ethics | [[Nuclear_Particle_Physics]] | [[Semester_7_Study_Pack]] | Professional practice |
+
+---
+
+### Semester 8 — Capstone Project (Skripsi)
+**Focus:** Integration of all physics concepts into a research project
+**Credits:** 4 SKS
+**Key Courses:** Skripsi
+
+| Topic | Concept Note | Study Pack | Geodesy Link |
+|-------|-------------|------------|--------------|
+| Capstone Integration | [[Physics MOC]] | [[Semester_8_Study_Pack]] | Full synthesis |
+| Academic Writing | [[Physics MOC]] | [[Semester_8_Study_Pack]] | Thesis writing |
+| Thesis Defense | [[Physics MOC]] | [[Semester_8_Study_Pack]] | Presentation |
+
+---
+
+## 🧭 Learning Pathways
+
+### Pathway 1: Classical Mechanics → Geodesy
+```mermaid
+graph LR
+    A[Newtonian Mechanics] --> B[Central Force Motion]
+    B --> C[Orbital Mechanics]
+    C --> D[Satellite Orbits]
+    D --> E[GNSS Positioning]
+```
+
+### Pathway 2: Electromagnetism → GNSS Physics
+```mermaid
+graph LR
+    A[Electrostatics] --> B[Electrodynamics]
+    B --> C[EM Wave Propagation]
+    C --> D[Atmospheric Physics]
+    D --> E[Signal Delay Correction]
+```
+
+### Pathway 3: Relativity → Precision Positioning
+```mermaid
+graph LR
+    A[Special Relativity] --> B[General Relativity]
+    B --> C[Relativistic Applications]
+    C --> D[GNSS Clock Corrections]
+    D --> E[mm-level Accuracy]
+```
+
+### Pathway 4: Potential Theory → Geoid Modeling
+```mermaid
+graph LR
+    A[Newtonian Mechanics] --> B[Gravitational Potential Theory]
+    B --> C[Spherical Harmonics]
+    C --> D[Geoid Determination]
+    D --> E[Vertical Datum]
+```
+
+---
+
+## 📋 Prerequisites Matrix
+
+| Concept | Requires | Enables |
+|---------|----------|---------|
+| Newtonian Mechanics | Basic calculus, vectors | Lagrangian Mechanics, Orbital Mechanics |
+| Electrostatics | Vector calculus | Electrodynamics, EM Waves |
+| Thermodynamics | Basic calculus | Statistical Mechanics, Atmospheric Physics |
+| Special Relativity | Algebra, vectors | General Relativity, GNSS Corrections |
+| Quantum Foundations | Linear algebra | Quantum Systems, Quantum Applications |
+| Gravitational Potential Theory | Vector calculus, Newtonian Mechanics | Geoid Modeling, Spherical Harmonics |
+| EM Wave Propagation | Electrodynamics | Atmospheric Physics, GNSS |
+| Orbital Mechanics | Newtonian Mechanics, Central Force | Satellite Positioning |
+
+---
+
+## 🔗 Navigation
+
+- **MOC:** [[Physics MOC]]
+- **Study Plan:** [[Study Plan]]
+- **Resources:** [[Resources]]
+- **Sources:** [[Sources/Physics_Sources]]
+- **Semester Packs:** [[Semester_1/Semester_1_Study_Pack]] · [[Semester_2/Semester_2_Study_Pack]] · [[Semester_3/Semester_3_Study_Pack]] · [[Semester_4/Semester_4_Study_Pack]] · [[Semester_5/Semester_5_Study_Pack]] · [[Semester_6/Semester_6_Study_Pack]] · [[Semester_7/Semester_7_Study_Pack]] · [[Semester_8/Semester_8_Study_Pack]]
+
+---
+
+*Created by AIGIS Physics Specialist · Part of the AIGIS Knowledge Machine*
+*Last updated: 2026-07-27*

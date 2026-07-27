@@ -27,10 +27,10 @@ Instrumentation — the practical physics of measuring the world. This course co
 - **Measurement process:** physical quantity → transducer → signal conditioning → output
 
 - **Measurement characteristics:**
-  - Range, sensitivity, resolution, linearity
-  - Accuracy vs. precision: systematic vs. random error
-  - **Static characteristics:** calibration curves, zero offset, span
-  - **Dynamic characteristics:** rise time, settling time, bandwidth
+ - Range, sensitivity, resolution, linearity
+ - Accuracy vs. precision: systematic vs. random error
+ - **Static characteristics:** calibration curves, zero offset, span
+ - **Dynamic characteristics:** rise time, settling time, bandwidth
 
 - **Instrument error sources:** noise, drift, hysteresis, nonlinearity
 
@@ -41,20 +41,20 @@ Instrumentation — the practical physics of measuring the world. This course co
 ### Unit 2: Transducers and Sensors (Weeks 5–8)
 
 - **Resistive sensors:**
-  - Strain gauges: ΔR/R = Gε (gauge factor)
-  - Thermistors: R(T) = R₀ exp[B(1/T - 1/T₀)] (NTC/PTC)
-  - RTD (resistance temperature detectors): Pt100
+ - Strain gauges: ΔR/R = Gε (gauge factor)
+ - Thermistors: R(T) = R₀ exp[B(1/T - 1/T₀)] (NTC/PTC)
+ - RTD (resistance temperature detectors): Pt100
 
 - **Capacitive sensors:** displacement, humidity
 
 - **Piezoelectric sensors:** charge generation under stress
-  - q = d·F (charge proportional to force)
+ - q = d·F (charge proportional to force)
 
 - **Inductive sensors:** LVDT (linear variable differential transformer)
 
 - **Optical sensors:**
-  - Photodiodes, photomultipliers
-  - Fiber optic sensors
+ - Photodiodes, photomultipliers
+ - Fiber optic sensors
 
 - **Hall effect sensors:** magnetic field measurement
 
@@ -65,25 +65,25 @@ Instrumentation — the practical physics of measuring the world. This course co
 ### Unit 3: Signal Conditioning and Electronics (Weeks 9–12)
 
 - **Operational amplifiers (op-amps):**
-  - Ideal op-amp: infinite input impedance, zero output impedance
-  - Inverting amplifier: V_out = -R_f/R_in · V_in
-  - Non-inverting amplifier: V_out = (1 + R_f/R_in) · V_in
-  - Summing amplifier, differential amplifier
+ - Ideal op-amp: infinite input impedance, zero output impedance
+ - Inverting amplifier: V_out = -R_f/R_in · V_in
+ - Non-inverting amplifier: V_out = (1 + R_f/R_in) · V_in
+ - Summing amplifier, differential amplifier
 
 - **Instrumentation amplifiers:** high CMRR, precision measurement
 
 - **Active filters:**
-  - Low-pass filter: f_c = 1/(2πRC)
-  - Band-pass filter: for signal selection
+ - Low-pass filter: f_c = 1/(2πRC)
+ - Band-pass filter: for signal selection
 
 - **Amplifier noise:**
-  - Thermal (Johnson-Nyquist): V_n = √(4kTRΔf)
-  - Shot noise: I_n = √(2qIΔf)
-  - 1/f (flicker) noise
+ - Thermal (Johnson-Nyquist): V_n = √(4kTRΔf)
+ - Shot noise: I_n = √(2qIΔf)
+ - 1/f (flicker) noise
 
 - **Analog-to-digital conversion (ADC):** resolution, sampling rate
-  - Resolution: 1 LSB = V_range/2^n (n = bits)
-  - Nyquist theorem: f_s > 2f_max
+ - Resolution: 1 LSB = V_range/2^n (n = bits)
+ - Nyquist theorem: f_s > 2f_max
 
 ### Unit 4: Data Acquisition and Precision Measurement (Weeks 13–16)
 
@@ -92,11 +92,11 @@ Instrumentation — the practical physics of measuring the world. This course co
 - **LabVIEW** or Python-based DAQ programming
 
 - **Bridge circuits:**
-  - Wheatstone bridge for precision resistance measurement
-  - Strain gauge bridge configurations
+ - Wheatstone bridge for precision resistance measurement
+ - Strain gauge bridge configurations
 
 - **Lock-in amplifiers:** detecting weak signals buried in noise
-  - Using reference frequency to extract signal
+ - Using reference frequency to extract signal
 
 - **Precision timekeeping:** atomic clocks (cesium, rubidium, hydrogen maser)
 
@@ -109,13 +109,13 @@ Instrumentation — the practical physics of measuring the world. This course co
 ## 🔬 Key Equations
 
 ```
-Thermal noise:      V_n = √(4kTRΔf)
-Op-amp gain:        V_out = -R_f/R_in · V_in
-ADC resolution:     ΔV = V_range / 2^n
-RC filter cutoff:   f_c = 1/(2πRC)
-Strain gauge:       ΔR/R = G·ε
-Piezoelectric:      q = d·F (pC/N)
-Sensitivity:        S = d(output)/d(input)
+Thermal noise: V_n = √(4kTRΔf)
+Op-amp gain: V_out = -R_f/R_in · V_in
+ADC resolution: ΔV = V_range / 2^n
+RC filter cutoff: f_c = 1/(2πRC)
+Strain gauge: ΔR/R = G·ε
+Piezoelectric: q = d·F (pC/N)
+Sensitivity: S = d(output)/d(input)
 ```
 
 ---

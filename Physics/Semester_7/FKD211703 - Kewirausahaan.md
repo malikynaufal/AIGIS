@@ -29,15 +29,15 @@ Entrepreneurship for physicists — understanding how physics knowledge translat
 - **Scientific entrepreneurship:** physics knowledge as a competitive advantage
 
 - **Innovation ecosystem:**
-  - University-industry-government triple helix
-  - Indonesian context: PUSPITEK, Technopark, startup ecosystem
-  - Global examples: MIT Lincoln Lab, Bell Labs, DeepMind
+ - University-industry-government triple helix
+ - Indonesian context: PUSPITEK, Technopark, startup ecosystem
+ - Global examples: MIT Lincoln Lab, Bell Labs, DeepMind
 
 - **Types of technology ventures:**
-  - Deep-tech startups (science-intensive)
-  - Hardware startups (sensors, instruments)
-  - Software/data startups (scientific computing)
-  - Consulting and R&D services
+ - Deep-tech startups (science-intensive)
+ - Hardware startups (sensors, instruments)
+ - Software/data startups (scientific computing)
+ - Consulting and R&D services
 
 - **Lean startup methodology:** Build-Measure-Learn cycle
 
@@ -46,18 +46,18 @@ Entrepreneurship for physicists — understanding how physics knowledge translat
 ### Unit 2: Intellectual Property (Weeks 6–8)
 
 - **Types of IP:**
-  - Patents (inventions): utility models, industrial designs
-  - Copyrights (creative works): software, publications
-  - Trade secrets: proprietary methods
-  - Trademarks: brand identity
+ - Patents (inventions): utility models, industrial designs
+ - Copyrights (creative works): software, publications
+ - Trade secrets: proprietary methods
+ - Trademarks: brand identity
 
 - **Patent writing basics:**
-  - Claims, prior art search, novelty
-  - Provisional vs. full patent applications
+ - Claims, prior art search, novelty
+ - Provisional vs. full patent applications
 
 - **Indonesian IP law:** HAKI (Hak Kekayaan Intelektual)
-  - Undang-Undang No. 13/2016 about Patents
-  - Undang-Undang No. 36/2014 about Trademarks
+ - Undang-Undang No. 13/2016 about Patents
+ - Undang-Undang No. 36/2014 about Trademarks
 
 - **HAKI in universities:** protecting research outputs
 
@@ -66,26 +66,26 @@ Entrepreneurship for physicists — understanding how physics knowledge translat
 ### Unit 3: Business Planning (Weeks 9–13)
 
 - **Business model canvas:**
-  - Value proposition, customer segments, channels
-  - Revenue streams, cost structure
-  - Key partners, key resources, key activities
+ - Value proposition, customer segments, channels
+ - Revenue streams, cost structure
+ - Key partners, key resources, key activities
 
 - **Writing a business plan:**
-  ```
-  1. Executive Summary (1-2 pages)
-  2. Problem and Market Opportunity
-  3. Solution / Product Description
-  4. Business Model and Revenue Strategy
-  5. Team and Organization
-  6. Financial Projections (3-5 years)
-  7. Funding Requirements and Use of Funds
-  ```
+ ```
+ 1. Executive Summary (1-2 pages)
+ 2. Problem and Market Opportunity
+ 3. Solution / Product Description
+ 4. Business Model and Revenue Strategy
+ 5. Team and Organization
+ 6. Financial Projections (3-5 years)
+ 7. Funding Requirements and Use of Funds
+ ```
 
 - **Funding sources:**
-  - Government grants: RISTEK-BRIN, DIKTI
-  - Venture capital (VC) and angel investors
-  - Crowdfunding (for hardware/consumer products)
-  - Bank loans and KUR (Kredit Usaha Rakyat)
+ - Government grants: RISTEK-BRIN, DIKTI
+ - Venture capital (VC) and angel investors
+ - Crowdfunding (for hardware/consumer products)
+ - Bank loans and KUR (Kredit Usaha Rakyat)
 
 - **Financial fundamentals:** P&L, cash flow, break-even analysis
 
@@ -106,11 +106,11 @@ Entrepreneurship for physicists — understanding how physics knowledge translat
 ## 🔬 Key Frameworks
 
 ```
-Lean Startup:       Build → Measure → Learn → Iterate
-Business Canvas:    Value prop, customers, channels, revenue, costs
-Patent basics:      Novelty, Non-obviousness, Utility, Disclosure
-Pitch structure:    Problem → Solution → Market → Team → Ask
-Financial basics:   Revenue - Costs = Profit, Break-even = Fixed Costs / (Price - Variable Cost)
+Lean Startup: Build → Measure → Learn → Iterate
+Business Canvas: Value prop, customers, channels, revenue, costs
+Patent basics: Novelty, Non-obviousness, Utility, Disclosure
+Pitch structure: Problem → Solution → Market → Team → Ask
+Financial basics: Revenue - Costs = Profit, Break-even = Fixed Costs / (Price - Variable Cost)
 ```
 
 ---

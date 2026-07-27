@@ -29,9 +29,9 @@ An introductory survey of geodesy — the science of measuring and understanding
 - Historical development: from Eratosthenes (240 BC) to satellite geodesy
 
 - Three branches:
-  - **Geometric geodesy:** shape and size of Earth
-  - **Physical geodesy:** Earth's gravity field
-  - **Dynamic geodesy:** Earth's rotation and orientation
+ - **Geometric geodesy:** shape and size of Earth
+ - **Physical geodesy:** Earth's gravity field
+ - **Dynamic geodesy:** Earth's rotation and orientation
 
 - Geodesy vs. cartography vs. surveying vs. GIS
 
@@ -46,9 +46,9 @@ An introductory survey of geodesy — the science of measuring and understanding
 - Geometric relationships: latitude (geodetic, geocentric), longitude, height
 
 - **Coordinate systems:**
-  - Geodetic (φ, λ, h)
-  - Cartesian ECEF (X, Y, Z)
-  - Local tangent plane (E, N, U)
+ - Geodetic (φ, λ, h)
+ - Cartesian ECEF (X, Y, Z)
+ - Local tangent plane (E, N, U)
 
 - **Transformations** between coordinate systems
 
@@ -89,10 +89,10 @@ An introductory survey of geodesy — the science of measuring and understanding
 ## 🔬 Key Formulas
 
 ```
-Ellipsoid:          x²/a² + y²/a² + z²/b² = 1
-Normal gravity:     γ = γ₀(1 + β sin²φ - β₁ sin²2φ)
-Free-air anomaly:   Δg_FA = g_obs - γ₀ + 0.3086·h
-Bouguer anomaly:    Δg_B = Δg_FA - 2πGρh
+Ellipsoid: x²/a² + y²/a² + z²/b² = 1
+Normal gravity: γ = γ₀(1 + β sin²φ - β₁ sin²2φ)
+Free-air anomaly: Δg_FA = g_obs - γ₀ + 0.3086·h
+Bouguer anomaly: Δg_B = Δg_FA - 2πGρh
 ```
 
 ---

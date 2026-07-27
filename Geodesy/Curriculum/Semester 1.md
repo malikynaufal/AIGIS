@@ -1,47 +1,71 @@
 ---
-title: Geodesy Semester 1 - Foundation
-tags: [geodesy, curriculum, foundation]
+tags: [aigis, curriculum, geodesy, semester-1, ugm]
+created: 2026-07-27
+updated: 2026-07-27
 ---
 
-# 📘 Semester 1: Geodetic & Scientific Foundations
+# Semester 1 — Foundations
 
 ## Overview
-The goal of the first semester is to establish the mathematical, physical, and computational bedrock required for advanced geospatial engineering.
 
-## ✍️ Core Courses & Learning Objectives
+Semester 1 establishes the mathematical and scientific foundation required for all subsequent geodesy courses. The focus is on *Kalkulus, Aljabar Linear, Statistika Dasar, Fisika Dasar*, and introductory geodesy concepts.
 
-### 1. Kalkulus I (Calculus I)
+## Courses (11 mata kuliah, total ~26 SKS)
 
-- **Topics**: Limits, continuity, derivatives of transcendental functions, Riemann integrals, and Taylor series.
+| Code | Course | SKS | Type |
+|------|--------|-----|------|
+| TKD211101 | Pendidikan Pancasila | 2 | General |
+| TKD211102 | Pengantar Ilmu Kebumian | 2 | Core |
+| TKD211103 | Aljabar Linear | 3 | Math |
+| TKD211104 | Fisika Dasar | 4 | Sci |
+| TKD211105 | Statistika Dasar | 3 | Math |
+| TKD211106 | Matematika Diskrit | 3 | Math |
+| TKD211107 | Hukum Agraria | 2 | Legal |
+| TKD211108 | Survei Terestris I | 3 | Core |
+| TKD211109 | Praktikum Survei Terestris I | 3 | Lab |
+| TKD211201 | Dasar-Dasar Geomatika Geodesi | 3 | Core |
+| MGM211110 | Kalkulus | 3 | Math |
 
-- **Geodetic Application**: Modeling continuous surfaces (geoid) and approximating complex functions for coordinate transformations.
+## Key Topics
 
-- **Key Formula**: $f(x) = \sum_{n=0}^{\infty} rac{f^{(n)}(a)}{n!} (x-a)^n$
+### TKD211102 — Pengantar Ilmu Kebumian
+- Earth shape and size (oblate spheroid)
+- Coordinate systems introduction
+- Basic surveying concepts
+- The geoid and reference ellipsoid
 
-### 2. Fisika Dasar I (Basic Physics I)
+### TKD211108 — Survei Terestris I
+- Principles of angle measurement
+- Total station operation
+- Trigonometric leveling
+- Traverse measurement
+- Error theory basics
 
-- **Topics**: Kinematics, dynamics, Newton’s laws of motion, work and energy, and universal gravitation.
+### TKD211201 — Dasar-Dasar Geomatika Geodesi
+- History of geodesy
+- Coordinate reference frames overview
+- Map projection concepts
+- Introduction to GIS
 
-- **Geodetic Application**: Understanding satellite orbital motion and the Earth's gravity field ($g$).
+## Key Formulas (Preview)
 
-- **Key Formula**: $F = G rac{m_1 m_2}{r^2}$
+- Distance: $D = S \cos\theta$
+- Height difference: $\Delta h = D \tan\alpha + i - v$
+- Coordinate conversion: $(x, y, z) = (N\cos\varphi\cos\lambda, N\cos\varphi\sin\lambda, (1-e^2)N\sin\varphi)$
 
-### 3. Pengantar Geodesi (Introduction to Geodesy)
+## Required Background
+- [x] SMA Mathematics (trigonometry, algebra)
+- [x] Basic physics (vectors, coordinate systems)
 
-- **Topics**: Definition of Geodesy, history (Eratosthenes to ITRF), branches (Geometric, Physical, Satellite), and the role of the surveyor.
+## Study Tips
+1. Master trigonometric identities — used daily in traverse computation
+2. Practice with a calculator for coordinate forward/reverse computation
+3. Read [[Geodesy Fundamentals]] and [[Reference Ellipsoid]] for conceptual grounding
+4. Review [[Mathematics MOC]] for algebra review
 
-- **Concept Links**: [[Geoid]], [[Reference Ellipsoid]], [[Datum]].
+## Study Pack
+➡️ [[_Study Packs/Geodetic Reference Frames|Semester 1 Study Pack]] — consolidating [[Reference Ellipsoid]] and basic coordinate math concepts
 
-### 4. Matematika Dasar (Basic Mathematics)
+---
 
-- **Topics**: Vector algebra, trigonometry, complex numbers, and matrices.
-
-- **Key Application**: Fundamental for 3D coordinate geometry and rotation matrices.
-
-## 📚 Study Resources
-
-- **MIT OCW**: Single Variable Calculus
-
-- **OpenStax**: University Physics Vol 1
-
-- **AIGIS Library**: Basic Geodesy (Vermeer)
+*Maintained by AIGIS — part of [[Geodesy MOC]]* | Curated by AIGIS

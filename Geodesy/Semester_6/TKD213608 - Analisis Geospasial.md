@@ -49,9 +49,8 @@ identity = gpd.overlay(gdf1, gdf2, how='identity')
 ```
 
 #### Raster Overlay (Map Algebra)
-$$
 
-C = f(A, B)$$where$f$can be:
+$$C = f(A, B)$$where $f $can be:
 
 - **Arithmetic:**$A + B$, $A - B$, $A \times B$, $A / B$- **Logical:**$A \text{ AND } B$, $A \text{ OR } B$, $\text{NOT } A$- **Relational:**$A > B$, $A == B$, $A < B$```python
 import rasterio
@@ -59,11 +58,11 @@ from rasterio.enums import Resampling
 
 # Read rasters
 with rasterio.open('raster1.tif') as src1, rasterio.open('raster2.tif') as src2:
-    arr1 = src1.read(1)
-    arr2 = src2.read(1, out_shape=arr1.shape, resampling=Resampling.bilinear)
+ arr1 = src1.read(1)
+ arr2 = src2.read(1, out_shape=arr1.shape, resampling=Resampling.bilinear)
 
 # Map algebra
-result = arr1 + arr2  # or arr1 * arr2, arr1 / arr2, etc.
+result = arr1 + arr2 # or arr1 * arr2, arr1 / arr2, etc.
 ```
 
 ### 2.2 Buffer Analysis
@@ -72,7 +71,7 @@ Buffers define zones around features at a specified distance.
 
 **Single distance:**
 ```python
-gdf['buffer'] = gdf.buffer(distance=1000)  # 1000 meters
+gdf['buffer'] = gdf.buffer(distance=1000) # 1000 meters
 ```
 
 **Variable distance (field-based):**
@@ -92,13 +91,15 @@ multi_ring = gpd.GeoDataFrame(geometry=buffers)
 **Dissolve buffer (merged):**
 ```python
 buffer = gdf.buffer(500).dissolve()
-```
-
 ### 2.3 Interpolation
 
 Interpolation estimates values at unmeasured locations from measured points.
 
-#### Inverse Distance Weighting (IDW)$$z_0 = \frac{\sum_{i=1}^{n} w_i z_i}{\sum_{i=1}^{n} w_i}, \quad w_i = \frac{1}{d_i^p}$$```python
+#### Inverse Distance Weighting (IDW)
+
+$$z_0 = \frac{\sum_{i=1}^{n} w_i z_i}{\sum_{i=1}^{n} w_i},
+
+```python
 from scipy.interpolate import griddata
 import numpy as np
 
@@ -112,20 +113,25 @@ yi = np.linspace(ymin, ymax, ny)
 xi, yi = np.meshgrid(xi, yi)
 
 # IDW
-grid = griddata(points, values, (xi, yi), method='linear')  # 'nearest', 'cubic'
+grid = griddata(points, values, (xi, yi), method='linear') # 'nearest', 'cubic'
 ```
 
 #### Kriging (Geostatistical)
 
-Uses variogram to model spatial autocorrelation:$$\gamma(h) = \frac{1}{2N(h)} \sum_{i=1}^{N(h)} [z(x_i) - z(x_i + h)]^2$$```python
+Uses variogram to model spatial autocorrelation
+:
+
+$$\gamma(h) = \frac{1}{2N(h)} \sum_{i=1}^{N(h)} [z(x_i) - z(x_i + h)]^2$$
+
+```python
 from pykrige.ok import OrdinaryKriging
 
 OK = OrdinaryKriging(
-    x=gdf.geometry.x,
-    y=gdf.geometry.y,
-    z=gdf['value'],
-    variogram_model='spherical',
-    verbose=False
+ x=gdf.geometry.x,
+ y=gdf.geometry.y,
+ z=gdf['value'],
+ variogram_model='spherical',
+ verbose=False
 )
 
 z, ss = OK.execute('grid', xi, yi)
@@ -154,7 +160,7 @@ import networkx as nx
 # Build graph from line data
 G = nx.Graph()
 for _, row in gdf_lines.iterrows():
-    G.add_edge(row['from'], row['to'], weight=row['length'])
+ G.add_edge(row['from'], row['to'], weight=row['length'])
 
 # Shortest path
 path = nx.shortest_path(G, source='A', target='B', weight='weight')
@@ -193,15 +199,23 @@ acc = grid.accumulation(flowdir)
 
 #### Quadrat Analysis
 
-Tests for complete spatial randomness (CSR):$$\chi^2 = \sum_{i=1}^{q} \frac{(O_i - E)^2}{E}$$where$O_i$= observed points in quadrat$i$, $E = n/q$= expected.
+Tests for complete spatial randomness (CSR)
+:
+
+$$\chi^2 = \sum_{i=1}^{q} \frac{(O_i - E)^2}{E} $$where $O_i$= observed points in quadrat $i$,$E = n/q$= expected.
 
 #### Nearest Neighbor Analysis
 
-**Clark-Evans index:**$$R = \frac{\bar{r}_{obs}}{\bar{r}_{exp}} = \frac{\frac{1}{n}\sum r_i}{0.5\sqrt{A/n}}$$|$R$Value | Pattern |
+**Clark-Evans index:*
+*
+
+$$R = \frac{\bar{r}_{obs}}{\bar{r}_{exp}} = \frac{\frac{1}{n}\sum r_i}{0.5\sqrt{A/n}} $$
+
+| $R $Value | Pattern |
 |-----------|---------|
-|$R \approx 1$| Random |
-|$R < 1$| Clustered |
-|$R > 1$| Regular/Dispersed |
+| $R \approx 1$ | Random |
+| $R < 1$ | Clustered |
+| $R > 1$ | Regular/Dispersed |
 
 ```python
 from pointpats import PointPattern
@@ -213,7 +227,12 @@ r_exp = 0.5 * np.sqrt(pp.area / len(pp))
 R = r_obs / r_exp
 ```
 
-#### Ripley's K Function$$K(d) = \frac{A}{n^2} \sum_{i \neq j} \frac{I(d_{ij} \leq d)}{w_{ij}}$$```python
+#### Ripley's K Functio
+n
+
+$$K(d) = \frac{A}{n^2} \sum_{i \neq j} \frac{I(d_{ij} \leq d)}{w_{ij}} $$
+
+```python
 from pointpats import K_function
 
 k = K_function(pp, distances=[100, 200, 500, 1000])
@@ -221,7 +240,10 @@ k = K_function(pp, distances=[100, 200, 500, 1000])
 
 ### 3.2 Spatial Autocorrelation
 
-#### Global Moran's I$$I = \frac{n}{S_0} \frac{\sum_i \sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2}$$where$S_0 = \sum_i \sum_j w_{ij}$.
+#### Global Moran's 
+I
+
+$$I = \frac{n}{S_0} \frac{\sum_i \sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2} $$where $S_0 = \sum_i \sum_j w_{ij} $.
 
 ```python
 from esda.moran import Moran
@@ -238,16 +260,30 @@ Identifies clusters (HH, LL) and outliers (HL, LH):
 from esda.moran import Moran_Local
 
 lisa = Moran_Local(gdf['value'], weights_matrix)
-gdf['quadrant'] = lisa.q  # 1=HH, 2=LH, 3=LL, 4=HL
+gdf['quadrant'] = lisa.q # 1=HH, 2=LH, 3=LL, 4=HL
 gdf['significant'] = lisa.p_sim < 0.05
 ```
 
 #### Geary's C
-$$
 
-C = \frac{(n-1)}{2S_0} \frac{\sum_i \sum_j w_{ij}(x_i - x_j)^2}{\sum_i (x_i - \bar{x})^2}$$### 3.3 Spatial Regression
+$$C = \frac{(n-1)}{2S_0} \frac{\sum_i \sum_j w_{ij}(x_i - x_j)^2}{\sum_i (x_i - \bar{x})^2} $$### 3.3 Spatial Regression
 
-**OLS (Ordinary Least Squares):**$$y = X\beta + \epsilon$$**Spatial Lag Model (SAR):**$$y = \rho W y + X\beta + \epsilon$$**Spatial Error Model (SEM):**$$y = X\beta + \epsilon, \quad \epsilon = \lambda W \epsilon + u$$```python
+**OLS (Ordinary Least Squares):*
+*
+
+$$y = X\beta + \epsilon$$
+
+**Spatial Lag Model (SAR):*
+*
+
+$$y = \rho W y + X\beta + \epsilon$$
+
+**Spatial Error Model (SEM):*
+*
+
+$$y = X\beta + \epsilon, \quad \epsilon = \lambda W \epsilon + u$$
+
+```python
 from spreg import ML_Lag, ML_Error
 
 # Spatial lag
@@ -277,7 +313,7 @@ import rasterio
 from scipy.ndimage import uniform_filter, median_filter
 
 with rasterio.open('dem.tif') as src:
-    arr = src.read(1)
+ arr = src.read(1)
 
 # 3x3 mean filter
 mean_3 = uniform_filter(arr, size=3)
@@ -327,10 +363,10 @@ from rsgislib.imageutils import viewshed
 
 | Derivative | Formula | Unit |
 |------------|---------|------|
-| **Slope** |$\alpha = \arctan\sqrt{(\partial z/\partial x)^2 + (\partial z/\partial y)^2}$| degrees/% |
-| **Aspect** |$\theta = \arctan2(-\partial z/\partial x, \partial z/\partial y)$| 0–360° |
-| **Curvature (profile)** |$k_p = \frac{z_{xx}z_x^2 + 2z_{xy}z_xz_y + z_{yy}z_y^2}{(z_x^2 + z_y^2)^{3/2}}$| 1/m |
-| **Curvature (plan)** |$k_{pl} = \frac{z_{xx}z_y^2 - 2z_{xy}z_xz_y + z_{yy}z_x^2}{(z_x^2 + z_y^2)^{3/2}}$| 1/m |
+| **Slope** | $\alpha = \arctan\sqrt{(\partial z/\partial x)^2 + (\partial z/\partial y)^2} $ | degrees/% |
+| **Aspect** | $\theta = \arctan2(-\partial z/\partial x, \partial z/\partial y)$ | 0–360° |
+| **Curvature (profile)** | $k_p = \frac{z_{xx}z_x^2 + 2z_{xy}z_xz_y + z_{yy}z_y^2}{(z_x^2 + z_y^2)^{3/2}} $ | 1/m |
+| **Curvature (plan)** | $k_{pl} = \frac{z_{xx}z_y^2 - 2z_{xy}z_xz_y + z_{yy}z_x^2}{(z_x^2 + z_y^2)^{3/2}} $ | 1/m |
 
 ```python
 from scipy.ndimage import sobel
@@ -370,7 +406,10 @@ aspect = (aspect + 360) % 360
 
 ### 6.2 Land Suitability Analysis
 
-Multi-criteria evaluation (MCE) using **AHP** (Analytic Hierarchy Process):$$S = \sum_{i=1}^{n} w_i \cdot x_i$$where$w_i$are weights from pairwise comparison matrix.
+Multi-criteria evaluation (MCE) using **AHP** (Analytic Hierarchy Process)
+:
+
+$$S = \sum_{i=1}^{n} w_i \cdot x_i$$where $w_i $are weights from pairwise comparison matrix.
 
 ### 6.3 Watershed Management
 
@@ -400,12 +439,12 @@ Multi-criteria evaluation (MCE) using **AHP** (Analytic Hierarchy Process):$$S =
 
 | Concept | Formula |
 |---------|---------|
-| IDW |$z_0 = \frac{\sum w_i z_i}{\sum w_i}$|
-| Variogram |$\gamma(h) = \frac{1}{2N}\sum(z_i - z_{i+h})^2$|
-| Moran's I |$I = \frac{n}{S_0}\frac{\sum w_{ij}(x_i-\bar{x})(x_j-\bar{x})}{\sum(x_i-\bar{x})^2}$|
-| Nearest neighbor |$R = \frac{\bar{r}_{obs}}{0.5\sqrt{A/n}}$|
-| Slope |$\alpha = \arctan\sqrt{(\partial z/\partial x)^2 + (\partial z/\partial y)^2}$|
-| TWI |$\ln(a / \tan\beta)$ |
+| IDW | $z_0 = \frac{\sum w_i z_i}{\sum w_i} $ |
+| Variogram | $\gamma(h) = \frac{1}{2N}\sum(z_i - z_{i+h})^2$ |
+| Moran's I | $I = \frac{n}{S_0}\frac{\sum w_{ij}(x_i-\bar{x})(x_j-\bar{x})}{\sum(x_i-\bar{x})^2} $ |
+| Nearest neighbor | $R = \frac{\bar{r}_{obs}}{0.5\sqrt{A/n}} $ |
+| Slope | $\alpha = \arctan\sqrt{(\partial z/\partial x)^2 + (\partial z/\partial y)^2} $ |
+| TWI | $\ln(a / \tan\beta)$ |
 
 ---
 

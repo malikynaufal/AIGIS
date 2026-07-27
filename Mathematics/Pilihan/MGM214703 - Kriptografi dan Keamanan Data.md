@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Cryptography and Data Security
 
-**Course Code:** MGM214703  
-**SKS:** 3 (3-0)  
-**Semester:** 5  
-**Prerequisites:** Aljabar Linear, Struktur Diskrit, Probabilitas  
+**Course Code:** MGM214703 
+**SKS:** 3 (3-0) 
+**Semester:** 5 
+**Prerequisites:** Aljabar Linear, Struktur Diskrit, Probabilitas 
 
 ---
 
@@ -32,9 +32,8 @@ Kriptografi (cryptography) adalah ilmu dan seni mengamankan informasi dengan men
 ### 1.1 Model Kriptografi
 
 Sistem kriptografi dasar:
-$$
 
-P \xrightarrow{\text{Encrypt}(K_e)} C \xrightarrow{\text{Decrypt}(K_d)} P$$di mana$P$= plaintext (pesan asli),$C$= ciphertext (terenkripsi),$K_e$= kunci enkripsi,$K_d$ = kunci dekripsi.
+$$P \xrightarrow{\text{Encrypt}(K_e)} C \xrightarrow{\text{Decrypt}(K_d)} P$$di mana $P$= plaintext (pesan asli),$C$= ciphertext (terenkripsi),$K_e$= kunci enkripsi,$K_d$ = kunci dekripsi.
 
 ### 1.2 Klasifikasi Berdasarkan Kunci
 
@@ -67,7 +66,12 @@ P \xrightarrow{\text{Encrypt}(K_e)} C \xrightarrow{\text{Decrypt}(K_d)} P$$di ma
 
 - **Sudah tidak aman** — brute force dalam waktu singkat (~2²² operasi untuk 2-key 3DES).
 
-### 2.2 3DES (Triple DES)$$C = E_{K_3}(D_{K_2}(E_{K_1}(P)))$$Efektif kunci 112 bit (2TDEA) atau 168 bit (3TDEA). Sertifikasi NIST dihentikan pada 2023.
+### 2.2 3DES (Triple DES
+)
+
+$$C = E_{K_3}(D_{K_2}(E_{K_1}(P)))$$
+
+Efektif kunci 112 bit (2TDEA) atau 168 bit (3TDEA). Sertifikasi NIST dihentikan pada 2023.
 
 ### 2.3 AES (Advanced Encryption Standard)
 
@@ -80,7 +84,7 @@ P \xrightarrow{\text{Encrypt}(K_e)} C \xrightarrow{\text{Decrypt}(K_d)} P$$di ma
 | AES-256 | 256 bit | 14 | Sama |
 
 **Operasi setiap ronde AES-128:**
-1. **SubBytes:** Substitusi non-linear (S-box berdasarkan inverse dalam$GF(2^8)$).
+1. **SubBytes:** Substitusi non-linear (S-box berdasarkan inverse dalam $GF(2^8)$).
 2. **ShiftRows:** Rotasi baris kiri 0/1/2/3 posisi.
 3. **MixColumns:** Multiplikasi matriks kolom dalam $GF(2^8)$.
 4. **AddRoundKey:** XOR dengan round key.
@@ -103,9 +107,9 @@ P \xrightarrow{\text{Encrypt}(K_e)} C \xrightarrow{\text{Decrypt}(K_d)} P$$di ma
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 import os
 
-key = AESGCM.generate_key(bit_length=256)  # Kunci 256 bit
+key = AESGCM.generate_key(bit_length=256) # Kunci 256 bit
 aesgcm = AESGCM(key)
-nonce = os.urandom(12)  # 96-bit nonce
+nonce = os.urandom(12) # 96-bit nonce
 
 # Enkripsi dengan AAD (Additional Authenticated Data)
 ciphertext = aesgcm.encrypt(nonce, b"Data GNSS Coordinates", b"station-001")
@@ -120,41 +124,48 @@ plaintext = aesgcm.decrypt(nonce, ciphertext, b"station-001")
 
 ### 3.1 RSA (Rivest-Shamir-Adleman, 1977)
 
-Berdasarkan **masalah faktorisasi bilangan besar:** $n = pq$sulit difaktor.
+Berdasarkan **masalah faktorisasi bilangan besar:** $n = pq $sulit difaktor.
 
 **Key Generation:**
-1. Pilih dua bilangan prima besar$p$dan$q$.
-2. Hitung $n = pq$dan$\phi(n) = (p-1)(q-1)$.
-3. Pilih $e$sehingga$\gcd(e, \phi(n)) = 1$(umum:$e = 65537 = 2^{16}+1$).
+1. Pilih dua bilangan prima besar $p $dan $q$.
+2. Hitung $n = pq $dan $\phi(n) = (p-1)(q-1)$.
+3. Pilih $e $sehingga $\gcd(e, \phi(n)) = 1$(umum:$e = 65537 = 2^{16}+1$).
 4. Hitung $d = e^{-1} \mod \phi(n)$(extended Euclidean algorithm).
 
-**Enkripsi/Deskripsi:**$$C = P^e \mod n \quad \text{(Enkripsi)}
-$$
+**Enkripsi/Deskripsi:**
 
-$$
-P = C^d \mod n \quad \text{(Deskripsi)}$$**Kebenaran:**$P^{ed} = P^{1 + k\phi(n)} \equiv P \pmod{n}$oleh Fermat's Little Theorem.
+$$C = P^e \mod n \quad \text{(Enkripsi)}P = C^d \mod n \quad \text{(Deskripsi)} $$**Kebenaran:**$P^{ed} = P^{1 + k\phi(n)} \equiv P \pmod{n} $oleh Fermat's Little Theorem.
 
 ### 3.2 Contoh RSA Sederhana
 
 | Parameter | Nilai |
 |-----------|-------|
-|$p$| 61 |
-|$q$| 53 |
-|$n = pq$| 3233 |
-|$\phi(n) = (60)(52)$| 3120 |
-|$e$| 17 |
-|$d = 17^{-1} \bmod 3120$| 2753 |
+| $p$ | 61 |
+| $q$ | 53 |
+| $n = pq$ | 3233 |
+| $\phi(n) = (60)(52)$ | 3120 |
+| $e$ | 17 |
+| $d = 17^{-1} \bmod 3120$ | 2753 |
 
-**Enkripsi pesan$P = 65$:**
-$$
+**Enkripsi pesan $P = 65$:**
 
-C = 65^{17} \mod 3233 = 2790$$**Deskripsi:**$$P = 2790^{2753} \mod 3233 = 65 \quad \checkmark$$### 3.3 ECC (Elliptic Curve Cryptography)
+$$C = 65^{17} \mod 3233 = 279
+0
 
-Cryptography berbasis kelompok aditif pada kurva eliptik:$$y^2 = x^3 + ax + b \pmod{p}$$- Operasi: *point addition*$P + Q$dan *point doubling*$2P$.
+$$**Deskripsi:**$$
 
-- *Scalar multiplication:* $kP = \underbrace{P + P + \cdots + P}_{k}$.
+P = 2790^{2753} \mod 3233 = 65 \quad \checkmark$$### 3.3 ECC (Elliptic Curve Cryptography)
 
-- *Elliptic Curve Discrete Logarithm Problem (ECDLP):* Diberikan $P$dan$kP$, cari $k$— sangat sulit secara komputasional.
+Cryptography berbasis kelompok aditif pada kurva eliptik
+:
+
+$$y^2 = x^3 + ax + b \pmod{p} $$
+
+- Operasi: *point addition*$P + Q $dan *point doubling*$2P$.
+
+- *Scalar multiplication:* $kP = \underbrace{P + P + \cdots + P}_{k} $.
+
+- *Elliptic Curve Discrete Logarithm Problem (ECDLP):* Diberikan $P $dan $kP$, cari $k$— sangat sulit secara komputasional.
 
 **Keunggulan:** Kunci lebih pendek dari RSA untuk keamanan setara.
 
@@ -171,39 +182,37 @@ Cryptography berbasis kelompok aditif pada kurva eliptik:$$y^2 = x^3 + ax + b \p
 
 ### 4.1 Fungsi Hash Kriptografis
 
-Properti fungsi hash$H: \{0,1\}^* \to \{0,1\}^n$:
-1. **Preimage resistance:** Diberikan $h$, sulit menemukan $x$dengan$H(x) = h$.
-2. **Second preimage resistance:** Diberikan $x_1$, sulit menemukan $x_2 \neq x_1$dengan$H(x_1) = H(x_2)$.
-3. **Collision resistance:** Sulit menemukan $x_1 \neq x_2$dengan$H(x_1) = H(x_2)$.
+Properti fungsi hash $H: \{0,1\}^* \to \{0,1\}^n$:
+1. **Preimage resistance:** Diberikan $h$, sulit menemukan $x $dengan $H(x) = h$.
+2. **Second preimage resistance:** Diberikan $x_1$, sulit menemukan $x_2 \neq x_1 $dengan $H(x_1) = H(x_2)$.
+3. **Collision resistance:** Sulit menemukan $x_1 \neq x_2 $dengan $H(x_1) = H(x_2)$.
 
 ### 4.2 Perbandingan Algoritma Hash
 
 | Algoritma | Output (bit) | Serangan terbaik | Status |
 |-----------|-------------|------------------|--------|
-| MD5 | 128 | Collision: $2^{21}$(30 detik) | ❌ **Tidak aman** |
-| SHA-1 | 160 | Collision:$2^{63}$(Google SHAttered) | ❌ **Tidak aman** |
-| SHA-256 | 256 | Collision:$2^{128}$| ✅ Aman |
-| SHA-3 (Keccak) | 224-512 | Collision:$2^{n/2}$| ✅ Aman |
-| BLAKE2 | 256 | Collision:$2^{128}$| ✅ Aman, cepat |
-| Argon2id | Variabel | Brute force:$2^{256}$| ✅ Khusus password hashing |
+| MD5 | 128 | Collision: $2^{21} $(30 detik) | ❌ **Tidak aman** |
+| SHA-1 | 160 | Collision:$2^{63} $(Google SHAttered) | ❌ **Tidak aman** |
+| SHA-256 | 256 | Collision:$2^{128} $ | ✅ Aman |
+| SHA-3 (Keccak) | 224-512 | Collision:$2^{n/2} $ | ✅ Aman |
+| BLAKE2 | 256 | Collision:$2^{128} $ | ✅ Aman, cepat |
+| Argon2id | Variabel | Brute force:$2^{256} $ | ✅ Khusus password hashing |
 
-### 4.3 Tanda Tangan Digital$$\text{Sign}: \sigma = \text{Sign}_{sk}(H(m)) \quad \text{— Penandatangan memproduksi } \sigma
-$$
+### 4.3 Tanda Tangan Digital
 
-$$
-\text{Verify}: \text{Verify}_{pk}(m, \sigma) \rightarrow \text{true/false} \quad \text{— Verifikator memeriksa}$$**DSA / ECDSA:**
-1. Pilih random$k$, hitung $R = kG \pmod{p}$, $r = R_x \mod n$.
+$$\text{Sign}: \sigma = \text{Sign}_{sk}(H(m)) \quad \text{— Penandatangan memproduksi } \sigma\text{Verify}: \text{Verify}_{pk}(m, \sigma) \rightarrow \text{true/false} \quad \text{— Verifikator memeriksa} $$**DSA / ECDSA:**
+1. Pilih random $k$, hitung $R = kG \pmod{p} $, $r = R_x \mod n$.
 2. Hitung $s = k^{-1}(H(m) + d \cdot r) \mod n$.
 3. Tanda tangan: $(r, s)$.
 4. Verifikasi: hitung $u_1, u_2$, cek $R_x' = r$.
 
-**EdDSA (Ed25519):** Lebih cepat, deterministik (tidak perlu kunci $k$random), resisten timing attack.
+**EdDSA (Ed25519):** Lebih cepat, deterministik (tidak perlu kunci $k $random), resisten timing attack.
 
 ### 4.4 Studi Kasus: Verifikasi Integritas Data GNSS
 
 Untuk menjamin integritas data pengukuran GNSS yang ditransmisikan dari stasiun ke pusat pengolahan:
 
-1. Stasiun menghitung$H = \text{SHA-256}(\text{data observasi})$.
+1. Stasiun menghitung $H = \text{SHA-256}(\text{data observasi})$.
 2. Stasiun menandatangani $H$ dengan ECDSA-P256 menggunakan private key.
 3. Pusat pengolahan memverifikasi signature menggunakan public key stasiun.
 4. Integritas terjamin: tidak ada yang dapat memodifikasi data tanpa terdeteksi.
@@ -247,10 +256,10 @@ Key Usage: digitalSignature
 ```
 Root CA (self-signed, 20+ tahun)
 ├── Intermediate CA 1
-│   ├── End-entity cert (server)
-│   └── End-entity cert (stasiun GNSS)
+│ ├── End-entity cert (server)
+│ └── End-entity cert (stasiun GNSS)
 └── Intermediate CA 2
-    └── End-entity cert (klien)
+ └── End-entity cert (klien)
 ```
 
 Verifikasi: setiap sertifikat ditandatangani oleh CA induknya hingga Root CA (dipercaya secara a priori).

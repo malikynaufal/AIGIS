@@ -39,10 +39,10 @@ Optics is the study of light — its propagation, interaction with matter, and t
 - **Lens maker's equation:** 1/f = (n-1)(1/R₁ - 1/R₂)
 
 - **Optical instruments:**
-  - Telescope: angular magnification M = f_objective/f_eyepiece
-  - Microscope: total magnification
-  - Human eye as optical instrument
-  - Camera optics
+ - Telescope: angular magnification M = f_objective/f_eyepiece
+ - Microscope: total magnification
+ - Human eye as optical instrument
+ - Camera optics
 
 ### Unit 2: Physical Optics — Interference (Weeks 6–9)
 
@@ -51,14 +51,14 @@ Optics is the study of light — its propagation, interaction with matter, and t
 - **Superposition principle** and coherent sources
 
 - **Young's double slit:**
-  ```
-  Constructive: d sin θ = mλ     (m = 0, ±1, ±2, ...)
-  Destructive:  d sin θ = (m+½)λ
-  Fringe spacing: Δy = λL/d
-  ```
+ ```
+ Constructive: d sin θ = mλ (m = 0, ±1, ±2, ...)
+ Destructive: d sin θ = (m+½)λ
+ Fringe spacing: Δy = λL/d
+ ```
 
 - **Thin film interference** — reflection phase shifts
-  - Soap bubbles, oil films, Newton's rings
+ - Soap bubbles, oil films, Newton's rings
 
 - **Michelson interferometer:** measuring wavelengths, refractive indices
 
@@ -67,13 +67,13 @@ Optics is the study of light — its propagation, interaction with matter, and t
 ### Unit 3: Physical Optics — Diffraction (Weeks 10–13)
 
 - **Single slit diffraction:**
-  ```
-  Destructive: a sin θ = mλ    (m = ±1, ±2, ...)
-  Central maximum width: Δθ = 2λ/a
-  ```
+ ```
+ Destructive: a sin θ = mλ (m = ±1, ±2, ...)
+ Central maximum width: Δθ = 2λ/a
+ ```
 
 - **Diffraction grating:** resolution R = mN (N = number of slits)
-  - Grating equation: d sin θ = mλ
+ - Grating equation: d sin θ = mλ
 
 - **Rayleigh criterion:** θ_min = 1.22 λ/D (resolving power)
 
@@ -102,15 +102,15 @@ Optics is the study of light — its propagation, interaction with matter, and t
 ## 🔬 Key Equations
 
 ```
-Snell:              n₁ sin θ₁ = n₂ sin θ₂
-Thin lens:          1/f = 1/v - 1/u
+Snell: n₁ sin θ₁ = n₂ sin θ₂
+Thin lens: 1/f = 1/v - 1/u
 Young's double slit: Δy = λL/d
-Bragg:              2d sin θ = mλ
-Single slit:        a sin θ = mλ  (minima)
-Grating:            d sin θ = mλ
-Rayleigh:           θ_min = 1.22 λ/D
-Malus:              I = I₀ cos²θ
-Brewster:           tan θ_B = n₂/n₁
+Bragg: 2d sin θ = mλ
+Single slit: a sin θ = mλ (minima)
+Grating: d sin θ = mλ
+Rayleigh: θ_min = 1.22 λ/D
+Malus: I = I₀ cos²θ
+Brewster: tan θ_B = n₂/n₁
 ```
 
 ---

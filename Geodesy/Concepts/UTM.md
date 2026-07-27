@@ -1,144 +1,204 @@
 ---
-tags: [geodesy, concept, projection, aigis]
-aliases: [UTM, Universal Transverse Mercator, UTM Zone, UTM Coordinate]
-created: 2026-07-12
+tags: [aigis, concept, geodesy, utm, map-projection, transverse-mercator]
+aliases: [Universal Transverse Mercator]
+created: 2026-07-27
 updated: 2026-07-27
 ---
 
-# 📐 UTM (Universal Transverse Mercator)
+# UTM — Universal Transverse Mercator
 
-**UTM** (Universal Transverse Mercator) is the world's most widely used map projection. It divides the Earth into 6°-wide longitude zones, each projected using a conformal [[Transverse Mercator]] projection. Coordinates are in meters (easting, northing) — a practical, standardized global grid for topographic mapping, surveying, and GIS.
+## Overview
 
-## Zone System
+**UTM** (Universal Transverse Mercator) is a conformal [[Map Projection]] system that divides the world into 60 zones of $6°$ longitude each, with a central meridian for each zone. It uses the [[Transverse Mercator]] projection with two standard parallels at $\pm 80°$ latitude. UTM is the primary coordinate system for topographic mapping worldwide, including Indonesia's Rupabumi map series.
 
-UTM divides the globe into **60 zones** numbered 1–60 east to west:
+## Zone Structure
 
 | Property | Value |
 |----------|-------|
-| **Number of zones** | 60 |
-| **Zone width** | 6° longitude |
-| **Zone numbering** | 1 = 180°W to 174°W, ..., 60 = 174°E to 180°E |
-| **Latitude bands** | 20 bands (C–X, 8° each, excluding I/O) |
-| **Hemisphere designation** | N (north of equator), S (south of equator) |
+| Number of zones | 60 (001°E to 360°E) |
+| Zone width | $6°$ longitude |
+| Central meridian | $\lambda_0 = 6°(Z - 1) - 180° + 3°$ for zone $Z$ |
+| Latitude bands | C to X (80°S to 84°N) |
+| False easting | 500 000 m (at central meridian) |
+| False northing | 0 m (equator) for northern hemisphere; 10 000 000 m for southern |
+| Scale factor at CM | $k_0 = 0.9996$ |
+| Latitude of origin | Equator (0°) |
 
-### Zone Identification
+## Zone Numbering
 
-| Example | Meaning |
-|---------|---------|
-| UTM Zone **33N** | 12°E to 18°E, Northern hemisphere |
-| UTM Zone **49S** | 114°E to 120°E, Southern hemisphere |
-| UTM Zone **30N** | 0° to 6°E, Northern hemisphere |
+The zone number $Z$ is computed as:
 
-### Exceptions
-
-| Zone | Exception |
-|------|-----------|
-| 31N | 0°–3°E |
-| 32N | 3°–12°E (widened for Norway) |
-| 33N | 12°–18°E |
-| X band | 80°S–80°N (12° wide, excluding poles) |
-
-The Svalbard islands receive special treatment: zones 31–37 are each widened to 3°.
-
-## Projection Parameters
-
-| Parameter | Northern Hemisphere | Southern Hemisphere |
-|-----------|-------------------|---------------------|
-| Central meridian | Zone center longitude | Zone center longitude |
-| False easting $E_0$| 500,000 m | 500,000 m |
-| False northing$N_0$| 0 m | 10,000,000 m |
-| Scale factor$k_0$| 0.9996 | 0.9996 |
-| Ellipsoid | WGS84 | WGS84 |
-
-### Scale Factor Behavior
-
-The scale factor$k = 0.9996$at the central meridian means UTM distances are **compressed** by 0.04% at the CM. This allows$k$to reach **1.0** at ~180 km east/west of CM, and to remain below **1.0004** at zone edges — a deliberate design choice to minimize maximum distortion.$$k \approx 1 + \frac{l^2}{2}\cos^2\phi$$where$l$is the longitude offset from CM in radians.
-
-## Convergence
-
-**Grid convergence** (angle between grid north and true north):$$\gamma = l \cdot \sin\phi \approx \Delta\lambda \cdot \sin\phi$$| Location |$\Delta\lambda$from CM |$\gamma$|
-|----------|------------------------|----------|
-| Equator, any longitude offset | 1.5° | 0° |
-| 30°N, CM | 0° | 0° |
-| 30°N, zone edge | 3° | 1.50° |
-| 45°N, zone edge | 3° | 2.12° |
-| 60°N, zone edge | 3° | 2.60° |
-
-Convergence increases with latitude and with distance from the central meridian.
-
-## Grid to Geographic Conversion
-
-### Forward:$(\phi, \lambda) \to (E, N)$1. Determine zone:$Z = \lfloor(\lambda + 180)/6\rfloor + 1$2. Compute CM:$\lambda_0 = (Z - 1) \times 6 - 180 + 3°$3. Apply TM formulas using$k_0 = 0.9996$, $E_0 = 500000$, $N_0 = 0$(N) or$10000000$(S)
-4. Append zone letter and hemisphere: "33N"
-
-### Inverse:$(E, N) \to (\phi, \lambda)$
-
-1. Subtract false origin ($E_0$, $N_0$)
-2. Apply inverse TM series
-3. Determine zone from longitude
-4. Output: $(\phi, \lambda)$
-
-## Worked Example
-
-**Problem:** Determine the UTM Zone and compute projected coordinates for Jakarta, Indonesia ($\phi = -6.175^\circ\text{S}$, $\lambda = 106.827^\circ\text{E}$) on WGS84.
-
-**Solution:**
-
-**Step 1:** Zone number:
 $$
 
-Z = \lfloor(106.827 + 180)/6\rfloor + 1 = \lfloor286.827/6\rfloor + 1 = \lfloor47.805\rfloor + 1 = 48$$**Step 2:** Zone 48 is in the Southern hemisphere, so the designation is **48S**.
+Z = \text{floor}\left(\frac{\lambda + 180°}{6°}\right) + 1
 
-**Step 3:** Central meridian of Zone 48:$$\lambda_0 = (48 - 1) \times 6 - 180 + 3 = 282 - 180 + 3 = 105^\circ\text{E}$$**Step 4:** Apply forward TM formulas. For this zone on WGS84:$$k_0 = 0.9996, \quad E_0 = 500000, \quad N_0 = 10000000$$Using standard formulas (abbreviated for worked example):
-
-The computed easting and northing for Jakarta on Zone 48S are approximately:$$E \approx 715,488\ \text{m}, \quad N \approx 9,317,839\ \text{m}
 $$
 
-(Actual values depend on the complete series evaluation; these are representative.)
+### Indonesia's UTM Zones
 
-**Zone check:** The false northing is 10,000,000 m in the Southern hemisphere to ensure all N values are positive.
+| Zone | Longitude Range | Central Meridian | Region |
+|------|----------------|-------------------|--------|
+| 46 | 84°E – 90°E | 87°E | Western Sumatra |
+| 47 | 90°E – 96°E | 93°E | Central Sumatra |
+| 48 | 96°E – 102°E | 99°E | Eastern Sumatra, Jakarta |
+| 49 | 102°E – 108°E | 105°E | West Java, Bali |
+| 50 | 108°E – 114°E | 111°E | East Java, Lombok |
+| 51 | 114°E – 120°E | 117°E | Kalimantan, Sulawesi |
+| 52 | 120°E – 126°E | 123°E | Maluku, Papua (west) |
+| 53 | 126°E – 132°E | 129°E | Papua (east) |
+| 54 | 132°E – 138°E | 135°E | Papua (far east) |
 
-## Accuracy Considerations
+## Forward Projection Formulas
 
-| Distance from CM | Max Scale Distortion ($k - 1$) | Corresponding Distance Error |
-|------------------|--------------------------------|------------------------------|
-| 0 km (CM) | −0.04% | −40 mm per km |
-| 180 km | 0 (true scale) | 0 |
-| 330 km (zone edge) | +0.04% | +40 mm per km |
+Given geodetic coordinates $(\varphi, \lambda)$ on [[WGS84]]:
 
-**For surveying:** Grid distances must be corrected by the average scale factor ($1/k$) to get ground distances. This is crucial for precise work (property boundaries, engineering).
+$$
 
-## Application in Indonesia
+n = \frac{a - b}{a + b} = \frac{f}{2 - f}
 
-Indonesia uses two UTM-based systems:
+$$
 
-| System | Zone Width | CM Interval | Use |
-|--------|-----------|-------------|-----|
-| **UTM** | 6° | 102°, 108°, 114°, 120°, 126°, 132° | National mapping |
-| **TM3°** | 3° | 102°, 105°, 108°, 111°, 114°, 117°, 120°, 123°, 126°, 129°, 132°, 135° | Cadastral, local mapping |
+$$
 
-Indonesia's [[Indonesia|spatial information policy]] requires TM3° for cadastral surveys (better accuracy than 6° UTM).
+A = \frac{a}{1+n}\left(1 + n^2/4 + n^4/64 + \ldots\right)
 
-## Common Pitfalls
+$$
 
-1. **Hemisphere confusion:** Forgetting that Southern hemisphere uses false northing = 10,000,000 m.
-2. **Zone boundary ambiguity:** A point near a zone boundary may be valid in two zones.
-3. **Scale factor neglect:** Failing to apply $1/k$ when converting grid distances to ground distances.
-4. **Coordinate order:** E,N vs N,E — most software uses E,N (eastings first).
-5. **Web Mercator confusion:** EPSG:3857 is NOT UTM — it is a spherical Mercator with no zone system.
+$$
 
-## References
+t = \sinh(\tanh^{-1}(\sin\varphi)) - 2n\cdot\text{atanh}(n\sin\varphi)
 
-- USGS (1983). *Map Projections — A Working Manual*. PP 1395.
+$$
 
-- Snyder, J. P. (1987). *Map Projections*. USGS PP 1395.
+$$
 
-- Defense Mapping Agency (1983). *TM 8358.2: The Universal Grids (UTM/UPS)*.
+\lambda' = \lambda - \lambda_0 \quad \text{(reduced longitude)}
 
-- BIG Indonesia. *Koordinat Nasional Indonesia*.
+$$
 
-## Related
+$$
 
-- [[Map Projection]] · [[Transverse Mercator]] · [[Projected Coordinates]] · [[Map Projection]] · [[Indonesia]] · [[Geodesy MOC]]
+\xi' = \frac{1}{2}\ln\frac{1+t}{1-t} \quad \text{(isometric latitude)}
 
-➡️ [[Geodesy MOC]] · [[Basic Geodesy]] · [[Kurikulum Teknik Geodesi]]
+$$
+
+$$
+
+x = A \cdot \ln\frac{1+\sin\xi'\cos\lambda'}{1-\sin\xi'\cos\lambda'} \quad \text{(meridional arc)}
+
+$$
+
+The final UTM coordinates:
+
+$$
+
+E = k_0 \cdot N(\varphi) \cdot \cos\varphi \cdot \lambda' + \ldots + 500\,000 \text{ m}
+
+$$
+
+$$
+
+N = k_0 \cdot \text{meridional arc} + 0 \text{ m (northern hemisphere)}
+
+$$
+
+### Simplified Transverse Mercator Series
+
+For direct computation (Bowring & Romer):
+
+$$
+
+E = E_0 + k_0 N \cos\varphi \left[\lambda' + \frac{(1-T+C)\lambda'^3}{6} + \frac{(5-18T+T^2+72C-58e'^2)\lambda'^5}{120} + \ldots\right]
+
+$$
+
+$$
+
+N = N_0 + k_0 \left[M(\varphi) - M(\varphi_0) + N\tan\varphi\left(\frac{\lambda'^2}{2} + \frac{(5-T+9C+4C^2)\lambda'^4}{24} + \frac{(61-58T+T^2+600C-330e'^2)\lambda'^6}{720}\right)\right]
+
+$$
+
+where:
+- $T = \tan^2\varphi$
+- $C = e'^2\cos^2\varphi = \frac{e^2}{1-e^2}\cos^2\varphi$
+- $N = a/\sqrt{1-e^2\sin^2\varphi}$ ([[GRS80#Radius of Curvature|prime vertical radius]])
+- $E_0 = 500\,000$ m
+
+## Scale Factor
+
+The scale factor of UTM at the central meridian is:
+
+$$
+
+k_0 = 0.9996
+
+$$
+
+This means distances on the map are $0.04\%$ shorter than true distances at the CM. At the zone boundaries ($3°$ from CM):
+
+$$
+
+k_{boundary} \approx 1.0004
+
+$$
+
+**True scale line** occurs where $k = 1.0000$, at approximately $\pm 1°56'$ from the CM.
+
+## Distortion Analysis
+
+| Distance from CM | Scale Factor | Distortion |
+|-------------------|-------------|------------|
+| 0° (CM) | 0.99960 | -40 cm/km |
+| 1° | 0.99969 | -31 cm/km |
+| 2° | 0.99990 | -10 cm/km |
+| 2.5° | 1.00000 | 0 (true scale) |
+| 3° (boundary) | 1.00040 | +40 cm/km |
+
+### Maximum Angular Distortion
+UTM preserves angles (conformal) but has scale distortion. Maximum scale error is about $0.04\%$ at the central meridian.
+
+## In [[Geodesy]] Context
+
+### UTM Zone Overlap
+Indonesia spans zones 46–54. For surveys spanning zone boundaries:
+
+$$
+
+E_{zoneB} = (E_{zoneA} - 500\,000) \times \frac{k_{CM_A}}{k_{CM_B}} + 500\,000
+
+$$
+
+### Indonesia's National Mapping (Rupabumi)
+- Uses UTM on [[WGS84]]
+- Sheet scales: 1:25,000, 1:50,000, 1:100,000, 1:250,000
+- Grid ticks every 1 km (on 1:25,000)
+- Printed on the Transverse Mercator projection
+
+### Practical Conventions
+| Convention | Value | Purpose |
+|------------|-------|---------|
+| False Easting | 500 000 m | Avoid negative coordinates |
+| False Northing (S) | 10 000 000 m | Distinguish from N hemisphere |
+| Scale factor | 0.9996 | Minimize zone-width distortion |
+| CM spacing | $6°$ | Balance between accuracy and zone count |
+
+## Study Problems
+
+1. Determine the UTM zone for Yogyakarta ($\varphi = -7.8°$, $\lambda = 110.4°$).
+2. Calculate the scale factor at $2°$ from the central meridian.
+3. Convert UTM coordinates $(E, N) = (567\,000, 9\,123\,456)$ to geographic.
+4. Explain why UTM uses $k_0 = 0.9996$ instead of $k_0 = 1.0$.
+
+## Related Concepts
+
+- [[Transverse Mercator]] — Underlying projection
+- [[Map Projection]] — Broader category
+- [[Mercator]] — Similar but cylindrical (not transverse)
+- [[Projected Coordinates]] — $(E, N)$ on any projection
+- [[WGS84]] — Reference ellipsoid
+- [[UTM#Indonesia|Indonesia]] — National mapping standard
+- [[GRS80]] — Ellipsoid used
+
+---
+
+*Concept maintained by AIGIS — part of [[Geodesy MOC]]*

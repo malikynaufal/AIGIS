@@ -13,9 +13,8 @@ Survei Rekayasa mempelajari teknik-teknik survei presisi tinggi untuk proyek rek
 ### 1. Survei Jalan Raya dan Rel Kereta
 
 - **Alinement horizontal**: circular curves, spiral transitions, clothoid
-$$
 
-T = R\tan\frac{\Delta}{2} \quad L = R\frac{\pi\Delta}{180°}$$- **Alinement vertikal**: parabolic vertical curves, grades, sight distance
+$$T = R\tan\frac{\Delta}{2} \quad L = R\frac{\pi\Delta}{180°} $$- **Alinement vertikal**: parabolic vertical curves, grades, sight distance
 
 - **Setting out**: stake-out menggunakan total station / RTK-GNSS
 
@@ -49,7 +48,7 @@ T = R\tan\frac{\Delta}{2} \quad L = R\frac{\pi\Delta}{180°}$$- **Alinement vert
 
 ### 5. Deformasi Struktur
 
-- **Precise levelling**:$0.3$mm/km
+- **Precise levelling**:$0.3 $mm/km
 
 - **RTK GNSS**: 5–15 mm horizontal (real-time)
 

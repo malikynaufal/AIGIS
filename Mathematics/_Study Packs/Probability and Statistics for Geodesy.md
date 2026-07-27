@@ -25,9 +25,8 @@ This study pack bridges general probability/statistics theory with geodetic appl
 ### 1.2 Fundamental Assumption
 
 In geodetic measurement science, random errors follow a Gaussian distribution:
-$$
 
-\epsilon_i \sim \mathcal{N}(0, \sigma_i^2)$$The **Central Limit Theorem** justifies this: the sum of many small independent perturbations cancels through the central limit, yielding normally distributed total error.
+$$\epsilon_i \sim \mathcal{N}(0, \sigma_i^2)$$The **Central Limit Theorem** justifies this: the sum of many small independent perturbations cancels through the central limit, yielding normally distributed total error.
 
 **Are they truly Gaussian?** Not always. GNSS multipath errors, for example, can be non-Gaussian. In practice, the assumption works well enough for most geodetic applications, especially after outlier removal.
 
@@ -37,25 +36,21 @@ $$
 
 ### 2.1 Normality of the LS Estimator
 
-For the linear Gauss-Markov model$\mathbf{l} + \mathbf{v} = \mathbf{A}\hat{\mathbf{x}}$with$\mathbf{l} \sim \mathcal{N}(\mathbf{A}\mathbf{x}, \mathbf{C}_l)$:
-$$\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l}$$
+For the linear Gauss-Markov model $\mathbf{l} + \mathbf{v} = \mathbf{A}\hat{\mathbf{x}} $with $\mathbf{l} \sim \mathcal{N}(\mathbf{A}\mathbf{x}, \mathbf{C}_l)$:
 
-$$\hat{\mathbf{x}} \sim \mathcal{N}\!\left(\mathbf{x},\; \sigma_0^2(\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\right)$$
+$$\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l}\hat{\mathbf{x}} \sim \mathcal{N}\!\left(\mathbf{x},\; \sigma_0^2(\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\right)$$
 
-The estimator is **unbiased** ($E[\hat{\mathbf{x}}] = \mathbf{x}$) and has minimum variance among all linear unbiased estimators (BLUE — **Best Linear Unbiased Estimator**).
+The estimator is **unbiased** ($E[\hat{\mathbf{x}}] = \mathbf{x} $) and has minimum variance among all linear unbiased estimators (BLUE — **Best Linear Unbiased Estimator**).
 
 ### 2.2 Distribution of the Residual Quadratic Form
-$$
 
-\frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\sigma_0^2} = SS / \sigma_0^2 \sim \chi^2_{n-u}$$where$n$is the number of observations and$u$is the number of unknowns.
+$$\frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\sigma_0^2} = SS / \sigma_0^2 \sim \chi^2_{n-u} $$where $n $is the number of observations and $u $is the number of unknowns.
 
 This provides the theoretical basis for model validation.
 
-### 2.3 Distribution of the Variance of Unit Weight$$\hat{\sigma}_0^2 = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\nu} \sim \frac{\sigma_0^2}{\nu}\,\chi^2_\nu
-$$
+### 2.3 Distribution of the Variance of Unit Weight
 
-$$
-E[\hat{\sigma}_0^2] = \sigma_0^2, \quad \text{Var}(\hat{\sigma}_0^2) = \frac{2\sigma_0^4}{\nu}$$Convergence:$\hat{\sigma}_0^2 \to \sigma_0^2$as$\nu \to \infty$.
+$$\hat{\sigma}_0^2 = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\nu} \sim \frac{\sigma_0^2}{\nu}\,\chi^2_\nuE[\hat{\sigma}_0^2] = \sigma_0^2, \quad \text{Var}(\hat{\sigma}_0^2) = \frac{2\sigma_0^4}{\nu} $$Convergence:$\hat{\sigma}_0^2 \to \sigma_0^2 $as $\nu \to \infty$.
 
 ---
 
@@ -64,34 +59,43 @@ E[\hat{\sigma}_0^2] = \sigma_0^2, \quad \text{Var}(\hat{\sigma}_0^2) = \frac{2\s
 ### 3.1 Global Model Test (GMT)
 
 The most fundamental test in least-squares adjustment:
-$$
 
-H_0: E[\mathbf{v}] = \mathbf{0} \quad \text{(model is correct)}$$**Test statistic:**$$T = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\sigma_0^2} = \frac{\nu\hat{\sigma}_0^2}{\sigma_0^2}$$**Decision:**
--$T < \chi^2_{1-\alpha/2, \nu}$or$T > \chi^2_{\alpha/2, \nu}$: reject $H_0$at level$\alpha$-$\chi^2_{1-\alpha/2, \nu} \leq T \leq \chi^2_{\alpha/2, \nu}$: cannot reject $H_0$**Typical outcomes when GMT fails:**
+$$H_0: E[\mathbf{v}] = \mathbf{0} \quad \text{(model is correct)
+}
+
+$$**Test statistic:**$$
+
+T = \frac{\mathbf{v}^T\mathbf{P}\mathbf{v}}{\sigma_0^2} = \frac{\nu\hat{\sigma}_0^2}{\sigma_0^2} $$**Decision:**
+-$T < \chi^2_{1-\alpha/2, \nu} $or $T > \chi^2_{\alpha/2, \nu} $: reject $H_0 $at level $\alpha$-$\chi^2_{1-\alpha/2, \nu} \leq T \leq \chi^2_{\alpha/2, \nu} $: cannot reject $H_0$**Typical outcomes when GMT fails:**
 | Signal | Possible Cause |
 |--------|---------------|
-|$T$ too large ($\gg \nu$) | Gross errors, underestimated $\sigma_0^2$, wrong functional model |
+| $T$ too large ($\gg \nu$) | Gross errors, underestimated $\sigma_0^2$, wrong functional model |
 | $T$ too small ($\ll \nu$) | Overestimated $\sigma_0^2$, over-parameterized model |
 
-**Example:** GPS network with $n = 50$baselines,$u = 12$parameters,$\nu = 38$. If $\mathbf{v}^T\mathbf{P}\mathbf{v} = 28.2$with$\sigma_0^2 = 1$:
-$$
+**Example:** GPS network with $n = 50 $baselines,$u = 12 $parameters,$\nu = 38$. If $\mathbf{v}^T\mathbf{P}\mathbf{v} = 28.2 $with $\sigma_0^2 = 1$:
 
-T = 28.2 / 1 = 28.2$$Critical values at$\alpha = 0.05$: $\chi^2_{0.975, 38} \approx 22.88$, $\chi^2_{0.025, 38} \approx 56.91$Since$28.2 > 22.88$and$28.2 < 56.91$: test **passes**.
+$$T = 28.2 / 1 = 28.2$$Critical values at $\alpha = 0.05$:$\chi^2_{0.975, 38} \approx 22.88$,$\chi^2_{0.025, 38} \approx 56.91 $Since$28.2 > 22.88 $and$28.2 < 56.91$: test **passes**.
 
 ### 3.2 Local Model Test / Baarda Data Snooping
 
 Tests for individual outliers (see [Least Squares Adjustment](#least-squares-adjustment), §8):
-$$
 
-w_i = \frac{v_i}{\sigma_0\sqrt{q_{v_i v_i}}} \sim \mathcal{N}(0, 1)$$The **Baarda w-test** is intimately linked to the **t-test** when$\sigma_0^2$is estimated:$$t_i = \frac{v_i}{\hat{\sigma}_0\sqrt{q_{v_i v_i}}} \sim t(\nu)$$### 3.3 Chi-Square Test for Variance$$H_0: \sigma^2 = \sigma_0^2 \quad H_a: \sigma^2 \neq \sigma_0^2
-$$
+$$w_i = \frac{v_i}{\sigma_0\sqrt{q_{v_i v_i}}} \sim \mathcal{N}(0, 1)$$The **Baarda w-test** is intimately linked to the **t-test** when $\sigma_0^2 $is estimated
+:
 
-$$
-\chi^2 = \frac{(n-1)s^2}{\sigma_0^2}$$**Application:** Testing whether the observed variance of GNSS residuals matches the nominal receiver noise variance.
+$$t_i = \frac{v_i}{\hat{\sigma}_0\sqrt{q_{v_i v_i}}} \sim t(\nu
+)
 
-### 3.4 Goodness of Fit for Normal Distribution$$\chi^2 = \sum_{i=1}^k \frac{(O_i - E_i)^2}{E_i}$$where$O_i$are observed frequencies in$k$bins and$E_i$= expected frequencies from a normal distribution. Tests whether residuals are actually normally distributed.
+$$### 3.3 Chi-Square Test for Variance$$
 
-**Degrees of freedom:**$\nu = k - 1 - m$(where$m$= number of estimated distribution parameters).
+H_0: \sigma^2 = \sigma_0^2 \quad H_a: \sigma^2 \neq \sigma_0^2\chi^2 = \frac{(n-1)s^2}{\sigma_0^2} $$**Application:** Testing whether the observed variance of GNSS residuals matches the nominal receiver noise variance.
+
+### 3.4 Goodness of Fit for Normal Distributio
+n
+
+$$\chi^2 = \sum_{i=1}^k \frac{(O_i - E_i)^2}{E_i} $$where $O_i $are observed frequencies in $k $bins and $E_i$= expected frequencies from a normal distribution. Tests whether residuals are actually normally distributed.
+
+**Degrees of freedom:**$\nu = k - 1 - m$(where $m$= number of estimated distribution parameters).
 
 ---
 
@@ -99,17 +103,20 @@ $$
 
 ### 4.1 DOP Factors (Dilution of Precision)
 
-From the cofactor matrix$\mathbf{Q}_{\hat{x}\hat{x}} = (\mathbf{A}^T\mathbf{A})^{-1}$:
+From the cofactor matrix $\mathbf{Q}_{\hat{x}\hat{x}} = (\mathbf{A}^T\mathbf{A})^{-1} $:
 
 | DOP | Formula | Meaning |
 |-----|---------|---------|
-| **GDOP** | $\sqrt{q_{xx}+q_{yy}+q_{zz}+q_{ct}}$| Geometric (all components) |
-| **PDOP** |$\sqrt{q_{xx}+q_{yy}+q_{zz}}$| Position (3D) |
-| **HDOP** |$\sqrt{q_{xx}+q_{yy}}$| Horizontal (remove height) |
-| **VDOP** |$\sqrt{q_{zz}}$| Vertical |
-| **TDOP** |$\sqrt{q_{ct}}$| Time |
+| **GDOP** | $\sqrt{q_{xx}+q_{yy}+q_{zz}+q_{ct}} $ | Geometric (all components) |
+| **PDOP** | $\sqrt{q_{xx}+q_{yy}+q_{zz}} $ | Position (3D) |
+| **HDOP** | $\sqrt{q_{xx}+q_{yy}} $ | Horizontal (remove height) |
+| **VDOP** | $\sqrt{q_{zz}} $ | Vertical |
+| **TDOP** | $\sqrt{q_{ct}} $ | Time |
 
-**Error relationship:**$$\sigma_{pos} = \text{DOP} \cdot \sigma_{\text{UERE}}$$where$\sigma_{\text{UERE}}$is the User Equivalent Range Error.
+**Error relationship:*
+*
+
+$$\sigma_{pos} = \text{DOP} \cdot \sigma_{\text{UERE}} $$where $\sigma_{\text{UERE}} $is the User Equivalent Range Error.
 
 **Typical values:**
 
@@ -123,26 +130,24 @@ From the cofactor matrix$\mathbf{Q}_{\hat{x}\hat{x}} = (\mathbf{A}^T\mathbf{A})^
 
 ### 4.2 Confidence Ellipsoid
 
-For 3D positioning, the$(1-\alpha)$confidence ellipsoid:$$(\hat{\mathbf{x}} - \mathbf{x})^T \mathbf{C}_{\hat{x}\hat{x}}^{-1}(\hat{\mathbf{x}} - \mathbf{x}) \leq 3F_{3,\nu}(1-\alpha)$$The axes are defined by eigenvectors of$\mathbf{C}_{\hat{x}\hat{x}}$with semi-axis lengths proportional to$\sqrt{\lambda_i F}$.
+For 3D positioning, the$(1-\alpha) $confidence ellipsoid
+:
+
+$$(\hat{\mathbf{x}} - \mathbf{x})^T \mathbf{C}_{\hat{x}\hat{x}}^{-1}(\hat{\mathbf{x}} - \mathbf{x}) \leq 3F_{3,\nu}(1-\alpha)$$The axes are defined by eigenvectors of $\mathbf{C}_{\hat{x}\hat{x}} $with semi-axis lengths proportional to $\sqrt{\lambda_i F} $.
 
 **2D error ellipse parameters:**
-$$a = \hat{\sigma}_0\sqrt{\frac{1}{2}(\sigma_x^2 + \sigma_y^2 + \sqrt{(\sigma_x^2 - \sigma_y^2)^2 + 4\sigma_{xy}^2})}$$
 
-$$b = \hat{\sigma}_0\sqrt{\frac{1}{2}(\sigma_x^2 + \sigma_y^2 - \sqrt{(\sigma_x^2 - \sigma_y^2)^2 + 4\sigma_{xy}^2})}$$
-
-$$
-\theta = \frac{1}{2}\arctan\frac{2\sigma_{xy}}{\sigma_x^2 - \sigma_y^2}$$---
+$$a = \hat{\sigma}_0\sqrt{\frac{1}{2}(\sigma_x^2 + \sigma_y^2 + \sqrt{(\sigma_x^2 - \sigma_y^2)^2 + 4\sigma_{xy}^2})}b = \hat{\sigma}_0\sqrt{\frac{1}{2}(\sigma_x^2 + \sigma_y^2 - \sqrt{(\sigma_x^2 - \sigma_y^2)^2 + 4\sigma_{xy}^2})}\theta = \frac{1}{2}\arctan\frac{2\sigma_{xy}}{\sigma_x^2 - \sigma_y^2} $$---
 
 ## 5. Quality Control in Surveying (Pengendalian Mutu)
 
 ### 5.1 Internal Reliability
 
-The ability to detect outliers of a given magnitude. The **minimal detectable bias (MDB)** for observation$i$:
-$$
+The ability to detect outliers of a given magnitude. The **minimal detectable bias (MDB)** for observation $i$:
 
-\nabla_i = \frac{\delta_0 \sigma_0}{\sqrt{r_i}}$$where:
--$r_i = 1 - \frac{q_{\hat{l}_i\hat{l}_i}}{\sigma_i^2}$is the **redundancy number** (between 0 and 1)
--$\delta_0$is the non-centrality parameter (function of$\alpha$and$\beta$)
+$$\nabla_i = \frac{\delta_0 \sigma_0}{\sqrt{r_i}} $$where:
+-$r_i = 1 - \frac{q_{\hat{l}_i\hat{l}_i}}{\sigma_i^2} $is the **redundancy number** (between 0 and 1)
+-$\delta_0 $is the non-centrality parameter (function of $\alpha $and $\beta$)
 
 **Interpretation:**
 
@@ -150,22 +155,23 @@ $$
 
 - $r_i \to 0$: no control over this observation
 
-- A good network design ensures $r_i > 0.3$for all observations
+- A good network design ensures $r_i > 0.3 $for all observations
 
 ### 5.2 External Reliability
 
-The effect of an undetected outlier of size$\nabla_i$on the estimated parameters:$$\bar{\nabla}_{\hat{\mathbf{x}}_i} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{a}_i\sqrt{\frac{r_i}{1-r_i}}\nabla_i$$where$\mathbf{a}_i$is the$i$-th row of $\mathbf{A}$.
+The effect of an undetected outlier of size $\nabla_i $on the estimated parameters
+:
+
+$$\bar{\nabla}_{\hat{\mathbf{x}}_i} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{a}_i\sqrt{\frac{r_i}{1-r_i}}\nabla_i$$where $\mathbf{a}_i $is the $i$-th row of $\mathbf{A} $.
 
 ### 5.3 Redundancy (Redundansi)
-$$
 
-\nu = n - u$$The **redundancy number** for observation$i$:
-$$
+$$\nu = n - u$$The **redundancy number** for observation $i$:
 
-r_i = (\mathbf{P}^{-1}\mathbf{A}\mathbf{N}^{-1}\mathbf{A}^T)_{ii} \cdot p_i = 1 - (\mathbf{Q}_{\hat{l}\hat{l}})_{ii} p_i$$**Properties:**
+$$r_i = (\mathbf{P}^{-1}\mathbf{A}\mathbf{N}^{-1}\mathbf{A}^T)_{ii} \cdot p_i = 1 - (\mathbf{Q}_{\hat{l}\hat{l}})_{ii} p_i$$**Properties:**
 -$0 \leq r_i \leq 1$-$\sum r_i = \nu$(total redundancy)
 
-- Higher$r_i$= better quality control
+- Higher $r_i$= better quality control
 
 ---
 
@@ -185,9 +191,9 @@ Inner constraints fix the datum with minimum trace of covariance.
 
 Choosing network configuration to optimize precision. Criteria:
 
-- **A-optimality:** minimize$\text{tr}(\mathbf{Q}_{\hat{x}\hat{x}})$- **D-optimality:** maximize$\det(\mathbf{A}^T\mathbf{P}\mathbf{A})$- **E-optimality:** maximize$\lambda_{\min}(\mathbf{A}^T\mathbf{P}\mathbf{A})$### 6.3 Second-Order Design (Weighting)
+- **A-optimality:** minimize $\text{tr}(\mathbf{Q}_{\hat{x}\hat{x}})$- **D-optimality:** maximize $\det(\mathbf{A}^T\mathbf{P}\mathbf{A})$- **E-optimality:** maximize $\lambda_{\min}(\mathbf{A}^T\mathbf{P}\mathbf{A})$### 6.3 Second-Order Design (Weighting)
 
-Choosing observation weights$\mathbf{P}$to achieve desired precision. Given target covariance$\mathbf{C}_{\hat{x}\hat{x}}$, solve for weights.
+Choosing observation weights $\mathbf{P} $to achieve desired precision. Given target covariance $\mathbf{C}_{\hat{x}\hat{x}} $, solve for weights.
 
 ### 6.4 Third-Order Design (Improvement)
 
@@ -201,7 +207,7 @@ Adding new observations to improve an existing network.
 |-----------|-------------------|------------------|
 | **GNSS** | Double-difference phase | RMS, PDOP, ambiguity resolution rate |
 | **Leveling** | Geometric height differences | km-standard deviation |
-| **Total Station** | Direction, distance | Manufacturer $\sigma$, $m_0$|
+| **Total Station** | Direction, distance | Manufacturer $\sigma$, $m_0$ |
 | **InSAR** | Phase difference | Coherence, deformation rate uncertainty |
 | **Gravity** | Point/marine/airborne | mGal, standard deviation |
 | **LiDAR** | Point cloud | Point density,$z$-accuracy |
@@ -212,12 +218,12 @@ Adding new observations to improve an existing network.
 
 | Equation | Name | Use |
 |----------|------|-----|
-| $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l}$| LS estimate | Parameter estimation |
-|$T = \mathbf{v}^T\mathbf{P}\mathbf{v}/\sigma_0^2 \sim \chi^2_{n-u}$| Global model test | Overall adjustment quality |
-|$w_i = v_i/\sigma_0\sqrt{q_{v_i v_i}}$| Baarda w-test | Outlier detection |
-|$r_i = 1 - (\mathbf{Q}_{\hat{l}\hat{l}})_{ii}p_i$| Redundancy number | Observation control |
-| PDOP$= \sqrt{q_{xx}+q_{yy}+q_{zz}}$| Dilution of precision | GNSS geometry quality |
-|$\nabla_i = \delta_0\sigma_0/\sqrt{r_i}$ | MDB | Minimal detectable bias |
+| $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l} $ | LS estimate | Parameter estimation |
+| $T = \mathbf{v}^T\mathbf{P}\mathbf{v}/\sigma_0^2 \sim \chi^2_{n-u} $ | Global model test | Overall adjustment quality |
+| $w_i = v_i/\sigma_0\sqrt{q_{v_i v_i}} $ | Baarda w-test | Outlier detection |
+| $r_i = 1 - (\mathbf{Q}_{\hat{l}\hat{l}})_{ii}p_i$ | Redundancy number | Observation control |
+| PDOP$= \sqrt{q_{xx}+q_{yy}+q_{zz}} $ | Dilution of precision | GNSS geometry quality |
+| $\nabla_i = \delta_0\sigma_0/\sqrt{r_i} $ | MDB | Minimal detectable bias |
 
 ---
 

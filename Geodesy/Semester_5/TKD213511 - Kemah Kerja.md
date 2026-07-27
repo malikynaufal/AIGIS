@@ -1,8 +1,8 @@
 # Kemah Kerja
 
-**Kode:** TKD213511  
-**Sifat:** Wajib  
-**SKS:**   
+**Kode:** TKD213511 
+**Sifat:** Wajib 
+**SKS:** 
 
 ## Deskripsi
 
@@ -102,24 +102,24 @@ Kerangka regulasi yang mengatur industri geospatial Indonesia:
 Mahasiswa bekerja dalam kelompok (3-4 orang) untuk mensimulasikan proyek survei lengkap:
 
 1. **Tahap Perencanaan (Minggu 1)**
-   - Pembentukan tim dan delegasi peran
-   - Penulisan proposal proyek (latar belakang, tujuan, metodologi, jadwal)
-   - Identifikasi risiko dan rencana mitigasi
-   - Penyusunan anggaran simulasi
+ - Pembentukan tim dan delegasi peran
+ - Penulisan proposal proyek (latar belakang, tujuan, metodologi, jadwal)
+ - Identifikasi risiko dan rencana mitigasi
+ - Penyusunan anggaran simulasi
 
 2. **Tahap Eksekusi (Minggu 2-3)**
-   - Simulasi pengumpulan data (menggunakan dataset publik atau mockup)
-   - Pemrosesan data dan analisis awal
-   - Pembuatan peta dan visualisasi hasil
+ - Simulasi pengumpulan data (menggunakan dataset publik atau mockup)
+ - Pemrosesan data dan analisis awal
+ - Pembuatan peta dan visualisasi hasil
 
 3. **Tahap Pelaporan (Minggu 4-5)**
-   - Penulisan laporan teknis formal
-   - Persiapan presentasi akhir
-   - Review sejawat antar kelompok
+ - Penulisan laporan teknis formal
+ - Persiapan presentasi akhir
+ - Review sejawat antar kelompok
 
 4. **Presentasi Final (Minggu 6)**
-   - Presentasi oral 15 menit + 10 menit Q&A
-   - Penilaian berdasarkan kualitas teknis dan komunikasi
+ - Presentasi oral 15 menit + 10 menit Q&A
+ - Penilaian berdasarkan kualitas teknis dan komunikasi
 
 ## Penilaian
 

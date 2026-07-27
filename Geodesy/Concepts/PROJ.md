@@ -30,15 +30,15 @@ updated: 2026-07-27
 # UTM Zone 33N, WGS84
 echo "51.5 0.0" | proj +proj=utm +zone=33 +ellps=WGS84
 
-# Output: 290312.3   5712982.2
+# Output: 290312.3 5712982.2
 ```
 
 ### Inverse Projection ($E, N \to \phi, \lambda$)
 
 ```bash
-echo "290312.3   5712982.2" | proj -I +proj=utm +zone=33 +ellps=WGS84
+echo "290312.3 5712982.2" | proj -I +proj=utm +zone=33 +ellps=WGS84
 
-# Output: 0d0'0.00168"E     51d30'0.00060"N
+# Output: 0d0'0.00168"E 51d30'0.00060"N
 ```
 
 ### Datum Transformation (NAD27 → NAD83)
@@ -85,9 +85,9 @@ zone = int((lon + 180) / 6) + 1
 
 # Adjust for special zones (Norway/Svalbard)
 if lon >= 0 and lon < 180:
-    epsg_code = 32600 + zone  # Northern hemisphere
+ epsg_code = 32600 + zone # Northern hemisphere
 else:
-    epsg_code = 32700 + zone  # Southern hemisphere
+ epsg_code = 32700 + zone # Southern hemisphere
 
 crs_utm = pyproj.CRS.from_epsg(epsg_code)
 ```
@@ -100,10 +100,10 @@ PROJ 6+ supports **coordinate operation pipelines** as a structured sequence of 
 
 # NAD27 → WGS84 via Helmert + NADCON grid
 echo "39°N -105°W" | proj +proj=pipeline \
-    +step +proj=latlong +ellps=clrk66 +step +proj=push +v_1 +step \
-    +proj=utm +zone=13 +ellps=clrk66 +step +proj=gridshift +grid=conus.gsb \
-    +step +proj=set +v_2 +step +pop +v_1 +proj=cart +ellps=GRS80 +step \
-    +proj=helmert +x=-8 +y=152 +z=-178 +rx=0 +ry=0 +rz=0 +s=3.6 +convention=position_vector
+ +step +proj=latlong +ellps=clrk66 +step +proj=push +v_1 +step \
+ +proj=utm +zone=13 +ellps=clrk66 +step +proj=gridshift +grid=conus.gsb \
+ +step +proj=set +v_2 +step +pop +v_1 +proj=cart +ellps=GRS80 +step \
+ +proj=helmert +x=-8 +y=152 +z=-178 +rx=0 +ry=0 +rz=0 +s=3.6 +convention=position_vector
 ```
 
 In Python with pyproj, same pipeline can be specified as a WKT operation string.
@@ -125,7 +125,7 @@ PROJ ships ~50 grid shift files covering most of the world (in `proj-data` packa
 PROJ ships the full EPSG dataset, enabling CRS lookup by code:
 
 ```bash
-projinfo EPSG:32633  # Show CRS details
+projinfo EPSG:32633 # Show CRS details
 
 # Output includes: UTM Zone 33N, WGS 84, meters
 ```

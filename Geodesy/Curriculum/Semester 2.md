@@ -1,38 +1,67 @@
 ---
-title: Geodesy Semester 2 - Measurement & Programming
-tags: [geodesy, curriculum, measurement, programming]
+tags: [aigis, curriculum, geodesy, semester-2, ugm]
+created: 2026-07-27
+updated: 2026-07-27
 ---
 
-# 📗 Semester 2: Measurement Systems & Computation
+# Semester 2 — Computation & Analysis
 
 ## Overview
-Transitioning from theory to practice: learning how to measure the Earth and how to process that data using modern programming environments.
 
-## ✍️ Core Courses
+Semester 2 focuses on computational methods for geodesy: coordinate systems, least squares adjustment (the core mathematical tool), and database management. Students build the analytical skills needed for Semester 3–4 advanced topics.
 
-### 1. Sistem Koordinat (Coordinate Systems)
+## Courses (10 mata kuliah, total ~26 SKS)
 
-- **Topics**: Terrestrial vs. Celestial systems, ECEF, Geodetic (φ, λ, h), and local topocentric systems (ENU).
+| Code | Course | SKS | Type |
+|------|--------|-----|------|
+| TKD211201 | Sistem Koordinat | 3 | Core |
+| TKD211202 | Geometri Analitik | 3 | Math |
+| TKD211203 | Hitung Perataan | 3 | Core |
+| TKD211204 | Dasar-dasar Geofisika dan Astronomi | 3 | Sci |
+| TKD211205 | Sistem Basisdata | 3 | IT |
+| TKD211206 | Praktikum Sistem Basisdata | 1 | Lab |
+| TKD211207 | Pemrograman Komputer | 3 | IT |
+| TKD211208 | Praktikum Pemrograman Komputer | 1 | Lab |
+| TKD211209 | Survei Terestris II | 3 | Core |
+| TKD211210 | Praktikum Survei Terestris II | 3 | Lab |
 
-- **Mathematical Focus**: Transformation matrices and ellipsoidal geometry.
+## Key Topics
 
-- **Key Formula**: $X = (N+h)\cos\phi\cos\lambda$### 2. Hitung Perataan (Least Squares Adjustment)
+### TKD211201 — Sistem Koordinat
+- Geographic, projected, and local coordinate systems
+- Datum concept and transformation basics
+- EPSG codes and coordinate reference systems (CRS)
+- Introduction to geoid undulation
 
-- **Topics**: Error theory, weight matrices, observation equations, and stochastic models.
+### TKD211203 — Hitung Perataan (Least Squares Adjustment)
+The most important course in geodesy:
+- Observation equations: $\mathbf{y} = f(\mathbf{x}) + \mathbf{v}$
+- Linearization: $\mathbf{v} = \mathbf{A}\hat{\mathbf{x}} + \mathbf{l}$
+- Normal equations: $\mathbf{A}^T\mathbf{P}\mathbf{A}\hat{\mathbf{x}} = \mathbf{A}^T\mathbf{P}\mathbf{l}$
+- Covariance propagation
+- Weight matrices and reliability
 
-- **Geodetic Application**: Minimizing residuals in surveying networks.
+### TKD211204 — Geofisika & Astronomi
+- Gravity potential and normal gravity
+- Celestial coordinates and time systems
+- Astronomical latitude/longitude determination
+- [[Precession and Nutation]] concepts
 
-- **Key Formula**:$\hat{x} = (A^T P A)^{-1} A^T P L$
+## Key Formulas (Preview)
 
-### 3. Pemrograman Komputer (Computer Programming)
+- Weighted least squares: $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l}$
+- Covariance of adjusted parameters: $\mathbf{Q}_{\hat{x}\hat{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}$
+- Coordinate transform: 7-parameter Helmert transform (see [[Helmert Transformation]])
 
-- **Focus**: Python for Geodesy. Libraries: `numpy`, `scipy`, `matplotlib`.
+## Study Advice
+1. Master least squares — it underpins all geodesy
+2. Implement Gauss-Jordan elimination in Python
+3. Review [[Least Squares Adjustment]] concept note
+4. Practice database design for spatial data
 
-- **Tasks**: Implementing the Vincenty formula and parsing NMEA GPS strings.
+## Study Pack
+➡️ [[_Study Packs/Satellite Positioning and Clock Corrections|Semester 2 Study Pack]] — consolidating [[Least Squares Adjustment]] and coordinate system concepts
 
-### 4. Survei Terestris II (Terrestrial Surveying II)
+---
 
-- **Practical**: Use of Total Stations, Digital Levels, and measurement of horizontal/vertical control networks.
-
-## 🧭 Roadmap
-Focus on mastering **Matrix Algebra** this semester, as it is the language of [[Least Squares Adjustment]].
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

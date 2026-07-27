@@ -49,9 +49,9 @@ from geographiclib.geodesic import Geodesic
 
 # Distance and azimuth from New York to London
 result = Geodesic.WGS84.Inverse(40.7128, -74.0060, 51.5074, -0.1278)
-print(f"Distance: {result['s12']:.3f} m")       # ≈ 5,570,226 m
-print(f"Azimuth at NYC:  {result['azi1']:.6f}°") # ≈ 51.27° ENE
-print(f"Azimuth at Lon:  {result['azi2']:.6f}°") # ≈ 110.16° ESE
+print(f"Distance: {result['s12']:.3f} m") # ≈ 5,570,226 m
+print(f"Azimuth at NYC: {result['azi1']:.6f}°") # ≈ 51.27° ENE
+print(f"Azimuth at Lon: {result['azi2']:.6f}°") # ≈ 110.16° ESE
 
 # Geodesic direct problem (NYC + 1000km at 050°)
 result2 = Geodesic.WGS84.Direct(40.7128, -74.0060, 50, 1000000)

@@ -25,11 +25,11 @@ Atmospheric physics applies thermodynamics, fluid dynamics, and radiation physic
 ### Unit 1: Atmospheric Structure and Composition (Weeks 1–4)
 
 - **Vertical structure:** temperature profile defines layers
-  - **Troposphere** (0–12 km): temperature decreases ~6.5 K/km
-  - **Stratosphere** (12–50 km): ozone absorption → temperature increase
-  - **Mesosphere** (50–80 km): coldest layer
-  - **Thermosphere** (80–700 km): temperature rises to ~1000 K
-  - **Ionosphere** (50–1000 km): free electrons, radio wave reflection
+ - **Troposphere** (0–12 km): temperature decreases ~6.5 K/km
+ - **Stratosphere** (12–50 km): ozone absorption → temperature increase
+ - **Mesosphere** (50–80 km): coldest layer
+ - **Thermosphere** (80–700 km): temperature rises to ~1000 K
+ - **Ionosphere** (50–1000 km): free electrons, radio wave reflection
 
 - **Atmospheric composition:** N₂ (78%), O₂ (21%), Ar (1%), trace gases (CO₂, H₂O, O₃)
 
@@ -48,7 +48,7 @@ Atmospheric physics applies thermodynamics, fluid dynamics, and radiation physic
 - **Dry adiabatic lapse rate:** Γ_d = g/c_p ≈ 9.8 K/km
 
 - **Moist air processes:** saturation, condensation
-  - Clausius-Clapeyron for water vapor: e_s(T) ∝ exp(-L_v/R_vT)
+ - Clausius-Clapeyron for water vapor: e_s(T) ∝ exp(-L_v/R_vT)
 
 - **Moist adiabatic lapse rate:** Γ_m < Γ_d (latent heat release)
 
@@ -69,7 +69,7 @@ Atmospheric physics applies thermodynamics, fluid dynamics, and radiation physic
 - **Optical depth:** τ — measure of atmosphere's transparency to radiation
 
 - **Geostrophic balance:** horizontal pressure gradient ↔ Coriolis force
-  - Wind direction parallel to isobars in mid-latitudes
+ - Wind direction parallel to isobars in mid-latitudes
 
 - **Thermal wind:** wind shear related to horizontal temperature gradient
 
@@ -78,15 +78,15 @@ Atmospheric physics applies thermodynamics, fluid dynamics, and radiation physic
 ### Unit 4: Atmospheric Effects on GNSS (Weeks 13–16)
 
 - **Tropospheric delay:** refraction of GNSS signals by neutral atmosphere
-  - Zenith hydrostatic delay (ZHD): ~2.3 m
-  - Zenith wet delay (ZWD): ~0.3 m (variable)
+ - Zenith hydrostatic delay (ZHD): ~2.3 m
+ - Zenith wet delay (ZWD): ~0.3 m (variable)
 
 - **Troposphere models:** Saastamoinen, Hopfield, GPT2w
 
 - **Ionospheric delay:** dispersive medium → frequency-dependent delay
-  ```
-  ΔL_{ion} = 40.3/f² · TEC   (TEC = Total Electron Content)
-  ```
+ ```
+ ΔL_{ion} = 40.3/f² · TEC (TEC = Total Electron Content)
+ ```
 
 - **Ionospheric effects on GNSS:** signal delay, scintillation, cycle slips
 
@@ -101,13 +101,13 @@ Atmospheric physics applies thermodynamics, fluid dynamics, and radiation physic
 ## 🔬 Key Equations
 
 ```
-Hydrostatic:        dP/dz = -ρg
-Dry adiabatic:      Γ_d = g/c_p ≈ 9.8 K/km
-Scale height:       H = kT/mg
-Geostrophic wind:   u_g = -(1/ρf) ∂P/∂y, v_g = (1/ρf) ∂P/∂x
+Hydrostatic: dP/dz = -ρg
+Dry adiabatic: Γ_d = g/c_p ≈ 9.8 K/km
+Scale height: H = kT/mg
+Geostrophic wind: u_g = -(1/ρf) ∂P/∂y, v_g = (1/ρf) ∂P/∂x
 Tropospheric delay: ΔL_trop = ZHD · mf_h + ZWD · mf_w
-Ionospheric delay:  ΔL_ion = 40.3/f² · TEC
-Optical depth:      τ = ∫ κ_λ ρ dz
+Ionospheric delay: ΔL_ion = 40.3/f² · TEC
+Optical depth: τ = ∫ κ_λ ρ dz
 ```
 
 ---

@@ -45,13 +45,13 @@ Every SIG project must work in a consistent CRS:
 
 ```
 1. Geometric CRS (Geodetic): φ, λ
-   └── Datum: WGS84, NAD83, ETRS89
-   └── Ellipsoid: GRS80, Clarke 1866
+ └── Datum: WGS84, NAD83, ETRS89
+ └── Ellipsoid: GRS80, Clarke 1866
 
 2. Projected CRS: E, N (meters)
-   └── Projection: UTM, TM, Lambert, etc.
-   └── Zone: Zone 48S (Jakarta)
-   └── False origin: E₀ = 500,000, N₀ = 10,000,000
+ └── Projection: UTM, TM, Lambert, etc.
+ └── Zone: Zone 48S (Jakarta)
+ └── False origin: E₀ = 500,000, N₀ = 10,000,000
 ```
 
 ### CRS Assignment in Practice
@@ -91,11 +91,11 @@ In Indonesia:
 
 ```
 Field survey (total station, RTK GNSS)
-    → WGS84/Ellipsoidal heights (h)
-    → SIG imports coordinates
-    → Apply datum transformation (NAD27 → WGS84 via NADCON)
-    → Reproject to local CRS (UTM/TM3°)
-    → Store in SIG as layer
+ → WGS84/Ellipsoidal heights (h)
+ → SIG imports coordinates
+ → Apply datum transformation (NAD27 → WGS84 via NADCON)
+ → Reproject to local CRS (UTM/TM3°)
+ → Store in SIG as layer
 ```
 
 ### SIG + Geoid Model Integration

@@ -1,71 +1,147 @@
-# Semester 8 — Geodesi
+---
+tags: [geodesy, semester-8, thesis, research-project, skripsi]
+aliases: [Semester 8 Curriculum]
+created: 2026-07-13
+updated: 2026-07-27
+---
 
-**Program Studi:** S1 Geodesi  
-**Periode:** Semester 8 (Tahun ke-4/Akhir)  
+# 🎓 Semester 8 — Geodesy
 
-## Ringkasan Semester
+> *"The culmination of 4 years of study — your capstone thesis and professional preparation."*
 
-Semester 8 merupakan semester puncak dalam kurikulum S1 Geodesi, di mana fokus utama mahasiswa beralih dari pembelajaran formal di kelas menuju pemenuhan syarat kelulusan akhir melalui penulisan Skripsi (Tugas Akhir) dan kegiatan pengabdian masyarakat Kuliah Kerja Nyata (KKN). Semester ini adalah masa krusial bagi mahasiswa untuk menunjukkan penguasaan menyeluruh atas kompetensi geodesi dan geomatika serta memberikan kontribusi nyata kepada masyarakat.
+---
 
-## Daftar Mata Kuliah
+## 1. Courses
 
-| Kode | Mata Kuliah | SKS | Sifat | Prasyarat |
-|------|-------------|-----|-------|-----------|
-| **UNV4801** | [Kuliah Kerja Nyata (KKN)](UNV4801%20-%20Kuliah%20Kerja%20Nyata%20(KKN).md) | 3 | Wajib | Semester 7 selesai |
-| **TKD4802** | [Skripsi](TKD4802%20-%20Skripsi.md) | 6 | Wajib | Lulus semua mata kuliah inti |
+| Code | Course | SKS | Type |
+|------|--------|-----|------|
+| TKD4802 | Skripsi (Thesis) | 6 | Wajib |
+| UNV4801 | Kuliah Kerja Nyata (KKN) | 2 | Wajib |
 
-**Total SKS Semester 8:** 9 SKS
+**Total: 8 SKS**
 
-## Fokus Semester
+---
 
-### 1. Skripsi (TKD4802)
+## 2. TKD4802 — Skripsi
 
-- Penelitian mandiri mendalam di bidang geodesi, fotogrametri, penginderaan jauh, SIG, atau manajemen lahan.
+### 2.1 Structure
 
-- Penulisan karya tulis ilmiah yang memenuhi standar akademik tinggi (plagiarisme rendah, metodologi ketat, kontribusi orisinal).
+```
+Semester 7-8 (2 semesters)
+├── Proposal (Semester 7)
+│   ├── Literature review
+│   ├── Methodology
+│   └── Preliminary results
+├── Data collection (Semester 7-8)
+│   ├── Field work
+│   ├── Processing
+│   └── Analysis
+├── Writing (Semester 8)
+│   ├── Results chapter
+│   ├── Discussion
+│   └── Conclusion
+└── Defense (Semester 8)
+    ├── Presentation
+    └── Q&A with panel
+```
 
-- Persiapan ujian pendadaran (sidang akhir) di hadapan tim penguji.
+### 2.2 Key Requirements
 
-### 2. Kuliah Kerja Nyata (KKN) (UNV4801)
+| Component | Minimum Requirements |
+|-----------|---------------------|
+| Pages | 80-120 pages |
+| References | Minimum 30 references |
+| Data sources | At least 2 primary sources |
+| Language | Indonesian or English |
+| Tools | MATLAB/Python/C++/GNSS software |
 
-- Pengabdian masyarakat berbasis ilmu geomatika (misal: pemetaan desa, tata ruang desa, pemberdayaan berbasis data spasial).
+### 2.3 Common Thesis Topics
 
-- Berkolaborasi dengan mahasiswa dari lintas jurusan/fakultas.
+#### Geodetic Surveying
+- GNSS-based deformation monitoring network
+- Integration of InSAR and GPS for subsidence analysis
+- Geoid determination using GRAV-D data
 
-- Peningkatan pemahaman sosial dan kepemimpinan dalam lingkungan masyarakat pedesaan/perkotaan.
+#### Remote Sensing & GIS
+- Land use change detection using Sentinel-2
+- Urban heat island analysis
+- Flood risk modeling and mapping
 
-## Prasyarat dan Keterampilan
+#### Land Administration
+- Cadastral system modernization
+- Land information system development
+- Spatial planning and infrastructure
 
-- **Kemampuan Teknis**: Analisis spasial, pengolahan data geodesi, kemampuan pemrograman/skrip (Python/R) untuk riset.
+#### Geodynamics
+- Crustal deformation analysis using GNSS time series
+- Sea level rise monitoring
+- Gravity field variations
 
-- **Kemampuan Akademik**: Penulisan ilmiah (LaTeX/Word), tata bahasa, manajemen referensi, pemikiran kritis.
+### 2.4 Timeline
 
-- **Kemampuan Sosial**: Adaptabilitas di masyarakat (KKN), komunikasi profesional, manajemen waktu.
+```
+Month 1-2:   Topic selection + proposal writing
+Month 3-4:   Proposal defense
+Month 4-6:   Data collection and processing
+Month 6-7:   Results analysis
+Month 7-8:   Writing and review
+Month 8:     Final defense
+```
 
-## Kalender Akademik (Estimasi)
+---
 
-| Bulan | Fokus Utama |
-|-------|-------------|
-| 1–3 | Riset Skripsi (pengumpulan data, analisis, penulisan) |
-| 4 | KKN (pelaksanaan program di lapangan) |
-| 5 | Penulisan Laporan Akhir KKN & Finalisasi Skripsi |
-| 6 | Ujian Skripsi (Pendadaran) |
-| 7 | Revisi Skripsi dan Proses Yudisium/Kelulusan |
+## 3. UNV4801 — Kuliah Kerja Nyata (KKN)
 
-## Tips Sukses Semester 8
+### 3.1 Overview
 
-1. **Manajemen Waktu**: Skripsi adalah maraton, bukan sprint. Buatlah target mingguan.
-2. **Komunikasi dengan Dosen**: Jaga komunikasi rutin dengan pembimbing skripsi.
-3. **Kesehatan Mental**: Jaga keseimbangan antara riset dan aktivitas lainnya.
-4. **Data KKN**: Jika mungkin, gunakan data KKN untuk kepentingan skripsi (misal: pemetaan desa).
-5. **Standar Penulisan**: Ikuti panduan penulisan tugas akhir dari fakultas/prodi sejak awal.
+Community service program applying geodetic skills to real problems.
 
-## Referensi Umum
+### 3.2 Activities
 
-- Panduan Penulisan Skripsi Program Studi Geodesi [berlaku internal]
+- Survey and mapping of rural areas
+- GIS-based community planning
+- Land survey assistance
+- Environmental monitoring
+- Technical documentation
 
-- Pedoman Kuliah Kerja Nyata (KKN) Universitas [berlaku internal]
+---
 
-- IAGI, "Standar Karya Tulis Ilmiah Bidang Geodesi", 2022
+## 4. Professional Readiness
 
-- Ristekdikti, "Pedoman Penulisan Karya Ilmiah", 2020
+### 4.1 Competencies
+
+| Skill | Level | Tools |
+|-------|-------|-------|
+| GNSS processing | Advanced | Bernese, RTKLIB, Leica Infinity |
+| Photogrammetry | Advanced | Pix4D, Agisoft, CloudCompare |
+| GIS | Professional | ArcGIS, QGIS, PostGIS |
+| Programming | Proficient | Python, MATLAB, R, SQL |
+| Report writing | Professional | LaTeX, Word |
+| Presentation | Professional | English/Indonesian |
+
+### 4.2 Career Paths
+
+| Path | Focus | Employers |
+|------|-------|-----------|
+| Surveying | Cadastral, construction, hydrographic | BPN, consultants |
+| GIS Analyst | Spatial analysis, planning | Government, NGOs |
+| Remote Sensing | Satellite data, drones | LAPAN, BRIN |
+| Research | Academic, R&D | Universities |
+| Industry | Mining, oil & gas | Pertamina, mining companies |
+
+---
+
+## 5. Cross-links
+
+### Related Concepts
+- [[GNSS]], [[Geodesy Fundamentals]], [[Least Squares Adjustment]]
+- [[Sistem Koordinat]], [[ITRF]], [[Map Projection]]
+
+### Related Semesters
+- [[Semester_5/README|Semester 5]] — Advanced courses
+- [[Semester_6/README|Semester 6]] — Professional courses
+- [[Semester_7/README|Semester 7]] — Pre-thesis courses
+
+---
+
+*Page last updated: 2026-07-27 | AIGIS Content™*

@@ -43,28 +43,28 @@ Quantum mechanics — the most successful physical theory ever devised. This cou
 ### Unit 2: The Schrödinger Equation (Weeks 5–9)
 
 - **Time-dependent Schrödinger equation (TDSE):**
-  ```
-  iℏ ∂ψ/∂t = -ℏ²/(2m) ∂²ψ/∂x² + Vψ
-  ```
+ ```
+ iℏ ∂ψ/∂t = -ℏ²/(2m) ∂²ψ/∂x² + Vψ
+ ```
 
 - **Time-independent Schrödinger equation (TISE):**
-  ```
-  -ℏ²/(2m) d²ψ/dx² + Vψ = Eψ
-  ```
+ ```
+ -ℏ²/(2m) d²ψ/dx² + Vψ = Eψ
+ ```
 
 - **Infinite square well (particle in a box):**
-  ```
-  ψ_n(x) = √(2/L) sin(nπx/L)
-  E_n = n²π²ℏ²/(2mL²)
-  ```
+ ```
+ ψ_n(x) = √(2/L) sin(nπx/L)
+ E_n = n²π²ℏ²/(2mL²)
+ ```
 
 - **Finite potential well:** tunneling solutions
 
 - **Harmonic oscillator:**
-  ```
-  ψ_n(x) = H_n(x) exp(-mωx²/(2ℏ))
-  E_n = (n+½)ℏω
-  ```
+ ```
+ ψ_n(x) = H_n(x) exp(-mωx²/(2ℏ))
+ E_n = (n+½)ℏω
+ ```
 
 - **Step potentials** and scattering/reflection
 
@@ -73,13 +73,13 @@ Quantum mechanics — the most successful physical theory ever devised. This cou
 - **Schrödinger equation in 3D:** ∇²ψ + 2m(E-V)/ℏ² ψ = 0
 
 - **Hydrogen atom** (spherical symmetry):
-  - Separation: ψ(r,θ,φ) = R_nl(r) Y_{lm}(θ,φ)
-  - Radial equation → discrete energy levels
-  - **Bohr:** E_n = -13.6 eV/n² (hydrogen)
-  - Spherical harmonics Y_{lm} → shapes of orbitals
+ - Separation: ψ(r,θ,φ) = R_nl(r) Y_{lm}(θ,φ)
+ - Radial equation → discrete energy levels
+ - **Bohr:** E_n = -13.6 eV/n² (hydrogen)
+ - Spherical harmonics Y_{lm} → shapes of orbitals
 
 - **Angular momentum:** **L** = **r**×**p** as operator
-  - L² and L_z eigenvalues: l(l+1)ℏ², mℏ
+ - L² and L_z eigenvalues: l(l+1)ℏ², mℏ
 
 - **Spin:** magnetic moment, Stern-Gerlach experiment
 
@@ -100,24 +100,24 @@ Quantum mechanics — the most successful physical theory ever devised. This cou
 - **Quantum tunneling:** scanning tunneling microscope (STM)
 
 - **Sensors based on quantum phenomena:**
-  - Atomic clocks (GPS timing!)
-  - Quantum gravimeters
-  - SQUIDs for magnetic field measurement
-  - NV-diamond magnetometers
+ - Atomic clocks (GPS timing!)
+ - Quantum gravimeters
+ - SQUIDs for magnetic field measurement
+ - NV-diamond magnetometers
 
 ---
 
 ## 🔬 Key Equations
 
 ```
-Schrödinger (time-dependent):   iℏ∂ψ/∂t = Ĥψ
+Schrödinger (time-dependent): iℏ∂ψ/∂t = Ĥψ
 Schrödinger (time-independent): Ĥψ = Eψ
-Uncertainty:                    Δx·Δp ≥ ℏ/2
-de Broglie:                     λ = h/p
-Harmonic oscillator:            E_n = (n+½)ℏω
-Hydrogen atom:                  E_n = -13.6 eV / n²
-Angular momentum:               L² = l(l+1)ℏ²
-Commutator:                     [x, p] = iℏ
+Uncertainty: Δx·Δp ≥ ℏ/2
+de Broglie: λ = h/p
+Harmonic oscillator: E_n = (n+½)ℏω
+Hydrogen atom: E_n = -13.6 eV / n²
+Angular momentum: L² = l(l+1)ℏ²
+Commutator: [x, p] = iℏ
 ```
 
 ---

@@ -29,8 +29,8 @@ Experimental electromagnetism — this laboratory course directly complements th
 - Building series and parallel circuits on breadboards
 
 - **Verifying Kirchhoff's laws:**
-  - Voltage divider rule: V_R1 = V_s · R₁/(R₁+R₂)
-  - Current divider principle
+ - Voltage divider rule: V_R1 = V_s · R₁/(R₁+R₂)
+ - Current divider principle
 
 - **Thevenin and Norton equivalent circuits**
 
@@ -39,8 +39,8 @@ Experimental electromagnetism — this laboratory course directly complements th
 ### Experiment 2: RC Circuits and Time Constants (Weeks 3–4)
 
 - **Capacitor charging/discharging** through a resistor
-  - V_c(t) = V₀(1 - e^{-t/RC}) for charging
-  - V_c(t) = V₀e^{-t/RC} for discharging
+ - V_c(t) = V₀(1 - e^{-t/RC}) for charging
+ - V_c(t) = V₀e^{-t/RC} for discharging
 
 - Measuring time constant τ = RC from exponential fits
 
@@ -101,7 +101,7 @@ Experimental electromagnetism — this laboratory course directly complements th
 - **Thin lens:** measuring focal length by lens equation
 
 - **Diffraction grating:** measuring laser wavelength
-  - λ = d sin θ / m
+ - λ = d sin θ / m
 
 ### Experiment 8: Electromagnetic Waves (Weeks 15–16)
 
@@ -118,12 +118,12 @@ Experimental electromagnetism — this laboratory course directly complements th
 ## 🔬 Key Experimental Techniques
 
 ```
-Voltage divider:    V_out = V_in · R₂/(R₁+R₂)
-RC charging:        V(t) = V₀(1 - e^{-t/RC})
-Resonance:          f₀ = 1/(2π√(LC))
-Solenoid field:     B = μ₀nI
-Thin lens:          1/f = 1/s₀ + 1/s₁
-Diffraction:        d sin θ = mλ
+Voltage divider: V_out = V_in · R₂/(R₁+R₂)
+RC charging: V(t) = V₀(1 - e^{-t/RC})
+Resonance: f₀ = 1/(2π√(LC))
+Solenoid field: B = μ₀nI
+Thin lens: 1/f = 1/s₀ + 1/s₁
+Diffraction: d sin θ = mλ
 ```
 
 ---

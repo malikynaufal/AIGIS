@@ -8,7 +8,7 @@
 
 - Survei Interior: Pengukuran Terestrial Lanjut
 
-- Fotogrametri Digital: Pengolahan Citra Geospasial  
+- Fotogrametri Digital: Pengolahan Citra Geospasial 
 
 - Penginderaan Jauh Terapan: Remote Sensing Geodesi
 

@@ -43,10 +43,10 @@ Calculus I provides the mathematical foundation essential for all physics course
 - Geometric interpretation: slope of tangent line, velocity
 
 - **Differentiation rules:**
-  - Power rule: d/dx[xⁿ] = nxⁿ⁻¹
-  - Product rule: d/dx[fg] = f'g + fg'
-  - Quotient rule: d/dx[f/g] = (f'g - fg')/g²
-  - **Chain rule:** d/dx[f(g(x))] = f'(g(x))·g'(x)
+ - Power rule: d/dx[xⁿ] = nxⁿ⁻¹
+ - Product rule: d/dx[fg] = f'g + fg'
+ - Quotient rule: d/dx[f/g] = (f'g - fg')/g²
+ - **Chain rule:** d/dx[f(g(x))] = f'(g(x))·g'(x)
 
 - Derivatives of trigonometric, exponential, and logarithmic functions
 
@@ -77,8 +77,8 @@ Calculus I provides the mathematical foundation essential for all physics course
 - **Riemann sums** and area under a curve
 
 - **Fundamental Theorem of Calculus:**
-  - Part I: d/dx[∫ₐˣ f(t)dt] = f(x)
-  - Part II: ∫ₐᵇ f(x)dx = F(b) - F(a)
+ - Part I: d/dx[∫ₐˣ f(t)dt] = f(x)
+ - Part II: ∫ₐᵇ f(x)dx = F(b) - F(a)
 
 - Integration techniques: substitution, integration by parts, partial fractions
 
@@ -93,15 +93,15 @@ Calculus I provides the mathematical foundation essential for all physics course
 ## 🔬 Key Formulas
 
 ```
-Power Rule:         d/dx[xⁿ] = nxⁿ⁻¹
-Chain Rule:         d/dx[f(g(x))] = f'(g(x))·g'(x)
-Product Rule:       d/dx[fg] = f'g + fg'
-Integration:        ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C  (n ≠ -1)
-                    ∫ (1/x) dx = ln|x| + C
-                    ∫ eˣ dx = eˣ + C
-                    ∫ sin(x) dx = -cos(x) + C
-                    ∫ cos(x) dx = sin(x) + C
-Fundamental Thm:    ∫ₐᵇ f(x)dx = F(b) - F(a)
+Power Rule: d/dx[xⁿ] = nxⁿ⁻¹
+Chain Rule: d/dx[f(g(x))] = f'(g(x))·g'(x)
+Product Rule: d/dx[fg] = f'g + fg'
+Integration: ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C (n ≠ -1)
+ ∫ (1/x) dx = ln|x| + C
+ ∫ eˣ dx = eˣ + C
+ ∫ sin(x) dx = -cos(x) + C
+ ∫ cos(x) dx = sin(x) + C
+Fundamental Thm: ∫ₐᵇ f(x)dx = F(b) - F(a)
 ```
 
 ---

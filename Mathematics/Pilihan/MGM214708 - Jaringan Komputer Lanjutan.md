@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Advanced Networking
 
-**Course Code:** MGM214708  
-**SKS:** 3 (2-1)  
-**Semester:** 5  
-**Prerequisites:** Jaringan Komputer Dasar  
+**Course Code:** MGM214708 
+**SKS:** 3 (2-1) 
+**Semester:** 5 
+**Prerequisites:** Jaringan Komputer Dasar 
 
 ---
 

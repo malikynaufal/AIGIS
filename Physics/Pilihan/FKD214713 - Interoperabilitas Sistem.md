@@ -2,11 +2,11 @@
 title: "Interoperabilitas Sistem"
 subject: "Fisika Pilihan"
 tags:
-  - interoperability
-  - OGC-standards
-  - APIs
-  - data-exchange
-  - SKS: 3
+ - interoperability
+ - OGC-standards
+ - APIs
+ - data-exchange
+ - SKS: 3
 ---
 
 # FKD214713 — Interoperabilitas Sistem
@@ -26,9 +26,9 @@ The OGC Service Architecture follows a layered model:
 
 ```
 [Client Application]
-        ↓ (HTTP requests/responses)
+ ↓ (HTTP requests/responses)
 [OGC Web Service Interface]
-        ↓ (data access layer)
+ ↓ (data access layer)
 [Data Store (database, file system, API)]
 ```
 
@@ -119,31 +119,31 @@ The modern replacement for WFS, using RESTful design and OpenAPI 3.0:
 
 # OpenAPI snippet for OGC API — Features
 /openapi.yaml:
-  paths:
-    /collections/{collectionId}/items:
-      get:
-        summary: List features in a collection
-        parameters:
-          - name: collectionId
-            in: path
-            required: true
-          - name: limit
-            in: query
-            schema:
-              type: integer
-              default: 10
-          - name: bbox
-            in: query
-            schema:
-              type: array
-              items:
-                type: number
-        responses:
-          '200':
-            content:
-              application/geo+json:
-                schema:
-                  $ref: '#/components/schemas/FeatureCollection'
+ paths:
+ /collections/{collectionId}/items:
+ get:
+ summary: List features in a collection
+ parameters:
+ - name: collectionId
+ in: path
+ required: true
+ - name: limit
+ in: query
+ schema:
+ type: integer
+ default: 10
+ - name: bbox
+ in: query
+ schema:
+ type: array
+ items:
+ type: number
+ responses:
+ '200':
+ content:
+ application/geo+json:
+ schema:
+ $ref: '#/components/schemas/FeatureCollection'
 ```
 
 ### 2.2 API Design Best Practices
@@ -184,17 +184,17 @@ OGC CSW enables searching and retrieving metadata records:
 
 ```xml
 <csw:GetRecords xmlns:csw="http://www.opengis.net/cat/csw/2.0.2"
-    service="CSW" version="2.0.2" maxRecords="10">
-  <csw:Query typeNames="csw:Record">
-    <csw:Constraint version="1.1.0">
-      <ogc:Filter>
-        <ogc:PropertyIsLike wildCard="%" singleChar="_" escapeChar="\\">
-          <ogc:PropertyName>csw:AnyText</ogc:PropertyName>
-          <ogc:Literal>elevasi digital</ogc:Literal>
-        </ogc:PropertyIsLike>
-      </ogc:Filter>
-    </csw:Constraint>
-  </csw:Query>
+ service="CSW" version="2.0.2" maxRecords="10">
+ <csw:Query typeNames="csw:Record">
+ <csw:Constraint version="1.1.0">
+ <ogc:Filter>
+ <ogc:PropertyIsLike wildCard="%" singleChar="_" escapeChar="\\">
+ <ogc:PropertyName>csw:AnyText</ogc:PropertyName>
+ <ogc:Literal>elevasi digital</ogc:Literal>
+ </ogc:PropertyIsLike>
+ </ogc:Filter>
+ </csw:Constraint>
+ </csw:Query>
 </csw:GetRecords>
 ```
 
@@ -204,18 +204,18 @@ STAC is a modern, lightweight alternative to CSW, using JSON and designed for cl
 
 ```json
 {
-  "type": "Feature",
-  "stac_version": "1.0.0",
-  "id": "S2A_MSIL2A_20230101_JAKARTA",
-  "geometry": { "type": "Polygon", "coordinates": [...] },
-  "properties": {
-    "datetime": "2023-01-01T02:30:00Z",
-    "platform": "sentinel-2a",
-    "cloud_cover": 5.2
-  },
-  "assets": {
-    "B04": { "href": "https://storage.googleapis.com/.../B04.tif", "type": "image/tiff" }
-  }
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "id": "S2A_MSIL2A_20230101_JAKARTA",
+ "geometry": { "type": "Polygon", "coordinates": [...] },
+ "properties": {
+ "datetime": "2023-01-01T02:30:00Z",
+ "platform": "sentinel-2a",
+ "cloud_cover": 5.2
+ },
+ "assets": {
+ "B04": { "href": "https://storage.googleapis.com/.../B04.tif", "type": "image/tiff" }
+ }
 }
 ```
 
@@ -247,7 +247,7 @@ When exchanging data between systems, coordinate reference system (CRS) mismatch
 
 # Transform from DGN2000-48S to WGS84
 cs2cs +proj=utm +zone=48 +south +ellps=WGS84 +to +proj=longlat +datum=WGS84 \
-    input_coordinates.txt > output_coordinates.txt
+ input_coordinates.txt > output_coordinates.txt
 ```
 
 ---

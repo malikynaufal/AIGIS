@@ -27,15 +27,15 @@ Computational physics — using computers to simulate physical systems that are 
 - **Random number generation:** pseudo-random, seeds, quality testing
 
 - **Monte Carlo integration:**
-  - Area/volume estimation by random sampling
-  - Variance reduction techniques: importance sampling, antithetic variates
-  ```
-  I ≈ (V/N) Σ f(x_i),  σ² = (V²/N)[(1/N)Σf²_i - (Σf_i/N)²]
-  ```
+ - Area/volume estimation by random sampling
+ - Variance reduction techniques: importance sampling, antithetic variates
+ ```
+ I ≈ (V/N) Σ f(x_i), σ² = (V²/N)[(1/N)Σf²_i - (Σf_i/N)²]
+ ```
 
 - **Metropolis algorithm** for statistical mechanics:
-  - Sample Boltzmann distribution P ∝ exp(-E/kT)
-  - Markov chain Monte Carlo (MCMC) — detailed balance condition
+ - Sample Boltzmann distribution P ∝ exp(-E/kT)
+ - Markov chain Monte Carlo (MCMC) — detailed balance condition
 
 - **Applications:** Ising model, integral evaluation, parameter estimation
 
@@ -44,14 +44,14 @@ Computational physics — using computers to simulate physical systems that are 
 ### Unit 2: Molecular Dynamics (Weeks 6–9)
 
 - **Classical MD simulation:** integrate Newton's laws for N particles
-  ```
-  r(t+Δt) = 2r(t) - r(t-Δt) + F(t)/m · Δt²  (Verlet algorithm)
-  ```
+ ```
+ r(t+Δt) = 2r(t) - r(t-Δt) + F(t)/m · Δt² (Verlet algorithm)
+ ```
 
 - **Interatomic potentials:** Lennard-Jones (12-6), Morse potential
-  ```
-  V(r) = 4ε[(σ/r)¹² - (σ/r)⁶]
-  ```
+ ```
+ V(r) = 4ε[(σ/r)¹² - (σ/r)⁶]
+ ```
 
 - **Ewald summation** for long-range forces (electrostatics)
 
@@ -68,27 +68,27 @@ Computational physics — using computers to simulate physical systems that are 
 ### Unit 3: Particle Simulations (Weeks 10–13)
 
 - **N-body simulation:** gravitational/solar system dynamics
-  - Time-stepping: adaptive (Bulirsch-Stoer), symplectic (leapfrog)
-  - **Tree codes** and **fast multipole method** for O(N log N) gravity
+ - Time-stepping: adaptive (Bulirsch-Stoer), symplectic (leapfrog)
+ - **Tree codes** and **fast multipole method** for O(N log N) gravity
 
 - **Plasma physics simulations:** PIC (particle-in-cell) method
 
 - **Radiation transport:** Monte Carlo radiation shielding calculations
 
 - **Geophysical applications:**
-  - Seismic wave propagation simulation
-  - Groundwater flow modeling
-  - Climate system modeling (overview)
+ - Seismic wave propagation simulation
+ - Groundwater flow modeling
+ - Climate system modeling (overview)
 
 ### Unit 4: Advanced Topics and Projects (Weeks 14–16)
 
 - **GPU computing** for parallel simulations (CUDA overview)
-  ```python
-  # CUDA pseudocode for particle update
-  i = threadIdx.x + blockIdx.x * blockDim.x
-  if i < N:
-      forces[i] = compute_force(i, positions, N)
-  ```
+ ```python
+ # CUDA pseudocode for particle update
+ i = threadIdx.x + blockIdx.x * blockDim.x
+ if i < N:
+ forces[i] = compute_force(i, positions, N)
+ ```
 
 - **Machine learning in physics simulations:** neural network potentials
 
@@ -103,11 +103,11 @@ Computational physics — using computers to simulate physical systems that are 
 ## 🔬 Key Algorithms
 
 ```
-Monte Carlo:       I ≈ (V/N) Σ f(x_i)
-Metropolis:        Accept move if exp(-ΔE/kT) > rand()
-Verlet (MD):       r(t+Δt) = 2r(t) - r(t-Δt) + a(t)Δt²
-Leapfrog:          v(t+Δt/2) = v(t-Δt/2) + a(t)Δt
-Lennard-Jones:     V(r) = 4ε[(σ/r)¹² - (σ/r)⁶]
+Monte Carlo: I ≈ (V/N) Σ f(x_i)
+Metropolis: Accept move if exp(-ΔE/kT) > rand()
+Verlet (MD): r(t+Δt) = 2r(t) - r(t-Δt) + a(t)Δt²
+Leapfrog: v(t+Δt/2) = v(t-Δt/2) + a(t)Δt
+Lennard-Jones: V(r) = 4ε[(σ/r)¹² - (σ/r)⁶]
 ```
 
 ---

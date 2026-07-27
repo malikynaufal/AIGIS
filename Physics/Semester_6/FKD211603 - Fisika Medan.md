@@ -29,14 +29,14 @@ Classical and quantum field theories — the mathematical framework underlying a
 - **Lagrangian density:** L = T - V = ½(∂φ/∂t)² - ½(∇φ)² - V(φ)
 
 - **Euler-Lagrange equation for fields:**
-  ```
-  ∂_μ (∂L/∂(∂_μφ)) - ∂L/∂φ = 0
-  ```
+ ```
+ ∂_μ (∂L/∂(∂_μφ)) - ∂L/∂φ = 0
+ ```
 
 - **Wave equation:** Klein-Gordon equation: (∂_μ∂^μ + m²)φ = 0
 
 - **Noether's theorem for fields:** conserved currents from symmetries
-  - Example: global U(1) symmetry → conserved charge
+ - Example: global U(1) symmetry → conserved charge
 
 - **Energy-momentum tensor:** T^μν = ∂L/∂(∂_μφ) ∂^νφ - g^μν L
 
@@ -47,10 +47,10 @@ Classical and quantum field theories — the mathematical framework underlying a
 - **Field tensor:** F^μν = ∂^μA^ν - ∂^νA^μ
 
 - **Maxwell's equations** in covariant form:
-  ```
-  ∂_μF^μν = μ₀J^ν  (inhomogeneous)
-  ∂_[μF_νρ] = 0    (homogeneous)
-  ```
+ ```
+ ∂_μF^μν = μ₀J^ν (inhomogeneous)
+ ∂_[μF_νρ] = 0 (homogeneous)
+ ```
 
 - **Gauge invariance:** A^μ → A^μ + ∂^μΛ (U(1) gauge symmetry)
 
@@ -63,24 +63,24 @@ Classical and quantum field theories — the mathematical framework underlying a
 - **Gauge symmetry generalization:** from U(1) to SU(2), SU(3)
 
 - **Yang-Mills theory:** non-Abelian gauge fields with self-interaction
-  ```
-  D_μ = ∂_μ - igA_μ^a T^a  (T^a = generators of the gauge group)
-  ```
+ ```
+ D_μ = ∂_μ - igA_μ^a T^a (T^a = generators of the gauge group)
+ ```
 
 - **Strong force (QCD):** SU(3)_color, 8 gluons, quarks carry color
-  - **Color confinement:** gluons carry color charge → self-interaction → confinement
-  - **Asymptotic freedom:** quarks are free at high energy (Gross, Wilczek, Politzer: Nobel 2004)
+ - **Color confinement:** gluons carry color charge → self-interaction → confinement
+ - **Asymptotic freedom:** quarks are free at high energy (Gross, Wilczek, Politzer: Nobel 2004)
 
 - **Electroweak theory:** SU(2)_L × U(1)_Y → U(1)_EM
-  - Higgs mechanism: spontaneous symmetry breaking
-  - Mass generation for W± and Z⁰ bosons
+ - Higgs mechanism: spontaneous symmetry breaking
+ - Mass generation for W± and Z⁰ bosons
 
 ### Unit 4: Applications and Overview (Weeks 13–16)
 
 - **Spontaneous symmetry breaking and the Higgs mechanism**
-  ```
-  φ = (1/√2)(v + h) exp(iθ/v) → Higgs field with VEV v ≈ 246 GeV
-  ```
+ ```
+ φ = (1/√2)(v + h) exp(iθ/v) → Higgs field with VEV v ≈ 246 GeV
+ ```
 
 - **Anomalies** in field theories
 
@@ -99,10 +99,10 @@ Classical and quantum field theories — the mathematical framework underlying a
 ## 🔬 Key Equations
 
 ```
-Klein-Gordon:      (∂_μ∂^μ + m²)φ = 0
-Dirac equation:    (iγ^μ∂_μ - m)ψ = 0
+Klein-Gordon: (∂_μ∂^μ + m²)φ = 0
+Dirac equation: (iγ^μ∂_μ - m)ψ = 0
 Maxwell (covariant): ∂_μF^μν = μ₀J^ν
-Noether current:   j^μ = ∂L/∂(∂_μφ) δφ
+Noether current: j^μ = ∂L/∂(∂_μφ) δφ
 Gauge transformation: A^μ → A^μ + ∂^μΛ
 ```
 

@@ -1,8 +1,8 @@
 # Metodologi Penelitian
 
-**Kode:** TKD213601  
-**Sifat:** Wajib  
-**SKS:**   
+**Kode:** TKD213601 
+**Sifat:** Wajib 
+**SKS:** 
 
 ## Deskripsi
 
@@ -86,12 +86,11 @@ Teknik kuantitatif dan kualitatif untuk analisis data:
 
 - Uji hipotesis:$t$-test, ANOVA, Friedman test
 
-- Regresi linear dan regresi spasial: $Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \varepsilon$- Analisis autokorelasi spasial: Indeks Moran's$I$, Geary's $C$- Geostatistik: kriging, semivariogram, dan interpolasi spasial
+- Regresi linear dan regresi spasial: $Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \varepsilon$- Analisis autokorelasi spasial: Indeks Moran's $I$, Geary's $C$- Geostatistik: kriging, semivariogram, dan interpolasi spasial
 
 - Validasi model: RMSE, MAE,$R^2$
-$$RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i - y_i)^2}$$
 
-$$I = \frac{n}{S_0}\frac{\sum_i\sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2}$$
+$$RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i - y_i)^2}I = \frac{n}{S_0}\frac{\sum_i\sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}{\sum_i (x_i - \bar{x})^2} $$
 
 ### Modul 6: Penulisan Ilmiah
 Komposisi karya tulis ilmiah yang terstandar:

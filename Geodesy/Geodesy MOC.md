@@ -24,13 +24,13 @@ Geodesy leans on both: [[Mathematics MOC]] (least squares, transforms, stats) an
 
 ## 🧭 How to study with me
 1. Pick a **Semester** note ([[Kurikulum Overview]] ▸ [[Semester 1]]) to see the
-   roadmap — but you are NOT bound to it; jump to any concept anytime.
+ roadmap — but you are NOT bound to it; jump to any concept anytime.
 2. Follow concept links (e.g. [[Geoid]], [[Datum]], [[GNSS]], [[Least Squares Adjustment]])
-   to drill into theory.
+ to drill into theory.
 3. Ask me on Telegram: *"explain the Geoid like a tutor"*,
-   *"quiz me on Least Squares Adjustment"*, *"build a study pack on GNSS"*.
+ *"quiz me on Least Squares Adjustment"*, *"build a study pack on GNSS"*.
 4. Drop NotebookLM answers / your notes in `_Inbox/` with a `target:` line or a
-   wikilink like `[[Geoid]]` → I file them into the right note.
+ wikilink like `[[Geoid]]` → I file them into the right note.
 
 ## 📚 Open-Access Resources (always fresh)
 I keep a curated bibliography of open-access textbooks, IAG/FIG/IGS publications,

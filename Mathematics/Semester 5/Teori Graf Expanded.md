@@ -7,8 +7,8 @@ tags: [mathematics, graph-theory, semester-5, aigis, geodesy-applied]
 
 # Semester 5 — Teori Graf (Expanded)
 
-**Course**: MGM211502 — Teori Graf  
-**Credits**: 3 SKS  
+**Course**: MGM211502 — Teori Graf 
+**Credits**: 3 SKS 
 **Prerequisites**: [[Aljabar Linear Lanjut Expanded]]
 
 ---
@@ -23,11 +23,11 @@ Graph theory studies discrete structures composed of vertices (nodes) and edges 
 
 ### Unit 1: Basic Definitions
 
-- **Graph**: $G = (V, E)$with vertex set$V$and edge set$E$- **Types**: Simple, multigraph, directed, weighted, bipartite, planar
+- **Graph**: $G = (V, E) $with vertex set $V $and edge set $E$- **Types**: Simple, multigraph, directed, weighted, bipartite, planar
 
-- **Degree**:$\\deg(v)$= number of incident edges
+- **Degree**:$\deg(v)$= number of incident edges
 
-- **Handshaking Lemma**:$\\sum_{v \\in V} \\deg(v) = 2|E|$### Unit 2: Connectivity
+- **Handshaking Lemma**:$\sum_{v \in V} \deg(v) = 2|E| $### Unit 2: Connectivity
 
 - **Paths, cycles, trails**: Sequences of adjacent vertices
 
@@ -47,27 +47,27 @@ Graph theory studies discrete structures composed of vertices (nodes) and edges 
 
 - **Spanning trees**: Tree containing all vertices of $G$- **Minimum spanning tree**: Kruskal's algorithm, Prim's algorithm
 
-- **Cayley's formula**:$n^{n-2}$spanning trees of$K_n$### Unit 4: Eulerian and Hamiltonian Graphs
+- **Cayley's formula**:$n^{n-2} $spanning trees of $K_n$### Unit 4: Eulerian and Hamiltonian Graphs
 
 - **Eulerian trail**: Uses each edge exactly once
-  -$G$has Eulerian circuit$\\iff$all vertices have even degree
-  -$G$has Eulerian path$\\iff$exactly 0 or 2 vertices have odd degree
+ -$G $has Eulerian circuit $\\iff $all vertices have even degree
+ -$G $has Eulerian path $\\iff $exactly 0 or 2 vertices have odd degree
 
 - **Hamiltonian cycle**: Visits each vertex exactly once
-  - Dirac's theorem: If$\\deg(v) \\geq n/2$for all$v$, then $G$is Hamiltonian
-  - Finding Hamiltonian cycles is NP-complete
+ - Dirac's theorem: If $\deg(v) \geq n/2 $for all $v$, then $G $is Hamiltonian
+ - Finding Hamiltonian cycles is NP-complete
 
 ### Unit 5: Graph Coloring
 
 - **Vertex coloring**: Adjacent vertices get different colors
 
-- **Chromatic number**$\\chi(G)$: Minimum number of colors needed
+- **Chromatic number**$\chi(G)$: Minimum number of colors needed
 
-- **Four Color Theorem**: Planar graphs have $\\chi \\leq 4$- **Edge coloring**: Vizing's theorem:$\\Delta \\leq \\chi' \\leq \\Delta+1$### Unit 6: Planar Graphs
+- **Four Color Theorem**: Planar graphs have $\chi \leq 4$- **Edge coloring**: Vizing's theorem:$\Delta \leq \chi' \leq \Delta+1$### Unit 6: Planar Graphs
 
 - **Planarity**: Can be drawn without edge crossings
 
-- **Kuratowski's theorem**: Non-planar$\\iff$contains subdivision of$K_5$or$K_{3,3}$- **Euler's formula**: For connected planar graph:$|V| - |E| + |F| = 2$
+- **Kuratowski's theorem**: Non-planar $\\iff $contains subdivision of $K_5 $or $K_{3,3} $- **Euler's formula**: For connected planar graph:$|V| - |E| + |F| = 2$
 
 ### Unit 7: Network Flows
 

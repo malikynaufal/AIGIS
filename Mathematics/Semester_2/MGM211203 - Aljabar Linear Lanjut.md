@@ -76,9 +76,9 @@ Deep dive into abstract vector spaces, spectral theory, and matrix decomposition
 - QR decomposition (Gram-Schmidt and Householder)
 
 - Singular Value Decomposition (SVD)
-  - Existence and uniqueness
-  - Pseudoinverse (Moore-Penrose)
-  - Applications: least squares, dimensionality reduction
+ - Existence and uniqueness
+ - Pseudoinverse (Moore-Penrose)
+ - Applications: least squares, dimensionality reduction
 
 - Cholesky decomposition for positive definite matrices
 

@@ -1,30 +1,51 @@
 ---
-title: Geodesy Semester 7 - Professional Field Experience
-tags: [geodesy, curriculum, internship, professional-practice]
+tags: [aigis, curriculum, geodesy, semester-7, ugm]
+created: 2026-07-27
+updated: 2026-07-27
 ---
 
-# 🏗️ Semester 7 — Professional Practice Semester
+# Semester 7 — Professional Practice
 
-**SKS:** 7 (Compulsory)  
-**Focus:** Application of geodetic skills in professional settings and capstone project preparation.
+## Overview
 
-## 📚 Course List & Descriptions
+Semester 7 is the transition from academic to professional practice. Students complete a structured *Kerja Praktik* (internship) and begin work on their *Proyek Rekayasa* (capstone engineering project). This semester typically involves off-campus placements at survey companies, government agencies (BPN, BIG), or related organizations.
 
-| Code | Course | SKS | Focus |
-|------|--------|-----|-------|
-| TKD214701 | **Pendidikan Agama** (Religious Education) | 1 | Ethical perspectives, professional responsibility |
-| TKD214702 | **Kerja Praktik** (Industrial Internship) | 2 | Field experience, practical application |
-| TKD214703 | **Proyek Rekayasa Geodesi Geomatika** (Geodetic Engineering Project) | 4 | Capstone project, research methodology |
+## Required Courses (4 mata kuliah, total ~12 SKS)
 
-## 🧭 Learning Outcomes
+| Code | Course | SKS | Type |
+|------|--------|-----|------|
+| TKD214701 | Pendidikan Agama | 2 | General |
+| TKD214702 | Kerja Praktik | 3 | Field |
+| TKD214703 | Proyek Rekayasa Geodesi Geomatika | 3 | Core |
+| Elective (choose 1) | 3–4 | Pilihan | |
 
-By the end of this semester, you should be able to:
-1. Apply geodetic theories and methods in professional field settings
-2. Prepare and present field data and analysis
-3. Complete a cap capstone project with proper documentation
-4. Understand ethical principles in geodesy practice
-5. Communicate geodetic results professionally
+## Key Topics
 
-## 🔗 Related Concepts
+### TKD214702 — Kerja Praktik (Internship)
+Minimum 4 weeks in a professional setting:
+- Survey companies: survey operations, data processing
+- Government: BPN (land), BIG (hydrography/gis), KLHK (forest)
+- Consulting firms: geospatial consulting
+- Expected deliverables: internship report with technical content
 
-- [[Kerja Praktik]] · [[Proyek Rekayasa Geodesi]] · [[Metodologi Penelitian]] · [[Geodesi Fisis]] · [[Instrumentasi]] · [[Berkomunikasi profesional]]
+### TKD214703 — Proyek Rekayasa (Capstone)
+A comprehensive project demonstrating engineering competence:
+1. Problem definition
+2. Design of survey methodology
+3. Data acquisition (GNSS, total station, UAV/drone)
+4. Processing (adjustment, modeling)
+5. Analysis and reporting
+6. Presentation
+
+Projects typically relate to:
+- Control network for infrastructure
+- Deformation monitoring of a structure
+- Cadastral survey of a specific area
+- GNSS-based geoid determination
+
+## Semester 7 Study Pack
+➡️ Study pack consolidates all practical skills from Semesters 1–6 for application in professional settings
+
+---
+
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

@@ -2,11 +2,11 @@
 title: "Manajemen Data Geospasial Lanjutan"
 subject: "Fisika Pilihan"
 tags:
-  - geospatial-data
-  - GIS
-  - spatial-database
-  - cloud-GIS
-  - SKS: 3
+ - geospatial-data
+ - GIS
+ - spatial-database
+ - cloud-GIS
+ - SKS: 3
 ---
 
 # FKD214712 — Manajemen Data Geospasial Lanjutan
@@ -27,10 +27,10 @@ PostgreSQL with the PostGIS extension adds spatial types and operators:
 ```sql
 -- Create a spatial table for GNSS stations
 CREATE TABLE cors_stations (
-    station_id VARCHAR(10) PRIMARY KEY,
-    name TEXT NOT NULL,
-    installation_date DATE,
-    geom GEOMETRY(Point, 4326) -- WGS84
+ station_id VARCHAR(10) PRIMARY KEY,
+ name TEXT NOT NULL,
+ installation_date DATE,
+ geom GEOMETRY(Point, 4326) -- WGS84
 );
 
 -- Create spatial index (R-tree based)
@@ -39,14 +39,14 @@ ON cors_stations USING GIST(geom);
 
 -- Find stations within 50 km of Jakarta city center
 SELECT station_id, name, ST_Distance(
-    geom::geography, 
-    ST_SetSRID(ST_MakePoint(106.8456, -6.2088), 4326)::geography
+ geom::geography, 
+ ST_SetSRID(ST_MakePoint(106.8456, -6.2088), 4326)::geography
 ) / 1000 AS distance_km
 FROM cors_stations
 WHERE ST_DWithin(
-    geom::geography, 
-    ST_SetSRID(ST_MakePoint(106.8456, -6.2088), 4326)::geography, 
-    50000
+ geom::geography, 
+ ST_SetSRID(ST_MakePoint(106.8456, -6.2088), 4326)::geography, 
+ 50000
 )
 ORDER BY distance_km;
 ```
@@ -55,11 +55,11 @@ ORDER BY distance_km;
 
 | Index Type | Structure | Best For | Query Complexity |
 |---|---|---|---|
-| R-tree | Hierarchical rectangles | Range queries | $O(\log n)$|
-| Quad-tree | Recursive 4-way split | Point data |$O(\log n)$|
-| kd-tree | k-dimensional binary tree | Nearest neighbor |$O(\log n)$average |
-| Grid index | Regular grid cells | Simple overlap |$O(1)$lookup |
-| Space-filling curve | Hilbert/Z-order | Linearization |$O(\log n)$ |
+| R-tree | Hierarchical rectangles | Range queries | $O(\log n)$ |
+| Quad-tree | Recursive 4-way split | Point data | $O(\log n)$ |
+| kd-tree | k-dimensional binary tree | Nearest neighbor | $O(\log n) $average |
+| Grid index | Regular grid cells | Simple overlap | $O(1) $lookup |
+| Space-filling curve | Hilbert/Z-order | Linearization | $O(\log n)$ |
 
 PostGIS uses the GiST (Generalized Search Tree) framework, which supports R-tree, kNN, and other index types.
 
@@ -86,16 +86,16 @@ GEE provides petabytes of satellite imagery with cloud-based processing:
 var jakarta = ee.Geometry.Rectangle([106.6, -6.4, 107.0, -6.1]);
 
 var composite = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
-    .filterBounds(jakarta)
-    .filterDate('2023-01-01', '2023-12-31')
-    .filter(ee.Filter.lt('CLOUD_COVER', 10))
-    .map(function(img) {
-        var scaled = img.multiply(0.0000275).add(-0.2);
-        return scaled.normalizedDifference(['SR_B5', 'SR_B4'])
-            .rename('NDVI');
-    })
-    .median()
-    .clip(jakarta);
+ .filterBounds(jakarta)
+ .filterDate('2023-01-01', '2023-12-31')
+ .filter(ee.Filter.lt('CLOUD_COVER', 10))
+ .map(function(img) {
+ var scaled = img.multiply(0.0000275).add(-0.2);
+ return scaled.normalizedDifference(['SR_B5', 'SR_B4'])
+ .rename('NDVI');
+ })
+ .median()
+ .clip(jakarta);
 
 Map.addLayer(composite, {min: -0.1, max: 0.8, palette: ['red','yellow','green']}, 'NDVI');
 ```
@@ -157,8 +157,8 @@ Map.addLayer(composite, {min: -0.1, max: 0.8, palette: ['red','yellow','green']}
 
 ```
 [GNSS Receivers] → [MQTT Broker] → [Stream Processor] → [PostGIS] → [API Layer] → [Clients]
-       ↑                                        ↑
-  (NTRIP Caster)                     (Apache Kafka / Flink)
+ ↑ ↑
+ (NTRIP Caster) (Apache Kafka / Flink)
 ```
 
 **Components**:
@@ -180,20 +180,20 @@ from rasterio.mask import mask
 from shapely.geometry import box
 
 def process_sentinel2(scene_path, aoi_bbox):
-    """Cloud-mask, clip, and reproject Sentinel-2 scene."""
-    with rasterio.open(scene_path) as src:
-        # Step 1: Cloud masking using SCL band
-        scl = src.read(12)  # Scene Classification Layer
-        cloud_mask = ~((scl == 8) | (scl == 9) | (scl == 10))
-        
-        # Step 2: Clip to AOI
-        aoi = box(*aoi_bbox)
-        out_image, out_transform = mask(src, [aoi], crop=True)
-        
-        # Step 3: Apply cloud mask
-        out_image[:, ~cloud_mask] = 0
-        
-        return out_image, out_transform
+ """Cloud-mask, clip, and reproject Sentinel-2 scene."""
+ with rasterio.open(scene_path) as src:
+ # Step 1: Cloud masking using SCL band
+ scl = src.read(12) # Scene Classification Layer
+ cloud_mask = ~((scl == 8) | (scl == 9) | (scl == 10))
+ 
+ # Step 2: Clip to AOI
+ aoi = box(*aoi_bbox)
+ out_image, out_transform = mask(src, [aoi], crop=True)
+ 
+ # Step 3: Apply cloud mask
+ out_image[:, ~cloud_mask] = 0
+ 
+ return out_image, out_transform
 ```
 
 ### 4.3 Data Volume Estimates for Indonesia

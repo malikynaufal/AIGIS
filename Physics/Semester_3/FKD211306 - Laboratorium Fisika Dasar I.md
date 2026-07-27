@@ -43,7 +43,7 @@ Hands-on laboratory experience in classical mechanics, reinforcing theoretical c
 - Measuring position vs. time with motion sensors
 
 - **Data analysis:** fitting quadratic to position data
-  - Extracting acceleration: x(t) = x₀ + v₀t + ½at²
+ - Extracting acceleration: x(t) = x₀ + v₀t + ½at²
 
 - Comparing measured g with accepted value (9.80665 m/s²)
 
@@ -98,7 +98,7 @@ Hands-on laboratory experience in classical mechanics, reinforcing theoretical c
 ### Experiment 8: Gravitational Acceleration (Weeks 15–16)
 
 - **Free-fall timing** or **simple pendulum** method
-  - Simple pendulum: g = 4π²L/T²
+ - Simple pendulum: g = 4π²L/T²
 
 - Measuring g at UGM campus
 
@@ -111,12 +111,12 @@ Hands-on laboratory experience in classical mechanics, reinforcing theoretical c
 ## 🔬 Key Experimental Techniques
 
 ```
-Error analysis:     σ_x = √(Σ(x_i - x̄)²/(N-1))
-Propagation:        σ_f = √(Σ(∂f/∂x_i)² · σ_{x_i}²)
-Best fit line:      y = mx + b  (linear regression)
-  m = Σ(x_i - x̄)(y_i - ȳ) / Σ(x_i - x̄)²
-  b = ȳ - m·x̄
-Relative error:     δx = σ_x / |x̄| × 100%
+Error analysis: σ_x = √(Σ(x_i - x̄)²/(N-1))
+Propagation: σ_f = √(Σ(∂f/∂x_i)² · σ_{x_i}²)
+Best fit line: y = mx + b (linear regression)
+ m = Σ(x_i - x̄)(y_i - ȳ) / Σ(x_i - x̄)²
+ b = ȳ - m·x̄
+Relative error: δx = σ_x / |x̄| × 100%
 ```
 
 ---

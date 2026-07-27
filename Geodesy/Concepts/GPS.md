@@ -44,19 +44,18 @@ Each carrier transmits a **pseudorandom noise (PRN) code** modulated by navigati
 
 1. **PRN code** — unique per satellite (Gold code). Codes are 1 ms (L1 C/A), 20 ms (L2C), or 10 ms (L5) per chip/period at 1.023 Mchip/s (C/A), 1.023 Mchip/s (L2C), 10.23 Mchip/s (L5).
 2. **Navigation message** — transmitted at 50 bps. Contains:
-   - Satellite ephemeris (precise orbit for that satellite)
-   - Almanac (coarse orbit for all satellites in constellation)
-   - Clock correction coefficients
-   - Ionosphere model parameters (Klobuchar)
-   - Health status and integrity information
+ - Satellite ephemeris (precise orbit for that satellite)
+ - Almanac (coarse orbit for all satellites in constellation)
+ - Clock correction coefficients
+ - Ionosphere model parameters (Klobuchar)
+ - Health status and integrity information
 3. **Carrier phase** — the carrier signal itself (1575.42 MHz for L1, λ ≈ 19 cm). Carrier-phase measurements enable cm-level precision with carrier smoothing.
 
 ### Pseudorange Measurement
 
 The fundamental GPS measurement:
-$$
 
-\rho_i = \| \mathbf{r}_r - \mathbf{r}_i \| + c\,\delta t_r - c\,\delta t_i + \varepsilon_{\rho}$$where$\mathbf{r}_r$= receiver position,$\mathbf{r}_i$= satellite$i$position,$c$= speed of light,$\delta t_r$= receiver clock error,$\delta t_i$= satellite clock error, and$\varepsilon_\rho$= measurement noise + atmospheric effects.
+$$\rho_i = \| \mathbf{r}_r - \mathbf{r}_i \| + c\,\delta t_r - c\,\delta t_i + \varepsilon_{\rho} $$where $\mathbf{r}_r$= receiver position,$\mathbf{r}_i$= satellite $i $position,$c$= speed of light,$\delta t_r$= receiver clock error,$\delta t_i$= satellite clock error, and $\varepsilon_\rho$= measurement noise + atmospheric effects.
 
 ## Positioning Modes
 

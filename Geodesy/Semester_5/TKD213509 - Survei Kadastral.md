@@ -91,45 +91,48 @@ Boundary determination is based on **5 evidences** (*5 alat bukti*), listed in o
 ### 4.1 Pre-Survey Preparation
 
 1. **Document collection** (*pengumpulan bukti*)
-   - Existing PBT (parcel map)
-   - Title certificates (*sertipikat*)
-   - Transaction deeds (*akta jual beli*)
-   - Previous survey records
-   - SPPT PBB (tax assessment)
+ - Existing PBT (parcel map)
+ - Title certificates (*sertipikat*)
+ - Transaction deeds (*akta jual beli*)
+ - Previous survey records
+ - SPPT PBB (tax assessment)
 
 2. **Coordination with parties** (*koordinasi*)
-   - Landowner present
-   - Neighboring landowners
-   - Village head (*kepala desa/lurah*)
+ - Landowner present
+ - Neighboring landowners
+ - Village head (*kepala desa/lurah*)
 
 3. **Site visit** (*kunjungan lapangan*)
-   - Initial reconnaissance
-   - Boundary feature identification
-   - Photo documentation (4 directions)
+ - Initial reconnaissance
+ - Boundary feature identification
+ - Photo documentation (4 directions)
 
 ### 4.2 Field Measurement Methods
 
 #### Method 1: Intersection (Sudut Silang)
 
 For each boundary point, observe angles to two or more known points:
-$$
 
-d = \frac{a \cdot \sin A}{\sin(A+B+C)}$$where$a$is the distance between known points, and$A, B, C$are the observed angles.
+$$d = \frac{a \cdot \sin A}{\sin(A+B+C)} $$where $a $is the distance between known points, and $A, B, C $are the observed angles.
 
 **Advantages:** Does not require linear measurement, efficient for urban parcels
 **Disadvantages:** Requires line-of-sight, error propagation
 
 #### Method 2: Traversing (*Traversing*)
 
-A series of connected survey stations measuring angles and distances:$$x_B = x_A + d \cdot \cos\alpha
-$$
+A series of connected survey stations measuring angles and distances:
 
-$$
-y_B = y_A + d \cdot \sin\alpha$$**Angular misclosure check:**$$f_{\text{angular}} = \sum\beta - (2n - 4) \cdot 90°$$**Linear misclosure:**$$f_{\text{linear}} = \sqrt{(f_x)^2 + (f_y)^2}
-$$
+$$x_B = x_A + d \cdot \cos\alphay_B = y_A + d \cdot \sin\alph
+a
 
-$$
-\text{Relative precision} = \frac{f_{\text{linear}}}{\text{perimeter}}$$**Required precision for cadastral surveys:**
+$$**Angular misclosure check:**$$
+
+f_{\text{angular}} = \sum\beta - (2n - 4) \cdot 90
+°
+
+$$**Linear misclosure:**$$
+
+f_{\text{linear}} = \sqrt{(f_x)^2 + (f_y)^2}\text{Relative precision} = \frac{f_{\text{linear}}}{\text{perimeter}} $$**Required precision for cadastral surveys:**
 | Survey Class | Relative Precision |
 |-------------|-------------------|
 | Class I (urban) | 1:20,000 or better |
@@ -150,14 +153,22 @@ Direct positioning of boundary points using GNSS:
 
 ### 4.3 Area Calculation
 
-#### Trapezoidal Rule (Koordinat Method)$$A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i) \right|$$**Requirements:**
+#### Trapezoidal Rule (Koordinat Method
+)
+
+$$A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i) \right| $$
+
+**Requirements:**
 
 - Coordinates must be in a local or UTM system
 
 - Points must be in sequence (clockwise or counterclockwise)
 -$x_{n+1} = x_1$, $y_{n+1} = y_1$(closing the polygon)
 
-#### Measured Distance Method$$A = \frac{1}{2} \sum_{i=1}^{n} d_i \cdot \sin\alpha_i$$where$d_i$is the measured distance and$\alpha_i$is the internal angle.
+#### Measured Distance Metho
+d
+
+$$A = \frac{1}{2} \sum_{i=1}^{n} d_i \cdot \sin\alpha_i$$where $d_i $is the measured distance and $\alpha_i $is the internal angle.
 
 ---
 
@@ -178,13 +189,13 @@ Systematic Land Registration program — the flagship land registration initiati
 **PTSL Process:**
 ```
 1. Persiapan (Planning) — village mapping, socialization
-   ↓
+ ↓
 2. Pengumpulan Data (Data Collection) — field survey, boundary confirmation
-   ↓
+ ↓
 3. Pemeriksaan dan Pengukuran (Examination and Measurement) — verification
-   ↓
+ ↓
 4. Penyelesaian Peralihan (Resolution of disputes) — conflict resolution
-   ↓
+ ↓
 5. Penerbitan Sertipikat (Certificate issuance) — delivery to landowner
 ```
 
@@ -235,7 +246,12 @@ Land redistribution program that targets:
 | **Reference points** | Tie points, station marks |
 | **Adjacent parcels** | Neighbor identification |
 
-### 6.3 Map Standard Specifications$$\text{Plan accuracy} = \frac{\text{Plan accuracy (cm)}}{\text{Map scale denominator}} \times 100 = \text{cm per meter}$$Example: 1:1000 scale with ±5 cm plan accuracy = 0.05 cm/100 cm = 0.05%
+### 6.3 Map Standard Specification
+s
+
+$$\text{Plan accuracy} = \frac{\text{Plan accuracy (cm)}}{\text{Map scale denominator}} \times 100 = \text{cm per meter} $$
+
+Example: 1:1000 scale with ±5 cm plan accuracy = 0.05 cm/100 cm = 0.05%
 
 ---
 
@@ -280,8 +296,8 @@ Land redistribution program that targets:
 
 | Check | Method | Tolerance |
 |-------|--------|-----------|
-| Angular misclosure |$\sum\beta - (2n-4) \times 90°$| < 10" for traverse |
-| Linear misclosure |$\sqrt{f_x^2 + f_y^2}$| 1:15,000 minimum |
+| Angular misclosure | $\sum\beta - (2n-4) \times 90°$ | < 10" for traverse |
+| Linear misclosure | $\sqrt{f_x^2 + f_y^2} $ | 1:15,000 minimum |
 | Perimeter check | Measured vs. calculated | < 1% |
 | Area check | 2 methods compared | < 0.5% |
 
@@ -344,11 +360,11 @@ Land redistribution program that targets:
 
 | Concept | Formula |
 |---------|---------|
-| Trapezoidal area |$A = \frac{1}{2}|\sum(x_iy_{i+1} - x_{i+1}y_i)|$|
-| Distance from coords |$d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$|
-| Bearing (azimuth) |$\alpha = \arctan\frac{y_2-y_1}{x_2-x_1}$|
-| Linear misclosure |$f = \frac{\sqrt{f_x^2+f_y^2}}{\text{perimeter}} \leq \frac{1}{N}$|
-| Angular misclosure |$f_{ang} = \sum\beta - (2n-4) \times 90°$ |
+| Trapezoidal area | $A = \frac{1}{2}|\sum(x_iy_{i+1} - x_{i+1}y_i)| $ |
+| Distance from coords | $d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2} $ |
+| Bearing (azimuth) | $\alpha = \arctan\frac{y_2-y_1}{x_2-x_1} $ |
+| Linear misclosure | $f = \frac{\sqrt{f_x^2+f_y^2}}{\text{perimeter}} \leq \frac{1}{N} $ |
+| Angular misclosure | $f_{ang} = \sum\beta - (2n-4) \times 90°$ |
 
 ---
 

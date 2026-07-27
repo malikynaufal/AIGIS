@@ -17,13 +17,17 @@ updated: 2026-07-27
 ### Precession
 
 **General precession:** The spin axis slowly traces a cone due to Sun/Moon torques on Earth's equatorial bulge.
-$$
 
-\dot{\psi} \approx 50.26''/\text{yr} \quad \text{(general precession in longitude)}$$- Cycle period: ~25,772 years
+$$\dot{\psi} \approx 50.26''/\text{yr} \quad \text{(general precession in longitude)} $$- Cycle period: ~25,772 years
 
 - Main contributors: Sun and Moon gravitational pull on equatorial bulge
 
-**Precession matrix (IERS 2010):**$$P = R_1(-\varepsilon_A) \cdot R_3(-\psi_A) \cdot R_1(\varepsilon_0)$$### Nutation
+**Precession matrix (IERS 2010):*
+*
+
+$$P = R_1(-\varepsilon_A) \cdot R_3(-\psi_A) \cdot R_1(\varepsilon_0)$$
+
+### Nutation
 
 The dominant nutation period is 18.6 years (regression of the lunar nodes).
 
@@ -57,9 +61,9 @@ From IERS:
 
 | Parameter | Symbol | Unit | Resolution |
 |-----------|--------|------|------------|
-| Polar motion |$x_p, y_p$| arcseconds | Daily |
-| UT1-UTC |$\Delta UT1$| seconds | Daily |
-| Nutation offsets |$\Delta\psi, \Delta\varepsilon$| milliarcseconds | Daily |
+| Polar motion | $x_p, y_p$ | arcseconds | Daily |
+| UT1-UTC | $\Delta UT1$ | seconds | Daily |
+| Nutation offsets | $\Delta\psi, \Delta\varepsilon$ | milliarcseconds | Daily |
 
 ---
 
@@ -67,8 +71,8 @@ From IERS:
 
 | Equation | Name | Use |
 |----------|------|-----|
-|$\mathbf{r}_{ECI} = P \cdot N \cdot R \cdot \mathbf{r}_{ECEF}$| ECEF to ECI | Reference frame transform |
-|$\dot{\psi} = 50.26''/$yr | Precession | Long-term rotation |
+| $\mathbf{r}_{ECI} = P \cdot N \cdot R \cdot \mathbf{r}_{ECEF} $ | ECEF to ECI | Reference frame transform |
+| $\dot{\psi} = 50.26''/$yr | Precession | Long-term rotation |
 | $\Delta\varepsilon_{18.6} = 9.20''$ | Nutation amplitude | Short-term oscillation |
 
 ---

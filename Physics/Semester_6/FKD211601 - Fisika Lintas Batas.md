@@ -47,7 +47,7 @@ Interdisciplinary physics — exploring the frontiers where physics intersects w
 - **Quantum dots:** energy levels E ∝ 1/L² (particle in a box!)
 
 - **Carbon nanostructures:** fullerenes, carbon nanotubes, graphene
-  - Graphene: massless Dirac fermions, 2D electron gas
+ - Graphene: massless Dirac fermions, 2D electron gas
 
 - **Nanomagnetism:** single-domain vs. multi-domain, superparamagnetism
 
@@ -60,7 +60,7 @@ Interdisciplinary physics — exploring the frontiers where physics intersects w
 ### Unit 3: Nonlinear Physics and Emergent Phenomena (Weeks 9–12)
 
 - **Nonlinear dynamics:** strange attractors, bifurcations, chaos
-  - Lorenz equations: dx/dt = σ(y-x), dy/dt = rx-y-xz, dz/dt = xy-bz
+ - Lorenz equations: dx/dt = σ(y-x), dy/dt = rx-y-xz, dz/dt = xy-bz
 
 - **Pattern formation:** Bénard convection, Turing patterns
 
@@ -69,16 +69,16 @@ Interdisciplinary physics — exploring the frontiers where physics intersects w
 - **Self-organized criticality:** sandpile model (Bak, 1987)
 
 - **Fractals:** fractal dimension, Mandelbrot set
-  - Natural examples: coastlines, river networks, cloud boundaries
+ - Natural examples: coastlines, river networks, cloud boundaries
 
 - **Complex systems:** emergence, feedback loops, adaptation
 
 ### Unit 4: Applications and Emerging Frontiers (Weeks 13–16)
 
 - **Geophysical applications of interdisciplinary physics:**
-  - Earthquake dynamics (spring-block model)
-  - Volcanic systems (thermodynamics of magma chambers)
-  - Tsunami wave mechanics (shallow water equations)
+ - Earthquake dynamics (spring-block model)
+ - Volcanic systems (thermodynamics of magma chambers)
+ - Tsunami wave mechanics (shallow water equations)
 
 - **Geophysical remote sensing** from a physical perspective
 
@@ -95,12 +95,12 @@ Interdisciplinary physics — exploring the frontiers where physics intersects w
 ## 🔬 Key Equations
 
 ```
-Diffusion:          ∂C/∂t = D∇²C  (Fick's 2nd law)
-Einstein relation:  D = k_BT/(6πμR)
-Langevin eqn:       m dv/dt = -γv + F(t)  (random force)
-Michaelis-Menten:   v = V_max[S]/(K_m + [S])
-Fractal dimension:  N(ε) ∝ ε^{-D_f}
-Power law:          P(x) = Cx^{-α}
+Diffusion: ∂C/∂t = D∇²C (Fick's 2nd law)
+Einstein relation: D = k_BT/(6πμR)
+Langevin eqn: m dv/dt = -γv + F(t) (random force)
+Michaelis-Menten: v = V_max[S]/(K_m + [S])
+Fractal dimension: N(ε) ∝ ε^{-D_f}
+Power law: P(x) = Cx^{-α}
 ```
 
 ---

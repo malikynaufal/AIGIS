@@ -39,98 +39,98 @@ Curated bibliography of open-access textbooks, MIT OCW courses, Khan Academy, an
 ```
 Start Here → Concept Flow → Application
 ├── Basic Concepts
-│   ├── [[Limits  Continuity]]           — ε–δ definition, one-sided limits, continuity
-│   ├── [[Derivatives]]                  — Definition, rules, chain rule, geodesy applications
-│   └── [[Applications of Derivatives]]  — Optimization, related rates, curve sketching
+│ ├── [[Limits Continuity]] — ε–δ definition, one-sided limits, continuity
+│ ├── [[Derivatives]] — Definition, rules, chain rule, geodesy applications
+│ └── [[Applications of Derivatives]] — Optimization, related rates, curve sketching
 ├── Integration
-│   ├── [[Integrals]]                   — Definite/indefinite integrals, substitution, integration by parts
-│   └── [[Sequences and Series]]        — Taylor series, Fourier series, convergence tests
+│ ├── [[Integrals]] — Definite/indefinite integrals, substitution, integration by parts
+│ └── [[Sequences and Series]] — Taylor series, Fourier series, convergence tests
 └── Advanced
-    ├── [[Multivariable Calculus]]      — Gradients, Jacobians, surfaces
-    └── [[Differential Equations intro]] — ODEs, initial value problems
+ ├── [[Multivariable Calculus]] — Gradients, Jacobians, surfaces
+ └── [[Differential Equations intro]] — ODEs, initial value problems
 ```
 
 ### **2. LINEAR ALGEBRA ENGINE (semester 1 & 2)**
 ```
 Foundation → Core Theory → Applications
 ├── Core
-│   ├── [[Linear Algebra Fundamentals]] — Vectors, matrices, determinant, Gaussian elimination
-│   ├── [[Linear Algebra Fundamentals]]                    — Eigenvalues, eigenvectors, SVD, matrix exponentials
-│   └── [[Linear Algebra Fundamentals]]                — Properties, cofactor expansion, volumes
+│ ├── [[Linear Algebra Fundamentals]] — Vectors, matrices, determinant, Gaussian elimination
+│ ├── [[Linear Algebra Fundamentals]] — Eigenvalues, eigenvectors, SVD, matrix exponentials
+│ └── [[Linear Algebra Fundamentals]] — Properties, cofactor expansion, volumes
 └── Applied
-    ├── [[Error Propagation]]           — Covariance propagation matrices
-    ├── [[Regression  Least Squares]]  — Normal equations, covariance of estimates
-    └── [[Numerical Methods]]     — Constrained optimization, Lagrange multipliers
+ ├── [[Error Propagation]] — Covariance propagation matrices
+ ├── [[Regression Least Squares]] — Normal equations, covariance of estimates
+ └── [[Numerical Methods]] — Constrained optimization, Lagrange multipliers
 ```
 
 ### **3. STATISTICS & PROBABILITY (semester 1 & 2)**
 ```
 Probability → Statistical Inference → Applications
 ├── Probability
-│   ├── [[Probability Foundations]]     — Axioms, conditional probability, Bayes
-│   ├── [[Probability Distributions]]   — Normal, binomial, exponential, chi-square
-│   └── [[Sampling  Estimation]]        — Point estimates, confidence intervals
+│ ├── [[Probability Foundations]] — Axioms, conditional probability, Bayes
+│ ├── [[Probability Distributions]] — Normal, binomial, exponential, chi-square
+│ └── [[Sampling Estimation]] — Point estimates, confidence intervals
 ├── Statistics
-│   ├── [[Descriptive Statistics]]     — Mean, variance, correlation, distributions
-│   ├── [[Hypothesis Testing]]         — t-tests, chi-square, ANOVA (when needed)
-│   └── [[Sampling)] Estimation]]       — Bootstrap, robust estimation
+│ ├── [[Descriptive Statistics]] — Mean, variance, correlation, distributions
+│ ├── [[Hypothesis Testing]] — t-tests, chi-square, ANOVA (when needed)
+│ └── [[Sampling)] Estimation]] — Bootstrap, robust estimation
 ```
 
 ### **4. DIFFERENTIAL EQUATIONS (semester 2)**
 ```
 Classification → Solution Methods → Applications
 ├── First-Order
-│   ├── [[Differential Equations intro]]         — Direct integration, growth/decay models
-│   ├── [[Differential Equations intro]]                 — Integrating factor method
-│   └── [[Differential Equations intro]]             — Stability analysis
+│ ├── [[Differential Equations intro]] — Direct integration, growth/decay models
+│ ├── [[Differential Equations intro]] — Integrating factor method
+│ └── [[Differential Equations intro]] — Stability analysis
 ├── Second-Order
-│   ├── [[Waves & Oscillations]]         — Spring-mass systems, resonance
-│   └── [[Differential Equations intro]]          — Bifurcations, chaos theory
+│ ├── [[Waves & Oscillations]] — Spring-mass systems, resonance
+│ └── [[Differential Equations intro]] — Bifurcations, chaos theory
 └── Multivariable
-    ├── [[Differential Equations intro]] — Heat equation, wave equation
-    └── [[Differential Equations intro]]     — Sturm-Liouville theory
+ ├── [[Differential Equations intro]] — Heat equation, wave equation
+ └── [[Differential Equations intro]] — Sturm-Liouville theory
 ```
 
 ### **5. NUMERICAL METHODS (semester 4)**
 ```
 Error Sources → Numerical Integration → Optimization
 ├── Interpolation & Approximation
-│   ├── [[Numerical Methods]]               — Lagrange, Newton, cubic splines
-│   └── [[Least Squares Adjustment]] — Model fitting, Chebyshev polynomials
+│ ├── [[Numerical Methods]] — Lagrange, Newton, cubic splines
+│ └── [[Least Squares Adjustment]] — Model fitting, Chebyshev polynomials
 ├── Numerical Integration
-│   ├── [[Numerical Methods]]         — Trapezoidal, Simpson's, Gaussian quadrature
-│   └── [[Numerical Methods]]   — Finite differences, error analysis
+│ ├── [[Numerical Methods]] — Trapezoidal, Simpson's, Gaussian quadrature
+│ └── [[Numerical Methods]] — Finite differences, error analysis
 ├── Root-Finding
-│   ├── [[Bisection Method]]            — Guaranteed convergence
-│   ├── [[Newton-Raphson Method]]       — Quadratic convergence
-│   ├── [[Newton-Raphson Method]]               — No derivative required
-│   └── [[Newton-Raphson Method]]       — Viable when |g'(x)| < 1
+│ ├── [[Bisection Method]] — Guaranteed convergence
+│ ├── [[Newton-Raphson Method]] — Quadratic convergence
+│ ├── [[Newton-Raphson Method]] — No derivative required
+│ └── [[Newton-Raphson Method]] — Viable when |g'(x)| < 1
 └── Numerical Linear Algebra
-    ├── [[LU Decomposition]]            — Gaussian elimination in matrix form
-    ├── [[QR Factorization]]            — Least squares, eigenvalues
-    └── [[Cholesky Decomposition]]      — Positive definite matrices only
+ ├── [[LU Decomposition]] — Gaussian elimination in matrix form
+ ├── [[QR Factorization]] — Least squares, eigenvalues
+ └── [[Cholesky Decomposition]] — Positive definite matrices only
 ```
 
 ### **6. GEODESY-SPECIFIC MATH (semester 2, 3, 4)**
 ```
 Geodesy Applications → Problem Sets → Real-World Data
 ├── Coordinate Systems
-│   ├── [[Geodetic Coordinates]]        — φ, λ, h ↔ ECEF ↔ UTM
-│   ├── [[Reference Ellipsoid]]         — WGS84, GRS80, flatening, eccentricity
-│   └── [[Map Projection]]              — Mercator, UTM, Lambert, distortion
+│ ├── [[Geodetic Coordinates]] — φ, λ, h ↔ ECEF ↔ UTM
+│ ├── [[Reference Ellipsoid]] — WGS84, GRS80, flatening, eccentricity
+│ └── [[Map Projection]] — Mercator, UTM, Lambert, distortion
 ├── Least Squares Adjustment
-│   ├── [[Least Squares Adjustment]]    — Basic theory, normal equations
-│   ├── [[Least Squares Adjustment]]      — Variance-covariance matrices
-│   ├── [[Least Squares Adjustment]]     — Gauss-Newton, Levenberg-Marquardt
-│   └── [[Least Squares Adjustment]]   — Helmert adjustments
+│ ├── [[Least Squares Adjustment]] — Basic theory, normal equations
+│ ├── [[Least Squares Adjustment]] — Variance-covariance matrices
+│ ├── [[Least Squares Adjustment]] — Gauss-Newton, Levenberg-Marquardt
+│ └── [[Least Squares Adjustment]] — Helmert adjustments
 ├── Gravity & Potential Theory
-│   ├── [[Physical Geodesy]]            — Stokes' function, gravity anomalies
-│   ├── [[Geoid]]              — Spherical harmonics, EGM2008
-│   └── [[Least Squares jigging]]       — Profile fitting
+│ ├── [[Physical Geodesy]] — Stokes' function, gravity anomalies
+│ ├── [[Geoid]] — Spherical harmonics, EGM2008
+│ └── [[Least Squares jigging]] — Profile fitting
 └── Error Analysis
-    ├── [[Error Propagation]]           — Jacobian-based variance
-    ├── [[Probability Foundations]]         — Statistical sampling, confidence intervals
-    └── [[Probability Foundations]]        — Measurement errors, adjustment reliability
+ ├── [[Error Propagation]] — Jacobian-based variance
+ ├── [[Probability Foundations]] — Statistical sampling, confidence intervals
+ └── [[Probability Foundations]] — Measurement errors, adjustment reliability
 ```
 
 ## 🗺️ Concept Clusters
@@ -171,7 +171,7 @@ Kelass:
 ### **Study Pack #1: Calculus for Geodesy**
 *Start here for all calculus-based work*
 
-- [[Limits  Continuity]] → Derivatives → Integrals → Multivariable Calculus
+- [[Limits Continuity]] → Derivatives → Integrals → Multivariable Calculus
 
 - Practice: Maximum/minimum problems, integration by parts, partial derivatives
 
@@ -216,7 +216,7 @@ Pseudorange Equation:
 ρ = ||r_sat - r_rx|| + c(dt_rx - dt_sat) + d_iono + d_tropo + noise
 
 Design Matrix (linearized):
-H = [ -cos(α)  -sin(α)  -1/sin(φ) : Seek facility common pattern
+H = [ -cos(α) -sin(α) -1/sin(φ) : Seek facility common pattern
 
  Least Squares:
 x→ = (H'H)⁻¹H'r
@@ -251,13 +251,13 @@ Where:
 
 ## 🎓 Recommended Textbooks (Free)
 1. **Calculus**
-   - OpenStax: Calculus Volume 1-2-3 → MIT OCW 18.01SC-18.07SC
+ - OpenStax: Calculus Volume 1-2-3 → MIT OCW 18.01SC-18.07SC
 2. **Linear Algebra**
-   - Gilbert Strang → 3Blue1Brown Essence of Linear Algebra
+ - Gilbert Strang → 3Blue1Brown Essence of Linear Algebra
 3. **Statistics**
-   - OpenStax Introductory Statistics → Khan Academy Statistics
+ - OpenStax Introductory Statistics → Khan Academy Statistics
 4. **Numerical Methods**
-   - Heath Lindfield → Jupyter notebooks
+ - Heath Lindfield → Jupyter notebooks
 
 ## ▶️ How to use this MOC
 
@@ -269,6 +269,6 @@ Where:
 
 ---
 
-**Quick Jump**: [[Limits  Continuity]] · [[Derivatives]] · [[Linear Algebra Fundamentals]] · [[Multivariable Calculus]] · [[Least Squares Adjustment]]
+**Quick Jump**: [[Limits Continuity]] · [[Derivatives]] · [[Linear Algebra Fundamentals]] · [[Multivariable Calculus]] · [[Least Squares Adjustment]]
 
 ➡️ [[AIGIS Hub]] · [[Physics MOC]] · [[Geodesy MOC]]

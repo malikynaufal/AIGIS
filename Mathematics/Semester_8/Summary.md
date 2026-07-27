@@ -1,31 +1,64 @@
-# 📋 Summary — Mathematics Semester 8
+---
+tags: [math, curriculum, summary]
+aliases: [Mathematics Summary]
+created: 2026-07-13
+updated: 2026-07-27
+---
 
-## Overview
-Semester 8 adalah semester terakhir dalam program studi sarjana Geodesi,
-menyelesaikan seluruh kurikulum matematika yang diperlukan untuk analisis geodesi.
+# 📊 Mathematics Curriculum Summary
 
-## Learning Outcomes
+> *"8-semester overview of the UGM Geodesy Mathematics track."*
 
-1. **Merancang penelitian ilmiah** menggunakan metode statistik
-2. **Menggunakan software statistik** untuk analisis kuantitatif
-3. **Menyajikan hasil penelitian** dalam format ilmiah
+---
 
-## Key Topics
+## 1. Semester Overview
 
-- Teori Model dan basis bayesian
+| Semester | Focus | Key Courses |
+|----------|-------|-------------|
+| 1 | Foundations | Calculus I, Linear Algebra, Statistics I, Physics I |
+| 2 | Core Math | Calculus II, Differential Equations, Linear Algebra II, Physics II |
+| 3 | Analysis | Vector Calculus, Real Analysis, Probability, PDEs |
+| 4 | Numerics | Numerical Calculus, Statistics, Abstract Algebra, Complex Analysis |
+| 5 | Applied | Numerical Methods, Graph Theory, Optimization, AI |
+| 6 | Advanced | Operations Research, Simulation, ML, Image Processing |
+| 7 | Electives | Fourier, Crypto, Time Series, ML, Decision Science |
+| 8 | Capstone | Thesis, KKN |
 
-- Sistem Expert dan logika fuzzy
+---
 
-- Meta-learnig dan adaptasi algoritmik
+## 2. Cumulative Skills
 
-- Integrasi intensif dengan bidang Geodesi
+### Core Competencies
 
-- Proyek penelitian independen
+| Domain | Semester Coverage |
+|--------|-------------------|
+| Calculus | 1, 2, 3, 4 |
+| Linear Algebra | 1, 2, 4 |
+| Differential Equations | 2, 3 |
+| Real/Complex Analysis | 3, 4 |
+| Probability/Statistics | 1, 3, 4 |
+| Numerical Methods | 4, 5, 6 |
+| Optimization | 5, 6 |
+| Discrete Math/Graph Theory | 1, 5 |
+| Programming/CS | 1, 2, 4, 5, 6 |
 
-## Assessment
+---
 
-- Dokumentasi proyek penelitian (30%)
+## 3. Geodesy Integration Points
 
-- Presentasi dan diskusi (30%)
+| Math Topic | Geodesy Application |
+|------------|---------------------|
+| Least Squares | [[Least Squares Adjustment]], GNSS processing |
+| Matrix Factorization | [[LU Decomposition]], [[Cholesky Decomposition]] |
+| Differential Equations | Physical geodesy, satellite orbits |
+| Probability | Error propagation, stochastic models |
+| Optimization | Network design, ambiguity resolution |
 
-- Kemampuan menjawab pertanyaan analitis (40%)
+---
+
+## 4. References
+
+- UGM Teknik Geodesi Curriculum 2021
+- See [[Mathematics_Sources.md]] for textbook list
+
+*Page last updated: 2026-07-27 | AIGIS Content™*

@@ -14,12 +14,19 @@ The **derivative** measures the instantaneous rate of change of a function with 
 
 ## 1. Core Definition
 
-The derivative of $f$at$x$is:$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$**Alternative form:**$$f'(x) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}$$The derivative represents the **slope of the tangent line** to the curve$y = f(x)$at the point$(a, f(a))$.
+The derivative of $f $at $x $is
+:
+
+$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} $$
+
+**Alternative form:*
+*
+
+$$f'(x) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a} $$The derivative represents the **slope of the tangent line** to the curve $y = f(x) $at the point$(a, f(a))$.
 
 **Geometric interpretation:** The equation of the tangent line at $x = a$:
-$$
 
-y = f(a) + f'(a)(x - a)$$---
+$$y = f(a) + f'(a)(x - a)$$---
 
 ## 2. Differentiation Rules
 
@@ -27,76 +34,92 @@ y = f(a) + f'(a)(x - a)$$---
 
 | Rule | Formula | Example |
 |------|---------|---------|
-| Constant |$\frac{d}{dx}[c] = 0$|$\frac{d}{dx}[7] = 0$|
-| Constant multiple |$\frac{d}{dx}[cf] = cf'$|$\frac{d}{dx}[3x^2] = 6x$|
-| Sum/difference |$\frac{d}{dx}[f \pm g] = f' \pm g'$|$\frac{d}{dx}[x^2 + \sin x] = 2x + \cos x$|
+| Constant | $\frac{d}{dx}[c] = 0$ | $\frac{d}{dx}[7] = 0$ |
+| Constant multiple | $\frac{d}{dx}[cf] = cf'$ | $\frac{d}{dx}[3x^2] = 6x$ |
+| Sum/difference | $\frac{d}{dx}[f \pm g] = f' \pm g'$ | $\frac{d}{dx}[x^2 + \sin x] = 2x + \cos x$ |
 
-### 2.2 Power Rule$$\frac{d}{dx}[x^n] = nx^{n-1}$$Works for all real$n$(including negative and fractional):
+### 2.2 Power Rul
+e
 
--$x^3 \to 3x^2$-$x^{-2} \to -2x^{-3}$-$x^{1/2} \to \frac{1}{2}x^{-1/2}$-$x^\pi \to \pi x^{\pi - 1}$### 2.3 Product Rule$$\frac{d}{dx}[f \cdot g] = f'g + fg'$$**Mnemonic:** "derivative of first times second, plus first times derivative of second."
+$$\frac{d}{dx}[x^n] = nx^{n-1} $$Works for all real $n$(including negative and fractional):
 
-**Example:**$\frac{d}{dx}[x^2 \sin x] = 2x\sin x + x^2\cos x$### 2.4 Quotient Rule$$\frac{d}{dx}\left[\frac{f}{g}\right] = \frac{f'g - fg'}{g^2}$$**Mnemonic:** "Low d-high minus high d-low, all over low squared."
+-$x^3 \to 3x^2$-$x^{-2} \to -2x^{-3} $-$x^{1/2} \to \frac{1}{2}x^{-1/2} $-$x^\pi \to \pi x^{\pi - 1} $### 2.3 Product Rul
+e
 
-**Example:**$\frac{d}{dx}\left[\frac{\sin x}{x}\right] = \frac{x\cos x - \sin x}{x^2}$### 2.5 Chain Rule (Aturan Rantai)$$\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)$$If$y = f(u)$and$u = g(x)$:
-$$
+$$\frac{d}{dx}[f \cdot g] = f'g + fg'$$
 
-\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$$**Examples:**
--$\frac{d}{dx}[\sin(x^2)] = \cos(x^2) \cdot 2x$-$\frac{d}{dx}[e^{3x}] = 3e^{3x}$-$\frac{d}{dx}[\ln(\cos x)] = \frac{-\sin x}{\cos x} = -\tan x$-$\frac{d}{dx}[(2x+1)^5] = 5(2x+1)^4 \cdot 2 = 10(2x+1)^4$### 2.6 Extended Chain Rule (Multivariable)
+**Mnemonic:** "derivative of first times second, plus first times derivative of second."
 
-For$z = f(x(t), y(t))$:
-$$
+**Example:**$\frac{d}{dx}[x^2 \sin x] = 2x\sin x + x^2\cos x$### 2.4 Quotient Rul
+e
 
-\frac{dz}{dt} = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt}$$---
+$$\frac{d}{dx}\left[\frac{f}{g}\right] = \frac{f'g - fg'}{g^2} $$
+
+**Mnemonic:** "Low d-high minus high d-low, all over low squared."
+
+**Example:**$\frac{d}{dx}\left[\frac{\sin x}{x}\right] = \frac{x\cos x - \sin x}{x^2} $### 2.5 Chain Rule (Aturan Rantai
+)
+
+$$\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)$$If $y = f(u) $and $u = g(x)$:
+
+$$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} $$**Examples:**
+-$\frac{d}{dx}[\sin(x^2)] = \cos(x^2) \cdot 2x$-$\frac{d}{dx}[e^{3x}] = 3e^{3x} $-$\frac{d}{dx}[\ln(\cos x)] = \frac{-\sin x}{\cos x} = -\tan x$-$\frac{d}{dx}[(2x+1)^5] = 5(2x+1)^4 \cdot 2 = 10(2x+1)^4$### 2.6 Extended Chain Rule (Multivariable)
+
+For $z = f(x(t), y(t))$:
+
+$$\frac{dz}{dt} = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt} $$---
 
 ## 3. Common Derivatives Table
 
-| Function$f(x)$| Derivative$f'(x)$| Notes |
+| Function $f(x)$ | Derivative $f'(x)$ | Notes |
 |---|---|---|
-|$c$|$0$| Constant |
-|$x^n$|$nx^{n-1}$| Power rule |
-|$e^x$|$e^x$| Self-derivative |
-|$a^x$|$a^x \ln a$| General exponential |
-|$\ln x$|$1/x$| Logarithm |
-|$\log_a x$|$\frac{1}{x\ln a}$| Change of base |
-|$\sin x$|$\cos x$| |
-|$\cos x$|$-\sin x$| |
-|$\tan x$|$\sec^2 x$| |
-|$\cot x$|$-\csc^2 x$| |
-|$\sec x$|$\sec x \tan x$| |
-|$\csc x$|$-\csc x \cot x$| |
-|$\arcsin x$|$\frac{1}{\sqrt{1-x^2}}$| |
-|$\arccos x$|$\frac{-1}{\sqrt{1-x^2}}$| |
-|$\arctan x$|$\frac{1}{1+x^2}$| |
-|$\sinh x$|$\cosh x$| Hyperbolic |
-|$\cosh x$|$\sinh x$| Hyperbolic |
+| $c$ | $0$ | Constant |
+| $x^n$ | $nx^{n-1} $ | Power rule |
+| $e^x$ | $e^x$ | Self-derivative |
+| $a^x$ | $a^x \ln a$ | General exponential |
+| $\ln x$ | $1/x$ | Logarithm |
+| $\log_a x$ | $\frac{1}{x\ln a} $ | Change of base |
+| $\sin x$ | $\cos x$ | |
+| $\cos x$ | $-\sin x$ | |
+| $\tan x$ | $\sec^2 x$ | |
+| $\cot x$ | $-\csc^2 x$ | |
+| $\sec x$ | $\sec x \tan x$ | |
+| $\csc x$ | $-\csc x \cot x$ | |
+| $\arcsin x$ | $\frac{1}{\sqrt{1-x^2}} $ | |
+| $\arccos x$ | $\frac{-1}{\sqrt{1-x^2}} $ | |
+| $\arctan x$ | $\frac{1}{1+x^2} $ | |
+| $\sinh x$ | $\cosh x$ | Hyperbolic |
+| $\cosh x$ | $\sinh x$ | Hyperbolic |
 
 ---
 
 ## 4. Implicit Differentiation
 
-When$y$is defined implicitly by$F(x, y) = 0$, differentiate both sides with respect to $x$, treating $y$as a function of$x$:
-$$
+When $y $is defined implicitly by $F(x, y) = 0$, differentiate both sides with respect to $x$, treating $y $as a function of $x$:
 
-\frac{d}{dx}[F(x,y)] = F_x + F_y \frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{F_x}{F_y}$$**Example:**$x^2 + y^2 = 25$(circle)$$2x + 2y\frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{x}{y}$$**Example:**$e^y + xy = 1$
-$$
+$$\frac{d}{dx}[F(x,y)] = F_x + F_y \frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{F_x}{F_y} $$**Example:**$x^2 + y^2 = 25$(circle
+)
 
-e^y \frac{dy}{dx} + y + x\frac{dy}{dx} = 0 \implies \frac{dy}{dx} = \frac{-y}{e^y + x}$$**Application in geodesy:** The equation of an ellipse in surveying (error ellipse) often requires implicit differentiation to find the slope at any point.
+$$2x + 2y\frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{x}{y} $$
+
+**Example:**$e^y + xy = 1$
+
+$$e^y \frac{dy}{dx} + y + x\frac{dy}{dx} = 0 \implies \frac{dy}{dx} = \frac{-y}{e^y + x} $$**Application in geodesy:** The equation of an ellipse in surveying (error ellipse) often requires implicit differentiation to find the slope at any point.
 
 ---
 
 ## 5. Higher-Order Derivatives
 
-The$n$-th derivative of $f$:
-$$
+The $n$-th derivative of $f$:
 
-f^{(n)}(x) = \frac{d^n f}{dx^n} = \underbrace{\frac{d}{dx}\left(\frac{d}{dx}\left(\cdots \frac{d}{dx}[f]\right)\right)}_{n \text{ times}}$$| Notation | Meaning |
+$$f^{(n)}(x) = \frac{d^n f}{dx^n} = \underbrace{\frac{d}{dx}\left(\frac{d}{dx}\left(\cdots \frac{d}{dx}[f]\right)\right)}_{n \text{ times}} $$ | Notation | Meaning |
 |----------|---------|
-|$f'(x)$or$f^{(1)}(x)$| First derivative (rate of change) |
-|$f''(x)$or$f^{(2)}(x)$| Second derivative (concavity) |
-|$f'''(x)$or$f^{(3)}(x)$| Third derivative |
-|$f^{(n)}(x)$|$n$-th derivative |
+| $f'(x) $or $f^{(1)}(x)$ | First derivative (rate of change) |
+| $f''(x) $or $f^{(2)}(x)$ | Second derivative (concavity) |
+| $f'''(x) $or $f^{(3)}(x)$ | Third derivative |
+| $f^{(n)}(x)$ | $n$-th derivative |
 
-**Leibniz notation:** If $y = f(x)$, then $\frac{d^2 y}{dx^2}$is the second derivative.
+**Leibniz notation:** If $y = f(x)$, then $\frac{d^2 y}{dx^2} $is the second derivative.
 
 **Physical interpretation:**
 
@@ -106,42 +129,44 @@ f^{(n)}(x) = \frac{d^n f}{dx^n} = \underbrace{\frac{d}{dx}\left(\frac{d}{dx}\lef
 
 - In geodesy: rate of change of height for leveling; second derivative for curvature corrections
 
-**Higher-order chain rule:**$$\frac{d^2}{dx^2}[f(g(x))] = f''(g(x))[g'(x)]^2 + f'(g(x))g''(x)$$---
+**Higher-order chain rule:*
+*
+
+$$\frac{d^2}{dx^2}[f(g(x))] = f''(g(x))[g'(x)]^2 + f'(g(x))g''(x)$$
+
+---
 
 ## 6. Taylor Series
 
 ### 6.1 Taylor and Maclaurin Series
 
-The Taylor series of$f$centered at$a$:
-$$
+The Taylor series of $f $centered at $a$:
 
-f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots$$The **Maclaurin series** (centered at$a = 0$):
-$$
+$$f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots$$The **Maclaurin series** (centered at $a = 0$):
 
-f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n$$### 6.2 Important Taylor Series
+$$f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n$$### 6.2 Important Taylor Series
 
 | Function | Maclaurin Series | Radius of convergence |
 |----------|------------------|-----------------------|
-|$e^x$|$\sum_{n=0}^{\infty} \frac{x^n}{n!}$|$\infty$|
-|$\sin x$|$\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}$|$\infty$|
-|$\cos x$|$\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}$|$\infty$|
-|$\ln(1+x)$|$\sum_{n=1}^{\infty} \frac{(-1)^{n+1} x^n}{n}$|$(-1, 1]$|
-|$\frac{1}{1-x}$|$\sum_{n=0}^{\infty} x^n$|$(-1, 1)$|
+| $e^x$ | $\sum_{n=0}^{\infty} \frac{x^n}{n!} $ | $\infty$ |
+| $\sin x$ | $\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} $ | $\infty$ |
+| $\cos x$ | $\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} $ | $\infty$ |
+| $\ln(1+x)$ | $\sum_{n=1}^{\infty} \frac{(-1)^{n+1} x^n}{n} $ | $(-1, 1]$ |
+| $\frac{1}{1-x} $ | $\sum_{n=0}^{\infty} x^n$ | $(-1, 1)$ |
 
 ### 6.3 Taylor's Remainder Theorem
 
-The error after truncating at the$n$-th term:
-$$
+The error after truncating at the $n$-th term:
 
-R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$$for some$c$between$a$and$x$. This gives a bound on the approximation error.
+$$R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1} $$for some $c $between $a $and $x$. This gives a bound on the approximation error.
 
 ### 6.4 Applications of Taylor Series
 
 - **Linearisation:** $f(x) \approx f(a) + f'(a)(x-a)$(first-order approximation) — used extensively in geodesy for linearising nonlinear observation equations
 
-- **Numerical computation:** Computing$e^x$, $\sin x$, $\cos x$on computers
+- **Numerical computation:** Computing $e^x$, $\sin x$, $\cos x $on computers
 
-- **Asymptotic analysis:** Understanding behaviour as$x \to 0$or$x \to \infty$- **Error bounds:** Quantifying truncation error in numerical methods
+- **Asymptotic analysis:** Understanding behaviour as $x \to 0 $or $x \to \infty$- **Error bounds:** Quantifying truncation error in numerical methods
 
 ---
 
@@ -149,56 +174,61 @@ R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$$for some$c$between$a$and$x$. Th
 
 ### 7.1 Optimization
 
-To find local maxima/minima of$f(x)$:
+To find local maxima/minima of $f(x)$:
 
-1. Compute $f'(x)$2. Find **critical points**: solve$f'(x) = 0$(or where$f'$is undefined)
+1. Compute $f'(x)$2. Find **critical points**: solve $f'(x) = 0$(or where $f'$is undefined)
 3. Classify using the **second derivative test**:
-   -$f''(a) > 0$: local **minimum** at $x = a$-$f''(a) < 0$: local **maximum** at $x = a$-$f''(a) = 0$: inconclusive — use higher-order tests or first derivative test
+ -$f''(a) > 0$: local **minimum** at $x = a$-$f''(a) < 0$: local **maximum** at $x = a$-$f''(a) = 0$: inconclusive — use higher-order tests or first derivative test
 
 **Geodesy application:** Finding the point of closest approach, optimal measurement configurations, or minimizing least-squares residuals.
 
 ### 7.2 Related Rates
 
 When multiple quantities change with time, use the chain rule to relate their rates:
-$$
 
-\frac{dy}{dx} = \frac{dy/dt}{dx/dt}$$**Example in surveying:** If a leveling rod moves at rate$dh/dt$while being read at distance$D$, the angular rate is $d\theta/dt = (dD/dt \cdot h - dh/dt \cdot D)/D^2$.
+$$\frac{dy}{dx} = \frac{dy/dt}{dx/dt} $$**Example in surveying:** If a leveling rod moves at rate $dh/dt $while being read at distance $D$, the angular rate is $d\theta/dt = (dD/dt \cdot h - dh/dt \cdot D)/D^2$.
 
 ### 7.3 Mean Value Theorem
 
-If $f$is continuous on$[a,b]$and differentiable on$(a,b)$, then:
-$$
+If $f $is continuous on$[a,b] $and differentiable on$(a,b)$, then:
 
-\exists\, c \in (a,b) : f'(c) = \frac{f(b) - f(a)}{b - a}$$**Cauchy's MVT:** If$f$and$g$are continuous on$[a,b]$and differentiable on$(a,b)$:
-$$
+$$\exists\, c \in (a,b) : f'(c) = \frac{f(b) - f(a)}{b - a} $$**Cauchy's MVT:** If $f $and $g $are continuous on$[a,b] $and differentiable on$(a,b)$:
 
-\exists\, c \in (a,b) : \frac{f'(c)}{g'(c)} = \frac{f(b) - f(a)}{g(b) - g(a)}$$### 7.4 L'Hôpital's Rule
+$$\exists\, c \in (a,b) : \frac{f'(c)}{g'(c)} = \frac{f(b) - f(a)}{g(b) - g(a)} $$### 7.4 L'Hôpital's Rule
 
-For indeterminate forms$0/0$or$\infty/\infty$:
-$$
+For indeterminate forms$0/0 $or $\infty/\infty$:
 
-\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}$$provided the limit on the right exists. Also applies to$0 \cdot \infty$, $\infty - \infty$, $1^\infty$, $0^0$, $\infty^0$(after appropriate rewriting).
+$$\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} $$provided the limit on the right exists. Also applies to$0 \cdot \infty$,$\infty - \infty$,$1^\infty$,$0^0$,$\infty^0$(after appropriate rewriting).
 
 ### 7.5 Curve Sketching
 
 | Property | Information |
 |----------|-------------|
-|$f'(x) > 0$|$f$is increasing |
-|$f'(x) < 0$|$f$is decreasing |
-|$f''(x) > 0$|$f$is concave up |
-|$f''(x) < 0$|$f$is concave down |
-|$f''(x) = 0$| Possible inflection point |
+| $f'(x) > 0$ | $f $is increasing |
+| $f'(x) < 0$ | $f $is decreasing |
+| $f''(x) > 0$ | $f $is concave up |
+| $f''(x) < 0$ | $f $is concave down |
+| $f''(x) = 0$ | Possible inflection point |
 
 ---
 
 ## 8. Partial Derivatives
 
-For multivariable functions$f(x_1, x_2, \ldots, x_n)$:
-$$
+For multivariable functions $f(x_1, x_2, \ldots, x_n)$:
 
-\frac{\partial f}{\partial x_i} = \lim_{h \to 0} \frac{f(x_1, \ldots, x_i + h, \ldots, x_n) - f(x_1, \ldots, x_i, \ldots, x_n)}{h}$$**Gradient vector:**$$\nabla f = \left(\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \ldots, \frac{\partial f}{\partial x_n}\right)$$The gradient points in the direction of steepest ascent.
+$$\frac{\partial f}{\partial x_i} = \lim_{h \to 0} \frac{f(x_1, \ldots, x_i + h, \ldots, x_n) - f(x_1, \ldots, x_i, \ldots, x_n)}{h
+}
 
-**Hessian matrix** (second partial derivatives):$$H_{ij} = \frac{\partial^2 f}{\partial x_i \partial x_j}$$Used for classifying critical points in multivariable optimization.
+$$**Gradient vector:**$$
+
+\nabla f = \left(\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \ldots, \frac{\partial f}{\partial x_n}\right)$$The gradient points in the direction of steepest ascent.
+
+**Hessian matrix** (second partial derivatives)
+:
+
+$$H_{ij} = \frac{\partial^2 f}{\partial x_i \partial x_j} $$
+
+Used for classifying critical points in multivariable optimization.
 
 **Application in geodesy:** The Jacobian matrix in least-squares adjustment is a matrix of partial derivatives of observation equations with respect to parameters.
 
@@ -208,12 +238,12 @@ $$
 
 | Equation | Rule | Use |
 |----------|------|-----|
-|$f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$| Definition | Foundation |
-|$(fg)' = f'g + fg'$| Product rule | Multiplication |
-|$(f/g)' = (f'g-fg')/g^2$| Quotient rule | Division |
-|$[f(g(x))]' = f'(g(x))g'(x)$| Chain rule | Composition |
-|$F_x + F_y y' = 0$| Implicit | Implicit functions |
-|$f(x) = \sum f^{(n)}(a)(x-a)^n/n!$ | Taylor series | Approximation |
+| $f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $ | Definition | Foundation |
+| $(fg)' = f'g + fg'$ | Product rule | Multiplication |
+| $(f/g)' = (f'g-fg')/g^2$ | Quotient rule | Division |
+| $[f(g(x))]' = f'(g(x))g'(x)$ | Chain rule | Composition |
+| $F_x + F_y y' = 0$ | Implicit | Implicit functions |
+| $f(x) = \sum f^{(n)}(a)(x-a)^n/n!$ | Taylor series | Approximation |
 
 ---
 

@@ -1,8 +1,8 @@
 # Praktikum Survei Rekayasa
 
-**Kode:** TKD212409  
-**Sifat:** Wajib  
-**SKS:** 1  
+**Kode:** TKD212409 
+**Sifat:** Wajib 
+**SKS:** 1 
 
 ## Deskripsi
 
@@ -16,21 +16,22 @@ Praktikum ini memberikan pengalaman praktis dalam survei rekayasa meliputi pengg
 Total station menggabungkan theodolite digital dan EDM (Electronic Distance Measurement).
 
 **Akurasi Pengukuran:**
-$$\text{Error Horizontal} = \sqrt{(1")^2 + (1 \text{ ppm})^2 \times D}$$
 
-$$
-\text{Error Vertical} = \sqrt{(1")^2 + (1 \text{ ppm})^2 \times D}$$Dimana:
+$$\text{Error Horizontal} = \sqrt{(1")^2 + (1 \text{ ppm})^2 \times D}\text{Error Vertical} = \sqrt{(1")^2 + (1 \text{ ppm})^2 \times D} $$Dimana:
 -$1"$= akurasi sudut
--$1$ppm = akurasi jarak
+-$1 $ppm = akurasi jarak
 -$D$= jarak pengukuran (meter)
 
 #### 2. Digital Level
-**Akurasi Perhitungan:**$$\text{Precision} = \sqrt{\sum_{i=1}^{n} \frac{(h_i - \bar{h})^2}{2n(n-1)}}$$#### 3. GPS/GNSS RTK
-**Akurasi RTK:**$$\text{Horizontal Error} = \sqrt{(10 \text{ mm} + 1 \text{ ppm} \times D)^2}
-$$
+**Akurasi Perhitungan:*
+*
 
-$$
-\text{Vertical Error} = \sqrt{(15 \text{ mm} + 1.5 \text{ ppm} \times D)^2}$$### Metode Setting Out
+$$\text{Precision} = \sqrt{\sum_{i=1}^{n} \frac{(h_i - \bar{h})^2}{2n(n-1)}} $$
+
+#### 3. GPS/GNSS RTK
+**Akurasi RTK:**
+
+$$\text{Horizontal Error} = \sqrt{(10 \text{ mm} + 1 \text{ ppm} \times D)^2}\text{Vertical Error} = \sqrt{(15 \text{ mm} + 1.5 \text{ ppm} \times D)^2} $$### Metode Setting Out
 
 #### Setting Out Bangunan
 1. **Persiapan**: Studi gambar rencana, penentuan titik control
@@ -41,7 +42,7 @@ $$
 #### Formula Setting Out:$$\begin{aligned}
 \text{Distance} &= \sqrt{(N_P - N_A)^2 + (E_P - E_A)^2} \\
 \text{Azimuth} &= \arctan\left(\frac{E_P - E_A}{N_P - N_A}\right) + \text{correction}
-\end{aligned}$$### Precision Levelling
+\end{aligned} $$### Precision Levelling
 **Prosedur:**
 1. Setup level pada posisi tengah
 2. Backsight ke benchmark
@@ -49,7 +50,12 @@ $$
 4. Hitung elevation difference
 5. Loop closure check
 
-**Persyaratan Akurasi:**$$\text{Max Misclosure} = \pm 3\sqrt{K} \text{ mm}$$Dimana:
+**Persyaratan Akurasi:*
+*
+
+$$\text{Max Misclosure} = \pm 3\sqrt{K} \text{ mm} $$
+
+Dimana:
 -$K$ = jarak total levelling (kilometer)
 
 ### Deformasi Monitoring
