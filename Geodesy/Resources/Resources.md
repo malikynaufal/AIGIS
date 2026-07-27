@@ -5,7 +5,7 @@
 |----------|-----|------|-----------------|
 | IAG — International Association of Geodesy | https://geodesy.science/ | Portal | All geodesy sub-topics, news, standards |
 | ITRF — International Terrestrial Reference Frame | https://itrf.ign.fr/ | Official ITRF | Global reference frame, all GNSS/VLBI/SLR |
-| IERS — International Earth Rotation and Reference Systems | https://www.iers.org/ | Service | Earth orientation, Conventions | 
+| IERS — International Earth Rotation and Reference Systems | https://www.iers.org/ | Service | Earth orientation, Conventions |
 | EPSG Registry | https://epsg.org/ | Database | CRS codes, projections, datums |
 | NGS Educational Resources | https://geodesy.noaa.gov/INFO/ | Agency | Surveying, geometric geodesy |
 | ION — International Observatory for GNSS | https://iono.jpl.nasa.gov/ | Data | Ionospheric delays, GNSS modeling |

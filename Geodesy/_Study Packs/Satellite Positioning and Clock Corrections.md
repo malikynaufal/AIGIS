@@ -66,7 +66,9 @@ Modern receivers use **multi-constellation, multi-frequency** tracking — using
 
 The observation equation for satellite *i*:
 
-$$\rho_i = \sqrt{(X_i - X_u)^2 + (Y_i - Y_u)^2 + (Z_i - Z_u)^2} + c \cdot \delta t_u + \varepsilon_i$$Where:
+$$\rho_i = \sqrt{(X_i - X_u)^2 + (Y_i - Y_u)^2 + (Z_i - Z_u)^2} + c \cdot \delta t_u + \varepsilon_i
+
+$$ Where:
 
 - ρ_i = measured pseudorange to satellite i
 
@@ -98,11 +100,8 @@ Satellite positioning is the backbone of **geodetic reference frames**. The Inte
 ### 2.1 Electromagnetic Waves
 
 GPS signals are **electromagnetic (EM) waves** — oscillating electric and magnetic fields propagating through space. The fundamental physics
-:
 
-$$c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} \approx 299{,}792{,}458 \text{ m/s} $$
-
-Where:
+$$ c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} \approx 299{,}792{,}458 \text{ m/s}$$ Where:
 
 - μ₀ = permeability of free space (4π × 10⁻⁷ H/m)
 
@@ -125,18 +124,14 @@ The signal is a **spread-spectrum** signal — the C/A code "spreads" the low-ra
 ### 2.3 Propagation in Vacuum vs. Media
 
 In vacuum, all EM waves travel at *c*, regardless of frequency. But in **material media** (atmosphere, ionosphere), the effective speed decreases
-:
 
-$$v = \frac{c}{n} $$
-
-where *n* is the **refractive index** of the medium (n > 1 for atmosphere).
+$$ v = \frac{c}{n} $$ where *n* is the **refractive index** of the medium (n > 1 for atmosphere).
 
 The travel time becomes
-:
 
-$$\Delta t = \int_{\text{satellite}}^{\text{receiver}} \frac{n(s)}{c} \, ds$$
+$$ \Delta t = \int_{\text{satellite}}^{\text{receiver}} \frac{n(s)}{c} \, ds
 
-This integral along the signal path is the **true geometric range** divided by *c*, plus all the delay contributions.
+$$ This integral along the signal path is the **true geometric range** divided by *c*, plus all the delay contributions.
 
 ### 2.4 Group Delay vs. Phase Velocity
 
@@ -147,9 +142,7 @@ Two critical concepts from wave physics:
 - **Group velocity** (v_g): speed at which the modulation (code/pseudorange) propagate
 s
 
-$$v_g = v_p - \lambda \frac{dv_p}{d\lambda} $$
-
-In dispersive media (like the ionosphere), v_p ≠ v_g, and they have **opposite signs** for the ionospheric effect:
+$$ v_g = v_p - \lambda \frac{dv_p}{d\lambda} $$ In dispersive media (like the ionosphere), v_p ≠ v_g, and they have **opposite signs** for the ionospheric effect:
 
 - The **code (pseudorange)** is **delayed** (v_g < c)
 
@@ -229,11 +222,10 @@ GPS has its own time reference:
 | **BeiDou Time (BDT)** | Jan 1, 2006 | UTC reference, no leap seconds | Synchronized to UTC via NTSC China |
 
 **Critical point for geodesists:** GPS navigation messages broadcast a **clock correction polynomial** for each satellite
-:
 
-$$\delta t^{SV} = a_{f0} + a_{f1}(t - t_{oc}) + a_{f2}(t - t_{oc})^2$$
+$$ \delta t^{SV} = a_{f0} + a_{f1}(t - t_{oc}) + a_{f2}(t - t_{oc})^2
 
-Where:
+$$ Where:
 
 - a_f0 = clock bias (seconds)
 
@@ -277,25 +269,18 @@ The International GNSS Service (IGS) produces **precise satellite clock correcti
 ### 4.1 Special Relativity — Time Dilation Due to Velocity
 
 GPS satellites orbit at approximately 3.874 km/s. According to **special relativity**, a moving clock runs slower than a stationary one
-:
 
-$$\Delta t' = \frac{\Delta t}{\sqrt{1 - v^2/c^2}} \approx \Delta t \left(1 + \frac{v^2}{2c^2}\right)$$
+$$\Delta t' = \frac{\Delta t}{\sqrt{1 - v^2/c^2}} \approx \Delta t \left(1 + \frac{v^2}{2c^2}\right)
 
-The **slowing factor** for GPS satellites
-:
-
-$$\frac{v^2}{2c^2} = \frac{(3874)^2}{2(299{,}792{,}458)^2} \approx -8.34 \times 10^{-11} $$
-
-This means satellite clocks **run slow** by about **−7.2 μs/day** due to their orbital velocity.
+$$ The **slowing factor** for GPS satellites $$\frac{v^2}{2c^2} = \frac{(3874)^2}{2(299{,}792{,}458)^2} \approx -8.34 \times 10^{-11} $$ This means satellite clocks **run slow** by about **−7.2 μs/day** due to their orbital velocity.
 
 ### 4.2 General Relativity — Gravitational Time Dilation
 
 GPS satellites orbit at ~20,200 km altitude, where the gravitational potential is weaker than on Earth's surface. According to **general relativity**, clocks in weaker gravitational fields run **faster**
-:
 
-$$\Delta t' = \Delta t \left(1 + \frac{GM}{c^2} \left(\frac{1}{R_{\text{Earth}}} - \frac{1}{R_{\text{sat}}}\right)\right)$$
+$$\Delta t' = \Delta t \left(1 + \frac{GM}{c^2} \left(\frac{1}{R_{\text{Earth}}} - \frac{1}{R_{\text{sat}}}\right)\right)
 
-Where:
+$$ Where:
 
 - G = gravitational constant (6.674 × 10⁻¹¹ N⋅m²/kg²)
 
@@ -306,11 +291,8 @@ Where:
 - R_sat = orbital radius of GPS satellite (~26,560 km)
 
 The **speeding factor**
-:
 
-$$\frac{GM}{c^2}\left(\frac{1}{R_E} - \frac{1}{R_s}\right) \approx +4.59 \times 10^{-10} $$
-
-This means satellite clocks **run fast** by about **+45.9 μs/day** due to gravitational effects.
+$$\frac{GM}{c^2}\left(\frac{1}{R_E} - \frac{1}{R_s}\right) \approx +4.59 \times 10^{-10} $$ This means satellite clocks **run fast** by about **+45.9 μs/day** due to gravitational effects.
 
 ### 4.3 The Net Relativistic Effect
 
@@ -330,19 +312,15 @@ The correction is applied at the **satellite clock level** in two ways:
 
 **A. Pre-launch frequency adjustment:**
 The satellite's clock frequency is intentionally offset **before launch**. The fundamental frequency is
-:
 
-$$f_{\text{actual}} = 10.229999999543 \text{ MHz} \quad \text{(instead of 10.23 MHz)} $$
-
-This counteracts the **net constant relativistic effect** (the +38.7 μs/day).
+$$ f_{\text{actual}} = 10.229999999543 \text{ MHz} \quad \text{(instead of 10.23 MHz)} $$ This counteracts the **net constant relativistic effect** (the +38.7 μs/day).
 
 **B. In-orbit relativistic correction (broadcast):**
 The remaining **eccentric orbit effect** varies with the satellite's position in its elliptical orbit. This is corrected by the **relativistic correction** term in the navigation message
-:
 
-$$\Delta t_r = -2\frac{\sqrt{G \cdot M_A}}{c^2} \cdot e \sqrt{a} \sin E_k$$
+$$ \Delta t_r = -2\frac{\sqrt{G \cdot M_A}}{c^2} \cdot e \sqrt{a} \sin E_k
 
-Where:
+$$ Where:
 
 - e = eccentricity of satellite orbit
 
@@ -402,27 +380,16 @@ The **ionospheric delay** is the **largest error source** in GPS positioning (~2
 ### 5.2 Ionospheric Delay — The Physics
 
 The ionosphere is a plasma — ionized gas with free electrons and ions. For EM waves propagating through a plasma, the **refractive index** is
-:
 
-$$n = \sqrt{1 - \frac{f_p^2}{f^2}} $$
-
-Where:
+$$ n = \sqrt{1 - \frac{f_p^2}{f^2}}$$ Where:
 
 - f_p = plasma frequency ≈ 9√(N_e) Hz (N_e = electron density in electrons/m³)
 
 - f = GPS signal frequency (e.g., L1 = 1575.42 MHz)
 
 For GPS frequencies (f >> f_p), this simplifies to
-:
 
-$$n \approx 1 - \frac{f_p^2}{2f^2} = 1 - \frac{40.3 \cdot N_e}{c^2 \cdot f^2} $$
-
-The **ionospheric range delay** (group delay for pseudorange)
-:
-
-$$\Delta \rho_{\text{iono}} = +\frac{40.3}{f^2} \int_{\text{path}} N_e \, ds = \frac{40.3 \cdot \text{STEC}}{f^2} $$
-
-Where **STEC** = Slant Total Electron Content (in electrons/m²) — the integral of electron density along the signal path.
+$$ n \approx 1 - \frac{f_p^2}{2f^2} = 1 - \frac{40.3 \cdot N_e}{c^2 \cdot f^2} $$ The **ionospheric range delay** (group delay for pseudorange)$$ \Delta \rho_{\text{iono}} = +\frac{40.3}{f^2} \int_{\text{path}} N_e \, ds = \frac{40.3 \cdot \text{STEC}}{f^2} $$ Where **STEC** = Slant Total Electron Content (in electrons/m²) — the integral of electron density along the signal path.
 
 **Key relationships:**
 
@@ -435,29 +402,22 @@ Where **STEC** = Slant Total Electron Content (in electrons/m²) — the integra
 ### 5.3 Dual-Frequency Ionospheric Correction
 
 Because the ionospheric delay is frequency-dependent, a **dual-frequency receiver** can eliminate the first-order ionospheric effect (~99.9% of total)
-:
 
-$$\rho_{\text{iono-free}} = \frac{f_1^2 \cdot \rho_1 - f_2^2 \cdot \rho_2}{f_1^2 - f_2^2} $$
-
-Where ρ₁ and ρ₂ are pseudoranges on L1 and L2 respectively.
+$$\rho_{\text{iono-free}} = \frac{f_1^2 \cdot \rho_1 - f_2^2 \cdot \rho_2}{f_1^2 - f_2^2} $$ Where ρ₁ and ρ₂ are pseudoranges on L1 and L2 respectively.
 
 This is the **ionosphere-free linear combination** — the standard workhorse of geodetic positioning.
 
 **For single-frequency users**, the **Klobuchar model** (broadcast in the navigation message) removes about 50–60% of the ionospheric delay
-:
 
-$$\Delta t_{\text{iono}} = F \left[5 \times 10^{-9} + A \left(1 - \frac{x^2}{2} + \frac{x^4}{24}\right)\right]$$
+$$\Delta t_{\text{iono}} = F \left[5 \times 10^{-9} + A \left(1 - \frac{x^2}{2} + \frac{x^4}{24}\right)\right]
 
-Where F is an obliquity factor, A is the amplitude (from broadcast coefficients α₀–α₃), and x is the phase of the cosine curve.
+$$ Where F is an obliquity factor, A is the amplitude (from broadcast coefficients α₀–α₃), and x is the phase of the cosine curve.
 
 ### 5.4 Tropospheric Delay — The Physics
 
 The troposphere is a **neutral atmosphere** (no free electrons). Its refractivity is
-:
 
-$$(n - 1) \times 10^6 = 77.6 \frac{P}{T} + 3.73 \times 10^5 \frac{e}{T^2} $$
-
-Where:
+$$(n - 1) \times 10^6 = 77.6 \frac{P}{T} + 3.73 \times 10^5 \frac{e}{T^2} $$ Where:
 
 - P = total atmospheric pressure (hPa)
 
@@ -476,9 +436,9 @@ The first term is the **hydrostatic** (dry) component (~90% of total delay). The
 **Mapping to slant delay:*
 *
 
-$$\Delta \rho_{\text{tropo}} = m_h(\theta) \cdot ZHD + m_w(\theta) \cdot ZWD$$
+$$ \Delta \rho_{\text{tropo}} = m_h(\theta) \cdot ZHD + m_w(\theta) \cdot ZWD
 
-Where m_h and m_w are **mapping functions** (hydrostatic and wet) that depend on the satellite elevation angle θ. Common mapping functions: **VMF1**, **NMF** (Niell Mapping Function), **GMF** (Global Mapping Function).
+$$ Where m_h and m_w are **mapping functions** (hydrostatic and wet) that depend on the satellite elevation angle θ. Common mapping functions: **VMF1**, **NMF** (Niell Mapping Function), **GMF** (Global Mapping Function).
 
 ### 5.5 Troposphere Estimation in Geodetic Positioning
 
@@ -514,11 +474,10 @@ The tropospheric delay estimation from GNSS is used operationally for **weather 
 ### 6.1 Pseudorange — The "Ruler" Approach
 
 **Pseudorange** is the measured time delay multiplied by the speed of light
-:
 
-$$\rho = c \cdot \Delta t$$
+$$\rho = c \cdot \Delta t
 
-The code (C/A or P-code) on the satellite signal is correlated with a locally generated replica in the receiver. The offset at maximum correlation gives the travel time.
+$$ The code (C/A or P-code) on the satellite signal is correlated with a locally generated replica in the receiver. The offset at maximum correlation gives the travel time.
 
 **Characteristics:**
 
@@ -533,11 +492,8 @@ The code (C/A or P-code) on the satellite signal is correlated with a locally ge
 ### 6.2 Carrier Phase — The "Ruler with Marks" Approach
 
 The carrier signal itself (e.g., L1 at 1575.42 MHz, wavelength λ ≈ 19.05 cm) can be tracked as a continuous phase measurement. The carrier phase observation is
-:
 
-$$\Phi = \rho + c(\delta t_u - \delta t^{SV}) + \lambda N - I_{\Phi} + T + \varepsilon_{\Phi} $$
-
-Where:
+$$\Phi = \rho + c(\delta t_u - \delta t^{SV}) + \lambda N - I_{\Phi} + T + \varepsilon_{\Phi} $$ Where:
 
 - Φ = carrier phase measurement (in meters)
 
@@ -607,16 +563,14 @@ Geodesists use combinations of measurements to exploit the strengths of each:
 ### 7.1 The Fundamental Error Equation
 
 From the basic observation equation
-:
 
-$$\rho_i = \sqrt{(X_i - X_u)^2 + (Y_i - Y_u)^2 + (Z_i - Z_u)^2} + c \cdot \delta t_u + \varepsilon_i$$
+$$\rho_i = \sqrt{(X_i - X_u)^2 + (Y_i - Y_u)^2 + (Z_i - Z_u)^2} + c \cdot \delta t_u + \varepsilon_i
 
-A clock error of δt directly causes a range error of c·δt. But the effect on **position** depends on **satellite geometry**.
+$$ A clock error of δt directly causes a range error of c·δt. But the effect on **position** depends on **satellite geometry**.
 
 ### 7.2 Satellite Geometry — GDOP
 
 The **Geometric Dilution of Precision (GDOP)** quantifies how satellite geometry amplifies range errors into position errors
-:
 
 $$\sigma_{\text{position}} = \text{GDOP} \times \sigma_{\text{range}} $$
 
@@ -691,16 +645,10 @@ For **precise positioning (carrier-phase-based)**:
 ### 7.5 Error Propagation Mathematics
 
 The least-squares solution for position
-:
 
-$$\hat{x} = (A^T P A)^{-1} A^T P L$$
+$$\hat{x} = (A^T P A)^{-1} A^T P L
 
-The covariance matrix of the estimated parameters
-:
-
-$$Q_{xx} = (A^T P A)^{-1} $$
-
-Where A is the design matrix (geometry), P is the weight matrix (inverse of observation variance), and L is the observation-minus-computed vector. The diagonal elements of Q_xx give the variance of each estimated parameter — and GDOP = √(trace(Q_xx)).
+$$ The covariance matrix of the estimated parameters $$ Q_{xx} = (A^T P A)^{-1} $$ Where A is the design matrix (geometry), P is the weight matrix (inverse of observation variance), and L is the observation-minus-computed vector. The diagonal elements of Q_xx give the variance of each estimated parameter — and GDOP = √(trace(Q_xx)).
 
 ### 🧭 Geodetic Application
 Understanding the error budget is essential for **network design** (where to place CORS stations), **survey planning** (when to observe for best results), and **data quality assessment** (is my solution reliable?). For Indonesian geodesy, the ionospheric error budget is particularly critical — during **solar maximum** (the next expected around 2025–2026), ionospheric errors over equatorial regions can exceed 50 meters for single-frequency users.
@@ -756,9 +704,7 @@ Understanding the error budget is essential for **network design** (where to pla
 
 **Key equation (single-difference between base B and rover R for satellite j):**
 
-$$\Delta \phi_{BR}^j = \Delta \rho_{BR}^j + c \cdot \Delta \delta t_{BR} + \lambda \cdot \Delta N_{BR}^j + \text{residuals} $$
-
-The atmospheric and satellite clock errors largely cancel in the differencing.
+$$ \Delta \phi_{BR}^j = \Delta \rho_{BR}^j + c \cdot \Delta \delta t_{BR} + \lambda \cdot \Delta N_{BR}^j + \text{residuals} $$ The atmospheric and satellite clock errors largely cancel in the differencing.
 
 **RTK Performance:**
 

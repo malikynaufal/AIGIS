@@ -2,11 +2,11 @@
 
 ## Structured Learning Path for Efficient Study
 
-**Program:** Sarjana Teknik Geodesi  
-**Department:** Departemen Teknik Geodesi  
-**Faculty:** Fakultas Teknik Universitas Gadjah Mada  
-**Total SKS:** 144  
-**Duration:** 8 Semesters  
+**Program:** Sarjana Teknik Geodesi
+**Department:** Departemen Teknik Geodesi
+**Faculty:** Fakultas Teknik Universitas Gadjah Mada
+**Total SKS:** 144
+**Duration:** 8 Semesters
 
 ---
 
@@ -28,7 +28,7 @@
 | TKD211109 | Survei Terestris I | Wajib | 2 | Basic surveying techniques, tape, compass, leveling |
 | TKD211110 | Praktikum Survei Terestris I | Wajib | 1 | Hands-on field practice with basic instruments |
 
-**Key Connections:** 
+**Key Connections:**
 
 - Kalkulus + Aljabar Linear = Mathematical foundation for all geodetic computations
 
@@ -53,7 +53,7 @@
 | TKD211210 | Survei Terestris II | Wajib | 2 | Theodolite, traversing, angle measurement |
 | TKD211211 | Praktikum Survei Terestris II | Wajib | 1 | Field practice with optical/electronic theodolites |
 
-**Key Integration Point:** 
+**Key Integration Point:**
 
 - **Hitung Perataan** (Least Squares) is THE most critical course - everything builds on this
 
@@ -76,11 +76,11 @@
 | TKD212311 | Survei Terestris III | Wajib | 2 | Tacheometry, triangulation, trilateration |
 | TKD212312 | Praktikum Survei Terestris III | Wajib | 1 | Electronic distance measurement, total station practice |
 
-**Critical Path:** 
+**Critical Path:**
 
 - Geometri Diferensial → Understand curved surfaces for geoid modeling
 
-- Sistem Referensi Geodesi → Understand ITRF, plate motions, datum transformations  
+- Sistem Referensi Geodesi → Understand ITRF, plate motions, datum transformations
 
 - Fotogrametri Dasar → Foundation for UAV/drone photogrammetry
 
@@ -108,7 +108,7 @@
 
 - **GPS/GNSS** for precise positioning
 
-- **Digital Photogrammetry** for 3D modeling from images  
+- **Digital Photogrammetry** for 3D modeling from images
 
 - **Remote Sensing** for Earth observation
 
@@ -131,7 +131,7 @@
 | TKD213510 | Praktikum Survei Kadastral | Wajib | 1 | Field cadastral survey, monumentation |
 | TKD213511 | Kemah Kerja | Wajib | 3 | Industrial internship/workplace learning |
 
-**Professional Milestone:** 
+**Professional Milestone:**
 
 - **Geodesi Fisis** = Understanding the actual shape of Earth (geoid)
 
@@ -155,7 +155,7 @@
 | TKD213609 | Praktikum Analisis Geospasial | Wajib | 1 | Spatial analysis in Python/R/QGIS |
 | [Elective] | Mata Kuliah Pilihan | Pilihan | 4 | Choose based on interest: Photogrammetry, Hydrography, etc. |
 
-**Research Preparation:** 
+**Research Preparation:**
 
 - This semester builds your analytical skills for the final project (skripsi)
 
@@ -173,7 +173,7 @@
 | TKD214703 | **Proyek Rekayasa Geodesi Geomatika** | Wajib | 2 | Integrated project: design, execute, process, report real survey project |
 | [Elective] | Pilihan | Pilihan | 8 | Advanced electives: 2 courses × 4 SKS each |
 
-**Capstone Experience:** 
+**Capstone Experience:**
 
 - **Proyek Rekayasa** = Mini-thesis applying all learned skills to real problem
 
@@ -203,7 +203,7 @@
 
 - Semester 6: Jaring Kontrol Geodesi, Survei Hidrografi II
 
-- Semester 7: Advanced Hydrography, Coastal Zone Management  
+- Semester 7: Advanced Hydrography, Coastal Zone Management
 
 - Semester 8: Thesis on bathymetry, shoreline change, port monitoring
 
@@ -432,7 +432,7 @@ For each course, allocate time based on SKS weight:
 
 - Assignment: Calculate weights from instrument specifications
 
-**Weeks 5-8:** Least Squares Fundamentals  
+**Weeks 5-8:** Least Squares Fundamentals
 
 - Lectures: Normal equations, matrix methods, error propagation
 
@@ -469,7 +469,7 @@ For each course, allocate time based on SKS weight:
 ### 🔁 **Spiral Learning Approach**
 Revisit key concepts with increasing depth:
 1. **Intro (Sem 1-2):** Basic concepts & formulas
-2. **Application (Sem 3-4):** Using concepts in real scenarios  
+2. **Application (Sem 3-4):** Using concepts in real scenarios
 3. **Analysis (Sem 5-6):** Understanding limitations & error sources
 4. **Synthesis (Sem 7-8):** Designing solutions & creating new knowledge
 
@@ -588,7 +588,7 @@ UGM-Geodesy-Studies/
 │   ├── ... etc
 ├── 02-Semester-2/
 │   ├── 01-Sistem-Koordinat/
-│   ├── 02-Hitung-Perataan/  
+│   ├── 02-Hitung-Perataan/
 │   ├── ... etc
 ├── Resources/
 │   ├── Textbooks/
@@ -609,7 +609,7 @@ Each course folder contains:
 
 - Lecture notes (your own + provided)
 
-- Assignments & solutions  
+- Assignments & solutions
 
 - Key references & links
 

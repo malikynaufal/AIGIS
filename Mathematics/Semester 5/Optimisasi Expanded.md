@@ -7,8 +7,8 @@ tags: [mathematics, optimization, semester-5, aigis, geodesy-applied]
 
 # Semester 5 — Optimisasi (Expanded)
 
-**Course**: MGM211503 — Optimisasi 
-**Credits**: 3 SKS 
+**Course**: MGM211503 — Optimisasi
+**Credits**: 3 SKS
 **Prerequisites**: [[Kalkulus I Expanded]], [[Kalkulus II Expanded]], [[Aljabar Linear Lanjut Expanded]]
 
 ---
@@ -23,7 +23,7 @@ This course introduces optimization theory and algorithms: unconstrained and con
 
 ### Unit 1: Foundations
 
-- **Optimization problem**: $\min f(\mathbf{x}) $subject to $\mathbf{g}(\mathbf{x})=0$, $\mathbf{h}(\mathbf{x})\leq 0$- **Local vs. global optima**
+- **Optimization problem**: $\min f(\mathbf{x}) $ subject to $\mathbf{g}(\mathbf{x})=0 $, $\mathbf{h}(\mathbf{x})\leq 0 $- **Local vs. global optima**
 
 - **Convexity**: Local = global for convex functions
 
@@ -31,13 +31,13 @@ This course introduces optimization theory and algorithms: unconstrained and con
 
 ### Unit 2: Unconstrained Optimization
 
-- **Gradient descent**:$\mathbf{x}_{k+1} = \mathbf{x}_k - \alpha_k\nabla f$- **Newton's method**:$\mathbf{x}_{k+1} = \mathbf{x}_k - H^{-1}\nabla f$- **Line search**: Exact and backtracking
+- **Gradient descent**: $\mathbf{x}_{k+1} = \mathbf{x}_k - \alpha_k\nabla f $- **Newton's method**: $\mathbf{x}_{k+1} = \mathbf{x}_k - H^{-1}\nabla f $- **Line search**: Exact and backtracking
 
 - **Convergence rates**: Linear, superlinear, quadratic
 
 ### Unit 3: Constrained Optimization
 
-- **Lagrange multipliers**:$\nabla f + \sum \lambda_i\nabla g_i = 0$- **KKT conditions**: Necessary and sufficient conditions
+- **Lagrange multipliers**: $\nabla f + \sum \lambda_i\nabla g_i = 0 $- **KKT conditions**: Necessary and sufficient conditions
 
 - **Convex optimization**: LP, QP, SOCP, SDP
 
@@ -45,7 +45,7 @@ This course introduces optimization theory and algorithms: unconstrained and con
 
 ### Unit 4: Linear Programming
 
-- **Standard form**:$\min c^Tx $s.t.$Ax=b$, $x\geq 0$
+- **Standard form**: $\min c^Tx $ s.t.$ Ax=b $, $ x\geq 0$
 
 - **Simplex method**: Moves along vertices
 

@@ -24,16 +24,23 @@ created: 2026-07-27
 
 ### Fundamental Equations
 
-```latex
-\begin{equation}
-\\mathcal{L} = T - V
-\\end{equation}
-\\text{(Lagrangian)}
+$$
 
 \begin{equation}
-\\frac{d}{dt}\\left(\\frac{\\partial\\mathcal{L}}{\\partial \\dot{q}_i}\\right) - \\frac{\\partial\\mathcal{L}}{\\partial q_i} = 0
-\\end{equation}
-\\text{(Euler-Lagrange equations)}
+\mathcal{L} = T - V
+\end{equation}
+\text{(Lagrangian)}
+
+$$
+
+$$
+
+\begin{equation}
+\frac{d}{dt}\left(\frac{\partial\mathcal{L}}{\partial \dot{q}_i}\right) - \frac{\partial\mathcal{L}}{\partial q_i} = 0
+\end{equation}
+\text{(Euler-Lagrange equations)}
+
+$$
 
 ---
 
@@ -50,10 +57,10 @@ created: 2026-07-27
 ### Problem 1: Harmonic Oscillator
 
 **Solution:**
-1. $T = \\frac{1}{2}m\\dot{x}^2$
-2. $V = \\frac{1}{2}kx^2$
-3. $\\mathcal{L} = \\frac{1}{2}m\\dot{x}^2 - \\frac{1}{2}kx^2$
-4. Apply Euler-Lagrange: $m\\ddot{x} + kx = 0$
+
+1. $T = \frac{1}{2}m\dot{x}^2$
+2. $V = \frac{1}{2}kx^2$
+3. $ \mathcal{L} = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}kx^2$4. Apply Euler-Lagrange:$m\ddot{x} + kx = 0$
 
 ---
 

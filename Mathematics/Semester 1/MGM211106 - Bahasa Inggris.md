@@ -5,7 +5,9 @@ sks: 2
 semester: 1
 program: S.Kom
 university: Universitas Gadjah Mada (UGM)
-tags: [english, academic english, communication]
+tags:
+ - english
+ - communication
 ---
 
 # MGM211106 — Bahasa Inggris (English for Academic Purposes)

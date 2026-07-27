@@ -5,7 +5,7 @@ subject: Geodesy
 
 # 📘 Semester 5 — Advanced Geodesy: Gravity, GNSS, Cadastre & Modeling
 
-**SKS:** 22 (Compulsory) 
+**SKS:** 22 (Compulsory)
 **Focus:** The physics of the Earth (gravity, geoid) and high-precision satellite positioning, integrated with digital terrain modeling and cadastral surveying.
 
 ## 📚 Course List & Descriptions

@@ -16,10 +16,7 @@ An essential calculus toolkit for geodesy and engineering: optimization, error a
 
 ### 1.1 Univariate Optimization
 
-**First-order necessary condition:** If $x^*$is a local extremum
-:
-
-$$f'(x^*) = 0$$
+**First-order necessary condition:** If $x^*$is a local extremum $$ f'(x^*) = 0 $$
 
 **Second-order sufficient condition:**
 -$f''(x^*) > 0$: local minimum
@@ -34,40 +31,50 @@ $$f'(x^*) = 0$$
 
 **Gradient:**
 
-$$\nabla f(\mathbf{x}) = \left(\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \ldots, \frac{\partial f}{\partial x_n}\right)^T$$-$\nabla f(\mathbf{x}^*) = \mathbf{0} $at stationary points
+$$\nabla f(\mathbf{x}) = \left(\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \ldots, \frac{\partial f}{\partial x_n}\right)^T
+
+$$-$\nabla f(\mathbf{x}^*) = \mathbf{0} $ at stationary points
 
 **Hessian matrix:*
 *
 
 $$\mathbf{H}_{ij} = \frac{\partial^2 f}{\partial x_i \partial x_j} $$
 
--$\mathbf{H}(\mathbf{x}^*) $positive definite: local minimum
--$\mathbf{H}(\mathbf{x}^*) $negative definite: local maximum
--$\mathbf{H}(\mathbf{x}^*) $indefinite: saddle point
+-$\mathbf{H}(\mathbf{x}^*) $ positive definite: local minimum
+-$\mathbf{H}(\mathbf{x}^*) $ negative definite: local maximum
+-$\mathbf{H}(\mathbf{x}^*) $ indefinite: saddle point
 
-**In least squares:** The Hessian of $\phi = \mathbf{v}^T\mathbf{P}\mathbf{v} $is $\mathbf{H} = 2\mathbf{A}^T\mathbf{P}\mathbf{A} $— always positive semi-definite (definite if $\text{rank}(\mathbf{A}) = u$).
+**In least squares:** The Hessian of $\phi = \mathbf{v}^T\mathbf{P}\mathbf{v} $is $\mathbf{H} = 2\mathbf{A}^T\mathbf{P}\mathbf{A} $— always positive semi-definite (definite if $\text{rank}(\mathbf{A}) = u $).
 
 ### 1.3 Constrained Optimization — Lagrange Multipliers
 
-Minimize $f(\mathbf{x}) $subject to $g(\mathbf{x}) = 0$:
+Minimize $f(\mathbf{x})$subject to $g(\mathbf{x}) = 0$:
 
 **Lagrangian:**
 
-$$\mathcal{L}(\mathbf{x}, \lambda) = f(\mathbf{x}) + \lambda g(\mathbf{x})$$**Necessary condition:**$\nabla\mathcal{L} = \mathbf{0} $:
+$$\mathcal{L}(\mathbf{x}, \lambda) = f(\mathbf{x}) + \lambda g(\mathbf{x})
 
-$$\nabla f(\mathbf{x}) + \lambda \nabla g(\mathbf{x}) = 0, \quad g(\mathbf{x}) = 0$$**Geodesy application:** Condition equations in adjustment with Lagrangian multipliers.
+$$**Necessary condition:**$\nabla\mathcal{L} = \mathbf{0} $:
+
+$$\nabla f(\mathbf{x}) + \lambda \nabla g(\mathbf{x}) = 0, \quad g(\mathbf{x}) = 0
+
+$$**Geodesy application:** Condition equations in adjustment with Lagrangian multipliers.
 
 ### 1.4 Gradient-Based Numerical Methods
 
 **Steepest descent:*
 *
 
-$$\mathbf{x}_{k+1} = \mathbf{x}_k - \alpha \nabla f(\mathbf{x}_k)$$
+$$\mathbf{x}_{k+1} = \mathbf{x}_k - \alpha \nabla f(\mathbf{x}_k)
+
+$$
 
 **Newton's method:*
 *
 
-$$\mathbf{x}_{k+1} = \mathbf{x}_k - \mathbf{H}^{-1} \nabla f(\mathbf{x}_k)$$**Gauss-Newton** (for LS problems, approximates Hessian as $\approx 2\mathbf{A}^T\mathbf{P}\mathbf{A} $):
+$$\mathbf{x}_{k+1} = \mathbf{x}_k - \mathbf{H}^{-1} \nabla f(\mathbf{x}_k)
+
+$$**Gauss-Newton** (for LS problems, approximates Hessian as $\approx 2\mathbf{A}^T\mathbf{P}\mathbf{A} $):
 
 $$\delta\mathbf{x} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{v} $$---
 
@@ -77,15 +84,17 @@ $$\delta\mathbf{x} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{
 
 For $y = f(x_1, \ldots, x_n)$, the first-order Taylor expansion gives:
 
-$$y \approx f(\mathbf{x}_0) + \sum \frac{\partial f}{\partial x_i} (x_i - x_{i,0})$$The variance of $y$(assuming independent $x_i$):
+$$ y \approx f(\mathbf{x}_0) + \sum \frac{\partial f}{\partial x_i} (x_i - x_{i,0})$$ The variance of $ y $(assuming independent $x_i $):
 
-$$\sigma_y^2 \approx \sum \left(\frac{\partial f}{\partial x_i}\right)^2 \sigma_{x_i}^2$$### 2.2 Relative Error Propagation
+$$\sigma_y^2 \approx \sum \left(\frac{\partial f}{\partial x_i}\right)^2 \sigma_{x_i}^2
+
+$$
+
+### 2.2 Relative Error Propagation
 
 For multiplicative functions
-:
 
-$$y = x_1^{a} x_2^{b} \implies \frac{\sigma_y}{|y|} \approx \sqrt{a^2\left(\frac{\sigma_{x_1}}{x_1}\right)^2 + b^2\left(\frac{\sigma_{x_2}}{x_2}\right)^2} $$**Example:** Computing volume $V = \pi r^2 h $with $r $and $h $measured
-:
+$$ y = x_1^{a} x_2^{b} \implies \frac{\sigma_y}{|y|} \approx \sqrt{a^2\left(\frac{\sigma_{x_1}}{x_1}\right)^2 + b^2\left(\frac{\sigma_{x_2}}{x_2}\right)^2}$$**Example:** Computing volume $V = \pi r^2 h $with $r $and $h $measured
 
 $$\frac{\sigma_V}{V} = \sqrt{\left(2\frac{\sigma_r}{r}\right)^2 + \left(\frac{\sigma_h}{h}\right)^2} $$
 
@@ -95,14 +104,14 @@ $$\frac{\sigma_V}{V} = \sqrt{\left(2\frac{\sigma_r}{r}\right)^2 + \left(\frac{\s
 |------|---------|
 | Sum/difference: round to fewest decimal places | $12.345 + 1.2 = 13.5$ |
 | Product/quotient: round to fewest sig figs | $12.345 \times 1.2 = 15$ |
-| Keeping one digit in uncertainty: round $\sigma $to 1 sig fig | $12.345 \pm 0.045 \to 12.345 \pm 0.04$ |
+| Keeping one digit in uncertainty: round $\sigma $ to 1 sig fig |$12.345 \pm 0.045 \to 12.345 \pm 0.04$ |
 
 ### 2.4 Truncation vs Round-off Error in Numerical Methods
 
 | Error Type | Source | Behavior | Mitigation |
 |------------|--------|----------|------------|
 | **Truncation** | Approximating infinite processes | Decreases with step size $h$ | Higher-order methods, Richardson extrapolation |
-| **Round-off** | Finite precision arithmetic | Increases with$1/h$(more operations) | Stable algorithms, double precision |
+| **Round-off** | Finite precision arithmetic | Increases with $1/h$(more operations) | Stable algorithms, double precision |
 
 The total error in numerical methods is a trade-off between truncation and round-off error.
 
@@ -113,39 +122,38 @@ The total error in numerical methods is a trade-off between truncation and round
 ### 3.1 Linear Interpolatio
 n
 
-$$f(x) \approx f(x_0) + \frac{f(x_1) - f(x_0)}{x_1 - x_0}(x - x_0)$$
+$$ f(x) \approx f(x_0) + \frac{f(x_1) - f(x_0)}{x_1 - x_0}(x - x_0)$$
 
 **Use:** Quick approximation between two known values.
 
 ### 3.2 Lagrange Polynomial Interpolatio
 n
 
-$$P_n(x) = \sum_{i=0}^n f(x_i) L_i(x), \quad L_i(x) = \prod_{j\neq i} \frac{x - x_j}{x_i - x_j} $$
+$$ P_n(x) = \sum_{i=0}^n f(x_i) L_i(x), \quad L_i(x) = \prod_{j\neq i} \frac{x - x_j}{x_i - x_j}$$
 
 **Runge phenomenon:** Equispaced high-degree interpolation oscillates at edges. Use Chebyshev nodes instead.
 
 ### 3.3 Newton's Divided Differences
 
-$$f[x_0, x_1, \ldots, x_k] = \frac{f[x_1, \ldots, x_k] - f[x_0, \ldots, x_{k-1}]}{x_k - x_0}P_n(x) = f[x_0] + \sum_{k=1}^n f[x_0, \ldots, x_k] \prod_{i=0}^{k-1}(x - x_i)$$**Advantage:** Adding a new point doesn't require recomputing the entire polynomial.
+$$ f[x_0, x_1, \ldots, x_k] = \frac{f[x_1, \ldots, x_k] - f[x_0, \ldots, x_{k-1}]}{x_k - x_0}P_n(x) = f[x_0] + \sum_{k=1}^n f[x_0, \ldots, x_k] \prod_{i=0}^{k-1}(x - x_i)$$**Advantage:** Adding a new point doesn't require recomputing the entire polynomial.
 
 ### 3.4 Cubic Spline Interpolation
 
 Piecewise cubic polynomials with continuous first and second derivatives
-:
 
-$$S_i(x) = a_i + b_i(x-x_i) + c_i(x-x_i)^2 + d_i(x-x_i)^3$$
+$$ S_i(x) = a_i + b_i(x-x_i) + c_i(x-x_i)^2 + d_i(x-x_i)^3 $$
 
 **Properties:**
 -$C^2 $continuity at knots
 
 - No Runge phenomenon (stable for many points)
 
-- Natural spline:$S''(x_0) = S''(x_n) = 0$**Geodesy application:** Spline interpolation of geoid models, DEM surfaces, and trajectory reconstruction.
+- Natural spline: $S''(x_0) = S''(x_n) = 0$**Geodesy application:** Spline interpolation of geoid models, DEM surfaces, and trajectory reconstruction.
 
 ### 3.5 Chebyshev Polynomial Approximatio
 n
 
-$$T_n(x) = \cos(n\arccos x), \quad x \in [-1, 1]$$
+$$ T_n(x) = \cos(n\arccos x), \quad x \in [-1, 1]$$
 
 **Advantage:** Near-minimax approximation — minimizes the maximum error. Used in orbital mechanics (GPS satellite ephemeris computation).
 
@@ -157,10 +165,10 @@ $$T_n(x) = \cos(n\arccos x), \quad x \in [-1, 1]$$
 
 | Method | Formula | Error Order |
 |--------|---------|------------|
-| Rectangle (midpoint) | $\int_a^b f\,dx \approx h f(\bar{x})$ | $O(h^2)$ |
-| Trapezoidal | $\int_a^b f\,dx \approx \frac{h}{2}[f_0 + 2\sum f_i + f_n]$ | $O(h^2)$ |
-| Simpson's 1/3 | $\int_a^b f\,dx \approx \frac{h}{3}[f_0 + 4\sum f_{\text{odd}} + 2\sum f_{\text{even}} + f_n]$ | $O(h^4)$ |
-| Simpson's 3/8 | $\int_a^b f\,dx \approx \frac{3h}{8}[f_0 + 3\sum f_1 + 3\sum f_2 + f_n]$ | $O(h^4)$ |
+| Rectangle (midpoint) | $\int_a^b f\,dx \approx h f(\bar{x}) $| $O(h^2)$ |
+| Trapezoidal | $\int_a^b f\,dx \approx \frac{h}{2}[f_0 + 2\sum f_i + f_n] $| $O(h^2)$ |
+| Simpson's 1/3 | $\int_a^b f\,dx \approx \frac{h}{3}[f_0 + 4\sum f_{\text{odd}} + 2\sum f_{\text{even}} + f_n] $| $O(h^4)$ |
+| Simpson's 3/8 | $\int_a^b f\,dx \approx \frac{3h}{8}[f_0 + 3\sum f_1 + 3\sum f_2 + f_n] $| $O(h^4)$ |
 
 ### 4.2 Romberg Integration
 
@@ -168,12 +176,14 @@ Uses Richardson extrapolation on the trapezoidal rule:
 
 1. Compute $T(h), T(h/2), T(h/4), \ldots$2. Extrapolate to $h \to 0$:
 
-$$R_{i,j} = \frac{4^{j-1}R_{i,j-1} - R_{i-1,j-1}}{4^{j-1} - 1} $$**Converges very fast for smooth functions.**
+$$ R_{i,j} = \frac{4^{j-1}R_{i,j-1} - R_{i-1,j-1}}{4^{j-1} - 1} $$**Converges very fast for smooth functions.**
 
 ### 4.3 Gaussian Quadratur
 e
 
-$$\int_{-1}^{1} f(x)\, dx \approx \sum_{i=1}^n w_i f(x_i)$$**Legendre-Gauss nodes and weights** (for $n = 3$):
+$$ \int_{-1}^{1} f(x)\, dx \approx \sum_{i=1}^n w_i f(x_i)
+
+$$**Legendre-Gauss nodes and weights** (for $n = 3$):
 
 | $i$ | $x_i$ | $w_i$ |
 |-----|-------|-------|
@@ -181,7 +191,7 @@ $$\int_{-1}^{1} f(x)\, dx \approx \sum_{i=1}^n w_i f(x_i)$$**Legendre-Gauss node
 | 1 | 0.0000 | 0.8889 |
 | 2 | 0.7746 | 0.5556 |
 
-For arbitrary interval$[a, b]$, transform: $x = \frac{b-a}{2}t + \frac{b+a}{2} $.
+For arbitrary interval$[a, b]$, transform: $x = \frac{b-a}{2}t + \frac{b+a}{2}$.
 
 **Geodesy application:** Computing line integrals along geodesic paths, evaluating spherical harmonic integrals.
 
@@ -189,7 +199,7 @@ For arbitrary interval$[a, b]$, transform: $x = \frac{b-a}{2}t + \frac{b+a}{2} $
 
 Subdivides the integration interval where the function varies rapidly:
 
-1. Compute integral on $[a, b] $and on$[a, \frac{a+b}{2}] + [\frac{a+b}{2}, b]$2. If difference exceeds tolerance, recursively subdivide
+1. Compute integral on $[a, b]$and on $[a, \frac{a+b}{2}] + [\frac{a+b}{2}, b]$ 2. If difference exceeds tolerance, recursively subdivide
 
 ---
 
@@ -200,21 +210,19 @@ Subdivides the integration interval where the function varies rapidly:
 **Separation of variables:*
 *
 
-$$\frac{dy}{dx} = g(x)h(y) \implies \int \frac{dy}{h(y)} = \int g(x)\, dx$$
+$$\frac{dy}{dx} = g(x)h(y) \implies \int \frac{dy}{h(y)} = \int g(x)\, dx
 
-**Integrating factor** (for linear:$y' + P(x)y = Q(x)$):
+$$**Integrating factor** (for linear: $y' + P(x)y = Q(x)$):
 
 $$\mu(x) = \exp\left(\int P(x)\, dx\right)y = \frac{1}{\mu(x)}\int \mu(x)Q(x)\, d
 x
 
-$$### 5.2 Second-Order Linear ODEs$$
-
-ay'' + by' + cy = f(x)$$**Homogeneous solution** from characteristic equation $ar^2 + br + c = 0$:
+$$### 5.2 Second-Order Linear ODEs $$ ay'' + by' + cy = f(x)$$**Homogeneous solution** from characteristic equation $ar^2 + br + c = 0$:
 
 | Roots | Solution |
 |-------|----------|
-| $r_1 \neq r_2$(real) | $y_h = C_1 e^{r_1 x} + C_2 e^{r_2 x} $ |
-| $r_1 = r_2$(repeated) | $y_h = (C_1 + C_2 x)e^{rx} $ |
+| $r_1 \neq r_2$(real) | $y_h = C_1 e^{r_1 x} + C_2 e^{r_2 x}$ |
+| $r_1 = r_2$(repeated) | $y_h = (C_1 + C_2 x)e^{rx}$ |
 | $r = \alpha \pm i\beta$(complex) | $y_h = e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x)$ |
 
 ### 5.3 Numerical Solution of ODEs
@@ -222,12 +230,12 @@ ay'' + by' + cy = f(x)$$**Homogeneous solution** from characteristic equation $a
 **Euler's method (first order):*
 *
 
-$$y_{n+1} = y_n + h f(t_n, y_n
+$$
+
+y_{n+1} = y_n + h f(t_n, y_n
 )
 
-$$**Runge-Kutta 4th order (RK4):**$$
-
-k_1 = h f(t_n, y_n)k_2 = h f(t_n + h/2, y_n + k_1/2)k_3 = h f(t_n + h/2, y_n + k_2/2)k_4 = h f(t_n + h, y_n + k_3)y_{n+1} = y_n + \frac{1}{6}(k_1 + 2k_2 + 2k_3 + k_4)$$**Applications in geodesy:** Satellite orbit propagation, inertial navigation computation, deformation modeling.
+$$**Runge-Kutta 4th order (RK4):** $$ k_1 = h f(t_n, y_n)k_2 = h f(t_n + h/2, y_n + k_1/2)k_3 = h f(t_n + h/2, y_n + k_2/2)k_4 = h f(t_n + h, y_n + k_3)y_{n+1} = y_n + \frac{1}{6}(k_1 + 2k_2 + 2k_3 + k_4)$$ **Applications in geodesy:** Satellite orbit propagation, inertial navigation computation, deformation modeling.
 
 ---
 
@@ -238,18 +246,20 @@ A ubiquitous tool in engineering calculus: replace a nonlinear function with a l
 ### 6.1 Scalar Linearisatio
 n
 
-$$f(x) \approx f(x_0) + f'(x_0)(x - x_0)$$
+$$ f(x) \approx f(x_0) + f'(x_0)(x - x_0) $$
 
 ### 6.2 Multivariable Linearisatio
 n
 
-$$\mathbf{f}(\mathbf{x}) \approx \mathbf{f}(\mathbf{x}_0) + \mathbf{J}_{\mathbf{f}}(\mathbf{x}_0) \cdot (\mathbf{x} - \mathbf{x}_0)$$where $\mathbf{J}_{\mathbf{f}} $is the **Jacobian matrix**:$(J)_{ij} = \frac{\partial f_i}{\partial x_j} $.
+$$ \mathbf{f}(\mathbf{x}) \approx \mathbf{f}(\mathbf{x}_0) + \mathbf{J}_{\mathbf{f}}(\mathbf{x}_0) \cdot (\mathbf{x} - \mathbf{x}_0)
+
+$$ where $\mathbf{J}_{\mathbf{f}} $is the **Jacobian matrix**:$(J)_{ij} = \frac{\partial f_i}{\partial x_j} $.
 
 ### 6.3 Applications in Geodesy
 
-- **GNSS observation equations:** Pseudorange $\rho = \sqrt{(x - X)^2 + (y - Y)^2 + (z - Z)^2} $linearised around approximate rover position
+- **GNSS observation equations:** Pseudorange $\rho = \sqrt{(x - X)^2 + (y - Y)^2 + (z - Z)^2} $ linearised around approximate rover position
 
-- **Coordinate transformations:** Converting $\phi,\lambda,h $to XYZ linearised per epoch
+- **Coordinate transformations:** Converting $\phi,\lambda,h $ to XYZ linearised per epoch
 
 - **Gravity field modeling:** Linearisation around reference ellipsoid (normal gravity)
 
@@ -262,12 +272,12 @@ $$\mathbf{f}(\mathbf{x}) \approx \mathbf{f}(\mathbf{x}_0) + \mathbf{J}_{\mathbf{
 | Equation | Topic | Use |
 |----------|-------|-----|
 | $\nabla f(\mathbf{x}^*) = \mathbf{0} $ | Optimization | Stationary points |
-| $\mathcal{L} = f + \lambda g$ | Constrained opt. | Lagrange multipliers |
-| $\sigma_y^2 = \sum (\partial f/\partial x_i)^2 \sigma_{x_i}^2$ | Error analysis | Uncertainty |
+| $\mathcal{L} = f + \lambda g $ | Constrained opt. | Lagrange multipliers |
+| $\sigma_y^2 = \sum (\partial f/\partial x_i)^2 \sigma_{x_i}^2 $ | Error analysis | Uncertainty |
 | $P_n(x) = \sum f(x_i)L_i(x)$ | Interpolation | Function approximation |
-| $\int_a^b f\,dx \approx \frac{h}{3}[f_0 + 4\sum f_o + 2\sum f_e + f_n]$ | Integration | Simpson's rule |
+| $\int_a^b f\,dx \approx \frac{h}{3}[f_0 + 4\sum f_o + 2\sum f_e + f_n] $ | Integration | Simpson's rule |
 | $\mathbf{f}(\mathbf{x}) \approx \mathbf{f}(\mathbf{x}_0) + \mathbf{J}\Delta\mathbf{x} $ | Linearisation | Nonlinear model |
-| $y_{n+1} = y_n + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4)$ | ODE solver | RK4 |
+| $ y_{n+1} = y_n + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4)$ | ODE solver | RK4 |
 
 ---
 

@@ -61,17 +61,17 @@ updated: 2026-07-27
 
 ```mermaid
 flowchart TD
-    A[Land Boundary] --> B[Natural Boundary]
-    A --> C[Artificial Boundary]
-    A --> D[Legal Boundary]
-    B --> B1[River]
-    B --> B2[Mountain]
-    B --> B3[Coastline]
-    C --> C1[Fence]
-    C --> C2[Road]
-    C --> C3[Building]
-    D --> D1[Surveyed Line]
-    D --> D2[Title Deed Reference]
+ A[Land Boundary] --> B[Natural Boundary]
+ A --> C[Artificial Boundary]
+ A --> D[Legal Boundary]
+ B --> B1[River]
+ B --> B2[Mountain]
+ B --> B3[Coastline]
+ C --> C1[Fence]
+ C --> C2[Road]
+ C --> C3[Building]
+ D --> D1[Surveyed Line]
+ D --> D2[Title Deed Reference]
 ```
 
 ### Boundary Monument
@@ -97,17 +97,7 @@ Indonesian cadastral coordinates:
 
 $$
 
-A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i y_{i+1} - x_{i+1} y_i) \right|
-
-$$
-
-### Simpson's Rule (for curved boundaries)
-
-$$
-
-A = \frac{h}{3}\left[y_0 + 4(y_1 + y_3 + \ldots) + 2(y_2 + y_4 + \ldots) + y_n\right]
-
-$$
+A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i y_{i+1} - x_{i+1} y_i) \right|$$### Simpson's Rule (for curved boundaries)$$ A = \frac{h}{3}\left[y_0 + 4(y_1 + y_3 + \ldots) + 2(y_2 + y_4 + \ldots) + y_n\right]$$
 
 ## In [[Geodesy]] Context
 
@@ -115,12 +105,12 @@ $$
 
 ```mermaid
 flowchart LR
-    A[Application] --> B[Document Review]
-    B --> C[Field Survey]
-    C --> D[Coordinate Calculation]
-    D --> E[Boundary Agreement]
-    E --> F[Certificate]
-    F --> G[Registration]
+ A[Application] --> B[Document Review]
+ B --> C[Field Survey]
+ C --> D[Coordinate Calculation]
+ D --> E[Boundary Agreement]
+ E --> F[Certificate]
+ F --> G[Registration]
 ```
 
 ### Accuracy Requirements
@@ -133,7 +123,7 @@ flowchart LR
 
 ## Study Problems
 
-1. Calculate the area of a parcel with coordinates $(500000, 9100000)$, $(500100, 9100000)$, $(500100, 9100100)$, $(500000, 9100100)$.
+1. Calculate the area of a parcel with coordinates $(500000, 9100000)$, $(500100, 9100000)$, $(500100, 9100100)$, $ (500000, 9100100)$.
 2. Explain the difference between Hak Milik and Hak Guna Bangunan.
 3. Why is GNSS preferred over total station for cadastral control?
 

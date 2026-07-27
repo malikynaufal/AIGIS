@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Bayesian Statistics
 
-**Course Code:** MGM214713 
-**SKS:** 3 (3-0) 
-**Semester:** 6 
-**Prerequisites:** Probabilitas & Statistika, Kalkulus Lanjutan 
+**Course Code:** MGM214713
+**SKS:** 3 (3-0)
+**Semester:** 6
+**Prerequisites:** Probabilitas & Statistika, Kalkulus Lanjutan
 
 ---
 
@@ -31,7 +31,7 @@ Statistika Bayesian adalah kerangka kerja inferensi statistik yang menggunakan T
 
 ### 1.1 Formulasi Dasar
 
-$$P(\theta | D) = \frac{P(D | \theta) \cdot P(\theta)}{P(D)} $$di mana:
+$$ P(\theta | D) = \frac{P(D | \theta) \cdot P(\theta)}{P(D)}$$ di mana:
 -$P(\theta)$= **prior** (keyakinan awal tentang parameter sebelum data).
 -$P(D|\theta)$= **likelihood** (kemungkinan data diberikan parameter).
 -$P(D) = \int P(D|\theta) P(\theta) d\theta$= **marginal likelihood** (normalisasi).
@@ -41,14 +41,11 @@ $$P(\theta | D) = \frac{P(D | \theta) \cdot P(\theta)}{P(D)} $$di mana:
 
 Mengestimasi posisi stasiun GNSS dari $n $pengukuran yang diasumsikan normal:
 
-- Prior:$\theta \sim \mathcal{N}(\mu_0, \sigma_0^2)$- Likelihood:$D_i | \theta \sim \mathcal{N}(\theta, \sigma^2)$- Posterior:$\theta | D \sim \mathcal{N}(\mu_n, \sigma_n^2) $dengan
-:
-
-$$\mu_n = \frac{\sigma^2 \mu_0 + n\sigma_0^2 \bar{D}}{\sigma^2 + n\sigma_0^2}, \quad \sigma_n^2 = \frac{\sigma^2 \sigma_0^2}{\sigma^2 + n\sigma_0^2} $$Prior $\mu_0$(data lama) dan data baru $\bar{D} $digabungkan secara natural.
+- Prior: $\theta \sim \mathcal{N}(\mu_0, \sigma_0^2) $- Likelihood: $D_i | \theta \sim \mathcal{N}(\theta, \sigma^2)$- Posterior: $\theta | D \sim \mathcal{N}(\mu_n, \sigma_n^2) $dengan $$\mu_n = \frac{\sigma^2 \mu_0 + n\sigma_0^2 \bar{D}}{\sigma^2 + n\sigma_0^2}, \quad \sigma_n^2 = \frac{\sigma^2 \sigma_0^2}{\sigma^2 + n\sigma_0^2} $$ Prior $\mu_0 $(data lama) dan data baru $\bar{D} $ digabungkan secara natural.
 
 ## 2. Pemilihan Prior
 
-- **Non-informatif (Jeffreys prior):**$P(\theta) \propto \sqrt{I(\theta)} $di mana $I(\theta)$ adalah informasi Fisher.
+- **Non-informatif (Jeffreys prior):**$P(\theta) \propto \sqrt{I(\theta)}$di mana $ I(\theta)$ adalah informasi Fisher.
 
 - **Informatif:** Berdasarkan studi sebelumnya (misal: posisi awal dari tabel).
 

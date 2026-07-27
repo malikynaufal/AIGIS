@@ -13,17 +13,11 @@ updated: 2026-07-27
 
 ## 1. Derivation
 
-Starting from Taylor expansion around $x_n$:
+Starting from Taylor expansion around $x_n $:
 
-$$f(x_{n+1}) = f(x_n) + f'(x_n)(x_{n+1} - x_n) + O((x_{n+1}-x_n)^2)$$
+$$ f(x_{n+1}) = f(x_n) + f'(x_n)(x_{n+1} - x_n) + O((x_{n+1}-x_n)^2)$$ Set$ f(x_{n+1}) = 0 $and neglect higher-order terms:$$0 \approx f(x_n) + f'(x_n)(x_{n+1} - x_n)$$ Solving for $ x_{n+1} $:
 
-Set $f(x_{n+1}) = 0$ and neglect higher-order terms:
-
-$$0 \approx f(x_n) + f'(x_n)(x_{n+1} - x_n)$$
-
-Solving for $x_{n+1}$:
-
-$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
+$$ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
 
 ---
 
@@ -33,16 +27,16 @@ $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
 Input: f(x), f'(x), initial guess x₀, tolerance ε, max iterations N
 
 For n = 0 to N-1:
-    f_xn = f(x_n)
-    f_prime_xn = f'(x_n)
-    
-    If f_prime_xn == 0:
-        raise "Zero derivative — cannot continue"
-    
-    x_{n+1} = x_n - f_xn / f_prime_xn
-    
-    If |x_{n+1} - x_n| < ε or |f(x_{n+1})| < ε:
-        return x_{n+1}
+ f_xn = f(x_n)
+ f_prime_xn = f'(x_n)
+
+ If f_prime_xn == 0:
+ raise "Zero derivative — cannot continue"
+
+ x_{n+1} = x_n - f_xn / f_prime_xn
+
+ If |x_{n+1} - x_n| < ε or |f(x_{n+1})| < ε:
+ return x_{n+1}
 
 Raise "Did not converge"
 ```
@@ -55,9 +49,9 @@ Raise "Did not converge"
 
 If $f'(r) \neq 0$ and $f$ is $C^2$ near root $r$:
 
-$$|x_{n+1} - r| \approx \frac{|f''(r)|}{2|f'(r)|} |x_n - r|^2$$
+$$|x_{n+1} - r| \approx \frac{|f''(r)|}{2|f'(r)|} |x_n - r|^2
 
-Error squares each iteration — **doubles correct digits**.
+$$ Error squares each iteration — **doubles correct digits**.
 
 ### Conditions for Quadratic Convergence
 
@@ -66,7 +60,7 @@ Error squares each iteration — **doubles correct digits**.
 | $f'(r) \neq 0$ | Simple root (not multiple) |
 | $f \in C^2$ | Second derivative exists |
 | $x_0$ sufficiently close | Basin of attraction |
-| $f'$ bounded away from 0 | No flat spots near root |
+| $ f'$ bounded away from 0 | No flat spots near root |
 
 ### Multiple Roots
 
@@ -81,7 +75,7 @@ If $f(x) = (x-r)^m g(x)$ with $g(r) \neq 0$:
 | Failure Mode | Cause | Fix |
 |--------------|-------|-----|
 | Divergence | $x_0$ outside basin of attraction | Hybrid methods, better initial guess |
-| Oscillation | $f'$ near zero, periodic function | Damping, secant fallback |
+| Oscillation | $ f'$ near zero, periodic function | Damping, secant fallback |
 | Division by zero | $f'(x_n) = 0$ | Check derivative, perturb |
 | Slow convergence | Multiple root | Modified Newton, or use deflation |
 
@@ -96,11 +90,11 @@ Each iteration:
 
 ```mermaid
 graph LR
-    A[x₀] --> B[Draw tangent]
-    B --> C[x₁ = x₀ - f(x₀)/f'(x₀)]
-    C --> D[Draw new tangent]
-    D --> E[x₂ = x₁ - f(x₁)/f'(x₁)]
-    E --> F[Converge to root]
+ A[x₀] --> B[Draw tangent]
+ B --> C[x₁ = x₀ - f(x₀)/f'(x₀)]
+ C --> D[Draw new tangent]
+ D --> E[x₂ = x₁ - f(x₁)/f'(x₁)]
+ E --> F[Converge to root]
 ```
 
 ---
@@ -109,9 +103,7 @@ graph LR
 
 For system $F(x) = 0$ where $F: \mathbb{R}^n \to \mathbb{R}^n$:
 
-$$x_{k+1} = x_k - J_F(x_k)^{-1} F(x_k)$$
-
-where $J_F$ is the $n \times n$ Jacobian matrix.
+$$ x_{k+1} = x_k - J_F(x_k)^{-1} F(x_k)$$ where $ J_F $is the$ n \times n $ Jacobian matrix.
 
 **Cost:** $O(n^3)$ per iteration for linear solve — use quasi-Newton (Broyden) for large $n$.
 
@@ -121,29 +113,29 @@ where $J_F$ is the $n \times n$ Jacobian matrix.
 
 ```python
 def newton(f, df, x0, tol=1e-10, max_iter=50, damping=True):
-    x = x0
-    for i in range(max_iter):
-        fx = f(x)
-        dfx = df(x)
-        
-        if dfx == 0:
-            # Perturb or fallback
-            x += 1e-6
-            continue
-            
-        step = fx / dfx
-        
-        # Damping for stability
-        if damping and abs(step) > 1:
-            step *= 0.5
-            
-        x_new = x - step
-        
-        if abs(x_new - x) < tol:
-            return x_new
-        x = x_new
-    
-    raise RuntimeError("Newton did not converge")
+ x = x0
+ for i in range(max_iter):
+ fx = f(x)
+ dfx = df(x)
+
+ if dfx == 0:
+ # Perturb or fallback
+ x += 1e-6
+ continue
+
+ step = fx / dfx
+
+ # Damping for stability
+ if damping and abs(step) > 1:
+ step *= 0.5
+
+ x_new = x - step
+
+ if abs(x_new - x) < tol:
+ return x_new
+ x = x_new
+
+ raise RuntimeError("Newton did not converge")
 ```
 
 ---
@@ -159,9 +151,7 @@ Solving for translation, rotation, scale:
 
 ### GNSS Pseudorange Linearization
 
-$$f(\mathbf{x}) = \sqrt{(x-x_i)^2 + (y-y_i)^2 + (z-z_i)^2} - \rho_i$$
-
-Newton-Raphson on system of 4+ satellites for positioning.
+$$ f(\mathbf{x}) = \sqrt{(x-x_i)^2 + (y-y_i)^2 + (z-z_i)^2} - \rho_i $$ Newton-Raphson on system of 4+ satellites for positioning.
 
 ---
 

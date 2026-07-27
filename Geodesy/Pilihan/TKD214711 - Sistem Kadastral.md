@@ -1,54 +1,35 @@
-# 📚 Pilihan: Sistem Kadastral
+---
+tags: [aigis, geodesy, pilihan, cadastral-system, land-registration, legal]
+aliases: [Sistem Kadastral, Cadastral System]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD214711
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Sistem Kadastral (Cadastral System)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD214711 | **SKS:** 3 (2-1) | **Semester:** 6–8
 
-Sistem Kadastral adalah mata kuliah pilihan yang mempelajari sistem pendaftaran tanah dan pengelolaan data kepemilikan tanah secara spasial. Sistem kadastral merupakan infrastruktur dasar untuk tata kelola tanah yang baik. Mata kuliah ini mencakup sejarah sistem kadastral, prinsip-prinsip pendaftaran tanah, teknik pengukuran batas, digitalisasi data kadastral, dan integrasi dengan sistem informasi geografis.
+## Course Overview
 
-Di Indonesia, sistem kadastral dikelola oleh BPN (Badan Pertanahan Nasional) dengan sistem Sistem Informasi Tanah (SITES) dan layanan sertifikasi tanah. Mahasiswa akan mempelajari bagaimana data spasial geodesi digunakan untuk menetapkan batas-batas bidang tanah, melakukan pemetaan sertifikat tanah, dan menyelesaikan sengketa batas tanah. Topik lanjutan mencakup sistem kadastral digital modern berbasis web dan mobile, integrasi dengan registri tanah, dan tantangan implementasi di Indonesia.
+Cadastral system design and management for land rights registration and land information management. Covers Indonesia's legal framework (UU No. 5/1960, PP No. 18/2021) and international models.
 
-Mata kuliah ini memadukan teknik pengukuran geodesi dengan aspek hukum dan administratif pertanahan. Praktikum mencakup pengukuran batas tanah berdasarkan sertifikat, digitalisasi peta kadastral, dan penggunaan perangkat lunak pengelolaan data kadastral.
+## Key Topics
 
-## Topik Utama
+### 1. Cadastral Models
 
-### 1. Sistem Kadastral Global
+- **Torrens System:** Registration of title
+- **Public Registry:** Deed registration
+- **Multi-purpose Cadastre:** Land + tax + planning
 
-- Sejarah dan evolusi sistem kadastral
+### 2. Land Registration Process
 
-- Sistem Torrens dan sistem deed registration
+$$ \text{Application} \rightarrow \text{Document Check} \rightarrow \text{Survey} \rightarrow \text{Boundary Agreement} \rightarrow \text{Approval} \rightarrow \text{Registration} $$
 
-- Standar internasional (FAO GLTN)
+### 3. Indonesia's Complete Cadastre
 
-### 2. Pendaftaran Tanah di Indonesia
+- 126M parcels total
+- ~50M registered (2025)
+- PTSL program targets completion
 
-- Sistem SITES dan layanan BPN
-
-- Teknik pengukuran batas dan parcell
-
-- Sengketa batas dan penyelesaiannya
-
-### 3. Digitalisasi Kadastral
-
-- GIS dan database kadastral
-
-- Sistem web/mobile kadastral
-
-- Integrasi registri dan spasial (LIS - Land Information System)
-
-## Tujuan Pembelajaran
-
-1. Memahami sistem kadastral nasional dan internasional
-2. Menguasai teknik pengukuran batas tanah
-3. Merancang sistem digital kadastral (web/mobile)
-4. Mengintegrasikan data spasial dengan registri tanah (LIS)
-
-## Referensi
-
-- UN-GGIM. (2011). *Global Land Governance*. United Nations.
-
-- FAO. (2012). *Guidelines on Land Governance: Vol. 1*. Food and Agriculture Organization.
-
-- Indonesia, UU No. 5 Tahun 1960 dan PP No. 24 Tahun 1997 tentang Pendaftaran Tanah.
+---
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

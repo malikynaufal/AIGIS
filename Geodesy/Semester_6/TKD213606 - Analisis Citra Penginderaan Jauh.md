@@ -1,8 +1,8 @@
 # Analisis Citra Penginderaan Jauh
 
-**Kode:** TKD213606 
-**Sifat:** Wajib 
-**SKS:** 
+**Kode:** TKD213606
+**Sifat:** Wajib
+**SKS:**
 
 ## Deskripsi
 
@@ -27,9 +27,9 @@ Fisika radiasi elektromagnetik dan interaksi dengan permukaan bumi:
 
 - Sinar matahari sebagai sumber radiasi pasif
 
-- Hukum Planck dan radiasi benda hitam: $B_\lambda = \frac{2hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda k_BT}-1} $- Konsep spektrum reflektan:$\rho_\lambda = \frac{L_\lambda}{E_\lambda} $untuk material tanah, air, dan vegetasi
+- Hukum Planck dan radiasi benda hitam: $B_\lambda = \frac{2hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda k_BT}-1} $- Konsep spektrum reflektan: $\rho_\lambda = \frac{L_\lambda}{E_\lambda} $ untuk material tanah, air, dan vegetasi
 
-- Karakteristik spektrum air:$\rho$ rendah di NIR ($\rho_{NIR} < 0.05$)
+- Karakteristik spektrum air: $\rho $ rendah di NIR ($\rho_{NIR} < 0.05 $)
 
 - Karakteristik spektrum vegetasi: red edge di 700nm dan plateu di NIR
 
@@ -68,17 +68,23 @@ Teknik mendapatkan informasi dari citra:
 
 - Indeks Vegetasi Normalized Difference Vegetation Index:
 
-$$NDVI = \frac{NIR - RED}{NIR + RED
+$ $
+
+NDVI = \frac{NIR - RED}{NIR + RED
 }
 
-$$- NDWI (Normalized Difference Water Index) untuk deteksi air:$$
+$$- NDWI (Normalized Difference Water Index) untuk deteksi air:
+
+$ $
 
 NDWI = \frac{GREEN - NIR}{GREEN + NIR
 }
 
-$$- EVI (Enhanced Vegetasi Index) untuk vegetasi padat:$$
+$$- EVI (Enhanced Vegetasi Index) untuk vegetasi padat:
 
-EVI = 2.5 \times \frac{NIR - RED}{NIR + 6 \times RED - 7.5 \times BLUE + 1} $$
+$ $
+
+EVI = 2.5 imes \frac{NIR - RED}{NIR + 6 imes RED - 7.5 imes BLUE + 1}$$
 
 - Pita rasio dan indeks tekstur
 
@@ -93,7 +99,7 @@ Teknik pengelompokan piksel berdasarkan spektrum:
 
 - **Unsupervised**: K-means clustering, ISODATA
 
-- Training samples: homogenitas, representativitas, jumlah minimal ($n \geq 10 \times p $dimensi)
+- Training samples: homogenitas, representativitas, jumlah minimal ($ n \geq 10 imes p $dimensi)
 
 - Deep learning: Convolutional Neural Networks (CNN) untuk klasifikasi citra
 
@@ -104,12 +110,12 @@ Analisis perubahan spasial temporal:
 
 - **Post-classification comparison**: matriks transisi tutupan lahan
 
-- **Image differencing**:$\Delta DN = DN_{t_2} - DN_{t_1} $- **Change Vector Analysis (CVA)**: deteksi perubahan multivariate
+- **Image differencing**: $\Delta DN = DN_{t_2} - DN_{t_1} $- **Change Vector Analysis (CVA)**: deteksi perubahan multivariate
 
 - **LandTrendr**: analisis tren temporal Landsat
 
 - Matriks konfusi dan metrik akurasi:
- - Overall Accuracy:$OA = \frac{\sum_{i=1}^{k}p_{ii}}{n} $- Kappa Coefficient:$\kappa = \frac{p_o - p_e}{1 - p_e} $
+ - Overall Accuracy: $ OA = \frac{\sum_{i=1}^{k}p_{ii}}{n} $- Kappa Coefficient: $\kappa = \frac{p_o - p_e}{1 - p_e} $
  - Producer's Accuracy dan User's Accuracy per kelas
 
 ## Pustaka Utama

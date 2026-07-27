@@ -1,7 +1,7 @@
 # Semester 7 — Geodesi
 
-**Program Studi:** S1 Geodesi 
-**Periode:** Semester 7 (Tahun ke-4) 
+**Program Studi:** S1 Geodesi
+**Periode:** Semester 7 (Tahun ke-4)
 
 ## Ringkasan Semester
 

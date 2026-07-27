@@ -28,12 +28,11 @@ updated: 2026-07-27
 
 ### Density and Pressure Profiles
 
-- **Surface density:** $\rho_0 \approx 1.225 $kg/m³, decreasing roughly exponentially with scale height $H \approx 8.5 $km
-:
+- **Surface density:** $ \rho_0 \approx 1.225$ kg/m³, decreasing roughly exponentially with scale height $H \approx 8.5 $km $$ \rho(z) = \rho_0 \exp(-z/H)
 
-$$\rho(z) = \rho_0 \exp(-z/H)$$
+$$
 
-**Pressure:**$P(z) \approx P_0 \exp(-z/H) $with $P_0 = 101,325 $Pa.
+**Pressure:**$P(z) \approx P_0 \exp(-z/H) $ with $P_0 = 101,325 $Pa.
 
 ### Major Constituents (dry air)
 | Gas | Volume % | Mol. Mass (g/mol) | Role |
@@ -45,7 +44,7 @@ $$\rho(z) = \rho_0 \exp(-z/H)$$
 | Ne, He, CH₄, Kr, H₂O | trace | variable | Various effects |
 
 ### Vertical Motion and Stability
-**Hydrostatic balance:**$\frac{dP}{dz} = -\rho g$**Stability criterion:** Brunt-Väisälä frequency $N^2 = -\frac{g}{\theta}\frac{d\theta}{dz} $-$N > 0$: stable stratification (most of troposphere)
+**Hydrostatic balance:**$ \frac{dP}{dz} = -\rho g$**Stability criterion:** Brunt-Väisälä frequency $N^2 = -\frac{g}{\theta}\frac{d\theta}{dz}$- $N > 0$: stable stratification (most of troposphere)
 
 - $N < 0$: unstable (cumulus convection)
 
@@ -57,21 +56,21 @@ $$\rho(z) = \rho_0 \exp(-z/H)$$
 
 - **Solar constant:** $S_0 \approx 1361 $W/m² at 1 AU
 
-- **Planetary albedo:**$\alpha \approx 0.30$(reflected back to space)
+- **Planetary albedo:**$ \alpha \approx 0.30$ (reflected back to space)
 
-- **Net absorbed:**$S_{\text{abs}} = (1-\alpha) S_0 / 4 = 239 $W/m² (averaged over Earth surface)
+- **Net absorbed:** $S_{\text{abs}} = (1-\alpha) S_0 / 4 = 239 $W/m² (averaged over Earth surface)
 
 ### Greenhouse Effect
 **Idealized energy balance model (zero-dimensional):*
 *
 
-$$\frac{S_0(1-\alpha)}{4} = (1 - \varepsilon_{\text{atm}})\sigma T_s^4 + \varepsilon_{\text{atm}}\sigma T_e^4$$
+$$ \frac{S_0(1-\alpha)}{4} = (1 - \varepsilon_{\text{atm}})\sigma T_s^4 + \varepsilon_{\text{atm}}\sigma T_e^4
 
-where:
--$T_e = \left[\frac{S_0(1-\alpha)}{4\sigma}\right]^{1/4} = 255 $K (equilibrium temperature without greenhouse)
--$\varepsilon_{\text{atm}} $= atmospheric emissivity (total infrared absorptivity)
--$T_s$= surface temperature (≈ 288 K)
--$\sigma$ = Stefan-Boltzmann constant ($5.67 \times 10^{-8} $W/m²·K⁴)
+$$ where:
+- $T_e = \left[\frac{S_0(1-\alpha)}{4\sigma}\right]^{1/4} = 255 $K (equilibrium temperature without greenhouse)
+-$ \varepsilon_{\text{atm}}$= atmospheric emissivity (total infrared absorptivity)
+- $T_s$ = surface temperature (≈ 288 K)
+-$ \sigma$ = Stefan-Boltzmann constant ($5.67 \times 10^{-8}$W/m²·K⁴)
 
 ### Energy Transport Mechanisms
 
@@ -85,7 +84,7 @@ where:
 
 ### Water Vapor Feedback
 
-- Warmer air holds more water vapor:$e_{\text{sat}} \propto \exp(Lv/(RT))$- H₂O is a strong greenhouse gas (its concentration varies regionally and seasonally)
+- Warmer air holds more water vapor: $e_{\text{sat}} \propto \exp(Lv/(RT)) $- H₂O is a strong greenhouse gas (its concentration varies regionally and seasonally)
 
 - **Positive feedback:** warming → more water vapor → stronger greenhouse → more warming
 
@@ -131,31 +130,33 @@ where:
 **Saar and Gordon model (density-dependent refractive index):*
 *
 
-$$n = 1 + \frac{577(n_e - 0.8)}{720 + (0.45 T)^2 - 0.0046 (T - 15)^2 \cdot 10^{-3}} $$
+$n = 1 + \frac{577(n_e - 0.8)}{720 + (0.45 T)^2 - 0.0046 (T - 15)^2 \cdot 10^{-3}} $$$
 
 where:
--$T$= temperature (°C) at height $z$-$n_e$= number of electrons along line of sight (slant total electron content, STEC)
+-$T$ = temperature (°C) at height $z$- $n_e$ = number of electrons along line of sight (slant total electron content, STEC)
 
-- Effect is small:$n \approx 1.0003 $at sea level
+- Effect is small: $n \approx 1.0003 $at sea level
 
 ### Speed of Light in Air (C-weighted
 )
 
-$$c_w = \frac{c_0}{n(T, N)} $$with $n(T, N) = 1 + 776.7 \times 10^{-8} \frac{N}{T + 273.15} $(approx.)
+$c_w = \frac{c_0}{n(T, N)}$ with $n(T, N) = 1 + 776.7 \times 10^{-8} \frac{N}{T + 273.15} $ (approx.)
 
 ### Refractive Angle (Refraction Solutions)
-**Refraction angle $\delta$** in geometrical astronomy:
+**Refraction angle$ \delta$** in geometrical astronomy:
 
-$$\delta = h \cdot \frac{(n-1)\tan h}{1 - (n-1)\sin h}, \quad h = \text{true altitude} $$
+$$ \delta = h \cdot \frac{(n-1)\tan h}{1 - (n-1)\sin h}, \quad h = \text{true altitude} $$ For near-horizontal rays ($h < 10°$):
 
-For near-horizontal rays ($h < 10°$):
-
-$$\delta \approx \frac{(n-1)\sec h}{(1 - (n-1)\sin h)^2
+$$ \delta \approx \frac{(n-1)\sec h}{(1 - (n-1)\sin h)^2
 }
 
-$$**Alternative strong-form approximation:**$$
+**Alternative strong-form approximation:**
 
-\delta = \frac{1}{1.00024} \left( \frac{\tan h}{1 + \frac{h^2}{2} \cdot \frac{d\ln n}{dz}} \right)$$### Refraction for Earth’s Surface
+ \delta = \frac{1}{1.00024} \left( \frac{\tan h}{1 + \frac{h^2}{2} \cdot \frac{d\ln n}{dz}} \right)
+
+$$
+
+### Refraction for Earth’s Surface
 When propagating nadir to a point on Earth from satellite:
 **Geodetic refraction** accounts for slow arrival time and path curvature:
 
@@ -168,9 +169,9 @@ When propagating nadir to a point on Earth from satellite:
 **Mapping function (elevation-dependent):*
 *
 
-$$M(e) = \frac{1}{\cos z} \approx \frac{1}{\sin e} \cdot (1 + \frac{0.0026}{\sin e})$$
+$$ M(e) = \frac{1}{\cos z} \approx \frac{1}{\sin e} \cdot (1 + \frac{0.0026}{\sin e}) $$
 
-for tropospheric total delay:$\Delta T = M(e) \times ZT$
+for tropospheric total delay:$ \Delta T = M(e) \times ZT$
 
 ### Applications in Geodesy
 
@@ -197,11 +198,11 @@ for tropospheric total delay:$\Delta T = M(e) \times ZT$
 
 ### Solar-Tidal (Semidiurnal) and Lunar-Tidal Effects
 
-- **$M_2$ (principal lunar semidiurnal):** dominant in troposphere (~50 hPa)
+- ** $M_2$ (principal lunar semidiurnal):** dominant in troposphere (~50 hPa)
 
-- **$S_2$ (solar semidiurnal):** also significant
+- ** $S_2$ (solar semidiurnal):** also significant
 
-- **$K_1$(diurnal):** important in stratosphere
+- ** $K_1$(diurnal):** important in stratosphere
 
 ### Gravity Wave Spectrum
 
@@ -219,12 +220,12 @@ for tropospheric total delay:$\Delta T = M(e) \times ZT$
 
 | Formula | Name | Use |
 |---------|------|-----|
-| $n = 1 + \frac{577(n_e - 0.8)}{720 + (0.45 T)^2 - 0.0046 ...} $ | Refractive index | Atmosphere EM propagation |
-| $\delta = h \frac{(n-1)\tan h}{1 - (n-1)\sin h} $ | Refraction angle | Astronomical line of sight |
-| $M(e) = \frac{1}{\cos z} (1 + \frac{0.0026}{\sin e})$ | Tropospheric mapping function | GNSS vertical delay |
-| $N^2 = -\frac{g}{\theta}\frac{d\theta}{dz} $ | Brunt-Väisälä frequency | Static stability |
-| $\Gamma_d = -g/c_p \approx -9.8 $K/km | Dry adiabatic lapse rate | Stability |
-| $e_{\text{sat}} \propto \exp(Lv/(RT))$ | Clausius-Clapeyron | Saturation vapor pressure |
+| $n = 1 + \frac{577(n_e - 0.8)}{720 + (0.45 T)^2 - 0.0046 ...}$ | Refractive index | Atmosphere EM propagation |
+| $ \delta = h \frac{(n-1)\tan h}{1 - (n-1)\sin h} $ | Refraction angle | Astronomical line of sight |
+| $M(e) = \frac{1}{\cos z} (1 + \frac{0.0026}{\sin e}) $ | Tropospheric mapping function | GNSS vertical delay |
+| $N^2 = -\frac{g}{\theta}\frac{d\theta}{dz}$ | Brunt-Väisälä frequency | Static stability |
+| $ \Gamma_d = -g/c_p \approx -9.8 $K/km | Dry adiabatic lapse rate | Stability |
+| $e_{\text{sat}} \propto \exp(Lv/(RT)) $ | Clausius-Clapeyron | Saturation vapor pressure |
 
 ---
 

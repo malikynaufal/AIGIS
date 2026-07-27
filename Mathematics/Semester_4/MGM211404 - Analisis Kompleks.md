@@ -36,82 +36,91 @@ created: 2026-07-27
 
 ### 1. Cauchy's Integral Theorem
 
-If $f$ is holomorphic in a simply connected domain $D$ and $\gamma$ is a closed curve in $D$:
+If $f $ is holomorphic in a simply connected domain $ D $ and $\gamma $ is a closed curve in $ D $:
 
-$$\oint_\gamma f(z) \, dz = 0$$
+$ $\oint_\gamma f(z) \, dz = 0
+
+$$
 
 ### 2. Cauchy's Integral Formula
 
-If $f$ is holomorphic inside and on $\gamma$, and $a$ is inside $\gamma$:
+If $ f $ is holomorphic inside and on $\gamma $, and $ a $ is inside $\gamma $:
 
-$$f(a) = \frac{1}{2\pi i} \oint_\gamma \frac{f(z)}{z - a} \, dz$$
+$ $f(a) = \frac{1}{2i i} \oint_\gamma \frac{f(z)}{z - a} \, dz $$**Generalized:**$ f^{(n)}(a) = \frac{n!}{2i i} \oint_\gamma \frac{f(z)}{(z-a)^{n+1}} \, dz $### 3. Residue Theorem
 
-**Generalized:** $f^{(n)}(a) = \frac{n!}{2\pi i} \oint_\gamma \frac{f(z)}{(z-a)^{n+1}} \, dz$
+$ $\oint_\gamma f(z) \, dz = 2i i \sum_{k} ext{Res}(f, z_k)
 
-### 3. Residue Theorem
-
-$$\oint_\gamma f(z) \, dz = 2\pi i \sum_{k} \text{Res}(f, z_k)$$
+$$
 
 ### 4. Maximum Modulus Principle
 
-If $f$ is holomorphic and non-constant on a domain $D$, then $|f|$ has no maximum in the interior of $D$.
+If $ f $ is holomorphic and non-constant on a domain $ D $, then $|f|$ has no maximum in the interior of $ D $.
 
 ## 🔢 Computing Residues
 
-### Simple Pole ($n = 1$)
-$$\text{Res}(f, z_0) = \lim_{z \to z_0} (z - z_0)f(z)$$
+### Simple Pole ($ n = 1 $)
 
-### Pole of Order $m$
-$$\text{Res}(f, z_0) = \frac{1}{(m-1)!} \lim_{z \to z_0} \frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^m f(z)]$$
+$ $ext{Res}(f, z_0) = \lim_{z o z_0} (z - z_0)f(z)
 
-### Removable Singularity
-$\text{Res}(f, z_0) = 0$
+$$### Pole of Order $ m $
+
+$ $ext{Res}(f, z_0) = \frac{1}{(m-1)!} \lim_{z o z_0} \frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^m f(z)]
+
+$$### Removable Singularity $ext{Res}(f, z_0) = 0 $
 
 ### Essential Singularity
-Must compute Laurent series and extract $a_{-1}$ coefficient.
+Must compute Laurent series and extract $ a_{-1} $ coefficient.
 
 ## 💡 Solved Examples
 
 ### Example 1: Simple Pole
 
-**Problem:** Compute $\oint_{|z|=2} \frac{e^z}{z(z-1)} dz$.
+**Problem:** Compute $\oint_{|z|=2} \frac{e^z}{z(z-1)} dz $.
 
-**Solution:** Poles at $z=0$ (simple) and $z=1$ (simple), both inside $|z|=2$.
+**Solution:** Poles at $ z=0 $ (simple) and $ z=1 $ (simple), both inside $|z|=2 $.
 
-$$\text{Res}(f, 0) = \lim_{z \to 0} z \cdot \frac{e^z}{z(z-1)} = \lim_{z \to 0} \frac{e^z}{z-1} = -1$$
+$ $ext{Res}(f, 0) = \lim_{z o 0} z \cdot \frac{e^z}{z(z-1)} = \lim_{z o 0} \frac{e^z}{z-1} = -1
 
-$$\text{Res}(f, 1) = \lim_{z \to 1} (z-1) \cdot \frac{e^z}{z(z-1)} = \lim_{z \to 1} \frac{e^z}{z} = e$$
+$$
 
-$$\oint = 2\pi i(-1 + e) = 2\pi i(e-1)$$
+$ $ext{Res}(f, 1) = \lim_{z o 1} (z-1) \cdot \frac{e^z}{z(z-1)} = \lim_{z o 1} \frac{e^z}{z} = e
+
+$$
+
+$ $\oint = 2i i(-1 + e) = 2i i(e-1)
+
+$$
 
 ### Example 2: Real Integral
 
-**Problem:** Evaluate $\int_0^{\infty} \frac{\cos x}{x^2 + 1} dx$.
+**Problem:** Evaluate $\int_0^{\infty} \frac{\cos x}{x^2 + 1} dx $.
 
-**Solution:** Consider $f(z) = \frac{e^{iz}}{z^2+1}$ over a semicircular contour in the upper half-plane.
+**Solution:** Consider $ f(z) = \frac{e^{iz}}{z^2+1} $ over a semicircular contour in the upper half-plane.
 
-Pole at $z = i$: $\text{Res}(f, i) = \frac{e^{i \cdot i}}{2i} = \frac{e^{-1}}{2i}$
+Pole at $ z = i $: $ext{Res}(f, i) = \frac{e^{i \cdot i}}{2i} = \frac{e^{-1}}{2i} $
 
-$$\int_{-\infty}^{\infty} \frac{e^{ix}}{x^2+1}dx = 2\pi i \cdot \frac{e^{-1}}{2i} = \frac{\pi}{e}$$
+$ $\int_{-\infty}^{\infty} \frac{e^{ix}}{x^2+1}dx = 2i i \cdot \frac{e^{-1}}{2i} = \frac{i}{e}
 
-Taking real part: $\int_0^{\infty} \frac{\cos x}{x^2+1}dx = \frac{\pi}{2e}$
+$$
+
+Taking real part: $\int_0^{\infty} \frac{\cos x}{x^2+1}dx = \frac{i}{2e} $
 
 ## 📐 Applications
 
 | Field | Application |
 |-------|-------------|
-| **Fluid Dynamics** | Potential flow, complex potential $w(z) = \phi + i\psi$ |
+| **Fluid Dynamics** | Potential flow, complex potential $ w(z) = hi + isi $ |
 | **Electromagnetics** | Conformal mapping of electric fields |
 | **Signal Processing** | Z-transform, frequency response |
 | **Control Theory** | Nyquist criterion, root locus |
 
 ## 🎯 Practice Problems
 
-1. Verify Cauchy-Riemann equations for $f(z) = z^3 + 2iz$.
-2. Find all singularities and residues of $\frac{1}{z^2+4}$.
-3. Evaluate $\int_0^{\infty} \frac{x \sin x}{x^2+4} dx$ using residues.
+1. Verify Cauchy-Riemann equations for $ f(z) = z^3 + 2iz $.
+2. Find all singularities and residues of $\frac{1}{z^2+4} $.
+3. Evaluate $\int_0^{\infty} \frac{x \sin x}{x^2+4} dx $ using residues.
 4. Find a conformal map from the unit disk to the upper half-plane.
-5. Use the Argument Principle to count zeros of $z^4 - 2z^2 + 3$ inside $|z| = 2$.
+5. Use the Argument Principle to count zeros of $ z^4 - 2z^2 + 3 $ inside $|z| = 2$.
 
 ## 📖 References
 

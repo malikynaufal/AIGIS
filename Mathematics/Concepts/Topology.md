@@ -14,7 +14,7 @@ updated: 2026-07-27
 
 ## 1. Metric Spaces
 
-A **metric space** $(X, d)$ has a distance function $d: X \times X \to [0, \infty)$ satisfying:
+A **metric space** $(X, d) $has a distance function$ d: X \times X \to [0, \infty) $ satisfying:
 1. $d(x, y) = 0 \iff x = y$
 2. $d(x, y) = d(y, x)$
 3. Triangle inequality: $d(x, z) \leq d(x, y) + d(y, z)$
@@ -22,34 +22,25 @@ A **metric space** $(X, d)$ has a distance function $d: X \times X \to [0, \inft
 ### Open and Closed Sets
 
 - **Open ball:** $B(x, r) = \{y \in X : d(x, y) < r\}$
-- **Open set:** $U \subseteq X$ is open if $\forall x \in U, \exists r > 0: B(x, r) \subseteq U$
+- **Open set:** $U \subseteq X$ is open if $\forall x \in U, \exists r > 0: B(x, r) \subseteq U $
 - **Closed set:** Complement is open, or contains all its limit points
 - **Closure:** $\overline{A} = A \cup A'$ (limit points)
-- **Interior:** $A^\circ = $ largest open set $\subseteq A$
-- **Boundary:** $\partial A = \overline{A} \setminus A^\circ$
+- **Interior:** $ A^\circ =$largest open set $\subseteq A $- **Boundary:**$\partial A = \overline{A} \setminus A^\circ $### Convergence $x_n \to x$ iff $\forall \varepsilon > 0, \exists N: n \geq N \implies d(x_n, x) < \varepsilon $.
 
-### Convergence
-
-$x_n \to x$ iff $\forall \varepsilon > 0, \exists N: n \geq N \implies d(x_n, x) < \varepsilon$.
-
-**Cauchy sequence:** $\forall \varepsilon > 0, \exists N: m, n \geq N \implies d(x_m, x_n) < \varepsilon$.
+**Cauchy sequence:** $\forall \varepsilon > 0, \exists N: m, n \geq N \implies d(x_m, x_n) < \varepsilon $.
 
 A metric space is **complete** if every Cauchy sequence converges.
 
 ## 2. Topological Spaces
 
-A **topology** on $X$ is a collection $\tau \subseteq \mathcal{P}(X)$ such that:
-1. $\emptyset, X \in \tau$
-2. Arbitrary unions of sets in $\tau$ are in $\tau$
-3. Finite intersections of sets in $\tau$ are in $\tau$
-
-A **topological space** is $(X, \tau)$. Elements of $\tau$ are **open sets**.
+A **topology** on $X$ is a collection $\tau \subseteq \mathcal{P}(X) $ such that:
+1. $\emptyset, X \in \tau $2. Arbitrary unions of sets in $\tau $are in $\tau $3. Finite intersections of sets in $\tau $are in $\tau $A **topological space** is $ (X, \tau) $. Elements of $\tau $ are **open sets**.
 
 ### Basis and Subbasis
 
-A **basis** $\mathcal{B}$ generates $\tau$ if every open set is a union of basis elements.
+A **basis** $\mathcal{B} $generates $\tau $ if every open set is a union of basis elements.
 
-Standard basis for $\mathbb{R}^n$: $\{B(x, r) : x \in \mathbb{R}^n, r > 0\}$.
+Standard basis for $\mathbb{R}^n $: $\{B(x, r) : x \in \mathbb{R}^n, r > 0\} $.
 
 ### Continuous Maps
 
@@ -86,15 +77,15 @@ $X$ and $Y$ are **homeomorphic** ($X \cong Y$) — they have identical topologic
 
 $X$ is **connected** if it cannot be written as $U \cup V$ with $U, V$ non-empty, open, disjoint.
 
-$X$ is **path-connected** if $\forall x, y \in X, \exists$ continuous $f: [0,1] \to X$ with $f(0)=x, f(1)=y$.
+$X$ is **path-connected** if $\forall x, y \in X, \exists $continuous$ f: [0,1] \to X $with $ f(0)=x, f(1)=y $.
 
-Path-connected $\implies$ connected (converse false: topologist's sine curve).
+Path-connected $\implies $ connected (converse false: topologist's sine curve).
 
 ## 5. Compactness
 
 $K \subseteq X$ is **compact** if every open cover has a finite subcover.
 
-**Heine-Borel Theorem:** In $\mathbb{R}^n$, compact $\iff$ closed and bounded.
+**Heine-Borel Theorem:** In $\mathbb{R}^n $, compact $\iff $ closed and bounded.
 
 **Key properties:**
 - Continuous image of compact is compact
@@ -105,7 +96,7 @@ $K \subseteq X$ is **compact** if every open cover has a finite subcover.
 
 ### Product Topology
 
-For $\prod X_i$, basic open sets are $\prod U_i$ where $U_i \subseteq X_i$ open and $U_i = X_i$ for all but finitely many $i$.
+For $\prod X_i $, basic open sets are $\prod U_i $where $ U_i \subseteq X_i $open and $ U_i = X_i $for all but finitely many$ i $.
 
 ### Quotient Topology
 
@@ -115,39 +106,39 @@ Given $f: X \to Y$ surjective, $U \subseteq Y$ is open iff $f^{-1}(U)$ is open i
 
 ## 7. Fundamental Group
 
-The **fundamental group** $\pi_1(X, x_0)$ is the set of homotopy classes of loops based at $x_0$, with concatenation as operation.
+The **fundamental group** $\pi_1(X, x_0) $is the set of homotopy classes of loops based at$ x_0 $, with concatenation as operation.
 
-| Space | $\pi_1$ |
+| Space | $\pi_1 $ |
 |-------|----------|
-| $\mathbb{R}^n$, ball | Trivial (simply connected) |
-| $S^1$ (circle) | $\mathbb{Z}$ |
-| Torus $T^2$ | $\mathbb{Z} \times \mathbb{Z}$ |
+| $\mathbb{R}^n $, ball | Trivial (simply connected) |
+| $S^1$ (circle) | $\mathbb{Z} $ |
+| Torus $T^2$ | $\mathbb{Z} \times \mathbb{Z} $ |
 | Figure-eight | Free group $F_2$ |
 
 ```mermaid
 graph TD
-    Base[Topological Space X] --> CG[Connected?]
-    CG -->|Yes| PG[π₁(X) = ?]
-    CG -->|No| Components[Components]
-    PG --> Simply[Simply connected if trivial]
-    PG --> Z[ℤ for S¹]
-    PG --> ZxZ[ℤ×ℤ for T²]
-    PG --> Fn[Free group Fₙ]
+ Base[Topological Space X] --> CG[Connected?]
+ CG -->|Yes| PG[π₁(X) = ?]
+ CG -->|No| Components[Components]
+ PG --> Simply[Simply connected if trivial]
+ PG --> Z[ℤ for S¹]
+ PG --> ZxZ[ℤ×ℤ for T²]
+ PG --> Fn[Free group Fₙ]
 ```
 
 ## 8. Applications to Data Analysis (TDA)
 
 **Topological Data Analysis** uses persistent homology to study shape of data.
 
-- **Vietoris-Rips complex:** Build simplicial complexes at scale $\epsilon$
+- **Vietoris-Rips complex:** Build simplicial complexes at scale $\epsilon $
 - **Persistence diagram:** Track birth/death of topological features
-- **Betti numbers:** $\beta_0$ (components), $\beta_1$ (loops), $\beta_2$ (voids)
+- **Betti numbers:** $\beta_0 $ (components),$\beta_1 $ (loops),$\beta_2 $ (voids)
 
 ## Practice Problems
 
 1. Prove that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
-2. Show that $\mathbb{R}$ and $(0,1)$ are homeomorphic.
-3. Prove that $[0,1]$ is compact but $(0,1)$ is not.
+2. Show that $\mathbb{R} $and $ (0,1) $ are homeomorphic.
+3. Prove that $[0,1]$ is compact but $ (0,1)$ is not.
 4. Compute the fundamental group of the figure-eight space.
 
 ## References

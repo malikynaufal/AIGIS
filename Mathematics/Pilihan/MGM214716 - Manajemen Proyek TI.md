@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## IT Project Management
 
-**Course Code:** MGM214716 
-**SKS:** 3 (3-0) 
-**Semester:** 6 
-**Prerequisites:** Pemrograman Dasar, Dasar-Dasar Manajemen 
+**Course Code:** MGM214716
+**SKS:** 3 (3-0)
+**Semester:** 6
+**Prerequisites:** Pemrograman Dasar, Dasar-Dasar Manajemen
 
 ---
 

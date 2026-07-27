@@ -1,54 +1,74 @@
-# 📚 Pilihan: Penginderaan Jauh Sensor Aktif
+---
+tags: [aigis, geodesy, pilihan, remote-sensing, sar, active-sensor, radar]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD213613
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Penginderaan Jauh Sensor Aktif (Active Remote Sensing — SAR)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD213613 | **SKS:** 3 (2-1) | **Semester:** 5–6
 
-Penginderaan Jauh Sensor Aktif adalah mata kuliah pilihan yang mempelajari prinsip dan aplikasi sensor aktif dalam penginderaan jauh, khususnya radar (SAR) dan sistem sonar. Berbeda dengan sensor pasif yang mendeteksi energi alami, sensor aktif memancarkan energi dan mendeteksi pantulannya. Sensor aktif ini dapat beroperasi pada kondisi cuaca buruk dan berbeda-beda dengan waktu, sehingga sangat berguna untuk pemantauan lanjutan.
+## Course Overview
 
-Dalam konteks geodesi dan geospasial, sensor aktif seperti SAR (Synthetic Aperture Radar) digunakan untuk pemetaan deformasi tanah (InSAR), pemantauan perubahan lahan, deteksi perubahan struktur bangunan, dan survei bawah air. Sonar digunakan untuk survei hidrografi dan pemetaan dasar laut. Mahasiswa akan mempelajari prinsip operasi, karakteristik sinyal, dan interpretasi data sensor aktif.
+Active Remote Sensing focuses on Synthetic Aperture Radar (SAR) and LiDAR systems. Covers SAR principles, polarimetry, InSAR (Interferometric SAR) for deformation mapping, and LiDAR for terrain and vegetation modeling.
 
-Pembelajaran mencakup teori dasar sensor aktif, pemrosesan sinyal, kalibrasi, dan interpretasi data. Mahasiswa juga akan mempraktikkan penggunaan perangkat lunak pemrosesan SAR (seperti SNAP, ROI_PAC, atau GAMMA) untuk studi kasus nyata seperti pemantauan deformasi gunung berapi atau perubahan penggunaan lahan.
+## Key Topics
 
-## Topik Utama
+### 1. SAR Principles
 
-### 1. Prinsip Sensor Aktif
+$$
+\text{Range resolution: } \Delta r = \frac{c}{2B}, \quad \text{Azimuth resolution: } \Delta a = \frac{\lambda R}{2L_{SAR}}
+$$
 
-- Radar dan prinsip SAR
+- **Backscatter:** $\sigma^0 = \frac{P_r (4\pi)^3 R^4}{P_t G^2 \lambda^2 A}$
+- **Penetration by band:** X (< 2 cm), C (< 5 cm), L (< 25 cm), P (< 70 cm)
 
-- Sonar dan sistem akustik
+### 2. SAR Interferometry (InSAR)
 
-- Karakteristik sinyal dan frekuensi
+**Phase difference:**
+$$
+\Delta\phi = \frac{4\pi}{\lambda} \Delta r + \phi_{atm} + \phi_{noise}
+$$
 
-### 2. Pemrosesan Data
+**DEM generation:** $z = h - \frac{\lambda R \sin\theta}{4\pi B_\perp} \Delta\phi$
 
-- Interferometri SAR (InSAR)
+**Deformation mapping:**
+$$
+d = \frac{\lambda}{4\pi} \cdot \Delta\phi_{def}
+$$
 
-- Pemrosesan sonar
+| Technique | Accuracy | Application |
+|-----------|----------|-------------|
+| D-InSAR | 5–10 mm | Coseismic deformation |
+| PS-InSAR | 1–3 mm | Subsidence monitoring |
+| SBAS | 2–5 mm | Time series deformation |
+| PolInSAR | 2–5 mm | Forest height estimation |
 
-- Kalibrasi dan koreksi
+### 3. LiDAR Principles
 
-### 3. Aplikasi
+$$
+\text{Range: } R = \frac{c \Delta t}{2}
+$$
 
-- Pemantauan deformasi tanah (InSAR)
+| LiDAR Type | Penetration | Application |
+|------------|-------------|-------------|
+| Discrete return | 1–5 returns | DTM, buildings |
+| Full-waveform | Continuous | Forest structure |
+| Bathymetric | Up to 50 m water | Seafloor mapping |
 
-- Survei hidrografi dan pemetaan dasar
+## Practical Work
+- SAR image processing using SNAP (ESA)
+- InSAR interferogram generation
+- LiDAR point cloud classification
 
-- Deteksi perubahan struktur dan lahan
+## Related Concepts
 
-## Tujuan Pembelajaran
+- [[Remote Sensing]] — Passive remote sensing
+- [[Penginderaan Jauh Terapan]] — Applied remote sensing
+- [[Crustal Deformation]] — InSAR monitoring
+- [[Deformation Monitoring]] — Structural monitoring
+- [[Survei Deformasi]] — Deformation surveys
 
-1. Memahami prinsip kerja sensor aktif (radar, sonar)
-2. Menguasai teknik pemrosesan data sensor aktif
-3. Menerapkan InSAR untuk pemantauan deformasi
-4. Menginterpretasi data sensor aktif untuk aplikasi geodesi
+---
 
-## Referensi
-
-- Richards, P.G. (2009). *Fundamentals of Radar Signal Processing*. SciTech.
-
-- Zebker, H.A., & Goldstein, R.M. (1986). "Topographic Mapping from Space by Interferometric Use of SAR." *IEEE Transactions on Geoscience and Remote Sensing*.
-
-- Lyzenga, B.J. (1985). "Synthetic Aperture Radar: Principles and Applications.” Wiley.
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

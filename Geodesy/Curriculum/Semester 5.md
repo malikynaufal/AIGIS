@@ -32,14 +32,16 @@ Semester 5 is the most technically demanding semester, covering physical geodesy
 - Potential theory fundamentals
 - Gravity field: Poisson's equation
 
-$$\nabla^2 W = -4\pi G\rho$$
+$$\nabla^2 W = -4\pi G\rho
+
+$$
 
 - Normal gravity ([[GRS80]] Somigliana formula)
 - [[Geoid]] determination methods:
-  - Stokes' integral: $N = \frac{R}{4\pi\gamma}\int\Delta g \cdot S(\psi)\,d\sigma$
-  - Remove-Compute-Restore
-  - Molodensky's method
-  - OSGEM (Orthometric Surface Geoid Estimation from Gravimetry)
+ - Stokes' integral: $ N = \frac{R}{4\pi\gamma}\int\Delta g \cdot S(\psi)\,d\sigma$
+ - Remove-Compute-Restore
+ - Molodensky's method
+ - OSGEM (Orthometric Surface Geoid Estimation from Gravimetry)
 - See [[Physical Geodesy]] for full derivation
 
 ### TKD213505 — Survei GNSS (GNSS Surveying)

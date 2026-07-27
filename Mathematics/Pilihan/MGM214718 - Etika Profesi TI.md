@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Professional Ethics in IT
 
-**Course Code:** MGM214718 
-**SKS:** 3 (3-0) 
-**Semester:** 6 
-**Prerequisites:** — 
+**Course Code:** MGM214718
+**SKS:** 3 (3-0)
+**Semester:** 6
+**Prerequisites:** —
 
 ---
 

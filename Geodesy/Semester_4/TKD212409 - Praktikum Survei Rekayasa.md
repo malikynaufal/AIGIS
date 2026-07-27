@@ -1,8 +1,8 @@
 # Praktikum Survei Rekayasa
 
-**Kode:** TKD212409 
-**Sifat:** Wajib 
-**SKS:** 1 
+**Kode:** TKD212409
+**Sifat:** Wajib
+**SKS:** 1
 
 ## Deskripsi
 
@@ -17,21 +17,31 @@ Total station menggabungkan theodolite digital dan EDM (Electronic Distance Meas
 
 **Akurasi Pengukuran:**
 
-$$\text{Error Horizontal} = \sqrt{(1")^2 + (1 \text{ ppm})^2 \times D}\text{Error Vertical} = \sqrt{(1")^2 + (1 \text{ ppm})^2 \times D} $$Dimana:
--$1"$= akurasi sudut
--$1 $ppm = akurasi jarak
--$D$= jarak pengukuran (meter)
+$$ ext{Error Horizontal} = \sqrt{(1")^2 + (1 ext{ ppm})^2 imes D}ext{Error Vertical} = \sqrt{(1")^2 + (1 ext{ ppm})^2 imes D} $ $
+
+Dimana:
+-$ 1"$= akurasi sudut
+-$ 1 $ppm = akurasi jarak
+-$ D $= jarak pengukuran (meter)
 
 #### 2. Digital Level
 **Akurasi Perhitungan:*
 *
 
-$$\text{Precision} = \sqrt{\sum_{i=1}^{n} \frac{(h_i - \bar{h})^2}{2n(n-1)}} $$
+$ $ext{Precision} = \sqrt{\sum_{i=1}^{n} \frac{(h_i - \bar{h})^2}{2n(n-1)}}
 
-#### 3. GPS/GNSS RTK
+$$3. GPS/GNSS RTK
+**Akurasi RTK:**$ $
+
+# 3. GPS/GNSS RTK
 **Akurasi RTK:**
 
-$$\text{Horizontal Error} = \sqrt{(10 \text{ mm} + 1 \text{ ppm} \times D)^2}\text{Vertical Error} = \sqrt{(15 \text{ mm} + 1.5 \text{ ppm} \times D)^2} $$### Metode Setting Out
+### # 3. GPS/GNSS RTK
+**Akurasi RTK:**ext{Horizontal Error} = \sqrt{(10 ext{ mm} + 1 ext{ ppm} imes D)^2}ext{Vertical Error} = \sqrt{(15 ext{ mm} + 1.5 ext{ ppm} imes D)^2}
+
+$$
+
+Metode Setting Out
 
 #### Setting Out Bangunan
 1. **Persiapan**: Studi gambar rencana, penentuan titik control
@@ -39,10 +49,33 @@ $$\text{Horizontal Error} = \sqrt{(10 \text{ mm} + 1 \text{ ppm} \times D)^2}\te
 3. **Transfer Koordinat**: Hitung jarak dan sudut dari control station
 4. **Marking**: Tandai titik dengan patok/beton
 
-#### Formula Setting Out:$$\begin{aligned}
-\text{Distance} &= \sqrt{(N_P - N_A)^2 + (E_P - E_A)^2} \\
-\text{Azimuth} &= \arctan\left(\frac{E_P - E_A}{N_P - N_A}\right) + \text{correction}
-\end{aligned} $$### Precision Levelling
+### # Formula Setting Out:
+
+$ $## Metode Setting Out
+
+#### Setting Out Bangunan
+1. **Persiapan**: Studi gambar rencana, penentuan titik control
+2. **Pencarian Titik**: Tentukan posisi titik pada site plan
+3. **Transfer Koordinat**: Hitung jarak dan sudut dari control station
+4. **Marking**: Tandai titik dengan patok/beton
+
+### # Formula Setting Out:\begin{aligned}
+ext{Distance} &= \sqrt{(N_P - N_A)^2 + (E_P - E_A)^2} \\
+ext{Azimuth} &= \arctan\left(\frac{E_P - E_A}{N_P - N_A}\right) + ext{correction}
+\end{aligned}$$
+
+# ## Metode Setting Out
+
+#### Setting Out Bangunan
+1. **Persiapan**: Studi gambar rencana, penentuan titik control
+2. **Pencarian Titik**: Tentukan posisi titik pada site plan
+3. **Transfer Koordinat**: Hitung jarak dan sudut dari control station
+4. **Marking**: Tandai titik dengan patok/beton
+
+### # Formula Setting Out:\begin{aligned}
+ext{Distance} &= \sqrt{(N_P - N_A)^2 + (E_P - E_A)^2} \\
+ext{Azimuth} &= \arctan\left(\frac{E_P - E_A}{N_P - N_A}\right) + ext{correction}
+\end{aligned}Precision Levelling
 **Prosedur:**
 1. Setup level pada posisi tengah
 2. Backsight ke benchmark
@@ -53,10 +86,30 @@ $$\text{Horizontal Error} = \sqrt{(10 \text{ mm} + 1 \text{ ppm} \times D)^2}\te
 **Persyaratan Akurasi:*
 *
 
-$$\text{Max Misclosure} = \pm 3\sqrt{K} \text{ mm} $$
+$ $## Precision Levelling
+**Prosedur:**
+1. Setup level pada posisi tengah
+2. Backsight ke benchmark
+3. Foresight ke titik pengukuran
+4. Hitung elevation difference
+5. Loop closure check
+
+**Persyaratan Akurasi:*
+*ext{Max Misclosure} = m 3\sqrt{K} ext{ mm}$$
+
+# ## Precision Levelling
+**Prosedur:**
+1. Setup level pada posisi tengah
+2. Backsight ke benchmark
+3. Foresight ke titik pengukuran
+4. Hitung elevation difference
+5. Loop closure check
+
+**Persyaratan Akurasi:*
+*ext{Max Misclosure} = m 3\sqrt{K} ext{ mm}
 
 Dimana:
--$K$ = jarak total levelling (kilometer)
+-$ K$ = jarak total levelling (kilometer)
 
 ### Deformasi Monitoring
 **Monitoring周期 (Period):**

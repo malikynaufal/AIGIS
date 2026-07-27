@@ -1,54 +1,57 @@
-# 📚 Pilihan: Dasar Geosensor
+---
+tags: [aigis, geodesy, pilihan, geosensor, sensors, electronics]
+aliases: [Dasar Geosensor, Geo-sensor Fundamentals]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD214704
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Dasar Geosensor (Geo-sensor Fundamentals)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD214704 | **SKS:** 3 (2-1) | **Semester:** 6–8
 
-Dasar Geosensor adalah mata kuliah pilihan yang mempelajari prinsip dasar sensor-sensor geosensor untuk mengukur fenomena geospasial dan lingkungan. Mata kuliah ini mencakup sensor gravitasi, sensor gempa (seismometer), sensor deformasi, sensor tekanan bawah air, dan sensor lingkungan lainnya yang digunakan dalam geodesi dan geofisika. Pemahaman tentang cara kerja, kalibrasi, dan aplikasi sensor ini sangat penting dalam survei geoteknik dan monitoring geodinamika.
+## Course Overview
 
-Geosensor modern mencakup sensor yang sangat sensitif seperti gravimeter super konduktor (superconducting gravimeter), seismometer broadband, dan accelerometer berpresisi tinggi. Mahasiswa akan mempelajari prinsip fisika di balik sensor-sensor ini, arsitektur sistem sensor, dan cara mengintegrasikan data sensor ke dalam alur kerja geodesi dan geospasial. Topik juga mencakup jaringan sensor (sensor network) dan IoT (Internet of Things) untuk pemantauan geofisika berbasis web.
+Fundamentals of geo-sensors used in geodetic instruments — electronic theodolites, total stations, GNSS receivers, inertial sensors, and environmental sensors. Focus on signal processing, calibration, and error analysis.
 
-Mahasiswa akan melakukan praktikum sederhana dengan sensor yang tersedia di lab, termasuk kalibrasi sensor, pengumpulan data, dan analisis sinyal. Studi kasus mencakup pemasangan jaringan geosensor untuk monitoring gunung berapi dan pemantauan bendungan.
+## Key Topics
 
-## Topik Utama
+### 1. Types of Geo-sensors
 
-### 1. Prinsip Sensor Geofisika
+| Sensor | Measurand | Application |
+|--------|-----------|-------------|
+| CCD/CMOS | Light intensity | [[Photogrammetry]] cameras |
+| Accelerometer | Acceleration | IMU, INS |
+| Gyroscope | Angular rate | IMU, INS |
+| Magnetometer | Magnetic field | Compass, orientation |
+| Photodiode | Optical signal | EDM |
+| Barometer | Pressure | Height measurement |
 
-- Gravimeter (absolute dan relative)
+### 2. Sensor Error Models
 
-- Seismometer dan accelerometer
+**Linear sensor model:**
+$$
+y = a + b \cdot x + \epsilon
+$$ where $a$ = bias, $b$ = scale factor, $\epsilon$ = noise.
 
-- Sensor deformasi dan strain gauge
+**Allan variance for noise characterization:**
+$$
+\sigma^2(\tau) = \frac{1}{2(N-1)} \sum_{i=1}^{N-1} (y_{i+1}(\tau) - y_i(\tau))^2
+$$
 
-### 2. Arsitektur Sensor
+### 3. IMU / INS Principles
 
-- Sensor network design
+**Strapdown INS mechanization:**
+$$
+\begin{pmatrix}
+\dot{\phi} \\ \dot{\lambda} \\ \dot{h}
+\end{pmatrix} = f(\mathbf{f}^n, \boldsymbol{\omega}^n, \mathbf{R}_b^n)
+$$
 
-- IoT dan monitoring berbasis web
+### 4. Calibration
 
-- Kalibrasi dan pemeliharaan sensor
+- Scale factor and bias estimation for GNSS receivers
+- EDM offset/scale calibration
+- Camera calibration (intrinsic parameters)
 
-### 3. Integrasi Data Sensor
-
-- Fusi data multi-sensor
-
-- Kalibrasi temporal dan spasial
-
-- Visualisasi data geosensor
-
-## Tujuan Pembelajaran
-
-1. Memahami prinsip kerja geosensor utama
-2. Merancang jaringan sensor untuk monitoring geofisika
-3. Mengkalibrasi dan mengintegrasikan data sensor
-4. Menerapkan geosensor dalam proyek geodesi
-
-## Referensi
-
-- Torge, W. (2012). *Geodesy* (4th ed.). De Gruyter.
-
-- Bekins, B.P., et al. (1999). *Seismological Methods in Groundwater Research*. American Geophysical Union.
-
-- Jovanovic, O.B., & Rizos, C. (1997). "Geotechnical Deformation Monitoring Using GPS." *Engineering Geology*.
+---
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

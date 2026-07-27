@@ -7,8 +7,8 @@ tags: [mathematics, operations-research, semester-6, aigis, geodesy-applied]
 
 # Semester 6 — Riset Operasi (Expanded)
 
-**Course**: MGM211601 — Riset Operasi 
-**Credits**: 3 SKS 
+**Course**: MGM211601 — Riset Operasi
+**Credits**: 3 SKS
 **Prerequisites**: [[Optimisasi Expanded]], [[Aljabar Linear Lanjut Expanded]]
 
 ---

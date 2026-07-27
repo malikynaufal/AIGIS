@@ -1,8 +1,8 @@
 # Kemah Kerja
 
-**Kode:** TKD213511 
-**Sifat:** Wajib 
-**SKS:** 
+**Kode:** TKD213511
+**Sifat:** Wajib
+**SKS:**
 
 ## Deskripsi
 

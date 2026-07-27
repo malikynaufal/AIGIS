@@ -17,32 +17,32 @@ updated: 2026-07-27
 
 ```mermaid
 journey
-    title Physics Learning Journey
-    section Semester 1
-        Foundations: 1
-        Mechanics: 1
-        Waves: 1
-    section Semester 2
-        Thermodynamics: 1
-        Optics: 1
-    section Semester 3
-        Electromagnetism: 1
-        Modern Physics: 1
-    section Semester 4
-        Atmospheric Physics: 1
-        Quantum: 1
-    section Semester 5
-        Physical Geodesy: 1
-        Potential Theory: 1
-    section Semester 6
-        Remote Sensing: 1
-        Gravimetry: 1
-    section Semester 7
-        Specialization: 1
-        Research: 1
-    section Semester 8
-        Capstone: 1
-        Thesis: 1
+ title Physics Learning Journey
+ section Semester 1
+ Foundations: 1
+ Mechanics: 1
+ Waves: 1
+ section Semester 2
+ Thermodynamics: 1
+ Optics: 1
+ section Semester 3
+ Electromagnetism: 1
+ Modern Physics: 1
+ section Semester 4
+ Atmospheric Physics: 1
+ Quantum: 1
+ section Semester 5
+ Physical Geodesy: 1
+ Potential Theory: 1
+ section Semester 6
+ Remote Sensing: 1
+ Gravimetry: 1
+ section Semester 7
+ Specialization: 1
+ Research: 1
+ section Semester 8
+ Capstone: 1
+ Thesis: 1
 ```
 
 ---
@@ -433,12 +433,12 @@ Keep this visible while studying:
 | $f$ | 1/298.257223563 | — | Earth's flattening |
 | $ω$ | 7.292115×10⁻⁵ | rad/s | Earth's rotation rate |
 | $GM$ | 3.986004418×10¹⁴ | m³/s² | Geocentric gravitational constant |
-| $\mu s/day$ | 38 | μs/day | Relativistic clock offset (GPS) |
+| $ \mu s/day$ | 38 | μs/day | Relativistic clock offset (GPS) |
 | $k_B$ | 1.380649×10⁻²³ | J/K | Boltzmann constant |
 | $h$ | 6.62607015×10⁻³⁴ | J·s | Planck constant |
 | $e$ | 1.602176634×10⁻¹⁹ | C | Elementary charge |
-| $\varepsilon_0$ | 8.8541878128×10⁻¹² | F/m | Vacuum permittivity |
-| $\mu_0$ | 4π×10⁻⁷ | H/m | Vacuum permeability |
+| $ \varepsilon_0$ | 8.8541878128×10⁻¹² | F/m | Vacuum permittivity |
+| $ \mu_0$ | 4π×10⁻⁷ | H/m | Vacuum permeability |
 
 ---
 

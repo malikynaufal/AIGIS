@@ -1,54 +1,33 @@
-# 📚 Pilihan: Industri Geospasial
+---
+tags: [aigis, geodesy, pilihan, geospatial-industry, business, startup]
+aliases: [Industri Geospasial, Geospatial Industry]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD214783
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Industri Geospasial (Geospatial Industry)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD214783 | **SKS:** 3 (3-0) | **Semester:** 7–8
 
-Industri Geospasial adalah mata kuliah pilihan yang mempelajari gambaran umum dan dinamika industri geospasial global dan nasional. Mata kuliah ini mencakup aspek bisnis, kewirausahaan, manajemen proyek, etika profesi, dan standar industri di bidang geospasial. Mahasiswa akan diperkenalkan dengan berbagai jenis perusahaan dan organisasi yang bergerak di bidang survei, pemetaan, GIS, remote sensing, dan GNSS.
+## Course Overview
 
-Industri geospasial di Indonesia sedang berkembang pesat dengan masuknya teknologi drone, mobile mapping, dan GIS cloud. Peluang bisnis baru bermunculan dalam bidang smart city, precision agriculture, asuransi properti, dan manajemen bencana. Mahasiswa akan menganalisis pasar geospasial, mempelajari studi kelayakan bisnis, dan menyusun rencana bisnis untuk startup geospasial.
+Understanding the geospatial industry ecosystem — market segments (surveying, GIS, remote sensing, mapping), business models, startups, and career pathways. Industry case studies from Indonesia and globally.
 
-Mata kuliah ini melibatkan studi kasus bisnis geospasial sukses di Indonesia dan luar negeri, kunjungan industri, dan presentasi rencana bisnis. Mahasiswa juga mempelajari aspek hukum profesi surveyor, kode etik profesi, dan standar kualitas layanan survei. Tujuan utama adalah mempersiapkan mahasiswa untuk menjadi profesional yang kompeten dan entrepreneur yang inovatif di bidang geospasial.
+## Key Topics
 
-## Topik Utama
+### 1. Market Sectors
 
-### 1. Pasar dan Bisnis Geospasial
+| Sector | Market Size (2024) | Growth | Key Players |
+|--------|------------------|--------|-------------|
+| Surveying | $X B | ~8% | Topcon, Trimble, Leica |
+| GIS | $X B | ~10% | Esri, QGIS, Google |
+| Remote Sensing | $X B | ~12% | Planet, Maxar, Airbus |
+| GNSS | $X B | ~7% | Trimble, u-blox, Septentrio |
 
-- Profil industri geospasial global
+### 2. Indonesian Geospatial Industry
+- BIG, BPN, KLHK as main employers
+- Government regulation-driven demand
+- Startups: BukaLapak, PetaJakarta, Gojek (spatial logistics)
 
-- Pasar geospasial di Indonesia
-
-- Peluang bisnis dan startup
-
-### 2. Manajemen Proyek Geospasial
-
-- Perencanaan dan penganggaran proyek
-
-- Manajemen risiko dan kualitas
-
-- Kontrak dan hubungan klien
-
-### 3. Profesionalisme dan Etika
-
-- Kode etik profesi surveyor
-
-- Standar kualitas layanan
-
-- Regulasi dan perizinan
-
-## Tujuan Pembelajaran
-
-1. Memahami gambaran industri geospasial dan peluang karirnya
-2. Merencanakan bisnis atau proyek di bidang geospasial
-3. Mengelola proyek geospasial secara profesional
-4. Menerapkan etika profesi dan standar layanan
-
-## Referensi
-
-- ESRIN. (2019). *The Earth Observation Market*. European Space Agency.
-
-- Geospatial World. (2021). *Geospatial Industry Outlook and Trends*.
-
-- Purnomo, A. (2020). *Manajemen Proyek dan Bisnis Geospasial*. Gadjah Mada University Press.
+---
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

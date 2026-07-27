@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Distributed Databases
 
-**Course Code:** MGM214707 
-**SKS:** 3 (2-1) 
-**Semester:** 5 
-**Prerequisites:** Basis Data Dasar, Sistem Operasi, Jaringan Komputer 
+**Course Code:** MGM214707
+**SKS:** 3 (2-1)
+**Semester:** 5
+**Prerequisites:** Basis Data Dasar, Sistem Operasi, Jaringan Komputer
 
 ---
 
@@ -73,7 +73,7 @@ Membagi tabel berdasarkan kunci (sharding key).
 
 - **Multi-Master:** Semua node bisa menerima write. Risiko konflik.
 
-- **Quorum-based (Dynamo):** Membutuhkan $R + W > N$ untuk konsistensi ($N$ = jumlah replika).
+- **Quorum-based (Dynamo):** Membutuhkan $R + W > N $ untuk konsistensi ($ N$ = jumlah replika).
 
 ---
 

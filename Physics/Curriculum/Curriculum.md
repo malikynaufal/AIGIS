@@ -15,51 +15,51 @@ created: 2026-07-27
 
 ```mermaid
 graph TD
-    A[Semester 1: Foundations] --> B[Semester 2: Thermodynamics & Waves]
-    B --> C[Semester 3: Electromagnetism & Modern Physics]
-    C --> D[Semester 4: Advanced Applications]
-    D --> E[Semester 5: Physical Geodesy]
-    E --> F[Semester 6: Remote Sensing]
-    F --> G[Semester 7: Specialization]
-    G --> H[Semester 8: Skripsi]
-    
-    A --> A1[Newtonian Mechanics]
-    A --> A2[Work Energy Power]
-    A --> A3[Fluid Statics]
-    A --> A4[Waves]
-    
-    B --> B1[Thermodynamics]
-    B --> B2[Statistical Mechanics]
-    B --> B3[Optics]
-    
-    C --> C1[Electrostatics]
-    C --> C2[Magnetostatics]
-    C --> C3[Special Relativity]
-    C --> C4[Quantum Foundations]
-    
-    D --> D1[Atmospheric Physics]
-    D --> D2[Laser Physics]
-    D --> D3[Quantum Applications]
-    
-    E --> E1[Gravitational Potential Theory]
-    E --> E2[Spherical Harmonics]
-    E --> E3[Orbital Mechanics]
-    
-    F --> F1[EM Wave Propagation]
-    F --> F2[Gravity Gradiometry]
-    
-    G --> G1[Research Methods]
-    G --> G2[Nuclear Physics]
-    
-    H --> H1[Capstone Integration]
-    
-    A1 --> A1a[[Geodesy: Coordinate Systems]]
-    A2 --> A2a[[Geodesy: Energy Methods]]
-    A4 --> A4a[[Geodesy: GNSS Signals]]
-    C3 --> C3a[[Geodesy: Relativistic Corrections]]
-    E1 --> E1a[[Geodesy: Geoid Modeling]]
-    E3 --> E3a[[Geodesy: Satellite Orbits]]
-    F1 --> F1a[[Geodesy: Signal Delay]]
+ A[Semester 1: Foundations] --> B[Semester 2: Thermodynamics & Waves]
+ B --> C[Semester 3: Electromagnetism & Modern Physics]
+ C --> D[Semester 4: Advanced Applications]
+ D --> E[Semester 5: Physical Geodesy]
+ E --> F[Semester 6: Remote Sensing]
+ F --> G[Semester 7: Specialization]
+ G --> H[Semester 8: Skripsi]
+
+ A --> A1[Newtonian Mechanics]
+ A --> A2[Work Energy Power]
+ A --> A3[Fluid Statics]
+ A --> A4[Waves]
+
+ B --> B1[Thermodynamics]
+ B --> B2[Statistical Mechanics]
+ B --> B3[Optics]
+
+ C --> C1[Electrostatics]
+ C --> C2[Magnetostatics]
+ C --> C3[Special Relativity]
+ C --> C4[Quantum Foundations]
+
+ D --> D1[Atmospheric Physics]
+ D --> D2[Laser Physics]
+ D --> D3[Quantum Applications]
+
+ E --> E1[Gravitational Potential Theory]
+ E --> E2[Spherical Harmonics]
+ E --> E3[Orbital Mechanics]
+
+ F --> F1[EM Wave Propagation]
+ F --> F2[Gravity Gradiometry]
+
+ G --> G1[Research Methods]
+ G --> G2[Nuclear Physics]
+
+ H --> H1[Capstone Integration]
+
+ A1 --> A1a[[Geodesy: Coordinate Systems]]
+ A2 --> A2a[[Geodesy: Energy Methods]]
+ A4 --> A4a[[Geodesy: GNSS Signals]]
+ C3 --> C3a[[Geodesy: Relativistic Corrections]]
+ E1 --> E1a[[Geodesy: Geoid Modeling]]
+ E3 --> E3a[[Geodesy: Satellite Orbits]]
+ F1 --> F1a[[Geodesy: Signal Delay]]
 ```
 
 ---
@@ -193,37 +193,37 @@ graph TD
 ### Pathway 1: Classical Mechanics → Geodesy
 ```mermaid
 graph LR
-    A[Newtonian Mechanics] --> B[Central Force Motion]
-    B --> C[Orbital Mechanics]
-    C --> D[Satellite Orbits]
-    D --> E[GNSS Positioning]
+ A[Newtonian Mechanics] --> B[Central Force Motion]
+ B --> C[Orbital Mechanics]
+ C --> D[Satellite Orbits]
+ D --> E[GNSS Positioning]
 ```
 
 ### Pathway 2: Electromagnetism → GNSS Physics
 ```mermaid
 graph LR
-    A[Electrostatics] --> B[Electrodynamics]
-    B --> C[EM Wave Propagation]
-    C --> D[Atmospheric Physics]
-    D --> E[Signal Delay Correction]
+ A[Electrostatics] --> B[Electrodynamics]
+ B --> C[EM Wave Propagation]
+ C --> D[Atmospheric Physics]
+ D --> E[Signal Delay Correction]
 ```
 
 ### Pathway 3: Relativity → Precision Positioning
 ```mermaid
 graph LR
-    A[Special Relativity] --> B[General Relativity]
-    B --> C[Relativistic Applications]
-    C --> D[GNSS Clock Corrections]
-    D --> E[mm-level Accuracy]
+ A[Special Relativity] --> B[General Relativity]
+ B --> C[Relativistic Applications]
+ C --> D[GNSS Clock Corrections]
+ D --> E[mm-level Accuracy]
 ```
 
 ### Pathway 4: Potential Theory → Geoid Modeling
 ```mermaid
 graph LR
-    A[Newtonian Mechanics] --> B[Gravitational Potential Theory]
-    B --> C[Spherical Harmonics]
-    C --> D[Geoid Determination]
-    D --> E[Vertical Datum]
+ A[Newtonian Mechanics] --> B[Gravitational Potential Theory]
+ B --> C[Spherical Harmonics]
+ C --> D[Geoid Determination]
+ D --> E[Vertical Datum]
 ```
 
 ---

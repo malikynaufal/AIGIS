@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Computer Vision
 
-**Course Code:** MGM214709 
-**SKS:** 3 (2-1) 
-**Semester:** 5 
-**Prerequisites:** Pengolahan Citra Digital, Aljabar Linear 
+**Course Code:** MGM214709
+**SKS:** 3 (2-1)
+**Semester:** 5
+**Prerequisites:** Pengolahan Citra Digital, Aljabar Linear
 
 ---
 

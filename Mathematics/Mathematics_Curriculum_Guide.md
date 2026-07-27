@@ -166,7 +166,7 @@ Goal: Build skills in software development, APIs, and system integration.
 
 | Mata Kuliah (sks) | Topik | Concept links |
 |---|---|---|
-| Rekayasa Berorientasi Objek (3) | Konsep OOP, pola desain, KISS, SOLID | [[ObjectOrientedDesign]] · [[DesignPatterns]] | 
+| Rekayasa Berorientasi Objek (3) | Konsep OOP, pola desain, KISS, SOLID | [[ObjectOrientedDesign]] · [[DesignPatterns]] |
 | Jaringan Komputer (3) | TCP/IP, routing, LAN, WAN, komunikasi nirkabel | [[TCPIP]] · [[NetworkRouting]] · [[WirelessNetworking]] |
 | Basis Data Maju (3) | Database relasional, ANSI SQL, isolasi transaksi, kerentanan | [[RelationalDatabases]] · [[SQL]] · [[DatabaseSecurity]] |
 | Keamanan Informasi dan Kriptografi (2) | Konsep kriptografi, enkripsi, dekripsi, keamanan jaringan | [[Cryptography]] · [[NetworkSecurity]] · [[InformationSecurity]] |

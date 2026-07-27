@@ -1,54 +1,49 @@
-# 📚 Pilihan: Mitigasi dan Manajemen Bencana
+---
+tags: [aigis, geodesy, pilihan, disaster-management, gis, natural-hazards]
+aliases: [Mitigasi Bencana, Disaster Risk Management]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD214706
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Mitigasi dan Manajemen Bencana (Disaster Mitigation and Management)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD214706 | **SKS:** 3 (2-1) | **Semester:** 6–8
 
-Mitigasi dan Manajemen Bencana adalah mata kuliah pilihan yang membahas pendekatan sistematis untuk mengurangi risiko bencana dan mengelola situasi darurat. Mata kuliah ini menggabungkan prinsip geografi, geosains, teknologi geodesi, dan kebijakan publik. Mahasiswa akan mempelajari siklus manajemen bencana: mitigasi (pengurangan risiko), kesiapan (preparedness), respons (response), dan pemulihan (recovery).
+## Course Overview
 
-Teknologi geodesi memainkan peran krusial dalam mitigasi dan manajemen bencana. Pemetaan cepat pascabencana menggunakan citra satelit dan drone, penggunaan GNSS untuk penentuan posisi korban, serta penginderaan jauh untuk pemantauan potensi bahaya. SIG digunakan untuk analisis kerentanan dan paparan risiko, menghasilkan peta risiko bencana sebagai dasar perencanaan mitigasi.
+Application of [[GIS]], [[Remote Sensing]], and geodetic monitoring to natural disaster risk assessment, early warning systems, and post-disaster damage assessment. Indonesian case studies: earthquakes, tsunamis, volcanic eruptions, floods, landslides.
 
-Pembelajasan dilakukan melalui studi kasus bencana di Indonesia (gempa bumi, tsunami, banjir, longsor, gunung berapi) dan latihan simulasi manajemen bencana. Mahasiswa akan mempraktikkan pembuatan peta risiko, analisis spasial kerentanan, dan perencanaan mitigasi menggunakan perangkat SIG. Topik juga mencakup aspek hukum perlindungan masyarakat dari bencana dan kebijakan pengurangan risiko bencana nasional.
+## Key Topics
 
-## Topik Utama
+### 1. GIS in Disaster Management
 
-### 1. Siklus Manajemen Bencana
+| Phase | GIS Application | Data Source |
+|-------|-----------------|-------------|
+| Prevention | Risk mapping | DEM, land cover, geology |
+| Preparedness | Evacuation routes | Infrastructure, population |
+| Response | Damage assessment | Post-event satellite imagery |
+| Recovery | Reconstruction planning | Multi-temporal analysis |
 
-- Mitigasi dan pengurangan risiko
+### 2. Risk Assessment
 
-- Kesiapan (preparedness)
+$$
+\text{Risk} = \text{Hazard} \times \text{Vulnerability} \times \text{Exposure}
+$$
 
-- Respons dan pemulihan
+### 3. Hazard Types
 
-### 2. Peran Geodesi dalam Manajemen Bencana
+| Hazard | Geodetic Monitoring | Example (Indonesia) |
+|--------|---------------------|---------------------|
+| Earthquake | GNSS + InSAR | Mentawai tsunami |
+| Volcanic | GNSS + tiltmeter | Merapi eruptions |
+| Flood | DEM + satellite altimetry | Jakarta flooding |
+| Landslide | InSAR + GNSS | Banjarnegara |
 
-- Pemetaan cepat pascabencana
+### 4. Early Warning Systems
+- Tsunami gauges
+- Seismic arrays
+- GNSS-based ionospheric detection
+- Coastal tide gauges
 
-- Monitoring potensi bahaya (geonet)
-
-- Penggunaan GNSS dan penginderaan jauh
-
-### 3. Analisis Risiko
-
-- Peta kerentanan dan paparan
-
-- SIG untuk analisis risiko spasial
-
-- Perencanaan mitigasi berbasis spasial
-
-## Tujuan Pembelajaran
-
-1. Memahami siklus manajemen bencana secara utuh
-2. Menerapkan teknologi geodesi untuk mitigasi bencana
-3. Membuat peta risiko dan analisis kerentanan
-4. Merancang rencana mitigasi berbasis data spasial
-
-## Referensi
-
-- UNDRR (2015). *Sendai Framework for Disaster Risk Reduction 2015-2030*.
-
-- Indonesia, UU No. 24 Tahun 2007 tentang Penanggulangan Bencana.
-
-- Alexander, D. (2018). *Principles of Emergency Management and Risk Analysis*. Springer.
+---
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

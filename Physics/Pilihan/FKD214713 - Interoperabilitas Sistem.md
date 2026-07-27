@@ -1,14 +1,3 @@
----
-title: "Interoperabilitas Sistem"
-subject: "Fisika Pilihan"
-tags:
- - interoperability
- - OGC-standards
- - APIs
- - data-exchange
- - SKS: 3
----
-
 # FKD214713 — Interoperabilitas Sistem
 **System Interoperability** | 3 SKS (Satuan Kredit Semester)
 
@@ -38,12 +27,12 @@ WMS serves rendered map images (PNG, JPEG) from geospatial data:
 
 **Key operations**:
 
-| Operation | Description (Deskripsi) | Example Request |
-|---|---|---|
-| `GetCapabilities` | Service metadata | `?SERVICE=WMS&REQUEST=GetCapabilities` |
-| `GetMap` | Map image (raster) | `?SERVICE=WMS&REQUEST=GetMap&LAYERS=...` |
-| `GetFeatureInfo` | Query point attributes | `?SERVICE=WMS&REQUEST=GetFeatureInfo&QUERY_LAYERS=...` |
-| `GetLegendGraphic` | Legend image | `?SERVICE=WMS&REQUEST=GetLegendGraphic` |
+|| Operation | Description (Deskripsi) | Example Request |
+||---|---|---|
+|| `GetCapabilities` | Service metadata | `?SERVICE=WMS&REQUEST=GetCapabilities` |
+|| `GetMap` | Map image (raster) | `?SERVICE=WMS&REQUEST=GetMap&LAYERS=...` |
+|| `GetFeatureInfo` | Query point attributes | `?SERVICE=WMS&REQUEST=GetFeatureInfo&QUERY_LAYERS=...` |
+|| `GetLegendGraphic` | Legend image | `?SERVICE=WMS&REQUEST=GetLegendGraphic` |
 
 **GetMap request parameters**:
 
@@ -66,12 +55,12 @@ WMS serves rendered images; WFS serves vector features (geometry + attributes) i
 
 **Key operations**:
 
-| Operation | Description | Output |
-|---|---|---|
-| `GetCapabilities` | Feature types, operations | XML (service metadata) |
-| `DescribeFeatureType` | Schema for a feature type | XML (XSD) |
-| `GetFeature` | Actual feature data | GML 3.1.1 / GeoJSON |
-| `Transaction` | Create/update/delete (WFS-T) | XML response |
+|| Operation | Description | Output |
+||---|---|---|
+|| `GetCapabilities` | Feature types, operations | XML (service metadata) |
+|| `DescribeFeatureType` | Schema for a feature type | XML (XSD) |
+|| `GetFeature` | Actual feature data | GML 3.1.1 / GeoJSON |
+|| `Transaction` | Create/update/delete (WFS-T) | XML response |
 
 **WFS GetFeature example**:
 
@@ -89,23 +78,23 @@ CQL_FILTER=ST_DWithin(geom,GeometryFromText('POINT(106.8456 -6.2088)',4326),5000
 
 WCS serves gridded (raster) data with full pixel values, unlike WMS which only serves rendered images:
 
-| Operation | Purpose | Data |
-|---|---|---|
-| `GetCapabilities` | Available coverages | Metadata |
-| `DescribeCoverage` | Coverage schema | Band info, CRS, resolution |
-| `GetCoverage` | Raw raster data | GeoTIFF, NetCDF, ZARR |
+|| Operation | Purpose | Data |
+||---|---|---|
+|| `GetCapabilities` | Available coverages | Metadata |
+|| `DescribeCoverage` | Coverage schema | Band info, CRS, resolution |
+|| `GetCoverage` | Raw raster data | GeoTIFF, NetCDF, ZARR |
 
 WCS is essential for scientific applications requiring pixel-level access (elevation models, satellite imagery, climate model output).
 
 ### 1.5 Comparison Table
 
-| Feature | WMS | WFS | WCS | WMTS |
-|---|---|---|---|---|
-| Output type | Image (PNG/JPEG) | Vector (GML/GeoJSON) | Raster (GeoTIFF) | Tile images |
-| Data precision | Visual only | Full attributes | Full pixel values | Visual only |
-| Performance | Good | Slow for large data | Moderate | Excellent (cached) |
-| Use case (Penggunaan) | Visualization | Analysis, editing | Scientific analysis | Web basemaps |
-| Transaction support | No | Yes (WFS-T) | No | No |
+|| Feature | WMS | WFS | WCS | WMTS |
+||---|---|---|---|---|
+|| Output type | Image (PNG/JPEG) | Vector (GML/GeoJSON) | Raster (GeoTIFF) | Tile images |
+|| Data precision | Visual only | Full attributes | Full pixel values | Visual only |
+|| Performance | Good | Slow for large data | Moderate | Excellent (cached) |
+|| Use case (Penggunaan) | Visualization | Analysis, editing | Scientific analysis | Web basemaps |
+|| Transaction support | No | Yes (WFS-T) | No | No |
 
 ---
 
@@ -148,25 +137,25 @@ The modern replacement for WFS, using RESTful design and OpenAPI 3.0:
 
 ### 2.2 API Design Best Practices
 
-| Principle (Prinsip) | Description |
-|---|---|
-| Resource-oriented | URIs represent spatial resources |
-| Stateless | Each request contains all information |
-| HATEOAS | Responses include links to related resources |
-| Versioning | API version in URL or header |
-| Pagination | `limit`/`offset` or cursor-based |
-| Content negotiation | Accept header for format selection |
+|| Principle (Prinsip) | Description |
+||---|---|
+|| Resource-oriented | URIs represent spatial resources |
+|| Stateless | Each request contains all information |
+|| HATEOAS | Responses include links to related resources |
+|| Versioning | API version in URL or header |
+|| Pagination | `limit`/`offset` or cursor-based |
+|| Content negotiation | Accept header for format selection |
 
 ### 2.3 GeoServer vs. MapServer vs. QGIS Server
 
-| Feature | GeoServer | MapServer | QGIS Server |
-|---|---|---|---|
-| Standards support | Full OGC | Full OGC | Full OGC |
-| Admin interface | Web GUI | Config files | QGIS projects |
-| Raster support | Via GeoTIFF, NetCDF | Excellent | Good |
-| Vector support | PostGIS, Shapefile, etc. | PostGIS, OGR | PostGIS |
-| Performance | High (Java, GeoWebCache) | High (C) | Moderate |
-| Community | Large, active | Mature | Growing |
+|| Feature | GeoServer | MapServer | QGIS Server |
+||---|---|---|---|
+|| Standards support | Full OGC | Full OGC | Full OGC |
+|| Admin interface | Web GUI | Config files | QGIS projects |
+|| Raster support | Via GeoTIFF, NetCDF | Excellent | Good |
+|| Vector support | PostGIS, Shapefile, etc. | PostGIS, OGR | PostGIS |
+|| Performance | High (Java, GeoWebCache) | High (C) | Moderate |
+|| Community | Large, active | Mature | Growing |
 
 ---
 
@@ -225,15 +214,15 @@ STAC is a modern, lightweight alternative to CSW, using JSON and designed for cl
 
 ### 4.1 Format Comparison
 
-| Format | Geometry | Attributes | Compression | Use Case |
-|---|---|---|---|---|
-| Shapefile (.shp) | Yes | Yes (dBASE) | No | Legacy exchange |
-| GeoJSON | Yes (GeoJSON spec) | Yes | No (text) | Web APIs |
-| GML | Yes (XML schema) | Yes | gzip | OGC standard |
-| GeoPackage (.gpkg) | Yes (SF SQL) | Yes | SQLite | Mobile, portable |
-| GeoTIFF | Gridded | Via metadata | LZW | Raster data |
-| NetCDF-4 | Gridded (multi-dim) | Via attributes | HDF5 | Climate, ocean |
-| ZARR | Gridded (cloud) | Via attributes | Blosc, gzip | Cloud-native chunks |
+|| Format | Geometry | Attributes | Compression | Use Case |
+||---|---|---|---|---|
+|| Shapefile (.shp) | Yes | Yes (dBASE) | No | Legacy exchange |
+|| GeoJSON | Yes (GeoJSON spec) | Yes | No (text) | Web APIs |
+|| GML | Yes (XML schema) | Yes | gzip | OGC standard |
+|| GeoPackage (.gpkg) | Yes (SF SQL) | Yes | SQLite | Mobile, portable |
+|| GeoTIFF | Gridded | Via metadata | LZW | Raster data |
+|| NetCDF-4 | Gridded (multi-dim) | Via attributes | HDF5 | Climate, ocean |
+|| ZARR | Gridded (cloud) | Via attributes | Blosc, gzip | Cloud-native chunks |
 
 ### 4.2 Coordinate Transformation in Exchange
 
@@ -254,24 +243,21 @@ cs2cs +proj=utm +zone=48 +south +ellps=WGS84 +to +proj=longlat +datum=WGS84 \
 
 ## 5. Case Study: Multi-Agency Disaster Response System
 
-During the 2018 Palu earthquake and tsunami ($M_w$ 7.5), multiple Indonesian agencies needed to share data rapidly:
+During the 2018 Palu earthquake and tsunami ( $M_w$ 7.5), multiple Indonesian agencies needed to share data rapidly:
 
-| Agency | Data Type | System |
-|---|---|---|
-| BMKG | Seismic waveforms, tsunami alerts | GEOFON, custom |
-| BNPB | Damage assessment, shelter locations | InaRISK |
-| BIG | Maps, satellite imagery, GADM boundaries | INDE portal |
-| LAPAN | Satellite imagery (Landsat, Sentinel) | BRIN-LAPAN portal |
-| TNI AL | Naval hydrographic charts | Custom |
+|| Agency | Data Type | System |
+||---|---|---|
+|| BMKG | Seismic waveforms, tsunami alerts | GEOFON, custom |
+|| BNPB | Damage assessment, shelter locations | InaRISK |
+|| BIG | Maps, satellite imagery, GADM boundaries | INDE portal |
+|| LAPAN | Satellite imagery (Landsat, Sentinel) | BRIN-LAPAN portal |
+|| TNI AL | Naval hydrographic charts | Custom |
 
 **Interoperability solution**: A GeoNode instance deployed by BIG served as the central hub:
 
 - WMS layers from multiple agencies published via OGC standards
-
 - Metadata catalog (CSW) enabled data discovery
-
 - GeoJSON WFS feeds provided real-time damage boundaries
-
 - API gateway aggregated feeds into a common operational picture
 
 **Lesson learned** (Pelajaran yang didapat): Without pre-existing interoperability agreements, agencies default to email and WhatsApp for data sharing during crises. Pre-crisis OGC service deployment and standardized APIs are essential.

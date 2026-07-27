@@ -36,19 +36,23 @@ created: 2026-07-27
 
 ### Camera Projection Matrix
 
-$$\begin{bmatrix} u \\ v \\ 1 \end{bmatrix} = P \begin{bmatrix} X \\ Y \\ Z \\ 1 \end{bmatrix}, \quad P = K[R|t]$$
+$$\begin{bmatrix} u \\ v \\ 1 \end{bmatrix} = P \begin{bmatrix} X \\ Y \\ Z \\ 1 \end{bmatrix}, \quad P = K[R|t]
 
-where $K$ = intrinsic, $[R|t]$ = extrinsic parameters.
+$ $
+
+where $ K $= intrinsic,$ [R|t] $ = extrinsic parameters.
 
 ### Fundamental Matrix
 
-$$x'^T F x = 0$$
+$ $x'^T F x = 0 $$
 
 relates corresponding points in stereo images.
 
 ### Bundle Adjustment
 
-$$\min_{K, R_i, t_i, X_j} \sum_{i,j} \|x_{ij} - \pi(K, R_i, t_i, X_j)\|^2$$
+$ $\min_{K, R_i, t_i, X_j} \sum_{i,j} \|x_{ij} - i(K, R_i, t_i, X_j)\|^2
+
+$$
 
 Joint optimization of camera parameters and 3D points.
 

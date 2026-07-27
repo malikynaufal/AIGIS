@@ -14,14 +14,11 @@ updated: 2026-07-27
 
 ## 1. Groups
 
-A **group** $(G, \cdot)$ is a set $G$ with a binary operation $\cdot$ satisfying:
+A **group** $(G, \cdot) $is a set$ G $with a binary operation $\cdot $ satisfying:
 
 1. **Closure:** $a, b \in G \implies a \cdot b \in G$
 2. **Associativity:** $(a \cdot b) \cdot c = a \cdot (b \cdot c)$
-3. **Identity:** $\exists e \in G$ such that $e \cdot a = a \cdot e = a$
-4. **Inverses:** $\forall a \in G, \exists a^{-1} \in G$ such that $a \cdot a^{-1} = e$
-
-If $a \cdot b = b \cdot a$ for all $a, b$, $G$ is **abelian**.
+3. **Identity:** $\exists e \in G $such that $ e \cdot a = a \cdot e = a $ 4. **Inverses:**$\forall a \in G, \exists a^{-1} \in G $such that $ a \cdot a^{-1} = e $If$ a \cdot b = b \cdot a $for all$ a, b $, $G$ is **abelian**.
 
 ### Examples
 
@@ -29,7 +26,7 @@ If $a \cdot b = b \cdot a$ for all $a, b$, $G$ is **abelian**.
 |-------|-----------|-------|------------|
 | $(\mathbb{Z}, +)$ | Addition | Infinite | Cyclic, abelian |
 | $(\mathbb{Z}/n\mathbb{Z}, +)$ | Addition mod $n$ | $n$ | Cyclic, abelian |
-| $S_n$ (permutations) | Composition | $n!$ | Non-abelian for $n \geq 3$ |
+| $S_n$ (permutations) | Composition | $ n!$| Non-abelian for $n \geq 3$ |
 | $GL(n, \mathbb{R})$ | Matrix multiplication | Infinite | Non-abelian |
 | $(\mathbb{R}^*, \cdot)$ | Multiplication | Infinite | Abelian |
 
@@ -51,9 +48,9 @@ If $N \trianglelefteq G$, the set $G/N = \{gN : g \in G\}$ forms a group with $(
 
 ### Group Homomorphisms
 
-A map $\phi: G \to H$ is a **homomorphism** if $\phi(ab) = \phi(a)\phi(b)$.
+A map $\phi: G \to H $is a **homomorphism** if $\phi(ab) = \phi(a)\phi(b) $.
 
-**Isomorphism Theorem:** If $\phi: G \to H$ is a homomorphism, then $G/\ker\phi \cong \text{im}\phi$.
+**Isomorphism Theorem:** If $\phi: G \to H $is a homomorphism, then$ G/\ker\phi \cong \text{im}\phi $.
 
 ## 2. Rings
 
@@ -75,15 +72,13 @@ A **ring** $(R, +, \cdot)$ has two operations satisfying:
 
 $I \subseteq R$ is an **ideal** if:
 - $I$ is an additive subgroup
-- $\forall r \in R, a \in I: ra, ar \in I$
-
-**Quotient ring:** $R/I$ is a ring. If $I$ is maximal, $R/I$ is a field.
+- $\forall r \in R, a \in I: ra, ar \in I $**Quotient ring:**$R/I$ is a ring. If $I$ is maximal,$R/I$ is a field.
 
 ### Chinese Remainder Theorem (Ring Form)
 
 If $I_1, \dots, I_k$ are pairwise coprime ideals, then:
 
-$$R/(I_1 \cap \dots \cap I_k) \cong R/I_1 \times \dots \times R/I_k$$
+$$ R/(I_1 \cap \dots \cap I_k) \cong R/I_1 \times \dots \times R/I_k $$
 
 ## 3. Fields
 
@@ -93,31 +88,31 @@ A **field** $F$ is a commutative ring where $F^\times = F \setminus \{0\}$ is a 
 
 | Field | Characteristic |
 |-------|----------------|
-| $\mathbb{Q}$ (rationals) | 0 |
-| $\mathbb{R}$ (reals) | 0 |
-| $\mathbb{C}$ (complex) | 0 |
-| $\mathbb{F}_p = \mathbb{Z}/p\mathbb{Z}$ ($p$ prime) | $p$ |
+| $\mathbb{Q} $ (rationals) | 0 |
+| $\mathbb{R} $ (reals) | 0 |
+| $\mathbb{C} $ (complex) | 0 |
+| $\mathbb{F}_p = \mathbb{Z}/p\mathbb{Z} $ ($p$ prime) | $p$ |
 
 ### Field Extensions
 
 $F/K$ is an extension. $[F:K]$ = degree = dimension of $F$ as $K$-vector space.
 
-**Algebraic element:** $\alpha$ satisfies a polynomial $f(x) \in K[x]$.
+**Algebraic element:** $\alpha $satisfies a polynomial$ f(x) \in K[x] $.
 
-**Minimal polynomial:** Monic polynomial of least degree with $\alpha$ as root.
+**Minimal polynomial:** Monic polynomial of least degree with $\alpha $ as root.
 
 ## 4. Galois Theory
 
-The **Galois group** of a polynomial $f \in K[x]$ is $\text{Gal}(f) = \text{Aut}(E/K)$ where $E$ is the splitting field.
+The **Galois group** of a polynomial $f \in K[x]$ is $\text{Gal}(f) = \text{Aut}(E/K) $where $ E $ is the splitting field.
 
 ```mermaid
 flowchart TD
-    K[Base Field K] --> E[Splitting Field E]
-    E --> G[Galois Group G = Aut(E/K)]
-    G --> Subgroups[Subgroups H ≤ G]
-    Subgroups --> Intermediate[Intermediate Fields K ⊆ F ⊆ E]
-    Subgroups -.-> Fundamental[Fundamental Theorem]
-    Intermediate -.-> Fundamental
+ K[Base Field K] --> E[Splitting Field E]
+ E --> G[Galois Group G = Aut(E/K)]
+ G --> Subgroups[Subgroups H ≤ G]
+ Subgroups --> Intermediate[Intermediate Fields K ⊆ F ⊆ E]
+ Subgroups -.-> Fundamental[Fundamental Theorem]
+ Intermediate -.-> Fundamental
 ```
 
 **Fundamental Theorem of Galois Theory:** Bijection between:
@@ -126,8 +121,7 @@ flowchart TD
 
 With correspondences:
 - $H \leftrightarrow E^H$ (fixed field of $H$)
-- $[E^H : K] = |\text{Gal}(E/K)| / |H|$
-- $F/K$ is Galois iff $\text{Gal}(E/F) \trianglelefteq \text{Gal}(E/K)$
+- $ [E^H : K] = |\text{Gal}(E/K)| / |H|$-$F/K$ is Galois iff $\text{Gal}(E/F) \trianglelefteq \text{Gal}(E/K) $
 
 ### Solvability by Radicals
 
@@ -141,16 +135,16 @@ A polynomial is **solvable by radicals** iff its Galois group is a **solvable gr
 | Field | Application |
 |-------|-------------|
 | **Cryptography** | Finite field arithmetic in AES, ECC |
-| **Coding Theory** | Reed-Solomon codes over $\mathbb{F}_{2^m}$ |
+| **Coding Theory** | Reed-Solomon codes over $\mathbb{F}_{2^m} $ |
 | **Physics** | Lie groups in particle physics, gauge theory |
 | **Chemistry** | Molecular symmetry groups (point groups) |
-| **Cryptography** | Diffie-Hellman in $\mathbb{F}_p^\times$, RSA in $(\mathbb{Z}/N\mathbb{Z})^\times$ |
+| **Cryptography** | Diffie-Hellman in $\mathbb{F}_p^\times $, RSA in $(\mathbb{Z}/N\mathbb{Z})^\times$ |
 
 ## Practice Problems
 
 1. Prove that every group of prime order is cyclic.
 2. Find all subgroups of $D_4$ (dihedral group of order 8).
-3. Show that $\mathbb{Z}[\sqrt{-5}]$ is not a UFD.
+3. Show that $\mathbb{Z}[\sqrt{-5}] $ is not a UFD.
 4. Compute the Galois group of $x^4 - 2$ over $\mathbb{Q}$.
 
 ## References

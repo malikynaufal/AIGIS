@@ -1,54 +1,71 @@
-# 📚 Pilihan: Struktur Data Spasial
+---
+tags: [aigis, geodesy, pilihan, spatial-data-structure, gis, topology]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD213611
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Struktur Data Spasial (Spatial Data Structures)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD213611 | **SKS:** 3 (3-0) | **Semester:** 4–6
 
-Struktur Data Spasial adalah mata kuliah pilihan yang mempelajari struktur data khusus untuk menyimpan dan mengakses data geospasial secara efisien. Mata kuliah ini membahas struktur data spasial seperti R-tree, k-d tree, quadtree, grid, dan jaringan (network), serta algoritma spatial query, spatial join, dan spatial indexing. Mahasiswa akan mempelajari trade-off antara struktur data yang berbeda untuk aplikasi spasial yang berbeda.
+## Course Overview
 
-Efisiensi penyimpanan dan akses data spasial sangat penting untuk aplikasi SIG skala besar, basisdata geospasial, dan sistem informasi geografis berbasis web. Struktur data yang tepat dapat meningkatkan performa query spasial secara signifikan, terutama untuk data dengan dimensi tinggi dan volume besar seperti data raster atau data jaringan jalan.
+Spatial Data Structures covers the representation, storage, and management of spatial data in both vector and raster formats. Focus on data models (GML, GeoJSON, Shapefile), spatial indexing, topology, and efficient querying for large spatial datasets.
 
-Pembelajaran dilakukan melalui kombinasi teori dan praktikum pemrograman. Mahasiswa akan mengimplementasikan struktur data spasial dalam bahasa pemrograman (Python, Java, atau C++) dan menguji performanya terhadap data geospasial nyata. Konsep ini sangat relevan dengan pengembangan sistem SIG modern dan basisdata geospasial.
+## Key Topics
 
-## Topik Utama
+### 1. Vector Spatial Data Models
 
-### 1. Struktur Data Spasial Dasar
+| Model | Type | Storage | Strengths | Weaknesses |
+|-------|------|---------|-----------|------------|
+| Shapefile | Legacy vector | `.shp .shx .dbf` | Simple, universal | 2 GB limit, no topology |
+| GeoJSON | Text vector | `.geojson` | Web-friendly | Large file size |
+| GML (ISO 19136) | XML vector | `.gml` | Full schema | Verbose, complex |
+| GeoPackage | SQLite | `.gpkg` | Modern, OGC standard | Relatively new |
 
-- R-tree dan varian-variannya (R*-tree, Hilbert R-tree)
+### 2. Spatial Indexing
 
-- k-d tree dan varian (k-d-B-tree)
+**R-tree:** $O(\log N)$ search, $O(N \log N)$ build
 
-- Quadtree dan octree
+$$
+\text{MBB}(R_i) = (x_{\min}, y_{\min}, x_{\max}, y_{\max}) \quad \text{(Minimum Bounding Rectangle)}
+$$
 
-### 2. Algoritma Spatial Query
+**Grid index:**
+$$ x_{cell} = \left\lfloor x / w_{cell} \right\rfloor, \quad y_{cell} = \left\lfloor y / h_{cell} \right\rfloor
+$$
 
-- Spatial range query
+### 3. Topological Data Structures
 
-- Nearest neighbor search
+| Topology | Description | GIS Example |
+|----------|-------------|-------------|
+| Adjacency | Shared edges between polygons | Parcel maps |
+| Connectivity | Edge connections at nodes | Road networks |
+| Containment | Polygon within polygon | Islands within seas |
+| Order | Directional relationships | River networks |
 
-- Spatial join dan overlay
+**Planar enforcement:** All polygon boundaries are shared between features:
+$$
+\bigcup A_i = \text{complete coverage}, \quad A_i \cap A_j = \emptyset \quad (i \neq j)
+$$
 
-### 3. Implementasi dan Optimasi
+### 4. Raster Data
 
-- Indexing spasial di basisdata (PostGIS, Oracle Spatial)
+| Property | Description | Typical Values |
+|----------|-------------|----------------|
+| Cell size | Ground resolution | 0.5 m — 1 km |
+| Bands | Spectral channels | 3–15 (multispectral) |
+| Depth | Bit depth | 8 bit (0–255), 16 bit, 32 bit float |
+| Compression | Algorithm | LZW, DEFLATE, JPEG2000 |
+| Pyramids | Multi-resolution | 2× resampling |
 
-- Optimasi memori dan I/O
+## Related Concepts
 
-- Aplikasi pada data raster dan vektor
+- [[Basis Data Spasial]] — Spatial databases
+- [[Sistem Informasi Geografis Terapan]] — Applied GIS
+- [[Pemrograman Spasial]] — Spatial programming
+- [[GeographicLib]] — Geodesic algorithms
 
-## Tujuan Pembelajaran
+---
 
-1. Memahami struktur data spasial dasar dan kegunaannya
-2. Mengimplementasikan struktur data spasial untuk data geospasial
-3. Menganalisis performa struktur data spasial yang berbeda
-4. Menerapkan algoritma spatial query pada basisdata geospasial
-
-## Referensi
-
-- de Berg, M., Cheong, O., van Kreveld, M., & Overmars, M. (2008). *Computational Geometry: Algorithms and Applications* (3rd ed.). Springer.
-
-- Samet, H. (2005). *Foundations of Multidimensional and Metric Data Mining*. Cambridge University Press.
-
-- Guttman, A. (1984). "R-trees: A Dynamic Index Structure for Spatial Searching." *ACM SIGMOD*.
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

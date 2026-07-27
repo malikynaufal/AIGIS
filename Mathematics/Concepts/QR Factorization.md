@@ -13,11 +13,9 @@ updated: 2026-07-27
 
 ## 1. Definition
 
-For any matrix $A \in \mathbb{R}^{m \times n}$ ($m \geq n$):
+For any matrix $A \in \mathbb{R}^{m \times n} $ ($m \geq n$):
 
-$$A = Q \cdot R$$
-
-where:
+$$ A = Q \cdot R $$ where:
 - $Q \in \mathbb{R}^{m \times m}$ is **orthogonal**: $Q^T Q = I$
 - $R \in \mathbb{R}^{m \times n}$ is **upper triangular**
 
@@ -31,12 +29,12 @@ For the **thin (reduced) QR**: $Q \in \mathbb{R}^{m \times n}$ with orthonormal 
 
 ```
 For j = 1 to n:
-    v_j = a_j
-    For i = 1 to j-1:
-        r_ij = q_i^T * a_j
-        v_j = v_j - r_ij * q_i
-    r_jj = ||v_j||
-    q_j = v_j / r_jj
+ v_j = a_j
+ For i = 1 to j-1:
+ r_ij = q_i^T * a_j
+ v_j = v_j - r_ij * q_i
+ r_jj = ||v_j||
+ q_j = v_j / r_jj
 ```
 
 **Problem:** Numerically unstable for ill-conditioned columns (loss of orthogonality).
@@ -45,12 +43,12 @@ For j = 1 to n:
 
 ```
 For j = 1 to n:
-    v_j = a_j
-    For i = 1 to j-1:
-        r_ij = q_i^T * v_j        ← uses updated v_j
-        v_j = v_j - r_ij * q_i
-    r_jj = ||v_j||
-    q_j = v_j / r_jj
+ v_j = a_j
+ For i = 1 to j-1:
+ r_ij = q_i^T * v_j ← uses updated v_j
+ v_j = v_j - r_ij * q_i
+ r_jj = ||v_j||
+ q_j = v_j / r_jj
 ```
 
 MGS is numerically stable and equivalent to Householder in exact arithmetic.
@@ -59,13 +57,11 @@ MGS is numerically stable and equivalent to Householder in exact arithmetic.
 
 A Householder reflector:
 
-$$H = I - 2uu^T, \quad \|u\| = 1$$
+$$ H = I - 2uu^T, \quad \|u\| = 1 $$ reflects$ x $to $\pm \|x\| e_1 $. Apply $n$ reflectors to zero out subdiagonal entries:
 
-reflects $x$ to $\pm \|x\| e_1$. Apply $n$ reflectors to zero out subdiagonal entries:
+$$ H_n H_{n-1} \cdots H_1 A = R $$
 
-$$H_n H_{n-1} \cdots H_1 A = R$$
-
-$$Q = H_1 H_2 \cdots H_n = Q^T \quad (\text{since } H^T = H)$$
+$$ Q = H_1 H_2 \cdots H_n = Q^T \quad (\text{since } H^T = H)$$
 
 ---
 
@@ -75,11 +71,9 @@ Given $A = \begin{pmatrix} 1 & 1 \\ 1 & -1 \\ 0 & 0 \end{pmatrix}$
 
 **Step 1:** Reflect column 1:
 
-$$\|a_1\| = \sqrt{2}, \quad u = \frac{a_1 - \|a_1\|e_1}{\|a_1 - \|a_1\|e_1\|} = \frac{1}{\sqrt{2-\sqrt{2}}} \begin{pmatrix} 1-\sqrt{2} \\ 1 \\ 0 \end{pmatrix}$$
+$$\|a_1\| = \sqrt{2}, \quad u = \frac{a_1 - \|a_1\|e_1}{\|a_1 - \|a_1\|e_1\|} = \frac{1}{\sqrt{2-\sqrt{2}}} \begin{pmatrix} 1-\sqrt{2} \\ 1 \\ 0 \end{pmatrix}
 
-Apply $H_1$ to get:
-
-$$R = \begin{pmatrix} -\sqrt{2} & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{pmatrix}, \quad Q = \begin{pmatrix} -1/\sqrt{2} & 1/\sqrt{2} \\ -1/\sqrt{2} & -1/\sqrt{2} \\ 0 & 0 \end{pmatrix}$$
+$$ Apply$ H_1 $to get:$$ R = \begin{pmatrix} -\sqrt{2} & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{pmatrix}, \quad Q = \begin{pmatrix} -1/\sqrt{2} & 1/\sqrt{2} \\ -1/\sqrt{2} & -1/\sqrt{2} \\ 0 & 0 \end{pmatrix}$$
 
 ---
 
@@ -87,15 +81,11 @@ $$R = \begin{pmatrix} -\sqrt{2} & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{pmatrix}, \qua
 
 ### Solving Least Squares: $A\hat{x} \approx b$
 
-$$A = QR \implies QR\hat{x} = b \implies R\hat{x} = Q^T b$$
-
-Back-substitute the $n \times n$ triangular system. Cost: $O(2mn^2 - \frac{2n^3}{3})$.
+$$ A = QR \implies QR\hat{x} = b \implies R\hat{x} = Q^T b $$ Back-substitute the$ n \times n $triangular system. Cost:$ O(2mn^2 - \frac{2n^3}{3}) $.
 
 ### Computing the QR Factorization of the Normal Equations
 
-$$A^T A = R^T R \quad (\text{no formation of } A^T A \text{ needed})$$
-
-This avoids the squaring of the condition number that plagues normal equations.
+$$ A^T A = R^T R \quad (\text{no formation of } A^T A \text{ needed})$$ This avoids the squaring of the condition number that plagues normal equations.
 
 ### Eigenvalue Algorithms
 
@@ -122,7 +112,7 @@ The **QR algorithm** iterates $A_k = Q_k R_k$, $A_{k+1} = R_k Q_k$ to converge t
 | Classical GS | $2mn^2$ |
 | Modified GS | $2mn^2$ |
 | Householder | $2mn^2 - \frac{2n^3}{3}$ |
-| Givens rotations | $3mn^2 - n^3$ |
+| Givens rotations | $ 3mn^2 - n^3$ |
 
 ---
 

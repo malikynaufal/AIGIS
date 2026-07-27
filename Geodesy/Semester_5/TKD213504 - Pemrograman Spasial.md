@@ -342,7 +342,7 @@ result = processing.run("native:clip", {
 
 ## 6. GPS Data Processing Scripts
 
-### 6.1 Reading NMEA Data
+### 6.1 Reading NMEA Data \$GPGGA
 
 ```python
 import serial
@@ -352,7 +352,7 @@ def read_gps(port='/dev/ttyUSB0', baud=9600):
  ser = serial.Serial(port, baudrate=baud, timeout=1)
  while True:
  line = ser.readline().decode('ascii', errors='replace')
- if line.startswith('$GPGGA'):
+ if line.startswith('$ GPGGA'):
  msg = pynmea2.parse(line)
  print(f"Lat: {msg.latitude}, Lon: {msg.longitude}")
  print(f"Time: {msg.timestamp}, Alt: {msg.altitude}")

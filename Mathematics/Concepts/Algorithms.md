@@ -13,7 +13,7 @@ The study of algorithms is fundamentally about **efficiency**: given a problem, 
 
 ## Algorithmic Complexity & Big-O Notation
 
-**Big-O notation** ($O(\cdot)$) describes the upper bound of an algorithm's growth rate as the input size $n $grows. Formally,$f(n) = O(g(n)) $means there exist positive constants $c $and $n_0 $such that$0 \le f(n) \le c \cdot g(n) $for all $n \ge n_0$.
+**Big-O notation** ($O(\cdot) $) describes the upper bound of an algorithm's growth rate as the input size $n $grows. Formally,$f(n) = O(g(n))$means there exist positive constants $c $and $n_0 $such that $0 \le f(n) \le c \cdot g(n)$for all $n \ge n_0$.
 
 ### Common complexity classes (Kelas kompleksitas umum)
 
@@ -28,20 +28,20 @@ The study of algorithms is fundamentally about **efficiency**: given a problem, 
 | $O(2^{n})$ | Exponential | Brute-force TSP (traveling salesman) | Waktu eksponensial |
 | $O(n!)$ | Factorial | Permutation enumeration | Waktu faktorial |
 
-**Notasi Omega** ($\Omega$) gives the lower bound; **Theta** ($\Theta$) gives a tight bound. For instance:
+**Notasi Omega** ($\Omega $) gives the lower bound; **Theta** ($\Theta $) gives a tight bound. For instance:
 
-- Merge sort is $\Theta(n \log n)$— always this efficient.
+- Merge sort is $\Theta(n \log n) $— always this efficient.
 
-- Quicksort is $O(n \log n) $on average but $O(n^2) $in the worst case (pivot terburuk).
+- Quicksort is $O(n \log n)$on average but $O(n^2)$in the worst case (pivot terburuk).
 
-**Kompleksitas ruang** (space complexity) measures the additional memory required beyond the input. An in-place sort is $O(1) $space; merge sort is $O(n) $space (membutuhkan memori tambahan).
+**Kompleksitas ruang** (space complexity) measures the additional memory required beyond the input. An in-place sort is $O(1)$space; merge sort is $O(n)$space (membutuhkan memori tambahan).
 
 ## Sorting Algorithms (Pengurutan)
 
 ### 1. Quicksort (Urcepat)
-**Average**$O(n \log n)$, **worst** $O(n^{2})$, **space** $O(\log n) $stack depth.
+**Average**$O(n \log n)$, **worst** $O(n^{2})$, **space** $O(\log n)$stack depth.
 
-Divide-and-conquer: choose a **pivot**, partition into elements$<$pivot and$>$pivot, recurse on each partition. Kinerja sangat bergantung pada pemilihan pivot (pemilihan pivot).
+Divide-and-conquer: choose a **pivot**, partition into elements $<$pivot and $>$ pivot, recurse on each partition. Kinerja sangat bergantung pada pemilihan pivot (pemilihan pivot).
 
 ```python
 def quicksort(arr):
@@ -60,14 +60,15 @@ def quicksort(arr):
 Stable sort; splits array in half, recursively sorts, merges. Cocok untuk data yang tersimpan di linked list maupun eksternal storage (penyimpanan eksternal).
 
 ### 3. Timsort (Hybrid)
-Python's built-in sorting algorithm is Timsort — a hybrid of merge sort and insertion sort optimised for real-world data that often has pre-existing "runs" (urutan). $O(n \log n) $worst case,$O(n) $best case (jika data sudah sebagian terurut).
+Python's built-in sorting algorithm is Timsort — a hybrid of merge sort and insertion sort optimised for real-world data that often has pre-existing "runs" (urutan). $O(n \log n)$worst case,$O(n)$best case (jika data sudah sebagian terurut).
 
 ## Searching (Pencarian)
 
-### Binary Search (Pencarian Biner) —$O(\log n) $Requires sorted input (input harus terurut). Repeatedly halves the search interval
-:
+### Binary Search (Pencarian Biner) —$O(\log n)$Requires sorted input (input harus terurut). Repeatedly halves the search interval
 
-$$\text{mid} = \left\lfloor \frac{\text{low} + \text{high}}{2} \right\rfloor$$
+$$\text{mid} = \left\lfloor \frac{\text{low} + \text{high}}{2} \right\rfloor
+
+$$
 
 ```python
 def binary_search(arr, target):
@@ -83,7 +84,7 @@ def binary_search(arr, target):
  return -1 # not found (tidak ditemukan)
 ```
 
-### Hash-based search —$O(1) $average
+### Hash-based search —$O(1)$average
 Using a hash table (tabel hash), lookup is constant time on average. Hash collisions handled by chaining (rantai) or open addressing (alamat terbuka).
 
 ## Numerical Algorithms (Algoritma Numerik)
@@ -93,22 +94,18 @@ Numerical algorithms are essential in computational geodesy and geomatics — cl
 ### Newton-Raphson Method (Mencari akar / root-finding)
 For solving $f(x) = 0$:
 
-$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} $$Converges **quadratically** (cepat) when $f'(x) \neq 0 $near the root — quadratic convergence berarti galat dikuadratkan setiap iterasi.
+$$ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$ Converges **quadratically** (cepat) when$ f'(x) \neq 0 $ near the root — quadratic convergence berarti galat dikuadratkan setiap iterasi.
 
 ### Least-Squares Adjustment (Penyesuaian Kuadrat Terkecil)
 Given observations $\mathbf{L} $and model $\mathbf{A}\,\mathbf{x} = \mathbf{L} $, the least-squares solution minimises the sum of squared residuals:
 
-$$\hat{\mathbf{x}} = (\mathbf{A}^T \mathbf{A})^{-1} \mathbf{A}^T \mathbf{L} $$This is the workhorse of geodetic network adjustment — used in GPS baseline processing, traverse adjustment, and geoid modelling.
+$$\hat{\mathbf{x}} = (\mathbf{A}^T \mathbf{A})^{-1} \mathbf{A}^T \mathbf{L} $$ This is the workhorse of geodetic network adjustment — used in GPS baseline processing, traverse adjustment, and geoid modelling.
 
 ### Gauss-Seidel Iteration (Penyelesaian sistem linear)
-For solving $\mathbf{A}\mathbf{x} = \mathbf{b} $iteratively
-:
-
-$$x_i^{(k+1)} = \frac{1}{a_{ii}} \left( b_i - \sum_{j=1}^{i-1} a_{ij} x_j^{(k+1)} - \sum_{j=i+1}^{n} a_{ij} x_j^{(k)} \right)$$Converges if $\mathbf{A} $is strictly diagonally dominant (dominan diagonal).
+For solving $\mathbf{A}\mathbf{x} = \mathbf{b} $iteratively $$ x_i^{(k+1)} = \frac{1}{a_{ii}} \left( b_i - \sum_{j=1}^{i-1} a_{ij} x_j^{(k+1)} - \sum_{j=i+1}^{n} a_{ij} x_j^{(k)} \right)$$ Converges if $\mathbf{A} $ is strictly diagonally dominant (dominan diagonal).
 
 ### QR Decomposition untuk Least Squares
 Numerically more stable than normal equations
-:
 
 $$\mathbf{A} = \mathbf{Q}\mathbf{R} \implies \hat{\mathbf{x}} = \mathbf{R}^{-1}\mathbf{Q}^T\mathbf{L} $$
 
@@ -116,11 +113,11 @@ $$\mathbf{A} = \mathbf{Q}\mathbf{R} \implies \hat{\mathbf{x}} = \mathbf{R}^{-1}\
 
 | Algorithm | Complexity | Use case | Bahasa Indonesia |
 |-----------|-----------|----------|------------------|
-| R-tree indexing | $O(\log n) $query | Spatial database queries (kueri basis data spasial) | Pengindeksan spasial |
+| R-tree indexing | $O(\log n)$query | Spatial database queries (kueri basis data spasial) | Pengindeksan spasial |
 | Delaunay triangulation | $O(n \log n)$ | TIN construction, mesh generation | Triangulasi Delaunay |
 | Convex hull (Graham scan) | $O(n \log n)$ | Boundary computation | Cembung (convex hull) |
 | Dijkstra / A* | $O((V+E)\log V)$ | Shortest path routing | Rute terpendek |
-| Sutherland-Hodgman | $O(n)$ per clip | Polygon clipping (pemotongan poligon) | Penggeseran poligon |
+| Sutherland-Hodgman | $ O(n)$ per clip | Polygon clipping (pemotongan poligon) | Penggeseran poligon |
 
 ## Python Implementation Example
 

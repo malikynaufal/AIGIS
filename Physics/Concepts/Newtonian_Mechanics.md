@@ -24,7 +24,6 @@ created: 2026-07-27
 
 ### Fundamental Equations
 
-```latex
 \begin{equation}
 \\mathbf{F} = m\\mathbf{a}
 \\end{equation}
@@ -47,7 +46,6 @@ created: 2026-07-27
 
 ### Derived Relations
 
-```latex
 \begin{equation}
 \\mathbf{J} = \int \mathbf{F} \, dt = \Delta\\mathbf{p}
 \\end{equation}
@@ -71,15 +69,15 @@ created: 2026-07-27
 
 **Starting point:** Newton's second law with gravitational force
 
-```latex
+$$
 \begin{equation}
-\\mathbf{F} = m\\mathbf{g}
-\\end{equation}
-\Rightarrow m\\frac{d^2\\mathbf{r}}{dt^2} = m\\mathbf{g}
-\Rightarrow \\frac{d^2\\mathbf{r}}{dt^2} = \\mathbf{g}
+\mathbf{F} = m\mathbf{g}
 \end{equation}
+\Rightarrow m\frac{d^2\mathbf{r}}{dt^2} = m\mathbf{g}
+\Rightarrow \frac{d^2\mathbf{r}}{dt^2} = \mathbf{g}
+$$
 
-**Result:** $\\mathbf{r}(t) = \\frac{1}{2}\\mathbf{g}t^2 + \\mathbf{v}_0t + \\mathbf{r}_0$
+**Result:** $ \mathbf{r}(t) = \frac{1}{2}\mathbf{g}t^2 + \mathbf{v}_0t + \mathbf{r}_0$
 
 ---
 
@@ -98,7 +96,7 @@ created: 2026-07-27
 | Aspect | Classical | Relativistic | Quantum | Geodesy Application |
 |--------|-----------|--------------|---------|---------------------|
 | Framework | Newtonian mechanics | Special relativity | Quantum mechanics | Satellite orbit prediction |
-| Key Equation | $\\mathbf{F} = m\\mathbf{a}$ | $\\mathbf{F} = \\frac{d\\mathbf{p}}{dt}$ | $\\hat{H}\\psi = i\\hbar\\frac{\\partial\\psi}{\\partial t}$ | Kepler's laws + perturbations |
+| Key Equation | $\\mathbf{F} = m\\mathbf{a} $ | $\\mathbf{F} = \\frac{d\\mathbf{p}}{dt} $ | $\\hat{H}\\psi = i\\hbar\\frac{\\partial\\psi}{\\partial t} $ | Kepler's laws + perturbations |
 | Domain | Macroscopic, low speed | High speeds, strong gravity | Atomic/subatomic scales | Orbital mechanics, positioning |
 
 ---
@@ -107,18 +105,17 @@ created: 2026-07-27
 
 ### Problem 1: Satellite Launch Velocity
 
-**Given:** Earth's mass $M_{\\oplus} = 5.972 \\times 10^{24}$ kg, Earth's radius $R_{\\oplus} = 6.371 \\times 10^6$ m
+**Given:** Earth's mass $M_{\\oplus} = 5.972 \\times 10^{24}$kg, Earth's radius $R_{\\oplus} = 6.371 \\times 10^6 $m
 
 **Find:** Minimum orbital velocity at Earth's surface
 
 **Solution:**
 
 1. **Identify principle:** Centripetal force equals gravitational force
-2. **Set up equations:** $\\frac{mv^2}{R_{\\oplus}} = \\frac{GM_{\\oplus}m}{R_{\\oplus}^2}$
-3. **Solve:** $v = \\sqrt{\\frac{GM_{\\oplus}}{R_{\\oplus}}} = \\sqrt{\\frac{3.986\\times10^{14}}{6.371\\times10^6}} = 7,905$ m/s
-4. **Check:** Altitude required for stable orbit 
+2. **Set up equations:** $\\frac{mv^2}{R_{\\oplus}} = \\frac{GM_{\\oplus}m}{R_{\\oplus}^2} $ 3. **Solve:** $v = \\sqrt{\\frac{GM_{\\oplus}}{R_{\\oplus}}} = \\sqrt{\\frac{3.986\\times10^{14}}{6.371\\times10^6}} = 7,905 $m/s
+4. **Check:** Altitude required for stable orbit
 
-**Answer:** $v_\\text{orbital} = 7,905$ m/s
+**Answer:** $v_\\text{orbital} = 7,905 $m/s
 
 ---
 
@@ -127,15 +124,15 @@ created: 2026-07-27
 ```mermaid
 ```
 graph TD
-    A[Newtonian Mechanics] --> B[Newton's Laws]
-    A --> C[Force Analysis]
-    A --> D[Momentum Conservation]
-    B --> E[[Satellite Orbits]]
-    C --> F[[Gravity Models]]
-    D --> G[[Kepler Problem]]
-    E --> H[[GPS Positioning]]
-    F --> I[[Geoid Modeling]]
-    G --> J[[Orbital Perturbations]]
+ A[Newtonian Mechanics] --> B[Newton's Laws]
+ A --> C[Force Analysis]
+ A --> D[Momentum Conservation]
+ B --> E[[Satellite Orbits]]
+ C --> F[[Gravity Models]]
+ D --> G[[Kepler Problem]]
+ E --> H[[GPS Positioning]]
+ F --> I[[Geoid Modeling]]
+ G --> J[[Orbital Perturbations]]
 ```
 
 ---

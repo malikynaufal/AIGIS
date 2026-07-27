@@ -59,19 +59,21 @@ A **geodetic reference frame** is a set of precisely determined coordinates of c
 
 ### ITRF2020 Key Parameters (Epoch 2015.0)
 
-$$\mathbf{X}(t) = \mathbf{X}(t_0) + \dot{\mathbf{X}} \cdot (t - t_0) + \sum_i \mathbf{c}_i H(t_i, t)$$where:
--$\mathbf{X}(t_0)$= coordinates at reference epoch $t_0 = 2015.0$-$\dot{\mathbf{X}} $= site velocity (mm/year)
--$\mathbf{c}_i H(t_i, t)$= co-seismic/post-seismic displacement terms (Heaviside functions)
+$$\mathbf{X}(t) = \mathbf{X}(t_0) + \dot{\mathbf{X}} \cdot (t - t_0) + \sum_i \mathbf{c}_i H(t_i, t)
+
+$$ where:
+-$\mathbf{X}(t_0) $= coordinates at reference epoch $t_0 = 2015.0$-$\dot{\mathbf{X}} $= site velocity (mm/year)
+-$\mathbf{c}_i H(t_i, t) $= co-seismic/post-seismic displacement terms (Heaviside functions)
 
 **ITRF2020 vs ITRF2014**:
 
 - ITRF2020: improved scale & origin realization
 
-- ITRF2020:$a_T = 1.1 \text{ mm} $, $\dot{a}_T = 0.07 \text{ mm/yr} $(translation drift)
+- ITRF2020: $a_T = 1.1 \text{ mm}$, $\dot{a}_T = 0.07 \text{ mm/yr} $ (translation drift)
 
-- ITRF2020:$a_S = 0.07 \text{ ppb} $(scale bias)
+- ITRF2020: $a_S = 0.07 \text{ ppb}$ (scale bias)
 
-- ITRF2020:$a_R = 0.10 \text{ mas} $(rotation drift)
+- ITRF2020: $a_R = 0.10 \text{ mas}$ (rotation drift)
 
 ---
 
@@ -80,17 +82,18 @@ $$\mathbf{X}(t) = \mathbf{X}(t_0) + \dot{\mathbf{X}} \cdot (t - t_0) + \sum_i \m
 ### 14-Parameter Helmert (Seven Parameters + Rates)
 
 Given two ITRF realizations (A → B)
-:
 
-$$\mathbf{X}_B(t) = \mathbf{X}_A(t) + \mathbf{T} + (1+s)\mathbf{R}\mathbf{X}_A(t) + \dot{\mathbf{T}} \cdot \Delta t + \dot{s} \cdot \Delta t \cdot \mathbf{X}_A(t) + \dot{\mathbf{R}} \cdot \Delta t \cdot \mathbf{X}_A(t)$$**Parameters** (at reference epoch $t_0$):
+$$\mathbf{X}_B(t) = \mathbf{X}_A(t) + \mathbf{T} + (1+s)\mathbf{R}\mathbf{X}_A(t) + \dot{\mathbf{T}} \cdot \Delta t + \dot{s} \cdot \Delta t \cdot \mathbf{X}_A(t) + \dot{\mathbf{R}} \cdot \Delta t \cdot \mathbf{X}_A(t)
+
+$$**Parameters** (at reference epoch $t_0$):
 
 | Parameter | Symbol | Meaning |
 |-----------|--------|---------|
-| Translation | $\mathbf{T} = (T_x, T_y, T_z)$ | Origin shift |
-| Rotation | $\mathbf{R} = (R_x, R_y, R_z)$ | Axis orientation |
+| Translation | $\mathbf{T} = (T_x, T_y, T_z) $ | Origin shift |
+| Rotation | $\mathbf{R} = (R_x, R_y, R_z) $ | Axis orientation |
 | Scale | $s$ | Scale factor |
-| Translation rates | $\dot{\mathbf{T}} = (\dot{T}_x, \dot{T}_y, \dot{T}_z)$ | Origin drift |
-| Rotation rates | $\dot{\mathbf{R}} = (\dot{R}_x, \dot{R}_y, \dot{R}_z)$ | Axis rotation drift |
+| Translation rates | $\dot{\mathbf{T}} = (\dot{T}_x, \dot{T}_y, \dot{T}_z) $ | Origin drift |
+| Rotation rates | $\dot{\mathbf{R}} = (\dot{R}_x, \dot{R}_y, \dot{R}_z) $ | Axis rotation drift |
 | Scale rate | $\dot{s} $ | Scale drift |
 
 **14 parameters** = 7 (translation + rotation + scale) + 7 (rates)
@@ -105,13 +108,13 @@ For transformation from ITRF2014 → ITRF2020 (example values from IERS):
 
 | Parameter | Value (mm, ppb, mas) | Rate (mm/yr, ppb/yr, mas/yr) |
 |-----------|---------------------|-------------------------------|
-| $T_x$ | $-2.0$ | $-0.1$ |
-| $T_y$ | $-1.0$ | $0.0$ |
-| $T_z$ | $-3.3$ | $0.3$ |
-| $D$(scale) | $-0.39 $ppb | $0.07 $ppb/yr |
-| $R_x$ | $0.00 $mas | $0.10 $mas/yr |
-| $R_y$ | $0.00 $mas | $-0.20 $mas/yr |
-| $R_z$ | $0.00 $mas | $0.00 $mas/yr |
+| $T_x$ | $-2.0 $|$-0.1 $ |
+| $T_y$ | $-1.0 $|$0.0$ |
+| $T_z$ | $-3.3 $|$0.3$ |
+| $D$(scale) | $-0.39 $ ppb |$0.07$ ppb/yr |
+| $R_x$ |$0.00$ mas | $0.10$ mas/yr |
+| $R_y$ |$0.00$ mas | $-0.20 $ mas/yr |
+| $R_z$ |$0.00$ mas | $0.00$ mas/yr |
 
 *(Actual values vary by ITRF pair; check IERS ITRF2020 documentation for exact numbers)*
 
@@ -161,19 +164,21 @@ For transformation from ITRF2014 → ITRF2020 (example values from IERS):
 ### ITRF2014 → ITRF2020 (General Formula
 )
 
-$$\mathbf{X}_{2020}(t) = \mathbf{X}_{2014}(t) + \mathbf{T} + (1+s)\mathbf{R}\mathbf{X}_{2014}(t) + \Delta t\cdot(\dot{\mathbf{T}} + (1+\dot{s})\mathbf{R}\mathbf{X}_{2014}(t) + (1+s)\dot{\mathbf{R}}\mathbf{X}_{2014}(t))$$
+$$\mathbf{X}_{2020}(t) = \mathbf{X}_{2014}(t) + \mathbf{T} + (1+s)\mathbf{R}\mathbf{X}_{2014}(t) + \Delta t\cdot(\dot{\mathbf{T}} + (1+\dot{s})\mathbf{R}\mathbf{X}_{2014}(t) + (1+s)\dot{\mathbf{R}}\mathbf{X}_{2014}(t))
+
+$$
 
 **Practical steps**:
-1. Obtain $\mathbf{X}(t_0) $and $\dot{\mathbf{X}} $from ITRF2014 solution
+1. Obtain $\mathbf{X}(t_0) $and $\dot{\mathbf{X}} $ from ITRF2014 solution
 2. Apply Helmert 14-parameter transformation
-3. Propagate to epoch $t $using velocity field
+3. Propagate to epoch $t$ using velocity field
 
 ### Scale & Origin Differences (Typical)
 | ITRF Pair | Scale Bias (ppb) | Origin Shift (mm) | Rate (mm/yr) |
 |-----------|------------------|-------------------|--------------|
 | ITRF2008 → ITRF2014 | 0.94 | ~1–2 | ~0.1–0.3 |
 | ITRF2014 → ITRF2020 | 0.07 | ~1–3 | ~0.1 |
-| WGS84 → ITRF2020 | $< 1 \text{ cm} $ | $< 1 \text{ cm} $ | $< 1 \text{ mm/yr} $ |
+| WGS84 → ITRF2020 | $< 1 \text{ cm} $|$< 1 \text{ cm} $|$< 1 \text{ mm/yr} $ |
 
 ### Practical Implications
 
@@ -183,7 +188,7 @@ $$\mathbf{X}_{2020}(t) = \mathbf{X}_{2014}(t) + \mathbf{T} + (1+s)\mathbf{R}\mat
 
 - For local surveys (mm accuracy): Apply full Helmert transformation
 
-- Always propagate coordinates to survey epoch:$\mathbf{X}(t) = \mathbf{X}(t_0) + \dot{\mathbf{X}}\Delta t$---
+- Always propagate coordinates to survey epoch: $\mathbf{X}(t) = \mathbf{X}(t_0) + \dot{\mathbf{X}}\Delta t $---
 
 ## 📡 Multi-GNSS Integration (GPS + Galileo + GLONASS + BeiDou)
 
@@ -199,7 +204,7 @@ $$\mathbf{X}_{2020}(t) = \mathbf{X}_{2014}(t) + \mathbf{T} + (1+s)\mathbf{R}\mat
 ### Multi-GNSS Benefits
 | Benefit | Explanation |
 |---------|-------------|
-| **More satellites visible** | $\sim$30+ satellites simultaneously (vs. 8–12 GPS only) |
+| **More satellites visible** | $\sim $ 30+ satellites simultaneously (vs. 8–12 GPS only) |
 | **Improved geometry (lower DOP)** | Better satellite geometry → lower DOP values |
 | **Faster convergence (PPP)** | PPP convergence from 30 min (GPS only) to 10–15 min (multi-GNSS) |
 | **Better reliability** | Redundancy for outlier detection |
@@ -208,21 +213,17 @@ $$\mathbf{X}_{2020}(t) = \mathbf{X}_{2014}(t) + \mathbf{T} + (1+s)\mathbf{R}\mat
 
 ### Multi-GNSS Observation Equations
 
-For satellite system $s$(GPS, Galileo, GLONASS, BeiDou):
+For satellite system $s$ (GPS, Galileo, GLONASS, BeiDou):
 
 **Pseudorange**
-:
 
-$$P^s = \rho^s + c(\delta t_r - \delta t^{s}) + I^s + T^s + \epsilon_P^s$$
+$$ P^s = \rho^s + c(\delta t_r - \delta t^{s}) + I^s + T^s + \epsilon_P^s $$**Carrier Phase**$$\Phi^s = \rho^s + c(\delta t_r - \delta t^{s}) - I^s + T^s + \lambda N^s + \epsilon_\Phi^s
 
-**Carrier Phase**
-:
-
-$$\Phi^s = \rho^s + c(\delta t_r - \delta t^{s}) - I^s + T^s + \lambda N^s + \epsilon_\Phi^s$$
+$$
 
 **System-specific considerations**:
 
-- **Inter-system bias (ISB)**:$\delta t_r^{\text{GPS}} \neq \delta t_r^{\text{GAL}} \neq \delta t_r^{\text{GLO}} $— must estimate ISB parameters
+- **Inter-system bias (ISB)**: $\delta t_r^{\text{GPS}} \neq \delta t_r^{\text{GAL}} \neq \delta t_r^{\text{GLO}} $— must estimate ISB parameters
 
 - **Inter-frequency bias (IFB)**: GLONASS FDMA has different code biases per frequency
 
@@ -233,9 +234,11 @@ $$\Phi^s = \rho^s + c(\delta t_r - \delta t^{s}) - I^s + T^s + \lambda N^s + \ep
 ### PPP Processing with Multi-GNS
 S
 
-$$\text{PPP observation model:} \quad \mathbf{y} = \mathbf{A}\mathbf{x} + \mathbf{l} + \epsilon$$where $\mathbf{x} $includes:
+$$\text{PPP observation model:} \quad \mathbf{y} = \mathbf{A}\mathbf{x} + \mathbf{l} + \epsilon
 
-- Station coordinates$(X, Y, Z)$- Zenith wet delay (ZWD)
+$$ where $\mathbf{x} $ includes:
+
+- Station coordinates $(X, Y, Z)$- Zenith wet delay (ZWD)
 
 - Inter-system biases (ISB)
 
@@ -243,7 +246,7 @@ $$\text{PPP observation model:} \quad \mathbf{y} = \mathbf{A}\mathbf{x} + \mathb
 
 ### Integer Ambiguity Resolution (AR) in Multi-GNSS
 
-$$N_{\text{wide-lane}} = \frac{f_1 N_1 - f_2 N_2}{f_1 - f_2}N_{\text{narrow-lane}} = N_1 + N_{\text{wide-lane}} $$Modern PPP-AR enables cm-level accuracy with multi-GNSS.
+$$ N_{\text{wide-lane}} = \frac{f_1 N_1 - f_2 N_2}{f_1 - f_2}N_{\text{narrow-lane}} = N_1 + N_{\text{wide-lane}} $$ Modern PPP-AR enables cm-level accuracy with multi-GNSS.
 
 ---
 
@@ -271,19 +274,19 @@ $$N_{\text{wide-lane}} = \frac{f_1 N_1 - f_2 N_2}{f_1 - f_2}N_{\text{narrow-lane
 
 ### From ITRF to Local Surveys (Indonesia)
 
-$$\mathbf{X}_{\text{ITRF2020}}(t) = \mathbf{X}_{\text{ITRF2014}}(t_0) + \dot{\mathbf{X}}(t - t_0) + \Delta_{\text{Helmert}}H_{\text{TSSGI}} = h_{\text{ITRF2020}} - N_{\text{TSSGI}} $$---
+$$ \mathbf{X}_{\text{ITRF2020}}(t) = \mathbf{X}_{\text{ITRF2014}}(t_0) + \dot{\mathbf{X}}(t - t_0) + \Delta_{\text{Helmert}}H_{\text{TSSGI}} = h_{\text{ITRF2020}} - N_{\text{TSSGI}} $$---
 
 ## 📐 Practical Formulas Summary
 
 | Task | Formula/Method |
 |------|----------------|
-| **ITRF velocity propagation** | $\mathbf{X}(t) = \mathbf{X}(t_0) + \dot{\mathbf{X}} \cdot (t - t_0)$ |
-| **Helmert 7-param (Bursa-Wolf)** | $\mathbf{X}_B = \mathbf{T} + (1+s)\mathbf{R}\mathbf{X}_A$ |
-| **Helmert 14-param (ITRF)** | Add rates:$\dot{\mathbf{T}}, \dot{s}, \dot{\mathbf{R}} $ |
-| **DOP (Geometric)** | $DOP = \sqrt{tr((\mathbf{A}^T\mathbf{A})^{-1})} $ |
+| **ITRF velocity propagation** | $\mathbf{X}(t) = \mathbf{X}(t_0) + \dot{\mathbf{X}} \cdot (t - t_0) $ |
+| **Helmert 7-param (Bursa-Wolf)** | $\mathbf{X}_B = \mathbf{T} + (1+s)\mathbf{R}\mathbf{X}_A $ |
+| **Helmert 14-param (ITRF)** | Add rates: $\dot{\mathbf{T}}, \dot{s}, \dot{\mathbf{R}} $ |
+| **DOP (Geometric)** | $DOP = \sqrt{tr((\mathbf{A}^T\mathbf{A})^{-1})}$ |
 | **PPP position** | $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l} $ |
-| **Ambiguity resolution** | $N_{WL} = \frac{f_1 N_1 - f_2 N_2}{f_1 - f_2} $ |
-| **Co-seismic displacement** | Heaviside function $H(t_i, t) $at earthquake epoch $t_i$ |
+| **Ambiguity resolution** | $N_{WL} = \frac{f_1 N_1 - f_2 N_2}{f_1 - f_2}$ |
+| **Co-seismic displacement** | Heaviside function $H(t_i, t)$at earthquake epoch $ t_i$ |
 
 ---
 

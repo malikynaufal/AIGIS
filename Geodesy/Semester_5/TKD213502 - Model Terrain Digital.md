@@ -28,7 +28,9 @@ Model Terrain Digital (DTM) mempelajari representasi permukaan bumi dalam bentuk
 
 - **Interpolasi**: Natural Neighbor, IDW, Kriging, Spline, TIN
 
-$$z = \sum_{i=1}^{n} w_i z_i$$### 3. Elevasi dan Kontur
+$$ z = \sum_{i=1}^{n} w_i z_i$ $
+
+### 3. Elevasi dan Kontur
 
 - **Kontur lurus (direct)**: mengukur elevasi pada titik-titik reguler
 
@@ -40,12 +42,12 @@ $$z = \sum_{i=1}^{n} w_i z_i$$### 3. Elevasi dan Kontur
 
 | Atribut | Rumus | Penggunaan |
 |---------|-------|------------|
-| Slope | $\sqrt{(\partial z/\partial x)^2 + (\partial z/\partial y)^2} $ | Drainage, landslide |
-| Aspect | $\arctan(-\partial z/\partial x, \partial z/\partial y)$ | Solar radiation |
-| Hillshade | $\cos\theta_z\cos\alpha_i + \sin\theta_z\sin\alpha_i\cos(\phi_{az}-\alpha_{az})$ | Visualisasi |
-| Curvature | $\partial^2 z/\partial x^2$ | Drainage convergence |
-| Roughness | $\text{Var}(z_i)$ | Texture |
-| TWI (Topographic Wetness Index) | $\ln(a/\tan\beta)$ | Hydrology |
+| Slope | $\sqrt{(artial z/artial x)^2 + (artial z/artial y)^2} $ | Drainage, landslide |
+| Aspect | $\arctan(-artial z/artial x, artial z/artial y) $ | Solar radiation |
+| Hillshade | $\cosheta_z\cos\alpha_i + \sinheta_z\sin\alpha_i\cos(hi_{az}-\alpha_{az}) $ | Visualisasi |
+| Curvature | $artial^2 z/artial x^2 $ | Drainage convergence |
+| Roughness | $ext{Var}(z_i) $ | Texture |
+| TWI (Topographic Wetness Index) | $\ln(a/an\beta)$ | Hydrology |
 | Flow Direction | D8 algorithm | Watershed |
 
 ### 5. Sumber Data

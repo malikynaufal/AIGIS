@@ -28,24 +28,22 @@ updated: 2026-07-27
 
 ```mermaid
 graph TD
-    A[TAI - Atomic] --> B[UTC - Civil]
-    A --> C[GPS Time - 19s offset]
-    A --> D[Galileo Time - 0s offset]
-    A --> E[BeiDou Time - 0s offset]
-    B --> F[GLONASS Time - +3h]
-    C --> G[GNSS Positioning]
-    D --> G
-    E --> G
-    F --> G
+ A[TAI - Atomic] --> B[UTC - Civil]
+ A --> C[GPS Time - 19s offset]
+ A --> D[Galileo Time - 0s offset]
+ A --> E[BeiDou Time - 0s offset]
+ B --> F[GLONASS Time - +3h]
+ C --> G[GNSS Positioning]
+ D --> G
+ E --> G
+ F --> G
 ```
 
 ## GPS Time
 
 GPS Time started at 00:00:00 UTC on January 6, 1980, and does not include leap seconds. As of 2024:
 
-$$
-
-\text{GPS Time} = \text{UTC} + 18 \text{ s}
+$$\text{GPS Time} = \text{UTC} + 18 \text{ s}
 
 $$
 
@@ -53,15 +51,11 @@ $$
 
 GPS time is expressed as a week number and seconds-of-week:
 
-$$
-
-\text{GPS Week} = \text{floor}\left(\frac{\text{GPS seconds since epoch}}{604\,800}\right)
+$$\text{GPS Week} = \text{floor}\left(\frac{\text{GPS seconds since epoch}}{604\,800}\right)
 
 $$
 
-$$
-
-\text{Seconds of week} = \text{GPS seconds} \mod 604\,800
+$$\text{Seconds of week} = \text{GPS seconds} \mod 604\,800
 
 $$
 
@@ -80,9 +74,7 @@ GPS week number is transmitted as a 10-bit number (0–1023), causing rollover e
 
 Leap seconds are inserted into UTC to keep it within 0.9 s of UT1 (Earth-rotation-based time):
 
-$$
-
-\text{UTC} = \text{UT1} + \text{Leap Seconds}
+$$\text{UTC} = \text{UT1} + \text{Leap Seconds}
 
 $$
 
@@ -116,29 +108,13 @@ Total as of 2024: **37 leap seconds**.
 
 UT1 is astronomical solar time based on Earth's rotation:
 
-$$
+$$\text{UT1} = \text{UTC} + \text{UT1-UTC}
 
-\text{UT1} = \text{UTC} + \text{UT1-UTC}
+$$ The UT1-UTC difference is monitored by [[IERS]] and published in the IERS Bulletin A: $$\text{UT1-UTC} = -0.050\,868 \text{ s} \quad \text{(as of 2024-01-01)}
 
-$$
+$$ ### Greenwich Sidereal Time $$\theta = 24110.54841 + 8640184.812866 \cdot T + 0.093104 \cdot T^2 - 6.2e-6 \cdot T^3 \quad \text{(seconds)}
 
-The UT1-UTC difference is monitored by [[IERS]] and published in the IERS Bulletin A:
-
-$$
-
-\text{UT1-UTC} = -0.050\,868 \text{ s} \quad \text{(as of 2024-01-01)}
-
-$$
-
-### Greenwich Sidereal Time
-
-$$
-
-\theta = 24110.54841 + 8640184.812866 \cdot T + 0.093104 \cdot T^2 - 6.2e-6 \cdot T^3 \quad \text{(seconds)}
-
-$$
-
-where $T$ is Julian centuries since J2000.0.
+$$ where $ T $ is Julian centuries since J2000.0.
 
 ## In [[Geodesy]] Context
 
@@ -146,13 +122,9 @@ where $T$ is Julian centuries since J2000.0.
 
 GPS pseudorange equation:
 
-$$
+$$\rho = c \cdot (\tau_{GPS} - t_{GPS}) + c \cdot \delta t_{sat} - c \cdot \delta t_{rec} + \epsilon_{ion} + \epsilon_{tropo}
 
-\rho = c \cdot (\tau_{GPS} - t_{GPS}) + c \cdot \delta t_{sat} - c \cdot \delta t_{rec} + \epsilon_{ion} + \epsilon_{tropo}
-
-$$
-
-where $\tau_{GPS}$ is the signal transmission time in GPS Time.
+$$ where $\tau_{GPS}$ is the signal transmission time in GPS Time.
 
 ### Time Conversion for Indonesian Surveys
 

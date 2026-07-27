@@ -1,54 +1,75 @@
-# 📚 Pilihan: Pengelolaan Wilayah Pesisir
+---
+tags: [aigis, geodesy, pilihan, coastal-management, gis, environment]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD213615
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Pengelolaan Wilayah Pesisir (Coastal Zone Management)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD213615 | **SKS:** 3 (2-1) | **Semester:** 5–7
 
-Pengelolaan Wilayah Pesisir adalah mata kuliah pilihan yang membahas aspek-aspek pengelolaan dan penataan wilayah pesisir, termasuk pemetaan, pemantauan, dan perencanaan tata ruang pesisir. Wilayah pesisir merupakan area transisi antara daratan dan laut, menjadi ekosistem yang rentan terhadap perubahan iklim, erosi, dan pembangunan. Mahasiswa akan mempelajari teknik survei pesisir, pemetaan garis pantai, dan pengelolaan data spasial untuk wilayah pesisir.
+## Course Overview
 
-Dalam konteks Teknik Geodesi, survei dan pemetaan pesisir memerlukan koordinasi antara survei terestris, survei pantai, dan penginderaan jauh. Perubahan garis pantai (coastal erosion dan accretion) dipantau menggunakan teknologi seperti drone, UAV, LiDAR, dan citra satelit. Data ini menjadi dasar untuk tata ruang pesisir dan pengambilan keputusan mitigasi banjir pesisir.
+Coastal Zone Management integrates [[GIS]], [[Remote Sensing]], and [[Survei Hidrografi]] techniques for the sustainable management of coastal areas. Covers shoreline mapping, coastal zoning, mangrove monitoring, and spatial planning for coastal resources.
 
-Mata kuliah ini menggabungkan teori pengelolaan pesisir dengan praktik pengumpulan dan analisis data spasial. Studi kasus mencakup wilayah pesisir Indonesia seperti pesisir utara Jawa, pesisir Bali, dan pesisir Sumatera. Topik tambahan mencakup dampak kenaikan muka laut dan adaptasi perubahan iklim.
+## Key Topics
 
-## Topik Utama
+### 1. Coastal Survey Techniques
 
-### 1. Geografi Pesisir
+| Method | Application | Accuracy |
+|--------|-------------|----------|
+| RTK-GNSS | Shoreline mapping | 2–5 cm |
+| Hydrographic | Bathymetry | 5–20 cm |
+| Aerial photography | Land cover | 10–50 cm |
+| Satellite remote sensing | Large-scale changes | 30 m (Landsat) |
+| UAV/drone survey | High-resolution coastal | 2–10 cm |
 
-- Karakteristik dan tipologi pantai
+### 2. Shoreline Change Analysis
 
-- Proses erosi dan akresi
+**End Point Rate (EPR):**
+$$
+R_{EPR} = \frac{x_2 - x_1}{t_2 - t_1}
+$$
 
-- Dampak perubahan iklim pada pesisir
+**Linear Regression Rate (LRR):**
+$$ R_{LRR} = \text{slope of shoreline position vs. time}
+$$
 
-### 2. Teknik Pengukuran
+### 3. Coastal Vulnerability Index (CVI)
 
-- Survei pantai dan hidrografi
+$$ CVI = \frac{\sqrt{\prod_{i=1}^n r_i}}{n}
+$$
 
-- Pemetaan garis pantai (shoreline mapping)
+where $r_i$ are ranked factors (geomorphology, slope, sea-level rise, wave height, tide range)
 
-- Penginderaan jauh untuk pemantauan pesisir
+### 4. Mangrove Monitoring
 
-### 3. Pengelolaan Tata Ruang
+**Vegetation Indices for Mangroves:**
+- **MVI (Mangrove Vegetation Index):**
 
-- Perencanaan tata ruang pesisir
+ $$ MVI = \frac{NIR - SWIR}{Green - SWIR}$$
 
-- Penetapan kawasan pesisir
+- **NDVI:** Standard vegetation density
 
-- Kebijakan mitigasi dan adaptasi
+### 5. Coastal Zoning in Indonesia
 
-## Tujuan Pembelajaran
+| Zone | Designation | Buffer |
+|------|------------|--------|
+| Sempadan Pantai | Protected shoreline | 100 m from MHWL |
+| WiP | Public access | Variable |
+| KPA | Conservation area | Full protection |
 
-1. Memahami karakteristik dan dinamika wilayah pesisir
-2. Menggunakan teknik survei untuk pemetaan pesisir
-3. Mengelola data spasial untuk perencanaan pesisir
-4. Merumuskan rekomendasi tata kelola wilayah pesisir
+## Assignment
+Map shoreline change for a 20 km coastal segment using Landsat time series (5 epochs over 20 years). Compute EPR and LRR rates.
 
-## Referensi
+## Related Concepts
 
-- Komar, P.D. (1998). *Beach Processes and Sedimentation*. Prentice Hall.
+- [[Survei Hidrografi I]] — Hydrographic survey
+- [[Survei Rekayasa Laut]] — Marine engineering
+- [[Remote Sensing]] — Satellite monitoring
+- [[Sistem Informasi Geografis Terapan]] — GIS application
+- [[Mitigasi dan Manajemen Bencana]] — Disaster management
 
-- Turner, I.L., & Leatherman, S.P. (1997). "Beach Dunes: Their Characteristics and Management." *Journal of Coastal Research*.
+---
 
-- Indonesia, UU No. 27 Tahun 2007 tentang Pengelolaan Wilayah Pesisir.
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

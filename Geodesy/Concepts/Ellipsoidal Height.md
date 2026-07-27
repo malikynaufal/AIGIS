@@ -7,7 +7,7 @@ updated: 2026-07-27
 
 # 📈 Ellipsoidal Height (h)
 
-**Ellipsoidal height** $h$(also called *geodetic height*) is the distance measured above the [[Reference Ellipsoid]] along the ellipsoidal *normal* (the perpendicular to the ellipsoid surface). It is what [[GNSS]]/[[GPS]] receivers measure **directly**.
+**Ellipsoidal height** $h $ (also called *geodetic height*) is the distance measured above the [[Reference Ellipsoid]] along the ellipsoidal *normal* (the perpendicular to the ellipsoid surface). It is what [[GNSS]]/[[GPS]] receivers measure **directly**.
 
 ## The Height Trio
 
@@ -22,31 +22,31 @@ Every point on Earth has three distinct height values:
 ### Fundamental Relatio
 n
 
-$$h = H + N$$This simple equation is the bridge between satellite-based positioning (ellipsoidal) and traditional surveying (orthometric). For a GNSS survey: measure $h$via satellite, subtract $N $from a geoid model, obtain $H $usable for mapping and engineering.
+$$ h = H + N $$ This simple equation is the bridge between satellite-based positioning (ellipsoidal) and traditional surveying (orthometric). For a GNSS survey: measure$ h $via satellite, subtract $N $from a geoid model, obtain $H $ usable for mapping and engineering.
 
 ## Geometric Meaning
 
-At a point $P $with geodetic latitude $\phi $and longitude $\lambda$:
+At a point $P $with geodetic latitude $\phi $and longitude $\lambda $:
 
-- The ellipsoidal height $h $extends along the *ellipsoidal normal* (the line perpendicular to the ellipsoid at $\phi, \lambda$).
+- The ellipsoidal height $h $extends along the *ellipsoidal normal* (the line perpendicular to the ellipsoid at $\phi, \lambda $).
 
 - This line does **not** pass through Earth's center of mass (except at the equator and poles), unlike the geocentric radius.
 
 - The point's ECEF coordinates are:
 
-$$X = (N + h)\cos\phi\cos\lambdaY = (N + h)\cos\phi\sin\lambdaZ = \left(N(1 - e^2) + h\right)\sin\phi$$where $N = \frac{a}{\sqrt{1 - e^2\sin^2\phi}} $is the radius of curvature in the prime vertical.
+$$ X = (N + h)\cos\phi\cos\lambdaY = (N + h)\cos\phi\sin\lambdaZ = \left(N(1 - e^2) + h\right)\sin\phi $$ where $ N = \frac{a}{\sqrt{1 - e^2\sin^2\phi}} $ is the radius of curvature in the prime vertical.
 
 ## Physical Interpretation
 
 - **Ellipsoidal height is geometric**, not physical.
 
-- Because the [[Reference Ellipsoid]] is a smooth mathematical surface,$h $takes no account of gravity, topography, or mass distributions.
+- Because the [[Reference Ellipsoid]] is a smooth mathematical surface,$h$ takes no account of gravity, topography, or mass distributions.
 
-- Values range from about$-100 $m (ocean trenches relative to ellipsoid) to$+9000 $m (Mt. Everest ellipsoidal height).
+- Values range from about $-100 $m (ocean trenches relative to ellipsoid) to $+9000 $ m (Mt. Everest ellipsoidal height).
 
 ## Typical Values at Selected Locations (WGS84)
 
-| Location | $\phi$ | $\lambda$ | Ortho. H (m) | N (m) | Ellip. h (m) |
+| Location | $\phi $|$\lambda $ | Ortho. H (m) | N (m) | Ellip. h (m) |
 |----------|--------|-----------|--------------|-------|--------------|
 | Mt. Everest | 27.99°N | 86.93°E | 8848.9 | ~−25 | ~8824 |
 | Dead Sea | 31.50°N | 35.50°E | −430.5 | ~−20 | ~−450 |
@@ -76,9 +76,8 @@ The geoid undulation $N $varies by ±110 m globally, causing significant differe
 ## Relationship to Gravity
 
 The gradient of ellipsoidal height with respect to gravity potential is
-:
 
-$$\frac{dh}{dW} = -\frac{1}{\gamma} $$where $\gamma $is normal gravity at the ellipsoid. This connects height systems with [[Physical Geodesy]] and the [[Gravity Field]].
+$$\frac{dh}{dW} = -\frac{1}{\gamma} $$ where $\gamma $ is normal gravity at the ellipsoid. This connects height systems with [[Physical Geodesy]] and the [[Gravity Field]].
 
 ## See also
 
@@ -86,9 +85,9 @@ $$\frac{dh}{dW} = -\frac{1}{\gamma} $$where $\gamma $is normal gravity at the el
 
 - [[Geoid Undulation]] — The conversion factor $N$
 
-- [[Geodetic Coordinates]] — Complete position representation ($\phi, \lambda, h$)
+- [[Geodetic Coordinates]] — Complete position representation ($\phi, \lambda, h $)
 
-- [[Geocentric Cartesian ECEF]] — Conversion to/from $X,Y,Z$
+- [[Geocentric Cartesian ECEF]] — Conversion to/from $ X,Y,Z$
 
 ## References
 

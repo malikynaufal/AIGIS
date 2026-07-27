@@ -16,7 +16,7 @@ updated: 2026-07-27
 
 ### Snell's Law of Refraction
 
-$$n_1 \sin\theta_1 = n_2 \sin\theta_2$$| Medium | Refractive index $n$ |
+$n_1 \sin\theta_1 = n_2 \sin\theta_2 $$ | Medium | Refractive index $$ n$ |
 |--------|---------------------|
 | Vacuum | 1.0000 |
 | Air (15°C, 101.3 kPa) | 1.000293 |
@@ -24,19 +24,19 @@ $$n_1 \sin\theta_1 = n_2 \sin\theta_2$$| Medium | Refractive index $n$ |
 | Glass (crown) | 1.52 |
 | Ice | 1.31 |
 
-**Total internal reflection:** Occurs when $\theta_1 > \theta_c $where $\sin\theta_c = n_2/n_1$.
+**Total internal reflection:** Occurs when$ \theta_1 > \theta_c $ where $\sin\theta_c = n_2/n_1$.
 
 ### Thin Lens Equation
 
-$$\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $$where $f$= focal length,$d_o$= object distance,$d_i$= image distance.
+$$ \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $$ where $f$ = focal length, $d_o$ = object distance, $d_i$ = image distance.
 
-Magnification:$M = -d_i/d_o = h_i/h_o$### Mirrors
+Magnification: $M = -d_i/d_o = h_i/h_o$### Mirrors
 
 | Surface | Formula |
 |---------|---------|
 | Flat mirror | Virtual image, same size, reversed |
-| Concave | $\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $, $f > 0$ |
-| Convex | $\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $, $f < 0$ |
+| Concave | $ \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $, $f > 0$ |
+| Convex | $ \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $, $f < 0$ |
 
 ---
 
@@ -45,13 +45,12 @@ Magnification:$M = -d_i/d_o = h_i/h_o$### Mirrors
 ### Geodetic Refraction
 
 When a line of sight passes through the atmosphere, light rays bend. The geodetic refraction coefficient
-:
 
-$$k = \frac{R}{R_e} $$where $R$= radius of curvature of the light ray,$R_e$= Earth's radius of curvature.
+$k = \frac{R}{R_e}$ where $R$ = radius of curvature of the light ray, $R_e$ = Earth's radius of curvature.
 
 **Typical values:**
 
-| Condition | $k $value |
+| Condition | $k$ value |
 |-----------|-----------|
 | Horizontal | 0.13 (standard) |
 | Vertical | 0.40 (standard) |
@@ -64,14 +63,16 @@ $$k = \frac{R}{R_e} $$where $R$= radius of curvature of the light ray,$R_e$= Ear
 **Differential leveling refraction error:*
 *
 
-$$\Delta h_{ref} \approx \frac{k}{2R} \cdot s^2$$where $s$= sight distance. For $k = 0.14 $and $s = 100 $m:$\Delta h_{ref} \approx \frac{0.14}{2 \times 6{,}371{,}000} \times 10{,}000 \approx 0.1 $mm
+$$ \Delta h_{ref} \approx \frac{k}{2R} \cdot s^2
+
+$ where $ s$= sight distance. For $k = 0.14 $ and $ s = 100 $m: $ \Delta h_{ref} \approx \frac{0.14}{2 \times 6{,}371{,}000} \times 10{,}000 \approx 0.1 $mm$
 
 **Rule of thumb:** Equal foresight and backsight distances cancel refraction.
 
 ### Refraction in Electronic Distance Measurement (EDM
 )
 
-$$\Delta D_{atm} = D\left[\frac{N_0 P}{760} \cdot \frac{273.15}{273.15+T} - 1\right] \cdot 10^{-6} $$where $N_0$= refractivity at 0°C, 760 mmHg.
+$$ \Delta D_{atm} = D\left[\frac{N_0 P}{760} \cdot \frac{273.15}{273.15+T} - 1\right] \cdot 10^{-6} $$ where $N_0$ = refractivity at 0°C, 760 mmHg.
 
 | Wavelength | $N_0$(ppm) |
 |------------|-------------|
@@ -82,18 +83,17 @@ $$\Delta D_{atm} = D\left[\frac{N_0 P}{760} \cdot \frac{273.15}{273.15+T} - 1\ri
 ### Tropospheric Mapping Functions
 
 The total tropospheric delay is the integral along the signal path
-:
 
-$$\Delta\rho_{trop} = \int n_{wet}(s)\,ds + \int n_{dry}(s)\,ds$$
+$$ \Delta\rho_{trop} = \int n_{wet}(s)\,ds + \int n_{dry}(s)\,ds
 
-Mapping functions map zenith delay to slant delay:
+$$ Mapping functions map zenith delay to slant delay:
 
 **Simple cosine mapping:**$m(\theta) = 1/\cos\theta = \sec\theta$(accurate above 20°)
 
 **Niell Mapping Function (NMF):*
 *
 
-$$m(\theta) = \frac{1 + \frac{a}{1+\frac{b}{1+c}}}{\sin\theta + \frac{a}{\sin\theta + \frac{b}{\sin\theta + c}}} $$where $a, b, c $depend on station latitude and height.
+$$ m(\theta) = \frac{1 + \frac{a}{1+\frac{b}{1+c}}}{\sin\theta + \frac{a}{\sin\theta + \frac{b}{\sin\theta + c}}} $$ where $a, b, c $depend on station latitude and height.
 
 ### Atmospheric Dispersion
 
@@ -110,9 +110,8 @@ For GNSS, the atmosphere is essentially non-dispersive at microwave frequencies 
 ### Lens-Based Surveying Instruments
 
 **Theodolite optics:** Collimator lens focuses parallel light rays at focal point. Resolving power
-:
 
-$$\delta = \frac{1.22\lambda}{D} $$where $D$= aperture diameter,$\lambda$= wavelength. For $\lambda = 550 $nm and $D = 40 $mm:$\delta \approx 1.7 $arcsec.
+$$ \delta = \frac{1.22\lambda}{D} $$ where $D$ = aperture diameter,$ \lambda$= wavelength. For $ \lambda = 550 $nm and $D = 40 $mm:$ \delta \approx 1.7 $arcsec.
 
 **EDM prism:** Corner-cube reflector returns light along incident direction regardless of orientation (within ~30°).
 
@@ -124,9 +123,9 @@ $$\delta = \frac{1.22\lambda}{D} $$where $D$= aperture diameter,$\lambda$= wavel
 |----------|------|-----|
 | $n_1\sin\theta_1 = n_2\sin\theta_2$ | Snell's law | Refraction at interfaces |
 | $k = R/R_e$ | Refraction coefficient | Line-of-sight bending |
-| $\Delta h_{ref} = \frac{k}{2R}s^2$ | Refraction error in leveling | Height correction |
+| $ \Delta h_{ref} = \frac{k}{2R}s^2$ | Refraction error in leveling | Height correction |
 | $m(\theta) = 1/\cos\theta$ | Simple mapping | Zenith-to-slant mapping |
-| $\delta = 1.22\lambda/D$ | Rayleigh criterion | Resolution limit |
+| $ \delta = 1.22\lambda/D$ | Rayleigh criterion | Resolution limit |
 
 ---
 
@@ -145,8 +144,8 @@ $$\delta = \frac{1.22\lambda}{D} $$where $D$= aperture diameter,$\lambda$= wavel
 ## Study Problems
 
 1. **Recall:** A level sight is 120 m long. With refraction coefficient 0.14, compute the refraction error in mm.
-2. **Application:** Compute the zenith tropospheric delay from hydrostatic ($ZHD = 2.3$ m) and wet ($ZWD = 0.2$ m) components at elevation angle 15° using simple cosine mapping.
-3. **Derivation:** Starting from Snell's law, derive the critical angle for total internal reflection from glass ($n = 1.52$) to air.
+2. **Application:** Compute the zenith tropospheric delay from hydrostatic ( $ZHD = 2.3 $m) and wet ( $ZWD = 0.2 $m) components at elevation angle 15° using simple cosine mapping.
+3. **Derivation:** Starting from Snell's law, derive the critical angle for total internal reflection from glass ( $n = 1.52$) to air.
 4. **Real-world:** An EDM measures 2,040.150 m at temperature 25°C, pressure 1010 hPa. The refractivity is 280 ppm at standard conditions. Estimate the atmospheric correction.
 
 ---
@@ -156,7 +155,7 @@ $$\delta = \frac{1.22\lambda}{D} $$where $D$= aperture diameter,$\lambda$= wavel
 1. **Confusing refraction in light vs. radio:** Same physics, very different magnitude — optical refraction is much stronger.
 2. **Assuming refraction is always positive:** Temperature inversions cause negative (abnormal) refraction.
 3. **Ignoring elevation dependence:** Refraction mapping functions diverge at low elevations ($\theta < 10°$).
-4. **Using constant $k $for all conditions:**$k$ varies with time, weather, and terrain.
+4. **Using constant $k$ for all conditions:**$k$ varies with time, weather, and terrain.
 5. **Mixing up group and phase refraction:** For GNSS, group delay and phase advance are equal magnitude, opposite sign.
 
 ---

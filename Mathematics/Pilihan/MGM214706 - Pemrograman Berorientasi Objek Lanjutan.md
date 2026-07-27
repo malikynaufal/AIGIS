@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Advanced Object-Oriented Programming
 
-**Course Code:** MGM214706 
-**SKS:** 3 (2-1) 
-**Semester:** 5 
-**Prerequisites:** Pemrograman Dasar, Dasar-Dasar OOP 
+**Course Code:** MGM214706
+**SKS:** 3 (2-1)
+**Semester:** 5
+**Prerequisites:** Pemrograman Dasar, Dasar-Dasar OOP
 
 ---
 

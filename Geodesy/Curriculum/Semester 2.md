@@ -35,9 +35,7 @@ Semester 2 focuses on computational methods for geodesy: coordinate systems, lea
 
 ### TKD211203 — Hitung Perataan (Least Squares Adjustment)
 The most important course in geodesy:
-- Observation equations: $\mathbf{y} = f(\mathbf{x}) + \mathbf{v}$
-- Linearization: $\mathbf{v} = \mathbf{A}\hat{\mathbf{x}} + \mathbf{l}$
-- Normal equations: $\mathbf{A}^T\mathbf{P}\mathbf{A}\hat{\mathbf{x}} = \mathbf{A}^T\mathbf{P}\mathbf{l}$
+- Observation equations: $\mathbf{y} = f(\mathbf{x}) + \mathbf{v} $- Linearization: $\mathbf{v} = \mathbf{A}\hat{\mathbf{x}} + \mathbf{l} $- Normal equations: $\mathbf{A}^T\mathbf{P}\mathbf{A}\hat{\mathbf{x}} = \mathbf{A}^T\mathbf{P}\mathbf{l} $
 - Covariance propagation
 - Weight matrices and reliability
 
@@ -49,8 +47,7 @@ The most important course in geodesy:
 
 ## Key Formulas (Preview)
 
-- Weighted least squares: $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l}$
-- Covariance of adjusted parameters: $\mathbf{Q}_{\hat{x}\hat{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}$
+- Weighted least squares: $\hat{\mathbf{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}\mathbf{A}^T\mathbf{P}\mathbf{l} $- Covariance of adjusted parameters: $\mathbf{Q}_{\hat{x}\hat{x}} = (\mathbf{A}^T\mathbf{P}\mathbf{A})^{-1}$
 - Coordinate transform: 7-parameter Helmert transform (see [[Helmert Transformation]])
 
 ## Study Advice

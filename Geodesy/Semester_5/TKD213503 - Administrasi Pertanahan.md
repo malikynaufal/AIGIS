@@ -119,7 +119,9 @@ A cadastral survey is the process of identifying and mapping land boundaries for
 
 - **Koordinat (Trapezoidal Rule):**
 
-$$A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i y_{i+1} - x_{i+1} y_i) \right| $$
+$$
+
+A = \frac{1}{2} \left| \sum_{i=1}^{n} (x_i y_{i+1} - x_{i+1} y_i) \right|$$
 
 - **Measured Distances:** Using traverse or intersection methods
 

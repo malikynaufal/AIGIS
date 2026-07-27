@@ -22,63 +22,66 @@ $$\begin{bmatrix} X_T \\ Y_T \\ Z_T \end{bmatrix} = s\,R(\omega_x,\omega_y,\omeg
 | $(X_S, Y_S, Z_S)$ | Source‑frame coordinates (ECEF) | m |
 | $(X_T, Y_T, Z_T)$ | Target‑frame coordinates | m |
 | $T_x, T_y, T_z$ | Translations (3 parameters) | m |
-| $\omega_x, \omega_y, \omega_z$ | Rotations about each axis (3 parameters) | rad or arc‑sec |
+| $\omega_x, \omega_y, \omega_z $ | Rotations about each axis (3 parameters) | rad or arc‑sec |
 | $s$ | Scale factor (1 parameter) | dimensionless, but reported in ppm |
 
 ### 1.1. Rotation Matrix $R $For small angles, the rotation matrix is approximated to first order as
-:
 
-$$R = I + \begin{bmatrix} 0 & -\omega_z & \omega_y \\ \omega_z & 0 & -\omega_x \\ -\omega_y & \omega_x & 0 \end{bmatrix} $$Expanded to second order (more precise when $s$is expressed as$1 + s$):
+$$ R = I + \begin{bmatrix} 0 & -\omega_z & \omega_y \\ \omega_z & 0 & -\omega_x \\ -\omega_y & \omega_x & 0 \end{bmatrix}$$ Expanded to second order (more precise when$ s $is expressed as $1 + s$):
 
-$$R = \begin{bmatrix}
+$$
+
+R = \begin{bmatrix}
 1 & -\omega_z & \omega_y \\
 \omega_z & 1 & -\omega_x \\
 -\omega_y & \omega_x & 1
-\end{bmatrix} + O(\omega^2)$$### 1.2. Vector form
+\end{bmatrix} + O(\omega^2)
+
+$$
+
+### 1.2. Vector form
 
 Often written as
-:
 
-$$\mathbf{X}_T = (1+s)\cdot R\cdot\mathbf{X}_S + \mathbf{T} $$
-
-With all seven parameters:$$\begin{aligned}
+$$\mathbf{X}_T = (1+s)\cdot R\cdot\mathbf{X}_S + \mathbf{T} $$ With all seven parameters: $$\begin{aligned}
 X_T &= T_x + (1+s)\bigl[X_S + \omega_z Y_S - \omega_y Z_S\bigr]\\
 Y_T &= T_y + (1+s)\bigl[Y_S + \omega_x Z_S - \omega_z X_S\bigr]\\
 Z_T &= T_z + (1+s)\bigl[Z_S + \omega_y X_S - \omega_x Y_S\bigr]
-\end{aligned} $$---
+\end{aligned} $$ ---
 
 ## 2. Time‑Dependent Extension (14‑Parameter Model)
 
 For ITRF realizations, the parameters include rates (per year):
 
-$$\mathbf{X}_T(t) = \mathbf{T} + \dot{\mathbf{T}}(t-t_0) + \bigl(1 + s + \dot{s}(t-t_0)\bigr)R(t)\,\mathbf{X}_S\text{with } R(t) = R\bigl(\omega_x + \dot{\omega}_x(t-t_0),\, \omega_y + \dot{\omega}_y(t-t_0),\, \omega_z + \dot{\omega}_z(t-t_0)\bigr)$$The 14‑parameter model is published for every ITRF realization (see [[ITRF]]).
+$$\mathbf{X}_T(t) = \mathbf{T} + \dot{\mathbf{T}}(t-t_0) + \bigl(1 + s + \dot{s}(t-t_0)\bigr)R(t)\,\mathbf{X}_S\text{with } R(t) = R\bigl(\omega_x + \dot{\omega}_x(t-t_0),\, \omega_y + \dot{\omega}_y(t-t_0),\, \omega_z + \dot{\omega}_z(t-t_0)\bigr)
+
+$$ The 14‑parameter model is published for every ITRF realization (see [[ITRF]]).
 
 ---
 
 ## 3. Worked Example – WGS84 → ITRF2020
 
 Source point in **WGS84** (G2139 epoch 2024‑01‑15)
-:
 
-$$X_S = -2\,466\,310.2 \;\text{m},\quad Y_S = 5\,691\,984.7 \;\text{m},\quad Z_S = -2\,653\,725.4\;\text{m} $$
-
-Helmert parameters (WGS84 → ITRF2020, at epoch 2010.0):
+$$ X_S = -2\,466\,310.2 \;\text{m},\quad Y_S = 5\,691\,984.7 \;\text{m},\quad Z_S = -2\,653\,725.4\;\text{m}$$ Helmert parameters (WGS84 → ITRF2020, at epoch 2010.0):
 
 | Parameter | Value | Units |
 |-----------|-------|-------|
-| $T_x$ | $+0.0007$ | m |
-| $T_y$ | $-0.0007$ | m |
-| $T_z$ | $-0.0001$ | m |
-| $\omega_x$ | $+0.000000$ | arc‑sec |
-| $\omega_y$ | $-0.000000$ | arc‑sec |
-| $\omega_z$ | $-0.000000$ | arc‑sec |
+| $T_x$ | $+0.0007 $ | m |
+| $T_y$ | $-0.0007 $ | m |
+| $T_z$ | $-0.0001 $ | m |
+| $\omega_x $|$+0.000000 $ | arc‑sec |
+| $\omega_y $|$-0.000000 $ | arc‑sec |
+| $\omega_z $|$-0.000000 $ | arc‑sec |
 | $s$ | $0.0$ | ppb |
 
-Substituting (essentially identity for WGS84 ↔ ITRF2020):$$\begin{aligned}
+Substituting (essentially identity for WGS84 ↔ ITRF2020):
+
+$$\begin{aligned}
 X_T &\approx X_S + T_x = -2\,466\,309.5 \;\text{m}\\
 Y_T &\approx Y_S + T_y = 5\,691\,984.0 \;\text{m}\\
 Z_T &\approx Z_S + T_z = -2\,653\,725.5 \;\text{m}
-\end{aligned} $$The transformation confirms that **WGS84 is tightly aligned with ITRF** at the cm level.
+\end{aligned} $$ The transformation confirms that **WGS84 is tightly aligned with ITRF** at the cm level.
 
 ---
 
@@ -86,12 +89,12 @@ Z_T &\approx Z_S + T_z = -2\,653\,725.5 \;\text{m}
 
 SAD69 (Brazil/old Indonesia datum) parameters (epicentric):
 
-$$T_x = +66.87,\; T_y = -4.37,\; T_z = +38.52 \;\text{m}\omega_x = \omega_y = \omega_z = 0 \;\text{arc-sec}s = -0.27\;\text{ppm
+$$
+
+T_x = +66.87,\; T_y = -4.37,\; T_z = +38.52 \;\text{m}\omega_x = \omega_y = \omega_z = 0 \;\text{arc-sec}s = -0.27\;\text{ppm
 }
 
-$$For the same point:$$
-
-X_{SAD69} = (1-0.27\times 10^{-6})\cdot(-2\,466\,310.2) + 66.87 = -2\,466\,243.99 \;\text{m} $$Note: residuals exceed 70 m — illustrating why **datum transformations matter**.
+$$ For the same point:$$ X_{SAD69} = (1-0.27\times 10^{-6})\cdot(-2\,466\,310.2) + 66.87 = -2\,466\,243.99 \;\text{m}$$ Note: residuals exceed 70 m — illustrating why **datum transformations matter**.
 
 ---
 
@@ -159,14 +162,11 @@ X_{SAD69} = (1-0.27\times 10^{-6})\cdot(-2\,466\,310.2) + 66.87 = -2\,466\,243.9
 ## 7. Inversion
 
 The inverse transformation uses the negative of parameters and the inverse scale
-:
 
 $$\mathbf{X}_S = \frac{1}{1+s}R^{-1}(\mathbf{X}_T - \mathbf{T}
 )
 
-$$For the linearised form:$$
-
-T_{\text{inv}} = -\mathbf{T},\qquad s_{\text{inv}} = \frac{-s}{1+s},\qquad \omega_{\text{inv}} = -\omega$$
+$$ For the linearised form:$$ T_{\text{inv}} = -\mathbf{T},\qquad s_{\text{inv}} = \frac{-s}{1+s},\qquad \omega_{\text{inv}} = -\omega $$
 
 ---
 

@@ -1,72 +1,89 @@
 ---
-tags: [aigis, curriculum, geodesy, semester-3, ugm]
-created: 2026-07-27
+tags: [geodesy, curriculum, semester-3]
+aliases: [Semester 3 Curriculum]
+created: 2026-07-13
 updated: 2026-07-27
 ---
 
-# Semester 3 — Core Geodesy
+# 📋 Semester 3 — Geodesy Curriculum
 
-## Overview
-
-Semester 3 is the pivotal year where students master the core geodesic disciplines: differential geometry of the curved Earth surface, reference systems (including ITRF/WGS84), physical geodesy, photogrammetry foundations, GIS systems, and advanced survey techniques.
-
-## Courses (10 mata kuliah, total ~26 SKS)
-
-| Code | Course | SKS | Type |
-|------|--------|-----|------|
-| TKD212301 | Geometri Diferensial | 3 | Core |
-| TKD212302 | Oseanografi Fisis | 3 | Sci |
-| TKD212303 | Sistem Referensi Geodesi | 3 | Core |
-| TKD212304 | Fotogrametri Dasar | 3 | Core |
-| TKD212305 | Praktikum Fotogrametri Dasar | 1 | Lab |
-| TKD212306 | Sistem Informasi Geografis | 3 | IT |
-| TKD212307 | Praktikum Sistem Informasi Geografis | 1 | Lab |
-| TKD212308 | Survei Terestris III | 3 | Core |
-| TKD212309 | Praktikum Survei Terestris III | 3 | Lab |
-| TKD212310 | Analisis Statistika | 3 | Math |
-
-## Key Topics
-
-### TKD212301 — Geometri Diferensial (Differential Geometry)
-- Curves on an ellipsoid: curvature and torsion
-- Geodesic lines (geodesics): shortest paths
-- Euler equation for geodesic:
-  
-  $$\frac{d^2 u}{ds^2} + \Gamma_{ij}^{k} \frac{du^i}{ds} \frac{du^j}{ds} = 0$$
-  
-- Christoffel symbols on ellipsoid
-- Vincenty's direct and inverse problems (see [[Vincenty Formula]])
-
-### TKD212303 — Sistem Referensi Geodesi (Reference Systems)
-- ITRF: definition, realizations, transformation between epochs
-- WGS84 evolution (G1150 through G2139)
-- [[GRS80]] and other reference ellipsoids
-- ETRS89: European system
-- Datum transformations (Helmert, Molodensky)
-- [[Datum Transformation]] in detail
-- [[Helmert Transformation]] formulas
-
-### TKD212304 — Fotogrametri Dasar
-- Collinearity condition (see [[Photogrammetry]])
-- Exterior orientation elements
-- Aerial triangulation
-- Digital photogrammetry basics
-
-### TKD212306 — Sistem Informasi Geografis (GIS)
-- Vector vs raster data models
-- Data structures, topology
-- Spatial queries and analysis
-- [[SIG]] for Indonesian land management
-
-## Key Formulas (Preview)
-
-- Geodesic arc length: $s = a(1-e^2)\int_0^\varphi \frac{d\varphi}{(1-e^2\sin^2\varphi)^{3/2}}$
-- Helmert 7-parameter: $\mathbf{X}_{B} = T + (1+c)R\mathbf{X}_{A}$
-- Vincenty inverse: iterative solution for $(\lambda, \alpha)$
-
-## Study Pack
-➡️ Study pack for Semester 3 consolidating: [[Geometri Diferensial]], [[Reference Frame]], [[Helmert Transformation]], [[Vincenty Formula]]
+> *"Core geodetic theory: coordinate systems, reference frames, and geodetic astronomy."*
 
 ---
 
-*Maintained by AIGIS — part of [[Geodesy MOC]]*
+## 1. Courses
+
+| Code | Course | SKS | Focus |
+|------|--------|-----|-------|
+| TKD212301 | Geometri Diferensial | 3 | Differential geometry |
+| TKD212302 | Oseanografi Fisis | 2 | Physical oceanography |
+| TKD212303 | Sistem Referensi Geodesi | 3 | Geodetic reference systems |
+| TKD212304 | Fotogrametri Dasar | 3 | Basic photogrammetry |
+| TKD212305 | Praktikum Fotogrametri Dasar | 1 | Photogrammetry lab |
+| TKD212306 | Sistem Informasi Geografis | 3 | GIS fundamentals |
+| TKD212307 | Praktikum SIG | 1 | GIS lab |
+| TKD212308 | Survei Terestris III | 3 | Advanced terrestrial surveying |
+| TKD212309 | Praktikum Survei Terestris III | 1 | Surveying lab |
+| TKD212310 | Analisis Statistika | 2 | Statistical analysis |
+
+**Total: 21 SKS**
+
+---
+
+## 2. Key Concepts
+
+### Geometri Diferensial
+- Curves: curvature, torsion, Frenet-Serret formulas
+- Surfaces: first/second fundamental forms, Gaussian curvature
+- Geodesic curves on surfaces
+- **Application:** Reference ellipsoid geometry
+
+### Sistem Referensi Geodesi
+- [[ITRF]], [[ITRS]] — International Terrestrial Reference Frame
+- [[WGS84]] — GPS reference system
+- [[GRS80]] — Reference ellipsoid
+- [[Precession and Nutation]] — Earth orientation
+- [[IERS]] conventions
+
+### Fotogrametri
+- Camera geometry, collinearity equations
+- Stereo vision: y-parallax, x-parallax
+- Aerotriangulation, bundle adjustment
+
+### SIG
+- Raster vs vector models
+- Coordinate reference systems
+- Spatial analysis: buffering, overlay, interpolation
+
+---
+
+## 3. Key Formulas
+
+### Reference Ellipsoid — Meridian Curvature
+
+$$ M = \frac{a(1-e^2)}{(1-e^2\sin^2\phi)^{3/2}}$$### Prime Vertical Curvature $$ N = \frac{a}{\sqrt{1-e^2\sin^2\phi}} $$### Geodetic to Cartesian (ECEF)$$ \begin{pmatrix} X \\ Y \\ Z \end{pmatrix} = \begin{pmatrix} (N+h)\cos\phi\cos\lambda \\ (N+h)\cos\phi\sin\lambda \\ (N(1-e^2)+h)\sin\phi \end{pmatrix}
+
+$$
+
+---
+
+## 4. Learning Outcomes
+
+By the end of Semester 3, students can:
+
+1. Transform between coordinate reference systems
+2. Compute coordinates on a reference ellipsoid
+3. Perform basic photogrammetric measurements
+4. Use GIS software for spatial analysis
+5. Apply statistical methods to survey data
+6. Understand Earth orientation parameters
+
+---
+
+## 5. Cross-links
+
+- Previous: [[Semester_2/TKD211201 - Sistem Koordinat|Semester 2 — Coordinate Systems]]
+- Next: [[Semester_4 Curriculum]]
+- Related: [[ITRF]], [[WGS84]], [[Geodetic Coordinates]], [[Map Projection]], [[Least Squares Adjustment]]
+
+*Page last updated: 2026-07-27 | AIGIS Content™*

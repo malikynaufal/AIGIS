@@ -1,67 +1,35 @@
 ---
-tags: [math, curriculum, semester, aigis]
-aliases: [Semester 6, Sem 6]
-created: 2026-07-12
+title: Semester 6 Overview
+type: semester-overview
+semester: 6
+tags: [mathematics, semester-6, curriculum]
+created: 2026-07-27
 ---
 
-# 📘 Semester 6 - Mathematics
+# Semester 6 — Advanced Applications
 
-## Courses
+> *\"The goal of computation is insight, not numbers.\"* — Hamming
+> Part of [[Mathematics MOC]].
 
-| Course | SKS | Topics |
-|--------|-----|--------|
-| Rekayasa Berorientasi Objek | 3 | OOP concepts, design patterns, SOLID, KISS |
-| Jaringan Komputer | 3 | TCP/IP, routing, LAN, WAN, wireless communication |
-| Basis Data Maju | 3 | Relational databases, ANSI SQL, transaction isolation, vulnerabilities |
-| Keamanan Informasi dan Kriptografi | 2 | Cryptography concepts, encryption, decryption, network security |
-| Etika TIK Kontemporer | 2 | AI ethics, big data ethics, privacy |
+## 📚 Course List
 
-## Resources
+| Code | Course | SKS | Core Concepts |
+|------|--------|-----|---------------|
+| MGM211601 | Riset Operasi (Operations Research) | 3 | Linear programming, scheduling, queueing |
+| MGM211602 | Simulasi (Simulation) | 3 | Monte Carlo, discrete-event, variance reduction |
+| MGM211603 | Pembelajaran Mesin (Machine Learning) | 3 | Supervised/unsupervised, SVM, ensemble |
+| MGM211604 | Pengolahan Citra (Image Processing) | 3 | Spatial filtering, frequency domain, transforms |
+| MGM211605 | Pemrograman Paralel (Parallel Programming) | 3 | Concurrency, GPU computing, MPI |
 
-### Textbooks
+**Total SKS: 15**
 
-- Gamma et al. Design Patterns
+## 🎯 Learning Outcomes
 
-- Tanenbaum. Computer Networks
+1. **Operations Research:** Formulate and solve LP/MIP problems
+2. **Simulation:** Design Monte Carlo experiments with variance reduction
+3. **Machine Learning:** Build classification/regression pipelines
+4. **Image Processing:** Apply spatial and frequency domain filters
+5. **Parallel Programming:** Exploit parallelism for large-scale computation
 
-- Date. An Introduction to Database Systems
-
-- Stallings. Cryptography and Network Security
-
-## Key Concepts
-
-- [[ObjectOrientedDesign]]
-
-- [[DesignPatterns]]
-
-- [[TCPIP]]
-
-- [[NetworkRouting]]
-
-- [[WirelessNetworking]]
-
-- [[RelationalDatabases]]
-
-- [[SQL]]
-
-- [[DatabaseSecurity]]
-
-- [[Cryptography]]
-
-- [[NetworkSecurity]]
-
-- [[InformationSecurity]]
-
-- [[EthicsAI]]
-
-- [[DataPrivacy]]
-
-- [[EthicsDataScience]]
-
-## Next
-
-[[Semester 7]] · [[Mathematics_Curriculum_Guide]]
-
-## Back
-
-[[Semester 5]] · [[Mathematics MOC]]
+---
+*See also: [[Mathematics MOC]], [[Study Plan]], [[Semester 5/Semester 5]], [[Semester 7/Semester 7]]*

@@ -1,56 +1,82 @@
-# 📚 Pilihan: Survei Geodinamika
+---
+tags: [aigis, geodesy, pilihan, geodynamics, tectonics, crustal-deformation, gnss]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD213614
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Survei Geodinamika (Geodynamic Surveying)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD213614 | **SKS:** 3 (2-1) | **Semester:** 5–7
 
-Survei Geodinamika adalah mata kuliah pilihan yang mempelajari metode survei untuk memantau dan mengukur perubahan geomorfologi dan gerakan bumi, termasuk deformasi tanah, gerak lempeng tektonik, aktivitas gunung berapi, dan perubahan volume tanah. Mata kuliah ini menggabungkan prinsip geodesi, geofisika, dan geologi untuk mendeteksi dan memodelkan perubahan struktural yang terjadi secara bertahap.
+## Course Overview
 
-Geodinamika survei menggunakan berbagai teknik termasuk GNSS kontinu, InSAR, gravimetri, dan tiltmeter. Data dari survei ini digunakan untuk memodelkan laju deformasi, memprediksi risiko bencana alam, dan memahami mekanisme gerakan bumi. Di Indonesia, yang terletak di zona Cincin Api Pasifik, survei geodinamika menjadi sangat penting untuk pemantauan gunung berapi dan gempa bumi.
+Geodynamic surveying monitors Earth's crustal motion using repeated high-accuracy GNSS campaigns and InSAR techniques. The course covers design of geodetic networks for tectonic studies, velocity field estimation, strain analysis, and geological interpretation of results. Essential for understanding Indonesia's complex tectonic setting.
 
-Pembelajaran dilakukan melalui kombinasi teori dan studi kasus. Mahasiswa akan mempelajari desain jaringan survei geodinamika, pemrosesan data GNSS kontinu, interpretasi InSAR, serta model deformasi. Studi kasus mencakup pemantauan deformasi gunung berapi di Indonesia (misalnya Merapi, Semeru, atau Sinabung).
+## Key Topics
 
-## Topik Utama
+### 1. Geodynamic GNSS Networks
 
-### 1. Metode Survei Geodinamika
+| Design Aspect | Requirement for Geodynamics |
+|---------------|---------------------------|
+| Baseline length | 50–500 km (tectonic) |
+| Observation time | 24–72 hours static |
+| Accuracy | 1–3 mm horizontal, 5–10 mm vertical |
+| Reoccupation | Annual or semi-annual |
+| Processing | [[PPP]] or double-difference |
 
-- GNSS kontinu dan monitoring
+### 2. Velocity Field Estimation
 
-- Interferometri SAR (InSAR)
+**Simple velocity model:**
+$$
+\begin{pmatrix} v_E \\ v_N \end{pmatrix} = \frac{1}{n} \sum_{i=1}^{n} \frac{\Delta \mathbf{r}_i}{\Delta t_i}
+$$
 
-- Gravimetri dan tiltmeter
+### 3. Strain Rate Analysis
 
-- Sensor geologi lainnya
+**Strain rate tensor:**
+$$
+\dot{\epsilon} =
+\begin{pmatrix}
+\epsilon_{xx} & \epsilon_{xy} \\
+\epsilon_{yx} & \epsilon_{yy}
+\end{pmatrix}
+=
+\frac{1}{2} \begin{pmatrix}
+2\frac{\partial v_E}{\partial x} & \frac{\partial v_E}{\partial y} + \frac{\partial v_N}{\partial x} \\
+\frac{\partial v_E}{\partial y} + \frac{\partial v_N}{\partial x} & 2\frac{\partial v_N}{\partial y}
+\end{pmatrix}
+$$
 
-### 2. Pemrosesan Data
+**Maximum shear strain:**
+$$
+\dot{\gamma}_{max} = \sqrt{(\dot{\epsilon}_{xx} - \dot{\epsilon}_{yy})^2 + 4\dot{\epsilon}_{xy}^2}
+$$
 
-- Analisis data GNSS kontinu
+### 4. Indonesian Case Studies
 
-- Pemrosesan InSAR untuk deformasi
+| Region | Tectonics | GPS Velocity |
+|--------|-----------|-------------|
+| Sumatera | Oblique subduction | 67 mm/yr |
+| Java | Orthogonal subduction | 50–70 mm/yr |
+| Sulawesi | Triple junction | 30–50 mm/yr |
+| Papua | Collision | 50–100 mm/yr |
 
-- Model deformasi dan prediksi
+## Field Campaign Design
 
-### 3. Aplikasi
+- Monumentation: deep-braced (3 m) or rock anchors
+- Antenna: geodetic (choke ring)
+- Duration: ≥ 5 days for first epoch, ≥ 3 days subsequent
+- Processing: GAMIT/GLOBK, Bernese, or GIPSY
 
-- Pemantauan gunung berapi
+## Related Concepts
 
-- Deteksi gerak lempeng tektonik
+- [[Crustal Deformation]] — Physical deformation
+- [[Plate Tectonics]] — Plate motion
+- [[ITRF]] — Reference frame
+- [[Survei Deformasi]] — Related survey course
+- [[GPS]] — GNSS component
+- [[GNSS]] — Satellite positioning
 
-- Prediksi risiko bencana alam
+---
 
-## Tujuan Pembelajaran
-
-1. Memahami metode survei untuk pemantauan gerakan bumi
-2. Menguasai pemrosesan data GNSS kontinu dan InSAR
-3. Membuat model deformasi berdasarkan data survei
-4. Menerapkan survei geodinamika untuk prediksi bencana
-
-## Referensi
-
-- Doin, M.P., et al. (2017). *Synthetic Aperture Radar Imaging: From Basics to Applications*. Springer.
-
-- Massonnet, D., & Feigl, K.L. (1998). "Radar Interferometry and Its Application to Deformation Monitoring." *Geological Society*.
-
-- Cross, R., et al. (2017). *Geotechnical Engineering for Disaster Mitigation and Recovery*. Springer.
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

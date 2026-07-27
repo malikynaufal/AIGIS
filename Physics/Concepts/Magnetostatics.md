@@ -22,26 +22,41 @@ created: 2026-07-27
 
 ## 🧮 Key Equations
 
-```latex
-\begin{equation}
-\\mathbf{B} = \\frac{\\mu_0}{4\\pi}\\int \\frac{I d\\boldsymbol{\\ell} \\times \\hat{\\mathbf{r}}}{r^2}
-\\end{equation}
-\\text{(Biot-Savart law)}
+$$
 
 \begin{equation}
-\\nabla \\times \\mathbf{B} = \\mu_0 \\mathbf{J}
-\\end{equation}
-\\text{(Ampère's law, differential form)}
+\mathbf{B} = \frac{\mu_0}{4\pi}\int \frac{I d\boldsymbol{\ell} \times \hat{\mathbf{r}}}{r^2}
+\end{equation}
+\text{(Biot-Savart law)}
+
+$$
+
+$$
 
 \begin{equation}
-\\oint_C \\mathbf{B} \\cdot d\\boldsymbol{\\ell} = \\mu_0 I_{\\text{enc}}
-\\end{equation}
-\\text{(Ampère's law, integral form)}
+\nabla \times \mathbf{B} = \mu_0 \mathbf{J}
+\end{equation}
+\text{(Ampère's law, differential form)}
+
+$$
+
+$$
 
 \begin{equation}
-\\mathbf{B} = \\nabla \\times \\mathbf{A}
-\\end{equation}
-\\text{(Magnetic vector potential)}
+\oint_C \mathbf{B} \cdot d\boldsymbol{\ell} = \mu_0 I_{\text{enc}}
+\end{equation}
+\text{(Ampère's law, integral form)}
+
+$$
+
+$$
+
+\begin{equation}
+\mathbf{B} = \nabla \times \mathbf{A}
+\end{equation}
+\text{(Magnetic vector potential)}
+
+$$
 
 ---
 

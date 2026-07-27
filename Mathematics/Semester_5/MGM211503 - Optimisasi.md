@@ -36,31 +36,40 @@ created: 2026-07-27
 
 ### Unconstrained Optimization
 
-For $\min f(x)$:
-- **1st order:** $\nabla f(x^*) = 0$ (necessary)
-- **2nd order:** $\nabla^2 f(x^*) \succeq 0$ (necessary), $\nabla^2 f(x^*) \succ 0$ (sufficient)
+For $\min f(x) $:
+- **1st order:** $\nabla f(x^*) = 0 $ (necessary)
+- **2nd order:** $\nabla^2 f(x^*) \succeq 0 $ (necessary),$\nabla^2 f(x^*) \succ 0 $ (sufficient)
 
 ### Lagrange Multipliers
 
-For $\min f(x)$ subject to $h(x) = 0$:
-$$\mathcal{L}(x, \lambda) = f(x) + \lambda^T h(x)$$
+For $\min f(x) $ subject to $ h(x) = 0 $:
+
+$ $\mathcal{L}(x, \lambda) = f(x) + \lambda^T h(x)
+
+$$
 
 ### KKT Conditions
 
 For inequality constraints:
-1. Stationarity: $\nabla f + \sum \lambda_i \nabla g_i = 0$
-2. Primal feasibility: $g_i(x) \leq 0$
-3. Dual feasibility: $\lambda_i \geq 0$
-4. Complementary slackness: $\lambda_i g_i(x) = 0$
+1. Stationarity: $\nabla f + \sum \lambda_i \nabla g_i = 0 $ 2. Primal feasibility: $ g_i(x) \leq 0 $ 3. Dual feasibility: $\lambda_i \geq 0 $ 4. Complementary slackness: $\lambda_i g_i(x) = 0 $
 
 ## 💡 Solved Example: Least Squares
 
-**Problem:** Solve $\min_x \|Ax - b\|^2$ for overdetermined system.
+**Problem:** Solve $\min_x \|Ax - b\|^2 $ for overdetermined system.
 
 **Solution:**
-$$\nabla_x \|Ax - b\|^2 = 2A^T(Ax - b) = 0$$
-$$A^T A x = A^T b$$
-$$\hat{x} = (A^T A)^{-1} A^T b$$
+
+$ $\nabla_x \|Ax - b\|^2 = 2A^T(Ax - b) = 0
+
+$$
+
+$ $
+
+A^T A x = A^T b $$
+
+$ $\hat{x} = (A^T A)^{-1} A^T b
+
+$$
 
 This is the normal equation — foundation of [[Least Squares Adjustment]].
 
@@ -68,18 +77,20 @@ This is the normal equation — foundation of [[Least Squares Adjustment]].
 
 **Problem:** Optimize survey network design subject to accuracy and cost constraints.
 
-$$\begin{aligned}
-\text{minimize} \quad & \text{tr}(Q_{xx}) \quad \text{(maximize precision)} \\
-\text{subject to} \quad & \sum c_i l_i \leq B \quad \text{(budget)} \\
-& \sigma_{xx} \leq \sigma_{max} \quad \text{(accuracy)} \\
-& l_i \geq 0 \quad \text{(non-negative baselines)}
-\end{aligned}$$
+$ $\begin{aligned}
+ext{minimize} \quad & ext{tr}(Q_{xx}) \quad ext{(maximize precision)} \\
+ext{subject to} \quad & \sum c_i l_i \leq B \quad ext{(budget)} \\
+& \sigma_{xx} \leq \sigma_{max} \quad ext{(accuracy)} \\
+& l_i \geq 0 \quad ext{(non-negative baselines)}
+\end{aligned}
+
+$$
 
 ## 🎯 Practice Problems
 
-1. Solve $\min x^2 + y^2$ subject to $x + y = 1$.
-2. Apply gradient descent to $f(x,y) = x^2 + 4y^2 - 8x - 16y + 10$.
-3. Derive KKT conditions for $\min x^2 + y^2$ s.t. $x + 2y \geq 5$.
+1. Solve $\min x^2 + y^2 $ subject to $ x + y = 1 $.
+2. Apply gradient descent to $ f(x,y) = x^2 + 4y^2 - 8x - 16y + 10 $.
+3. Derive KKT conditions for $\min x^2 + y^2 $ s.t.$ x + 2y \geq 5$.
 4. Solve a small LP using the simplex method.
 5. Implement Newton's method for Rosenbrock function.
 

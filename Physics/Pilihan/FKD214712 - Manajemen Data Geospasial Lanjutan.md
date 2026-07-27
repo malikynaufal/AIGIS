@@ -34,18 +34,18 @@ CREATE TABLE cors_stations (
 );
 
 -- Create spatial index (R-tree based)
-CREATE INDEX idx_stations_geom 
+CREATE INDEX idx_stations_geom
 ON cors_stations USING GIST(geom);
 
 -- Find stations within 50 km of Jakarta city center
 SELECT station_id, name, ST_Distance(
- geom::geography, 
+ geom::geography,
  ST_SetSRID(ST_MakePoint(106.8456, -6.2088), 4326)::geography
 ) / 1000 AS distance_km
 FROM cors_stations
 WHERE ST_DWithin(
- geom::geography, 
- ST_SetSRID(ST_MakePoint(106.8456, -6.2088), 4326)::geography, 
+ geom::geography,
+ ST_SetSRID(ST_MakePoint(106.8456, -6.2088), 4326)::geography,
  50000
 )
 ORDER BY distance_km;
@@ -55,7 +55,7 @@ ORDER BY distance_km;
 
 | Index Type | Structure | Best For | Query Complexity |
 |---|---|---|---|
-| R-tree | Hierarchical rectangles | Range queries | $O(\log n)$ |
+| R-tree | Hierarchical rectangles | Range queries | $O(\log n) $ |
 | Quad-tree | Recursive 4-way split | Point data | $O(\log n)$ |
 | kd-tree | k-dimensional binary tree | Nearest neighbor | $O(\log n) $average |
 | Grid index | Regular grid cells | Simple overlap | $O(1) $lookup |
@@ -185,14 +185,14 @@ def process_sentinel2(scene_path, aoi_bbox):
  # Step 1: Cloud masking using SCL band
  scl = src.read(12) # Scene Classification Layer
  cloud_mask = ~((scl == 8) | (scl == 9) | (scl == 10))
- 
+
  # Step 2: Clip to AOI
  aoi = box(*aoi_bbox)
  out_image, out_transform = mask(src, [aoi], crop=True)
- 
+
  # Step 3: Apply cloud mask
  out_image[:, ~cloud_mask] = 0
- 
+
  return out_image, out_transform
 ```
 

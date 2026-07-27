@@ -22,32 +22,50 @@ created: 2026-07-27
 
 ## 🧮 Key Equations
 
-```latex
-\begin{equation}
-\\mathbf{F} = \\frac{1}{4\\pi\\varepsilon_0}\\frac{q_1q_2}{r^2}\\hat{r}
-\\end{equation}
-\\text{(Coulomb's law)}
+$$
 
 \begin{equation}
-\\nabla \\cdot \\mathbf{E} = \\frac{\\rho}{\\varepsilon_0}
-\\end{equation}
-\\text{(Gauss's law, differential form)}
+\mathbf{F} = \frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^2}\hat{r}
+\end{equation}
+\text{(Coulomb's law)}
+
+$$
+
+$$
 
 \begin{equation}
-\\oint_S \\mathbf{E} \\cdot d\\mathbf{a} = \\frac{Q_{\\text{enc}}}{\\varepsilon_0}
-\\end{equation}
-\\text{(Gauss's law, integral form)}
+\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}
+\end{equation}
+\text{(Gauss's law, differential form)}
+
+$$
+
+$$
 
 \begin{equation}
-\\mathbf{E} = -\\nabla V
-\\end{equation}
-\\text{(Electric potential relation)}
+\oint_S \mathbf{E} \cdot d\mathbf{a} = \frac{Q_{\text{enc}}}{\varepsilon_0}
+\end{equation}
+\text{(Gauss's law, integral form)}
+
+$$
+
+$$
 
 \begin{equation}
-V(\\mathbf{r}) = \\frac{1}{4\\pi\\varepsilon_0}\\sum_{l=0}^{\\infty}\\frac{1}{r^{l+1}}\\int (r')^l P_l(\\cos\\theta)\\rho(\\mathbf{r}')d^3r'
-\\end{equation}
-\\text{(Multipole expansion of potential)}
-```
+\mathbf{E} = -\nabla V
+\end{equation}
+\text{(Electric potential relation)}
+
+$$
+
+$$
+
+\begin{equation}
+V(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0}\sum_{l=0}^{\infty}\frac{1}{r^{l+1}}\int (r')^l P_l(\cos\theta)\rho(\mathbf{r}')d^3r'
+\end{equation}
+\text{(Multipole expansion of potential)}
+
+$$
 
 ---
 
@@ -65,15 +83,15 @@ V(\\mathbf{r}) = \\frac{1}{4\\pi\\varepsilon_0}\\sum_{l=0}^{\\infty}\\frac{1}{r^
 
 ```mermaid
 graph TD
-    A[Electrostatics] --> B[Coulomb's Law]
-    A --> C[Gauss's Law]
-    A --> D[Electric Potential]
-    B --> E[Charge Distributions]
-    C --> F[Field Calculations]
-    D --> G[Multipole Expansion]
-    F --> H[[EM Wave Propagation]]
-    G --> I[[Spherical Harmonics]]
-    I --> J[[Gravity Field Modeling]]
+ A[Electrostatics] --> B[Coulomb's Law]
+ A --> C[Gauss's Law]
+ A --> D[Electric Potential]
+ B --> E[Charge Distributions]
+ C --> F[Field Calculations]
+ D --> G[Multipole Expansion]
+ F --> H[[EM Wave Propagation]]
+ G --> I[[Spherical Harmonics]]
+ I --> J[[Gravity Field Modeling]]
 ```
 
 ---

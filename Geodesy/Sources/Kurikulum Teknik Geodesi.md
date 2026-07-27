@@ -1,46 +1,30 @@
 ---
-tags: [geodesy, source, curriculum, aigis]
-aliases: [Kurikulum Geodesi, Geodesy Curriculum]
-source_file: kurikulum_teknik_geodesi.pdf
-created: 2026-07-12
+tags: [aigis, geodesy, source, curriculum, ugm]
+aliases: [Kurikulum Teknik Geodesi, UGM Curriculum]
+created: 2026-07-27
+updated: 2026-07-27
 ---
 
-# 📄 Kurikulum Program Studi Teknik Geodesi (source note)
+# Kurikulum Teknik Geodesi UGM
 
-Extracted from `kurikulum_teknik_geodesi.pdf` (26 KB) by AIGIS. An 8-semester (4-year) study plan in **Bahasa Indonesia** with per-course book references and verified download links.
+## Overview
 
-## Profil Lulusan (career profiles)
-Surveyor · Hidrografer · SIG Analyst · Remote Sensing Analyst · Pemetaan Digital · Cadastral Specialist · GNSS/Positioning Engineer · WebGIS Developer · Peneliti Geospasial.
+The official 8-semester undergraduate curriculum for Teknik Geodesi at Universitas Gadjah Mada (UGM) under Kurikulum Merdeka.
 
-## Kompetensi Inti
-Pengukuran & pemetaan · geodesi fisik & geometrik · sistem referensi · hitung proyeksi · SIG · penginderaan jauh · fotogrametri · [[GNSS]] · surveying teknik & kadastral · hidrografi · pemrograman & analisis data geospasial · kartografi digital · manajemen proyek & K3 · hukum pertanahan.
+See [[Kurikulum Overview]] for semester-by-semester mapping.
 
-## Verified free resources (Appendix A)
+## Semester Courses
 
-- Snyder USGS PP-1395 (Map Projections PDF): https://pubs.usgs.gov/pp/1395/report.pdf
+| Semester | Core Courses | Electives | Total SKS |
+|----------|-------------|-----------|-----------|
+| 1 | 11 | 0 | ~26 |
+| 2 | 10 | 0 | ~26 |
+| 3 | 10 | 0 | ~26 |
+| 4 | 7 | 1 | ~22 |
+| 5 | 11 | 0 | ~30 |
+| 6 | 9 | 1 | ~25 |
+| 7 | 3 | 1 | ~12 |
+| 8 | 2 | 1–2 | ~12 |
 
-- NOAA Manual NOS NGS 5: https://geodesy.noaa.gov/PUBS_LIB/ManualNOSNGS5.pdf
-
-- Strang Linear Algebra / Calculus / DE&LA: https://math.mit.edu/~gs/
-
-- OpenStax Physics & Algebra: https://openstax.org/
-
-- PROJ: https://proj.org · GeographicLib: https://geographiclib.sourceforge.io/
-
-- QGIS Training: https://docs.qgis.org · FIG Pub 31/49: https://www.fig.net/
-
-- BIG (Indonesia): https://www.big.go.id/
-
-## Semester breakdown
-| Sem | Theme | Notes |
-|---|---|---|
-| 1 | Fondasi Matematika & Sains | [[Semester 1]] |
-| 2 | Matematika Lanjut & Pengukuran Awal | [[Semester 2]] |
-| 3 | Geodesi Geometrik & Survei Terestris | [[Semester 3]] |
-| 4 | Proyeksi, Hitung Geodesi & GNSS Awal | [[Semester 4]] |
-| 5 | Penginderaan Jauh, Fotogrametri & SIG | [[Semester 5]] |
-| 6 | WebGIS, Hidrografi & Geodesi Fisik | [[Semester 6]] |
-| 7 | Aplikasi Industri & Topik Lanjut | [[Semester 7]] |
-| 8 | Tugas Akhir & Spesialisasi | [[Semester 8]] |
-
-➡️ See [[Kurikulum Overview]] for the full linked plan · Back to [[Geodesy MOC]]
+---
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

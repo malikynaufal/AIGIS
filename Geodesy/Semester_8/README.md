@@ -29,20 +29,20 @@ updated: 2026-07-27
 ```
 Semester 7-8 (2 semesters)
 ├── Proposal (Semester 7)
-│   ├── Literature review
-│   ├── Methodology
-│   └── Preliminary results
+│ ├── Literature review
+│ ├── Methodology
+│ └── Preliminary results
 ├── Data collection (Semester 7-8)
-│   ├── Field work
-│   ├── Processing
-│   └── Analysis
+│ ├── Field work
+│ ├── Processing
+│ └── Analysis
 ├── Writing (Semester 8)
-│   ├── Results chapter
-│   ├── Discussion
-│   └── Conclusion
+│ ├── Results chapter
+│ ├── Discussion
+│ └── Conclusion
 └── Defense (Semester 8)
-    ├── Presentation
-    └── Q&A with panel
+ ├── Presentation
+ └── Q&A with panel
 ```
 
 ### 2.2 Key Requirements
@@ -80,12 +80,12 @@ Semester 7-8 (2 semesters)
 ### 2.4 Timeline
 
 ```
-Month 1-2:   Topic selection + proposal writing
-Month 3-4:   Proposal defense
-Month 4-6:   Data collection and processing
-Month 6-7:   Results analysis
-Month 7-8:   Writing and review
-Month 8:     Final defense
+Month 1-2: Topic selection + proposal writing
+Month 3-4: Proposal defense
+Month 4-6: Data collection and processing
+Month 6-7: Results analysis
+Month 7-8: Writing and review
+Month 8: Final defense
 ```
 
 ---

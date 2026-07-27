@@ -14,25 +14,13 @@ _Covering absolute and relative gravimeters, gravity networks, and the role of g
 
 ## 1. Introduction
 
-Gravity measurements quantify the Earth's gravitational field strength at a point. The **gravity vector** $\mathbf{g} $combines gravitational attraction and centrifugal acceleration
-:
+Gravity measurements quantify the Earth's gravitational field strength at a point. The **gravity vector** $\mathbf{g} $combines gravitational attraction and centrifugal acceleration $$\mathbf{g} = \nabla W
 
-$$\mathbf{g} = \nabla W$$
-
-At the Earth's surface, the **normal gravity** on the [[Reference Ellipsoid]] (Somigliana formula)
-:
-
-$$\gamma_0 = \frac{a\,g_p\sin^2\varphi + b\,g_e\cos^2\varphi}{\sqrt{a^2\cos^2\varphi + b^2\sin^2\varphi}} $$where $g_e = 9.780326\,7715\;\text{m/s}^2$(equatorial) and $g_p = 9.832186\,3685\;\text{m/s}^2$(polar).
+$$ At the Earth's surface, the **normal gravity** on the [[Reference Ellipsoid]] (Somigliana formula)$$\gamma_0 = \frac{a\,g_p\sin^2\varphi + b\,g_e\cos^2\varphi}{\sqrt{a^2\cos^2\varphi + b^2\sin^2\varphi}} $$ where $ g_e = 9.780326\,7715\;\text{m/s}^2 $(equatorial) and $g_p = 9.832186\,3685\;\text{m/s}^2 $ (polar).
 
 Free‑air correction
-:
 
-$$\delta g_{FA} = 2\gamma\frac{h}{R} \approx 0.3086\;h \;\text{mGal/m} $$
-
-Bouguer correction
-:
-
-$$\delta g_B = 2\pi G\rho h \approx 0.04193\;h \;\text{mGal/m} $$
+$$\delta g_{FA} = 2\gamma\frac{h}{R} \approx 0.3086\;h \;\text{mGal/m} $$ Bouguer correction $$\delta g_B = 2\pi G\rho h \approx 0.04193\;h \;\text{mGal/m} $$
 
 > **Indonesian term:** *Pengukuran Gravitasi*
 
@@ -43,10 +31,10 @@ $$\delta g_B = 2\pi G\rho h \approx 0.04193\;h \;\text{mGal/m} $$
 | Unit | Symbol | Definition | Typical value |
 |------|--------|------------|---------------|
 | Gal | Gal | $1\;\text{cm/s}^2 = 0.01\;\text{m/s}^2$ | ~980 Gal at equator |
-| Milligal | mGal | $10^{-3} $Gal | 1 mGal ≈ 1 ppm of $g$ |
-| Microgal | $\mu $Gal | $10^{-6} $Gal | High‑precision (1 nm/s²) |
-| SI | $\text{m/s}^2$ | Base SI unit | ~9.78–9.83 m/s² |
-| Eötvös (E) | E | $10^{-9}\;\text{s}^{-2} $ | Gravity gradient |
+| Milligal | mGal | $10^{-3}$Gal | 1 mGal ≈ 1 ppm of $g$ |
+| Microgal | $\mu $ Gal |$10^{-6}$ Gal | High‑precision (1 nm/s²) |
+| SI | $\text{m/s}^2 $ | Base SI unit | ~9.78–9.83 m/s² |
+| Eötvös (E) | E | $10^{-9}\;\text{s}^{-2}$ | Gravity gradient |
 
 ---
 
@@ -58,21 +46,21 @@ $$\delta g_B = 2\pi G\rho h \approx 0.04193\;h \;\text{mGal/m} $$
 
 | Instrument | Manufacturer | Principle | Accuracy |
 |------------|--------------|-----------|----------|
-| **FG5** | Micro‑g LaCoste | Free‑fall (corner‑cube reflector in vacuum tube) | 1 $\mu $Gal |
-| **A10** | Micro‑g LaCoste | Transportable free‑fall | 10 $\mu $Gal |
-| **iGrav** | Micro‑g LaCoste | Superconducting, continuous | 1 $\mu $Gal (long‑term) |
-| **T‑014** | METTLER TOLEDO | Ball‑bearing free‑fall | 10 $\mu $Gal |
-| **Absolute gravimeters (quantum)** | NIST (prototype) | Atom interferometry | 0.1 $\mu $Gal |
+| **FG5** | Micro‑g LaCoste | Free‑fall (corner‑cube reflector in vacuum tube) | 1 $\mu $ Gal |
+| **A10** | Micro‑g LaCoste | Transportable free‑fall | 10 $\mu $ Gal |
+| **iGrav** | Micro‑g LaCoste | Superconducting, continuous | 1 $\mu $ Gal (long‑term) |
+| **T‑014** | METTLER TOLEDO | Ball‑bearing free‑fall | 10 $\mu $ Gal |
+| **Absolute gravimeters (quantum)** | NIST (prototype) | Atom interferometry | 0.1 $\mu $ Gal |
 
 **FG5 operating principle:**
 
 1. A corner‑cube reflector is dropped from rest in a vacuum chamber.
 2. A laser interferometer records the position at regular time intervals.
-3. The acceleration $g $is derived from the second difference of positions.
+3. The acceleration $g$ is derived from the second difference of positions.
 4. The result is corrected for: local terrain, tidal effects, ocean loading, polar motion, atmospheric pressure
 .
 
-$$g_{\text{corrected}} = g_{\text{observed}} - \delta g_{\text{tide}} - \delta g_{\text{atm}} - \delta g_{\text{polar}} - \delta g_{\text{load}} $$
+$$ g_{\text{corrected}} = g_{\text{observed}} - \delta g_{\text{tide}} - \delta g_{\text{atm}} - \delta g_{\text{polar}} - \delta g_{\text{load}}$$
 
 ### 3.2. Typical Correction Magnitudes
 
@@ -100,17 +88,16 @@ $$g_{\text{corrected}} = g_{\text{observed}} - \delta g_{\text{tide}} - \delta g
 | Key use | Relative gravity surveys, microgravity |
 
 The measurement equation
-:
 
-$$g_{\text{station}} = g_{\text{base}} + C \cdot R + d \cdot (t - t_0) + \text{corrections} $$where $C$= calibration factor,$R$= reading,$d$= drift rate,$t$= time.
+$$ g_{\text{station}} = g_{\text{base}} + C \cdot R + d \cdot (t - t_0) + \text{corrections}$$ where $ C $= calibration factor,$R$ = reading,$d$ = drift rate,$t$ = time.
 
 ### 4.2. Scintrex CG‑6 Autograv
 
 | Property | Details |
 |----------|---------|
 | Principle | Quartz spring (aerostat design) |
-| Precision | 0.5 $\mu $Gal |
-| Drift | < 2 $\mu $Gal/hour |
+| Precision | 0.5 $\mu $ Gal |
+| Drift | < 2 $\mu $ Gal/hour |
 | Weight | ~7 kg |
 | Temperature compensation | Built‑in |
 
@@ -141,7 +128,9 @@ $$g_{\text{station}} = g_{\text{base}} + C \cdot R + d \cdot (t - t_0) + \text{c
 
 Gravity surveys always reference **base stations** with known gravity values. The base station gravity is the anchor; all stations are measured relative to it.
 
-$$g_{\text{station}} = g_{\text{base}} + \Delta g_{\text{field measurements}} $$### 5.3. Tying to International Reference
+$$ g_{\text{station}} = g_{\text{base}} + \Delta g_{\text{field measurements}}$$
+
+### 5.3. Tying to International Reference
 
 The international gravity standard is the **International Gravity Standardization Net 1971 (IGSN71)**, with 1 254 stations worldwide.
 
@@ -180,24 +169,25 @@ Satellite gravity gives the **long‑wavelength** field (degree < 150); surface 
 | Base (final) | 4521.5 | 12:00 | — |
 
 **Step 1: Drift rate** (average over the day)
-:
 
 $$\text{Drift} = \frac{4521.5 - 4521.2}{4\;\text{h}} = 0.075\;\text{counts/hour} $$
 
-**Step 2: Drift correction at each station time:**$$\begin{aligned}
+**Step 2: Drift correction at each station time:** $$\begin{aligned}
 \text{Station A}: \;& \text{drift correction} = 0.075 \times (9-8) = 0.075 \\
 \text{Station B}: \;& \text{drift correction} = 0.075 \times (11-8) = 0.225
 \end{aligned
 }
 
-$$**Step 3: Drift‑corrected readings:**$$
+$$ **Step 3: Drift‑corrected readings:** $$
 
 \begin{aligned}
 R_A^{\text{corr}} &= 4535.7 - 0.075 = 4535.625\\
 R_B^{\text{corr}} &= 4548.3 - 0.225 = 4548.075
 \end{aligned}
 
-$$**Step 4: Gravity difference** (using calibration factor $C = 1.0 $mGal/count):$$
+$$ **Step 4: Gravity difference** (using calibration factor $C = 1.0 $mGal/count):
+
+$$
 
 \begin{aligned}
 \Delta g_A &= R_A^{\text{corr}} - R_{B,\text{avg}}^{\text{corr}} = 4535.625 - 4521.3 = 14.325\;\text{mGal}\\
@@ -205,9 +195,7 @@ $$**Step 4: Gravity difference** (using calibration factor $C = 1.0 $mGal/count)
 \end{aligned
 }
 
-$$**Step 5: Station gravities:**$$
-
-g_A = 978\,052.432 + 14.325 = 978\,066.757\;\text{mGal}g_B = 978\,052.432 + 26.775 = 978\,079.207\;\text{mGal} $$---
+$$**Step 5: Station gravities:** $$ g_A = 978\,052.432 + 14.325 = 978\,066.757\;\text{mGal}g_B = 978\,052.432 + 26.775 = 978\,079.207\;\text{mGal}$$ ---
 
 ## 8. Diagram — Gravimeter Types
 
@@ -253,7 +241,7 @@ g_A = 978\,052.432 + 14.325 = 978\,066.757\;\text{mGal}g_B = 978\,052.432 + 26.7
 | **Survey height conversion** | Convert $h$→$H $using gravimetric geoid |
 | **Oil & mineral exploration** | Bouguer anomaly maps → subsurface density |
 | **Volcanic monitoring** | Gravity changes → magma movement |
-| **Hydrogeology** | Water table changes affect local $g$ |
+| **Hydrogeology** | Water table changes affect local $ g$ |
 | **Engineering** | Void detection, archaeological prospection |
 
 ---

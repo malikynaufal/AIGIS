@@ -1,54 +1,72 @@
-# 📚 Pilihan: Infrastruktur Informasi Geospasial
+---
+tags: [aigis, geodesy, pilihan, spatial-infrastructure, sdi, indonesia]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD213610
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Infrastruktur Informasi Geospasial (IIG — SDI)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD213610 | **SKS:** 3 (3-0) | **Semester:** Pancarkan (6)
 
-Infrastruktur Informasi Geospasial adalah mata kuliah pilihan yang mempelajari konsep, komponen, dan pengelolaan infrastruktur informasi geospasial (GI) secara menyeluruh. Infrastruktur GI merupakan kerangka kerja yang mendukung pengumpulan, penyimpanan, pengolahan, dan distribusi data geospasial. Mata kuliah ini membahas arsitektur sistem geospasial, standardisasi data, interoperabilitas, kebijakan data, keamanan informasi, dan pengelolaan siklus hidup data geospasial.
+## Course Overview
 
-Di Indonesia, infrastruktur GI yang konsisten dan terintegrasi menjadi kunci keberhasilan pemerataan pelayanan publik berbasis lokasi. Mahasiswa akan mempelajari kebijakan nasional infrastruktur GI (JIPI), kerangka kerja data spasial, standardisasi spasial, dan integrasi data antar instansi pemerintah. Aspek penting lainnya adalah keamanan data geospasial, privasi, dan regulasi terkait.
+Infrastruktur Informasi Geospasial (IIG) covers the national and regional Spatial Data Infrastructure (SDI) framework, including data standards, metadata, interoperability, and institutional frameworks. Focus on Indonesia's JIPI (Jaringan Informasi Geospasial Indonesia).
 
-Pembelajaran dilakukan melalui kuliah teori dan studi kasus. Mahasiswa akan mempelajari arsitektur sistem berbasis cloud untuk data geospasial, protokol pertukaran data (WMS, WFS, WCS), standar ISO 19115 untuk metadata, serta kebijakan akses terbuka dan lisensi data. Studi kasus meliputi implementasi infrastruktur GI di berbagai instansi pemerintah dan sektor swasta.
+## Key Topics
 
-## Topik Utama
+### 1. SDI Architecture
+- **Federated data model:** Data remains at source nodes
+- **Clearinghouse:** Portal for discovery (Ina-Geoportal)
+- **Standards:** ISO 19115, OGC WMS/WFS/WCS
+- **Metadata management:** CSW 2.0.2 (Catalog Service Web)
+- **Geoportal architecture:** The Indonesian Geoportal ( https://tanahair.indonesia.go.id )
 
-### 1. Konsep dan Arsitektur
+### 2. Key Standards
 
-- Arsitektur sistem geospasial
+| Standard | Topic | Field |
+|----------|-------|-------|
+| ISO 19115 | Metadata | All SDI |
+| ISO 19157 | Data quality | All SDI |
+| ISO 19107 | Geography Markup Language (GML) | Exchange |
+| ISO 19123 | Schema for coverage | Imagery |
+| OGC WMS 1.3.0 | Web Map Service | Visualization |
+| OGC WFS 2.0 | Web Feature Service | Data access |
 
-- Infrastruktur berbasis cloud dan web
+### 3. Indonesian Context (JIPI)
+- **Coordinator:** BIG (Badan Informasi Geospasial)
+- **Nodes:** BPN, KLHK, KemenPU, BPS, local governments
+- **One Map Policy:** Presidential Instruction No. 6/2017
+- **Base map scale:** 1:50,000 (national), 1:5,000 (priority areas)
 
-- Standardisasi data dan interoperabilitas
+### 4. SDI Data Components
 
-### 2. Kebijakan dan Regulasi
+**Thematic Geospatial Data (DGTS):**
+- Land cover
+- Topography
+- Coastal environment
+- Transportation
 
-- Kebijakan nasional GI (JIPI)
+**Base Geospatial Data (DGS):**
+- Geodetic control networks
+- Digital topographic maps
+- Digital shoreline
+- Toponymy (place names)
 
-- Standar metadata ISO 19115
+## Assignment
+Design an SDI node for a local government (kabupaten/kota) with:
+- Metadata schema
+- WMS/WFS services
+- Security policy
+- Node architecture
 
-- Keamanan data dan privasi
+## Related Concepts
 
-### 3. Implementasi Praktis
+- [[Basis Data Spasial]] — Spatial database design
+- [[Sistem Informasi Geografis Terapan]] — GIS application
+- [[Sistem Informasi Geografis Berbasis Web]] — Web GIS
+- [[Struktur Data Spasial]] — Spatial data structures
+- [[Penataan Agraria dan Tata Ruang]] — Land use planning
 
-- Protokol pertukaran data (WMS, WFS, WCS)
+---
 
-- Pengelolaan siklus hidup data
-
-- Studi kasus implementasi GI
-
-## Tujuan Pembelajaran
-
-1. Memahami konsep dan arsitektur infrastruktur geospasial
-2. Menguasai kebijakan dan standar data geospasial
-3. Menerapkan protokol interoperabilitas data GI
-4. Merancang keamanan dan manajemen data geospasial
-
-## Referensi
-
-- Longley, P.A., et al. (2015). *Geographic Information Science and Systems*. Wiley.
-
-- Cromp, M. (2007). *Geospatial Information Infrastructure*. CRC Press.
-
-- ISO 19115:2019 Geographic Information — Metadata.
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

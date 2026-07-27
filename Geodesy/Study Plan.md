@@ -33,7 +33,7 @@ This study plan is designed to help you navigate the Geodesy Engineering curricu
 1. **Lecture Attendance**: Take notes directly in the respective course file.
 2. **Weekly Review**: Spend 30 minutes each Sunday reviewing notes from the week and linking related concepts.
 3. **Monthly Synthesis**: At the end of each month, create a summary note in the Concepts folder linking ideas across courses.
-4. **Exam Preparation**: 
+4. **Exam Preparation**:
  - Two weeks before exams: Review notes and create flashcards for key concepts.
  - One week before: Do practice problems and past exams.
 

@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Machine Learning
 
-**Course Code:** MGM214710 
-**SKS:** 3 (2-1) 
-**Semester:** 5 
-**Prerequisites:** Probabilitas & Statistika, Aljabar Linear, Pemrograman Python 
+**Course Code:** MGM214710
+**SKS:** 3 (2-1)
+**Semester:** 5
+**Prerequisites:** Probabilitas & Statistika, Aljabar Linear, Pemrograman Python
 
 ---
 

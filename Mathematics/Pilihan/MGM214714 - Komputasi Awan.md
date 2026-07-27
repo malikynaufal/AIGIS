@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Cloud Computing
 
-**Course Code:** MGM214714 
-**SKS:** 3 (2-1) 
-**Semester:** 6 
-**Prerequisites:** Jaringan Komputer, Sistem Operasi 
+**Course Code:** MGM214714
+**SKS:** 3 (2-1)
+**Semester:** 6
+**Prerequisites:** Jaringan Komputer, Sistem Operasi
 
 ---
 

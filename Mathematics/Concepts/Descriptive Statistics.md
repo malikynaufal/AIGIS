@@ -21,7 +21,7 @@ These describe the "typical" value in a dataset.
 
 | Measure | Formula | When to Use |
 |---------|---------|-------------|
-| **Mean** (Rata-rata) | $\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i$ | Symmetric data without outliers |
+| **Mean** (Rata-rata) | $\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i $ | Symmetric data without outliers |
 | **Median** (Median) | Middle value when data is sorted | Skewed data, ordinal data, outliers present |
 | **Mode** (Modus) | Most frequently occurring value | Categorical data, multimodal distributions |
 
@@ -33,7 +33,7 @@ These describe the "typical" value in a dataset.
 
 - Mode = 3 (most frequent)
 
-**Trimmed mean:** Discard top/bottom $k\%$before averaging — a compromise between mean and median robustness.
+**Trimmed mean:** Discard top/bottom $ k\%$ before averaging — a compromise between mean and median robustness.
 
 ---
 
@@ -43,11 +43,11 @@ These describe how spread out the data is.
 
 | Measure | Formula | Notes |
 |---------|---------|-------|
-| **Range** | $\max(x_i) - \min(x_i)$ | Simple but sensitive to outliers |
+| **Range** | $\max(x_i) - \min(x_i) $ | Simple but sensitive to outliers |
 | **Interquartile Range (IQR)** | $Q_3 - Q_1$ | Robust to outliers |
 | **Variance** | $s^2 = \frac{1}{n-1}\sum(x_i - \bar{x})^2$ | Sample variance (unbiased) |
-| **Std Deviation** | $s = \sqrt{s^2} $ | Same units as data |
-| **CV (Koefisien Variasi)** | $CV = s/\bar{x} $ | Dimensionless relative spread |
+| **Std Deviation** | $s = \sqrt{s^2}$ | Same units as data |
+| **CV (Koefisien Variasi)** | $CV = s/\bar{x}$ | Dimensionless relative spread |
 
 **Degrees of freedom:**$n-1 $in sample variance corrects for the bias of estimating the mean from the same data.
 
@@ -63,37 +63,39 @@ These describe how spread out the data is.
 
 - **Box plot:** Visualisation using min,$Q_1$, median, $Q_3$, max (with outlier detection)
 
-- **Outlier rule:** Data point is an outlier if it lies beyond $Q_1 - 1.5\times\text{IQR} $or $Q_3 + 1.5\times\text{IQR} $---
+- **Outlier rule:** Data point is an outlier if it lies beyond $Q_1 - 1.5\times\text{IQR}$or $Q_3 + 1.5\times\text{IQR}$---
 
 ## Measures of Shape (Ukuran Bentuk)
 
 ### Skewness (Kemiringan)
 
 Measures asymmetry of the distribution
-:
 
-$$\gamma_1 = \frac{1}{n}\sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^3$$
+$$\gamma_1 = \frac{1}{n}\sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^3
+
+$$
 
 | Value | Shape | Example |
 |-------|-------|---------|
-| $\gamma_1 = 0$ | Symmetric (perfectly balanced) | Normal distribution |
-| $\gamma_1 > 0$ | Right-skewed (positif) | Income, GNSS multipath errors |
-| $\gamma_1 < 0$ | Left-skewed (negatif) | Exam scores (easy test) |
+| $\gamma_1 = 0 $ | Symmetric (perfectly balanced) | Normal distribution |
+| $\gamma_1 > 0 $ | Right-skewed (positif) | Income, GNSS multipath errors |
+| $\gamma_1 < 0 $ | Left-skewed (negatif) | Exam scores (easy test) |
 
 **Interpretation:** The tail is longer on the skewed side; the mean is pulled toward the tail.
 
 ### Kurtosis (Keruncingan)
 
 Measures tail heaviness and peakedness (excess kurtosis)
-:
 
-$$\gamma_2 = \frac{1}{n}\sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^4 - 3$$
+$$\gamma_2 = \frac{1}{n}\sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^4 - 3
+
+$$
 
 | Value | Type | Interpretation |
 |-------|------|----------------|
-| $\gamma_2 = 0$ | Mesokurtic | Normal distribution tails |
-| $\gamma_2 > 0$ | Leptokurtic | Heavy tails, more outliers |
-| $\gamma_2 < 0$ | Platykurtic | Light tails, fewer outliers |
+| $\gamma_2 = 0 $ | Mesokurtic | Normal distribution tails |
+| $\gamma_2 > 0 $ | Leptokurtic | Heavy tails, more outliers |
+| $\gamma_2 < 0 $ | Platykurtic | Light tails, fewer outliers |
 
 **Geodesy application:** Residuals from LS adjustment with heavy tails (leptokurtic) suggest that the normal error assumption is violated — may indicate systematic errors or unmodeled effects.
 
@@ -102,9 +104,10 @@ $$\gamma_2 = \frac{1}{n}\sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^4 - 3$
 ## Covariance and Correlation (Kovarian dan Korelasi)
 
 **Covariance:** measures how two variables vary together
-:
 
-$$\text{Cov}(X, Y) = \frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$$
+$$\text{Cov}(X, Y) = \frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})
+
+$$
 
 - Positive: variables increase together
 
@@ -114,7 +117,7 @@ $$\text{Cov}(X, Y) = \frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$$
 
 **Correlation coefficient** (Pearson's $r$):
 
-$$r = \frac{\text{Cov}(X, Y)}{s_X s_Y}, \quad -1 \leq r \leq 1$$-$r = \pm 1$: perfect linear relationship
+$$ r = \frac{\text{Cov}(X, Y)}{s_X s_Y}, \quad -1 \leq r \leq 1 $$-$r = \pm 1$: perfect linear relationship
 
 - $r = 0$: no linear relationship
 
@@ -153,11 +156,11 @@ $$r = \frac{\text{Cov}(X, Y)}{s_X s_Y}, \quad -1 \leq r \leq 1$$-$r = \pm 1$: pe
 
 | Equation | Name | Purpose |
 |----------|------|---------|
-| $\bar{x} = \frac{1}{n}\sum x_i$ | Sample mean | Centre |
+| $\bar{x} = \frac{1}{n}\sum x_i $ | Sample mean | Centre |
 | $s^2 = \frac{1}{n-1}\sum(x_i-\bar{x})^2$ | Sample variance | Spread |
-| $\gamma_1 = \frac{1}{n}\sum((x_i-\bar{x})/s)^3$ | Skewness | Asymmetry |
-| $\gamma_2 = \frac{1}{n}\sum((x_i-\bar{x})/s)^4 - 3$ | Excess kurtosis | Tail weight |
-| $r = \text{Cov}(X,Y)/(s_X s_Y)$ | Correlation | Association |
+| $\gamma_1 = \frac{1}{n}\sum((x_i-\bar{x})/s)^3 $ | Skewness | Asymmetry |
+| $\gamma_2 = \frac{1}{n}\sum((x_i-\bar{x})/s)^4 - 3 $ | Excess kurtosis | Tail weight |
+| $ r = \text{Cov}(X,Y)/(s_X s_Y)$ | Correlation | Association |
 
 ---
 

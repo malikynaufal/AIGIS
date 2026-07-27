@@ -22,34 +22,48 @@ created: 2026-07-27
 
 ## 🧮 Key Equations
 
-```latex
-\begin{equation}
-\\mathbf{E} = \\mathbf{E}_0 e^{i(\\mathbf{k}\\cdot\\mathbf{r} - \\omega t)}
-\\end{equation}
-\\text{(Plane wave solution)}
+$$
 
 \begin{equation}
-n = \\frac{c}{v} = \\sqrt{\\varepsilon_r \\mu_r}
-\\end{equation}
-\\text{(Refractive index)}
+\mathbf{E} = \mathbf{E}_0 e^{i(\mathbf{k}\cdot\mathbf{r} - \omega t)}
+\end{equation}
+\text{(Plane wave solution)}
+
+$$
+
+$$
 
 \begin{equation}
-n^2 = 1 - \\frac{\\omega_p^2}{\\omega^2}
-\\end{equation}
-\\text{(Ionospheric refractive index, cold plasma)}
+n = \frac{c}{v} = \sqrt{\varepsilon_r \mu_r}
+\end{equation}
+\text{(Refractive index)}
+
+$$
+
+$$
 
 \begin{equation}
-\\omega_p = \\sqrt{\\frac{N_e e^2}{m_e \\varepsilon_0}}
-\\end{equation}
-\\text{(Plasma frequency)}
+n^2 = 1 - \frac{\omega_p^2}{\omega^2}
+\end{equation}
+\text{(Ionospheric refractive index, cold plasma)}
 
-### Ionospheric Delay
+$$
 
-```latex
+$$
+
 \begin{equation}
-\\Delta I = \\frac{40.3 \\cdot \\text{TEC}}{f^2}
-\\end{equation}
-\\text{(Ionospheric path delay in meters)}
+\omega_p = \sqrt{\frac{N_e e^2}{m_e \varepsilon_0}}
+\end{equation}
+\text{(Plasma frequency)}
+
+**### Ionospheric Delay **
+
+\begin{equation}
+\Delta I = \frac{40.3 \cdot \text{TEC}}{f^2}
+\end{equation}
+\text{(Ionospheric path delay in meters)}
+
+$$
 
 ---
 
@@ -59,7 +73,7 @@ n^2 = 1 - \\frac{\\omega_p^2}{\\omega^2}
 
 > **Key insight:** GNSS signals travel at light speed in vacuum but slow down in ionized plasma, with delay proportional to $1/f^2$.
 
-> **Geodesy intuition:** Dual-frequency GPS removes 99% of ionospheric error by exploiting the $1/f^2$ dispersion.
+> **Geodesy intuition:** Dual-frequency GPS removes 99% of ionospheric error by exploiting the$ 1/f^2 $dispersion.
 
 ---
 

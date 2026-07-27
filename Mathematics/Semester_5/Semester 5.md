@@ -27,22 +27,22 @@ created: 2026-07-27
 
 ```mermaid
 flowchart TD
-    NumM[Num Methods] --> ODE[Numerical ODE]
-    NumM --> PDE[Numerical PDE]
-    NumM --> SVD[SVD & PCA]
-    TG[Graph Theory] --> Net[Network Analysis]
-    TG --> Spec[Spectral Theory]
-    Opt[Optimization] --> LP[Linear Programming]
-    Opt --> NLP[Nonlinear Programming]
-    AI[Artificial Intelligence] --> Search[Search Algorithms]
-    AI --> ML[Machine Learning]
-    AI --> NN[Neural Networks]
-    CV[Computer Vision] --> Stereo[Stereo Vision]
-    CV --> Photog[Photogrammetry]
-    
-    Opt --> |KKT| LeastSq[Least Squares [[Least Squares Adjustment]]]
-    ML --> |Classification| RemoteSense[Remote Sensing]
-    CV --> |Bundle Adj| Mapping[Geodetic Mapping [[Geodesy MOC]]]
+ NumM[Num Methods] --> ODE[Numerical ODE]
+ NumM --> PDE[Numerical PDE]
+ NumM --> SVD[SVD & PCA]
+ TG[Graph Theory] --> Net[Network Analysis]
+ TG --> Spec[Spectral Theory]
+ Opt[Optimization] --> LP[Linear Programming]
+ Opt --> NLP[Nonlinear Programming]
+ AI[Artificial Intelligence] --> Search[Search Algorithms]
+ AI --> ML[Machine Learning]
+ AI --> NN[Neural Networks]
+ CV[Computer Vision] --> Stereo[Stereo Vision]
+ CV --> Photog[Photogrammetry]
+
+ Opt --> |KKT| LeastSq[Least Squares [[Least Squares Adjustment]]]
+ ML --> |Classification| RemoteSense[Remote Sensing]
+ CV --> |Bundle Adj| Mapping[Geodetic Mapping [[Geodesy MOC]]]
 ```
 
 ## 🎯 Learning Outcomes

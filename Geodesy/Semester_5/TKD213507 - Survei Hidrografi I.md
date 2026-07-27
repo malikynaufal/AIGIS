@@ -41,20 +41,19 @@ Indonesia uses **Tidak Berpasang Surut** (non-tidal) for areas without significa
 
 A sounding is a depth measurement from the water surface to the seabed:
 
-$$\text{Depth}_{Chart} = \text{Observed Depth} - \text{Tide Correction} + \text{Heel Correction} $$where:
--$\text{Observed Depth} $= echo sounder reading
--$\text{Tide Correction} $= difference between water surface and CD
--$\text{Heel Correction} $= ship list correction:$\delta d = d \cdot \sin\theta $for heel angle $\theta$### 2.3 Corrections Applied to Soundings
+$$ ext{Depth}_{Chart} = ext{Observed Depth} - ext{Tide Correction} + ext{Heel Correction} $ $
+
+where:
+-$ext{Observed Depth} $= echo sounder reading
+-$ext{Tide Correction} $= difference between water surface and CD
+-$ext{Heel Correction} $= ship list correction: $\delta d = d \cdot \sinheta $ for heel angle $heta $### 2.3 Corrections Applied to Soundings
 
 1. **Heel correction** — for ship lis
 t
 
-$$d_{corrected} = \frac{d}{\cos\theta} $$
+$ $d_{corrected} = \frac{d}{\cosheta}$$2. **Draft correction** — for ship's draft$ $
 
-2. **Draft correction** — for ship's draft
-:
-
-$$d_{corrected} = d - \text{static draft} $$
+d_{corrected} = d - ext{static draft}$$
 
 3. **Speed correction** — for transducer movement
 4. **Temperature/sound speed correction** — via CTD cast
@@ -67,14 +66,13 @@ $$d_{corrected} = d - \text{static draft} $$
 ### 3.1 Single-Beam Echo Sounder (SBES)
 
 The single-beam echo sounder (SBES) transmits a single acoustic pulse vertically downward and measures the two-way travel time
-:
 
-$$d = \frac{c \cdot t}{2} $$
+$ $d = \frac{c \cdot t}{2}$$
 
 where:
--$d$= depth
--$c$= speed of sound in water (~1500 m/s)
--$t$= two-way travel time
+-$ d $= depth
+-$ c $= speed of sound in water (~1500 m/s)
+-$ t $= two-way travel time
 
 #### Single-Beam Characteristics
 
@@ -98,14 +96,13 @@ where:
 ### 3.2 Sound Velocity Profile (SVP)
 
 The speed of sound in water varies with **depth**, **salinity**, and **temperature**
-:
 
-$$c = 1449.2 + 4.6T - 0.055T^2 + 0.00029T^3 + (1.34 - 0.01T)(S - 35) + 0.016z$$
+$ $c = 1449.2 + 4.6T - 0.055T^2 + 0.00029T^3 + (1.34 - 0.01T)(S - 35) + 0.016z $$
 
 where:
--$T$= temperature (°C)
--$S$= salinity (psu)
--$z$= depth (m)
+-$ T $= temperature (°C)
+-$ S $= salinity (psu)
+-$ z $= depth (m)
 
 A **CTD** ( Conductivity-Temperature-Depth) cast is performed regularly to measure the SVP for ray-bending correction.
 
@@ -113,7 +110,7 @@ A **CTD** ( Conductivity-Temperature-Depth) cast is performed regularly to measu
 
 Because sound speed varies with depth, the acoustic beam path is refracted (curved). The ray-tracing equation:
 
-$$\frac{\cos\theta(z)}{c(z)} = \text{constant} $$
+$ $\frac{\cosheta(z)}{c(z)} = ext{constant} $$
 
 This causes systematic errors in deep water, especially with steep beam angles.
 
@@ -123,7 +120,7 @@ This causes systematic errors in deep water, especially with steep beam angles.
 
 ### 4.1 Bathymetric Contours
 
-Bathymetric charts represent underwater topography through contour lines of equal depth. Depths ($-$values) are shown with negative numbers.
+Bathymetric charts represent underwater topography through contour lines of equal depth. Depths ($-$ values) are shown with negative numbers.
 
 Types of bathymetric representation:
 
@@ -161,15 +158,17 @@ A nautical chart includes:
 ### 5.1 Coverage Requirement
 s
 
-$$D_{track} = 3 \cdot d \cdot \sin(\alpha_{max})$$where $d$is the depth and $\alpha_{max} $is the maximum beam angle. This ensures overlapping tracks for complete coverage.
+$ $D_{track} = 3 \cdot d \cdot \sin(\alpha_{max})$$
+
+where $ d $ is the depth and $\alpha_{max} $ is the maximum beam angle. This ensures overlapping tracks for complete coverage.
 
 ### 5.2 Line Spacin
 g
 
-$$s = D_{swath} - 2 \cdot \Delta$$
+$ $s = D_{swath} - 2 \cdot \Delta $$
 
 where:
--$D_{swath} $= swath width (at depth $d$): $D_{swath} = 2d \cdot \tan(\alpha_{max})$-$\Delta$= overlap (typically 10–25%)
+-$ D_{swath} $= swath width (at depth $ d $): $ D_{swath} = 2d \cdot an(\alpha_{max}) $-$\Delta $= overlap (typically 10–25%)
 
 For IHO **Order** standards:
 
@@ -212,7 +211,7 @@ A tide gauge (*pengukur pasang surut*) measures sea surface height relative to a
 - **Pressure gauge** — measures hydrostatic pressure at seabe
 d
 
-$$P = \rho \cdot g \cdot h + P_{atm} $$
+$ $P = \rho \cdot g \cdot h + P_{atm}$$
 
 - **Acoustic tide gauge** — measures water column resonant frequency
 
@@ -257,11 +256,13 @@ $$P = \rho \cdot g \cdot h + P_{atm} $$
 **Standard Deviation of Depth Error (SDE):*
 *
 
-$$\text{SDE} = \sqrt{\frac{\sum_{i=1}^{n} (d_i - \bar{d})^2}{n-1}} $$where $d_i $are the difference between sounding and predicted depth from a digital terrain model.
+$ $ext{SDE} = \sqrt{\frac{\sum_{i=1}^{n} (d_i - \bar{d})^2}{n-1}} $$
+
+where $ d_i $ are the difference between sounding and predicted depth from a digital terrain model.
 
 **Requirements:**
--$\text{SDE} \leq 0.25 $m for Order 1
--$\text{SDE} \leq 0.5 $m for Order 2/3
+-$ext{SDE} \leq 0.25 $ m for Order 1
+-$ext{SDE} \leq 0.5 $ m for Order 2/3
 
 ---
 
@@ -294,12 +295,12 @@ $$\text{SDE} = \sqrt{\frac{\sum_{i=1}^{n} (d_i - \bar{d})^2}{n-1}} $$where $d_i 
 
 | Quantity | Formula | Unit |
 |----------|---------|------|
-| Depth from sonar | $d = \frac{c \cdot t}{2} $ | m |
-| Sound speed (Mackenzie) | $c = 1449.2 + ...$ | m/s |
-| Heel correction | $d_{corr} = \frac{d}{\cos\theta} $ | m |
-| Swath width | $D = 2d \cdot \tan\alpha_{max} $ | m |
-| Tide correction | $d_{CD} = d_{raw} - \Delta tide$ | m |
-| Line spacing | $s = D_{swath}(1 - overlap)$ | m |
+| Depth from sonar | $ d = \frac{c \cdot t}{2} $ | m |
+| Sound speed (Mackenzie) | $ c = 1449.2 + ...$ | m/s |
+| Heel correction | $ d_{corr} = \frac{d}{\cosheta} $ | m |
+| Swath width | $ D = 2d \cdot an\alpha_{max} $ | m |
+| Tide correction | $ d_{CD} = d_{raw} - \Delta tide $ | m |
+| Line spacing | $ s = D_{swath}(1 - overlap)$ | m |
 
 ---
 

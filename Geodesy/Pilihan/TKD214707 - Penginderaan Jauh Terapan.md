@@ -1,54 +1,46 @@
-# 📚 Pilihan: Penginderaan Jauh Terapan
+---
+tags: [aigis, geodesy, pilihan, remote-sensing-applied, satellite]
+aliases: [Applied Remote Sensing, Penginderaan Jauh Terapan]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD214707
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Penginderaan Jauh Terapan (Applied Remote Sensing)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD214707 | **SKS:** 3 (2-1) | **Semester:** 6–8
 
-Penginderaan Jauh Terapan adalah mata kuliah pilihan yang mempelajari penerapan teknologi penginderaan jauh (remote sensing) untuk berbagai aplikasi di bidang geodesi, pemetaan, dan pengelolaan lingkungan. Mata kuliah ini mencakup interpretasi citra, ekstraksi fitur, klasifikasi lahan, analisis perubahan penggunaan lahan, dan integrasi data remote sensing dengan SIG dan GNSS.
+## Course Overview
 
-Penginderaan jauh menjadi alat indispensable bagi surveyor dan geodesi modern. Citra satelit (Landsat, Sentinel, WorldView) dan citra udara digunakan untuk membuat dasar peta, memantau perubahan lahan, mendeteksi bencana, dan mendukung perencanaan tata ruang. Teknologi drone (UAV) juga semakin populer untuk survei lokal dengan resolusi tinggi.
+Advanced applications of [[Remote Sensing]] data for environmental monitoring, resource management, and urban planning. Covers Sentinel-2/Landsat analysis, object-based image analysis (OBIA), time series analysis, and machine learning for image classification.
 
-Pembelajasan dilakukan melalui kombinasi teori dan praktikum menggunakan software seperti QGIS, Google Earth Engine, ENVI, atau ArcGIS Pro. Mahasiswa akan memproses citra multispektral, mengklasifikasi tutupan lahan, mendeteksi perubahan penggunaan lahan, dan mengekstrak fitur-fitur penting untuk aplikasi geodesi. Studi kasus meliputi analisis deforestasi di Kalimantan, monitoring urbanisasi, dan pemetaan pasca-bencana alam.
+## Key Topics
 
-## Topik Utama
+### 1. Classification Methods
 
-### 1. Dasar Penginderaan Jauh
+| Method | Type | Training Data | Accuracy |
+|--------|------|---------------|----------|
+| Maximum Likelihood | Pixel-based | Required | 80–85% |
+| Random Forest | Pixel/object | Required | 85–95% |
+| SVM | Object-based | Required | 90–95% |
+| Deep Learning (CNN) | Object-based | Large required | 95%+ |
 
-- Spektrum elektromagnetik dan interaksi dengan permukaan
+### 2. Time Series Analysis
 
-- Platform citra: satelit, udara, drone (UAV)
+**NDVI time series for phenology:**
+$$
+NDVI(t) = a + b \sin(2\pi t) + c \cos(2\pi t)
+$$
 
-- Resolusi spasial, temporal, spektral, dan radiometrik
+**Change detection:**
+$$
+\Delta NDVI = NDVI_{t2} - NDVI_{t1}
+$$
 
-### 2. Pengolahan Citra
+### 3. Land Cover/Land Use
 
-- Kalibrasi radiometrik dan atmosfer
+- Sentinel-2 10-class classification
+- Forest cover change in Kalimantan
+- Urban expansion in Jabodetabek
 
-- Enhancing dan filtering citra
-
-- Klasifikasi supervised dan unsupervised
-
-### 3. Aplikasi Geodesi
-
-- Deteksi perubahan penggunaan lahan
-
-- Pemetaan pascabencana dengan remote sensing
-
-- Integrasi remote sensing dan GNSS/GIS
-
-## Tujuan Pembelajaran
-
-1. Menguasai prinsip interpretasi citra penginderaan jauh
-2. Mengolah dan mengklasifikasi citra untuk kebutuhan geodesi
-3. Menerapkan remote sensing untuk pemantauan perubahan lahan
-4. Mengintegrasikan data remote sensing dengan sistem geodesi dan GIS
-
-## Referensi
-
-- Lillesand, T.M., Kiefer, R.W., & Chipman, J.W. (2015). *Remote Sensing and Image Interpretation* (7th ed.). Wiley.
-
-- Jensen, J.R. (2015). *Introductory Digital Image Processing: A Remote Sensing Perspective*. Pearson.
-
-- Schowengerdt, R.A. (2007). *Remote Sensing: Models and Methods for Image Processing* (3rd ed.). Academic Press.
+---
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

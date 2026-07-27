@@ -1,38 +1,119 @@
-# Mathematics Resources
+---
+tags: [math, resources, bibliography]
+aliases: [Mathematics Resources]
+created: 2026-07-13
+updated: 2026-07-27
+---
 
-## Curated Open-Access Bibliography for Geodesy Mathematics
+# 📚 Mathematics Resources
 
-*Last updated: {current_date}*
+> *"Core textbooks and open-access resources for the Geodesy Mathematics track."*
 
 ---
 
-## 📚 Quick Links
+## 1. Core Textbooks
 
-- **Full Resource List:** [[Resources]] — tables of textbooks, courses, software
+### Calculus & Analysis
 
-- **Curriculum Guide:** [[Mathematics_Curriculum_Guide]] — semester-aligned with UGM
+| Book | Author(s) | Year | Notes |
+|------|-----------|------|-------|
+| *Calculus: Early Transcendentals* | Stewart, J. | 2015 | Standard calculus text |
+| *Calculus* | Larson & Edwards | 2018 | Good for reference |
+| *Thomas' Calculus* | Thomas et al. | 2014 | Rigorous + applications |
+| *Calculus* | Spivak, M. | 1994 | Graduate-level treatment |
+| *Principles of Mathematical Analysis* | Rudin, W. | 1976 | "Baby Rudin" — real analysis |
+| *Analysis I & II* | Tao, T. | 2013 | Modern, accessible |
 
-- **Study Plan:** [[Study Plan]] — weekly rhythm and milestones
+### Linear Algebra
 
-## 🔗 Subject Links
+| Book | Author(s) | Year | Notes |
+|------|-----------|------|-------|
+| *Linear Algebra and Its Applications* | Strang, G. | 2006 | **Key for [[Least Squares Adjustment]]** |
+| *Linear Algebra* | Friedberg et al. | 2002 | Theoretical, rigorous |
+| *Matrix Computations* | Golub & Van Loan | 2013 | Numerical, advanced |
 
-- [[Geodesy MOC]] — uses: least squares, transforms, statistics, coordinate systems
+### Differential Equations
 
-- [[Physics MOC]] — uses: vector calculus, differential equations, tensors
+| Book | Author(s) | Year | Notes |
+|------|-----------|------|-------|
+| *Elementary Differential Equations & Boundary Value Problems* | Boyce & DiPrima | 2012 | Standard text, ODE+PDE |
+| *Partial Differential Equations for Scientists and Engineers* | Strauss | 2007 | PDEs, less technical |
 
-- [[AIGIS Hub]] — main dashboard
+### Probability & Statistics
 
-## 📂 Note Structure
-| Folder | Contents |
-|--------|----------|
-| `_Inbox/` | Drop notes here for AIGIS to file |
-| `_Study Packs/` | Compiled study packs (PDFs, bundles) |
-| `Concepts/` | Concept notes (limits, derivatives, stats, etc.) |
-| `Curriculum/` | UGM curriculum alignment |
-| `Resources/` | Full resource bibliography |
-| `Semester_1/` through `Semester_8/` | Course-specific notes |
-| `Sources/` | Original source materials |
+| Book | Author(s) | Year | Notes |
+|------|-----------|------|-------|
+| *Introduction to Probability* | Grinstead & Snell | 1997 | Free online |
+| *Statistical Inference* | Casella & Berger | 2002 | Graduate-level |
+| *Introduction to Mathematical Statistics* | Hogg et al. | 2012 | Theoretical statistics |
+
+### Numerical Methods
+
+| Book | Author(s) | Year | Notes |
+|------|-----------|------|-------|
+| *Numerical Analysis* | Burden & Faires | 2015 | Standard, practical |
+| *Numerical Linear Algebra* | Trefethen & Bau | 1997 | Modern matrix analysis |
+| *Numerical Methods in Engineering with Python* | Kiusalaas | 2013 | **Python examples** |
+
+### Graph Theory & Optimization
+
+| Book | Author(s) | Year | Notes |
+|------|-----------|------|-------|
+| *Introduction to Graph Theory* | West, D. | 2001 | Standard |
+| *Convex Optimization* | Boyd & Vandenberghe | 2004 | Free online, **essential** |
+| *Nonlinear Programming* | Bertsekas | 2016 | Advanced |
 
 ---
 
-*This resource list is maintained by AIGIS and auto-synced to your NotebookLM via Google Drive.*
+## 2. Open Access Resources
+
+| Platform | Resource | URL |
+|----------|----------|-----|
+| MIT OCW | 18.01 — Single Variable Calculus | ocw.mit.edu |
+| MIT OCW | 18.02 — Multivariable Calculus | ocw.mit.edu |
+| MIT OCW | 18.06 — Linear Algebra (Strang) | ocw.mit.edu |
+| 3Blue1Brown | Essence of Linear Algebra | YouTube |
+| Khan Academy | Calculus + Statistics | khanacademy.org |
+| Paul's Notes | Calculus & DE notes | tutorial.math.lamar.edu |
+
+---
+
+## 3. Geodesy-Relevant Mathematics
+
+| Mathematical Topic | Geodesy Application |
+|--------------------|---------------------|
+| Least squares | [[Least Squares Adjustment]], GNSS processing |
+| Matrix factorization | [[LU Decomposition]], [[Cholesky Decomposition]] |
+| Vector calculus | Surface integrals, reference ellipsoid |
+| Fourier analysis | Signal processing, GPS signals |
+| Coordinate geometry | [[Geodetic Coordinates]], transformations |
+
+---
+
+## 4. Recommended Journals
+
+| Journal | Focus |
+|---------|-------|
+| *Journal of Geodesy* | Geodetic mathematics |
+| *SIAM Journal of Scientific Computing* | Numerical methods |
+| *Mathematics of Computation* | Computational mathematics |
+| *Computers & Geosciences* | Applied math in geosciences |
+
+---
+
+## 5. Software Tools (Free & Open Source)
+
+| Tool | Use |
+|------|-----|
+| **Python** (numpy/scipy/sympy) | Numerical/symbolic computation |
+| **R** | Statistical analysis |
+| **GNU Octave** | MATLAB-compatible |
+| **MATLAB Online** | Educational access |
+| **SageMath** | Symbolic computing |
+| **Jupyter** | Interactive notebooks |
+
+---
+
+*Page last updated: 2026-07-27 | AIGIS Content™*
+
+See also: [[Mathematics MOC]], [[Mathematics_Curriculum_Guide]], [[Mathematics_Sources.md]]

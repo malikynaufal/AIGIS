@@ -36,21 +36,25 @@ created: 2026-07-27
 
 ### Linear Regression
 
-$$\hat{y} = w^T x + b, \quad \text{minimize } \frac{1}{n}\|Xw - y\|^2$$
+$$\hat{y} = w^T x + b, \quad ext{minimize } \frac{1}{n}\|Xw - y\|^2
 
-### Logistic Regression
+$ $
 
-$$P(y=1|x) = \sigma(w^T x) = \frac{1}{1 + e^{-w^T x}}$$
+Logistic Regression
 
-### Neural Network (Single Layer)
+$$## Logistic RegressionP(y=1|x) = \sigma(w^T x) = \frac{1}{1 + e^{-w^T x}}$ $
 
-$$h = \sigma(Wx + b), \quad \text{output} = \sigma(W' h + b')$$
+# ## Logistic RegressionP(y=1|x) = \sigma(w^T x) = \frac{1}{1 + e^{-w^T x}}Neural Network (Single Layer)
 
-where $\sigma(z) = \frac{1}{1+e^{-z}}$ is the sigmoid function.
+$$## Neural Network (Single Layer)h = \sigma(Wx + b), \quad ext{output} = \sigma(W' h + b')$ $
+
+# ## Neural Network (Single Layer)h = \sigma(Wx + b), \quad ext{output} = \sigma(W' h + b')where $\sigma(z) = \frac{1}{1+e^{-z}} $ is the sigmoid function.
 
 ### Backpropagation
 
-$$\frac{\partial L}{\partial w} = \frac{\partial L}{\partial a} \cdot \sigma'(z) \cdot \frac{\partial z}{\partial w}$$
+$ $\frac{artial L}{artial w} = \frac{artial L}{artial a} \cdot \sigma'(z) \cdot \frac{artial z}{artial w}
+
+$$
 
 Chain rule applied recursively through layers.
 

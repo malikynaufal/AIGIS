@@ -1,60 +1,33 @@
-# 📚 Pilihan: GNSS Terapan
+---
+tags: [aigis, geodesy, pilihan, gnss, advanced-gnss, positioning]
+aliases: [GNSS Terapan, Applied GNSS]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD213618
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: GNSS Terapan (Applied GNSS)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD213618 | **SKS:** 3 (2-1) | **Semester:** 5–7
 
-GNSS Terapan adalah mata kuliah pilihan yang mempelajari penerapan Global Navigation Satellite System (GNSS) secara praktis untuk berbagai aplikasi survei dan pemetaan. Mata kuliah ini mencakup teknik dasar GNSS (single-point positioning, differential positioning, RTK, PPP), pengumpulan data GNSS di lapangan, pengolahan data, dan analisis ketelitian. Teknologi GNSS menjadi tulang punggung industri survei modern.
+## Course Overview
 
-Mahasiswa akan mempelajari cara merancang jaringan GNSS, memilih konfigurasi pengamatan yang optimal, mengoperasikan receiver GNSS, dan mengolah data menggunakan software seperti Trimble Business Centre, Leica Geo Office, atau RTKLIB. Aplikasi GNSS yang dibahas termasuk survei kontrol, pengukuran batas tanah, monitoring deformasi, dan navigasi presisi tinggi.
+Advanced application of GNSS systems (GPS, GLONASS, Galileo, BeiDou) for high-precision scientific and engineering tasks. Focus on real-time kinematic (RTK), precise point positioning (PPP), GNSS meteorology, and ionospheric modeling.
 
-Mata kuliah ini merupakan pengembangan dari mata kuliah Dasar-Dasar Geofisika dan Astronomi. Pembelajaran meliputi simulasi dan studi kasus nyata. Mahasiswa juga mempelajari tantangan khas di Indonesia seperti keterbatasan jumlah reference station, efek multipath, dan atmospheric conditions tropical untuk pengolahan basis data GNSS.
+## Key Topics
 
-## Topik Utama
+### 1. Precise Point Positioning (PPP)
+- Satellite clock/orbit corrections (IGS products)
+- Ambiguity resolution in PPP
+- Convergence time
 
-### 1. Teknik Pengukuran GNSS
+### 2. GNSS Meteorology
+- Tropospheric delay: $T = ZHD + ZWD$
+- Zenith Wet Delay (ZWD) as proxy for precipitable water vapor (PWV)
 
-- Single-point positioning (SPP)
+### 3. Advanced Processing
+- Double-difference vs. triple-difference models
+- Tropospheric mapping functions (VMF1, GMF)
+- Ionospheric mapping (Klobuchar vs. GIM)
 
-- Differential GPS (DGPS) dan RTK
-
-- Precise Point Positioning (PPP)
-
-- Network adjustment
-
-### 2. Pengumpulan dan Pengolahan Data
-
-- Perencanaan jaring GNSS
-
-- Pengoperasian receiver GNSS
-
-- Proses pengolahan data (baseline solutions)
-
-- Kalibrasi dan verifikasi
-
-### 3. Aplikasi
-
-- Survei kontrol presisi
-
-- Pengukuran batas tanah
-
-- Monitoring deformasi struktur
-
-- Navigation dan precision agriculture
-
-## Tujuan Pembelajaran
-
-1. Menguasai teknik pengukuran GNSS
-2. Melakukan pengumpulan dan pengolahan data GNSS
-3. Merancang jaringan GNSS untuk survei
-4. Menganalisis ketelitian hasil pengukuran GNSS
-
-## Referensi
-
-- Hofmann-Wellenhof, B., Lichtenegger, H., & Collins, J. (2001). *GPS: Theory and Practice* (6th ed.). Springer.
-
-- El-Rabbany, A. (2015). *Introduction to GNSS: Global Navigation Satellite Systems*. CRC Press.
-
-- Sansò, F., & Sanguinetti, S. (2013). *GNSS Data Processing*. Wiley.
+---
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

@@ -1,58 +1,37 @@
-# 📚 Pilihan: Sistem Informasi Geografis Terapan
+---
+tags: [aigis, geodesy, pilihan, gis-applied, spatial-analysis]
+aliases: [Applied GIS, SIG Terapan]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD214713
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Sistem Informasi Geografis Terapan (Applied GIS)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD214713 | **SKS:** 3 (2-1) | **Semester:** 6–8
 
-Sistem Informasi Geografis Terapan adalah mata kuliah pilihan yang mempelajari penerapan SIG untuk memecahkan masalah nyata di berbagai bidang, seperti perencanaan kota (smart city), pengelolaan sumber daya alam, kesehatan masyarakat, bisnis dan logistik, pertanian dan kehutanan, serta kebencanaan. Mata kuliah ini dirancang untuk mahasiswa yang telah memiliki pengetahuan dasar SIG dan ingin memperluas pengetahuan aplikasinya.
+## Course Overview
 
-Berbeda dengan mata kuliah SIG dasar yang lebih teoritis dan teknis, mata kuliah ini menekankan pada aspek analisis dan pengambilan keputusan. Mahasiswa akan melakukan studi kasus yang nyata di mana SIG digunakan sebagai alat bantu untuk mengambil keputusan. Aspek analisis spasial tingkat lanjut, pemodelan, dan visualisasi data menjadi fokus utama.
+Advanced [[GIS]] applications for spatial analysis, decision support systems, and environmental and urban problem-solving. Focus on multi-criteria evaluation, network analysis, and 3D GIS.
 
-Pembelajasan dilakukan melalui proyek kelompok yang mensimulasikan proyek SIG nyata. Mahasiswa akan memilih topik studi kasus, mengumpulkan data, melakukan analisis spasial kompleks, dan menyajikan hasil dalam format peta dan laporan yang komunikatif. Tujuan akhir adalah mengembangkan portfolio proyek SIG yang siap dipresentasikan kepada calon klien di industri.
+## Key Topics
 
-## Topik Utama
+### 1. Multi-Criteria Evaluation (MCE)
 
-### 1. Analisis Spasial Tingkat Lanjut
+$$
+S_j = \sum_{i=1}^{n} w_i \cdot x_{ij}
+$$ where $w_i$ = criterion weight, $x_{ij}$ = standardized score.
 
-- Network analysis (jaringan transportasi)
+### 2. Network Analysis
 
-- Surface analysis (DTM, slope, viewshed)
+- Shortest path (Dijkstra's algorithm)
+- Service area analysis
+- Location-allocation models
 
-- Spatial statistics (moran's I, cluster analysis)
+### 3. 3D GIS
 
-- 3D analysis
+- Digital Terrain Models (DTM)
+- Building extrusion from 2D parcels
+- Skyline analysis
 
-### 2. Pemodelan Spasial
-
-- Model kesesuaian lahan (suitability modeling)
-
-- Model risiko dan kerentanan
-
-- Model hidrologi dan drainase
-
-### 3. Aplikasi Spesifik
-
-- Smart city dan urban planning
-
-- Manajemen sumber daya alam
-
-- Logistik dan supply chain
-
-- Kesehatan dan epidemiologi spasial
-
-## Tujuan Pembelajaran
-
-1. Menerapkan analisis spasial tingkat lanjut untuk masalah nyata
-2. Membuat model spasial untuk pengambilan keputusan
-3. Mengintegrasikan berbagai sumber data spasial
-4. Menyajikan hasil analisis SIG secara visual dan komunikatif
-
-## Referensi
-
-- Longley, P.A., Goodchild, M.F., Maguire, D.J., & Rhind, D.W. (2015). *Geographical Information Science and Systems*. Wiley.
-
-- Burrough, P.A., & McDonnell, R.A. (2015). *Principles of Geographical Information Systems*. Oxford University Press.
-
-- Mitchell, A. (2005). *The ESRI Guide to GIS Analysis* (Vol. 1-3). ESRI Press.
+---
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

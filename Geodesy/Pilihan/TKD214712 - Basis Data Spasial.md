@@ -1,54 +1,42 @@
-# 📚 Pilihan: Basis Data Spasial
+---
+tags: [aigis, geodesy, pilihan, spatial-database, postgres, postgis, database]
+aliases: [Spatial Database, Basis Data Spasial]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD214712
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Basis Data Spasial (Spatial Database)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD214712 | **SKS:** 3 (2-1) | **Semester:** 6–8
 
-Basis Data Spasial adalah mata kuliah pilihan yang mempelajari konsep dan implementasi basisdata untuk data geospasial. Mata kuliah ini membahas topik-topik lanjutan seperti model data spasial, indexing spasial dengan R-tree dan quad-tree, query spasial (spatial join, spatial predicate), dan integrasi basisdata spasial dengan GIS dan aplikasi geoportal. Konsep ini merupakan pengembangan dari mata kuliah Sistem Basisdata dan Struktur Data Spasial.
+## Course Overview
 
-Basis data spasial adalah fondasi infrastruktur data geospasial dan GIS. Mahasiswa akan mempelajari penggunaan ekstensi PostGIS pada PostgreSQL untuk penyimpanan dan kueri data geometri, Oracle Spatial untuk aplikasi enterprise, dan SQL Server Spatial. Topik juga mencakup optimasi penyimpanan, manajemen data besar (big spatial data), dan integrasi dengan platform cloud.
+Spatial database design and implementation using PostgreSQL/PostGIS. Covers spatial indexing (R-tree, GiST), spatial query optimization (ST_ operations), and integration with GIS clients.
 
-Pembelajasan dilakukan melalui praktikum langsung menggunakan PostGIS, SpatialLite, dan SQL Server Spatial. Mahasiswa akan merancang skema basisdata spasial, menulis kueri SQL spasial, membuat indeks spasial untuk optimasi performa, dan mengintegrasikan basisdata spasial dengan aplikasi web berbasis SIG.
+## Key Topics
 
-## Topik Utama
+### 1. PostgreSQL + PostGIS
 
-### 1. Model Data Spasial
+| Feature | PostGIS | Non-Spatial DB |
+|---------|---------|----------------|
+| Geometry types | Point, LineString, Polygon, Multi* | None |
+| Spatial index | GiST | B-tree only |
+| Spatial functions | ST_Distance, ST_Intersects, ST_Area | None |
+| Coordinate system | SRID support | Not available |
 
-- Model vektor dan raster
+### 2. Spatial Queries
 
-- Representasi geometri (point, line, polygon)
+```sql
+-- Common PostGIS queries
+SELECT ST_Distance(a.geom, b.geom) FROM parcels a, schools b;
+SELECT ST_Area(ST_Transform(geom, 32749)) FROM land_parcels;
+SELECT ST_Intersects(a.geom, buffer.geom) AS includes;
+```
 
-- Topologi dan network
+### 3. Spatial Indexing
 
-### 2. Query dan Indexing Spasial
+- R-tree (via GiST): $O(\log N)$ search
+- Grid indexing for rasters
 
-- Operator spasial (ST_Intersects, ST_Contains, ST_Distance)
-
-- Spatial indexing (R-tree, quad-tree)
-
-- Optimasi query spasial
-
-### 3. Integrasi Basisdata Spasial
-
-- PostGIS (PostgreSQL) dan SpatialLite
-
-- Oracle Spatial dan SQL Server Spatial
-
-- Web GIS dan geoportal
-
-## Tujuan Pembelajaran
-
-1. Memahami model data spasial dan perbedaannya
-2. Menguasai kueri SQL spasial untuk analisis data
-3. Merancang indeks spasial untuk optimasi query
-4. Mengintegrasikan basisdata spasial dengan aplikasi GIS web
-
-## Referensi
-
-- Obe, R., & Hsu, L. (2021). *PostGIS in Action* (3rd ed.). Manning.
-
-- Rigaux, P., Scholl, M., & Voisard, A. (2012). *Spatial Databases: With Applications to GIS*. Morgan Kaufmann.
-
-- Shekhar, S., & Chawla, S. (2002). *Spatial Databases: A Tour*. Prentice Hall.
+---
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

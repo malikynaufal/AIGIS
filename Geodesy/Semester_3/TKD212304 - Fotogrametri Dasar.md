@@ -12,30 +12,40 @@ Fotogrametri Dasar mempelajari prinsip-prinsip pengukuran dari foto udara dan ci
 
 ### 1. Geometri Kamera
 
-$$x = -f\frac{a_1(X-X_0)+b_1(Y-Y_0)+c_1(Z-Z_0)}{a_3(X-X_0)+b_3(Y-Y_0)+c_3(Z-Z_0)}y = -f\frac{a_2(X-X_0)+b_2(Y-Y_0)+c_2(Z-Z_0)}{a_3(X-X_0)+b_3(Y-Y_0)+c_3(Z-Z_0)} $$-$f$= focal length
--$(X_0, Y_0, Z_0)$= posisi kamera
--$a_i, b_i, c_i$= elemen orientasi luar
+$$ x = -f\frac{a_1(X-X_0)+b_1(Y-Y_0)+c_1(Z-Z_0)}{a_3(X-X_0)+b_3(Y-Y_0)+c_3(Z-Z_0)}y = -f\frac{a_2(X-X_0)+b_2(Y-Y_0)+c_2(Z-Z_0)}{a_3(X-X_0)+b_3(Y-Y_0)+c_3(Z-Z_0)}$ $-$ f $= focal length
+-$ (X_0, Y_0, Z_0) $= posisi kamera
+-$ a_i, b_i, c_i $= elemen orientasi luar
 
 ### 2. Orientasi Foto
 
 **Orientasi Dalam (Interior Orientation)**: parameter kamera (focal length, principal point, lens distortion).
 
-**Orientasi Luar (Exterior Orientation)**: 6 parameter — posisi$(X_0,Y_0,Z_0) $dan orientasi sudut$(\omega,\varphi,\kappa)$.
+**Orientasi Luar (Exterior Orientation)**: 6 parameter — posisi$ (X_0,Y_0,Z_0) $dan orientasi sudut $ (\omega,\varphi,\kappa) $.
 
 ### 3. Stereoskopi dan Parallax
 
 Parallax stereoskopik:
 
-$$B = Z_1 - Z_2 \quad\text{(base)}p = x_1 - x_2 \quad\text{(x-parallax)
+$ $
+
+B = Z_1 - Z_2 \quadext{(base)}p = x_1 - x_2 \quadext{(x-parallax)
 }
 
-$$Perhitungan tinggi dari parallax:$$
+$$
 
-\Delta h = \frac{H \cdot \Delta p}{B + \Delta p} $$### 4. Orthorektifikasi
+Perhitungan tinggi dari parallax:$ $\Delta h = \frac{H \cdot \Delta p}{B + \Delta p}
+
+$$4. Orthorektifikasi
 
 Mengoreksi distorsi geometrik pada foto akibat relief:
 
-$$X = X_0 + (Z-Z_0)\frac{a_1x + a_2y - a_3f}{c_1x + c_2y - c_3f} $$
+$ $## 4. Orthorektifikasi
+
+Mengoreksi distorsi geometrik pada foto akibat relief:X = X_0 + (Z-Z_0)\frac{a_1x + a_2y - a_3f}{c_1x + c_2y - c_3f}$$
+
+# ## 4. Orthorektifikasi
+
+Mengoreksi distorsi geometrik pada foto akibat relief:X = X_0 + (Z-Z_0)\frac{a_1x + a_2y - a_3f}{c_1x + c_2y - c_3f}
 
 ### 5. Digital Photogrammetry Workflow
 

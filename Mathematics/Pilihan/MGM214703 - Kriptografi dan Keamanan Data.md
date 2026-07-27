@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Cryptography and Data Security
 
-**Course Code:** MGM214703 
-**SKS:** 3 (3-0) 
-**Semester:** 5 
-**Prerequisites:** Aljabar Linear, Struktur Diskrit, Probabilitas 
+**Course Code:** MGM214703
+**SKS:** 3 (3-0)
+**Semester:** 5
+**Prerequisites:** Aljabar Linear, Struktur Diskrit, Probabilitas
 
 ---
 
@@ -33,7 +33,7 @@ Kriptografi (cryptography) adalah ilmu dan seni mengamankan informasi dengan men
 
 Sistem kriptografi dasar:
 
-$$P \xrightarrow{\text{Encrypt}(K_e)} C \xrightarrow{\text{Decrypt}(K_d)} P$$di mana $P$= plaintext (pesan asli),$C$= ciphertext (terenkripsi),$K_e$= kunci enkripsi,$K_d$ = kunci dekripsi.
+$$ P \xrightarrow{\text{Encrypt}(K_e)} C \xrightarrow{\text{Decrypt}(K_d)} P $$ di mana$ P $= plaintext (pesan asli),$C$ = ciphertext (terenkripsi),$K_e$ = kunci enkripsi,$K_d$ = kunci dekripsi.
 
 ### 1.2 Klasifikasi Berdasarkan Kunci
 
@@ -69,9 +69,7 @@ $$P \xrightarrow{\text{Encrypt}(K_e)} C \xrightarrow{\text{Decrypt}(K_d)} P$$di 
 ### 2.2 3DES (Triple DES
 )
 
-$$C = E_{K_3}(D_{K_2}(E_{K_1}(P)))$$
-
-Efektif kunci 112 bit (2TDEA) atau 168 bit (3TDEA). Sertifikasi NIST dihentikan pada 2023.
+$$ C = E_{K_3}(D_{K_2}(E_{K_1}(P)))$$ Efektif kunci 112 bit (2TDEA) atau 168 bit (3TDEA). Sertifikasi NIST dihentikan pada 2023.
 
 ### 2.3 AES (Advanced Encryption Standard)
 
@@ -128,13 +126,13 @@ Berdasarkan **masalah faktorisasi bilangan besar:** $n = pq $sulit difaktor.
 
 **Key Generation:**
 1. Pilih dua bilangan prima besar $p $dan $q$.
-2. Hitung $n = pq $dan $\phi(n) = (p-1)(q-1)$.
-3. Pilih $e $sehingga $\gcd(e, \phi(n)) = 1$(umum:$e = 65537 = 2^{16}+1$).
+2. Hitung $n = pq $dan $\phi(n) = (p-1)(q-1) $.
+3. Pilih $e $sehingga $\gcd(e, \phi(n)) = 1 $(umum:$e = 65537 = 2^{16}+1 $).
 4. Hitung $d = e^{-1} \mod \phi(n)$(extended Euclidean algorithm).
 
 **Enkripsi/Deskripsi:**
 
-$$C = P^e \mod n \quad \text{(Enkripsi)}P = C^d \mod n \quad \text{(Deskripsi)} $$**Kebenaran:**$P^{ed} = P^{1 + k\phi(n)} \equiv P \pmod{n} $oleh Fermat's Little Theorem.
+$$ C = P^e \mod n \quad \text{(Enkripsi)}P = C^d \mod n \quad \text{(Deskripsi)}$$**Kebenaran:**$P^{ed} = P^{1 + k\phi(n)} \equiv P \pmod{n}$oleh Fermat's Little Theorem.
 
 ### 3.2 Contoh RSA Sederhana
 
@@ -143,27 +141,28 @@ $$C = P^e \mod n \quad \text{(Enkripsi)}P = C^d \mod n \quad \text{(Deskripsi)} 
 | $p$ | 61 |
 | $q$ | 53 |
 | $n = pq$ | 3233 |
-| $\phi(n) = (60)(52)$ | 3120 |
+| $\phi(n) = (60)(52) $ | 3120 |
 | $e$ | 17 |
 | $d = 17^{-1} \bmod 3120$ | 2753 |
 
 **Enkripsi pesan $P = 65$:**
 
-$$C = 65^{17} \mod 3233 = 279
+$$
+
+C = 65^{17} \mod 3233 = 279
 0
 
-$$**Deskripsi:**$$
+$$**Deskripsi:**$$ P = 2790^{2753} \mod 3233 = 65 \quad \checkmark $$
 
-P = 2790^{2753} \mod 3233 = 65 \quad \checkmark$$### 3.3 ECC (Elliptic Curve Cryptography)
+### 3.3 ECC (Elliptic Curve Cryptography)
 
 Cryptography berbasis kelompok aditif pada kurva eliptik
-:
 
-$$y^2 = x^3 + ax + b \pmod{p} $$
+$$ y^2 = x^3 + ax + b \pmod{p}$$
 
 - Operasi: *point addition*$P + Q $dan *point doubling*$2P$.
 
-- *Scalar multiplication:* $kP = \underbrace{P + P + \cdots + P}_{k} $.
+- *Scalar multiplication:* $kP = \underbrace{P + P + \cdots + P}_{k}$.
 
 - *Elliptic Curve Discrete Logarithm Problem (ECDLP):* Diberikan $P $dan $kP$, cari $k$— sangat sulit secara komputasional.
 
@@ -191,17 +190,17 @@ Properti fungsi hash $H: \{0,1\}^* \to \{0,1\}^n$:
 
 | Algoritma | Output (bit) | Serangan terbaik | Status |
 |-----------|-------------|------------------|--------|
-| MD5 | 128 | Collision: $2^{21} $(30 detik) | ❌ **Tidak aman** |
-| SHA-1 | 160 | Collision:$2^{63} $(Google SHAttered) | ❌ **Tidak aman** |
-| SHA-256 | 256 | Collision:$2^{128} $ | ✅ Aman |
-| SHA-3 (Keccak) | 224-512 | Collision:$2^{n/2} $ | ✅ Aman |
-| BLAKE2 | 256 | Collision:$2^{128} $ | ✅ Aman, cepat |
-| Argon2id | Variabel | Brute force:$2^{256} $ | ✅ Khusus password hashing |
+| MD5 | 128 | Collision: $2^{21}$(30 detik) | ❌ **Tidak aman** |
+| SHA-1 | 160 | Collision: $2^{63}$(Google SHAttered) | ❌ **Tidak aman** |
+| SHA-256 | 256 | Collision: $2^{128}$ | ✅ Aman |
+| SHA-3 (Keccak) | 224-512 | Collision: $2^{n/2}$ | ✅ Aman |
+| BLAKE2 | 256 | Collision: $2^{128}$ | ✅ Aman, cepat |
+| Argon2id | Variabel | Brute force: $2^{256}$ | ✅ Khusus password hashing |
 
 ### 4.3 Tanda Tangan Digital
 
 $$\text{Sign}: \sigma = \text{Sign}_{sk}(H(m)) \quad \text{— Penandatangan memproduksi } \sigma\text{Verify}: \text{Verify}_{pk}(m, \sigma) \rightarrow \text{true/false} \quad \text{— Verifikator memeriksa} $$**DSA / ECDSA:**
-1. Pilih random $k$, hitung $R = kG \pmod{p} $, $r = R_x \mod n$.
+1. Pilih random $k$, hitung $R = kG \pmod{p}$, $r = R_x \mod n$.
 2. Hitung $s = k^{-1}(H(m) + d \cdot r) \mod n$.
 3. Tanda tangan: $(r, s)$.
 4. Verifikasi: hitung $u_1, u_2$, cek $R_x' = r$.
@@ -213,7 +212,7 @@ $$\text{Sign}: \sigma = \text{Sign}_{sk}(H(m)) \quad \text{— Penandatangan mem
 Untuk menjamin integritas data pengukuran GNSS yang ditransmisikan dari stasiun ke pusat pengolahan:
 
 1. Stasiun menghitung $H = \text{SHA-256}(\text{data observasi})$.
-2. Stasiun menandatangani $H$ dengan ECDSA-P256 menggunakan private key.
+2. Stasiun menandatangani $ H$ dengan ECDSA-P256 menggunakan private key.
 3. Pusat pengolahan memverifikasi signature menggunakan public key stasiun.
 4. Integritas terjamin: tidak ada yang dapat memodifikasi data tanpa terdeteksi.
 

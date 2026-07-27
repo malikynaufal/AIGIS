@@ -1,54 +1,35 @@
-# 📚 Pilihan: Penilaian Tanah dan Properti
+---
+tags: [aigis, geodesy, pilihan, valuation, land-valuation, property]
+aliases: [Penilaian Tanah, Property Valuation]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD213621
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Penilaian Tanah dan Properti (Land Valuation)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD213621 | **SKS:** 3 (3-0) | **Semester:** 6–7
 
-Penilaian Tanah dan Properti adalah mata kuliah pilihan yang mempelajari prinsip dan metode penilaian (valuation) tanah dan properti dalam konteks bidang hukum dan manajemen tanah di Indonesia. Mata kuliah ini memperkenalkan konsep-konsep ekonomi tanah, sistem penilaian tanah, dan aspek hukum penilaian properti. Mahasiswa belajar menyusun laporan penilaian tanah, faktor-faktor penilaian, dan pendekatan penilaian yang berlaku.
+## Course Overview
 
-Dalam konteks Teknik Geodesi, penilaian tanah berkaitan erat dengan pengukuran batas tanah, sertifikasi, dan pemetaan properti. Surveyor berperan penting dalam menyediakan data spasial yang diperlukan untuk penilaian tanah, termasuk pengukuran luas bidang tanah, identifikasi batas koordinat, dan pemetaan hak atas tanah.
+Principles of land valuation, market analysis, property assessment, and GIS-based mass appraisal systems. Understanding the geodetic and spatial factors influencing land value.
 
-Mata kuliah ini membahas pendekatan penilaian tanah seperti pendekatan pasar (market approach), pendekatan biaya (cost approach), dan pendekatan pendapatan (income approach). Mahasiswa juga mempelajari konteks hukum Indonesia, termasuk UUPA, peraturan BPN (Badan Pertanahan Nasional), serta sertifikasi tanah dan perbedaan antara tanah hak dan tanah negara.
+## Key Topics
 
-## Topik Utama
+### 1. Approaches
+- **Market Approach:** Comparable sales
+- **Income Approach:** Discounted cash flow (DCF)
+- **Cost Approach:** Cost to replace/rebuild
 
-### 1. Prinsip Penilaian Tanah
+### 2. Factors in Land Value
+- Access to transport
+- Proximity to service facilities
+- Environmental conditions
+- Legal status ([[Administrasi Pertanahan]])
 
-- Faktor-faktor penilaian tanah
+## GIS Application
+- Spatial hedonic modeling
+- Zoning analysis
+- Market value heatmaps
 
-- Pendekatan pasar, biaya, dan pendapatan
-
-- Sertifikat dan hak-hak atas tanah
-
-### 2. Aspek Hukum dan Regulasi
-
-- UUPA dan peraturan pertanahan
-
-- Peran BPN dalam penilaian
-
-- Sengketa tanah dan penyelesaiannya
-
-### 3. Aplikasi Praktis
-
-- Penyusunan laporan penilaian tanah dan properti
-
-- Pengukuran batas dan luas
-
-- Pengolahan data spasial untuk penilaian
-
-## Tujuan Pembelajaran
-
-1. Memahami prinsip penilaian tanah dan properti
-2. Menerapkan metode penilaian pada data tanah yang diukur
-3. Menyusun laporan penilaian lengkap
-4. Menghubungkan survei geodesi dengan proses penilaian tanah
-
-## Referensi
-
-- Sjahrir, P. (2011). *Hukum Tanah di Indonesia*. Kencana.
-
-- Simatupang, P., & Nasution, D. (2001). *Penilaian Tanah dan Pengembangan Properti*. Remaja Rosda Karya.
-
-- PP No. 24 Tahun 1997 tentang Pendaftaran Tanah
+---
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

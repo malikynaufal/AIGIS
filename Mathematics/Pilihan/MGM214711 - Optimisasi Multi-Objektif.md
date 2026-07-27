@@ -12,10 +12,10 @@ language: "id-ID"
 
 ## Multi-Objective Optimization
 
-**Course Code:** MGM214711 
-**SKS:** 3 (3-0) 
-**Semester:** 6 
-**Prerequisites:** Kalkulus Multivariabel, Aljabar Linear 
+**Course Code:** MGM214711
+**SKS:** 3 (3-0)
+**Semester:** 6
+**Prerequisites:** Kalkulus Multivariabel, Aljabar Linear
 
 ---
 

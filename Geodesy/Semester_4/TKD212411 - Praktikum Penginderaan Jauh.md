@@ -1,8 +1,8 @@
 # Praktikum Penginderaan Jauh
 
-**Kode:** TKD212411 
-**Sifat:** Wajib 
-**SKS:** 1 
+**Kode:** TKD212411
+**Sifat:** Wajib
+**SKS:** 1
 
 ## Deskripsi
 
@@ -31,17 +31,29 @@ Preprocessing diperlukan untuk mempersiapkan data analisis:
 
 #### 1. Radiometric Correction
 
-$$L_{corrected} = \frac{L_{sensor} - L_{min}}{L_{max} - L_{min}} \times (Digital Number_{max} - Digital Number_{min}
+$$
+
+L_{corrected} = \frac{L_{sensor} - L_{min}}{L_{max} - L_{min}} imes (Digital Number_{max} - Digital Number_{min}
 )
 
-$$#### 2. Geometric Correction$$
+$ $2. Geometric Correction $$
+
+# 2. Geometric Correction
+
+### # 2. Geometric Correction
 
 \begin{bmatrix} X_{ground} \\ Y_{ground} \end{bmatrix} = \begin{bmatrix} a_1 & a_2 \\ b_1 & b_2 \end{bmatrix} \begin{bmatrix} X_{pixel} \\ Y_{pixel} \end{bmatrix} + \begin{bmatrix} a_3 \\ b_3 \end{bmatrix
 }
 
-$$#### 3. Atmospheric Correction$$
+$ $3. Atmospheric Correction $$
 
-L_{atm\_corrected} = L_{sensor} - L_{path} $$### Klasifikasi Citra
+# 3. Atmospheric Correction
+
+### # 3. Atmospheric CorrectionL_{atm\_corrected} = L_{sensor} - L_{path}
+
+$ $
+
+Klasifikasi Citra
 Klasifikasi mengelompokkan piksel berdasarkan karakteristik spektral:
 
 1. **Supervised Classification**
@@ -55,13 +67,51 @@ Klasifikasi mengelompokkan piksel berdasarkan karakteristik spektral:
  - ISODATA (Iterative Self-Organizing Data Analysis Technique)
 
 ### Accuracy Assessment
-Evaluasi akurasi menggunakan confusion matrix:$$\begin{aligned}
-\text{Overall Accuracy} &= \frac{\text{Sum of Diagonal Elements}}{\text{Total Samples}} \times 100\%
+Evaluasi akurasi menggunakan confusion matrix:
+
+$$## Klasifikasi Citra
+Klasifikasi mengelompokkan piksel berdasarkan karakteristik spektral:
+
+1. **Supervised Classification**
+ - Maximum Likelihood Classification
+ - Minimum Distance Classification
+ - Support Vector Machine (SVM)
+ - Neural Network
+
+2. **Unsupervised Classification**
+ - K-means Clustering
+ - ISODATA (Iterative Self-Organizing Data Analysis Technique)
+
+### Accuracy Assessment
+Evaluasi akurasi menggunakan confusion matrix:\begin{aligned}
+ext{Overall Accuracy} &= \frac{ext{Sum of Diagonal Elements}}{ext{Total Samples}} imes 100\%
 \end{aligned}\begin{aligned}
-\text{User Accuracy} &= \frac{\text{Correctly Classified Pixels per Class}}{\text{Total Pixels Classified per Class}} \times 100\%
+ext{User Accuracy} &= \frac{ext{Correctly Classified Pixels per Class}}{ext{Total Pixels Classified per Class}} imes 100\%
 \end{aligned}\begin{aligned}
-\text{Producer Accuracy} &= \frac{\text{Correctly Classified Pixels per Class}}{\text{Total Reference Pixels per Class}} \times 100\%
-\end{aligned} $$
+ext{Producer Accuracy} &= \frac{ext{Correctly Classified Pixels per Class}}{ext{Total Reference Pixels per Class}} imes 100\%
+\end{aligned}$$
+
+# ## Klasifikasi Citra
+Klasifikasi mengelompokkan piksel berdasarkan karakteristik spektral:
+
+1. **Supervised Classification**
+ - Maximum Likelihood Classification
+ - Minimum Distance Classification
+ - Support Vector Machine (SVM)
+ - Neural Network
+
+2. **Unsupervised Classification**
+ - K-means Clustering
+ - ISODATA (Iterative Self-Organizing Data Analysis Technique)
+
+### Accuracy Assessment
+Evaluasi akurasi menggunakan confusion matrix:\begin{aligned}
+ext{Overall Accuracy} &= \frac{ext{Sum of Diagonal Elements}}{ext{Total Samples}} imes 100\%
+\end{aligned}\begin{aligned}
+ext{User Accuracy} &= \frac{ext{Correctly Classified Pixels per Class}}{ext{Total Pixels Classified per Class}} imes 100\%
+\end{aligned}\begin{aligned}
+ext{Producer Accuracy} &= \frac{ext{Correctly Classified Pixels per Class}}{ext{Total Reference Pixels per Class}} imes 100\%
+\end{aligned}
 
 ### Aplikasi dalam Geodesi
 Penginderaan jauh digunakan untuk:

@@ -1,54 +1,43 @@
-# 📚 Pilihan: Sistem Informasi Geografis Berbasis Web
+---
+tags: [aigis, geodesy, pilihan, web-gis, geoserver, leaflet]
+aliases: [Web GIS, SIG Web]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD214716
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Sistem Informasi Geografis Berbasis Web (Web GIS)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD214716 | **SKS:** 3 (2-1) | **Semester:** 6–8
 
-Sistem Informasi Geografis Berbasis Web adalah mata kuliah pilihan yang mempelajari pengembangan aplikasi SIG yang berjalan di web browser. Mata kuliah ini mencakup konsep web geospasial, arsitektur client-server untuk data spasial, teknologi API peta web (Google Maps API, Leaflet, OpenLayers), standar dan protokol publikasi data spasial Internet (WMS, WFS, WCS, GeoJSON, KML), serta pengembangan aplikasi web GIS secara end-to-end.
+## Course Overview
 
-SIG berbasis web telah menjadi standar industri karena kemudahan akses, visualisasi interaktif, dan integrasi dengan basisdata spasial server-side. Mahasiswa akan belajar merancang dan membangun aplikasi web GIS menggunakan framework dan library yang populer, mengintegrasikan data dari berbagai sumber geospasial, dan menyajikan data dalam bentuk peta interaktif yang responsif.
+Development of web-based GIS applications using open-source libraries: GeoServer, Leaflet, OpenLayers, PostGIS backend, and REST APIs. Covers map tiling, WMS/WFS services, and interactive spatial data visualization.
 
-Pembelajasan dilakukan melalui proyek pemrograman langsung. Mahasiswa akan membangun aplikasi web GIS dari awal: memilih platform basisdata (PostGIS/GeoServer atau MongoDB/Mapbox), membangun backend API untuk data spasial, dan mengimplementasikan frontend peta interaktif. Proyek akhir biasanya mencakup aplikasi pemetaan tematik, geoportal, atau aplikasi spasial berbasis lokasi (location-based services) yang siap dipublikasikan.
+## Key Topics
 
-## Topik Utama
+### 1. Web GIS Architecture
 
-### 1. Arsitektur Web GIS
+| Layer | Technology | Role |
+|-------|-----------|------|
+| Database | PostgreSQL/PostGIS | Spatial data |
+| Server | GeoServer, MapServer | OGC services |
+| Client | Leaflet, OpenLayers | UI/map display |
+| API | REST, WMS, WFS, WCS | Data exchange |
 
-- Arsitektur client-server dan RESTful API
+### 2. Leaflet Example
+```javascript
+var map = L.map('map').setView([-7.8, 110.4], 13);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+ maxZoom: 19
+}).addTo(map);
+var marker = L.marker([-7.8, 110.4]).addTo(map);
+marker.bindPopup('<b>UGM Geodesy</b>').openPopup();
+```
 
-- Protocol data geospatial (WMS, WFS, WCS)
+### 3. GeoServer Configuration
+- Store: PostGIS connection
+- Layer: SQL-based views
+- Style: SLD (Styled Layer Descriptor)
 
-- Format data: GeoJSON, KML, TopoJSON
-
-### 2. Frontend Web GIS
-
-- Leaflet dan OpenLayers
-
-- Google Maps API dan Mapbox GL JS
-
-- Visualisasi data spasial interaktif
-
-### 3. Backend dan Database
-
-- GeoServer dan MapServer
-
-- PostGIS dan SpatialLite
-
-- Tile rendering (Vector Tiles, Raster Tiles)
-
-## Tujuan Pembelajaran
-
-1. Memahami arsitektur dan protokol web geospasial
-2. Mengembangkan frontend peta interaktif dengan API peta populer
-3. Membangun backend web GIS dengan GeoServer/PostGIS
-4. Mengimplementasikan aplikasi web GIS end-to-end
-
-## Referensi
-
-- Fu, P., & Sun, J. (2010). *Web GIS: Principles and Applications*. ESRI Press.
-
-- Peng, Z.-R., & Tsou, M.-H. (2003). *Internet GIS: Distributed Geographic Information Services for the Internet and Wireless Networks*. Wiley.
-
-- Smith, D. (2016). *Building Web GIS with Python and Open Source*. O'Reilly.
+---
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

@@ -15,13 +15,7 @@ updated: 2026-07-27
 
 ### Single-Beam Echo Sounder (SBES)
 
-$$
-
-d = \frac{c \cdot t}{2}
-
-$$
-
-where $c$ = sound velocity in water ($\approx 1500$ m/s), $t$ = two-way travel time.
+$$ d = \frac{c \cdot t}{2}$$ where $ c $ = sound velocity in water ($\approx 1500 $ m/s),$t$ = two-way travel time.
 
 ### Multi-Beam Echo Sounder (MBES)
 
@@ -35,27 +29,15 @@ where $c$ = sound velocity in water ($\approx 1500$ m/s), $t$ = two-way travel t
 
 ### Side-Scan Sonar (SSS)
 
-$$
-
-\text{Range} = \frac{c \cdot t}{2}
+$$\text{Range} = \frac{c \cdot t}{2}
 
 $$
 
-$$
+$$\text{Resolution} = \frac{c}{2 \cdot \text{bandwidth}}
 
-\text{Resolution} = \frac{c}{2 \cdot \text{bandwidth}}
+$$## Sound Velocity Profile
 
-$$
-
-## Sound Velocity Profile
-
-$$
-
-c = 1449.2 + 4.6T - 0.055T^2 + 1.34(S - 35) + 0.018D
-
-$$
-
-where $T$ = temperature (°C), $S$ = salinity (‰), $D$ = depth (m).
+$$ c = 1449.2 + 4.6T - 0.055T^2 + 1.34(S - 35) + 0.018D $$ where $ T $= temperature (°C),$S$ = salinity (‰),$D$ = depth (m).
 
 ### Sound Velocity Table
 
@@ -72,13 +54,7 @@ where $T$ = temperature (°C), $S$ = salinity (‰), $D$ = depth (m).
 
 ### Tidal Model
 
-$$
-
-h_{corrected} = h_{measured} + h_{tide}(t) - h_{chart}
-
-$$
-
-where $h_{tide}(t)$ is the tide level at measurement time and $h_{chart}$ is the chart datum.
+$$ h_{corrected} = h_{measured} + h_{tide}(t) - h_{chart}$$ where $ h_{tide}(t) $is the tide level at measurement time and $ h_{chart}$ is the chart datum.
 
 ### Tidal Constituents
 

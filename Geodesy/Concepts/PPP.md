@@ -19,13 +19,13 @@ The undifferenced (single‑station) carrier‑phase observation equation:
 
 $$\Phi_{r,f}^s = \rho_r^s + c\bigl(\delta t_r - \delta t^s\bigr) + \lambda_f N_{r,f}^s + I_{r,f}^s + T_r^s + \Delta_{r,f}^s + \varepsilon_{\Phi} $$ | Symbol | Meaning | How handled in PPP |
 |--------|---------|---------------------|
-| $\rho_r^s$ | Geometric range | Solved for in the position |
-| $\delta t^s$ | Satellite clock | **Precise IGS clock product** (0.1 ns) |
-| $\delta t_r$ | Receiver clock | Estimated as an unknown (or differenced out) |
+| $\rho_r^s $ | Geometric range | Solved for in the position |
+| $\delta t^s $ | Satellite clock | **Precise IGS clock product** (0.1 ns) |
+| $\delta t_r $ | Receiver clock | Estimated as an unknown (or differenced out) |
 | $N_{r,f}^s$ | Integer ambiguity | Float or integer (PPP‑AR) |
 | $I_{r,f}^s$ | Ionospheric delay | Removed via ionosphere‑free (IF) combination |
 | $T_r^s$ | Tropospheric delay | Estimated (zenith + mapping function) |
-| $\Delta_{r,f}^s$ | Phase centre offsets | IGS ANTEX model |
+| $\Delta_{r,f}^s $ | Phase centre offsets | IGS ANTEX model |
 | $\varepsilon_{\Phi} $ | Noise + multipath | ~1 mm (carrier phase) |
 
 The code pseudorange model is similar but no ambiguity term, higher noise (~30 cm).
@@ -49,10 +49,10 @@ The code pseudorange model is similar but no ambiguity term, higher noise (~30 c
 
 | Combination | Formula | Purpose | Wavelength |
 |-------------|---------|---------|------------|
-| **Ionosphere‑free (L‑C)** | $\Phi_{LC} = \frac{f_1^2}{f_1^2-f_2^2}\Phi_1 - \frac{f_2^2}{f_1^2-f_2^2}\Phi_2$ | Removes 1st‑order ionosphere | **Non‑integer** |
-| **Wide‑lane (WL)** | $\Phi_{WL} = \frac{f_1}{f_1-f_2}\Phi_1 - \frac{f_2}{f_1-f_2}\Phi_2$ | Wide wavelength for bootstrapping | ~86 cm (GPS) |
-| **Narrow‑lane (NL)** | $\Phi_{NL} = \frac{f_1}{f_1+f_2}\Phi_1 + \frac{f_2}{f_1+f_2}\Phi_2$ | Final ambiguity resolution | ~10.7 cm (GPS) |
-| **Geometry‑free (GF)** | $\Phi_{GF} = \Phi_1 - \Phi_2$ | Ionospheric monitoring | — |
+| **Ionosphere‑free (L‑C)** | $\Phi_{LC} = \frac{f_1^2}{f_1^2-f_2^2}\Phi_1 - \frac{f_2^2}{f_1^2-f_2^2}\Phi_2 $ | Removes 1st‑order ionosphere | **Non‑integer** |
+| **Wide‑lane (WL)** | $\Phi_{WL} = \frac{f_1}{f_1-f_2}\Phi_1 - \frac{f_2}{f_1-f_2}\Phi_2 $ | Wide wavelength for bootstrapping | ~86 cm (GPS) |
+| **Narrow‑lane (NL)** | $\Phi_{NL} = \frac{f_1}{f_1+f_2}\Phi_1 + \frac{f_2}{f_1+f_2}\Phi_2 $ | Final ambiguity resolution | ~10.7 cm (GPS) |
+| **Geometry‑free (GF)** | $\Phi_{GF} = \Phi_1 - \Phi_2 $ | Ionospheric monitoring | — |
 
 ---
 
@@ -94,7 +94,7 @@ Uses real‑time orbit, clock, code bias, and atmospheric corrections:
 
 The troposphere cannot be differenced out in PPP and must be estimated:
 
-$$T_r^s = m_h^s(\text{elev})\cdot Z_h + m_w^s(\text{elev})\cdot Z_w$$
+$$ T_r^s = m_h^s(\text{elev})\cdot Z_h + m_w^s(\text{elev})\cdot Z_w $$
 
 | Component | Mapping Function | Typical Value |
 |-----------|------------------|---------------|
@@ -118,7 +118,7 @@ VMF3 (Vienna Mapping Function) is the current state‑of‑the‑art, derived fr
 | 4 | Estimate troposphere Zenith Delay (random‑walk) | ZD estimated per epoch |
 | 5 | Solve position + float ambiguities (Kalman filter) | Coordinates: float |
 | 6 | Apply MW + LAMBDA for AR | WL: fixed, NL: fixed |
-| 7 | Final fixed position | $\sigma_{xy} = 1.8 $cm,$\sigma_z = 3.2 $cm |
+| 7 | Final fixed position | $\sigma_{xy} = 1.8 $ cm,$\sigma_z = 3.2 $ cm |
 
 ---
 
@@ -144,7 +144,7 @@ VMF3 (Vienna Mapping Function) is the current state‑of‑the‑art, derived fr
 
 - [[IGS]] – provides precise orbit and clock products.
 
-- [[Geoid Undulation]] – both RTK and PPP yield ellipsoidal heights; need $N$ for orthometric heights.
+- [[Geoid Undulation]] – both RTK and PPP yield ellipsoidal heights; need $ N$ for orthometric heights.
 
 ---
 

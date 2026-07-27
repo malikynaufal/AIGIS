@@ -17,14 +17,8 @@ updated: 2026-07-27
 
 | Quantity | Symbol | Range | Reference |
 |----------|--------|-------|-----------|
-| Right Ascension | $\alpha$ | 0°–360° (or 0h–24h) | Vernal equinox |
-| Declination | $\delta$ | -90° to +90° | Celestial equator |
-
-$$
-
-x = r \cos\delta \cos\alpha, \quad y = r \cos\delta \sin\alpha, \quad z = r \sin\delta
-
-$$
+| Right Ascension | $\alpha $ | 0°–360° (or 0h–24h) | Vernal equinox |
+| Declination | $\delta $| -90° to +90° | Celestial equator |$$ x = r \cos\delta \cos\alpha, \quad y = r \cos\delta \sin\alpha, \quad z = r \sin\delta $$
 
 ### Horizontal System (Observer-Local)
 
@@ -34,33 +28,17 @@ $$
 | Altitude | $h$ | -90° to +90° | Horizon |
 | Zenith angle | $z$ | 0°–180° | Zenith |
 
-$$
-
-h = 90° - z, \quad A = \arctan\left(\frac{\sin\alpha}{\cos\alpha \sin\varphi - \tan\delta \cos\varphi}\right)
+$$ h = 90° - z, \quad A = \arctan\left(\frac{\sin\alpha}{\cos\alpha \sin\varphi - \tan\delta \cos\varphi}\right) $$### Conversion: Equatorial ↔ Horizontal $$ \sin h = \sin\varphi \sin\delta + \cos\varphi \cos\delta \cos H
 
 $$
 
-### Conversion: Equatorial ↔ Horizontal
+$$\cos A \sin h = \cos\delta \sin H
 
 $$
 
-\sin h = \sin\varphi \sin\delta + \cos\varphi \cos\delta \cos H
+$$\sin A \sin h = \cos\varphi \sin\delta - \sin\varphi \cos\delta \cos H
 
-$$
-
-$$
-
-\cos A \sin h = \cos\delta \sin H
-
-$$
-
-$$
-
-\sin A \sin h = \cos\varphi \sin\delta - \sin\varphi \cos\delta \cos H
-
-$$
-
-where $H = \theta - \alpha$ is the [[Geodetic Astronomy|hour angle]], and $\theta$ is Greenwich Apparent Sidereal Time.
+$$ where $ H = \theta - \alpha $is the [[Geodetic Astronomy|hour angle]], and $\theta $ is Greenwich Apparent Sidereal Time.
 
 ## Epoch Transformations
 
@@ -68,9 +46,7 @@ where $H = \theta - \alpha$ is the [[Geodetic Astronomy|hour angle]], and $\thet
 
 The precession matrix $P$ transforms from J2000.0 equatorial to mean equator at epoch $t$:
 
-$$
-
-\begin{pmatrix} x' \\ y' \\ z' \end{pmatrix} = P \begin{pmatrix} x \\ y \\ z \end{pmatrix}_{J2000}
+$$\begin{pmatrix} x' \\ y' \\ z' \end{pmatrix} = P \begin{pmatrix} x \\ y \\ z \end{pmatrix}_{J2000}
 
 $$
 
@@ -78,13 +54,9 @@ $$
 
 The nutation matrix $N$ accounts for short-period oscillations:
 
-$$
+$$\begin{pmatrix} x \\ y \\ z \end{pmatrix}_{true} = N \cdot P \cdot \begin{pmatrix} x \\ y \\ z \end{pmatrix}_{J2000}
 
-\begin{pmatrix} x \\ y \\ z \end{pmatrix}_{true} = N \cdot P \cdot \begin{pmatrix} x \\ y \\ z \end{pmatrix}_{J2000}
-
-$$
-
-See [[Precession and Nutation]] for detailed formulas.
+$$ See [[Precession and Nutation]] for detailed formulas.
 
 ## Star Catalogs
 
@@ -103,13 +75,9 @@ See [[Precession and Nutation]] for detailed formulas.
 
 ### Azimuth from Stellar Observations
 
-$$
+$$\alpha_{az} = \sum_{i=1}^{N} w_i \cdot \alpha_{i,obs}
 
-\alpha_{az} = \sum_{i=1}^{N} w_i \cdot \alpha_{i,obs}
-
-$$
-
-where $w_i$ weights each observation by altitude, zenith distance, and atmospheric conditions.
+$$ where $ w_i $ weights each observation by altitude, zenith distance, and atmospheric conditions.
 
 ## Study Problems
 

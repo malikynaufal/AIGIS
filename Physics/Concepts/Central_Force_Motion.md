@@ -22,29 +22,40 @@ created: 2026-07-27
 
 ## 🧮 Key Equations
 
-```latex
-\begin{equation}
-\\mathbf{F} = f(r)\\hat{r}
-\\end{equation}
-\\text{(Central force)}
+$$
 
 \begin{equation}
-V_{\\text{eff}}(r) = V(r) + \\frac{L^2}{2mr^2}
-\\end{equation}
-\\text{(Effective potential)}
+\mathbf{F} = f(r)\hat{r}
+\end{equation}
+\text{(Central force)}
+
+$$
+
+$$
 
 \begin{equation}
-r = \\frac{p}{1 + e\\cos\\phi}, \quad p = \\frac{L^2}{m|k|}
-\\end{equation}
-\\text{(Kepler orbit equation)}
+V_{\text{eff}}(r) = V(r) + \frac{L^2}{2mr^2}
+\end{equation}
+\text{(Effective potential)}
+
+$$
+
+$$
+
+\begin{equation}
+r = \frac{p}{1 + e\cos\phi}, \quad p = \frac{L^2}{m|k|}
+\end{equation}
+\text{(Kepler orbit equation)}
+
+$$
 
 ### Kepler's Laws
 
 | Law | Statement | Equation |
 |-----|-----------|----------|
-| 1st | Orbits are conic sections | $r = \\frac{a(1-e^2)}{1+e\\cos\\phi}$ |
-| 2nd | Equal areas in equal times | $\\frac{dA}{dt} = \\frac{L}{2m} = \\text{const}$ |
-| 3rd | Period squared ∝ semi-major axis cubed | $T^2 = \\frac{4\\pi^2}{GM}a^3$ |
+| 1st | Orbits are conic sections | $r = \frac{a(1-e^2)}{1+e\cos\phi}$ |
+| 2nd | Equal areas in equal times | $ \frac{dA}{dt} = \frac{L}{2m} = \text{const} $ |
+| 3rd | Period squared ∝ semi-major axis cubed | $T^2 = \frac{4\pi^2}{GM}a^3$ |
 
 ---
 

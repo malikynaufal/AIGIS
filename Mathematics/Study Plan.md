@@ -1,196 +1,267 @@
-# Mathematics Study Plan
-
-## UGM Geodesy Mathematics Progression
-
-**Purpose:** Structured learning path for mathematics as applied to geodesy 
-**Duration:** 4 semesters (Semester 1–4 of UGM Geodesy program)
-
+---
+tags: [aigis, study-plan, mathematics, planning]
+created: 2026-07-13
+updated: 2026-07-27
 ---
 
-## 📅 Semester 1 — Mathematical Foundations (6 SKS)
+# Mathematics Study Plan — 8-Semester Roadmap
 
-### Primary Goals:
+**Purpose:** Structured learning path for mathematics across 8 semesters
+**Target:** UGM Teknik Geodesi — Studi Komputer (S.Kom)
 
-- [ ] Master differential calculus (derivatives, applications)
+## 🗺️ Full Progression
 
-- [ ] Master linear algebra fundamentals (matrices, vectors, systems)
+```mermaid
+graph TD
+ S1[Semester 1: Foundations] --> S2[Semester 2: Core Techniques]
+ S2 --> S3[Semester 3: Advanced Methods]
+ S3 --> S4[Semester 4: Computational]
+ S4 --> S5[Semester 5: Applications]
+ S5 --> S6[Semester 6: Advanced Applications]
+ S6 --> S7[Semester 7: Specialization]
+ S7 --> S8[Semester 8: Capstone]
 
-- [ ] Build statistical intuition (descriptive stats, probability basics)
+ S1 --> |Calculus I| [[Derivatives]]
+ S1 --> |Linear Algebra| [[Linear Algebra Fundamentals]]
+ S2 --> |Calculus II| [[Integrals]]
+ S2 --> |ODEs| [[Differential Equations]]
+ S3 --> |Real Analysis| [[Real Analysis]]
+ S3 --> |Probability| [[Probability Foundations]]
+ S4 --> |Num Methods| [[Numerical Methods]]
+ S4 --> |Complex Analysis| [[Complex Analysis]]
+ S5 --> |Optimization| [[Optimization Theory]]
+ S5 --> |Graph Theory| [[Graph Theory]]
+ S6 --> |Machine Learning| [[Stochastic Processes]]
+ S7 --> |Deep Learning| [[Topology]]
+```
 
-### Weekly Rhythm:
+## 📅 Semester 1 — Foundations (6 SKS math)
+
+### Primary Goals
+- [ ] Master differential calculus (limits, derivatives, applications)
+- [ ] Build linear algebra fundamentals (vectors, matrices, determinants)
+- [ ] Establish statistical intuition (probability, distributions)
+
+### Weekly Rhythm
 | Day | Focus | Duration |
 |-----|-------|----------|
-| Mon | Kalkulus — new topic | 2 hrs |
-| Tue | Aljabar Linear — new topic | 2 hrs |
-| Wed | Statistika Dasar — new topic | 2 hrs |
+| Mon | Calculus — new topic | 2 hrs |
+| Tue | Linear Algebra — new topic | 2 hrs |
+| Wed | Statistics — new topic | 2 hrs |
 | Thu | Problem practice (all 3) | 2 hrs |
 | Fri | Review + preview | 1.5 hrs |
-| Sat | Deep practice (choose weakest) | 3 hrs |
+| Sat | Deep practice (weakest area) | 3 hrs |
 | Sun | Rest + light preview | 1 hr |
 
-### Key Milestones (Sem 1):
+### Key Concepts
+[[Limits Continuity]] → [[Derivatives]] → [[Applications of Derivatives]] → [[Linear Algebra Fundamentals]] → [[Probability Foundations]] → [[Probability Distributions]]
 
+### Milestones
 - [ ] **Week 4:** Pass all derivative rules quiz
+- [ ] **Week 8:** Solve 3×3 linear systems by hand; compute determinants
+- [ ] **Week 12:** Complete probability distributions problem set
+- [ ] **Week 16:** Final exam readiness checklist
 
-- [ ] [ ] **Week 8:** Complete matrix operations problem set
-
-- [ ] **Week 12:** Pass probability distributions quiz
-
-- [ ] **Week 16:** Final exam readiness checklist complete
-
-### Resources:
-
+### Resources
 - OpenStax Calculus Vol 1
-
-- MIT OCW 18.01SC
-
+- MIT OCW 18.01SC (Calculus I)
 - Khan Academy Linear Algebra
-
-- Ghilani & Wolf (for Sem 2 preparation)
-
----
-
-## 📅 Semester 2 — Core Techniques (5 SKS)
-
-### Primary Goals:
-
-- [ ] **MASTER Least Squares Adjustment** (Hitung Perataan) — this is critical
-
-- [ ] Apply geometry to 2D/3D coordinate problems
-
-- [ ] Begin programming for geodetic calculations
-
-### Weekly Rhythm:
-| Day | Focus | Duration |
-|-----|-------|----------|
-| Mon | Hitung Perataan — theory | 2 hrs |
-| Tue | Hitung Perataan — practice | 2 hrs |
-| Wed | Geometri Analitik | 2 hrs |
-| Thu | Programming (Python) | 2 hrs |
-| Fri | Review + integration | 1.5 hrs |
-| Sat | Software + project work | 3 hrs |
-| Sun | Rest + week preview | 1 hr |
-
-### Key Milestones (Sem 2):
-
-- [ ] **Week 4:** Manually solve 3×3 least squares by hand
-
-- [ ] **Week 8:** Complete constrained adjustment problem
-
-- [ ] **Week 12:** Build a traverse adjustment spreadsheet
-
-- [ ] **Week 16:** Pass LS adjustment exam
-
-### Resources:
-
-- Ghilani & Wolf, "Adjustment Computations"
-
-- Python tutorials (Automate the Boring Stuff)
-
-- Spreadsheet exercises for manual calculation
+- 3Blue1Brown: Essence of Linear Algebra
 
 ---
 
-## 📅 Semester 3 — Advanced Methods (5 SKS)
+## 📅 Semester 2 — Core Techniques (5 SKS math)
 
-### Primary Goals:
+### Primary Goals
+- [ ] Master integration techniques and series
+- [ ] Solve ODEs (first and second order)
+- [ ] Deepen linear algebra (eigenvalues, SVD)
 
-- [ ] Master differential geometry for curved surfaces
-
-- [ ] Apply advanced statistics to geodetic data
-
-- [ ] Connect math to real measurement problems
-
-### Weekly Rhythm:
+### Weekly Rhythm
 | Day | Focus | Duration |
 |-----|-------|----------|
-| Mon | Geometri Diferensial — theory | 2 hrs |
-| Tue | Geometri Diferensial — problems | 2 hrs |
-| Wed | Analisis Statistika | 2 hrs |
-| Thu | Integration project | 2 hrs |
-| Fri | Review + reading | 1.5 hrs |
-| Sat | Deep work (chosen topic) | 3 hrs |
+| Mon | Calculus II — integration, series | 2 hrs |
+| Tue | Differential Equations — theory | 2 hrs |
+| Wed | Linear Algebra Advanced — eigenvalues | 2 hrs |
+| Thu | Problem practice | 2 hrs |
+| Fri | Review + cross-connections | 1.5 hrs |
+| Sat | Project work + software | 3 hrs |
 | Sun | Rest + preview | 1 hr |
 
-### Key Milestones (Sem 3):
+### Key Concepts
+[[Integrals]] → [[Sequences and Series]] → [[Taylor Series]] → [[Differential Equations]] → [[LU Decomposition]] → [[QR Factorization]] → [[Cholesky Decomposition]]
 
-- [ ] **Week 4:** Compute curvature of a curve in 3D
-
-- [ ] **Week 8:** Complete multiple regression on sample data
-
-- [ ] **Week 12:** Build time series analysis on deformation data
-
-- [ ] **Week 16:** Final integration project
-
-### Resources:
-
-- Do Carmo, "Differential Geometry"
-
-- O'Sullivan & Unwin, "Geographic Information Analysis"
-
-- Python: statsmodels, scipy, numpy
+### Milestones
+- [ ] **Week 4:** Master all integration techniques (substitution, parts, partial fractions)
+- [ ] **Week 8:** Solve second-order ODEs with initial conditions
+- [ ] **Week 12:** Compute eigenvalues and eigenvectors of 4×4 matrices
+- [ ] **Week 16:** Pass comprehensive final
 
 ---
 
-## 📅 Semester 4 — Applied Mathematics
+## 📅 Semester 3 — Advanced Methods (6 SKS math)
 
-### Primary Goals:
+### Primary Goals
+- [ ] Master vector calculus (gradient, divergence, curl)
+- [ ] Understand real analysis foundations (sequences, continuity, compactness)
+- [ ] Apply probability theory rigorously
 
-- [ ] Apply all previous math to engineering survey problems
+### Weekly Rhythm
+| Day | Focus | Duration |
+|-----|-------|----------|
+| Mon | Vector Calculus — theory | 2 hrs |
+| Tue | Real Analysis — proofs | 2 hrs |
+| Wed | Probability — theorems | 2 hrs |
+| Thu | Problem sets (all 3) | 2 hrs |
+| Fri | Review + cross-connections | 1.5 hrs |
+| Sat | Deep work on proofs | 3 hrs |
+| Sun | Rest + preview | 1 hr |
 
-- [ ] Connect math to photogrammetry, remote sensing calculations
+### Key Concepts
+[[Multivariable Calculus]] → [[Advanced Calculus]] → [[Real Analysis]] → [[Probability Foundations]] (rigorous) → [[Differential Equations]] (PDE intro)
 
-- [ ] Prepare math foundation for thesis (Skripsi)
+### Milestones
+- [ ] **Week 4:** Compute line/surface integrals, apply Stokes' theorem
+- [ ] **Week 8:** Write epsilon-delta proofs for continuity
+- [ ] **Week 12:** Prove Central Limit Theorem (statement level)
+- [ ] **Week 16:** Integration project
 
-### Focus Areas:
+---
 
-- Error propagation in engineering surveys
+## 📅 Semester 4 — Computational Methods (12 SKS math)
 
-- Coordinate transformations in photogrammetry
+### Primary Goals
+- [ ] Implement numerical algorithms (root-finding, quadrature, linear solvers)
+- [ ] Derive MLE, construct confidence intervals, perform hypothesis tests
+- [ ] Work with groups, rings, finite fields
+- [ ] Evaluate complex integrals using residues
 
-- Statistical quality control
+### Weekly Rhythm
+| Day | Focus | Duration |
+|-----|-------|----------|
+| Mon | Numerical Methods — algorithms | 2 hrs |
+| Tue | Mathematical Statistics — theory | 2 hrs |
+| Wed | Abstract Algebra — algebraic structures | 2 hrs |
+| Thu | Complex Analysis — residues, mappings | 2 hrs |
+| Fri | Problem sets (all 4) | 3 hrs |
+| Sat | Review + code implementations | 2 hrs |
+| Sun | Rest + preview | 1 hr |
+
+### Key Concepts
+[[Numerical Methods]] → [[Bisection Method]] → [[Newton-Raphson Method]] → [[Descriptive Statistics]] → [[Hypothesis Testing]] → [[Sampling Estimation]] → [[Number Theory]] → [[Abstract Algebra]] → [[Complex Analysis]]
+
+### Milestones
+- [ ] **Week 4:** Implement Newton-Raphson and compare convergence rates
+- [ ] **Week 8:** Derive MLE for normal/gamma distributions
+- [ ] **Week 12:** Find residues and evaluate real integrals via contour integration
+- [ ] **Week 16:** Complete cross-course project
+
+---
+
+## 📅 Semester 5 — Applications (15 SKS math)
+
+### Primary Goals
+- [ ] Solve ODEs/PDEs numerically; implement SVD
+- [ ] Analyze graphs, networks, spectral properties
+- [ ] Formulate and solve LP/NLP optimization problems
+- [ ] Build ML models and AI algorithms
+- [ ] Process images and reconstruct 3D scenes
+
+### Key Concepts
+[[Numerical Methods]] (advanced) → [[Graph Theory]] → [[Optimization Theory]] → [[Stochastic Processes]] (intro)
+
+### Milestones
+- [ ] **Week 4:** Implement RK4 and compare with Euler
+- [ ] **Week 8:** Apply Dijkstra's to a GNSS network graph
+- [ ] **Week 12:** Solve a constrained optimization with KKT
+- [ ] **Week 16:** Complete integration project
+
+---
+
+## 📅 Semester 6 — Advanced Applications (15 SKS)
+
+### Primary Goals
+- [ ] Formulate and solve LP/MIP problems (operations research)
+- [ ] Design Monte Carlo experiments with variance reduction
+- [ ] Build supervised/unsupervised ML pipelines
+- [ ] Apply spatial filtering and FFT-based image processing
+- [ ] Parallelize computation for large-scale problems
+
+### Key Concepts
+[[Optimization Theory]] (advanced) → [[Stochastic Processes]] → [[Fourier Analysis]] (applications) → [[Numerical Methods]] (parallel)
+
+### Milestones
+- [ ] **Week 4:** Solve LP with simplex method
+- [ ] **Week 8:** Implement MCMC for Bayesian inference
+- [ ] **Week 12:** Build SVM classifier on geodetic data
+- [ ] **Week 16:** Final integration project
+
+---
+
+## 📅 Semester 7 — Specialization (8 SKS)
+
+### Primary Goals
+- [ ] Define capstone research problem and methodology
+- [ ] Master PCA, factor analysis, clustering (multivariate stats)
+- [ ] Build and train deep neural networks (CNN, RNN, transformers)
+- [ ] Apply ethical frameworks to AI/geodesy
+
+### Key Concepts
+[[Topology]] (intro) → [[Metric Spaces]] → Deep Learning → [[Stochastic Processes]] (advanced)
+
+### Milestones
+- [ ] **Week 4:** Literature review and methodology chapter draft
+- [ ] **Week 8:** Implement PCA and clustering on real dataset
+- [ ] **Week 12:** Build CNN for satellite image classification
+- [ ] **Week 16:** Capstone progress report
+
+---
+
+## 📅 Semester 8 — Capstone (8 SKS)
+
+### Primary Goals
+- [ ] Complete research thesis (Skripsi)
+- [ ] Demonstrate mathematical rigor in chosen domain
+- [ ] Present results professionally
+- [ ] Community service (KKN)
+
+### Key Concepts: Synthesis of all prior semesters
+
+### Milestones
+- [ ] **Week 4:** Complete experimental results
+- [ ] **Week 8:** Draft thesis chapters 1-4
+- [ ] **Week 12:** Final revision and submission
+- [ ] **Week 16:** Defense preparation
 
 ---
 
 ## 🎯 Success Habits
 
-### Daily Routine:
+### Daily Routine
 1. **Morning (30 min):** Review flashcards — formulas, definitions
 2. **Afternoon (2 hrs):** New material — lectures, reading
 3. **Evening (1.5 hrs):** Practice problems — minimum 10 per topic
 
-### Weekly Rhythm:
-
-- **Monday:** Start new topics
-
-- **Wednesday:** Mid-week check — understand everything so far?
-
-- **Friday:** Clear confusion — ask questions, get help
-
-- **Sunday:** Weekly review — summarize, connect concepts
-
-### Active Techniques:
-
+### Active Techniques
 - **Feynman Method:** Teach concepts to yourself out loud
-
 - **Spaced Repetition:** Review old topics at increasing intervals
-
 - **Problem Breadth:** Solve diverse problem types, not just similar ones
-
 - **Error Journal:** Track mistakes, revisit regularly
+- **Cross-linking:** Connect each new concept to at least 2 prior concepts
 
 ---
 
 ## 📊 Progress Tracking
 
-### Weekly Self-Assessment:
+### Weekly Self-Assessment
+
 | Week | Topic Mastery (1-5) | Problems Solved | Gaps Identified | Next Week Focus |
-|------|---------------------|----------------|-----------------|-----------------|
+|------|---------------------|-----------------|-----------------|-----------------|
 | 1 | | | | |
 | 2 | | | | |
 | ... | | | | |
 
-### Monthly Review:
+### Monthly Review
 1. What can I now solve that I couldn't at start of month?
 2. Which concepts feel intuitive vs. require memorization?
 3. What real geodetic problems can I approach with what I've learned?
@@ -200,8 +271,6 @@
 
 ## 🔗 Math-Geodesy Connections
 
-Keep this map visible while studying:
-
 | Math Topic | Geodesy Application |
 |------------|-------------------|
 | Derivatives | Rate of change in measurements, slope, curvature |
@@ -210,9 +279,11 @@ Keep this map visible while studying:
 | Vectors | 3D positioning, satellite geometry |
 | Probability | Error analysis, confidence intervals |
 | Statistics | Network quality, blunder detection |
-| Differential Geometry | Geoid curvature, geodesics on ellipsoid |
-| Time Series | Deformation monitoring |
+| Complex Analysis | Potential theory, conformal mapping |
+| Fourier Analysis | Signal processing, spectral analysis of tides |
+| Graph Theory | Survey network design, routing |
+| Optimization | GNSS ambiguity resolution, network design |
+| Abstract Algebra | Cryptographic protocols for GNSS |
 
 ---
-
-*Last updated: {current_date}*
+*Last updated: 2026-07-27*

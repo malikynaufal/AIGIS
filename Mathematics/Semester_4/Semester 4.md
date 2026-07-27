@@ -28,23 +28,23 @@ created: 2026-07-27
 
 ```mermaid
 flowchart TD
-    Numerical[Numerical Methods] --> Root[Root Finding]
-    Numerical --> Interp[Interpolation]
-    Numerical --> Integrat[Numerical Integration]
-    Numerical --> LinAlg[Numerical Linear Algebra]
-    StatMath[Statistical Methods] --> Est[Estimation Theory]
-    StatMath --> HypTest[Hypothesis Testing]
-    StatMath --> Bayes[Bayesian Inference]
-    AbsAlg[Abstract Algebra] --> Groups[Group Theory]
-    AbsAlg --> Ring[Ring Theory]
-    AbsAlg --> Finite[Finite Fields]
-    CompAnal[Complex Analysis] --> Res[Residue Theory]
-    CompAnal --> Conf[Conformal Mapping]
-    
-    Root --> |Newton-Raphson| LeastSquares[Least Squares [[Least Squares Adjustment]]]
-    LinAlg --> |Eigenvalues| AbsAlg
-    HypTest --> |Confidence Intervals| GNSS[GNSS Positioning]
-    Conf --> |Fluid Flow| Geodesy[Geodesy [[Geodesy MOC]]]
+ Numerical[Numerical Methods] --> Root[Root Finding]
+ Numerical --> Interp[Interpolation]
+ Numerical --> Integrat[Numerical Integration]
+ Numerical --> LinAlg[Numerical Linear Algebra]
+ StatMath[Statistical Methods] --> Est[Estimation Theory]
+ StatMath --> HypTest[Hypothesis Testing]
+ StatMath --> Bayes[Bayesian Inference]
+ AbsAlg[Abstract Algebra] --> Groups[Group Theory]
+ AbsAlg --> Ring[Ring Theory]
+ AbsAlg --> Finite[Finite Fields]
+ CompAnal[Complex Analysis] --> Res[Residue Theory]
+ CompAnal --> Conf[Conformal Mapping]
+
+ Root --> |Newton-Raphson| LeastSquares[Least Squares [[Least Squares Adjustment]]]
+ LinAlg --> |Eigenvalues| AbsAlg
+ HypTest --> |Confidence Intervals| GNSS[GNSS Positioning]
+ Conf --> |Fluid Flow| Geodesy[Geodesy [[Geodesy MOC]]]
 ```
 
 ## 🎯 Learning Outcomes

@@ -1,8 +1,8 @@
 # Kerja Praktik
 
-**Kode:** TKD214702 
-**Sifat:** Wajib 
-**SKS:** 4 
+**Kode:** TKD214702
+**Sifat:** Wajib
+**SKS:** 4
 
 ## Deskripsi
 

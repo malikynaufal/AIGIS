@@ -33,12 +33,12 @@
 |----------|-------------|-----------|------------------|--------------|
 | **Trimble Business Center (TBC)** | Full survey processing | Trimble | GNSS, total station, photogrammetry | $3,000-8,000 |
 | **Leica Infinity** | Survey office software | Leica Geo | GNSS, total station, levelling, cloud | €2,000-6,000 |
-| **Topcon Magnet Office** | Processing suite | Topcon | GNSS, total, UAV | $2,000-5,000 |
-| **NovAtel Waypoint** | Post-processing | NovAtel/Grafnav | Inertial + GNSS, PPP | $5,000-15,000 |
+| **Topcon Magnet Office** | Processing suite | Topcon | GNSS, total, UAV | $ 2,000-5,000 |
+| **NovAtel Waypoint** | Post-processing | NovAtel/Grafnav | Inertial + GNSS, PPP | $ 5,000-15,000 |
 | **Bernese GNSS** (commercial) | High-precision | AIUB | Dense network, campaigns | CHF 5,000-20,000 |
 | **GAMIT/GLOBK** | GPS processing | MIT/SIO | Regional networks, campaigns | Free (research) |
 | **Pix4Dmatic/ Mapper** | Photogrammetry | Pix4D | UAV processing, DM, orthophoto | €2,500-8,000 |
-| **Agisoft Metashape** | Photogrammetry | Agisoft | UAV processing, 3D models | $179-3,499 |
+| **Agisoft Metashape** | Photogrammetry | Agisoft | UAV processing, 3D models | $ 179-3,499 |
 
 ## 4. GNSS Data Quality Tools
 

@@ -14,15 +14,15 @@ updated: 2026-07-27
 
 ## 1. Definitions
 
-A **graph** $G = (V, E) $consists of a finite set of **vertices**$V $and a set of **edges**$E \subseteq V \times V$.
+A **graph** $G = (V, E) $ consists of a finite set of **vertices**$V$ and a set of **edges**$E \subseteq V \times V$.
 
 ### Types of Graphs
 
 | Type | Definition |
 |------|-----------|
-| **Undirected** | Edges have no direction: $\{u,v\} \in E \Leftrightarrow \{v,u\} \in E$ |
+| **Undirected** | Edges have no direction: $\{u,v\} \in E \Leftrightarrow \{v,u\} \in E $ |
 | **Directed (Digraph)** | Edges have orientation: $(u,v) \neq (v,u)$ |
-| **Weighted** | Each edge $e $has a weight $w(e) \in \mathbb{R} $ |
+| **Weighted** | Each edge $e $has a weight $w(e) \in \mathbb{R}$ |
 | **Simple** | No loops, no multi-edges |
 | **Complete** | Every pair of distinct vertices is connected: $K_n $has $\binom{n}{2} $ edges |
 | **Bipartite** | $V = V_1 \cup V_2$, all edges go between $V_1 $and $V_2$ |
@@ -37,7 +37,7 @@ $$\sum_{v \in V} \deg(v) = 2|E| $$
 
 ## 2. Paths and Connectivity
 
-- A **path** is a sequence of distinct vertices $v_1, v_2, \dots, v_k $where $\{v_i, v_{i+1}\} \in E$.
+- A **path** is a sequence of distinct vertices $v_1, v_2, \dots, v_k $where $\{v_i, v_{i+1}\} \in E $.
 - A **cycle** is a path where $v_1 = v_k $and $k \geq 3$.
 - $G$ is **connected** if every pair of vertices has a path between them.
 
@@ -55,15 +55,17 @@ graph LR
 ## 3. Trees
 
 A **tree** is a connected acyclic graph. Key properties:
-- $|E| = |V| - 1$
+- $|E| = |V| - 1 $
 - There is exactly one path between any two vertices
-- Every tree with $|V| \geq 2$ has at least two leaves (vertices of degree 1)
+- Every tree with $|V| \geq 2 $ has at least two leaves (vertices of degree 1)
 
 **Spanning Tree:** A subgraph that is a tree containing all vertices of $G$.
 
 ### Minimum Spanning Tree (MST)
 
-Given a connected, weighted graph, find $T \subseteq E $that minimizes:$$w(T) = \sum_{e \in T} w(e)$$
+Given a connected, weighted graph, find $T \subseteq E $that minimizes:
+
+$$ w(T) = \sum_{e \in T} w(e)$$
 
 | Algorithm | Strategy | Time Complexity |
 |-----------|----------|----------------|
@@ -91,7 +93,7 @@ flowchart TD
 
 ### Dijkstra's Algorithm
 
-$$d(v) = \min_{u: (u,v) \in E} \left( d(u) + w(u,v) \right)$$Initialize $d(s) = 0$, $d(v) = \infty $for $v \neq s$.
+$$ d(v) = \min_{u: (u,v) \in E} \left( d(u) + w(u,v) \right)$$ Initialize$ d(s) = 0 $, $d(v) = \infty $for $v \neq s$.
 
 ## 5. Eulerian and Hamiltonian Paths
 
@@ -107,7 +109,7 @@ A graph is **planar** if it can be drawn in the plane without edge crossings.
 
 **Euler's Formula** for connected planar graphs:
 
-$$V - E + F = 2$$where $F$ is the number of faces (including the outer face).
+$$ V - E + F = 2 $$ where $ F $ is the number of faces (including the outer face).
 
 **Corollary:** For simple planar graphs with $V \geq 3$: $E \leq 3V - 6$.
 
@@ -115,13 +117,17 @@ $$V - E + F = 2$$where $F$ is the number of faces (including the outer face).
 
 **Vertex coloring:** Assign colors so that no two adjacent vertices share a color.
 
-- **Chromatic number** $\chi(G)$: minimum colors needed
-- $\chi(K_n) = n$-$\chi(\text{bipartite}) = 2$
+- **Chromatic number** $\chi(G) $: minimum colors needed
+- $\chi(K_n) = n $-$\chi(\text{bipartite}) = 2 $
 - **4-Color Theorem:** Every planar graph is 4-colorable
 
 ## 8. Network Flow
 
-**Max-Flow Min-Cut Theorem:** The maximum flow from source $s $to sink $t$equals the minimum capacity of an $s$-$t $cut.$$\max_{f} |f| = \min_{(S,T)} c(S,T)$$
+**Max-Flow Min-Cut Theorem:** The maximum flow from source $s $to sink $t $equals the minimum capacity of an $s$-$t $cut.
+
+$$\max_{f} |f| = \min_{(S,T)} c(S,T)
+
+$$
 
 ```mermaid
 graph LR
@@ -144,8 +150,8 @@ graph LR
 
 ## 10. Key Theorems
 
-1. **Handshaking Lemma:** $\sum \deg(v) = 2|E| $2. **Euler's Formula:**$V - E + F = 2$ (planar)
-3. **Dirac's Theorem:** If $\deg(v) \geq |V|/2 $for all $v$, then $G$ has a Hamiltonian cycle
+1. **Handshaking Lemma:** $\sum \deg(v) = 2|E| $ 2. **Euler's Formula:**$V - E + F = 2$ (planar)
+3. **Dirac's Theorem:** If $\deg(v) \geq |V|/2 $for all $v $, then $G$ has a Hamiltonian cycle
 4. **König's Theorem:** In bipartite graphs, maximum matching = minimum vertex cover
 5. **Ramsey's Theorem:** $R(s,t)$— in any 2-coloring of $K_n$, there exists a monochromatic $K_s $or $K_t$
 
@@ -153,7 +159,7 @@ graph LR
 
 1. Find a minimum spanning tree for a weighted survey network graph.
 2. Apply Dijkstra's algorithm to find the shortest route through a GPS network.
-3. Prove that $K_{3,3} $ is non-planar using Euler's formula.
+3. Prove that $ K_{3,3}$ is non-planar using Euler's formula.
 4. Color a map of Indonesian provinces using the 4-color theorem.
 
 ## References

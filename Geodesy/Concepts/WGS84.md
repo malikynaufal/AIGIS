@@ -15,60 +15,38 @@ updated: 2026-07-27
 
 | Parameter | Symbol | Value | Unit |
 |-----------|--------|-------|------|
-| Semi-major axis | $a$ | 6 378 137.0 | m |
+| Semi-major axis | $a $ | 6 378 137.0 | m |
 | Inverse flattening | $1/f$ | 298.257223563 | — |
 | Flattening | $f$ | 1/298.257223563 = 3.3528106647474805e-3 | — |
 | Semi-minor axis | $b$ | 6 356 752.314245 | m |
 | First eccentricity² | $e^2$ | 0.00669437999014 | — |
 | Second eccentricity² | ${e'}^2$ | 0.00673949674228 | — |
-| Equatorial gravity | $\gamma_a$ | 9.7803253359 | m/s² |
-| Polar gravity | $\gamma_p$ | 9.8321849378 | m/s² |
-| Mean angular velocity | $\omega$ | 7.2921151467e-5 | rad/s |
+| Equatorial gravity | $\gamma_a $ | 9.7803253359 | m/s² |
+| Polar gravity | $\gamma_p $ | 9.8321849378 | m/s² |
+| Mean angular velocity | $\omega $ | 7.2921151467e-5 | rad/s |
 | GM (Earth + atmosphere) | $GM$ | 3.986004418e14 | m³/s² |
 
 ## Derived Quantities
 
-$$
+$$ b = a(1 - f) = 6{,}356{,}752.314245 \text{ m}$$
 
-b = a(1 - f) = 6{,}356{,}752.314245 \text{ m}
+$$ e^2 = \frac{a^2 - b^2}{a^2} = 2f - f^2 $$
 
-$$
-
-$$
-
-e^2 = \frac{a^2 - b^2}{a^2} = 2f - f^2
-
-$$
-
-$$
-
-{e'}^2 = \frac{a^2 - b^2}{b^2} = \frac{e^2}{1 - e^2}
-
-$$
+$${e'}^2 = \frac{a^2 - b^2}{b^2} = \frac{e^2}{1 - e^2}$$
 
 ### Radius of Curvature
 
 | Quantity | Formula | Value at equator | Value at pole |
 |----------|---------|-------------------|---------------|
-| Meridian radius $M$ | $\frac{a(1-e^2)}{(1-e^2\sin^2\varphi)^{3/2}}$ | 6 335 439 m | 6 399 594 m |
-| Prime vertical radius $N$ | $\frac{a}{(1-e^2\sin^2\varphi)^{1/2}}$ | 6 378 137 m | 6 399 594 m |
-| Mean radius $R$ | $\sqrt{MN}$ | — | — |
+| Meridian radius $M$ | $\frac{a(1-e^2)}{(1-e^2\sin^2\varphi)^{3/2}} $ | 6 335 439 m | 6 399 594 m |
+| Prime vertical radius $N$ | $\frac{a}{(1-e^2\sin^2\varphi)^{1/2}} $ | 6 378 137 m | 6 399 594 m |
+| Mean radius $R$ | $\sqrt{MN} $ | — | — |
 
 ### Normal Gravity (Somigliana Formula)
 
-$$
+$$\gamma_0(\varphi) = \frac{\gamma_a (1 + k\sin^2\varphi)}{\sqrt{1 - e^2\sin^2\varphi}}
 
-\gamma_0(\varphi) = \frac{\gamma_a (1 + k\sin^2\varphi)}{\sqrt{1 - e^2\sin^2\varphi}}
-
-$$
-
-where:
-
-$$
-
-k = \frac{b\gamma_p - a\gamma_a}{a\gamma_a} = 0.00193185138639
-
-$$
+$$ where:$$ k = \frac{b\gamma_p - a\gamma_a}{a\gamma_a} = 0.00193185138639 $$
 
 ## WGS84 Evolution
 
@@ -100,49 +78,23 @@ The WGS84 ellipsoid is defined with the **same** $a$ and $1/f$ as [[GRS80]], but
 
 Given $(X, Y, Z)$ in [[Geocentric Cartesian ECEF]]:
 
-$$
+$$ p = \sqrt{X^2 + Y^2} $$
 
-p = \sqrt{X^2 + Y^2}
-
-$$
+$$ \lambda = \arctan2(Y, X)
 
 $$
 
-\lambda = \arctan2(Y, X)
+$$\varphi^{(0)} = \arctan\left(\frac{Z}{p(1-e^2)}\right)
 
-$$
+$$ Iterate:$$ N^{(i)} = \frac{a}{\sqrt{1 - e^2\sin^2\varphi^{(i)}}} $$
 
-$$
+$$ \varphi^{(i+1)} = \arctan\left(\frac{Z + e^2 N^{(i)}\sin\varphi^{(i)}}{p}\right)
 
-\varphi^{(0)} = \arctan\left(\frac{Z}{p(1-e^2)}\right)
-
-$$
-
-Iterate:
-
-$$
-
-N^{(i)} = \frac{a}{\sqrt{1 - e^2\sin^2\varphi^{(i)}}}
-
-$$
-
-$$
-
-\varphi^{(i+1)} = \arctan\left(\frac{Z + e^2 N^{(i)}\sin\varphi^{(i)}}{p}\right)
-
-$$
-
-Converges in 3–4 iterations to $< 1$ mm.
+$$ Converges in 3–4 iterations to $< 1 $ mm.
 
 ### Height Relationship
 
-$$
-
-h = \frac{p}{\cos\varphi} - N \quad \text{or} \quad h = \frac{Z}{\sin\varphi} + e^2 N
-
-$$
-
-where $h$ is [[Ellipsoidal Height]].
+$$ h = \frac{p}{\cos\varphi} - N \quad \text{or} \quad h = \frac{Z}{\sin\varphi} + e^2 N $$ where $ h $ is [[Ellipsoidal Height]].
 
 ## Key Equations to Memorize
 
@@ -150,7 +102,7 @@ where $h$ is [[Ellipsoidal Height]].
 |----------|------|-----|
 | $e^2 = 2f - f^2$ | Eccentricity | All ellipsoidal math |
 | $N = a/\sqrt{1-e^2\sin^2\varphi}$ | Prime vertical radius | Geodetic ↔ ECEF |
-| $\gamma_0 = \frac{\gamma_a(1+k\sin^2\varphi)}{\sqrt{1-e^2\sin^2\varphi}}$ | Normal gravity | Physical geodesy |
+| $\gamma_0 = \frac{\gamma_a(1+k\sin^2\varphi)}{\sqrt{1-e^2\sin^2\varphi}} $ | Normal gravity | Physical geodesy |
 | $h = H + N$ | Height relationship | GPS heighting |
 
 ## Applications in Indonesian Surveying
@@ -180,7 +132,7 @@ where $h$ is [[Ellipsoidal Height]].
 - [[ITRF]] — Current realization standard
 - [[Reference Ellipsoid]] — Theoretical basis
 - [[Geodetic Coordinates]] — $(\varphi, \lambda, h)$ on WGS84
-- [[Geocentric Cartesian ECEF]] — $(X, Y, Z)$
+- [[Geocentric Cartesian ECEF]] — $ (X, Y, Z)$
 - [[Datum]] — The broader reference system
 - [[GPS]] — Primary user of WGS84
 

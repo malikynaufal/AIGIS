@@ -1,8 +1,8 @@
 # Praktikum Grafika Komputer dan Visualisasi
 
-**Kode:** TKD212407 
-**Sifat:** Wajib 
-**SKS:** 1 
+**Kode:** TKD212407
+**Sifat:** Wajib
+**SKS:** 1
 
 ## Deskripsi
 
@@ -68,11 +68,11 @@ L.marker([-6.2088, 106.8456]).addTo(map)
 function wgs84ToUtm(lat, lon) {
  var zoneNumber = Math.floor((lon + 180) / 6) + 1;
  var isNorth = lat >= 0;
- 
+
  // Simplified UTM conversion
  var x = lon * 111320;
  var y = Math.log(Math.tan((45 + lat/2) * Math.PI / 180)) * 6378137;
- 
+
  return { easting: x, northing: y };
 }
 ```
@@ -89,7 +89,7 @@ var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeigh
 function createTerrainFromDem(demData) {
  var geometry = new THREE.PlaneGeometry(100, 100, demData.width-1, demData.height-1);
  var vertices = geometry.attributes.position.array;
- 
+
  for (var i = 0; i < demData.height; i++) {
  for (var j = 0; j < demData.width; j++) {
  var idx = (i * demData.width + j);
@@ -97,7 +97,7 @@ function createTerrainFromDem(demData) {
  vertices[idx * 3 + 2] = elevation; // Z coordinate = elevation
  }
  }
- 
+
  geometry.computeVertexNormals();
  return new THREE.Mesh(geometry, new THREE.MeshPhongMaterial({ color: 0x00ff00 }));
 }
@@ -108,9 +108,15 @@ function createTerrainFromDem(demData) {
 #### Menghubungkan Citra dengan Koordinat
 
 $$\begin{aligned}
-X_{gis} &= X_{origin} + col \times pixel\_size \\
-Y_{gis} &= Y_{origin} - row \times pixel\_size
-\end{aligned} $$#### Coordinate Transformation Example
+X_{gis} &= X_{origin} + col imes pixel\_size \\
+Y_{gis} &= Y_{origin} - row imes pixel\_size
+\end{aligned}
+
+$ $
+
+#### Coordinate Transformation Example
+
+Konversi dari koordinat piksel ke koordinat dunia menggunakan persamaan di atas, dengan $ pixel\_size $.
 ```python
 
 # Proses transformasi koordinat untuk visualisasi
@@ -132,13 +138,14 @@ function updateMarkerPosition(marker, newPosition) {
  marker.setLatLng([newPosition.lat, newPosition.lng]);
  marker.bindPopup(`
  <h3>Posisi Saat Ini</h3>
- <p>Lat:${newPosition.lat.toFixed(6)}</p>
- <p>Lon: ${newPosition.lng.toFixed(6)}</p>
- <p>Time: ${new Date().toLocaleTimeString()}</p>
+ <p>Lat: $ {newPosition.lat.toFixed(6)}</p>
+ <p>Lon: $ {newPosition.lng.toFixed(6)}</p>
+ <p>Time: $ {new Date().toLocaleTimeString()}</p>
  `);
 }
 
 // Set interval update
+// $ is used for template literals in JS
 setInterval(function() {
  var newPos = getCurrentPosition(); // Fungsi untuk mendapatkan posisi
  updateMarkerPosition(myMarker, newPos);

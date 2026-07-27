@@ -38,9 +38,9 @@ The station at Meades Ranch, Kansas, was chosen as the fundamental point because
 $$\phi_0 = 39^\circ\,13'\,26.686''\ \text{N}\lambda_0 = 98^\circ\,32'\,30.506''\ \text{W
 }
 
-$$All coordinate differences were measured radially from this point. The **azimuth** was also defined at Meades Ranch:$$
+$$ All coordinate differences were measured radially from this point. The **azimuth** was also defined at Meades Ranch: $$
 
-\alpha_0 = 75^\circ\,53'\,17.2''$$## Parameters of the Clarke 1866 Ellipsoid
+\alpha_0 = 75^\circ\,53'\,17.2''$$ ## Parameters of the Clarke 1866 Ellipsoid
 
 | Parameter | Value |
 |-----------|-------|
@@ -84,7 +84,7 @@ For NAD27→WGS84 (continental US), approximate parameters:
 | $s$ | +3.6 × 10⁻⁶ (3.6 ppm) |
 | $R_x$ | −24.7″ |
 | $R_y$ | +14.5″ |
-| $R_z$ | +2.37″ |
+| $ R_z$ | +2.37″ |
 
 These yield ~±20 m accuracy — not good enough for cadastral or engineering work. Grid shifts are mandatory.
 

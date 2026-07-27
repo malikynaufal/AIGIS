@@ -1,8 +1,8 @@
 # Proyek Rekayasa Geodesi Geomatika
 
-**Kode:** TKD214703 
-**Sifat:** Wajib 
-**SKS:** 4 
+**Kode:** TKD214703
+**Sifat:** Wajib
+**SKS:** 4
 
 ## Deskripsi
 

@@ -24,27 +24,29 @@ The condition number measures how sensitive a problem is to perturbations:
 $$\kappa(A) = \\|A\\|\cdot\\|A^{-1}\\
 |
 
-$$For the 2-norm (spectral norm):$$
+$$ For the 2-norm (spectral norm):$$\kappa_2(A) = \frac{\sigma_{\max}}{\sigma_{\min}}
 
-\kappa_2(A) = \frac{\sigma_{\max}}{\sigma_{\min}} $$where $\sigma $are singular values.
+$$ where $\sigma $ are singular values.
 
 ### 1.2 Interpretation
 
-| $\kappa(A)$ | Meaning |
+| $\kappa(A) $ | Meaning |
 |--------------|---------|
-| $\approx 1$ | Well-conditioned |
+| $\approx 1 $ | Well-conditioned |
 | $10^k$ | ~$k $digits of accuracy lost |
-| $\to \infty$ | Ill-conditioned, essentially singular |
+| $\to \infty $ | Ill-conditioned, essentially singular |
 
-**Example**:$A = \begin{bmatrix} 1 & 1 \\ 1 & 1+\epsilon \end{bmatrix} $
+**Example**: $A = \begin{bmatrix} 1 & 1 \\ 1 & 1+\epsilon \end{bmatrix}$
 
-$$\kappa(A) \approx \frac{4}{\epsilon} $$For small $\epsilon$,$A $is nearly singular and solutions are sensitive.
+$$\kappa(A) \approx \frac{4}{\epsilon} $$ For small $\epsilon $,$A $is nearly singular and solutions are sensitive.
 
 ### 1.3 Sensitivity Theorem
 
-For $A\mathbf{x} = \mathbf{b} $, perturbation $\delta\mathbf{b} $:
+For $A\mathbf{x} = \mathbf{b}$, perturbation $\delta\mathbf{b} $:
 
-$$\frac{\\|\delta\mathbf{x}\\|}{\\|\mathbf{x}\\|} \leq \kappa(A)\frac{\\|\delta\mathbf{b}\\|}{\\|\mathbf{b}\\|} $$### 1.4 Practical Impact
+$$\frac{\\|\delta\mathbf{x}\\|}{\\|\mathbf{x}\\|} \leq \kappa(A)\frac{\\|\delta\mathbf{b}\\|}{\\|\mathbf{b}\\|} $$
+
+### 1.4 Practical Impact
 
 Double precision has $\epsilon_{\text{mach}} \approx 2.2 \times 10^{-16} $.
 If $\kappa(A) = 10^{10} $, we lose ~10 digits → ~6 significant digits remain.
@@ -55,7 +57,7 @@ If $\kappa(A) = 10^{10} $, we lose ~10 digits → ~6 significant digits remain.
 
 ### 2.1 Factorization
 
-$$PA = LU$$where:
+$$ PA = LU $$ where:
 -$P$: permutation matrix (partial pivoting)
 
 - $L$: lower triangular with 1s on diagonal
@@ -64,7 +66,7 @@ $$PA = LU$$where:
 
 ### 2.2 Gaussian Elimination Connection
 
-$U$= row echelon form,$L$= product of inverse multipliers.
+$U$ = row echelon form,$L$ = product of inverse multipliers.
 
 ### 2.3 Algorithm (LU with Partial Pivoting)
 
@@ -78,19 +80,19 @@ For k = 1 to n-1
  A_{ij} = A_{ij} - L_{ik} * A_{kj}
 ```
 
-### 2.4 Solving Systems $A\mathbf{x} = \mathbf{b} $1. Factor $PA = LU$(cost:$O(n^3/3)$)
-2. Solve $L\mathbf{y} = P\mathbf{b} $(forward substitution,$O(n^2)$)
-3. Solve $U\mathbf{x} = \mathbf{y} $(back substitution,$O(n^2)$)
+### 2.4 Solving Systems $A\mathbf{x} = \mathbf{b}$1. Factor $PA = LU$(cost: $O(n^3/3)$)
+2. Solve $L\mathbf{y} = P\mathbf{b}$(forward substitution,$O(n^2)$)
+3. Solve $U\mathbf{x} = \mathbf{y}$(back substitution,$O(n^2)$)
 
 ### 2.5 Determinant
 
-$$\det(A) = (-1)^s \prod_{i=1}^n u_{ii} $$where $s$= number of row swaps.
+$$\det(A) = (-1)^s \prod_{i=1}^n u_{ii} $$ where $ s $= number of row swaps.
 
 ### 2.6 Tridiagonal Systems (Thomas Algorithm)
 
 For tridiagonal $A$(bandwidth 1): LU decomposition is $O(n)$.
 
-$$A = \begin{bmatrix} b_1 & c_1 & & \\ a_2 & b_2 & c_2 & \\ & \ddots & \ddots & \ddots \\ & & a_n & b_n \end{bmatrix} $$Thomas algorithm forward sweep, then backward substitution —$O(n) $complexity.
+$$ A = \begin{bmatrix} b_1 & c_1 & & \\ a_2 & b_2 & c_2 & \\ & \ddots & \ddots & \ddots \\ & & a_n & b_n \end{bmatrix}$$ Thomas algorithm forward sweep, then backward substitution —$O(n)$complexity.
 
 ---
 
@@ -99,38 +101,39 @@ $$A = \begin{bmatrix} b_1 & c_1 & & \\ a_2 & b_2 & c_2 & \\ & \ddots & \ddots & 
 ### 3.1 Factorizatio
 n
 
-$$A = QR$$where $Q$is orthogonal ($Q^TQ = I$),$R $is upper triangular.
+$$ A = QR $$ where $ Q $ is orthogonal ($Q^TQ = I$),$R $is upper triangular.
 
 ### 3.2 Gram-Schmidt Process
 
-Given columns $\mathbf{a}_1, \ldots, \mathbf{a}_n $of $A$:
+Given columns $\mathbf{a}_1, \ldots, \mathbf{a}_n $of $A $:
 
-$$\mathbf{q}_1 = \frac{\mathbf{a}_1}{\\|\mathbf{a}_1\\|}\mathbf{q}_j = \frac{\mathbf{a}_j - \sum_{i=1}^{j-1}(\mathbf{q}_i^T\mathbf{a}_j)\mathbf{q}_i}{\\|\cdot\\|}, \\quad j = 2,\ldots,nr_{ij} = \mathbf{q}_i^T\mathbf{a}_j, \\quad r_{jj} = \\|\text{orthogonal component}\\| $$### 3.3 Modified Gram-Schmidt
+$$\mathbf{q}_1 = \frac{\mathbf{a}_1}{\\|\mathbf{a}_1\\|}\mathbf{q}_j = \frac{\mathbf{a}_j - \sum_{i=1}^{j-1}(\mathbf{q}_i^T\mathbf{a}_j)\mathbf{q}_i}{\\|\cdot\\|}, \\quad j = 2,\ldots,nr_{ij} = \mathbf{q}_i^T\mathbf{a}_j, \\quad r_{jj} = \\|\text{orthogonal component}\\| $$
+
+### 3.3 Modified Gram-Schmidt
 
 Better numerical stability than classical Gram-Schmidt. Reorthogonalize against each previous vector
-:
 
-$$\mathbf{v}_j = \mathbf{a}_j$$For $i=1 $to $j-1$:$\\quad r_{ij} = \mathbf{q}_i^T\mathbf{v}_j$;$\\quad \mathbf{v}_j = \mathbf{v}_j - r_{ij}\mathbf{q}_i$
-$r_{jj} = \\|\mathbf{v}_j\\| $; $\\quad \mathbf{q}_j = \mathbf{v}_j / r_{jj} $### 3.4 Householder Reflections (Preferred
+$$\mathbf{v}_j = \mathbf{a}_j
+
+$$ For $ i=1 $to $j-1 $: $\\quad r_{ij} = \mathbf{q}_i^T\mathbf{v}_j $;$\\quad \mathbf{v}_j = \mathbf{v}_j - r_{ij}\mathbf{q}_i $
+$ r_{jj} = \\|\mathbf{v}_j\\|$; $\\quad \mathbf{q}_j = \mathbf{v}_j / r_{jj} $### 3.4 Householder Reflections (Preferred
 )
 
-$$Q_k = I - 2\frac{\mathbf{v}_k\mathbf{v}_k^T}{\\|\mathbf{v}_k\\|^2} $$
-
-Each reflection zeroes below-diagonal entries in one column.
+$$ Q_k = I - 2\frac{\mathbf{v}_k\mathbf{v}_k^T}{\\|\mathbf{v}_k\\|^2}$$ Each reflection zeroes below-diagonal entries in one column.
 
 ### 3.5 Givens Rotations
 
-Rotation $G(i,j,\theta) $zeros a single entry. Useful for structured/sparse matrices.
+Rotation $G(i,j,\theta)$zeros a single entry. Useful for structured/sparse matrices.
 
 ### 3.6 Usage: Least Squares
 
-QR approach for overdetermined $A\mathbf{x}\approx\mathbf{b} $:
+QR approach for overdetermined $A\mathbf{x}\approx\mathbf{b}$:
 
-$$R\hat{\mathbf{x}} = Q^T\mathbf{b} $$Solve by back substitution. More stable than normal equations.
+$$ R\hat{\mathbf{x}} = Q^T\mathbf{b}$$ Solve by back substitution. More stable than normal equations.
 
 ### 3.7 Complexity
 
-QR via Householder:$O(mn^2) $for $m \times n $matrix. QR solves $O(n^2) $per right-hand side.
+QR via Householder: $O(mn^2)$for $m \times n $matrix. QR solves $O(n^2)$per right-hand side.
 
 ---
 
@@ -138,26 +141,26 @@ QR via Householder:$O(mn^2) $for $m \times n $matrix. QR solves $O(n^2) $per rig
 
 ### 4.1 Factorization
 
-$$A = U\Sigma V^T$$
+$$ A = U\Sigma V^T $$
 
-$U$: orthogonal ($m \times m$), $\Sigma$: diagonal ($m \times n$), $V$: orthogonal ($n \times n$)
+$U$: orthogonal ($m \times m$), $\Sigma $: diagonal ($m \times n$), $V$: orthogonal ($n \times n$)
 
 ### 4.2 Computing SVD
 
 1. $A^TA = V\Sigma^2 V^T$— eigendecomposition (symmetric $n \times n$)
 2. $\sigma_i = \sqrt{\lambda_i(A^TA)} $— singular values
-3.$\mathbf{u}_i = \frac{1}{\sigma_i}A\mathbf{v}_i$ — left singular vectors
+3.$\mathbf{u}_i = \frac{1}{\sigma_i}A\mathbf{v}_i $ — left singular vectors
 
 ### 4.3 SVD as Matrix Approximation (Eckart-Young-Mirsky)
 
 Best rank-$k $approximation (in Frobenius and 2-norm):
 
-$$A_k = \sum_{i=1}^k \sigma_i\mathbf{u}_i\mathbf{v}_i^T\\|A - A_k\\|_F = \sqrt{\sigma_{k+1}^2 + \sigma_{k+2}^2 + \cdots
+$$
+
+A_k = \sum_{i=1}^k \sigma_i\mathbf{u}_i\mathbf{v}_i^T\\|A - A_k\\|_F = \sqrt{\sigma_{k+1}^2 + \sigma_{k+2}^2 + \cdots
 }
 
-$$### 4.4 Pseudoinverse via SVD$$
-
-A^+ = V\Sigma^+U^T$$where $\Sigma^+$has $\sigma_i^{-1} $replaced by 0 when $\sigma_i < \epsilon$.
+$$### 4.4 Pseudoinverse via SVD $$ A^+ = V\Sigma^+U^T $$ where $\Sigma^+$has $\sigma_i^{-1} $replaced by 0 when $\sigma_i < \epsilon $.
 
 ### 4.5 Applications
 
@@ -178,23 +181,26 @@ A^+ = V\Sigma^+U^T$$where $\Sigma^+$has $\sigma_i^{-1} $replaced by 0 when $\sig
 
 Each component updated in parallel:
 
-$$x_i^{(k+1)} = \frac{1}{a_{ii}}\left(b_i - \sum_{j \neq i}a_{ij}x_j^{(k)}\right)$$### 5.2 Gauss-Seidel Method
+$$ x_i^{(k+1)} = \frac{1}{a_{ii}}\left(b_i - \sum_{j \neq i}a_{ij}x_j^{(k)}\right)$$
+
+### 5.2 Gauss-Seidel Method
 
 Sequential update (uses latest values)
-:
 
-$$x_i^{(k+1)} = \frac{1}{a_{ii}}\left(b_i - \sum_{j<i}a_{ij}x_j^{(k+1)} - \sum_{j>i}a_{ij}x_j^{(k)}\right)$$
+$$ x_i^{(k+1)} = \frac{1}{a_{ii}}\left(b_i - \sum_{j<i}a_{ij}x_j^{(k+1)} - \sum_{j>i}a_{ij}x_j^{(k)}\right)$$
 
 ### 5.3 Successive Over-Relaxation (SOR
 )
 
-$$x_i^{(k+1)} = (1-\omega)x_i^{(k)} + \frac{\omega}{a_{ii}}\left(b_i - \sum_{j < i}a_{ij}x_j^{(k+1)} - \sum_{j > i}a_{ij}x_j^{(k)}\right)$$Optimal $\omega $depends on spectral radius.$\omega = 1$: Gauss-Seidel.
+$$ x_i^{(k+1)} = (1-\omega)x_i^{(k)} + \frac{\omega}{a_{ii}}\left(b_i - \sum_{j < i}a_{ij}x_j^{(k+1)} - \sum_{j > i}a_{ij}x_j^{(k)}\right)$$ Optimal $\omega $ depends on spectral radius.$\omega = 1 $: Gauss-Seidel.
 
 ### 5.4 Convergence
 
-Iterative method converges if iteration matrix has spectral radius $< 1$:
+Iterative method converges if iteration matrix has spectral radius $< 1 $:
 
-$$\rho(B) = \max|\lambda_i(B)| < 1$$| Matrix | Jacobi $B_J$| Gauss-Seidel $B_{GS} $ |
+$$\rho(B) = \max|\lambda_i(B)| < 1
+
+$$| Matrix | Jacobi $B_J$ | Gauss-Seidel $B_{GS}$ |
 |--------|-------------|----------------------|
 | Symmetric positive definite | — | Converges |
 | Diagonally dominant | Converges | Converges |
@@ -202,56 +208,54 @@ $$\rho(B) = \max|\lambda_i(B)| < 1$$| Matrix | Jacobi $B_J$| Gauss-Seidel $B_{GS
 
 ### 5.5 Convergence Rate
 
-Asymptotic:$\\|\mathbf{e}^{(k)}\\| \approx C \cdot \rho(B)^k$---
+Asymptotic: $\\|\mathbf{e}^{(k)}\\| \approx C \cdot \rho(B)^k $---
 
 ## 6. Eigenvalue Algorithms
 
 ### 6.1 Power Metho
 d
 
-$$\mathbf{x}^{(k+1)} = \frac{A\mathbf{x}^{(k)}}{\\|A\mathbf{x}^{(k)}\\|} $$Converges to dominant eigenvector, eigenvalue $\lambda_1$.
+$$\mathbf{x}^{(k+1)} = \frac{A\mathbf{x}^{(k)}}{\\|A\mathbf{x}^{(k)}\\|} $$ Converges to dominant eigenvector, eigenvalue $\lambda_1 $.
 
-Convergence rate: $|\lambda_2/\lambda_1|^k$### 6.2 QR Algorith
+Convergence rate: $|\lambda_2/\lambda_1|^k $### 6.2 QR Algorith
 m
 
-$$A_k = Q_k R_k, \\quad A_{k+1} = R_k Q_k$$
+$$ A_k = Q_k R_k, \\quad A_{k+1} = R_k Q_k $$ Converges to (quasi-)upper triangular with eigenvalues on diagonal.
 
-Converges to (quasi-)upper triangular with eigenvalues on diagonal.
-
-### 6.3 Shifted QR $A - \sigma I$→ QR →$Q_{k+1}R_{k+1} $→$A_{k+1} = R_{k+1}Q_{k+1} + \sigma I$---
+### 6.3 Shifted QR $A - \sigma I$→ QR →$Q_{k+1}R_{k+1}$→$A_{k+1} = R_{k+1}Q_{k+1} + \sigma I$---
 
 ## 7. Practice Problems
 
 ### Problem 1
-Compute the condition number of $A = \begin{bmatrix} 1 & 1 \\ 1 & 1.001 \end{bmatrix} $.
+Compute the condition number of $A = \begin{bmatrix} 1 & 1 \\ 1 & 1.001 \end{bmatrix}$.
 
 **Solution**:
-$\det(A) = 0.001$, so $A^{-1} = \frac{1}{0.001}\begin{bmatrix} 1.001 & -1 \\ -1 & 1 \end{bmatrix} $
+$\det(A) = 0.001 $, so $A^{-1} = \frac{1}{0.001}\begin{bmatrix} 1.001 & -1 \\ -1 & 1 \end{bmatrix}$
 
-$\\|A\\|_\infty = 2$(max row sum),$\\|A^{-1}\\|_\infty = 2001$
+$\\|A\\|_\infty = 2 $ (max row sum),$\\|A^{-1}\\|_\infty = 2001 $
 
-$\kappa_\infty(A) = 4002$— very ill-conditioned!
+$\kappa_\infty(A) = 4002 $— very ill-conditioned!
 
 ### Problem 2
-Apply one step of Jacobi iteration to$4x + y = 7, \; x + 3y = 5$, starting from $(0,0)$.
+Apply one step of Jacobi iteration to $4x + y = 7, \; x + 3y = 5$, starting from $(0,0)$.
 
 **Solution**:
 $x^{(1)} = (7-0)/4 = 7/4 = 1.75$
-$y^{(1)} = (5-0)/3 = 5/3 \approx 1.667 $Second step:$x^{(2)} = (7-5/3)/4 = (16/3)/4 = 4/3 \approx 1.333$
+$y^{(1)} = (5-0)/3 = 5/3 \approx 1.667 $Second step: $x^{(2)} = (7-5/3)/4 = (16/3)/4 = 4/3 \approx 1.333$
 $y^{(2)} = (5-7/4)/3 = (13/4)/3 \approx 1.083$### Problem 3
-Apply SVD to $A = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} $.
+Apply SVD to $A = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}$.
 
 **Solution**: Already diagonal.
 $U = I, \Sigma = A, V = I$
-$A = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} $
+$A = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$
 
-$A^+ = \begin{bmatrix} 1/3 & 0 \\ 0 & 1/2 \end{bmatrix} $### Problem 4
-Solve via Gauss-Seidel:$4x+y=6$, $x+4y=6$, starting $(0,0)$.
+$A^+ = \begin{bmatrix} 1/3 & 0 \\ 0 & 1/2 \end{bmatrix}$### Problem 4
+Solve via Gauss-Seidel: $4x+y=6$, $x+4y=6$, starting $(0,0)$.
 
 **Solution**:
 $x^{(1)} = 6/4 = 1.5$, $y^{(1)} = (6-1.5)/4 = 1.125$
 $x^{(2)} = (6-1.125)/4 = 1.21875$, $y^{(2)} = (6-1.21875)/4 = 1.19531$
-$x^{(3)} = (6-1.19531)/4 = 1.20117$, convergent to $x=y=1.2$.
+$x^{(3)} = (6-1.19531)/4 = 1.20117$, convergent to $ x=y=1.2$.
 
 ---
 

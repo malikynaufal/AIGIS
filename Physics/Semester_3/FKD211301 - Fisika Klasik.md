@@ -34,8 +34,10 @@ Advanced classical mechanics using the Lagrangian and Hamiltonian formalisms —
 
 - **Euler-Lagrange equation:**
 
-$$\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}
-ight) - \frac{\partial L}{\partial q_i} = 0$$
+$$ \frac{d}{dt}\left(\frac{artial L}{artial \dot{q}_i}
+ight) - \frac{artial L}{artial q_i} = 0
+
+$ $
 
 - Applications:
  - Simple pendulum (θ as generalized coordinate)
@@ -80,7 +82,9 @@ ight) - \frac{\partial L}{\partial q_i} = 0$$
 
 - **Hamilton's equations (canonical equations):**
 
-$$\dot{q}_i = \frac{\partial H}{\partial p_i}, \quad \dot{p}_i = -\frac{\partial H}{\partial q_i}$$
+$$ \dot{q}_i = \frac{artial H}{artial p_i}, \quad \dot{p}_i = -\frac{artial H}{artial q_i}
+
+$ $
 
 - **Phase space** and the geometry of dynamics
 
@@ -98,20 +102,34 @@ $$\dot{q}_i = \frac{\partial H}{\partial p_i}, \quad \dot{p}_i = -\frac{\partial
 
 ## 🔬 Key Equations
 
-$$\text{Euler-Lagrange: } \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}
-ight) - \frac{\partial L}{\partial q} = 0$$
+$$ ext{Euler-Lagrange: } \frac{d}{dt}\left(\frac{artial L}{artial \dot{q}}
+ight) - \frac{artial L}{artial q} = 0
 
-$$\text{Lagrangian: } L = T - V$$
+$ $
 
-$$\text{Noether: Symmetry} \to \text{Conserved Quantity}$$
+$$ ext{Lagrangian: } L = T - V
 
-$$\text{Hamiltonian: } H = T + V \text{ (for natural systems)}$$
+$ $
 
-$$\text{Hamilton's Eq: } \dot{q} = \frac{\partial H}{\partial p}, \quad \dot{p} = -\frac{\partial H}{\partial q}$$
+$$ ext{Noether: Symmetry} o ext{Conserved Quantity}
 
-$$\text{Poisson Bracket: } \{A, B\} = \frac{\partial A}{\partial q}\frac{\partial B}{\partial p} - \frac{\partial A}{\partial p}\frac{\partial B}{\partial q}$$
+$ $
 
-$$\text{Kepler's 3rd: } T^2 = \frac{4\pi^2}{GM}a^3$$
+$$ ext{Hamiltonian: } H = T + V ext{ (for natural systems)}
+
+$ $
+
+$$ ext{Hamilton's Eq: } \dot{q} = \frac{artial H}{artial p}, \quad \dot{p} = -\frac{artial H}{artial q}
+
+$ $
+
+$$ ext{Poisson Bracket: } \{A, B\} = \frac{artial A}{artial q}\frac{artial B}{artial p} - \frac{artial A}{artial p}\frac{artial B}{artial q}
+
+$ $
+
+$$ ext{Kepler's 3rd: } T^2 = \frac{4i^2}{GM}a^3
+
+$$
 
 ---
 

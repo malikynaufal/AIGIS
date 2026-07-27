@@ -1,8 +1,8 @@
 # Praktikum Survei Kadastral
 
-**Kode:** TKD213510 
-**Sifat:** Wajib 
-**SKS:** 
+**Kode:** TKD213510
+**Sifat:** Wajib
+**SKS:**
 
 ## Deskripsi
 
@@ -167,7 +167,7 @@ Laporan harus diserahkan dalam bentuk:
 
 - Laporan cetak (10 salinan) + report disket CDROM
 
-- Presentasi to the faculty (10 menit + 5 pertanyaan) 
+- Presentasi to the faculty (10 menit + 5 pertanyaan)
 
 - Presentasi kelompok sehingga setiap anggota bagian laporan
 

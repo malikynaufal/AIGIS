@@ -15,7 +15,7 @@ updated: 2026-07-27
 
 ### NUVEL-1A and MORVEL
 
-| Plate | $\Omega$ (°/Myr) | Velocity at center (mm/yr) |
+| Plate | $\Omega $ (°/Myr) | Velocity at center (mm/yr) |
 |-------|---------------------|----------------------------|
 | Pacific | 0.958 | ~88 |
 | Nazca | 0.734 | ~62 |
@@ -32,9 +32,7 @@ updated: 2026-07-27
 
 Plate motion is described by rotation about an Euler pole:
 
-$$
-
-\mathbf{v} = \boldsymbol{\Omega} \times \mathbf{r}
+$$\mathbf{v} = \boldsymbol{\Omega} \times \mathbf{r}
 
 $$
 
@@ -48,16 +46,16 @@ $$
 
 ```mermaid
 flowchart TD
-    A[Pacific Plate] --> D[Subduction Zone]
-    B[Philippine Sea Plate] --> D
-    C[Australian Plate] --> D
-    D --> E[Sunda Arc]
-    E --> F[Sumatra]
-    E --> G[Java]
-    E --> H[Lesser Sunda Islands]
-    E --> I[Sulawesi]
-    D --> J[Back-arc Basin]
-    D --> K[Volcanic Arc]
+ A[Pacific Plate] --> D[Subduction Zone]
+ B[Philippine Sea Plate] --> D
+ C[Australian Plate] --> D
+ D --> E[Sunda Arc]
+ E --> F[Sumatra]
+ E --> G[Java]
+ E --> H[Lesser Sunda Islands]
+ E --> I[Sulawesi]
+ D --> J[Back-arc Basin]
+ D --> K[Volcanic Arc]
 ```
 
 ### Major Plate Boundaries in Indonesia
@@ -81,17 +79,9 @@ flowchart TD
 
 ## Strain Rate and Seismic Hazard
 
-$$
+$$\dot{\epsilon}_{ij} = \frac{1}{2}\left(\frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i}\right)
 
-\dot{\epsilon}_{ij} = \frac{1}{2}\left(\frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i}\right)
-
-$$
-
-Maximum shear strain rate:
-
-$$
-
-\dot{\gamma}_{max} = \sqrt{\left(\frac{\dot{\epsilon}_{11} - \dot{\epsilon}_{22}}{2}\right)^2 + \dot{\epsilon}_{12}^2}
+$$ Maximum shear strain rate:$$\dot{\gamma}_{max} = \sqrt{\left(\frac{\dot{\epsilon}_{11} - \dot{\epsilon}_{22}}{2}\right)^2 + \dot{\epsilon}_{12}^2}
 
 $$
 

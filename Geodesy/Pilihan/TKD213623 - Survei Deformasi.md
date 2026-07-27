@@ -1,56 +1,28 @@
-# 📚 Pilihan: Survei Deformasi
+---
+tags: [aigis, geodesy, pilihan, deformation, structural-monitoring, geodynamics]
+aliases: [Survei Deformasi, Deformation Monitoring]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD213623
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Survei Deformasi (Deformation Surveying)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD213623 | **SKS:** 3 (2-1) | **Semester:** 6–7
 
-Survei Deformasi adalah mata kuliah pilihan yang mempelajari teknik pemantauan perubahan geometri struktur dan permukaan bumi. Mata kuliah ini mencakup pengukuran pergerakan tanah, penurunan struktur bangunan, pergerakan lereng, dan deformasi infrastruktur seperti bendungan, jembatan, dan terowongan. Teknik yang digunakan meliputi survei terestris tradisional, GNSS continuous, InSAR, dan sensor geotechnical.
+## Course Overview
 
-Di Indonesia, survei deformasi sangat relevan mengingat banyaknya daerah rawan longsor, gempa bumi, dan aktivitas gunung berapi. Monitoring deformasi menjadi kunci untuk mitigasi bencana dan perencanaan infrastruktur yang aman. Mahasiswa akan belajar merancang jaringan monitoring, menganalisis perubahan spasial dari waktu ke waktu, dan mendeteksi tanda-tanda peringatan dini (early warning).
+Advanced deformation monitoring techniques. Application of [[Deformation Monitoring]] concepts for dams, bridges, skyscrapers, and tectonic plate boundaries in Indonesia.
 
-Pembelajasan dilakukan melalui studi kasus nyata seperti monitoring deformasi lereng di Puncak Jaya, penurunan tanah di Jakarta (land subsidence), dan pemantauan stabilitas bendungan. Mahasiswa mempraktikkan analisis perbandingan data multi-temporal dan pembuatan model deformasi.
+## Key Topics
 
-## Topik Utama
+### 1. Structural vs Tectonic
+- **Structural:** Millimeter-level, high frequency (continuous GNSS, tiltmeters)
+- **Tectonic:** 50+ km baseline, yearly epoch (campaign GNSS)
 
-### 1. Teknik Survei Deformasi
+### 2. Analysis Methods
+- **Congruency testing:** F-test to detect if monitoring points have moved relative to reference
+- **Velocity field analysis**
+- **InSAR/PS-InSAR** data processing
 
-- Survei terestris (total station monitoring)
-
-- GNSS continuous monitoring network
-
-- InSAR (Interferometric Synthetic Aperture Radar)
-
-### 2. Jenis Deformasi
-
-- Penurunan tanah (land subsidence)
-
-- Longsor dan pergerakan lereng
-
-- Deformasi struktur bangunan
-
-- Perubahan elevasi dan geometri
-
-### 3. Analisis dan Prediksi
-
-- Analisis data multi-temporal
-
-- Model prediksi deformasi
-
-- Sistem early warning
-
-## Tujuan Pembelajaran
-
-1. Memahami metode monitoring deformasi tanah dan struktur
-2. Merancang jaringan monitoring deformasi
-3. Menganalisis data deformasi multi-temporal
-4. Menggunakan teknik InSAR untuk pemantauan deformasi
-
-## Referensi
-
-- Jones, C.J., & Blume, S.C. (2011). *Geotechnical Monitoring: A Field Manual*. Wiley.
-
-- Samiei-Esfahany, S., et al. (2016). "A Survey on Deformation Monitoring." *Journal of Positioning, Navigation, and Timing*.
-
-- Zekkos, D., & Pillafot, R. (2015). *Monitoring and Modeling of Geotechnical and Geophysical Systems*. Springer.
+---
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

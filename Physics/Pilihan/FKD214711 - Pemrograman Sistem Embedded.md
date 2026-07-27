@@ -1,14 +1,3 @@
----
-title: "Pemrograman Sistem Embedded"
-subject: "Fisika Pilihan"
-tags:
- - embedded-systems
- - Arduino
- - STM32
- - RTOS
- - SKS: 3
----
-
 # FKD214711 — Pemrograman Sistem Embedded
 **Embedded Systems Programming** | 3 SKS (Satuan Kredit Semester)
 
@@ -24,17 +13,17 @@ Embedded systems programming (pemrograman sistem embedded) provides the skills t
 
 The Arduino Uno uses an 8-bit AVR microcontroller:
 
-| Feature | Specification |
-|---|---|
-| CPU | 8-bit AVR @ 16 MHz |
-| Flash | 32 KB (program memory) |
-| SRAM | 2 KB (runtime data) |
-| EEPROM | 1 KB (persistent storage) |
-| ADC | 10-bit, 6 channels, 15 ksps |
-| GPIO | 14 digital (6 PWM), 6 analog |
-| Interfaces | I²C, SPI, UART |
+|| Feature | Specification |
+||---|---|
+|| CPU | 8-bit AVR @ 16 MHz |
+|| Flash | 32 KB (program memory) |
+|| SRAM | 2 KB (runtime data) |
+|| EEPROM | 1 KB (persistent storage) |
+|| ADC | 10-bit, 6 channels, 15 ksps |
+|| GPIO | 14 digital (6 PWM), 6 analog |
+|| Interfaces | I²C, SPI, UART |
 
-**Arduino sketch (contoh program)**:
+|**Arduino sketch (contoh program)**:
 
 ```cpp
 // Read thermocouple and log to SD
@@ -55,7 +44,7 @@ void loop() {
  int raw = analogRead(TC_PIN);
  float voltage = raw * 1.1 / 1023.0;
  float temperature = voltage / TC_SENSITIVITY;
- 
+
  File f = SD.open("data.csv", FILE_WRITE);
  if (f) {
  f.print(millis());
@@ -71,22 +60,21 @@ void loop() {
 
 The STM32F407 (used in higher-performance instrumentation):
 
-| Feature | Specification |
-|---|---|
-| CPU | 32-bit ARM Cortex-M4F @ 168 MHz |
-| Flash | 1 MB |
-| SRAM | 192 KB |
-| ADC | 12-bit, 16 channels, 2.4 Msps |
-| DAC | 2 × 12-bit |
-| DMA | 16 streams (zero-CPU data transfer) |
-| Interfaces | I²C, SPI, UART, CAN, USB OTG, Ethernet |
+|| Feature | Specification |
+||---|---|
+|| CPU | 32-bit ARM Cortex-M4F @ 168 MHz |
+|| Flash | 1 MB |
+|| SRAM | 192 KB |
+|| ADC | 12-bit, 16 channels, 2.4 Msps |
+|| DAC | 2 × 12-bit |
+|| DMA | 16 streams (zero-CPU data transfer) |
+|| Interfaces | I²C, SPI, UART, CAN, USB OTG, Ethernet |
 
-**STM32 HAL example (DMA-based ADC)**:
+|**STM32 HAL example (DMA-based ADC)**:
 
 ```c
 // HAL ADC with DMA for continuous sampling
 uint16_t adc_buffer[256]; // Circular buffer
-
 void start_adc_dma(void) {
  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buffer, 256);
 }
@@ -103,14 +91,14 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
 
 ### 1.3 Platform Comparison
 
-| Criterion | Arduino (AVR) | STM32 (Cortex-M4) | ESP32 |
-|---|---|---|---|
-| Clock speed | 16 MHz | 168 MHz | 240 MHz |
-| Power consumption | 15 mA | 100 mA | 80 mA |
-| ADC resolution | 10-bit | 12-bit | 12-bit |
-| Cost (module) | 5 USD | 8 USD | 3 USD |
-| Best for | Prototyping | Precision control | Wireless IoT |
-| Learning curve | Low | Medium | Medium |
+|| Criterion | Arduino (AVR) | STM32 (Cortex-M4) | ESP32 |
+||---|---|---|---|
+|| Clock speed | 16 MHz | 168 MHz | 240 MHz |
+|| Power consumption | 15 mA | 100 mA | 80 mA |
+|| ADC resolution | 10-bit | 12-bit | 12-bit |
+|| Cost (module) | 5 USD | 8 USD | 3 USD |
+|| Best for | Prototyping | Precision control | Wireless IoT |
+|| Learning curve | Low | Medium | Medium |
 
 ---
 
@@ -120,13 +108,13 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
 
 An RTOS (sistem operasi real-time) provides deterministic task scheduling, ensuring critical tasks meet deadlines. Contrast with Arduino's bare-metal `loop()`:
 
-| Feature | Bare Metal | RTOS |
-|---|---|---|
-| Timing guarantee | No (manual delay) | Yes (priority preemptive) |
-| Multitasking | Pseudo (cooperative) | True (preemptive) |
-| Resource management | Manual | Mutex, semaphore |
-| Code complexity | Low | Medium–High |
-| Memory overhead | Minimal | 2–10 KB RAM |
+|| Feature | Bare Metal | RTOS |
+||---|---|---|
+|| Timing guarantee | No (manual delay) | Yes (priority preemptive) |
+|| Multitasking | Pseudo (cooperative) | True (preemptive) |
+|| Resource management | Manual | Mutex, semaphore |
+|| Code complexity | Low | Medium–High |
+|| Memory overhead | Minimal | 2–10 KB RAM |
 
 ### 2.2 FreeRTOS Task Management
 
@@ -159,12 +147,12 @@ void setup() {
 
 ### 2.3 Scheduling Policies
 
-| Policy (Kebijakan) | Description | Use Case |
-|---|---|---|
-| Fixed priority preemptive | Higher priority preempts lower | Most RTOS (FreeRTOS, Zephyr) |
-| Rate monotonic (RM) | Period inversely proportional to priority | Periodic real-time tasks |
-| Earliest deadline first (EDF) | Nearest deadline gets priority | Dynamic priorities |
-| Cooperative | Tasks yield voluntarily | Simple, no preemption overhead |
+|| Policy (Kebijakan) | Description | Use Case |
+||---|---|---|
+|| Fixed priority preemptive | Higher priority preempts lower | Most RTOS (FreeRTOS, Zephyr) |
+|| Rate monotonic (RM) | Period inversely proportional to priority | Periodic real-time tasks |
+|| Earliest deadline first (EDF) | Nearest deadline gets priority | Dynamic priorities |
+|| Cooperative | Tasks yield voluntarily | Simple, no preemption overhead |
 
 ---
 
@@ -172,13 +160,13 @@ void setup() {
 
 ### 3.1 Communication Protocols
 
-| Protocol | Speed | Distance | Topology | Wires |
-|---|---|---|---|---|
-| I²C | 100–400 kHz | 1 m (typical) | Bus (multi-master) | 2 (SDA, SCL) |
-| SPI | 1–50 MHz | 1–10 m | Bus (1 master, N slaves) | 4+ (MOSI, MISO, SCK, CS) |
-| UART | 300–115200 baud | 15 m | Point-to-point | 2 (TX, RX) |
-| 1-Wire | 16 kbps | 100 m | Bus | 1 + GND |
-| CAN | 1 Mbps | 1 km | Bus (multi-master) | 2 (CAN_H, CAN_L) |
+|| Protocol | Speed | Distance | Topology | Wires |
+||---|---|---|---|---|
+|| I²C | 100–400 kHz | 1 m (typical) | Bus (multi-master) | 2 (SDA, SCL) |
+|| SPI | 1–50 MHz | 1–10 m | Bus (1 master, N slaves) | 4+ (MOSI, MISO, SCK, CS) |
+|| UART | 300–115200 baud | 15 m | Point-to-point | 2 (TX, RX) |
+|| 1-Wire | 16 kbps | 100 m | Bus | 1 + GND |
+|| CAN | 1 Mbps | 1 km | Bus (multi-master) | 2 (CAN_H, CAN_L) |
 
 ### 3.2 I²C Sensor Interface Example
 
@@ -192,7 +180,7 @@ float read_temperature() {
  Wire.write(0xFA); // Temperature register
  Wire.endTransmission();
  Wire.requestFrom(BME280_ADDR, 3);
- 
+
  uint32_t raw = (Wire.read() << 12) | (Wire.read() << 4) | (Wire.read() >> 4);
  float temp = raw / 65536.0 * 200.0 - 50.0; // Simplified conversion
  return temp;
@@ -201,11 +189,10 @@ float read_temperature() {
 
 ### 3.3 Timing Requirements
 
-For a seismic data acquisition system sampling at $f_s = 200$ Hz:
-
-$$T_{\text{sample}} = \frac{1}{f_s} = 5\;\text{ms} $$
+For a seismic data acquisition system sampling at $f_s = 200 $Hz:$T_{\text{sample}} = \frac{1}{f_s} = 5\;\text{ms} $$$
 
 Within this 5 ms window, the MCU must:
+
 1. Read ADC (DMA, ~0.1 ms)
 2. Apply FIR filter (50 taps, ~0.05 ms on Cortex-M4)
 3. Pack data for transmission (~0.1 ms)
@@ -245,19 +232,12 @@ void TIM2_IRQHandler(void) {
 An ocean-bottom seismometer (OBS, seismometer dasar laut) deployment off Mentawai Islands uses:
 
 - **MCU**: STM32H7 (Cortex-M7 @ 480 MHz)
-
 - **Sensor**: 3-component broadband geophone + hydrophone
-
 - **Sampling**: 200 sps continuous, 24-bit ADC
-
 - **Storage**: 2 × 256 GB microSD cards (RAID-1 redundancy)
-
 - **Power**: 18650 Li-ion battery pack, 48 Ah total
-
 - **Deployment duration**: 12 months
-
 - **Data volume**: ~60 GB per station
-
 - **Total system cost**: ~15,000 USD (vs. 100,000+ USD for commercial OBS)
 
 The firmware implements a state machine: *SLEEP → ACQUIRE → STORE → TELEMETRY*, switching every 10 minutes. During ACQUIRE, DMA transfers sensor data to a circular buffer while the main core applies a 2-pole Butterworth anti-aliasing filter in software before SD card writes.

@@ -14,7 +14,7 @@ A **horizontal datum** defines the relationship (position + orientation) between
 | Component | What It Defines | Example Values |
 |-----------|----------------|----------------|
 | **Reference Ellipsoid** | Shape of the Earth model | WGS84, GRS80, Clarke 1866 |
-| **Origin point** | Where $\phi, \lambda$ are defined | Greenwich (ITRF), Meades Ranch (NAD27) |
+| **Origin point** | Where $\phi, \lambda $ are defined | Greenwich (ITRF), Meades Ranch (NAD27) |
 | **Orientation** | Axes direction | Earth-centered, Earth-fixed (modern) or conventional pole + meridian |
 | **Epoch** | Time of definition | 1984.0 (WGS84), 1989.0 (ETRS89) |
 | **Velocity field** | Station motion (if any) | Present in ITRF; absent in "fixed" frames |
@@ -108,9 +108,9 @@ The **South American Datum 1969** was the regional datum for South America:
 
 All current global and regional datums are now defined as realizations of [[ITRF]]:
 
-$$\mathbf{X}_{ITRF2014}(t) = \mathbf{T} + (1+s)\mathbf{R}\,\mathbf{X}_{ETRS89}(t)$$
+$$\mathbf{X}_{ITRF2014}(t) = \mathbf{T} + (1+s)\mathbf{R}\,\mathbf{X}_{ETRS89}(t)
 
-This means a modern datum is: an ITRF realization + plate model + a transformation epoch = a fixed frame on a given tectonic plate.
+$$ This means a modern datum is: an ITRF realization + plate model + a transformation epoch = a fixed frame on a given tectonic plate.
 
 ## References
 

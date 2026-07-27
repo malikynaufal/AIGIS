@@ -1,8 +1,8 @@
 # Pendidikan Agama
 
-**Kode:** TKD214701 
-**Sifat:** Wajib 
-**SKS:** 2 
+**Kode:** TKD214701
+**Sifat:** Wajib
+**SKS:** 2
 
 ## Deskripsi
 

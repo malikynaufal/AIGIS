@@ -13,7 +13,7 @@ updated: 2026-07-27
 
 ## 1. The Idea
 
-To find a root of $f(x) = 0$ on an interval $[a, b]$ where $f(a)f(b) < 0$ (sign change):
+To find a root of $f(x) = 0 $on an interval$ [a, b] $where $ f(a)f(b) < 0 $ (sign change):
 
 1. Evaluate midpoint $c = \frac{a+b}{2}$
 2. Check which subinterval has the sign change
@@ -27,19 +27,19 @@ The interval halves each iteration — convergence is **guaranteed** by the Inte
 
 ```
 Input: f(x), interval [a,b], tolerance ε, max iterations N
-Require: f(a) * f(b) < 0  (sign change)
+Require: f(a) * f(b) < 0 (sign change)
 
 For n = 1 to N:
-    c = (a + b) / 2
-    f_c = f(c)
-    
-    If |f_c| < ε or (b - a)/2 < ε:
-        return c  (converged)
-    
-    If f(a) * f_c < 0:
-        b = c
-    Else:
-        a = c
+ c = (a + b) / 2
+ f_c = f(c)
+
+ If |f_c| < ε or (b - a)/2 < ε:
+ return c (converged)
+
+ If f(a) * f_c < 0:
+ b = c
+ Else:
+ a = c
 
 Return c (approximate root)
 ```
@@ -52,15 +52,15 @@ Return c (approximate root)
 
 After $n$ iterations:
 
-$$|c_n - r| \leq \frac{b - a}{2^n}$$
+$$|c_n - r| \leq \frac{b - a}{2^n}
 
-where $r$ is the true root.
+$$ where $ r $ is the true root.
 
 ### Iterations for Desired Accuracy
 
-To achieve error $< \varepsilon$:
+To achieve error $< \varepsilon $:
 
-$$n \geq \frac{\log(b-a) - \log(\varepsilon)}{\log 2}$$
+$$ n \geq \frac{\log(b-a) - \log(\varepsilon)}{\log 2}$$
 
 ### Rate
 
@@ -75,7 +75,7 @@ $$n \geq \frac{\log(b-a) - \log(\varepsilon)}{\log 2}$$
 | Method | Convergence | Requirements | Reliability |
 |--------|-------------|--------------|-------------|
 | Bisection | Linear ($1/2$) | Sign change only | **Guaranteed** |
-| Newton | Quadratic | $f'$ known, good guess | Can diverge |
+| Newton | Quadratic | $ f'$ known, good guess | Can diverge |
 | Secant | Superlinear (1.618) | Two initial guesses | No guarantee |
 | Brent | Superlinear | Bracketing interval | Best of both worlds |
 
@@ -87,12 +87,12 @@ $$n \geq \frac{\log(b-a) - \log(\varepsilon)}{\log 2}$$
 
 ```python
 # Multiple criteria:
-if abs(f(c)) < tol:           # function value small
-    return c
-if (b - a) / 2 < tol:         # interval small enough
-    return c
-if n > max_iter:              # safety
-    return c
+if abs(f(c)) < tol: # function value small
+ return c
+if (b - a) / 2 < tol: # interval small enough
+ return c
+if n > max_iter: # safety
+ return c
 ```
 
 ### Advantages
@@ -123,23 +123,23 @@ In GNSS positioning, bisection is used for:
 
 ```python
 def bisection(f, a, b, tol=1e-10, max_iter=100):
-    """Find root of f(x)=0 on [a,b] using bisection."""
-    if f(a) * f(b) >= 0:
-        raise ValueError("Function must have opposite signs at a and b")
-    
-    for i in range(max_iter):
-        c = (a + b) / 2
-        fc = f(c)
-        
-        if abs(fc) < tol or (b - a) / 2 < tol:
-            return c
-        
-        if f(a) * fc < 0:
-            b = c
-        else:
-            a = c
-    
-    return (a + b) / 2
+ """Find root of f(x)=0 on [a,b] using bisection."""
+ if f(a) * f(b) >= 0:
+ raise ValueError("Function must have opposite signs at a and b")
+
+ for i in range(max_iter):
+ c = (a + b) / 2
+ fc = f(c)
+
+ if abs(fc) < tol or (b - a) / 2 < tol:
+ return c
+
+ if f(a) * fc < 0:
+ b = c
+ else:
+ a = c
+
+ return (a + b) / 2
 ```
 
 ---

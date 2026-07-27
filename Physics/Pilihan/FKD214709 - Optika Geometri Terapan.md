@@ -24,34 +24,31 @@ Applied geometric optics (optika geometri terapan) extends the fundamentals of r
 
 At an interface between media with refractive indices $n_1 $and $n_2$:
 
-$$n_1 \sin\theta_1 = n_2 \sin\theta_2$$The apparent depth of an object at real depth $d $viewed from above
-:
-
-$$d_{\text{apparent}} = \frac{d \cdot n_2}{n_1} $$
+$n_1 \sin\theta_1 = n_2 \sin\theta_2 $The apparent depth of an object at real depth $d$ viewed from above $d_{\text{apparent}} = \frac{d \cdot n_2}{n_1} $$
 
 ### 1.2 Thin Lens Equation
 
 For a thin lens with focal length $f$:
 
-$$\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $$where $d_o $is object distance (jarak objek) and $d_i $is image distance (jarak bayangan). The magnification
-:
-
-$$M = -\frac{d_i}{d_o} = \frac{h_i}{h_o} $$
+$$ \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $$ where $d_o $is object distance (jarak objek) and $d_i $is image distance (jarak bayangan). The magnification $M = -\frac{d_i}{d_o} = \frac{h_i}{h_o} $$
 
 ### 1.3 Thick Lens and Lensmaker's Equation
 
 For a thick lens with radii $R_1$, $R_2$, thickness $t$, and refractive index $n$:
 
-$$\frac{1}{f} = (n-1)\left[\frac{1}{R_1} - \frac{1}{R_2} + \frac{(n-1)t}{nR_1R_2}\right]$$---
+$$ \frac{1}{f} = (n-1)\left[\frac{1}{R_1} - \frac{1}{R_2} + \frac{(n-1)t}{nR_1R_2}\right]
+
+$$ ---
 
 ## 2. Lens Systems and Aberrations (Sistem Lensa dan Aberasi)
 
 ### 2.1 Gaussian Beam Optics
 
 For laser-based instruments (leveling lasers, laser rangefinders), Gaussian beam propagation is more appropriate than ray optics
-:
 
-$$w(z) = w_0 \sqrt{1 + \left(\frac{z}{z_R}\right)^2} $$where $w_0 $is the beam waist (pinggang berkas),$z_R = \pi w_0^2/\lambda $is the Rayleigh range, and $w(z) $is the beam radius at distance $z$.
+$$ w(z) = w_0 \sqrt{1 + \left(\frac{z}{z_R}\right)^2} $$
+
+where $w_0 $is the beam waist (pinggang berkas), $z_R = \pi w_0^2/\lambda $is the Rayleigh range, and $w(z) $is the beam radius at distance $z$.
 
 ### 2.2 Optical Aberrations (Aberasi Optik)
 
@@ -67,16 +64,14 @@ Real lenses introduce image distortions. The five Seidel aberrations:
 
 ### 2.3 Achromatic Doublet
 
-An achromatic doublet (lensa achromatik) combines crown glass ($n_1$, low dispersion, Abbe number $V_1 > 50$) and flint glass ($n_2$, high dispersion, $V_2 < 40$):
+An achromatic doublet (lensa achromatik) combines crown glass ( $n_1$, low dispersion, Abbe number $V_1 > 50$) and flint glass ( $n_2$, high dispersion, $V_2 < 40$):
 
-$$\frac{1}{f_1} + \frac{1}{f_2} = \frac{1}{f_{\text{total}}
+$$ \frac{1}{f_1} + \frac{1}{f_2} = \frac{1}{f_{\text{total}}
 }
 
-$$Achromatic condition (kondisi achromatik):$$
+$Achromatic condition (kondisi achromatik): $$ \frac{1}{V_1 f_1} + \frac{1}{V_2 f_2} = 0
 
-\frac{1}{V_1 f_1} + \frac{1}{V_2 f_2} = 0$$
-
-This eliminates chromatic aberration (aberasi kromatik) at two wavelengths.
+$$ This eliminates chromatic aberration (aberasi kromatik) at two wavelengths.
 
 ---
 
@@ -84,21 +79,20 @@ This eliminates chromatic aberration (aberasi kromatik) at two wavelengths.
 
 ### 3.1 Refracting Telescope (Teleskop Refraktor)
 
-The Keplerian telescope consists of an objective lens ($f_o$) and eyepiece ($f_e$):
+The Keplerian telescope consists of an objective lens ( $f_o$) and eyepiece ( $f_e$):
 
-$$\text{Magnification} = M = -\frac{f_o}{f_e
+$$ \text{Magnification} = M = -\frac{f_o}{f_e
 }
 
-$$The angular resolution (resolusi sudut) is limited by diffraction:$$
+$The angular resolution (resolusi sudut) is limited by diffraction: $$ \theta_{\min} = 1.22 \frac{\lambda}{D}
 
-\theta_{\min} = 1.22 \frac{\lambda}{D} $$where $D $is the aperture diameter. For $D = 10 $cm at $\lambda = 550 $nm:$\theta_{\min} = 1.4 \times 10^{-6} $rad$= 0.28 $arcsec.
+$where $D$ is the aperture diameter. For $D = 10 $cm at$ \lambda = 550 $nm:$ \theta_{\min} = 1.4 \times 10^{-6} $rad$ = 0.28 $arcsec.
 
 ### 3.2 Reflecting Telescope (Teleskop Reflektor)
 
 Newtonian reflectors use a parabolic primary mirror
-:
 
-$$z = \frac{r^2}{4f} $$
+$z = \frac{r^2}{4f} $$
 
 Advantages: no chromatic aberration, larger apertures achievable. The 2.4-m capacity of a reflector at Bosscha Observatory (Observatorium Bosscha) in Lembang enables variable star monitoring (pengamatan bintang variabel).
 
@@ -119,21 +113,16 @@ Field of view: Schmidt up to 5°–10°, Maksutov up to 2°–3°.
 ### 4.1 Optical Level (Nivo Optik)
 
 An automatic level uses a compensator (kompensator) — a pendulum-mounted prism — to maintain horizontal line of sight (garis pandang horizontal) despite tilt
-:
 
-$$h = (a - b) + \text{curvature-refraction correction} $$
+$h = (a - b) + \text{curvature-refraction correction} **Curvature and refraction correction**
 
-**Curvature and refraction correction**
-:
-
-$$c_r = 0.0675 \cdot d^2 \;\text{(m)} $$where $d$is the sight distance in km. For $d = 100 $m:$c_r = 0.7 $mm.
+c_r = 0.0675 \cdot d^2 \;\text{(m)} $$ where $d$ is the sight distance in km. For $d = 100 $m: $c_r = 0.7 $mm.
 
 ### 4.2 Digital Level (Nivo Digital)
 
 Digital levels (e.g., Leica DNA03, Trimble DiNi) read a barcoded staff (staff berkode batang) using image correlation
-:
 
-$$h = \text{digital reading} - \text{benchmark elevation} $$
+$h = \text{digital reading} - \text{benchmark elevation} $$
 
 Precision: 0.3 mm/km (double-run) — comparable to first-order leveling.
 
@@ -155,17 +144,17 @@ Precision: 0.3 mm/km (double-run) — comparable to first-order leveling.
 
 The collinearity equations (persamaan kolinearitas) relate image coordinates$(x, y) $to ground coordinates$(X, Y, Z)$:
 
-$$x = x_0 - f \frac{a_1(X - X_0) + b_1(Y - Y_0) + c_1(Z - Z_0)}{a_3(X - X_0) + b_3(Y - Y_0) + c_3(Z - Z_0)}y = y_0 - f \frac{a_2(X - X_0) + b_2(Y - Y_0) + c_2(Z - Z_0)}{a_3(X - X_0) + b_3(Y - Y_0) + c_3(Z - Z_0)} $$where$(x_0, y_0) $is the principal point,$f $is focal length, and $a_i, b_i, c_i $are rotation matrix elements.
+$x = x_0 - f \frac{a_1(X - X_0) + b_1(Y - Y_0) + c_1(Z - Z_0)}{a_3(X - X_0) + b_3(Y - Y_0) + c_3(Z - Z_0)}y = y_0 - f \frac{a_2(X - X_0) + b_2(Y - Y_0) + c_2(Z - Z_0)}{a_3(X - X_0) + b_3(Y - Y_0) + c_3(Z - Z_0)}$where $ (x_0, y_0) $is the principal point, $f$ is focal length, and $a_i, b_i, c_i $are rotation matrix elements.
 
 ### 5.2 Case Study: Aerial Survey of Jakarta
 
 A drone-based photogrammetric survey of Jakarta's coastline uses a calibrated camera (focal length 15.4 mm, pixel size 2.4 μm) flying at 200 m AGL:
 
-- Ground sampling distance (GSD):$0.068 $m/pixel
+- Ground sampling distance (GSD): $0.068 $m/pixel
 
-- Horizontal accuracy:$\pm 0.1 $m (with GCPs)
+- Horizontal accuracy: $ \pm 0.1 $m (with GCPs)
 
-- Vertical accuracy:$\pm 0.15$ m (supports coastal flood mapping — pemetaan banjir pesisir)
+- Vertical accuracy: $ \pm 0.15 $m (supports coastal flood mapping — pemetaan banjir pesisir)
 
 - Overlap: 80% forward, 60% lateral
 

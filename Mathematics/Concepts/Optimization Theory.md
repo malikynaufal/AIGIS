@@ -36,64 +36,62 @@ $$
 
 A function $f$ is **convex** if:
 
-$$f(\theta x + (1-\theta)y) \leq \theta f(x) + (1-\theta)f(y), \quad \forall x, y, \theta \in [0,1]$$
+$$ f(\theta x + (1-\theta)y) \leq \theta f(x) + (1-\theta)f(y), \quad \forall x, y, \theta \in [0,1]$$
 
 ### Key Properties
 
 - Local minimum = Global minimum for convex problems
 - Any local minimizer of a convex function is a global minimizer
-- Sublevel sets $\{x: f(x) \leq t\}$ are convex
+- Sublevel sets $\{x: f(x) \leq t\} $ are convex
 
 ### Common Convex Functions
 
 | Function | Domain | Convex? |
 |----------|--------|---------|
-| $x^2$ | $\mathbb{R}$ | Yes |
-| $e^x$ | $\mathbb{R}$ | Yes |
-| $-\log x$ | $\mathbb{R}_{++}$ | Yes |
-| $\|x\|_p$ ($p \geq 1$) | $\mathbb{R}^n$ | Yes |
-| $x^T P x$ ($P \succeq 0$) | $\mathbb{R}^n$ | Yes |
+| $x^2$ | $\mathbb{R} $ | Yes |
+| $e^x$ | $\mathbb{R} $ | Yes |
+| $-\log x $|$\mathbb{R}_{++} $ | Yes |
+| $\|x\|_p $ ($p \geq 1$) | $\mathbb{R}^n $ | Yes |
+| $x^T P x$ ($P \succeq 0$) | $\mathbb{R}^n $ | Yes |
 
 ## 3. Unconstrained Optimization
 
 ### First-Order Necessary Condition
 
-If $x^*$ is a local minimizer and $f$ is differentiable:
+If $ x^*$is a local minimizer and $ f $is differentiable:$$\nabla f(x^*) = 0
 
-$$\nabla f(x^*) = 0$$
+$$
 
 ### Second-Order Conditions
 
-- **Necessary:** $\nabla^2 f(x^*) \succeq 0$ (positive semidefinite)
-- **Sufficient:** $\nabla f(x^*) = 0$ and $\nabla^2 f(x^*) \succ 0$ (positive definite)
+- **Necessary:** $\nabla^2 f(x^*) \succeq 0 $ (positive semidefinite)
+- **Sufficient:** $\nabla f(x^*) = 0 $and $\nabla^2 f(x^*) \succ 0 $ (positive definite)
 
 ### Gradient Descent
 
-$$x_{k+1} = x_k - \alpha_k \nabla f(x_k)$$
+$$ x_{k+1} = x_k - \alpha_k \nabla f(x_k)$$
 
 ```mermaid
 flowchart TD
-    Init[Initialize x₀] --> Check{∇f(x) = 0?}
-    Check -->|No| Step[x ← x - α∇f(x)]
-    Step --> Check
-    Check -->|Yes| Converge[Converged]
-    
-    subgraph Line Search
-    LS1[Exact: min f(x - α∇f)]
-    LS2[Backtracking: Armijo]
-    LS3[Constant step]
-    end
+ Init[Initialize x₀] --> Check{∇f(x) = 0?}
+ Check -->|No| Step[x ← x - α∇f(x)]
+ Step --> Check
+ Check -->|Yes| Converge[Converged]
+
+ subgraph Line Search
+ LS1[Exact: min f(x - α∇f)]
+ LS2[Backtracking: Armijo]
+ LS3[Constant step]
+ end
 ```
 
 **Convergence rates:**
 - Convex, Lipschitz gradient: $O(1/k)$
-- Strongly convex: Linear ($O(\rho^k)$, $\rho < 1$)
+- Strongly convex: Linear ($O(\rho^k)$, $\rho < 1 $)
 
 ### Newton's Method
 
-$$x_{k+1} = x_k - [\nabla^2 f(x_k)]^{-1} \nabla f(x_k)$$
-
-Quadratic convergence near solution, but requires Hessian inversion.
+$$ x_{k+1} = x_k - [\nabla^2 f(x_k)]^{-1} \nabla f(x_k)$$ Quadratic convergence near solution, but requires Hessian inversion.
 
 ## 4. Constrained Optimization
 
@@ -101,39 +99,36 @@ Quadratic convergence near solution, but requires Hessian inversion.
 
 Minimize $f(x)$ subject to $h(x) = 0$.
 
-**Lagrangian:** $\mathcal{L}(x, \nu) = f(x) + \nu^T h(x)$
+**Lagrangian:** $\mathcal{L}(x, \nu) = f(x) + \nu^T h(x) $
 
 **KKT Conditions (Necessary):**
-1. $\nabla_x \mathcal{L}(x^*, \nu^*) = 0$ (stationarity)
+1. $\nabla_x \mathcal{L}(x^*, \nu^*) = 0 $ (stationarity)
 2. $h(x^*) = 0$ (primal feasibility)
 
 ### KKT Conditions (Inequality Constraints)
 
 For $f_i(x) \leq 0$:
-1. **Stationarity:** $\nabla f_0(x^*) + \sum_i \lambda_i \nabla f_i(x^*) + \sum_j \nu_j \nabla h_j(x^*) = 0$
-2. **Primal feasibility:** $f_i(x^*) \leq 0, \; h_j(x^*) = 0$
-3. **Dual feasibility:** $\lambda_i \geq 0$
-4. **Complementary slackness:** $\lambda_i f_i(x^*) = 0$
+1. **Stationarity:** $\nabla f_0(x^*) + \sum_i \lambda_i \nabla f_i(x^*) + \sum_j \nu_j \nabla h_j(x^*) = 0 $ 2. **Primal feasibility:**$f_i(x^*) \leq 0, \; h_j(x^*) = 0$ 3. **Dual feasibility:**$\lambda_i \geq 0 $ 4. **Complementary slackness:**$\lambda_i f_i(x^*) = 0 $
 
 ```mermaid
 flowchart LR
-    P[Primal Problem] --> L[Lagrangian]
-    L --> D[Dual Function]
-    D --> DS[Dual Problem]
-    DS -.-> Weak[Weak Duality: d* ≤ p*]
-    P -.-> Strong[Strong Duality: d* = p*]
-    Strong -->|Slater's Condition| Convex[Convex Problems]
+ P[Primal Problem] --> L[Lagrangian]
+ L --> D[Dual Function]
+ D --> DS[Dual Problem]
+ DS -.-> Weak[Weak Duality: d* ≤ p*]
+ P -.-> Strong[Strong Duality: d* = p*]
+ Strong -->|Slater's Condition| Convex[Convex Problems]
 ```
 
 ### Duality
 
 **Dual function:** $g(\lambda, \nu) = \inf_x \mathcal{L}(x, \lambda, \nu)$
 
-**Dual problem:** Maximize $g(\lambda, \nu)$ s.t. $\lambda \geq 0$.
+**Dual problem:** Maximize $g(\lambda, \nu)$ s.t. $\lambda \geq 0 $.
 
-**Weak duality:** $p^* \geq d^*$ always holds.
+**Weak duality:** $ p^* \geq d^*$ always holds.
 
-**Strong duality:** $p^* = d^*$ for convex problems satisfying Slater's condition.
+**Strong duality:** $ p^* = d^*$ for convex problems satisfying Slater's condition.
 
 ## 5. Linear Programming
 
@@ -166,9 +161,9 @@ Dual: max $b^T y$, s.t. $A^T y \leq c$
 
 | Problem | Optimization Formulation |
 |---------|--------------------------|
-| **Least Squares Adjustment** | $\min \|Ax - b\|^2_{W}$ (weighted norm) |
+| **Least Squares Adjustment** | $\min \|Ax - b\|^2_{W} $ (weighted norm) |
 | **Constrained Adjustment** | LS + equality constraints $Cx = d$ |
-| **Network Design** | Minimize $\text{tr}(Q_{xx})$ subject to budget |
+| **Network Design** | Minimize $\text{tr}(Q_{xx}) $ subject to budget |
 | **Outlier Detection** | Minimize robust cost (Huber, Tukey) |
 | **GNSS Integer Ambiguity** | Integer least squares (LAMBDA method) |
 
@@ -183,9 +178,9 @@ Dual: max $b^T y$, s.t. $A^T y \leq c$
 
 ## Practice Problems
 
-1. Solve $\min x^2 + y^2$ subject to $x + y = 1$ using Lagrange multipliers.
-2. Derive the dual of $\min \|Ax - b\|^2 + \lambda \|x\|_1$ (LASSO).
-3. Show that $f(x) = \log \sum e^{x_i}$ is convex.
+1. Solve $\min x^2 + y^2 $subject to $ x + y = 1 $ using Lagrange multipliers.
+2. Derive the dual of $\min \|Ax - b\|^2 + \lambda \|x\|_1 $ (LASSO).
+3. Show that $ f(x) = \log \sum e^{x_i}$ is convex.
 4. Implement gradient descent for logistic regression.
 
 ## References

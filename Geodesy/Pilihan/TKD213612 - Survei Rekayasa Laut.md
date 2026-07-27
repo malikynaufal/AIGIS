@@ -1,56 +1,73 @@
-# 📚 Pilihan: Survei Rekayasa Laut
+---
+tags: [aigis, geodesy, pilihan, marine-survey, offshore, engineering, hydrography]
+created: 2026-07-27
+updated: 2026-07-27
+---
 
-**Kode:** TKD213612
-**Sifat:** Pilihan
-**SKS:** 3 (3-0)
+# Pilihan: Survei Rekayasa Laut (Marine Engineering Survey)
 
-## Deskripsi Mata Kuliah
+**Kode:** TKD213612 | **SKS:** 3 (2-1) | **Semester:** 5–6
 
-Survei Rekayasa Laut adalah mata kuliah pilihan yang mempelajari teknik survei khusus untuk proyek-proyek rekayasa di perairan, termasuk pelabuhan, terowongan laut, terap dasar, dan instalasi offshore. Mata kuliah ini mencakup metode pengukuran di lingkungan laut, termasuk survei topografi pantai, survei hidrografi, penentuan elevasi referensi laut, dan pengukuran struktur maritim. Mahasiswa akan mempelajari konsep-konsep dasar oceanografi yang relevan dengan survei laut.
+## Course Overview
 
-Survei rekayasa laut melibatkan tantangan unik seperti gelombang, arus, pasang surut, dan kondisi cuaca yang buruk. Metode survei harus akurat, cepat, dan aman. Penggunaan teknologi modern seperti multibeam echosounder, side-scan sonar, LiDAR bawah air, dan sistem posisi DGPS/RTK untuk kapal menjadi standar industri.
+Marine Engineering Survey covers specialized hydrographic and geophysical survey techniques for offshore engineering applications including oil/gas exploration, pipeline and cable route surveys, dredging operations, and marine construction.
 
-Pembelajaran dilakukan melalui kombinasi kuliah teori dan studi kasus. Mahasiswa akan mempelajari perencanaan survei laut, metode pengumpulan data, pemrosesan data hidrografi, serta interpretasi hasil untuk desain rekayasa. Studi kasus mencakup proyek pelabuhan di Indonesia dan instalasi offshore di Laut Natuna.
+## Key Topics
 
-## Topik Utama
+### 1. Offshore Positioning
 
-### 1. Dasar-Dasar Survei Laut
+| Method | Accuracy | Application |
+|--------|----------|-------------|
+| **DGPS (Differential GPS)** | 1–3 m | General navigation |
+| **RTK DGPS** | 2–5 cm | Construction, piling |
+| **[[PPP]] (PPK)** | 5–10 cm | Remote offshore |
+| **USBL (Ultra-Short Baseline)** | 0.1–1% depth | Underwater vehicle positioning |
+| **LBL (Long Baseline)** | 1–10 cm | Subsea construction |
 
-- Kondisi lingkungan laut
+### 2. Marine Survey Instruments
 
-- Pasang surut dan arus
+| Instrument | Use | Frequency |
+|-----------|-----|-----------|
+| **MBES** (Multi-beam) | Bathymetric mapping | 200–400 kHz |
+| **SSS** (Side-scan sonar) | Seafloor imagery | 100–500 kHz |
+| **Sub-bottom profiler** | Subsurface sediments | 2–12 kHz |
+| **Magnetometer** | Magnetic anomalies | 0.1–1 Hz |
+| **ROV-mounted sensors** | Inspection | Various |
 
-- Referensi vertikal laut (Chart Datum)
+### 3. Pipeline/Cable Route Survey
 
-### 2. Metode dan Peralatan
+```mermaid
+flowchart TD
+ A[Route Planning] --> B[Desktop Study]
+ B --> C[Reconnaissance Survey]
+ C --> D[Detailed Bathymetry]
+ D --> E[Geophysical Survey]
+ E --> F[Geotechnical Survey]
+ F --> G[Route Engineering]
+ G --> H[Pipeline Installation]
+ H --> I[As-built Survey]
+```
 
-- Multibeam echosounder dan single beam
+### 4. Dredging Surveys
 
-- Side-scan sonar
+| Phase | Method | Purpose |
+|-------|--------|---------|
+| Pre-dredge | MBES + SSS | Volume computation |
+| During dredging | Real-time DGPS | Guidance |
+| Post-dredge | MBES | Quantity verification |
 
-- LiDAR bawah air
+**Volume calculation:**
+$$
+V = \sum_{i=1}^{n} A_i \times d_i
+$$ where $A_i$ is grid cell area and $d_i$ is depth difference.
 
-- Sistem navigasi kapal (DGPS, RTK)
+## Related Concepts
 
-### 3. Aplikasi Rekayasa
+- [[Survei Hidrografi I]] — Hydrographic survey foundation
+- [[Survei Hidrografi II]] — Advanced hydrography
+- [[Pengelolaan Wilayah Pesisir]] — Coastal management
+- [[GPS]] — Positioning
 
-- Survei hidrografi untuk pelabuhan
+---
 
-- Survei dasar untuk terowongan laut
-
-- Survei struktur offshore
-
-## Tujuan Pembelajaran
-
-1. Memahami tantangan survei di lingkungan laut
-2. Menguasai metode dan peralatan survei laut
-3. Merencanakan survei rekayasa untuk proyek maritim
-4. Memproses dan menginterpretasi data survei laut
-
-## Referensi
-
-- Bowers, D.G., & Bracken, M.G. (2016). *An Introduction to Smooth Boundary Ship Hydrodynamics*. Springer.
-
-- Dover, S.J. (2012). *Hydrography and Dredging: A Guide to the Practical Aspects*. CRC Press.
-
-- NOAA Nautical Chart Manual. U.S. Department of Commerce.
+*Maintained by AIGIS — part of [[Geodesy MOC]]*

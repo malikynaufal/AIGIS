@@ -15,29 +15,23 @@ updated: 2026-07-27
 
 The carrier-phase observation equation:
 
-$$
+$$\Phi = \rho + c(\delta t_u - \delta t^s) - I + T + \lambda N + \epsilon
 
-\Phi = \rho + c(\delta t_u - \delta t^s) - I + T + \lambda N + \epsilon
-
-$$
-
-where:
-- $\Phi$ = carrier-phase measurement (cycles)
-- $\rho$ = geometric range (m)
-- $\delta t_u, \delta t^s$ = receiver and satellite clock errors (s)
+$$ where:
+- $\Phi $ = carrier-phase measurement (cycles)
+- $\rho $ = geometric range (m)
+- $\delta t_u, \delta t^s $ = receiver and satellite clock errors (s)
 - $I$ = ionospheric delay (m)
 - $T$ = tropospheric delay (m)
-- $\lambda$ = carrier wavelength (m)
+- $\lambda $ = carrier wavelength (m)
 - $N$ = **integer ambiguity** (cycles) ← what we solve for
-- $\epsilon$ = noise (m)
+- $\epsilon $ = noise (m)
 
 ### Dual-Frequency Combination
 
 For ionosphere-free combination:
 
-$$
-
-\Phi_{LC} = \frac{f_1^2 \Phi_1 - f_2^2 \Phi_2}{f_1^2 - f_2^2} = \rho + c(\delta t_u - \delta t^s) + T + \lambda_{LC} N_{LC}
+$$\Phi_{LC} = \frac{f_1^2 \Phi_1 - f_2^2 \Phi_2}{f_1^2 - f_2^2} = \rho + c(\delta t_u - \delta t^s) + T + \lambda_{LC} N_{LC}
 
 $$
 
@@ -45,44 +39,37 @@ $$
 
 ### Mathematical Formulation
 
-The float solution gives real-valued ambiguities $\hat{\mathbf{a}}$ with covariance $Q_{\hat{a}\hat{a}}$:
+The float solution gives real-valued ambiguities $\hat{\mathbf{a}} $with covariance$ Q_{\hat{a}\hat{a}} $:
 
-$$
-
-\min_{\mathbf{a} \in \mathbb{Z}^n} (\hat{\mathbf{a}} - \mathbf{a})^T Q_{\hat{a}\hat{a}}^{-1} (\hat{\mathbf{a}} - \mathbf{a})
+$$\min_{\mathbf{a} \in \mathbb{Z}^n} (\hat{\mathbf{a}} - \mathbf{a})^T Q_{\hat{a}\hat{a}}^{-1} (\hat{\mathbf{a}} - \mathbf{a})
 
 $$
 
 ### Decorrelation Step
 
-1. Apply Z-transform to decorrelate: $\hat{\mathbf{z}} = Z^T \hat{\mathbf{a}}$
-2. $Q_{\hat{z}\hat{z}} = Z^T Q_{\hat{a}\hat{a}} Z$ (near-diagonal)
-3. Search in $\mathbf{z}$-space (much faster)
-4. Back-transform: $\hat{\mathbf{a}} = Z^{-T} \hat{\mathbf{z}}$
+1. Apply Z-transform to decorrelate: $\hat{\mathbf{z}} = Z^T \hat{\mathbf{a}} $ 2.$Q_{\hat{z}\hat{z}} = Z^T Q_{\hat{a}\hat{a}} Z$ (near-diagonal)
+3. Search in $\mathbf{z} $-space (much faster)
+4. Back-transform: $\hat{\mathbf{a}} = Z^{-T} \hat{\mathbf{z}} $
 
 ### Search Strategy
 
 ```mermaid
 flowchart TD
-    A[Float Solution â] --> B[Form Q_ââ]
-    B --> C[Compute Z matrix]
-    C --> D[Transform to z-space]
-    D --> E[Integer Search]
-    E --> F{Ratio Test}
-    F -->|"Ratio > 3"| G[Fixed Solution]
-    F -->|"Ratio < 3"| H[Float Solution]
-    G --> I[Recompute Position]
+ A[Float Solution â] --> B[Form Q_ââ]
+ B --> C[Compute Z matrix]
+ C --> D[Transform to z-space]
+ D --> E[Integer Search]
+ E --> F{Ratio Test}
+ F -->|"Ratio > 3"| G[Fixed Solution]
+ F -->|"Ratio < 3"| H[Float Solution]
+ G --> I[Recompute Position]
 ```
 
 ## Validation: Ratio Test
 
 The most common validation is the ratio test:
 
-$$
-
-R = \frac{\Delta\chi^2_2}{\Delta\chi^2_1} = \frac{\|\hat{\mathbf{a}} - \mathbf{a}_2\|^2_{Q^{-1}}}{\|\hat{\mathbf{a}} - \mathbf{a}_1\|^2_{Q^{-1}}}
-
-$$
+$$ R = \frac{\Delta\chi^2_2}{\Delta\chi^2_1} = \frac{\|\hat{\mathbf{a}} - \mathbf{a}_2\|^2_{Q^{-1}}}{\|\hat{\mathbf{a}} - \mathbf{a}_1\|^2_{Q^{-1}}} $$
 
 | Ratio Value | Confidence | Decision |
 |-------------|------------|----------|
@@ -106,31 +93,17 @@ $$
 
 ### Wide-Lane Combination
 
-$$
-
-\lambda_{WL} = \frac{c}{f_1 - f_2} = \frac{c}{10.23 \text{ MHz}} \approx 86.19 \text{ cm}
+$$ \lambda_{WL} = \frac{c}{f_1 - f_2} = \frac{c}{10.23 \text{ MHz}} \approx 86.19 \text{ cm}
 
 $$
 
-$$
+$$\Phi_{WL} = \Phi_1 - \Phi_2, \quad N_{WL} = N_1 - N_2
 
-\Phi_{WL} = \Phi_1 - \Phi_2, \quad N_{WL} = N_1 - N_2
-
-$$
-
-### Narrow-Lane Combination
+$$### Narrow-Lane Combination $$\lambda_{NL} = \frac{c}{f_1 + f_2} \approx 10.70 \text{ cm}
 
 $$
 
-\lambda_{NL} = \frac{c}{f_1 + f_2} \approx 10.70 \text{ cm}
-
-$$
-
-$$
-
-N_{NL} = N_1 + N_2
-
-$$
+$$ N_{NL} = N_1 + N_2 $$
 
 ## In [[Geodesy]] Context
 
