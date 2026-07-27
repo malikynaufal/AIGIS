@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIGIS System Architecture</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #020617;
+            --card-bg: #0f172a;
+            --border: #1e293b;
+            --text: #f8fafc;
+            --subtext: #94a3b8;
+            --cyan: #22d3ee;
+            --emerald: #34d399;
+            --violet: #a78bfa;
+            --amber: #fbbf24;
+            --rose: #fb7185;
+            --orange: #fb923c;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'JetBrains+Mono', monospace;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 30px;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .pulse {
+            width: 12px;
+            height: 12px;
+            background-color: var(--emerald);
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(52, 211, 153, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+        }
+
+        h1 { margin: 0; font-size: 24px; color: var(--text); }
+        .subtitle { color: var(--subtext); font-size: 14px; margin-top: 5px; }
+
+        .diagram-container {
+            width: 100%;
+            max-width: 1000px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        svg { width: 100%; height: auto; display: block; }
+
+        .grid-bg {
+            fill: url(#grid);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card-dot { width: 8px; height: 8px; border-radius: 50%; }
+        .card-dot.cyan { background-color: var(--cyan); }
+        .card-dot.emerald { background-color: var(--emerald); }
+        .card-dot.violet { background-color: var(--violet); }
+
+        .card h3 { margin: 0; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+        .card ul { margin: 0; padding: 0; list-style: none; font-size: 12px; color: var(--subtext); line-height: 1.8; }
+
+        .legend {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            font-size: 10px;
+            color: var(--subtext);
+        }
+
+        .legend-item { display: flex; align-items: center; gap: 8px; }
+        .box { width: 12px; height: 12px; border-radius: 2px; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="title-row">
+            <div class="pulse"></div>
+            <h1>AIGIS SYSTEM TOPOLOGY</h1>
+        </div>
+        <div class="subtitle">Accurately Imparting Geodetic Information Sensei — Multi-Cloud Knowledge Pipeline</div>
+    </div>
+
+    <div class="diagram-container">
+        <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+                </pattern>
+                
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                </marker>
+            </defs>
+
+            <rect width="800" height="500" class="grid-bg" />
+
+            <!-- Boundaries -->
+            <rect x="20" y="20" width="360" height="400" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="8,4" rx="12" />
+            <text x="30" y="45" fill="#fbbf24" font-size="10" font-weight="bold">LOCAL ENVIRONMENT (WINDOWS)</text>
+
+            <rect x="420" y="20" width="360" height="400" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="8,4" rx="12" />
+            <text x="430" y="45" fill="#fb923c" font-size="10" font-weight="bold">CLOUD INFRASTRUCTURE</text>
+
+            <!-- Connections (Lines drawn behind boxes) -->
+            <!-- Telegram Bot -> Gateway -->
+            <path d="M 700 120 L 580 120 L 300 120" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)" />
+            <!-- Gateway -> Obsidian -->
+            <path d="M 180 140 L 180 200" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)" />
+            <!-- Gateway -> Drive Sync -->
+            <path d="M 300 120 L 480 120 L 480 200" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)" />
+            <!-- Drive Sync -> NotebookLM -->
+            <path d="M 480 260 L 480 300" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)" />
+            <!-- Obsidian -> GitHub -->
+            <path d="M 180 260 L 180 300" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)" />
+
+            <!-- Components -->
+            <!-- 1. Telegram Bot -->
+            <rect x="630" y="90" width="120" height="60" fill="#0f172a" rx="6" />
+            <rect x="630" y="90" width="120" height="60" fill="rgba(30, 41, 59, 0.5)" stroke="#94a3b8" stroke-width="1.5" rx="6" />
+            <text x="690" y="125" fill="#f8fafc" font-size="12" text-anchor="middle">Telegram API</text>
+            <text x="690" y="140" fill="#94a3b8" font-size="8" text-anchor="middle">@AIGIS_Bot</text>
+
+            <!-- 2. Hermes Gateway -->
+            <rect x="120" y="90" width="120" height="60" fill="#0f172a" rx="6" />
+            <rect x="120" y="90" width="120" height="60" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5" rx="6" />
+            <text x="180" y="125" fill="#f8fafc" font-size="12" text-anchor="middle">Hermes GW</text>
+            <text x="180" y="140" fill="#34d399" font-size="8" text-anchor="middle">Python/CLI</text>
+
+            <!-- 3. Obsidian Vault -->
+            <rect x="120" y="200" width="120" height="60" fill="#0f172a" rx="6" />
+            <rect x="120" y="200" width="120" height="60" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5" rx="6" />
+            <text x="180" y="235" fill="#f8fafc" font-size="12" text-anchor="middle">Obsidian Vault</text>
+            <text x="180" y="250" fill="#a78bfa" font-size="8" text-anchor="middle">Local Markdown</text>
+
+            <!-- 4. GitHub Mirror -->
+            <rect x="120" y="310" width="120" height="60" fill="#0f172a" rx="6" />
+            <rect x="120" y="310" width="120" height="60" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5" rx="6" />
+            <text x="180" y="345" fill="#f8fafc" font-size="12" text-anchor="middle">GitHub</text>
+            <text x="180" y="360" fill="#22d3ee" font-size="8" text-anchor="middle">AIGIS Mirror</text>
+
+            <!-- 5. Google Drive -->
+            <rect x="420" y="200" width="120" height="60" fill="#0f172a" rx="6" />
+            <rect x="420" y="200" width="120" height="60" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5" rx="6" />
+            <text x="480" y="235" fill="#f8fafc" font-size="12" text-anchor="middle">Google Drive</text>
+            <text x="480" y="250" fill="#fbbf24" font-size="8" text-anchor="middle">H: & G: Drives</text>
+
+            <!-- 6. NotebookLM -->
+            <rect x="420" y="310" width="120" height="60" fill="#0f172a" rx="6" />
+            <rect x="420" y="310" width="120" height="60" fill="rgba(30, 41, 59, 0.5)" stroke="#94a3b8" stroke-width="1.5" rx="6" />
+            <text x="480" y="345" fill="#f8fafc" font-size="12" text-anchor="middle">NotebookLM</text>
+            <text x="480" y="360" fill="#94a3b8" font-size="8" text-anchor="middle">Study AI</text>
+
+            <!-- Legend -->
+            <g transform="translate(30, 440)">
+                <rect width="10" height="10" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" rx="2" />
+                <text x="15" y="9" fill="#94a3b8" font-size="8">Mirror/Frontend</text>
+                
+                <rect x="100" width="10" height="10" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" rx="2" />
+                <text x="115" y="9" fill="#94a3b8" font-size="8">Gateway/Core</text>
+                
+                <rect x="200" width="10" height="10" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" rx="2" />
+                <text x="215" y="9" fill="#94a3b8" font-size="8">Storage/Vault</text>
+
+                <rect x="300" width="10" height="10" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" rx="2" />
+                <text x="315" y="9" fill="#94a3b8" font-size="8">Cloud Sync</text>
+            </g>
+        </svg>
+    </div>
+
+    <div class="card-grid">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-dot emerald"></div>
+                <h3>Core Logic</h3>
+            </div>
+            <ul>
+                <li>• Hermes Gateway (default/phia)</li>
+                <li>• Cron jobs for sync/digest</li>
+                <li>• Scheduled Tasks for startup</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-dot violet"></div>
+                <h3>Knowledge Base</h3>
+            </div>
+            <ul>
+                <li>• Obsidian: 408 Markdown notes</li>
+                <li>• Geodesy, Math, Physics Hubs</li>
+                <li>• Linked via wikilinks/MOCs</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-dot cyan"></div>
+                <h3>Distribution</h3>
+            </div>
+            <ul>
+                <li>• Real-time Google Drive sync</li>
+                <li>• GitHub public mirror (AIGIS)</li>
+                <li>• NotebookLM study bridge</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
